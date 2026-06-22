@@ -84,7 +84,7 @@ export default function ContactPage() {
             style={{ y: textY, opacity: textOpacity }}
             className="relative z-10 p-8 sm:p-12 lg:p-20 w-full"
           >
-            <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center max-w-6xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-10 lg:gap-24 items-center max-w-6xl mx-auto">
               
               {/* Left Column: Info */}
               <div>

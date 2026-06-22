@@ -82,7 +82,7 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 50, filter: 'blur(10px)' }}
                 animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
                 transition={{ duration: 0.7, delay: 0.5 + i * 0.12, ease: [0.22, 1, 0.36, 1] }}
-                className="inline-block font-display text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold text-navy-700 tracking-tight mr-4 lg:mr-5"
+                className="inline-block font-display text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold text-navy-700 tracking-tight mr-3 sm:mr-4 lg:mr-5"
               >
                 {word}
               </motion.span>
@@ -94,7 +94,7 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 50, filter: 'blur(10px)' }}
                 animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
                 transition={{ duration: 0.7, delay: 0.86 + i * 0.12, ease: [0.22, 1, 0.36, 1] }}
-                className="inline-block font-display text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold text-navy-700 tracking-tight mr-4 lg:mr-5"
+                className="inline-block font-display text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold text-navy-700 tracking-tight mr-3 sm:mr-4 lg:mr-5"
               >
                 {word}
               </motion.span>
@@ -103,7 +103,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 50, filter: 'blur(10px)' }}
               animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
               transition={{ duration: 0.7, delay: 1.1, ease: [0.22, 1, 0.36, 1] }}
-              className="inline-block font-display text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold text-gradient tracking-tight mr-4 lg:mr-5"
+              className="inline-block font-display text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold text-gradient tracking-tight mr-3 sm:mr-4 lg:mr-5"
             >
               Grow
             </motion.span>
@@ -111,7 +111,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 50, filter: 'blur(10px)' }}
               animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
               transition={{ duration: 0.7, delay: 1.22, ease: [0.22, 1, 0.36, 1] }}
-              className="inline-block font-display text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold text-navy-700 tracking-tight"
+              className="inline-block font-display text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold text-navy-700 tracking-tight"
             >
               Your Brand
             </motion.span>
