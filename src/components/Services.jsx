@@ -5,6 +5,7 @@ import {
   FileText, BookOpen, Phone, Compass, ArrowUpRight
 } from 'lucide-react'
 import { useSectionInView, useTilt, fadeInUp, slideInLeft, slideInRight, stagger, IMAGES } from '../hooks'
+import ServicesObject from './objects/ServicesObject'
 
 const featuredServices = [
   {
@@ -121,6 +122,9 @@ export default function Services() {
       {/* Background elements */}
       <div className="absolute top-1/4 -right-32 w-[800px] h-[800px] bg-brand-200/20 rounded-full blur-[150px] mix-blend-multiply opacity-60 pointer-events-none" />
       <div className="absolute bottom-1/4 -left-32 w-[600px] h-[600px] bg-orange-100/30 rounded-full blur-[120px] mix-blend-multiply opacity-60 pointer-events-none" />
+      <div className="absolute top-0 right-0 opacity-40 pointer-events-none hidden lg:block">
+        <ServicesObject />
+      </div>
 
       <div className="relative max-container section-padding">
         {/* Header */}
