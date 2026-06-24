@@ -1,4 +1,3 @@
-import ScrollProgress from './ScrollProgress'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import CookieBanner from './CookieBanner'
@@ -20,7 +19,6 @@ export default function Layout() {
     <div className="min-h-screen bg-white dark:bg-navy-950 transition-colors duration-500 relative">
       <Preloader />
       <CanvasTrail />
-      <ScrollProgress />
       <Navbar />
       <main className="flex-grow relative z-10">
         <Outlet />
