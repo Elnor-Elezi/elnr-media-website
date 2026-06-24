@@ -2,7 +2,8 @@ import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import {
   Film, Megaphone, GitBranch, UserCheck,
-  FileText, BookOpen, Phone, Compass, ArrowUpRight
+  FileText, BookOpen, Phone, Compass, ArrowUpRight,
+  Smartphone, Code, Mail, Database
 } from 'lucide-react'
 import { useSectionInView, useTilt, fadeInUp, slideInLeft, slideInRight, stagger, IMAGES } from '../hooks'
 import ServicesObject from './objects/ServicesObject'
@@ -10,7 +11,7 @@ import ServicesObject from './objects/ServicesObject'
 const featuredServices = [
   {
     icon: Film,
-    title: 'Content Production',
+    title: 'Content Creation',
     desc: 'Strategic posts, videos, and branded content designed to build authority and engagement across platforms. We create scroll-stopping content that converts attention into action.',
     img: IMAGES.content,
     stats: [{ value: '16+', label: 'Posts/Month' }, { value: '4+', label: 'Videos' }],
@@ -32,11 +33,11 @@ const featuredServices = [
 ]
 
 const gridServices = [
-  { icon: UserCheck, title: 'Lead Qualification', desc: 'Automated workflows that score and route leads.' },
-  { icon: FileText, title: 'SEO Articles', desc: 'Search-optimized articles that drive organic traffic.' },
-  { icon: BookOpen, title: 'Case Studies', desc: 'Professional case studies that showcase your results.' },
-  { icon: Phone, title: 'Sales Support', desc: 'Scripts, objection handling, and follow-up systems.' },
-  { icon: Compass, title: 'Strategy Consulting', desc: 'Quarterly deep-dives to optimize your growth.' },
+  { icon: Smartphone, title: 'Social Media Management', desc: 'Consistent, brand-aligned presence across all key platforms.' },
+  { icon: Code, title: 'Web Development', desc: 'High-converting, perfectly optimized landing pages and websites.' },
+  { icon: Mail, title: 'Email Marketing', desc: 'Automated nurture sequences and engaging weekly newsletters.' },
+  { icon: Database, title: 'CRM Implementation', desc: 'Organized lead tracking and seamless sales pipeline setups.' },
+  { icon: Compass, title: 'Strategy Consulting', desc: 'Quarterly deep-dives to optimize your brand growth.' },
 ]
 
 function FeaturedService({ service, index }) {
