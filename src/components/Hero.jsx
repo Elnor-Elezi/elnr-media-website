@@ -26,52 +26,54 @@ function AnimatedStat({ end, suffix, label }) {
 // A custom animated abstract object resembling Jeton's 3D movement object
 function MovementObject() {
   return (
-    <div className="relative w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[600px] lg:h-[600px] flex items-center justify-center">
+    <div className="relative w-[400px] h-[400px] sm:w-[600px] sm:h-[600px] lg:w-[800px] lg:h-[800px] xl:w-[1000px] xl:h-[1000px] flex items-center justify-center">
       {/* Orb 1 */}
       <motion.div
         animate={{ 
-          y: [-20, 20, -20],
-          rotate: [0, 10, -10, 0]
+          y: [-40, 40, -40],
+          x: [-20, 20, -20],
+          rotate: [0, 20, -20, 0]
         }}
-        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute w-[60%] h-[60%] bg-gradient-to-br from-brand-300 to-brand-500 rounded-full mix-blend-multiply filter blur-xl opacity-70"
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute w-[60%] h-[60%] bg-gradient-to-br from-brand-300 to-brand-500 rounded-full mix-blend-multiply filter blur-3xl opacity-70"
       />
       {/* Orb 2 */}
       <motion.div
         animate={{ 
-          y: [20, -20, 20],
-          x: [20, -20, 20]
+          y: [40, -40, 40],
+          x: [40, -40, 40],
+          rotate: [0, -20, 20, 0]
         }}
-        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute w-[50%] h-[50%] bg-gradient-to-tr from-orange-200 to-yellow-200 rounded-full mix-blend-multiply filter blur-xl opacity-70"
+        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute w-[50%] h-[50%] bg-gradient-to-tr from-orange-200 to-yellow-200 rounded-full mix-blend-multiply filter blur-3xl opacity-70"
       />
       
-      {/* 3D Glass Stack */}
-      <div className="relative z-10 w-full h-full flex items-center justify-center perspective-[1000px]">
+      {/* 3D Glass Stack - Increased size significantly */}
+      <div className="relative z-10 w-full h-full flex items-center justify-center perspective-[1200px]">
         {[0, 1, 2, 3, 4].map((i) => (
           <motion.div
             key={i}
-            initial={{ opacity: 0, y: 100, rotateX: 60, rotateZ: -20 }}
+            initial={{ opacity: 0, y: 150, rotateX: 60, rotateZ: -20 }}
             animate={{ 
               opacity: 1, 
-              y: [0 - (i * 20), -15 - (i * 20), 0 - (i * 20)],
+              y: [0 - (i * 30), -20 - (i * 30), 0 - (i * 30)],
               rotateX: [60, 65, 60],
               rotateZ: [-20, -18, -20]
             }}
             transition={{ 
               opacity: { duration: 1, delay: 0.5 + (i * 0.1) },
-              y: { duration: 4, repeat: Infinity, ease: "easeInOut", delay: i * 0.2 },
-              rotateX: { duration: 5, repeat: Infinity, ease: "easeInOut" },
-              rotateZ: { duration: 6, repeat: Infinity, ease: "easeInOut" }
+              y: { duration: 5, repeat: Infinity, ease: "easeInOut", delay: i * 0.2 },
+              rotateX: { duration: 6, repeat: Infinity, ease: "easeInOut" },
+              rotateZ: { duration: 7, repeat: Infinity, ease: "easeInOut" }
             }}
-            className="absolute w-48 h-48 sm:w-64 sm:h-64 lg:w-80 lg:h-80 rounded-[40px] border border-white/40 shadow-2xl backdrop-blur-md"
+            className="absolute w-64 h-64 sm:w-96 sm:h-96 lg:w-[480px] lg:h-[480px] xl:w-[560px] xl:h-[560px] rounded-[60px] border border-white/40 shadow-2xl backdrop-blur-md"
             style={{
-              background: 'linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.1) 100%)',
+              background: 'linear-gradient(135deg, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.15) 100%)',
               zIndex: 10 - i,
             }}
           >
             {/* Inner glass highlight */}
-            <div className="absolute inset-0 rounded-[40px] border border-white/20" style={{ transform: 'scale(0.95)' }} />
+            <div className="absolute inset-0 rounded-[60px] border border-white/20" style={{ transform: 'scale(0.96)' }} />
           </motion.div>
         ))}
       </div>
@@ -93,12 +95,31 @@ export default function Hero() {
     <section
       ref={containerRef}
       id="home"
-      className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-jeton-ambient"
+      className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-[#fafafa]"
       aria-label="Welcome to ELNR Media"
     >
-      {/* Decorative ambient background */}
-      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-200/20 rounded-full blur-[120px] mix-blend-multiply opacity-50" />
-      <div className="absolute bottom-0 left-[-10%] w-[600px] h-[600px] bg-orange-100/30 rounded-full blur-[100px] mix-blend-multiply opacity-50" />
+      {/* Fully Animated Moving Background (Reverse-Engineered Jeton Feel) */}
+      <motion.div 
+        animate={{
+          x: ["-5%", "5%", "-5%"],
+          y: ["-5%", "5%", "-5%"],
+        }}
+        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+        className="absolute inset-0 pointer-events-none"
+      >
+        <div className="absolute top-[-10%] right-[-10%] w-[1200px] h-[1200px] bg-brand-200/30 rounded-full blur-[150px] mix-blend-multiply opacity-60" />
+      </motion.div>
+
+      <motion.div 
+        animate={{
+          x: ["5%", "-5%", "5%"],
+          y: ["5%", "-5%", "5%"],
+        }}
+        transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+        className="absolute inset-0 pointer-events-none"
+      >
+        <div className="absolute bottom-[-20%] left-[-20%] w-[1000px] h-[1000px] bg-orange-100/40 rounded-full blur-[150px] mix-blend-multiply opacity-60" />
+      </motion.div>
 
       {/* Main content grid (Jeton style: Text bottom-left, Object top-right) */}
       <motion.div
@@ -107,7 +128,7 @@ export default function Hero() {
       >
         
         {/* Left column: Typography (aligned left/bottom) */}
-        <div className="w-full lg:w-[55%] flex flex-col items-start text-left pt-10 lg:pt-32 order-2 lg:order-1">
+        <div className="w-full lg:w-[50%] xl:w-[45%] flex flex-col items-start text-left pt-10 lg:pt-32 order-2 lg:order-1 relative z-20">
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -166,7 +187,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.9, ease: [0.16, 1, 0.3, 1] }}
-            className="flex flex-col sm:flex-row items-center gap-4"
+            className="flex flex-col sm:flex-row items-center gap-4 w-full"
           >
             <Link
               to="/contact"
@@ -184,8 +205,8 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* Right column: Movement Object */}
-        <div className="w-full lg:w-[45%] flex justify-center lg:justify-end order-1 lg:order-2">
+        {/* Right column: Movement Object (Now massive and shifted slightly) */}
+        <div className="absolute lg:relative right-[-20%] lg:right-[-10%] top-[20%] lg:top-0 w-full lg:w-[60%] xl:w-[65%] flex justify-end opacity-30 lg:opacity-100 pointer-events-none lg:pointer-events-auto">
           <MovementObject />
         </div>
 
