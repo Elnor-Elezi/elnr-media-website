@@ -59,22 +59,22 @@ const servicesData = {
     packages: [
       {
         name: 'Launch (Basic)',
-        price: '$2,500',
-        desc: 'Perfect for startups and campaigns needing a high-converting landing page quickly.',
+        price: '$499',
+        desc: 'Perfect for startups needing a landing page. Includes a $100/year maintenance plan.',
         features: ['1 Custom Landing Page', 'Mobile Responsive Design', 'Basic SEO Setup', 'Contact Form Integration', '1 Round of Revisions'],
         isPopular: false
       },
       {
         name: 'Authority (Advanced)',
-        price: '$5,000',
-        desc: 'The sweet spot for established businesses needing a full digital footprint.',
+        price: '$1,399',
+        desc: 'The sweet spot for established businesses. Includes a $300/year maintenance plan.',
         features: ['Up to 5 Pages', 'Custom UI/UX Design', 'Advanced Technical SEO', 'CRM & Analytics Setup', 'Blog/CMS Integration', 'Priority Support'],
         isPopular: true
       },
       {
         name: 'Scale (Premium)',
-        price: '$10,000+',
-        desc: 'For enterprise or complex operations requiring custom functionality and web apps.',
+        price: '$3,499+',
+        desc: 'For enterprise scale or custom web apps. Includes a $700/year maintenance plan.',
         features: ['Unlimited Pages / Web App', 'Complex API Integrations', 'E-Commerce / Headless', 'Advanced Animations', 'Dedicated Project Manager', 'Post-Launch Retainer'],
         isPopular: false
       }
