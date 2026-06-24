@@ -4,7 +4,6 @@ import CookieBanner from './CookieBanner'
 import { Outlet } from 'react-router-dom'
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
-import Preloader from './Preloader'
 import CanvasTrail from './CanvasTrail'
 
 export default function Layout() {
@@ -17,7 +16,6 @@ export default function Layout() {
 
   return (
     <div className="min-h-screen bg-white dark:bg-navy-950 transition-colors duration-500 relative">
-      <Preloader />
       <CanvasTrail />
       <Navbar />
       <main className="flex-grow relative z-10">
