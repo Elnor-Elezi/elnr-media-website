@@ -27,7 +27,7 @@ export default function ContactObject() {
         ].map((ring, i) => (
           <motion.div
             key={i}
-            className="absolute rounded-full border border-white/20"
+            className="absolute rounded-full border border-charcoal-200/50 dark:border-white/10 shadow-[0_0_20px_rgba(20,184,166,0.05)]"
             style={{ 
               width: `${ring.size}px`, 
               height: `${ring.size}px`,

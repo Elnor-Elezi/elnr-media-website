@@ -19,13 +19,13 @@ export default function AboutObject() {
 
         {/* 3D Intersecting Rings (Atom Model) */}
         {[
-          { rotateX: 0, rotateY: 75, rotateZ: 45, color: "border-brand-400" },
-          { rotateX: 75, rotateY: 0, rotateZ: 45, color: "border-brand-300" },
-          { rotateX: 45, rotateY: 45, rotateZ: 0, color: "border-orange-300" }
+          { rotateX: 0, rotateY: 75, rotateZ: 45, color: "border-brand-400/60 dark:border-brand-400/40" },
+          { rotateX: 75, rotateY: 0, rotateZ: 45, color: "border-brand-300/60 dark:border-brand-300/40" },
+          { rotateX: 45, rotateY: 45, rotateZ: 0, color: "border-teal-300/60 dark:border-teal-300/40" }
         ].map((ring, i) => (
           <div
             key={i}
-            className={`absolute w-72 h-72 rounded-full border border-white/30 shadow-[0_0_30px_rgba(255,255,255,0.1)] ${ring.color}`}
+            className={`absolute w-72 h-72 rounded-full border shadow-[0_0_30px_rgba(20,184,166,0.15)] backdrop-blur-sm ${ring.color}`}
             style={{ 
               transformStyle: 'preserve-3d',
               transform: `rotateX(${ring.rotateX}deg) rotateY(${ring.rotateY}deg) rotateZ(${ring.rotateZ}deg)`
@@ -39,7 +39,7 @@ export default function AboutObject() {
               style={{ transformStyle: 'preserve-3d' }}
             >
               <div 
-                className="absolute top-[-8px] left-1/2 w-4 h-4 bg-white rounded-full shadow-[0_0_20px_white]" 
+                className="absolute top-[-8px] left-1/2 w-4 h-4 bg-white rounded-full shadow-[0_0_20px_rgba(255,255,255,0.9)]" 
                 style={{ transform: 'translateX(-50%) translateZ(20px)' }}
               />
             </motion.div>

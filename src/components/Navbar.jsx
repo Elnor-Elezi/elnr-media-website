@@ -1,7 +1,10 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, ArrowRight, Moon, Sun, Volume2, VolumeX } from 'lucide-react'
 import { Link, useLocation } from 'react-router-dom'
+import { useTheme } from './ThemeContext'
+import { useUIFeedback } from '../hooks/useUIFeedback'
+import Magnetic from './Magnetic'
 
 const navLinks = [
   { label: 'Home', href: '/' },
@@ -15,6 +18,8 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const { pathname, hash } = useLocation()
+  const { isDark, toggleDark } = useTheme()
+  const { isMuted, toggleMute } = useUIFeedback()
   
   const activeSection = hash ? pathname + hash : pathname
 
@@ -66,12 +71,24 @@ export default function Navbar() {
           ))}
         </div>
 
-        <Link
-          to="/contact"
-          className="btn-pill bg-navy-900 text-white hover:bg-navy-800 shadow-sm py-2.5 px-6 ml-2"
-        >
-          Book Call
-        </Link>
+        {/* Desktop Right Actions */}
+        <div className="flex items-center gap-2">
+          <button onClick={toggleDark} className="p-2 rounded-full hover:bg-black/5 transition-colors">
+            {isDark ? <Sun size={18} /> : <Moon size={18} />}
+          </button>
+          <button onClick={toggleMute} className="p-2 rounded-full hover:bg-black/5 transition-colors">
+            {isMuted ? <VolumeX size={18} /> : <Volume2 size={18} />}
+          </button>
+          <Magnetic>
+            <Link
+              to="/contact"
+              className="group btn-pill bg-navy-900 text-white hover:bg-navy-800 shadow-sm py-2.5 px-6 ml-2 flex items-center gap-2"
+            >
+              Book Call
+              <ArrowRight size={14} />
+            </Link>
+          </Magnetic>
+        </div>
       </nav>
 
       {/* Mobile Nav Header */}

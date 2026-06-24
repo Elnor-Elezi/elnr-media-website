@@ -3,6 +3,8 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { useCounter } from '../hooks'
+import ScrambleText from './ScrambleText'
+import Magnetic from './Magnetic'
 
 const stats = [
   { end: 150, suffix: '+', label: 'Campaigns Launched' },
@@ -185,14 +187,14 @@ export default function Hero() {
 
           {/* Headline */}
           <div className="mb-6 w-full flex flex-col items-start">
-            <h1 className="font-display font-bold text-navy-900 tracking-tighter leading-[0.95] flex flex-col items-start">
+            <h1 className="font-display font-bold text-navy-900 dark:text-white tracking-tighter leading-[0.95] flex flex-col items-start">
               <motion.span
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
                 className="text-6xl sm:text-7xl lg:text-[90px] xl:text-[110px]"
               >
-                Premium
+                <ScrambleText text="Premium" delay={300} speed={40} />
               </motion.span>
               <motion.span
                 initial={{ opacity: 0, y: 40 }}
@@ -200,7 +202,7 @@ export default function Hero() {
                 transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
                 className="text-6xl sm:text-7xl lg:text-[90px] xl:text-[110px]"
               >
-                media
+                <ScrambleText text="media" delay={400} speed={40} />
               </motion.span>
               <motion.span
                 initial={{ opacity: 0, y: 40 }}
@@ -208,7 +210,7 @@ export default function Hero() {
                 transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
                 className="text-6xl sm:text-7xl lg:text-[90px] xl:text-[110px]"
               >
-                systems.
+                <ScrambleText text="systems." delay={500} speed={40} />
               </motion.span>
             </h1>
           </div>
@@ -230,19 +232,23 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.9, ease: [0.16, 1, 0.3, 1] }}
             className="flex flex-col sm:flex-row items-center justify-start gap-4 w-full"
           >
-            <Link
-              to="/contact"
-              className="group btn-pill btn-primary text-base px-10 py-4 flex items-center gap-3 shadow-glow w-full sm:w-auto justify-center"
-            >
-              Start your growth
-              <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform duration-300" />
-            </Link>
-            <Link
-              to="/pricing"
-              className="group btn-pill btn-outline text-base px-10 py-4 bg-white/50 backdrop-blur-md shadow-soft w-full sm:w-auto justify-center"
-            >
-              View Packages
-            </Link>
+            <Magnetic>
+              <Link
+                to="/contact"
+                className="group btn-pill btn-primary text-base px-10 py-4 flex items-center gap-3 shadow-glow w-full sm:w-auto justify-center"
+              >
+                Start your growth
+                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform duration-300" />
+              </Link>
+            </Magnetic>
+            <Magnetic>
+              <Link
+                to="/pricing"
+                className="group btn-pill btn-outline text-base px-10 py-4 bg-white/50 dark:bg-navy-800/50 dark:text-white backdrop-blur-md shadow-soft w-full sm:w-auto justify-center"
+              >
+                View Packages
+              </Link>
+            </Magnetic>
           </motion.div>
         </div>
 

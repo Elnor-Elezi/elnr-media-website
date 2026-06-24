@@ -10,15 +10,15 @@ export default function ServicesObject() {
         style={{ transformStyle: 'preserve-3d' }}
       >
         {/* Core structure */}
-        <div className="absolute w-64 h-64 border border-brand-500/20 rounded-full" style={{ transform: 'rotateX(90deg)' }} />
-        <div className="absolute w-64 h-64 border border-brand-500/20 rounded-full" style={{ transform: 'rotateY(90deg)' }} />
-        <div className="absolute w-64 h-64 border border-brand-500/20 rounded-full" />
+        <div className="absolute w-64 h-64 border border-brand-500/30 dark:border-brand-500/20 rounded-full" style={{ transform: 'rotateX(90deg)' }} />
+        <div className="absolute w-64 h-64 border border-brand-500/30 dark:border-brand-500/20 rounded-full" style={{ transform: 'rotateY(90deg)' }} />
+        <div className="absolute w-64 h-64 border border-brand-500/30 dark:border-brand-500/20 rounded-full" />
         
         {/* Central Core */}
         <motion.div 
           animate={{ scale: [1, 1.2, 1], rotateZ: [0, 180] }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute w-16 h-16 bg-gradient-to-tr from-brand-400 to-brand-600 rounded-lg shadow-[0_0_60px_rgba(20,184,166,0.8)] backdrop-blur-md"
+          className="absolute w-16 h-16 bg-gradient-to-tr from-brand-400 to-brand-600 rounded-xl shadow-[0_0_60px_rgba(20,184,166,0.8)] backdrop-blur-md"
         />
 
         {/* Orbiting rings and nodes */}
