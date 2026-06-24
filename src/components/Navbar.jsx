@@ -1,13 +1,24 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, ArrowRight, Moon, Sun } from 'lucide-react'
+import { Menu, X, ArrowRight, Moon, Sun, ChevronDown } from 'lucide-react'
 import { Link, useLocation } from 'react-router-dom'
 import { useTheme } from './ThemeContext'
 import Magnetic from './Magnetic'
 
 const navLinks = [
   { label: 'Home', href: '/' },
-  { label: 'Services', href: '/services' },
+  { 
+    label: 'Services', 
+    href: '/services',
+    dropdown: [
+      { label: 'Social Media Management', href: '/services#social-media' },
+      { label: 'Web Development', href: '/services#web-development' },
+      { label: 'Email Marketing', href: '/services#email-marketing' },
+      { label: 'Funnel Building', href: '/services#funnel-building' },
+      { label: 'CRM', href: '/services#crm' },
+      { label: 'Content Creation', href: '/services#content-creation' },
+    ]
+  },
   { label: 'Pricing', href: '/pricing' },
   { label: 'Contact', href: '/contact' },
   { label: 'About', href: '/about' },
@@ -57,17 +68,35 @@ export default function Navbar() {
 
         <div className="flex items-center gap-1">
           {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              to={link.href}
-              className={`relative px-5 py-2.5 rounded-full text-[13px] font-semibold transition-colors duration-300 ${
-                activeSection === link.href 
-                  ? 'text-navy-900 dark:text-white bg-black/[0.03] dark:bg-white/[0.05]' 
-                  : 'text-charcoal-500 dark:text-charcoal-300 hover:text-navy-900 dark:hover:text-white hover:bg-black/[0.02] dark:hover:bg-white/[0.02]'
-              }`}
-            >
-              {link.label}
-            </Link>
+            <div key={link.href} className="relative group">
+              <Link
+                to={link.href}
+                className={`relative px-5 py-2.5 rounded-full text-[13px] font-semibold transition-colors duration-300 flex items-center gap-1 ${
+                  (activeSection.startsWith(link.href) && link.href !== '/') || (link.href === '/' && activeSection === '/')
+                    ? 'text-navy-900 dark:text-white bg-black/[0.03] dark:bg-white/[0.05]' 
+                    : 'text-charcoal-500 dark:text-charcoal-300 hover:text-navy-900 dark:hover:text-white hover:bg-black/[0.02] dark:hover:bg-white/[0.02]'
+                }`}
+              >
+                {link.label}
+                {link.dropdown && <ChevronDown size={14} className="opacity-70 group-hover:rotate-180 transition-transform duration-300" />}
+              </Link>
+
+              {link.dropdown && (
+                <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300 z-50">
+                  <div className="bg-white/95 dark:bg-navy-950/95 backdrop-blur-xl border border-charcoal-200/50 dark:border-white/10 rounded-2xl p-2 shadow-xl min-w-[220px] flex flex-col gap-1">
+                    {link.dropdown.map((dropItem) => (
+                      <Link
+                        key={dropItem.href}
+                        to={dropItem.href}
+                        className="px-4 py-2.5 rounded-xl text-[13px] font-medium text-charcoal-600 dark:text-charcoal-300 hover:bg-black/[0.03] dark:hover:bg-white/[0.05] hover:text-navy-900 dark:hover:text-white transition-colors whitespace-nowrap"
+                      >
+                        {dropItem.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
           ))}
         </div>
 
@@ -125,18 +154,34 @@ export default function Navbar() {
           >
             <div className="flex flex-col gap-2">
               {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  to={link.href}
-                  onClick={() => setMobileOpen(false)}
-                  className={`px-4 py-3.5 text-sm font-semibold rounded-2xl transition-all duration-200 ${
-                    activeSection === link.href 
-                      ? 'bg-black/[0.04] dark:bg-white/[0.05] text-navy-900 dark:text-white' 
-                      : 'text-charcoal-600 dark:text-charcoal-300 hover:bg-black/[0.02] dark:hover:bg-white/[0.02] hover:text-navy-900 dark:hover:text-white'
-                  }`}
-                >
-                  {link.label}
-                </Link>
+                <div key={link.href} className="flex flex-col">
+                  <Link
+                    to={link.href}
+                    onClick={() => !link.dropdown && setMobileOpen(false)}
+                    className={`px-4 py-3.5 text-sm font-semibold rounded-2xl transition-all duration-200 flex items-center justify-between ${
+                      (activeSection.startsWith(link.href) && link.href !== '/') || (link.href === '/' && activeSection === '/')
+                        ? 'bg-black/[0.04] dark:bg-white/[0.05] text-navy-900 dark:text-white' 
+                        : 'text-charcoal-600 dark:text-charcoal-300 hover:bg-black/[0.02] dark:hover:bg-white/[0.02] hover:text-navy-900 dark:hover:text-white'
+                    }`}
+                  >
+                    {link.label}
+                    {link.dropdown && <ChevronDown size={14} className="opacity-50" />}
+                  </Link>
+                  {link.dropdown && (
+                    <div className="flex flex-col gap-1 pl-6 pr-4 pb-2 pt-1">
+                      {link.dropdown.map((dropItem) => (
+                        <Link
+                          key={dropItem.href}
+                          to={dropItem.href}
+                          onClick={() => setMobileOpen(false)}
+                          className="px-4 py-2.5 text-[13px] font-medium rounded-xl text-charcoal-500 dark:text-charcoal-400 hover:bg-black/[0.02] dark:hover:bg-white/[0.02] hover:text-navy-900 dark:hover:text-white transition-colors"
+                        >
+                          {dropItem.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ))}
               <div className="pt-2 mt-2 border-t border-charcoal-100 dark:border-white/10">
                 <Link
