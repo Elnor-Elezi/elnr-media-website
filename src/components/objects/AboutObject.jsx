@@ -13,7 +13,7 @@ export default function AboutObject() {
         <motion.div 
           animate={{ scale: [1, 1.2, 1] }}
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute w-20 h-20 bg-brand-500 rounded-full blur-[30px] opacity-70"
+          className="absolute inset-0 m-auto w-20 h-20 bg-brand-500 rounded-full blur-[30px] opacity-70"
           style={{ transform: 'translateZ(0px)' }}
         />
 
@@ -25,7 +25,7 @@ export default function AboutObject() {
         ].map((ring, i) => (
           <div
             key={i}
-            className={`absolute w-72 h-72 rounded-full border shadow-[0_0_30px_rgba(20,184,166,0.15)] backdrop-blur-sm ${ring.color}`}
+            className={`absolute inset-0 m-auto w-72 h-72 rounded-full border shadow-[0_0_30px_rgba(20,184,166,0.15)] backdrop-blur-sm ${ring.color}`}
             style={{ 
               transformStyle: 'preserve-3d',
               transform: `rotateX(${ring.rotateX}deg) rotateY(${ring.rotateY}deg) rotateZ(${ring.rotateZ}deg)`
@@ -35,7 +35,7 @@ export default function AboutObject() {
             <motion.div
               animate={{ rotateZ: [0, 360] }}
               transition={{ duration: 10 + i * 2, repeat: Infinity, ease: "linear" }}
-              className="w-full h-full absolute"
+              className="w-full h-full absolute inset-0 m-auto"
               style={{ transformStyle: 'preserve-3d' }}
             >
               <div 
