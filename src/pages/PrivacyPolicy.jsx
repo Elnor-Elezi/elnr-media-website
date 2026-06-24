@@ -14,7 +14,7 @@ export default function PrivacyPolicy() {
         title="Privacy Policy"
         description="Privacy Policy for ELNR Media. Learn how we collect, use, and protect your data."
       />
-      <div className="pt-32 pb-16 lg:pt-40 lg:pb-24 bg-white">
+      <div className="pt-32 pb-16 lg:pt-40 lg:pb-24">
         <div className="max-container section-padding max-w-4xl">
           <span className="inline-flex items-center px-4 py-1.5 rounded-full text-[10px] font-semibold tracking-[0.25em] uppercase bg-charcoal-50 text-charcoal-500 border border-charcoal-200 mb-6">
             Legal Information

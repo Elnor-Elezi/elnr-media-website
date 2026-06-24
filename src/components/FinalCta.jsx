@@ -77,7 +77,7 @@ export default function FinalCta({ showForm = false }) {
   }
 
   return (
-    <section id="contact" ref={ref} className="relative py-24 lg:py-36 bg-[#fafafa] overflow-hidden" aria-label="Contact us">
+    <section id="contact" ref={ref} className="relative py-24 lg:py-36 overflow-hidden" aria-label="Contact us">
       <div className="max-container section-padding">
         <div className="relative max-w-5xl mx-auto rounded-[40px] overflow-hidden min-h-[550px] flex items-center shadow-2xl">
           {/* Background image */}

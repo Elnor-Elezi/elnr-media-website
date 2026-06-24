@@ -25,7 +25,7 @@ export default function WhyElnr() {
   const imgY = useTransform(scrollYProgress, [0, 1], [50, -50])
 
   return (
-    <section ref={sectionRef} className="relative py-24 lg:py-36 bg-[#fafbfc] overflow-hidden" aria-label="Why choose ELNR Media">
+    <section ref={sectionRef} className="relative py-24 lg:py-36 overflow-hidden" aria-label="Why choose ELNR Media">
       <div className="max-container section-padding">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
           {/* Left: Image */}

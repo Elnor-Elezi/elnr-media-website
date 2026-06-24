@@ -33,7 +33,7 @@ export default function AboutPage() {
 
   return (
     <PageTransition>
-      <div className="pt-24 lg:pt-36 bg-[#fafafa]">
+      <div className="pt-24 lg:pt-36">
       <SEO 
         title="About Us | ELNR Media"
         description="Learn about ELNR Media, our founder Elnor Elezi, and our mission to build premium media systems that scale."

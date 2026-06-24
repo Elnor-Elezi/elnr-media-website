@@ -24,7 +24,6 @@ export default function ServicesPage() {
 
       <Process />
       
-      <div className="section-connector" />
       <FinalCta />
     </div>
     </PageTransition>

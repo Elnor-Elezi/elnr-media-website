@@ -159,7 +159,7 @@ export default function Pricing() {
   const { ref, isInView } = useSectionInView(0.08)
 
   return (
-    <section id="pricing" className="relative py-24 lg:py-40 bg-[#fafafa] overflow-hidden" aria-label="Pricing plans">
+    <section id="pricing" className="relative py-24 lg:py-40 overflow-hidden" aria-label="Pricing plans">
       {/* Background Orbs */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-brand-200/20 rounded-full blur-[150px] pointer-events-none mix-blend-multiply opacity-60" />
 

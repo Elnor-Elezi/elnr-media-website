@@ -128,7 +128,7 @@ export default function Hero() {
     <section
       ref={containerRef}
       id="home"
-      className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-[#fafafa]"
+      className="relative min-h-screen flex flex-col justify-center overflow-hidden"
       aria-label="Welcome to ELNR Media"
     >
       {/* Fully Animated Moving Background (Reverse-Engineered Jeton Feel) */}

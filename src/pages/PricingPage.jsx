@@ -14,7 +14,6 @@ export default function PricingPage() {
         description="Transparent pricing for our premium media systems. Choose the package that fits your growth stage."
       />
       <Pricing />
-      <div className="section-connector" />
       <WhyElnr />
       <FinalCta />
     </div>
