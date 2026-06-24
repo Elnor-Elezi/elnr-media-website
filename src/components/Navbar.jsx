@@ -44,7 +44,7 @@ export default function Navbar() {
       <nav 
         className={`hidden lg:flex items-center justify-between p-2 rounded-full pointer-events-auto transition-all duration-500 ${
           scrolled 
-            ? 'bg-white/80 backdrop-blur-xl border border-charcoal-200/50 shadow-soft w-[800px]' 
+            ? 'bg-white/80 dark:bg-navy-950/80 backdrop-blur-xl border border-charcoal-200/50 dark:border-white/10 shadow-soft w-[800px]' 
             : 'bg-transparent w-[800px]'
         }`}
         aria-label="Main navigation"
@@ -63,7 +63,9 @@ export default function Navbar() {
               key={link.href}
               to={link.href}
               className={`relative px-5 py-2.5 rounded-full text-[13px] font-semibold transition-colors duration-300 ${
-                activeSection === link.href ? 'text-navy-900 bg-black/[0.03]' : 'text-charcoal-500 hover:text-navy-900 hover:bg-black/[0.02]'
+                activeSection === link.href 
+                  ? 'text-navy-900 dark:text-white bg-black/[0.03] dark:bg-white/[0.05]' 
+                  : 'text-charcoal-500 dark:text-charcoal-300 hover:text-navy-900 dark:hover:text-white hover:bg-black/[0.02] dark:hover:bg-white/[0.02]'
               }`}
             >
               {link.label}
@@ -73,16 +75,16 @@ export default function Navbar() {
 
         {/* Desktop Right Actions */}
         <div className="flex items-center gap-2">
-          <button onClick={toggleDark} className="p-2 rounded-full hover:bg-black/5 transition-colors">
+          <button onClick={toggleDark} className="p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-colors text-navy-900 dark:text-white">
             {isDark ? <Sun size={18} /> : <Moon size={18} />}
           </button>
-          <button onClick={toggleMute} className="p-2 rounded-full hover:bg-black/5 transition-colors">
+          <button onClick={toggleMute} className="p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-colors text-navy-900 dark:text-white">
             {isMuted ? <VolumeX size={18} /> : <Volume2 size={18} />}
           </button>
           <Magnetic>
             <Link
               to="/contact"
-              className="group btn-pill bg-navy-900 text-white hover:bg-navy-800 shadow-sm py-2.5 px-6 ml-2 flex items-center gap-2"
+              className="group btn-pill bg-navy-900 dark:bg-white text-white dark:text-navy-900 hover:bg-navy-800 dark:hover:bg-charcoal-100 shadow-sm py-2.5 px-6 ml-2 flex items-center gap-2"
             >
               Book Call
               <ArrowRight size={14} />
@@ -93,7 +95,7 @@ export default function Navbar() {
 
       {/* Mobile Nav Header */}
       <div className={`lg:hidden flex items-center justify-between w-full p-4 rounded-[24px] pointer-events-auto transition-all duration-500 ${
-        scrolled || mobileOpen ? 'bg-white/90 backdrop-blur-xl border border-charcoal-200/50 shadow-soft' : 'bg-transparent'
+        scrolled || mobileOpen ? 'bg-white/90 dark:bg-navy-950/90 backdrop-blur-xl border border-charcoal-200/50 dark:border-white/10 shadow-soft' : 'bg-transparent'
       }`}>
         <Link to="/" className="flex items-center group" aria-label="ELNR Media home">
           <img 
@@ -102,13 +104,18 @@ export default function Navbar() {
             className="h-10 w-auto object-contain" 
           />
         </Link>
-        <button
-          onClick={() => setMobileOpen(!mobileOpen)}
-          className="p-2 text-navy-900 bg-black/[0.03] rounded-full hover:bg-black/[0.06] transition-colors"
-          aria-label="Toggle menu"
-        >
-          {mobileOpen ? <X size={20} /> : <Menu size={20} />}
-        </button>
+        <div className="flex items-center gap-2">
+          <button onClick={toggleDark} className="p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-colors text-navy-900 dark:text-white">
+            {isDark ? <Sun size={20} /> : <Moon size={20} />}
+          </button>
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="p-2 text-navy-900 dark:text-white bg-black/[0.03] dark:bg-white/[0.05] rounded-full hover:bg-black/[0.06] dark:hover:bg-white/[0.1] transition-colors"
+            aria-label="Toggle menu"
+          >
+            {mobileOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu dropdown */}
@@ -119,7 +126,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 10, scale: 1 }}
             exit={{ opacity: 0, y: -20, scale: 0.95 }}
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="absolute top-full left-4 right-4 lg:hidden bg-white/95 backdrop-blur-3xl border border-charcoal-200/50 rounded-[24px] p-4 shadow-card pointer-events-auto"
+            className="absolute top-full left-4 right-4 lg:hidden bg-white/95 dark:bg-navy-950/95 backdrop-blur-3xl border border-charcoal-200/50 dark:border-white/10 rounded-[24px] p-4 shadow-card pointer-events-auto"
           >
             <div className="flex flex-col gap-2">
               {navLinks.map((link) => (
@@ -128,17 +135,19 @@ export default function Navbar() {
                   to={link.href}
                   onClick={() => setMobileOpen(false)}
                   className={`px-4 py-3.5 text-sm font-semibold rounded-2xl transition-all duration-200 ${
-                    activeSection === link.href ? 'bg-black/[0.04] text-navy-900' : 'text-charcoal-600 hover:bg-black/[0.02] hover:text-navy-900'
+                    activeSection === link.href 
+                      ? 'bg-black/[0.04] dark:bg-white/[0.05] text-navy-900 dark:text-white' 
+                      : 'text-charcoal-600 dark:text-charcoal-300 hover:bg-black/[0.02] dark:hover:bg-white/[0.02] hover:text-navy-900 dark:hover:text-white'
                   }`}
                 >
                   {link.label}
                 </Link>
               ))}
-              <div className="pt-2 mt-2 border-t border-charcoal-100">
+              <div className="pt-2 mt-2 border-t border-charcoal-100 dark:border-white/10">
                 <Link
                   to="/contact"
                   onClick={() => setMobileOpen(false)}
-                  className="flex items-center justify-center w-full btn-pill btn-primary py-3.5"
+                  className="flex items-center justify-center w-full btn-pill bg-navy-900 dark:bg-white text-white dark:text-navy-900 hover:bg-navy-800 dark:hover:bg-charcoal-100 py-3.5"
                 >
                   Book a Strategy Call
                 </Link>
