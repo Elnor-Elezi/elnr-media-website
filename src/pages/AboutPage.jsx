@@ -71,7 +71,7 @@ export default function AboutPage() {
               className="relative w-full h-[400px] sm:h-[500px] lg:h-[600px] rounded-[40px] overflow-hidden shadow-2xl mt-16"
             >
               <img 
-                src={IMAGES.team} 
+                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80" 
                 alt="ELNR Media Strategy" 
                 className="w-full h-full object-cover"
               />
