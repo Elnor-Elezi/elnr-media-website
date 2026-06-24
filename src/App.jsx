@@ -10,6 +10,8 @@ import Dashboard from './pages/Dashboard'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import TermsOfService from './pages/TermsOfService'
 import ServiceDetail from './pages/ServiceDetail'
+import BlogPage from './pages/BlogPage'
+import BlogPost from './pages/BlogPost'
 
 function App() {
   const location = useLocation();
@@ -23,6 +25,8 @@ function App() {
           <Route path="about" element={<AboutPage />} />
           <Route path="services" element={<ServicesPage />} />
           <Route path="services/:slug" element={<ServiceDetail />} />
+          <Route path="blog" element={<BlogPage />} />
+          <Route path="blog/:slug" element={<BlogPost />} />
           <Route path="pricing" element={<PricingPage />} />
           <Route path="contact" element={<ContactPage />} />
           <Route path="privacy" element={<PrivacyPolicy />} />

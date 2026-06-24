@@ -46,6 +46,39 @@ const servicesData = {
       'Integration with your CRM and marketing tools',
       'Post-launch maintenance and continuous optimization'
     ],
+    templates: [
+      { name: 'High-Converting Landing Pages', desc: 'Single-page sites engineered for paid ad traffic and lead generation.' },
+      { name: 'Corporate & Agency Websites', desc: 'Multi-page authority builders for B2B businesses and agencies.' },
+      { name: 'E-Commerce Storefronts', desc: 'Seamless shopping experiences built on modern frameworks (Shopify Headless, Next.js).' },
+      { name: 'SaaS Marketing Sites', desc: 'Dynamic, feature-rich sites designed to sell software subscriptions.' },
+    ],
+    caseStudies: [
+      { title: 'Tech Startup Scale-Up', metric: '+215%', desc: 'Increase in organic lead volume after launching their new conversion-optimized corporate site.' },
+      { title: 'Local Service Business', metric: '4X', desc: 'Growth in booked appointments within the first 60 days of deploying our custom landing page.' },
+    ],
+    packages: [
+      {
+        name: 'Launch (Basic)',
+        price: '$2,500',
+        desc: 'Perfect for startups and campaigns needing a high-converting landing page quickly.',
+        features: ['1 Custom Landing Page', 'Mobile Responsive Design', 'Basic SEO Setup', 'Contact Form Integration', '1 Round of Revisions'],
+        isPopular: false
+      },
+      {
+        name: 'Authority (Advanced)',
+        price: '$5,000',
+        desc: 'The sweet spot for established businesses needing a full digital footprint.',
+        features: ['Up to 5 Pages', 'Custom UI/UX Design', 'Advanced Technical SEO', 'CRM & Analytics Setup', 'Blog/CMS Integration', 'Priority Support'],
+        isPopular: true
+      },
+      {
+        name: 'Scale (Premium)',
+        price: '$10,000+',
+        desc: 'For enterprise or complex operations requiring custom functionality and web apps.',
+        features: ['Unlimited Pages / Web App', 'Complex API Integrations', 'E-Commerce / Headless', 'Advanced Animations', 'Dedicated Project Manager', 'Post-Launch Retainer'],
+        isPopular: false
+      }
+    ],
     ctaText: 'Build Your Website'
   },
   'email-marketing': {
@@ -239,6 +272,78 @@ export default function ServiceDetail() {
           </div>
         </div>
       </section>
+
+      {/* Types of Websites (Templates) */}
+      {service.templates && (
+        <section className="relative max-container section-padding mb-24">
+          <div className="text-center mb-16">
+            <h2 className="font-display text-3xl sm:text-4xl font-bold text-navy-900 dark:text-white mb-4">Types of Sites We Build</h2>
+            <p className="text-charcoal-500 dark:text-charcoal-300 text-lg max-w-2xl mx-auto">From high-converting landing pages to complex corporate infrastructures.</p>
+          </div>
+          <div className="grid sm:grid-cols-2 gap-6">
+            {service.templates.map((template, idx) => (
+              <div key={idx} className="bg-white dark:bg-navy-900 border border-charcoal-100 dark:border-white/10 rounded-3xl p-8 shadow-soft">
+                <h3 className="text-xl font-bold text-brand-500 mb-3">{template.name}</h3>
+                <p className="text-charcoal-600 dark:text-charcoal-300">{template.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Pricing Packages */}
+      {service.packages && (
+        <section className="relative max-container section-padding mb-32">
+          <div className="text-center mb-16">
+            <h2 className="font-display text-3xl sm:text-4xl font-bold text-navy-900 dark:text-white mb-4">Development Packages</h2>
+            <p className="text-charcoal-500 dark:text-charcoal-300 text-lg max-w-2xl mx-auto">Transparent pricing tailored to your business scale.</p>
+          </div>
+          <div className="grid lg:grid-cols-3 gap-8 items-stretch">
+            {service.packages.map((pkg, idx) => (
+              <div key={idx} className={`relative flex flex-col p-8 rounded-[40px] ${pkg.isPopular ? 'bg-navy-900 dark:bg-black text-white shadow-2xl border-2 border-brand-500 transform lg:-translate-y-4' : 'bg-white/50 dark:bg-navy-900/50 backdrop-blur-xl border border-charcoal-100 dark:border-white/10 text-navy-900 dark:text-white'}`}>
+                {pkg.isPopular && (
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-brand-500 text-white px-4 py-1 rounded-full text-sm font-bold tracking-wide">
+                    MOST POPULAR
+                  </div>
+                )}
+                <h3 className="font-display text-2xl font-bold mb-2">{pkg.name}</h3>
+                <div className="text-3xl font-bold text-brand-500 mb-4">{pkg.price}</div>
+                <p className={`text-sm mb-8 ${pkg.isPopular ? 'text-gray-300' : 'text-charcoal-500 dark:text-charcoal-400'}`}>{pkg.desc}</p>
+                <div className="flex-1 space-y-4 mb-8">
+                  {pkg.features.map((feature, fIdx) => (
+                    <div key={fIdx} className="flex items-start gap-3">
+                      <CheckCircle2 size={18} className="text-brand-500 mt-0.5 flex-shrink-0" />
+                      <span className={`text-sm font-medium ${pkg.isPopular ? 'text-gray-200' : 'text-navy-800 dark:text-gray-300'}`}>{feature}</span>
+                    </div>
+                  ))}
+                </div>
+                <Link to="/contact" className={`w-full text-center py-3 rounded-full font-bold transition-colors ${pkg.isPopular ? 'bg-brand-500 text-white hover:bg-brand-600' : 'bg-charcoal-100 dark:bg-white/10 hover:bg-brand-500 hover:text-white'}`}>
+                  Get Started
+                </Link>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Case Studies */}
+      {service.caseStudies && (
+        <section className="relative max-container section-padding mb-32">
+          <div className="bg-brand-500 rounded-[40px] p-8 lg:p-16 text-white text-center shadow-2xl">
+            <h2 className="font-display text-3xl sm:text-4xl font-bold mb-12">Recent Results</h2>
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              {service.caseStudies.map((study, idx) => (
+                <div key={idx} className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 text-left">
+                  <div className="text-4xl md:text-5xl font-bold text-navy-900 mb-4">{study.metric}</div>
+                  <h3 className="text-xl font-bold mb-2">{study.title}</h3>
+                  <p className="text-white/80">{study.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
     </div>
   )
 }
