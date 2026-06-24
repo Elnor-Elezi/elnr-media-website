@@ -5,10 +5,10 @@ import { Link, useLocation } from 'react-router-dom'
 
 const navLinks = [
   { label: 'Home', href: '/' },
-  { label: 'About', href: '/about' },
   { label: 'Services', href: '/services' },
   { label: 'Pricing', href: '/pricing' },
   { label: 'Contact', href: '/contact' },
+  { label: 'About', href: '/about' },
 ]
 
 export default function Navbar() {
