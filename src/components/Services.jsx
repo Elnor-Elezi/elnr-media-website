@@ -63,19 +63,19 @@ function FeaturedService({ service, index }) {
         className={`${reversed ? 'lg:order-2 lg:text-left' : ''}`}
         style={{ direction: 'ltr' }}
       >
-        <div className="w-16 h-16 rounded-full bg-white border border-charcoal-100 shadow-soft flex items-center justify-center mb-6">
+        <div className="w-16 h-16 rounded-full bg-white dark:bg-navy-900 border border-charcoal-100 dark:border-white/10 shadow-soft flex items-center justify-center mb-6">
           <service.icon size={26} className="text-brand-500" />
         </div>
-        <h3 className="font-display text-4xl sm:text-5xl font-bold text-navy-900 mb-4 tracking-tight">
+        <h3 className="font-display text-4xl sm:text-5xl font-bold text-navy-900 dark:text-white mb-4 tracking-tight">
           {service.title}
         </h3>
-        <p className="text-charcoal-500 text-lg lg:text-xl leading-relaxed mb-8">
+        <p className="text-charcoal-500 dark:text-charcoal-300 text-lg lg:text-xl leading-relaxed mb-8">
           {service.desc}
         </p>
         <div className="flex gap-8 mb-8">
           {service.stats.map((s) => (
             <div key={s.label}>
-              <div className="text-2xl font-bold text-navy-900">{s.value}</div>
+              <div className="text-2xl font-bold text-navy-900 dark:text-white">{s.value}</div>
               <div className="text-xs text-charcoal-400 uppercase tracking-wider font-bold mt-1">{s.label}</div>
             </div>
           ))}
@@ -122,7 +122,7 @@ export default function Services() {
       {/* Background elements */}
       <div className="absolute top-1/4 -right-32 w-[800px] h-[800px] bg-brand-200/20 rounded-full blur-[150px] mix-blend-multiply opacity-60 pointer-events-none" />
       <div className="absolute bottom-1/4 -left-32 w-[600px] h-[600px] bg-orange-100/30 rounded-full blur-[120px] mix-blend-multiply opacity-60 pointer-events-none" />
-      <div className="absolute top-0 right-0 opacity-40 pointer-events-none hidden lg:block">
+      <div className="absolute top-0 right-0 opacity-40 pointer-events-none hidden lg:block lg:scale-[0.6] xl:scale-75 origin-right translate-x-12">
         <ServicesObject />
       </div>
 
@@ -133,19 +133,18 @@ export default function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="text-center max-w-3xl mx-auto mb-20 lg:mb-32"
+          className="text-center max-w-3xl mx-auto mb-16 lg:mb-24"
         >
-          <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-[11px] font-bold tracking-[0.2em] uppercase bg-white border border-charcoal-100 shadow-sm text-navy-900 mb-6">
-            <span className="w-2 h-2 bg-brand-500 rounded-full animate-pulse" />
+          <span className="inline-flex items-center px-4 py-1.5 rounded-full text-[10px] font-semibold tracking-[0.25em] uppercase bg-brand-50 dark:bg-brand-500/10 text-brand-600 dark:text-brand-400 border border-brand-200/60 dark:border-brand-500/20 mb-5">
             What We Do
           </span>
-          <h2 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-navy-900 tracking-tight mb-6">
-            Full-Stack Growth{' '}
-            <span className="text-gradient">Services</span>
+          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-navy-700 dark:text-white tracking-tight mb-6">
+            Systems That{' '}
+            <span className="text-gradient">Scale Growth</span>
           </h2>
-          <p className="text-charcoal-500 text-lg sm:text-xl leading-relaxed">
-            Every service works together as part of a connected growth engine.
-            Not isolated tactics, but a system designed to compound results.
+          <p className="text-charcoal-500 dark:text-charcoal-300 text-base sm:text-lg leading-relaxed">
+            We don't just run ads or post content. We build interconnected 
+            media systems that turn attention into revenue.
           </p>
         </motion.div>
 
@@ -168,13 +167,13 @@ export default function Services() {
             <motion.div
               key={svc.title}
               variants={fadeInUp}
-              className="group glass rounded-[32px] p-8 cursor-default transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:bg-white"
+              className="group glass dark:glass-dark rounded-[32px] p-8 cursor-default transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:bg-white dark:hover:bg-navy-900 bg-white/50 dark:bg-transparent"
             >
               <div className="w-12 h-12 rounded-full bg-brand-50 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
                 <svc.icon size={20} className="text-brand-500" />
               </div>
-              <h4 className="font-display font-bold text-navy-900 text-lg mb-2 tracking-tight">{svc.title}</h4>
-              <p className="text-sm text-charcoal-500 leading-relaxed">{svc.desc}</p>
+              <h4 className="font-display font-bold text-navy-900 dark:text-white text-lg mb-2 tracking-tight">{svc.title}</h4>
+              <p className="text-sm text-charcoal-500 dark:text-charcoal-300 leading-relaxed">{svc.desc}</p>
             </motion.div>
           ))}
         </motion.div>

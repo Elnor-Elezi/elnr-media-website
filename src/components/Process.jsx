@@ -47,7 +47,7 @@ function ProcessStep({ step, index, isLast }) {
     <div className="relative">
       {/* Timeline connector */}
       {!isLast && (
-        <div className="hidden lg:block absolute left-1/2 -translate-x-1/2 top-full w-px h-20 lg:h-32 bg-gradient-to-b from-brand-300 to-brand-100/0" />
+        <div className="hidden lg:block absolute left-1/2 -translate-x-1/2 top-full w-px h-20 lg:h-32 bg-gradient-to-b from-brand-300 dark:from-brand-600 to-brand-100/0 dark:to-transparent" />
       )}
 
       <motion.div
@@ -66,11 +66,11 @@ function ProcessStep({ step, index, isLast }) {
               <step.icon size={24} className="text-white" />
             </div>
             <div>
-              <div className="text-[10px] font-bold tracking-[0.3em] uppercase text-brand-600 mb-0.5">Step {step.num}</div>
-              <h3 className="font-display text-3xl font-bold text-navy-700 tracking-tight">{step.title}</h3>
+              <div className="text-[10px] font-bold tracking-[0.3em] uppercase text-brand-600 dark:text-brand-400 mb-0.5">Step {step.num}</div>
+              <h3 className="font-display text-3xl font-bold text-navy-700 dark:text-white tracking-tight">{step.title}</h3>
             </div>
           </div>
-          <p className="text-charcoal-500 text-base lg:text-lg leading-relaxed pl-[72px] lg:pl-0">
+          <p className="text-charcoal-500 dark:text-charcoal-300 text-base lg:text-lg leading-relaxed pl-[72px] lg:pl-0">
             {step.desc}
           </p>
         </div>
@@ -86,11 +86,11 @@ function ProcessStep({ step, index, isLast }) {
               loading="lazy"
             />
             <div className="absolute inset-0 bg-navy-900/20 group-hover:bg-navy-900/10 transition-all duration-700" />
-            <div className="absolute inset-0 border border-charcoal-200/20 rounded-2xl" />
+            <div className="absolute inset-0 border border-charcoal-200/20 dark:border-white/10 rounded-2xl" />
 
             {/* Step badge on image */}
-            <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-white/80 backdrop-blur-md border border-charcoal-200/40 shadow-soft">
-              <span className="text-xs font-bold text-navy-700">{step.num}</span>
+            <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-white/80 dark:bg-navy-900/80 backdrop-blur-md border border-charcoal-200/40 dark:border-white/10 shadow-soft">
+              <span className="text-xs font-bold text-navy-700 dark:text-white">{step.num}</span>
             </div>
           </div>
         </div>
@@ -101,13 +101,13 @@ function ProcessStep({ step, index, isLast }) {
 
 export default function Process() {
   return (
-    <section id="process" className="relative py-24 lg:py-36 bg-white overflow-hidden" aria-label="Our process">
+    <section id="process" className="relative py-24 lg:py-36 bg-white dark:bg-[#0A101C] overflow-hidden" aria-label="Our process">
       {/* Background */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-brand-50/40 rounded-full blur-[150px]" />
-        <div className="absolute inset-0 opacity-[0.02]" style={{
-          backgroundImage: `linear-gradient(rgba(0,0,0,0.08) 1px, transparent 1px),
-                            linear-gradient(90deg, rgba(0,0,0,0.08) 1px, transparent 1px)`,
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-brand-50/40 dark:bg-brand-900/10 rounded-full blur-[150px]" />
+        <div className="absolute inset-0 opacity-[0.02] dark:opacity-[0.05]" style={{
+          backgroundImage: `linear-gradient(currentColor 1px, transparent 1px),
+                            linear-gradient(90deg, currentColor 1px, transparent 1px)`,
           backgroundSize: '80px 80px',
         }} />
       </div>
@@ -121,14 +121,14 @@ export default function Process() {
           transition={{ duration: 0.7 }}
           className="text-center max-w-3xl mx-auto mb-20 lg:mb-28"
         >
-          <span className="inline-flex items-center px-4 py-1.5 rounded-full text-[10px] font-semibold tracking-[0.25em] uppercase bg-brand-50 text-brand-600 border border-brand-200/60 mb-5">
+          <span className="inline-flex items-center px-4 py-1.5 rounded-full text-[10px] font-semibold tracking-[0.25em] uppercase bg-brand-50 dark:bg-brand-500/10 text-brand-600 dark:text-brand-400 border border-brand-200/60 dark:border-brand-500/20 mb-5">
             How It Works
           </span>
-          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-navy-700 tracking-tight mb-6">
+          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-navy-700 dark:text-white tracking-tight mb-6">
             A Proven System for{' '}
             <span className="text-gradient">Growth</span>
           </h2>
-          <p className="text-charcoal-500 text-base sm:text-lg leading-relaxed">
+          <p className="text-charcoal-500 dark:text-charcoal-300 text-base sm:text-lg leading-relaxed">
             Every engagement follows a clear, strategic process designed to
             build momentum and deliver measurable results.
           </p>

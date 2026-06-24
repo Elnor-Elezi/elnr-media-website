@@ -16,13 +16,13 @@ export default function TermsOfService() {
       />
       <div className="pt-32 pb-16 lg:pt-40 lg:pb-24">
         <div className="max-container section-padding max-w-4xl">
-          <span className="inline-flex items-center px-4 py-1.5 rounded-full text-[10px] font-semibold tracking-[0.25em] uppercase bg-charcoal-50 text-charcoal-500 border border-charcoal-200 mb-6">
+          <span className="inline-flex items-center px-4 py-1.5 rounded-full text-[10px] font-semibold tracking-[0.25em] uppercase bg-charcoal-50 text-charcoal-500 dark:text-charcoal-300 border border-charcoal-200 mb-6">
             Legal Information
           </span>
-          <h1 className="font-display text-4xl sm:text-5xl font-bold text-navy-900 leading-tight mb-6">
+          <h1 className="font-display text-4xl sm:text-5xl font-bold text-navy-900 dark:text-white leading-tight mb-6">
             Terms of Service
           </h1>
-          <p className="text-charcoal-500 text-lg mb-12">
+          <p className="text-charcoal-500 dark:text-charcoal-300 text-lg mb-12">
             Last updated: {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
           </p>
 

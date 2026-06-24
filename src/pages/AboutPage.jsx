@@ -53,17 +53,17 @@ export default function AboutPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-[11px] font-bold tracking-[0.2em] uppercase bg-white border border-charcoal-100 shadow-sm text-navy-900 mb-8">
+              <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-[11px] font-bold tracking-[0.2em] uppercase bg-white dark:bg-navy-900 border border-charcoal-100 dark:border-white/10 shadow-sm text-navy-900 dark:text-white mb-8">
                 <span className="w-2 h-2 bg-brand-500 rounded-full animate-pulse" />
                 Our Story
               </span>
               
-              <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-navy-900 tracking-tight mb-8">
+              <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-navy-900 dark:text-white tracking-tight mb-8">
                 We Build Systems That <br className="hidden sm:block" />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-brand-600">Actually Compound.</span>
               </h1>
               
-              <p className="text-charcoal-500 text-lg sm:text-xl leading-relaxed mb-12 max-w-3xl mx-auto">
+              <p className="text-charcoal-500 dark:text-charcoal-300 text-lg sm:text-xl leading-relaxed mb-12 max-w-3xl mx-auto">
                 Founded by Elnor Elezi, ELNR Media was built to solve a specific problem: businesses were treating marketing as isolated tactics instead of interconnected systems. We exist to fix that.
               </p>
             </motion.div>
@@ -97,11 +97,11 @@ export default function AboutPage() {
               transition={{ duration: 0.8 }}
               className="order-2 lg:order-1"
             >
-              <h2 className="font-display text-4xl sm:text-5xl font-bold text-navy-900 tracking-tight mb-6">
+              <h2 className="font-display text-4xl sm:text-5xl font-bold text-navy-900 dark:text-white tracking-tight mb-6">
                 The New Standard of <br />
                 <span className="text-brand-500">Growth Partners.</span>
               </h2>
-              <div className="space-y-6 text-charcoal-500 text-lg leading-relaxed">
+              <div className="space-y-6 text-charcoal-500 dark:text-charcoal-300 text-lg leading-relaxed">
                 <p>
                   Most agencies focus on inputs—how many posts they make or how much they spend on ads. At ELNR Media, we focus entirely on business outcomes.
                 </p>
@@ -121,11 +121,11 @@ export default function AboutPage() {
               transition={{ duration: 0.8 }}
               className="relative order-1 lg:order-2"
             >
-              <div className="glass bg-white rounded-[40px] p-8 lg:p-12 shadow-xl border border-white/40">
-                <div className="w-16 h-16 rounded-full bg-brand-50 flex items-center justify-center mb-8">
+              <div className="glass dark:glass-dark bg-white dark:bg-transparent rounded-[40px] p-8 lg:p-12 shadow-xl border border-white/40">
+                <div className="w-16 h-16 rounded-full bg-brand-50 dark:bg-brand-500/10 flex items-center justify-center mb-8">
                   <CheckCircle className="text-brand-500 w-8 h-8" />
                 </div>
-                <h3 className="font-display text-2xl font-bold text-navy-900 mb-4">Why we are different</h3>
+                <h3 className="font-display text-2xl font-bold text-navy-900 dark:text-white mb-4">Why we are different</h3>
                 <ul className="space-y-4">
                   {[
                     "We don't do isolated tactics, we build systems.",
@@ -134,10 +134,10 @@ export default function AboutPage() {
                     "We prioritize long-term brand equity over short-term hacks."
                   ].map((item, idx) => (
                     <li key={idx} className="flex items-start gap-4">
-                      <div className="w-6 h-6 rounded-full bg-brand-50 flex items-center justify-center shrink-0 mt-0.5">
+                      <div className="w-6 h-6 rounded-full bg-brand-50 dark:bg-brand-500/10 flex items-center justify-center shrink-0 mt-0.5">
                         <ArrowRight size={12} className="text-brand-500" />
                       </div>
-                      <span className="text-charcoal-600 font-medium">{item}</span>
+                      <span className="text-charcoal-600 dark:text-charcoal-300 font-medium">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -158,10 +158,10 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-center max-w-3xl mx-auto mb-20"
           >
-            <span className="inline-flex items-center px-4 py-1.5 rounded-full text-[10px] font-bold tracking-[0.2em] uppercase bg-white border border-charcoal-100 shadow-sm text-navy-900 mb-6">
+            <span className="inline-flex items-center px-4 py-1.5 rounded-full text-[10px] font-bold tracking-[0.2em] uppercase bg-white dark:bg-navy-900 border border-charcoal-100 dark:border-white/10 shadow-sm text-navy-900 dark:text-white mb-6">
               Core Values
             </span>
-            <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-navy-900 tracking-tight mb-6">
+            <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-navy-900 dark:text-white tracking-tight mb-6">
               How We Operate
             </h2>
           </motion.div>
@@ -177,13 +177,13 @@ export default function AboutPage() {
               <motion.div
                 key={idx}
                 variants={fadeInUp}
-                className="glass bg-white p-8 lg:p-10 rounded-[32px] hover:-translate-y-2 transition-transform duration-500 shadow-soft hover:shadow-xl"
+                className="glass dark:glass-dark bg-white dark:bg-transparent p-8 lg:p-10 rounded-[32px] hover:-translate-y-2 transition-transform duration-500 shadow-soft hover:shadow-xl"
               >
-                <div className="w-14 h-14 rounded-full bg-brand-50 flex items-center justify-center mb-6">
+                <div className="w-14 h-14 rounded-full bg-brand-50 dark:bg-brand-500/10 flex items-center justify-center mb-6">
                   <val.icon className="text-brand-500 w-6 h-6" />
                 </div>
-                <h3 className="font-display text-2xl font-bold text-navy-900 mb-3">{val.title}</h3>
-                <p className="text-charcoal-500 leading-relaxed">{val.desc}</p>
+                <h3 className="font-display text-2xl font-bold text-navy-900 dark:text-white mb-3">{val.title}</h3>
+                <p className="text-charcoal-500 dark:text-charcoal-300 leading-relaxed">{val.desc}</p>
               </motion.div>
             ))}
           </motion.div>

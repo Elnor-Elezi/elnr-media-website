@@ -54,15 +54,15 @@ export default function WhyElnr() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.5, duration: 0.5 }}
-              className="absolute -bottom-6 -right-4 lg:right-6 bg-white rounded-xl p-4 shadow-card-hover border border-charcoal-100"
+              className="absolute -bottom-6 -right-4 lg:right-6 bg-white dark:bg-navy-900 rounded-xl p-4 shadow-card-hover border border-charcoal-100 dark:border-white/10"
             >
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg bg-brand-50 flex items-center justify-center">
+                <div className="w-10 h-10 rounded-lg bg-brand-50 dark:bg-brand-500/10 flex items-center justify-center">
                   <Award size={20} className="text-brand-500" />
                 </div>
                 <div>
-                  <div className="text-lg font-bold text-navy-700">98%</div>
-                  <div className="text-[10px] text-charcoal-500">Client Retention Rate</div>
+                  <div className="text-lg font-bold text-navy-700 dark:text-white">98%</div>
+                  <div className="text-[10px] text-charcoal-500 dark:text-charcoal-300">Client Retention Rate</div>
                 </div>
               </div>
             </motion.div>
@@ -80,10 +80,10 @@ export default function WhyElnr() {
               transition={{ duration: 0.6 }}
               className="mb-10"
             >
-              <span className="inline-flex items-center px-4 py-1.5 rounded-full text-[10px] font-semibold tracking-[0.25em] uppercase bg-brand-50 text-brand-600 border border-brand-200/60 mb-5">
+              <span className="inline-flex items-center px-4 py-1.5 rounded-full text-[10px] font-semibold tracking-[0.25em] uppercase bg-brand-50 dark:bg-brand-500/10 text-brand-600 dark:text-brand-400 border border-brand-200/60 dark:border-brand-500/20 mb-5">
                 Why ELNR Media
               </span>
-              <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-700 tracking-tight mb-5">
+              <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-700 dark:text-white tracking-tight mb-5">
                 Built Different.{' '}
                 <span className="text-gradient">Built to Last.</span>
               </h2>
@@ -92,7 +92,7 @@ export default function WhyElnr() {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}
-                className="space-y-6 text-charcoal-500 text-lg leading-relaxed relative z-10"
+                className="space-y-6 text-charcoal-500 dark:text-charcoal-300 text-lg leading-relaxed relative z-10"
               >
                 <motion.p variants={fadeInUp}>
                   Most agencies focus on vanity metrics. We focus on one thing: scaling your revenue efficiently.
@@ -118,14 +118,14 @@ export default function WhyElnr() {
                 <motion.div
                   key={reason.title}
                   variants={fadeInUp}
-                  className="group flex gap-3 p-4 rounded-xl bg-white border border-charcoal-200/40 shadow-soft hover:shadow-card hover:-translate-y-0.5 transition-all duration-500 cursor-default"
+                  className="group flex gap-3 p-4 rounded-xl bg-white dark:bg-navy-900/50 border border-charcoal-200/40 dark:border-white/5 shadow-soft hover:shadow-card hover:-translate-y-0.5 transition-all duration-500 cursor-default"
                 >
-                  <div className="w-9 h-9 rounded-lg bg-charcoal-50 border border-charcoal-200/60 flex items-center justify-center flex-shrink-0 group-hover:bg-brand-50 group-hover:border-brand-200/60 transition-all duration-500">
-                    <reason.icon size={16} className="text-charcoal-400 group-hover:text-brand-500 transition-colors duration-500" />
+                  <div className="w-9 h-9 rounded-lg bg-charcoal-50 dark:bg-white/5 border border-charcoal-200/60 dark:border-white/10 flex items-center justify-center flex-shrink-0 group-hover:bg-brand-50 dark:group-hover:bg-brand-500/20 group-hover:border-brand-200/60 transition-all duration-500">
+                    <reason.icon size={16} className="text-charcoal-400 dark:text-charcoal-500 group-hover:text-brand-500 transition-colors duration-500" />
                   </div>
                   <div>
-                    <h4 className="font-display font-semibold text-navy-700 text-sm mb-0.5">{reason.title}</h4>
-                    <p className="text-[11px] text-charcoal-500 leading-relaxed">{reason.desc}</p>
+                    <h4 className="font-display font-semibold text-navy-700 dark:text-white text-sm mb-0.5">{reason.title}</h4>
+                    <p className="text-[11px] text-charcoal-500 dark:text-charcoal-400 leading-relaxed">{reason.desc}</p>
                   </div>
                 </motion.div>
               ))}

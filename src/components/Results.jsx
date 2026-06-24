@@ -21,30 +21,30 @@ function ResultCard({ result, index }) {
     <motion.div
       variants={fadeInUp}
       ref={counterRef}
-      className="group card-surface card-surface-hover rounded-2xl p-6 cursor-default relative overflow-hidden"
+      className="group glass dark:glass-dark rounded-2xl p-6 cursor-default relative overflow-hidden bg-white dark:bg-transparent"
     >
       {/* Hover gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-brand-50/0 to-brand-100/0 group-hover:from-brand-50/60 group-hover:to-brand-100/30 transition-all duration-700 rounded-2xl" />
+      <div className="absolute inset-0 bg-gradient-to-br from-brand-50/0 to-brand-100/0 group-hover:from-brand-50/60 dark:group-hover:from-brand-900/40 group-hover:to-brand-100/30 dark:group-hover:to-brand-800/20 transition-all duration-700 rounded-2xl" />
 
       <div className="relative">
         {/* Icon + Metric row */}
         <div className="flex items-center justify-between mb-4">
-          <div className="w-11 h-11 rounded-xl bg-charcoal-50 border border-charcoal-200/60 flex items-center justify-center group-hover:bg-brand-50 group-hover:border-brand-200/60 transition-all duration-500">
-            <result.icon size={20} className="text-charcoal-400 group-hover:text-brand-500 transition-colors duration-500" />
+          <div className="w-11 h-11 rounded-xl bg-charcoal-50 dark:bg-brand-500/10 border border-charcoal-200/60 dark:border-white/10 flex items-center justify-center group-hover:bg-brand-50 dark:group-hover:bg-brand-500/20 group-hover:border-brand-200/60 dark:group-hover:border-brand-500/30 transition-all duration-500">
+            <result.icon size={20} className="text-charcoal-400 dark:text-charcoal-500 group-hover:text-brand-500 transition-colors duration-500" />
           </div>
           <div className="text-right">
-            <div className="text-2xl font-display font-bold text-navy-700">
+            <div className="text-2xl font-display font-bold text-navy-700 dark:text-white">
               {count}<span className="text-brand-500">{result.suffix}</span>
             </div>
             <div className="text-[9px] text-charcoal-400 uppercase tracking-wider">{result.metricLabel}</div>
           </div>
         </div>
 
-        <h3 className="font-display font-semibold text-navy-700 mb-1.5">{result.title}</h3>
-        <p className="text-sm text-charcoal-500 leading-relaxed">{result.desc}</p>
+        <h3 className="font-display font-semibold text-navy-700 dark:text-white mb-1.5">{result.title}</h3>
+        <p className="text-sm text-charcoal-500 dark:text-charcoal-400 leading-relaxed">{result.desc}</p>
 
         {/* Progress bar */}
-        <div className="mt-4 h-1 bg-charcoal-100 rounded-full overflow-hidden">
+        <div className="mt-4 h-1 bg-charcoal-100 dark:bg-charcoal-800 rounded-full overflow-hidden">
           <motion.div
             initial={{ width: 0 }}
             whileInView={{ width: `${result.metric > 100 ? 100 : result.metric}%` }}
@@ -62,9 +62,9 @@ export default function Results() {
   const { ref, isInView } = useSectionInView(0.08)
 
   return (
-    <section className="relative py-24 lg:py-36 bg-white overflow-hidden" aria-label="Results and outcomes">
+    <section className="relative py-24 lg:py-36 bg-white dark:bg-[#0A101C] overflow-hidden" aria-label="Results and outcomes">
       {/* Background */}
-      <div className="absolute bottom-0 left-1/3 w-[500px] h-[500px] bg-brand-50/40 rounded-full blur-[120px]" />
+      <div className="absolute bottom-0 left-1/3 w-[500px] h-[500px] bg-brand-50/40 dark:bg-brand-900/10 rounded-full blur-[120px]" />
 
       <div className="relative max-container section-padding">
         {/* Header */}
@@ -75,14 +75,14 @@ export default function Results() {
           transition={{ duration: 0.7 }}
           className="text-center max-w-3xl mx-auto mb-16 lg:mb-20"
         >
-          <span className="inline-flex items-center px-4 py-1.5 rounded-full text-[10px] font-semibold tracking-[0.25em] uppercase bg-brand-50 text-brand-600 border border-brand-200/60 mb-5">
+          <span className="inline-flex items-center px-4 py-1.5 rounded-full text-[10px] font-semibold tracking-[0.25em] uppercase bg-brand-50 dark:bg-brand-500/10 text-brand-600 dark:text-brand-400 border border-brand-200/60 dark:border-brand-500/20 mb-5">
             Results
           </span>
-          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-navy-700 tracking-tight mb-6">
+          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-navy-700 dark:text-white tracking-tight mb-6">
             Outcomes That{' '}
             <span className="text-gradient">Compound</span>
           </h2>
-          <p className="text-charcoal-500 text-base sm:text-lg leading-relaxed">
+          <p className="text-charcoal-500 dark:text-charcoal-300 text-base sm:text-lg leading-relaxed">
             Working with ELNR Media means building systems that create
             lasting, measurable business impact.
           </p>

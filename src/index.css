@@ -17,8 +17,7 @@ html {
 
 body {
   font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
-  color: #333333;
-  background: #ffffff;
+  @apply bg-white dark:bg-[#0A101C] text-[#333333] dark:text-white transition-colors duration-500;
   overflow-x: hidden;
 }
 
@@ -88,7 +87,7 @@ body {
   }
   
   .btn-outline {
-    @apply bg-transparent border border-black/10 text-navy-900 hover:border-black/20 hover:bg-black/5;
+    @apply bg-transparent border border-black/10 dark:border-white/20 text-navy-900 dark:text-white hover:border-black/20 dark:hover:border-white/40 hover:bg-black/5 dark:hover:bg-white/5;
   }
 
   .section-padding {

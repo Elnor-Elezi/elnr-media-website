@@ -87,7 +87,7 @@ function PricingCard({ plan }) {
       <div className={`relative h-full rounded-[40px] p-8 lg:p-10 flex flex-col ${
         plan.featured
           ? 'bg-gradient-to-b from-navy-800 via-navy-900 to-[#0A101C] text-white shadow-2xl border border-white/10 backdrop-blur-xl'
-          : 'glass shadow-soft hover:shadow-xl transition-shadow bg-white'
+          : 'glass dark:glass-dark shadow-soft hover:shadow-xl transition-shadow bg-white dark:bg-transparent'
       }`}>
         {/* Badge */}
         {plan.badge && (
@@ -104,37 +104,37 @@ function PricingCard({ plan }) {
           <span className={`inline-flex items-center px-4 py-1.5 rounded-full text-[10px] font-bold tracking-[0.2em] uppercase ${
             plan.featured
               ? 'bg-white/10 text-white border border-white/20'
-              : 'bg-white text-navy-900 border border-charcoal-100 shadow-sm'
+              : 'bg-white dark:bg-navy-900 text-navy-900 dark:text-white border border-charcoal-100 dark:border-white/10 shadow-sm'
           }`}>
             {plan.label}
           </span>
         </div>
 
         {/* Name */}
-        <h3 className={`font-display text-3xl font-bold mb-6 tracking-tight ${plan.featured ? 'text-white' : 'text-navy-900'}`}>{plan.name}</h3>
+        <h3 className={`font-display text-3xl font-bold mb-6 tracking-tight ${plan.featured ? 'text-white' : 'text-navy-900 dark:text-white'}`}>{plan.name}</h3>
 
         {/* Price */}
         <div className="mb-2 flex items-baseline gap-1">
-          <span className={`font-display text-5xl lg:text-6xl font-bold tracking-tighter ${plan.featured ? 'text-white' : 'text-navy-900'}`}>
+          <span className={`font-display text-5xl lg:text-6xl font-bold tracking-tighter ${plan.featured ? 'text-white' : 'text-navy-900 dark:text-white'}`}>
             {plan.name === 'Authority' ? plan.priceFirst : plan.priceAfter}
           </span>
-          <span className={`text-base font-medium ${plan.featured ? 'text-white/60' : 'text-charcoal-400'}`}>{plan.pricePeriod}</span>
+          <span className={`text-base font-medium ${plan.featured ? 'text-white/60' : 'text-charcoal-400 dark:text-charcoal-300'}`}>{plan.pricePeriod}</span>
         </div>
-        <p className={`text-sm font-medium mb-8 ${plan.featured ? 'text-white/50' : 'text-charcoal-400'}`}>{plan.priceNote}</p>
+        <p className={`text-sm font-medium mb-8 ${plan.featured ? 'text-white/50' : 'text-charcoal-400 dark:text-charcoal-300'}`}>{plan.priceNote}</p>
 
         {/* Divider */}
-        <div className={`h-px w-full mb-8 ${plan.featured ? 'bg-white/10' : 'bg-charcoal-200/60'}`} />
+        <div className={`h-px w-full mb-8 ${plan.featured ? 'bg-white/10' : 'bg-charcoal-200/60 dark:bg-white/10'}`} />
 
         {/* Features */}
         <ul className="space-y-4 mb-10 flex-1">
           {plan.features.map((feat, i) => (
             <li key={i} className="flex items-start gap-4">
               <div className={`w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 ${
-                plan.featured ? 'bg-brand-500/20 text-brand-400 border border-brand-500/30' : 'bg-brand-50 text-brand-500 border border-brand-100'
+                plan.featured ? 'bg-brand-500/20 text-brand-400 border border-brand-500/30' : 'bg-brand-50 dark:bg-brand-500/10 text-brand-500 border border-brand-100 dark:border-brand-500/20'
               }`}>
                 <Check size={12} strokeWidth={3} />
               </div>
-              <span className={`text-base leading-relaxed font-medium ${plan.featured ? 'text-white/90' : 'text-charcoal-600'}`}>{feat}</span>
+              <span className={`text-base leading-relaxed font-medium ${plan.featured ? 'text-white/90' : 'text-charcoal-600 dark:text-charcoal-300'}`}>{feat}</span>
             </li>
           ))}
         </ul>
@@ -143,7 +143,7 @@ function PricingCard({ plan }) {
         <a
           href="#contact"
           className={`group/btn relative w-full flex items-center justify-center ${
-            plan.featured ? 'btn-pill btn-primary' : 'btn-pill btn-outline'
+            plan.featured ? 'btn-pill btn-primary dark:bg-white dark:text-navy-900' : 'btn-pill btn-outline dark:text-white'
           }`}
         >
           <span className="relative z-10 flex items-center gap-2">
@@ -163,7 +163,7 @@ export default function Pricing() {
     <section id="pricing" className="relative py-24 lg:py-40 overflow-hidden" aria-label="Pricing plans">
       {/* Background Orbs */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-brand-200/20 rounded-full blur-[150px] pointer-events-none mix-blend-multiply opacity-60" />
-      <div className="absolute top-10 right-0 opacity-40 pointer-events-none hidden lg:block">
+      <div className="absolute top-20 right-0 opacity-40 pointer-events-none hidden lg:block lg:scale-[0.6] xl:scale-75 origin-right translate-x-16">
         <PricingObject />
       </div>
 
@@ -176,15 +176,15 @@ export default function Pricing() {
           transition={{ duration: 0.7 }}
           className="text-center max-w-3xl mx-auto mb-20 lg:mb-32"
         >
-          <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-[11px] font-bold tracking-[0.2em] uppercase bg-white border border-charcoal-100 shadow-sm text-navy-900 mb-6">
+          <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-[11px] font-bold tracking-[0.2em] uppercase bg-white dark:bg-navy-900 border border-charcoal-100 dark:border-white/10 shadow-sm text-navy-900 dark:text-white mb-6">
             <span className="w-2 h-2 bg-brand-500 rounded-full animate-pulse" />
             Pricing
           </span>
-          <h2 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-navy-900 tracking-tight mb-6">
+          <h2 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-navy-900 dark:text-white tracking-tight mb-6">
             Choose Your{' '}
             <span className="text-gradient">Growth Engine</span>
           </h2>
-          <p className="text-charcoal-500 text-lg sm:text-xl leading-relaxed">
+          <p className="text-charcoal-500 dark:text-charcoal-300 text-lg sm:text-xl leading-relaxed">
             Each tier is a complete media and growth system. Step up for more reach,
             faster results, and more of the work handled for you.
           </p>
@@ -211,13 +211,13 @@ export default function Pricing() {
           transition={{ delay: 0.3, duration: 0.6 }}
           className="mt-20 lg:mt-32 max-w-4xl mx-auto"
         >
-          <div className="glass bg-white rounded-[32px] p-6 lg:p-8 flex items-center gap-6 shadow-soft">
-            <div className="w-14 h-14 rounded-full bg-brand-50 flex items-center justify-center flex-shrink-0">
+          <div className="glass dark:glass-dark bg-white dark:bg-transparent rounded-[32px] p-6 lg:p-8 flex items-center gap-6 shadow-soft">
+            <div className="w-14 h-14 rounded-full bg-brand-50 dark:bg-brand-500/10 flex items-center justify-center flex-shrink-0">
               <Sparkles size={24} className="text-brand-500" />
             </div>
             <div>
               <div className="text-[11px] font-bold text-brand-600 uppercase tracking-[0.2em] mb-2">Partner Benefit</div>
-              <p className="text-base text-charcoal-500 leading-relaxed">
+              <p className="text-base text-charcoal-500 dark:text-charcoal-300 leading-relaxed">
                 Each successful partnership connected to ELNR Media may unlock a bonus discount, based on the agreed partnership terms.
               </p>
             </div>

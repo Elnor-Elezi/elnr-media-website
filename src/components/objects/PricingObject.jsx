@@ -33,8 +33,6 @@ export default function PricingObject() {
               transform: `translateZ(${tier.y}px)`
             }}
           >
-            {/* Orbiting particles on each ring */}
-            <div className="absolute top-0 left-1/2 w-2 h-2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-full shadow-[0_0_15px_rgba(255,255,255,1)]" />
           </motion.div>
         ))}
 

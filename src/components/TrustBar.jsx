@@ -41,8 +41,8 @@ function TiltCard({ item, index }) {
       />
 
       {/* Overlays */}
-      <div className="absolute inset-0 bg-navy-900/60 group-hover:bg-navy-900/45 transition-all duration-500" />
-      <div className="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/20 to-transparent" />
+      <div className="absolute inset-0 bg-navy-900/60 dark:bg-[#0A101C]/80 group-hover:bg-navy-900/45 dark:group-hover:bg-[#0A101C]/60 transition-all duration-500" />
+      <div className="absolute inset-0 bg-gradient-to-t from-navy-900 dark:from-[#0A101C] via-navy-900/20 dark:via-[#0A101C]/20 to-transparent" />
 
       {/* Content */}
       <div className="relative h-full flex flex-col justify-end p-6 sm:p-7">
@@ -63,7 +63,7 @@ export default function TrustBar() {
   const { ref, isInView } = useSectionInView()
 
   return (
-    <section className="relative py-20 lg:py-28 bg-white" aria-label="Core capabilities">
+    <section className="relative py-20 lg:py-28 bg-white dark:bg-[#0A101C]" aria-label="Core capabilities">
       <div className="max-container section-padding">
         {/* Section label */}
         <motion.div
@@ -73,7 +73,7 @@ export default function TrustBar() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <span className="text-xs font-semibold tracking-[0.3em] uppercase text-brand-600">Core Capabilities</span>
+          <span className="text-xs font-semibold tracking-[0.3em] uppercase text-brand-600 dark:text-brand-400">Core Capabilities</span>
         </motion.div>
 
         {/* Bento grid: 4 columns, items fill all cells */}
