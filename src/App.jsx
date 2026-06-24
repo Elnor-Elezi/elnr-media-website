@@ -9,6 +9,7 @@ import ContactPage from './pages/ContactPage'
 import Dashboard from './pages/Dashboard'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import TermsOfService from './pages/TermsOfService'
+import ServiceDetail from './pages/ServiceDetail'
 
 function App() {
   const location = useLocation();
@@ -21,6 +22,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="about" element={<AboutPage />} />
           <Route path="services" element={<ServicesPage />} />
+          <Route path="services/:slug" element={<ServiceDetail />} />
           <Route path="pricing" element={<PricingPage />} />
           <Route path="contact" element={<ContactPage />} />
           <Route path="privacy" element={<PrivacyPolicy />} />

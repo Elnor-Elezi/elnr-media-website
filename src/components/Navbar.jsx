@@ -11,12 +11,12 @@ const navLinks = [
     label: 'Services', 
     href: '/services',
     dropdown: [
-      { label: 'Social Media Management', href: '/services#social-media' },
-      { label: 'Web Development', href: '/services#web-development' },
-      { label: 'Email Marketing', href: '/services#email-marketing' },
-      { label: 'Funnel Building', href: '/services#funnel-building' },
-      { label: 'CRM', href: '/services#crm' },
-      { label: 'Content Creation', href: '/services#content-creation' },
+      { label: 'Social Media Management', href: '/services/social-media-management' },
+      { label: 'Web Development', href: '/services/web-development' },
+      { label: 'Email Marketing', href: '/services/email-marketing' },
+      { label: 'Funnel Building', href: '/services/funnel-building' },
+      { label: 'CRM', href: '/services/crm' },
+      { label: 'Content Creation', href: '/services/content-creation' },
     ]
   },
   { label: 'Pricing', href: '/pricing' },
