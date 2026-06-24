@@ -3,6 +3,7 @@ import { Target, Shield, Rocket, Users, CheckCircle, ArrowRight } from 'lucide-r
 import { IMAGES, useSectionInView, fadeInUp, stagger } from '../hooks'
 import FinalCta from '../components/FinalCta'
 import SEO from '../components/SEO'
+import PageTransition from '../components/PageTransition'
 
 const values = [
   {
@@ -31,7 +32,8 @@ export default function AboutPage() {
   const { ref, isInView } = useSectionInView(0.1)
 
   return (
-    <div className="pt-24 lg:pt-36 bg-[#fafafa]">
+    <PageTransition>
+      <div className="pt-24 lg:pt-36 bg-[#fafafa]">
       <SEO 
         title="About Us | ELNR Media"
         description="Learn about ELNR Media, our founder Elnor Elezi, and our mission to build premium media systems that scale."
@@ -187,5 +189,6 @@ export default function AboutPage() {
 
       <FinalCta />
     </div>
+    </PageTransition>
   )
 }

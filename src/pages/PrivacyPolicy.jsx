@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import FinalCta from '../components/FinalCta'
 import SEO from '../components/SEO'
+import PageTransition from '../components/PageTransition'
 
 export default function PrivacyPolicy() {
   useEffect(() => {
@@ -8,7 +9,7 @@ export default function PrivacyPolicy() {
   }, [])
 
   return (
-    <>
+    <PageTransition>
       <SEO 
         title="Privacy Policy"
         description="Privacy Policy for ELNR Media. Learn how we collect, use, and protect your data."
@@ -73,6 +74,6 @@ export default function PrivacyPolicy() {
         </div>
       </div>
       <FinalCta />
-    </>
+    </PageTransition>
   )
 }

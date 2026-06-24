@@ -55,11 +55,11 @@ body {
   }
 
   .card-surface-hover {
-    @apply hover:shadow-card-hover hover:-translate-y-1 transition-all duration-500;
+    @apply hover:shadow-card-hover hover:scale-[1.02] hover:-translate-y-2 transition-all duration-500 cursor-pointer;
   }
   
   .btn-pill {
-    @apply rounded-full px-8 py-4 text-sm font-semibold transition-all duration-300;
+    @apply rounded-full px-8 py-4 text-sm font-semibold transition-all duration-300 hover:scale-[1.03] active:scale-95;
   }
   
   .btn-primary {

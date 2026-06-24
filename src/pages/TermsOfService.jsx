@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import SEO from '../components/SEO'
 import FinalCta from '../components/FinalCta'
+import PageTransition from '../components/PageTransition'
 
 export default function TermsOfService() {
   useEffect(() => {
@@ -8,7 +9,7 @@ export default function TermsOfService() {
   }, [])
 
   return (
-    <>
+    <PageTransition>
       <SEO 
         title="Terms of Service"
         description="Terms of Service for ELNR Media. Read our terms and conditions for using our services."
@@ -70,6 +71,6 @@ export default function TermsOfService() {
         </div>
       </div>
       <FinalCta />
-    </>
+    </PageTransition>
   )
 }

@@ -3,10 +3,12 @@ import Pricing from '../components/Pricing'
 import WhyElnr from '../components/WhyElnr'
 import FinalCta from '../components/FinalCta'
 import SEO from '../components/SEO'
+import PageTransition from '../components/PageTransition'
 
 export default function PricingPage() {
   return (
-    <div className="pt-20 lg:pt-24">
+    <PageTransition>
+      <div className="pt-20 lg:pt-24">
       <SEO 
         title="Pricing & Packages"
         description="Transparent pricing for our premium media systems. Choose the package that fits your growth stage."
@@ -16,5 +18,6 @@ export default function PricingPage() {
       <WhyElnr />
       <FinalCta />
     </div>
+    </PageTransition>
   )
 }

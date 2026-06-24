@@ -2,6 +2,7 @@ import ScrollProgress from './ScrollProgress'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import CookieBanner from './CookieBanner'
+import FloatingObjects from './FloatingObjects'
 import { Outlet } from 'react-router-dom'
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
@@ -15,7 +16,8 @@ export default function Layout() {
   }, [pathname])
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white relative">
+      <FloatingObjects />
       <ScrollProgress />
       <Navbar />
       <main className="flex-grow relative z-10">

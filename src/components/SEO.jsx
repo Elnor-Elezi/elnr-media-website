@@ -1,25 +1,32 @@
 import { Helmet } from 'react-helmet-async';
+import { useLocation } from 'react-router-dom';
 
-export default function SEO({ title, description, name = "ELNR Media", type = "website" }) {
+export default function SEO({ title, description, name = "ELNR Media", type = "website", image = "https://elnrmedia.com/og-image.jpg" }) {
   const siteTitle = title ? `${title} | ${name}` : name;
   const siteDescription = description || "Premium media systems built to grow your brand with strategic content, advertising, funnels, and lead generation.";
+  const location = useLocation();
+  const canonicalUrl = `https://elnrmedia.com${location.pathname}`;
 
   return (
     <Helmet>
       {/* Standard metadata tags */}
       <title>{siteTitle}</title>
       <meta name='description' content={siteDescription} />
+      <link rel="canonical" href={canonicalUrl} />
       
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={type} />
+      <meta property="og:url" content={canonicalUrl} />
       <meta property="og:title" content={siteTitle} />
       <meta property="og:description" content={siteDescription} />
+      <meta property="og:image" content={image} />
       
       {/* Twitter Card */}
       <meta name="twitter:creator" content={name} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={siteTitle} />
       <meta name="twitter:description" content={siteDescription} />
+      <meta name="twitter:image" content={image} />
     </Helmet>
   );
 }

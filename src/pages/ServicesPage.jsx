@@ -4,10 +4,12 @@ import Process from '../components/Process'
 import ImageBreak from '../components/ImageBreak'
 import FinalCta from '../components/FinalCta'
 import SEO from '../components/SEO'
+import PageTransition from '../components/PageTransition'
 
 export default function ServicesPage() {
   return (
-    <div className="pt-20 lg:pt-24">
+    <PageTransition>
+      <div className="pt-20 lg:pt-24">
       <SEO 
         title="Our Services"
         description="We provide comprehensive media production, paid advertising, and funnel optimization services to scale your brand with certainty."
@@ -25,5 +27,6 @@ export default function ServicesPage() {
       <div className="section-connector" />
       <FinalCta />
     </div>
+    </PageTransition>
   )
 }

@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import { Mail, MapPin, Phone, Send, CheckCircle } from 'lucide-react'
 import { IMAGES } from '../hooks'
 import SEO from '../components/SEO'
+import PageTransition from '../components/PageTransition'
 
 export default function ContactPage() {
   const ref = useRef(null)
@@ -80,7 +81,8 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="pt-24 pb-24 lg:pt-36 lg:pb-36 bg-[#fafafa]">
+    <PageTransition>
+      <div className="pt-24 pb-24 lg:pt-36 lg:pb-36 bg-[#fafafa]">
       <SEO 
         title="Contact Us | Strategy Call"
         description="Book a free strategy call with ELNR Media. Let's discuss your growth strategy and how we can build a scalable media system for your brand."
@@ -248,6 +250,7 @@ export default function ContactPage() {
           </motion.div>
         </div>
       </div>
-    </div>
+      </div>
+    </PageTransition>
   )
 }
