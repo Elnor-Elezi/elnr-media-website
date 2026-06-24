@@ -2,6 +2,7 @@ import { useRef, useState } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { Mail, MapPin, Phone, Send, CheckCircle } from 'lucide-react'
 import { IMAGES } from '../hooks'
+import SEO from '../components/SEO'
 
 export default function ContactPage() {
   const ref = useRef(null)
@@ -58,6 +59,10 @@ export default function ContactPage() {
 
   return (
     <div className="pt-24 pb-24 lg:pt-32 lg:pb-32 bg-white">
+      <SEO 
+        title="Contact Us | Strategy Call"
+        description="Book a free strategy call with ELNR Media. Let's discuss your growth strategy and how we can build a scalable media system for your brand."
+      />
       <div className="max-container section-padding">
         <div ref={ref} className="relative w-full rounded-3xl overflow-hidden min-h-[700px] flex items-center shadow-premium">
           {/* Background image */}
