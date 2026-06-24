@@ -4,49 +4,59 @@ export default function ServicesObject() {
   return (
     <div className="relative w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] flex items-center justify-center perspective-[1200px]">
       <motion.div
-        animate={{ rotateY: [0, 360], rotateX: [10, -10, 10] }}
-        transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+        animate={{ rotateY: [0, 360], rotateX: [20, 30, 20] }}
+        transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
         className="relative w-full h-full flex items-center justify-center"
         style={{ transformStyle: 'preserve-3d' }}
       >
-        {/* Central Core Cube */}
+        {/* Core structure */}
+        <div className="absolute w-64 h-64 border border-brand-500/20 rounded-full" style={{ transform: 'rotateX(90deg)' }} />
+        <div className="absolute w-64 h-64 border border-brand-500/20 rounded-full" style={{ transform: 'rotateY(90deg)' }} />
+        <div className="absolute w-64 h-64 border border-brand-500/20 rounded-full" />
+        
+        {/* Central Core */}
         <motion.div 
-          animate={{ scale: [1, 1.05, 1] }}
-          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute w-32 h-32 bg-brand-500/80 backdrop-blur-md rounded-xl border border-white/40 shadow-[0_0_40px_rgba(20,184,166,0.6)]"
-          style={{ transform: 'translateZ(0px) rotate45deg' }}
+          animate={{ scale: [1, 1.2, 1], rotateZ: [0, 180] }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute w-16 h-16 bg-gradient-to-tr from-brand-400 to-brand-600 rounded-lg shadow-[0_0_60px_rgba(20,184,166,0.8)] backdrop-blur-md"
         />
 
-        {/* Orbiting Cubes */}
-        {[
-          { delay: 0, x: 120, y: -80, z: 60, size: 'w-16 h-16', color: 'bg-orange-300/70' },
-          { delay: 1, x: -140, y: 40, z: -80, size: 'w-20 h-20', color: 'bg-navy-800/80' },
-          { delay: 2, x: 60, y: 140, z: 40, size: 'w-12 h-12', color: 'bg-white/80' },
-          { delay: 3, x: -80, y: -120, z: 100, size: 'w-14 h-14', color: 'bg-brand-300/60' },
-        ].map((cube, i) => (
+        {/* Orbiting rings and nodes */}
+        {[1, 2, 3].map((ring) => (
           <motion.div
-            key={i}
-            initial={{ opacity: 0 }}
-            animate={{ 
-              opacity: 1,
-              x: [cube.x - 20, cube.x + 20, cube.x - 20],
-              y: [cube.y + 20, cube.y - 20, cube.y + 20],
-              rotateZ: [0, 180, 360]
+            key={ring}
+            animate={{ rotateZ: [0, ring % 2 === 0 ? 360 : -360], rotateX: [0, 360] }}
+            transition={{ duration: 15 + ring * 5, repeat: Infinity, ease: "linear" }}
+            className="absolute rounded-full border border-white/10"
+            style={{ 
+              width: `${ring * 120}px`, 
+              height: `${ring * 120}px`,
+              transformStyle: 'preserve-3d' 
             }}
-            transition={{ 
-              opacity: { duration: 1, delay: cube.delay },
-              x: { duration: 8 + i, repeat: Infinity, ease: "easeInOut" },
-              y: { duration: 7 + i, repeat: Infinity, ease: "easeInOut" },
-              rotateZ: { duration: 15 + i, repeat: Infinity, ease: "linear" }
-            }}
-            className={`absolute ${cube.size} ${cube.color} backdrop-blur-xl rounded-lg border border-white/30 shadow-xl`}
-            style={{ transform: `translateZ(${cube.z}px)` }}
-          />
+          >
+            <div className="absolute top-0 left-1/2 w-4 h-4 -translate-x-1/2 -translate-y-1/2 bg-white rounded-full shadow-[0_0_20px_rgba(255,255,255,1)]" />
+            <div className="absolute bottom-0 right-1/4 w-3 h-3 bg-brand-300 rounded-full shadow-[0_0_15px_rgba(94,234,212,0.8)]" />
+          </motion.div>
         ))}
 
-        {/* Connecting Lines (Simulated by thin divs) */}
-        <div className="absolute w-full h-[1px] bg-gradient-to-r from-transparent via-brand-400/30 to-transparent rotate-45" />
-        <div className="absolute w-[1px] h-full bg-gradient-to-b from-transparent via-brand-400/30 to-transparent -rotate-45" />
+        {/* Floating Data Cubes */}
+        {[
+          { x: 100, y: -100, z: 50 },
+          { x: -120, y: 80, z: -80 },
+          { x: 80, y: 120, z: 100 }
+        ].map((pos, i) => (
+          <motion.div
+            key={i}
+            animate={{ 
+              y: [pos.y, pos.y - 40, pos.y],
+              rotateX: [0, 360],
+              rotateY: [0, 360]
+            }}
+            transition={{ duration: 6 + i * 2, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute w-12 h-12 bg-white/5 backdrop-blur-xl border border-white/20 rounded-xl"
+            style={{ transform: `translate3d(${pos.x}px, ${pos.y}px, ${pos.z}px)` }}
+          />
+        ))}
       </motion.div>
     </div>
   )

@@ -4,7 +4,6 @@ import { IMAGES, useSectionInView, fadeInUp, stagger } from '../hooks'
 import FinalCta from '../components/FinalCta'
 import SEO from '../components/SEO'
 import PageTransition from '../components/PageTransition'
-import AboutObject from '../components/objects/AboutObject'
 
 const values = [
   {
@@ -40,12 +39,8 @@ export default function AboutPage() {
         description="Learn about ELNR Media, our founder Elnor Elezi, and our mission to build premium media systems that scale."
       />
 
-      {/* Hero Section */}
       <section className="relative overflow-hidden pt-12 pb-24 lg:pt-20 lg:pb-36">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-500/10 rounded-full blur-[150px] pointer-events-none" />
-        <div className="absolute top-[5%] right-[-5%] opacity-60 pointer-events-none hidden lg:block">
-          <AboutObject />
-        </div>
         
         <div className="relative max-container section-padding">
           <div className="max-w-4xl mx-auto text-center">

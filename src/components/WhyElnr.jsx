@@ -87,10 +87,23 @@ export default function WhyElnr() {
                 Built Different.{' '}
                 <span className="text-gradient">Built to Last.</span>
               </h2>
-              <p className="text-charcoal-500 text-base leading-relaxed">
-                We build complete, strategic systems that create authority,
-                generate leads, and compound results over time.
-              </p>
+              <motion.div
+                variants={stagger}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+                className="space-y-6 text-charcoal-500 text-lg leading-relaxed relative z-10"
+              >
+                <motion.p variants={fadeInUp}>
+                  Most agencies focus on vanity metrics. We focus on one thing: scaling your revenue efficiently.
+                </motion.p>
+                <motion.p variants={fadeInUp}>
+                  We build complete, strategic systems that create authority, generate high-intent leads, and convert them consistently.
+                </motion.p>
+                <motion.p variants={fadeInUp}>
+                  Our infrastructure is built for longevity. We set up data tracking, optimize your funnels, and ensure that every dollar you put in compounds over time.
+                </motion.p>
+              </motion.div>
             </motion.div>
 
             {/* Bento-style reason cards */}
