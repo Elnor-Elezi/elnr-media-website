@@ -6,7 +6,7 @@ import SEO from '../components/SEO'
 
 export default function ContactPage() {
   const ref = useRef(null)
-  const [formData, setFormData] = useState({ name: '', email: '' })
+  const [formData, setFormData] = useState({ name: '', email: '', botcheck: false })
   const [submitted, setSubmitted] = useState(false)
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -23,6 +23,26 @@ export default function ContactPage() {
     e.preventDefault()
     if (!formData.name || !formData.email) return
 
+    // 1. Honeypot check for bots
+    if (formData.botcheck) {
+      // Silently pretend it succeeded to trick the bot
+      setSubmitted(true)
+      setStatus('success')
+      return
+    }
+
+    // 2. Client-side Rate Limit (1 hour cooldown)
+    const lastSubmission = localStorage.getItem('elnr_last_submission')
+    if (lastSubmission) {
+      const timeSince = Date.now() - parseInt(lastSubmission)
+      if (timeSince < 3600000) { // 60 minutes
+        alert("You have already sent a request recently. We will be in touch shortly!")
+        setSubmitted(true)
+        setStatus('success')
+        return
+      }
+    }
+
     setStatus('submitting')
 
     try {
@@ -38,11 +58,13 @@ export default function ContactPage() {
           from_name: 'ELNR Media',
           name: formData.name,
           email: formData.email,
+          botcheck: formData.botcheck,
         })
       })
 
       const result = await response.json()
       if (result.success) {
+        localStorage.setItem('elnr_last_submission', Date.now().toString())
         setSubmitted(true)
         setStatus('success')
       } else {
@@ -153,6 +175,16 @@ export default function ContactPage() {
 
                   {!submitted ? (
                     <form onSubmit={handleSubmit} className="space-y-6">
+                      {/* Honeypot Field */}
+                      <input 
+                        type="checkbox" 
+                        name="botcheck" 
+                        className="hidden" 
+                        style={{ display: 'none' }}
+                        checked={formData.botcheck}
+                        onChange={(e) => setFormData(prev => ({ ...prev, botcheck: e.target.checked }))}
+                      />
+                      
                       <div>
                         <label htmlFor="name" className="block text-[11px] font-bold text-white/60 uppercase tracking-[0.2em] mb-3 ml-2">Your Name</label>
                         <input

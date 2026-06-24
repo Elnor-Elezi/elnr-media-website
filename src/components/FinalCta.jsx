@@ -6,8 +6,9 @@ import { IMAGES } from '../hooks'
 
 export default function FinalCta({ showForm = false }) {
   const ref = useRef(null)
-  const [formData, setFormData] = useState({ name: '', email: '' })
+  const [formData, setFormData] = useState({ name: '', email: '', botcheck: false })
   const [submitted, setSubmitted] = useState(false)
+  const [status, setStatus] = useState('idle')
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ['start end', 'end start'],
@@ -16,10 +17,62 @@ export default function FinalCta({ showForm = false }) {
   const textY = useTransform(scrollYProgress, [0.2, 0.6], [40, 0])
   const textOpacity = useTransform(scrollYProgress, [0.2, 0.5], [0, 1])
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    if (formData.name && formData.email) {
+    if (!formData.name || !formData.email) return
+
+    // 1. Honeypot check for bots
+    if (formData.botcheck) {
       setSubmitted(true)
+      setStatus('success')
+      return
+    }
+
+    // 2. Client-side Rate Limit (1 hour cooldown)
+    const lastSubmission = localStorage.getItem('elnr_last_submission')
+    if (lastSubmission) {
+      const timeSince = Date.now() - parseInt(lastSubmission)
+      if (timeSince < 3600000) { // 60 minutes
+        alert("You have already sent a request recently. We will be in touch shortly!")
+        setSubmitted(true)
+        setStatus('success')
+        return
+      }
+    }
+
+    setStatus('submitting')
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json'
+        },
+        body: JSON.stringify({
+          access_key: '88c85314-1851-4448-a4b2-bf517e0bb82a',
+          subject: 'New Strategy Call Request from ELNR Website',
+          from_name: 'ELNR Media',
+          name: formData.name,
+          email: formData.email,
+          botcheck: formData.botcheck,
+        })
+      })
+
+      const result = await response.json()
+      if (result.success) {
+        localStorage.setItem('elnr_last_submission', Date.now().toString())
+        setSubmitted(true)
+        setStatus('success')
+      } else {
+        setStatus('error')
+        console.error(result)
+        alert('Something went wrong. Please try again.')
+      }
+    } catch (error) {
+      setStatus('error')
+      console.error(error)
+      alert('Network error. Please try again.')
     }
   }
 
@@ -71,6 +124,15 @@ export default function FinalCta({ showForm = false }) {
             {showForm ? (
               !submitted ? (
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto mb-6">
+                  {/* Honeypot Field */}
+                  <input 
+                    type="checkbox" 
+                    name="botcheck" 
+                    className="hidden" 
+                    style={{ display: 'none' }}
+                    checked={formData.botcheck}
+                    onChange={(e) => setFormData(prev => ({ ...prev, botcheck: e.target.checked }))}
+                  />
                   <div className="flex flex-col sm:flex-row gap-3 mb-4">
                     <input
                       type="text"
