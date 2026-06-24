@@ -74,66 +74,66 @@ function PricingCard({ plan }) {
         rotateY: springRotateY,
         transformPerspective: 1200,
       }}
-      className={`group relative rounded-2xl overflow-visible transition-all duration-500 ${
-        plan.featured ? 'lg:-mt-6 z-10' : ''
+      className={`group relative rounded-[40px] overflow-visible transition-all duration-500 ${
+        plan.featured ? 'lg:-mt-8 z-10' : ''
       }`}
     >
       {/* Glow ring for featured */}
       {plan.featured && (
-        <div className="absolute -inset-[1px] bg-gradient-to-b from-brand-400 via-brand-500/40 to-brand-400/10 rounded-2xl" />
+        <div className="absolute -inset-[2px] bg-gradient-to-b from-brand-400 via-brand-500/40 to-brand-400/10 rounded-[42px] blur-sm opacity-50" />
       )}
 
-      <div className={`relative h-full rounded-2xl p-7 lg:p-8 flex flex-col ${
+      <div className={`relative h-full rounded-[40px] p-8 lg:p-10 flex flex-col ${
         plan.featured
-          ? 'bg-gradient-to-b from-navy-700 via-navy-800 to-navy-900 text-white'
-          : 'bg-white border border-charcoal-200/60 shadow-card'
+          ? 'bg-gradient-to-b from-navy-800 via-navy-900 to-[#0A101C] text-white shadow-2xl border border-white/10 backdrop-blur-xl'
+          : 'glass shadow-soft hover:shadow-xl transition-shadow bg-white'
       }`}>
         {/* Badge */}
         {plan.badge && (
-          <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-            <div className="flex items-center gap-1.5 px-5 py-1.5 rounded-full bg-gradient-to-r from-brand-500 to-brand-700 shadow-glow">
-              <Star size={12} className="text-white fill-white" />
-              <span className="text-xs font-bold text-white tracking-wider">{plan.badge}</span>
+          <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+            <div className="flex items-center gap-2 px-6 py-2 rounded-full bg-gradient-to-r from-brand-400 to-brand-600 shadow-glow border border-white/20">
+              <Star size={14} className="text-white fill-white" />
+              <span className="text-[11px] font-bold text-white tracking-[0.2em] uppercase">{plan.badge}</span>
             </div>
           </div>
         )}
 
         {/* Label */}
-        <div className={`mb-5 ${plan.featured ? 'mt-3' : 'mt-1'}`}>
-          <span className={`inline-flex items-center px-3 py-1 rounded-full text-[10px] font-bold tracking-[0.2em] uppercase ${
+        <div className={`mb-6 ${plan.featured ? 'mt-4' : 'mt-2'}`}>
+          <span className={`inline-flex items-center px-4 py-1.5 rounded-full text-[10px] font-bold tracking-[0.2em] uppercase ${
             plan.featured
-              ? 'bg-brand-500/15 text-brand-300 border border-brand-400/20'
-              : 'bg-charcoal-50 text-charcoal-500 border border-charcoal-200/60'
+              ? 'bg-white/10 text-white border border-white/20'
+              : 'bg-white text-navy-900 border border-charcoal-100 shadow-sm'
           }`}>
             {plan.label}
           </span>
         </div>
 
         {/* Name */}
-        <h3 className={`font-display text-2xl font-bold mb-4 ${plan.featured ? 'text-white' : 'text-navy-700'}`}>{plan.name}</h3>
+        <h3 className={`font-display text-3xl font-bold mb-6 tracking-tight ${plan.featured ? 'text-white' : 'text-navy-900'}`}>{plan.name}</h3>
 
         {/* Price */}
-        <div className="mb-1">
-          <span className={`font-display text-4xl lg:text-5xl font-bold ${plan.featured ? 'text-white' : 'text-navy-700'}`}>
+        <div className="mb-2 flex items-baseline gap-1">
+          <span className={`font-display text-5xl lg:text-6xl font-bold tracking-tighter ${plan.featured ? 'text-white' : 'text-navy-900'}`}>
             {plan.name === 'Authority' ? plan.priceFirst : plan.priceAfter}
           </span>
-          <span className={`text-sm ml-1 ${plan.featured ? 'text-white/60' : 'text-charcoal-400'}`}>{plan.pricePeriod}</span>
+          <span className={`text-base font-medium ${plan.featured ? 'text-white/60' : 'text-charcoal-400'}`}>{plan.pricePeriod}</span>
         </div>
-        <p className={`text-xs mb-6 ${plan.featured ? 'text-white/50' : 'text-charcoal-400'}`}>{plan.priceNote}</p>
+        <p className={`text-sm font-medium mb-8 ${plan.featured ? 'text-white/50' : 'text-charcoal-400'}`}>{plan.priceNote}</p>
 
         {/* Divider */}
-        <div className={`h-px mb-6 ${plan.featured ? 'bg-white/10' : 'bg-charcoal-200/60'}`} />
+        <div className={`h-px w-full mb-8 ${plan.featured ? 'bg-white/10' : 'bg-charcoal-200/60'}`} />
 
         {/* Features */}
-        <ul className="space-y-3 mb-8 flex-1">
+        <ul className="space-y-4 mb-10 flex-1">
           {plan.features.map((feat, i) => (
-            <li key={i} className="flex items-start gap-3">
-              <div className={`w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 ${
-                plan.featured ? 'bg-brand-500/20 text-brand-300' : 'bg-brand-50 text-brand-500'
+            <li key={i} className="flex items-start gap-4">
+              <div className={`w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 ${
+                plan.featured ? 'bg-brand-500/20 text-brand-400 border border-brand-500/30' : 'bg-brand-50 text-brand-500 border border-brand-100'
               }`}>
-                <Check size={11} strokeWidth={3} />
+                <Check size={12} strokeWidth={3} />
               </div>
-              <span className={`text-sm leading-relaxed ${plan.featured ? 'text-white/80' : 'text-charcoal-600'}`}>{feat}</span>
+              <span className={`text-base leading-relaxed font-medium ${plan.featured ? 'text-white/90' : 'text-charcoal-600'}`}>{feat}</span>
             </li>
           ))}
         </ul>
@@ -141,26 +141,14 @@ function PricingCard({ plan }) {
         {/* CTA */}
         <a
           href="#contact"
-          className={`group/btn relative inline-flex items-center justify-center gap-2 w-full py-3.5 px-6 rounded-xl text-sm font-semibold transition-all duration-500 hover:-translate-y-0.5 overflow-hidden ${
-            plan.featured
-              ? 'text-white shadow-glow'
-              : 'text-navy-700'
+          className={`group/btn relative w-full flex items-center justify-center ${
+            plan.featured ? 'btn-pill btn-primary' : 'btn-pill btn-outline'
           }`}
         >
-          <span className="relative z-10">{plan.cta}</span>
-          <ArrowRight size={16} className="relative z-10 group-hover/btn:translate-x-1 transition-transform duration-300" />
-
-          {/* Button background */}
-          <div className={`absolute inset-0 transition-opacity duration-500 ${
-            plan.featured
-              ? 'bg-gradient-to-r from-brand-500 to-brand-600'
-              : 'bg-charcoal-100'
-          }`} />
-          <div className={`absolute inset-0 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-500 ${
-            plan.featured
-              ? 'bg-gradient-to-r from-brand-400 to-brand-500'
-              : 'bg-charcoal-200/80'
-          }`} />
+          <span className="relative z-10 flex items-center gap-2">
+            {plan.cta}
+            <ArrowRight size={18} className="group-hover/btn:translate-x-1 transition-transform duration-300" />
+          </span>
         </a>
       </div>
     </motion.div>
@@ -171,9 +159,9 @@ export default function Pricing() {
   const { ref, isInView } = useSectionInView(0.08)
 
   return (
-    <section id="pricing" className="relative py-24 lg:py-36 bg-white overflow-hidden" aria-label="Pricing plans">
-      {/* Background */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-brand-50/30 rounded-full blur-[150px]" />
+    <section id="pricing" className="relative py-24 lg:py-40 bg-[#fafafa] overflow-hidden" aria-label="Pricing plans">
+      {/* Background Orbs */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-brand-200/20 rounded-full blur-[150px] pointer-events-none mix-blend-multiply opacity-60" />
 
       <div className="relative max-container section-padding">
         {/* Header */}
@@ -182,16 +170,17 @@ export default function Pricing() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="text-center max-w-3xl mx-auto mb-16 lg:mb-20"
+          className="text-center max-w-3xl mx-auto mb-20 lg:mb-32"
         >
-          <span className="inline-flex items-center px-4 py-1.5 rounded-full text-[10px] font-semibold tracking-[0.25em] uppercase bg-brand-50 text-brand-600 border border-brand-200/60 mb-5">
+          <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-[11px] font-bold tracking-[0.2em] uppercase bg-white border border-charcoal-100 shadow-sm text-navy-900 mb-6">
+            <span className="w-2 h-2 bg-brand-500 rounded-full animate-pulse" />
             Pricing
           </span>
-          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-navy-700 tracking-tight mb-6">
+          <h2 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-navy-900 tracking-tight mb-6">
             Choose Your{' '}
             <span className="text-gradient">Growth Engine</span>
           </h2>
-          <p className="text-charcoal-500 text-base sm:text-lg leading-relaxed">
+          <p className="text-charcoal-500 text-lg sm:text-xl leading-relaxed">
             Each tier is a complete media and growth system. Step up for more reach,
             faster results, and more of the work handled for you.
           </p>
@@ -203,28 +192,28 @@ export default function Pricing() {
           initial="hidden"
           animate={isInView ? 'visible' : 'hidden'}
           variants={stagger}
-          className="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto items-start"
+          className="grid md:grid-cols-3 gap-8 lg:gap-10 max-w-6xl mx-auto items-start"
         >
           {plans.map((plan) => (
             <PricingCard key={plan.name} plan={plan} />
           ))}
         </motion.div>
 
-        {/* Partner banner (iSMART reference removed) */}
+        {/* Partner banner */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3, duration: 0.6 }}
-          className="mt-14 lg:mt-20 max-w-3xl mx-auto"
+          className="mt-20 lg:mt-32 max-w-4xl mx-auto"
         >
-          <div className="card-surface rounded-2xl p-5 lg:p-6 flex items-center gap-4">
-            <div className="w-10 h-10 rounded-xl bg-brand-50 border border-brand-200/60 flex items-center justify-center flex-shrink-0">
-              <Sparkles size={20} className="text-brand-500" />
+          <div className="glass bg-white rounded-[32px] p-6 lg:p-8 flex items-center gap-6 shadow-soft">
+            <div className="w-14 h-14 rounded-full bg-brand-50 flex items-center justify-center flex-shrink-0">
+              <Sparkles size={24} className="text-brand-500" />
             </div>
             <div>
-              <div className="text-[10px] font-bold text-brand-600 uppercase tracking-[0.2em] mb-1">Partner Benefit</div>
-              <p className="text-sm text-charcoal-500 leading-relaxed">
+              <div className="text-[11px] font-bold text-brand-600 uppercase tracking-[0.2em] mb-2">Partner Benefit</div>
+              <p className="text-base text-charcoal-500 leading-relaxed">
                 Each successful partnership connected to ELNR Media may unlock a bonus discount, based on the agreed partnership terms.
               </p>
             </div>

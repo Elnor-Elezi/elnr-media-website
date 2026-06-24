@@ -58,13 +58,13 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="pt-24 pb-24 lg:pt-32 lg:pb-32 bg-white">
+    <div className="pt-24 pb-24 lg:pt-36 lg:pb-36 bg-[#fafafa]">
       <SEO 
         title="Contact Us | Strategy Call"
         description="Book a free strategy call with ELNR Media. Let's discuss your growth strategy and how we can build a scalable media system for your brand."
       />
       <div className="max-container section-padding">
-        <div ref={ref} className="relative w-full rounded-3xl overflow-hidden min-h-[700px] flex items-center shadow-premium">
+        <div ref={ref} className="relative w-full rounded-[40px] overflow-hidden min-h-[700px] flex items-center shadow-2xl">
           {/* Background image */}
           <motion.img
             style={{ scale: imgScale }}
@@ -79,63 +79,64 @@ export default function ContactPage() {
           <div className="absolute inset-0 bg-gradient-to-r from-navy-900/95 via-navy-900/80 to-navy-900/90" />
 
           {/* Radial accent */}
-          <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-500/[0.08] rounded-full blur-[100px]" />
+          <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-brand-500/[0.12] rounded-full blur-[120px]" />
 
           {/* Border overlay */}
-          <div className="absolute inset-0 border border-white/[0.06] rounded-3xl pointer-events-none" />
+          <div className="absolute inset-0 border border-white/[0.08] rounded-[40px] pointer-events-none" />
 
           {/* Content */}
           <motion.div
             style={{ y: textY, opacity: textOpacity }}
-            className="relative z-10 p-8 sm:p-12 lg:p-20 w-full"
+            className="relative z-10 p-8 sm:p-12 lg:p-24 w-full"
           >
-            <div className="grid lg:grid-cols-2 gap-10 lg:gap-24 items-center max-w-6xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-16 lg:gap-32 items-center max-w-7xl mx-auto">
               
               {/* Left Column: Info */}
               <div>
-                <span className="inline-flex items-center px-4 py-1.5 rounded-full text-[10px] font-semibold tracking-[0.25em] uppercase bg-white/[0.08] text-brand-300 border border-white/[0.1] mb-7">
+                <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-[11px] font-bold tracking-[0.2em] uppercase bg-white/10 text-white border border-white/20 mb-8 backdrop-blur-md">
+                  <span className="w-2 h-2 bg-brand-400 rounded-full animate-pulse" />
                   Get in Touch
                 </span>
 
-                <h1 className="font-display text-4xl sm:text-5xl font-bold text-white leading-tight tracking-tight mb-6">
+                <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight tracking-tight mb-8">
                   Let's Discuss Your <br className="hidden sm:block" />
-                  <span className="text-gradient">Growth Strategy</span>
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-300 to-brand-500">Growth Strategy</span>
                 </h1>
                 
-                <p className="text-white/60 text-lg leading-relaxed mb-12 max-w-lg">
+                <p className="text-white/70 text-lg lg:text-xl leading-relaxed mb-16 max-w-xl">
                   Whether you need a complete media system overhaul or specific 
                   funnel optimizations, our team is ready to analyze your current 
                   setup and propose a data-driven path forward.
                 </p>
 
-                <div className="space-y-8">
-                  <div className="flex items-center gap-5 group cursor-pointer">
-                    <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center transition-colors duration-300 group-hover:bg-white/10 group-hover:border-white/20">
-                      <Mail size={22} className="text-brand-400 group-hover:text-brand-300 transition-colors" />
+                <div className="space-y-10">
+                  <div className="flex items-center gap-6 group cursor-pointer">
+                    <div className="w-16 h-16 rounded-full bg-white/5 border border-white/10 flex items-center justify-center transition-transform duration-500 group-hover:scale-110 group-hover:bg-white/10 group-hover:border-white/20 backdrop-blur-md">
+                      <Mail size={24} className="text-brand-400 group-hover:text-brand-300 transition-colors" />
                     </div>
                     <div>
-                      <div className="text-xs font-bold text-white/40 uppercase tracking-wider mb-1">Email Us</div>
-                      <a href="mailto:Elnorelezi@icloud.com" className="text-white font-medium text-lg hover:text-brand-300 transition-colors">Elnorelezi@icloud.com</a>
+                      <div className="text-[11px] font-bold text-white/40 uppercase tracking-[0.2em] mb-1">Email Us</div>
+                      <a href="mailto:Elnorelezi@icloud.com" className="text-white font-medium text-xl hover:text-brand-300 transition-colors">Elnorelezi@icloud.com</a>
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-5 group cursor-pointer">
-                    <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center transition-colors duration-300 group-hover:bg-white/10 group-hover:border-white/20">
-                      <Phone size={22} className="text-brand-400 group-hover:text-brand-300 transition-colors" />
+                  <div className="flex items-center gap-6 group cursor-pointer">
+                    <div className="w-16 h-16 rounded-full bg-white/5 border border-white/10 flex items-center justify-center transition-transform duration-500 group-hover:scale-110 group-hover:bg-white/10 group-hover:border-white/20 backdrop-blur-md">
+                      <Phone size={24} className="text-brand-400 group-hover:text-brand-300 transition-colors" />
                     </div>
                     <div>
-                      <div className="text-xs font-bold text-white/40 uppercase tracking-wider mb-1">Call Us</div>
-                      <a href="tel:+355676718858" className="text-white font-medium text-lg hover:text-brand-300 transition-colors">+355 67 671 8858</a>
+                      <div className="text-[11px] font-bold text-white/40 uppercase tracking-[0.2em] mb-1">Call Us</div>
+                      <a href="tel:+355676718858" className="text-white font-medium text-xl hover:text-brand-300 transition-colors">+355 67 671 8858</a>
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-5 group">
-                    <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center transition-colors duration-300 group-hover:bg-white/10 group-hover:border-white/20">
-                      <MapPin size={22} className="text-brand-400 group-hover:text-brand-300 transition-colors" />
+                  <div className="flex items-center gap-6 group">
+                    <div className="w-16 h-16 rounded-full bg-white/5 border border-white/10 flex items-center justify-center transition-transform duration-500 group-hover:scale-110 group-hover:bg-white/10 group-hover:border-white/20 backdrop-blur-md">
+                      <MapPin size={24} className="text-brand-400 group-hover:text-brand-300 transition-colors" />
                     </div>
                     <div>
-                      <div className="text-xs font-bold text-white/40 uppercase tracking-wider mb-1">Headquarters</div>
-                      <span className="text-white font-medium text-lg">Tirana, Albania</span>
+                      <div className="text-[11px] font-bold text-white/40 uppercase tracking-[0.2em] mb-1">Headquarters</div>
+                      <span className="text-white font-medium text-xl">Tirana, Albania</span>
                     </div>
                   </div>
                 </div>
@@ -146,14 +147,14 @@ export default function ContactPage() {
                 {/* Decorative glow behind form */}
                 <div className="absolute -inset-4 bg-brand-500/20 blur-3xl rounded-full opacity-50" />
                 
-                <div className="relative p-8 sm:p-10 rounded-3xl bg-white/[0.03] border border-white/[0.08] backdrop-blur-xl">
-                  <h3 className="font-display text-2xl font-bold text-white mb-2">Book a Strategy Call</h3>
-                  <p className="text-white/50 text-sm mb-8">Free consultation. No commitment. Response within 24 hours.</p>
+                <div className="relative p-8 sm:p-12 lg:p-14 rounded-[32px] bg-white/[0.03] border border-white/[0.08] backdrop-blur-2xl shadow-2xl">
+                  <h3 className="font-display text-3xl font-bold text-white mb-3">Book a Strategy Call</h3>
+                  <p className="text-white/60 text-base mb-10">Free consultation. No commitment. Response within 24 hours.</p>
 
                   {!submitted ? (
-                    <form onSubmit={handleSubmit} className="space-y-4">
+                    <form onSubmit={handleSubmit} className="space-y-6">
                       <div>
-                        <label htmlFor="name" className="block text-xs font-bold text-white/60 uppercase tracking-wider mb-2">Your Name</label>
+                        <label htmlFor="name" className="block text-[11px] font-bold text-white/60 uppercase tracking-[0.2em] mb-3 ml-2">Your Name</label>
                         <input
                           type="text"
                           id="name"
@@ -162,12 +163,12 @@ export default function ContactPage() {
                           required
                           value={formData.name}
                           onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
-                          className="w-full px-5 py-4 rounded-xl bg-white/[0.06] border border-white/[0.1] text-white placeholder-white/20 text-sm font-medium focus:outline-none focus:border-brand-400/50 focus:bg-white/[0.09] transition-all duration-300"
+                          className="w-full px-6 py-5 rounded-full bg-white/[0.06] border border-white/[0.1] text-white placeholder-white/20 text-base font-medium focus:outline-none focus:border-brand-400/50 focus:bg-white/[0.09] transition-all duration-300"
                         />
                       </div>
                       
-                      <div className="pb-2">
-                        <label htmlFor="email" className="block text-xs font-bold text-white/60 uppercase tracking-wider mb-2">Email Address</label>
+                      <div className="pb-4">
+                        <label htmlFor="email" className="block text-[11px] font-bold text-white/60 uppercase tracking-[0.2em] mb-3 ml-2">Email Address</label>
                         <input
                           type="email"
                           id="email"
@@ -176,7 +177,7 @@ export default function ContactPage() {
                           required
                           value={formData.email}
                           onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
-                          className="w-full px-5 py-4 rounded-xl bg-white/[0.06] border border-white/[0.1] text-white placeholder-white/20 text-sm font-medium focus:outline-none focus:border-brand-400/50 focus:bg-white/[0.09] transition-all duration-300"
+                          className="w-full px-6 py-5 rounded-full bg-white/[0.06] border border-white/[0.1] text-white placeholder-white/20 text-base font-medium focus:outline-none focus:border-brand-400/50 focus:bg-white/[0.09] transition-all duration-300"
                         />
                       </div>
 
@@ -184,17 +185,14 @@ export default function ContactPage() {
                         type="submit"
                         disabled={status === 'submitting'}
                         whileHover={status !== 'submitting' ? { scale: 1.02 } : {}}
-                        whileTap={status !== 'submitting' ? { scale: 0.96 } : {}}
-                        className={`group relative w-full inline-flex items-center justify-center gap-3 px-8 py-5 text-base sm:text-lg font-extrabold uppercase tracking-wider text-white rounded-2xl transition-all duration-500 overflow-hidden ${
-                          status === 'submitting' 
-                            ? 'bg-charcoal-500 cursor-wait opacity-80' 
-                            : 'bg-gradient-to-r from-brand-500 to-brand-600 shadow-[0_0_40px_-10px_rgba(20,184,166,0.4)] hover:shadow-[0_0_60px_-15px_rgba(20,184,166,0.6)]'
+                        whileTap={status !== 'submitting' ? { scale: 0.98 } : {}}
+                        className={`group relative w-full flex items-center justify-center btn-pill btn-primary ${
+                          status === 'submitting' ? 'opacity-80 cursor-wait' : ''
                         }`}
                       >
-                        {status !== 'submitting' && <div className="absolute inset-0 bg-gradient-to-r from-brand-400 to-brand-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />}
-                        <span className="relative z-10 flex items-center gap-3">
+                        <span className="relative z-10 flex items-center gap-3 py-1">
                           {status === 'submitting' ? 'Sending...' : 'Submit Request'}
-                          {status !== 'submitting' && <Send size={20} className="group-hover:translate-x-1.5 group-hover:-translate-y-1.5 transition-transform duration-300" />}
+                          {status !== 'submitting' && <Send size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />}
                         </span>
                       </motion.button>
                     </form>
@@ -202,11 +200,11 @@ export default function ContactPage() {
                     <motion.div
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
-                      className="py-12 px-6 text-center"
+                      className="py-16 px-8 text-center"
                     >
-                      <CheckCircle size={48} className="text-brand-400 mx-auto mb-4" />
-                      <h4 className="text-xl font-bold text-white mb-2">Request Received!</h4>
-                      <p className="text-white/60 text-sm">
+                      <CheckCircle size={56} className="text-brand-400 mx-auto mb-6" />
+                      <h4 className="text-2xl font-bold text-white mb-4">Request Received!</h4>
+                      <p className="text-white/60 text-base leading-relaxed">
                         Thank you, {formData.name}. We will review your details and reach out within 24 hours to schedule your strategy call.
                       </p>
                     </motion.div>

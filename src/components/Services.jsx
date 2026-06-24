@@ -54,7 +54,7 @@ function FeaturedService({ service, index }) {
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
       variants={stagger}
-      className={`grid lg:grid-cols-2 gap-10 lg:gap-16 items-center ${reversed ? 'lg:direction-rtl' : ''}`}
+      className={`grid lg:grid-cols-2 gap-10 lg:gap-20 items-center ${reversed ? 'lg:direction-rtl' : ''}`}
     >
       {/* Text */}
       <motion.div
@@ -62,29 +62,29 @@ function FeaturedService({ service, index }) {
         className={`${reversed ? 'lg:order-2 lg:text-left' : ''}`}
         style={{ direction: 'ltr' }}
       >
-        <div className="w-14 h-14 rounded-2xl bg-brand-50 border border-brand-200/60 flex items-center justify-center mb-6">
-          <service.icon size={26} className="text-brand-600" />
+        <div className="w-16 h-16 rounded-full bg-white border border-charcoal-100 shadow-soft flex items-center justify-center mb-6">
+          <service.icon size={26} className="text-brand-500" />
         </div>
-        <h3 className="font-display text-3xl sm:text-4xl font-bold text-navy-700 mb-4 tracking-tight">
+        <h3 className="font-display text-4xl sm:text-5xl font-bold text-navy-900 mb-4 tracking-tight">
           {service.title}
         </h3>
-        <p className="text-charcoal-500 text-base lg:text-lg leading-relaxed mb-6">
+        <p className="text-charcoal-500 text-lg lg:text-xl leading-relaxed mb-8">
           {service.desc}
         </p>
-        <div className="flex gap-6 mb-6">
+        <div className="flex gap-8 mb-8">
           {service.stats.map((s) => (
             <div key={s.label}>
-              <div className="text-xl font-bold text-navy-700">{s.value}</div>
-              <div className="text-xs text-charcoal-400">{s.label}</div>
+              <div className="text-2xl font-bold text-navy-900">{s.value}</div>
+              <div className="text-xs text-charcoal-400 uppercase tracking-wider font-bold mt-1">{s.label}</div>
             </div>
           ))}
         </div>
         <a
           href="#contact"
-          className="group inline-flex items-center gap-2 text-sm font-semibold text-brand-600 hover:text-brand-700 transition-colors duration-300"
+          className="group inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-brand-500 hover:text-brand-600 transition-colors duration-300"
         >
           Learn more
-          <ArrowUpRight size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
+          <ArrowUpRight size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
         </a>
       </motion.div>
 
@@ -94,20 +94,20 @@ function FeaturedService({ service, index }) {
         className={`${reversed ? 'lg:order-1' : ''} relative`}
         style={{ direction: 'ltr' }}
       >
-        <div className="relative rounded-2xl overflow-hidden group shadow-card">
+        <div className="relative rounded-[40px] overflow-hidden group shadow-2xl">
           <motion.img
             style={{ y: imgY }}
             src={service.img}
             alt={`${service.title}: ${service.desc.slice(0, 80)}`}
-            className="w-full h-[300px] sm:h-[400px] object-cover transition-transform duration-700 group-hover:scale-105"
+            className="w-full h-[400px] sm:h-[500px] object-cover transition-transform duration-1000 group-hover:scale-105"
             loading="lazy"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-navy-900/40 via-transparent to-transparent" />
-          <div className="absolute inset-0 border border-charcoal-200/20 rounded-2xl" />
+          <div className="absolute inset-0 border border-white/20 rounded-[40px]" />
         </div>
         {/* Floating accent */}
-        <div className="absolute -bottom-3 -right-3 w-24 h-24 rounded-2xl border border-brand-300/30 -z-10" />
-        <div className="absolute -top-3 -left-3 w-16 h-16 rounded-xl bg-brand-50/80 -z-10" />
+        <div className="absolute -bottom-6 -right-6 w-32 h-32 rounded-full border border-brand-300/30 -z-10 bg-brand-50/50 backdrop-blur-md" />
+        <div className="absolute -top-6 -left-6 w-20 h-20 rounded-full bg-orange-100/80 -z-10 blur-xl" />
       </motion.div>
     </motion.div>
   )
@@ -117,10 +117,10 @@ export default function Services() {
   const { ref, isInView } = useSectionInView(0.05)
 
   return (
-    <section id="services" className="relative py-24 lg:py-36 bg-white overflow-hidden" aria-label="Our services">
+    <section id="services" className="relative py-24 lg:py-36 bg-[#fafafa] overflow-hidden" aria-label="Our services">
       {/* Background elements */}
-      <div className="absolute top-1/4 -right-32 w-[600px] h-[600px] bg-brand-50/50 rounded-full blur-[120px]" />
-      <div className="absolute bottom-1/4 -left-32 w-[500px] h-[500px] bg-charcoal-50/80 rounded-full blur-[100px]" />
+      <div className="absolute top-1/4 -right-32 w-[800px] h-[800px] bg-brand-200/20 rounded-full blur-[150px] mix-blend-multiply opacity-60 pointer-events-none" />
+      <div className="absolute bottom-1/4 -left-32 w-[600px] h-[600px] bg-orange-100/30 rounded-full blur-[120px] mix-blend-multiply opacity-60 pointer-events-none" />
 
       <div className="relative max-container section-padding">
         {/* Header */}
@@ -129,23 +129,24 @@ export default function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="text-center max-w-3xl mx-auto mb-20 lg:mb-28"
+          className="text-center max-w-3xl mx-auto mb-20 lg:mb-32"
         >
-          <span className="inline-flex items-center px-4 py-1.5 rounded-full text-[10px] font-semibold tracking-[0.25em] uppercase bg-brand-50 text-brand-600 border border-brand-200/60 mb-5">
+          <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-[11px] font-bold tracking-[0.2em] uppercase bg-white border border-charcoal-100 shadow-sm text-navy-900 mb-6">
+            <span className="w-2 h-2 bg-brand-500 rounded-full animate-pulse" />
             What We Do
           </span>
-          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-navy-700 tracking-tight mb-6">
+          <h2 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-navy-900 tracking-tight mb-6">
             Full-Stack Growth{' '}
             <span className="text-gradient">Services</span>
           </h2>
-          <p className="text-charcoal-500 text-base sm:text-lg leading-relaxed">
+          <p className="text-charcoal-500 text-lg sm:text-xl leading-relaxed">
             Every service works together as part of a connected growth engine.
             Not isolated tactics, but a system designed to compound results.
           </p>
         </motion.div>
 
         {/* Featured services */}
-        <div className="space-y-24 lg:space-y-36 mb-20 lg:mb-28">
+        <div className="space-y-32 lg:space-y-48 mb-24 lg:mb-36">
           {featuredServices.map((svc, i) => (
             <FeaturedService key={svc.title} service={svc} index={i} />
           ))}
@@ -157,17 +158,19 @@ export default function Services() {
           initial="hidden"
           animate={isInView ? 'visible' : 'hidden'}
           variants={stagger}
-          className="grid sm:grid-cols-3 lg:grid-cols-5 gap-4"
+          className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 lg:gap-6"
         >
           {gridServices.map((svc) => (
             <motion.div
               key={svc.title}
               variants={fadeInUp}
-              className="group card-surface card-surface-hover rounded-xl p-5 cursor-default"
+              className="group glass rounded-[32px] p-8 cursor-default transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:bg-white"
             >
-              <svc.icon size={20} className="text-brand-500 mb-3 group-hover:scale-110 transition-transform duration-300" />
-              <h4 className="font-display font-semibold text-navy-700 text-sm mb-1">{svc.title}</h4>
-              <p className="text-xs text-charcoal-500 leading-relaxed">{svc.desc}</p>
+              <div className="w-12 h-12 rounded-full bg-brand-50 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+                <svc.icon size={20} className="text-brand-500" />
+              </div>
+              <h4 className="font-display font-bold text-navy-900 text-lg mb-2 tracking-tight">{svc.title}</h4>
+              <p className="text-sm text-charcoal-500 leading-relaxed">{svc.desc}</p>
             </motion.div>
           ))}
         </motion.div>
