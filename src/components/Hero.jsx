@@ -154,19 +154,14 @@ export default function Hero() {
         <div className="absolute bottom-[-20%] left-[-20%] w-[1000px] h-[1000px] bg-orange-100/40 rounded-full blur-[150px] mix-blend-multiply opacity-60" />
       </motion.div>
 
-      {/* Main content grid (Writing on right, Object on left) */}
+      {/* Main content grid (Writing on left, Object on right) */}
       <motion.div
         style={{ y: textY, opacity }}
         className="relative z-10 max-container section-padding w-full min-h-[90vh] pt-32 pb-20 flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8"
       >
         
-        {/* Left column: Movement Object */}
-        <div className="absolute lg:relative left-[-20%] lg:left-[-10%] top-[20%] lg:top-0 w-full lg:w-[60%] xl:w-[65%] flex justify-start opacity-30 lg:opacity-100 pointer-events-none lg:pointer-events-auto order-1 lg:order-1">
-          <MovementObject />
-        </div>
-
-        {/* Right column: Typography (Writing on the right) */}
-        <div className="w-full lg:w-[50%] xl:w-[45%] flex flex-col items-start lg:items-end text-left lg:text-right pt-10 lg:pt-32 order-2 lg:order-2 relative z-20">
+        {/* Left column: Typography (Writing on the left) */}
+        <div className="w-full lg:w-[50%] xl:w-[45%] flex flex-col items-start text-left pt-10 lg:pt-32 order-2 lg:order-1 relative z-20">
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -181,8 +176,8 @@ export default function Hero() {
           </motion.div>
 
           {/* Headline */}
-          <div className="mb-6 w-full flex flex-col items-start lg:items-end">
-            <h1 className="font-display font-bold text-navy-900 tracking-tighter leading-[0.95] flex flex-col items-start lg:items-end">
+          <div className="mb-6 w-full flex flex-col items-start">
+            <h1 className="font-display font-bold text-navy-900 tracking-tighter leading-[0.95] flex flex-col items-start">
               <motion.span
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -215,7 +210,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="text-charcoal-500 text-lg sm:text-xl lg:text-2xl leading-relaxed mb-10 max-w-xl lg:text-right"
+            className="text-charcoal-500 text-lg sm:text-xl lg:text-2xl leading-relaxed mb-10 max-w-xl text-left"
           >
             We build complete content, advertising, and funnel systems for businesses ready to scale with absolute clarity.
           </motion.p>
@@ -225,7 +220,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.9, ease: [0.16, 1, 0.3, 1] }}
-            className="flex flex-col sm:flex-row items-center justify-end gap-4 w-full"
+            className="flex flex-col sm:flex-row items-center justify-start gap-4 w-full"
           >
             <Link
               to="/contact"
@@ -241,6 +236,11 @@ export default function Hero() {
               View Packages
             </Link>
           </motion.div>
+        </div>
+
+        {/* Right column: Movement Object */}
+        <div className="absolute lg:relative right-[-20%] lg:right-[-10%] top-[20%] lg:top-0 w-full lg:w-[60%] xl:w-[65%] flex justify-end opacity-30 lg:opacity-100 pointer-events-none lg:pointer-events-auto order-1 lg:order-2">
+          <MovementObject />
         </div>
 
       </motion.div>
