@@ -47,8 +47,13 @@ function MovementObject() {
         className="absolute w-[60%] h-[60%] bg-gradient-to-tr from-orange-200 to-yellow-200 rounded-full mix-blend-multiply filter blur-3xl opacity-60"
       />
       
-      {/* 3D Coin/Disc Stack */}
-      <div className="relative z-10 w-full h-full flex items-center justify-center perspective-[1200px]">
+      {/* 3D Coin/Disc Stack wrapped in 3D rotation */}
+      <motion.div 
+        animate={{ rotateX: [10, -10, 10], rotateY: [-15, 15, -15] }}
+        transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
+        className="relative z-10 w-full h-full flex items-center justify-center perspective-[1200px]"
+        style={{ transformStyle: 'preserve-3d' }}
+      >
         {[
           { delay: 0, size: "w-64 h-64 lg:w-[500px] lg:h-[500px]", yOffset: -120, rotateZ: 15, color: "from-brand-300 to-brand-500", shadow: "rgba(20, 184, 166, 0.4)" },
           { delay: 0.2, size: "w-56 h-56 lg:w-[420px] lg:h-[420px]", yOffset: -40, rotateZ: -10, color: "from-white to-gray-100", shadow: "rgba(0, 0, 0, 0.1)" },
@@ -73,6 +78,8 @@ function MovementObject() {
             }}
             className={`absolute ${coin.size} rounded-full border border-white/60 bg-gradient-to-br ${coin.color} backdrop-blur-xl flex items-center justify-center`}
             style={{
+              transformStyle: 'preserve-3d',
+              translateZ: `${50 - (i * 20)}px`,
               zIndex: 10 - i,
               // Extrusion / 3D edge effect for coins
               boxShadow: `inset 0px 4px 15px rgba(255,255,255,0.9), inset 0px -20px 30px rgba(0,0,0,0.15), 0px 40px 50px -15px ${coin.shadow}`
@@ -103,13 +110,14 @@ function MovementObject() {
               height: `${(i % 3 + 2) * 20}px`,
               left: `${15 + (i * 10)}%`,
               top: `${10 + (i * 10)}%`,
-              zIndex: 20
+              zIndex: 20,
+              transform: `translateZ(${100 + i * 20}px)`
             }}
           >
             <div className="absolute inset-1 rounded-full border border-white/40" />
           </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   )
 }

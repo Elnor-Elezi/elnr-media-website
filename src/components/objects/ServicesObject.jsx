@@ -4,8 +4,8 @@ export default function ServicesObject() {
   return (
     <div className="relative w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] flex items-center justify-center perspective-[1200px]">
       <motion.div
-        animate={{ rotateY: [0, 360], rotateX: [20, 30, 20] }}
-        transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+        animate={{ rotateY: [0, 360], rotateX: [15, -15, 15] }}
+        transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
         className="relative w-full h-full flex items-center justify-center"
         style={{ transformStyle: 'preserve-3d' }}
       >

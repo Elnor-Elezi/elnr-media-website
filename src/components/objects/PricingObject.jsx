@@ -4,10 +4,10 @@ export default function PricingObject() {
   return (
     <div className="relative w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] flex items-center justify-center perspective-[1000px]">
       <motion.div 
-        animate={{ rotateY: [0, 360] }}
-        transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+        animate={{ rotateY: [0, 360], rotateX: [50, 70, 50] }}
+        transition={{ duration: 25, repeat: Infinity, ease: "easeInOut" }}
         className="relative w-full h-full flex items-center justify-center"
-        style={{ transformStyle: 'preserve-3d', transform: 'rotateX(60deg)' }}
+        style={{ transformStyle: 'preserve-3d' }}
       >
         {/* Tiers */}
         {[
