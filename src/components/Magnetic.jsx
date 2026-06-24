@@ -1,10 +1,8 @@
 import { useRef, useState } from 'react'
 import { motion, useSpring } from 'framer-motion'
-import { useUIFeedback } from '../hooks/useUIFeedback'
 
 export default function Magnetic({ children, className = "", onClick }) {
   const ref = useRef(null)
-  const { playHover, playClick } = useUIFeedback()
   const [position, setPosition] = useState({ x: 0, y: 0 })
 
   const springConfig = { damping: 15, stiffness: 150, mass: 0.5 }
@@ -30,9 +28,7 @@ export default function Magnetic({ children, className = "", onClick }) {
     setPosition({ x: 0, y: 0 })
   }
 
-  const handleMouseEnter = () => playHover()
   const handleClick = (e) => {
-    playClick()
     if (onClick) onClick(e)
   }
 
@@ -41,7 +37,6 @@ export default function Magnetic({ children, className = "", onClick }) {
       ref={ref}
       onMouseMove={handleMouse}
       onMouseLeave={reset}
-      onMouseEnter={handleMouseEnter}
       onClick={handleClick}
       animate={{ x: position.x, y: position.y }}
       transition={{ type: "spring", stiffness: 150, damping: 15, mass: 0.5 }}

@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, ArrowRight, Moon, Sun, Volume2, VolumeX } from 'lucide-react'
+import { Menu, X, ArrowRight, Moon, Sun } from 'lucide-react'
 import { Link, useLocation } from 'react-router-dom'
 import { useTheme } from './ThemeContext'
-import { useUIFeedback } from '../hooks/useUIFeedback'
 import Magnetic from './Magnetic'
 
 const navLinks = [
@@ -19,7 +18,6 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const { pathname, hash } = useLocation()
   const { isDark, toggleDark } = useTheme()
-  const { isMuted, toggleMute } = useUIFeedback()
   
   const activeSection = hash ? pathname + hash : pathname
 
@@ -77,9 +75,6 @@ export default function Navbar() {
         <div className="flex items-center gap-2">
           <button onClick={toggleDark} className="p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-colors text-navy-900 dark:text-white">
             {isDark ? <Sun size={18} /> : <Moon size={18} />}
-          </button>
-          <button onClick={toggleMute} className="p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-colors text-navy-900 dark:text-white">
-            {isMuted ? <VolumeX size={18} /> : <Volume2 size={18} />}
           </button>
           <Magnetic>
             <Link

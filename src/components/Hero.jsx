@@ -3,7 +3,6 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { useCounter } from '../hooks'
-import ScrambleText from './ScrambleText'
 import Magnetic from './Magnetic'
 
 const stats = [
@@ -17,10 +16,10 @@ function AnimatedStat({ end, suffix, label }) {
   const { count, ref } = useCounter(end, 2200)
   return (
     <div ref={ref} className="text-center p-4">
-      <div className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-navy-900 mb-2">
+      <div className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-navy-900 dark:text-white mb-2">
         {count}<span className="text-brand-500">{suffix}</span>
       </div>
-      <div className="text-xs sm:text-sm text-charcoal-500 font-medium uppercase tracking-wider">{label}</div>
+      <div className="text-xs sm:text-sm text-charcoal-500 dark:text-charcoal-300 font-medium uppercase tracking-wider">{label}</div>
     </div>
   )
 }
@@ -179,7 +178,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mb-8"
           >
-            <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-[11px] font-bold tracking-[0.2em] uppercase bg-white/80 backdrop-blur-md border border-charcoal-100 shadow-sm text-navy-900">
+            <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-[11px] font-bold tracking-[0.2em] uppercase bg-white/80 dark:bg-navy-900/80 backdrop-blur-md border border-charcoal-100 dark:border-white/10 shadow-sm text-navy-900 dark:text-white">
               <span className="w-2 h-2 bg-brand-500 rounded-full animate-pulse" />
               The Growth Engine
             </span>
@@ -194,7 +193,7 @@ export default function Hero() {
                 transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
                 className="text-6xl sm:text-7xl lg:text-[90px] xl:text-[110px]"
               >
-                <ScrambleText text="Premium" delay={300} speed={40} />
+                Premium
               </motion.span>
               <motion.span
                 initial={{ opacity: 0, y: 40 }}
@@ -202,7 +201,7 @@ export default function Hero() {
                 transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
                 className="text-6xl sm:text-7xl lg:text-[90px] xl:text-[110px]"
               >
-                <ScrambleText text="media" delay={400} speed={40} />
+                media
               </motion.span>
               <motion.span
                 initial={{ opacity: 0, y: 40 }}
@@ -210,7 +209,7 @@ export default function Hero() {
                 transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
                 className="text-6xl sm:text-7xl lg:text-[90px] xl:text-[110px]"
               >
-                <ScrambleText text="systems." delay={500} speed={40} />
+                systems.
               </motion.span>
             </h1>
           </div>
@@ -220,7 +219,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="text-charcoal-500 text-lg sm:text-xl lg:text-2xl leading-relaxed mb-10 max-w-xl text-left"
+            className="text-charcoal-500 dark:text-charcoal-300 text-lg sm:text-xl lg:text-2xl leading-relaxed mb-10 max-w-xl text-left"
           >
             We build complete content, advertising, and funnel systems for businesses ready to scale with absolute clarity.
           </motion.p>
@@ -235,7 +234,7 @@ export default function Hero() {
             <Magnetic>
               <Link
                 to="/contact"
-                className="group btn-pill btn-primary text-base px-10 py-4 flex items-center gap-3 shadow-glow w-full sm:w-auto justify-center"
+                className="group btn-pill btn-primary dark:bg-white dark:text-navy-900 text-base px-10 py-4 flex items-center gap-3 shadow-glow w-full sm:w-auto justify-center"
               >
                 Start your growth
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform duration-300" />
@@ -253,7 +252,7 @@ export default function Hero() {
         </div>
 
         {/* Right column: Movement Object */}
-        <div className="absolute lg:relative right-[-20%] lg:right-[-10%] top-[20%] lg:top-0 w-full lg:w-[60%] xl:w-[65%] flex justify-end opacity-30 lg:opacity-100 pointer-events-none lg:pointer-events-auto order-1 lg:order-2">
+        <div className="absolute lg:relative right-[-20%] lg:right-[-10%] top-[20%] lg:top-0 w-full lg:w-[60%] xl:w-[65%] flex justify-end opacity-30 lg:opacity-100 pointer-events-none lg:pointer-events-auto order-1 lg:order-2 lg:scale-125 xl:scale-150 origin-right">
           <MovementObject />
         </div>
 
@@ -264,9 +263,9 @@ export default function Hero() {
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 1.1, ease: [0.16, 1, 0.3, 1] }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 w-[95%] max-w-5xl glass rounded-[32px] p-2 sm:p-4 z-20 hidden lg:block"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 w-[95%] max-w-5xl glass dark:glass-dark rounded-[32px] p-2 sm:p-4 z-20 hidden lg:block"
       >
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 divide-x divide-charcoal-200/50">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 divide-x divide-charcoal-200/50 dark:divide-white/10">
           {stats.map((s) => (
             <AnimatedStat key={s.label} {...s} />
           ))}
