@@ -118,14 +118,14 @@ export default function Hero() {
           </div>
 
           {/* Subtitle */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="text-charcoal-500 dark:text-charcoal-300 text-lg sm:text-xl lg:text-2xl leading-relaxed mb-10 max-w-xl text-left"
-          >
-            We build complete content, advertising, and funnel systems for businesses ready to scale with absolute clarity.
-          </motion.p>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 1.4 }}
+          className="text-charcoal-500 text-base sm:text-lg lg:text-xl leading-relaxed mb-10 max-w-2xl"
+        >
+          ELNR Media is a premium digital marketing agency. We build complete content, advertising, and funnel systems for businesses ready to scale with clarity, consistency, and authority.
+        </motion.p>
 
           {/* CTAs */}
           <motion.div

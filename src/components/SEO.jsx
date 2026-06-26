@@ -46,6 +46,23 @@ export default function SEO({ title, description, name = "ELNR Media", type = "w
             "@type": "ContactPoint",
             "telephone": "+355-67-671-8858",
             "contactType": "customer service"
+          },
+          "sameAs": [
+            "https://elnrmedia.com",
+            "https://www.linkedin.com/company/elnrmedia",
+            "https://twitter.com/elnrmedia"
+          ],
+          "knowsAbout": [
+            "Digital Marketing",
+            "Premium Media Systems",
+            "B2B Lead Generation",
+            "Content Strategy",
+            "Advertising Funnels",
+            "Web Development"
+          ],
+          "founder": {
+            "@type": "Person",
+            "name": "Elnor Elezi"
           }
         })}
       </script>
