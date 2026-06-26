@@ -45,7 +45,7 @@ export default function BlogPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="group bg-white dark:bg-navy-900 border border-charcoal-100 dark:border-white/10 rounded-3xl overflow-hidden hover:shadow-2xl transition-all duration-300 flex flex-col"
+              className="group glass dark:glass-dark rounded-[32px] overflow-hidden hover:-translate-y-2 hover:shadow-2xl transition-all duration-500 flex flex-col"
             >
               <Link to={`/blog/${post.slug}`} className="block relative h-56 overflow-hidden">
                 <img 

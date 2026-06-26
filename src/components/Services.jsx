@@ -6,8 +6,8 @@ import {
   Smartphone, Code, Mail, Database
 } from 'lucide-react'
 import { useSectionInView, useTilt, fadeInUp, slideInLeft, slideInRight, stagger, IMAGES } from '../hooks'
-import ServicesObject from './objects/ServicesObject'
-
+import { lazy, Suspense } from 'react'
+const ServicesObject = lazy(() => import('./objects/ServicesObject'))
 const featuredServices = [
   {
     icon: Film,
@@ -123,8 +123,10 @@ export default function Services() {
       {/* Background elements */}
       <div className="absolute top-1/4 -right-32 w-[800px] h-[800px] bg-brand-200/20 rounded-full blur-[150px] mix-blend-multiply opacity-60 pointer-events-none" />
       <div className="absolute bottom-1/4 -left-32 w-[600px] h-[600px] bg-orange-100/30 rounded-full blur-[120px] mix-blend-multiply opacity-60 pointer-events-none" />
-      <div className="absolute top-0 right-0 opacity-40 pointer-events-none hidden lg:block lg:scale-[0.6] xl:scale-75 origin-right translate-x-12">
-        <ServicesObject />
+      <div className="absolute inset-0 pointer-events-none hidden lg:block z-0" aria-hidden="true">
+        <Suspense fallback={null}>
+          <ServicesObject />
+        </Suspense>
       </div>
 
       <div className="relative max-container section-padding">
@@ -168,7 +170,7 @@ export default function Services() {
             <motion.div
               key={svc.title}
               variants={fadeInUp}
-              className="group glass dark:glass-dark rounded-[32px] p-8 cursor-default transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:bg-white dark:hover:bg-navy-900 bg-white/50 dark:bg-transparent"
+              className="glass dark:glass-dark p-8 lg:p-10 rounded-[32px] hover:-translate-y-2 transition-transform duration-500 shadow-soft hover:shadow-xl relative overflow-hidden group"
             >
               <div className="w-12 h-12 rounded-full bg-brand-50 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
                 <svc.icon size={20} className="text-brand-500" />

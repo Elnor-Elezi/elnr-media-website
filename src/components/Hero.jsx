@@ -24,8 +24,8 @@ function AnimatedStat({ end, suffix, label }) {
   )
 }
 
-import MovementObject from './objects/MovementObject'
-
+import { lazy, Suspense } from 'react'
+const MovementObject = lazy(() => import('./objects/MovementObject'))
 export default function Hero() {
   const containerRef = useRef(null)
   const { scrollYProgress } = useScroll({
@@ -155,8 +155,10 @@ export default function Hero() {
         </div>
 
         {/* Right column: Movement Object */}
-        <div className="absolute lg:relative right-[-20%] lg:right-[-10%] top-[20%] lg:top-0 w-full lg:w-[60%] xl:w-[65%] flex justify-end opacity-30 lg:opacity-100 pointer-events-none lg:pointer-events-auto order-1 lg:order-2 lg:scale-125 xl:scale-150 origin-right">
-          <MovementObject />
+        <div className="absolute lg:relative right-[-20%] lg:right-[-10%] top-[20%] lg:top-0 w-full lg:w-[60%] xl:w-[65%] flex justify-end opacity-30 lg:opacity-100 pointer-events-none lg:pointer-events-auto order-1 lg:order-2 lg:scale-125 xl:scale-150 origin-right" aria-hidden="true">
+          <Suspense fallback={null}>
+            <MovementObject />
+          </Suspense>
         </div>
 
       </motion.div>

@@ -1,67 +1,34 @@
 import { useRef } from 'react'
-import { Canvas, useFrame } from '@react-three/fiber'
-import { OrbitControls, Torus } from '@react-three/drei'
-import * as THREE from 'three'
-
-function AtomRing({ rotation, color, speed = 1, particleOffset = 0 }) {
-  const groupRef = useRef()
-  const particleRef = useRef()
-
-  useFrame((state, delta) => {
-    groupRef.current.rotation.z += delta * speed * 0.5
-    particleRef.current.position.x = Math.cos(state.clock.elapsedTime * speed * 2 + particleOffset) * 2.2
-    particleRef.current.position.y = Math.sin(state.clock.elapsedTime * speed * 2 + particleOffset) * 2.2
-  })
-
-  return (
-    <group ref={groupRef} rotation={rotation}>
-      <Torus args={[2.2, 0.02, 16, 100]}>
-        <meshStandardMaterial color={color} emissive={color} emissiveIntensity={0.5} transparent opacity={0.3} />
-      </Torus>
-      {/* Orbiting Particle */}
-      <mesh ref={particleRef}>
-        <sphereGeometry args={[0.1, 16, 16]} />
-        <meshBasicMaterial color="#ffffff" />
-        <pointLight color="#ffffff" intensity={2} distance={3} />
-      </mesh>
-    </group>
-  )
-}
-
-function Atom() {
-  const coreRef = useRef()
-  
-  useFrame((state) => {
-    coreRef.current.scale.setScalar(1 + Math.sin(state.clock.elapsedTime * 2) * 0.1)
-  })
-
-  return (
-    <group scale={1.5}>
-      {/* Core */}
-      <mesh ref={coreRef}>
-        <sphereGeometry args={[0.6, 32, 32]} />
-        <meshStandardMaterial color="#0ea5e9" emissive="#0ea5e9" emissiveIntensity={1} />
-        <pointLight color="#0ea5e9" intensity={5} distance={10} />
-      </mesh>
-      
-      {/* Rings */}
-      <AtomRing rotation={[Math.PI / 2, 0, 0]} color="#14b8a6" speed={0.8} particleOffset={0} />
-      <AtomRing rotation={[Math.PI / 3, Math.PI / 3, 0]} color="#0ea5e9" speed={1.2} particleOffset={Math.PI} />
-      <AtomRing rotation={[-Math.PI / 3, Math.PI / 3, 0]} color="#8b5cf6" speed={1} particleOffset={Math.PI / 2} />
-    </group>
-  )
-}
+import { Canvas } from '@react-three/fiber'
+import { Environment, Float, MeshTransmissionMaterial, Sphere, Torus } from '@react-three/drei'
 
 export default function AboutObject() {
   return (
-    <div className="relative w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] flex items-center justify-center cursor-grab active:cursor-grabbing">
-      {/* Fallback/Background Glow */}
-      <div className="absolute inset-0 m-auto w-32 h-32 bg-brand-500 rounded-full blur-[60px] opacity-30 pointer-events-none" />
+    <div className="absolute inset-0 w-[150vw] h-[150vh] -translate-x-1/4 -translate-y-1/4 flex items-center justify-center pointer-events-none opacity-80">
+      <div className="absolute inset-0 m-auto w-20 h-20 bg-brand-500 rounded-full blur-[60px] opacity-15 pointer-events-none" />
       
-      <Canvas camera={{ position: [0, 0, 8], fov: 45 }} className="w-full h-full">
-        <ambientLight intensity={0.2} />
-        <Atom />
-        <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={2} />
+      <Canvas camera={{ position: [0, 0, 15], fov: 45 }}>
+        <ambientLight intensity={0.5} />
+        <spotLight position={[10, 10, 10]} intensity={1} />
+        <Environment preset="city" />
+        
+        <Float speed={1.5} rotationIntensity={0.5} floatIntensity={1.5}>
+          {/* Core Sphere */}
+          <Sphere args={[2, 64, 64]}>
+            <MeshTransmissionMaterial 
+              backside samples={4} thickness={0.5} chromaticAberration={0.05} 
+              clearcoat={1} color="#fbbf24" 
+            />
+          </Sphere>
+          
+          {/* Orbiting Rings */}
+          <Torus args={[3.5, 0.1, 16, 100]} rotation={[Math.PI / 3, 0, 0]}>
+            <meshStandardMaterial color="#f59e0b" metalness={0.8} roughness={0.2} />
+          </Torus>
+          <Torus args={[4.5, 0.05, 16, 100]} rotation={[-Math.PI / 4, Math.PI / 6, 0]}>
+            <meshStandardMaterial color="#fbbf24" metalness={1} roughness={0.1} />
+          </Torus>
+        </Float>
       </Canvas>
     </div>
   )

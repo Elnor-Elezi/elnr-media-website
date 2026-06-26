@@ -27,6 +27,28 @@ export default function SEO({ title, description, name = "ELNR Media", type = "w
       <meta name="twitter:title" content={siteTitle} />
       <meta name="twitter:description" content={siteDescription} />
       <meta name="twitter:image" content={image} />
+
+      {/* JSON-LD Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": name,
+          "image": image,
+          "url": canonicalUrl,
+          "description": siteDescription,
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Tirana",
+            "addressCountry": "AL"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+355-67-671-8858",
+            "contactType": "customer service"
+          }
+        })}
+      </script>
     </Helmet>
   );
 }

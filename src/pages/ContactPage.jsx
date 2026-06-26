@@ -4,8 +4,8 @@ import { Mail, MapPin, Phone, Send, CheckCircle } from 'lucide-react'
 import { IMAGES } from '../hooks'
 import SEO from '../components/SEO'
 import PageTransition from '../components/PageTransition'
-import ContactObject from '../components/objects/ContactObject'
-
+import { lazy, Suspense } from 'react'
+const ContactObject = lazy(() => import('../components/objects/ContactObject'))
 export default function ContactPage() {
   const ref = useRef(null)
   const [formData, setFormData] = useState({ name: '', email: '', botcheck: false })
@@ -106,8 +106,10 @@ export default function ContactPage() {
           {/* Radial accent */}
           <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-brand-500/[0.12] rounded-full blur-[120px]" />
           
-          <div className="absolute top-10 left-10 opacity-80 pointer-events-none hidden lg:block z-0">
-            <ContactObject />
+          <div className="absolute inset-0 pointer-events-none hidden lg:block z-0" aria-hidden="true">
+            <Suspense fallback={null}>
+              <ContactObject />
+            </Suspense>
           </div>
 
           {/* Border overlay */}
@@ -176,7 +178,7 @@ export default function ContactPage() {
                 {/* Decorative glow behind form */}
                 <div className="absolute -inset-4 bg-brand-500/20 blur-3xl rounded-full opacity-50" />
                 
-                <div className="relative p-8 sm:p-12 lg:p-14 rounded-[32px] bg-white/[0.03] border border-white/[0.08] backdrop-blur-2xl shadow-2xl">
+                <div className="glass dark:glass-dark rounded-[32px] p-8 lg:p-12 shadow-xl relative z-10 w-full max-w-xl lg:max-w-none">
                   <h3 className="font-display text-3xl font-bold text-white mb-3">Book a Strategy Call</h3>
                   <p className="text-white/60 text-base mb-10">Free consultation. No commitment. Response within 24 hours.</p>
 

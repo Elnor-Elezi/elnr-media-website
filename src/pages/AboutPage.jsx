@@ -4,8 +4,8 @@ import { IMAGES, useSectionInView, fadeInUp, stagger } from '../hooks'
 import FinalCta from '../components/FinalCta'
 import SEO from '../components/SEO'
 import PageTransition from '../components/PageTransition'
-import AboutObject from '../components/objects/AboutObject'
-
+import { lazy, Suspense } from 'react'
+const AboutObject = lazy(() => import('../components/objects/AboutObject'))
 const values = [
   {
     icon: Target,
@@ -42,8 +42,10 @@ export default function AboutPage() {
 
       <section className="relative overflow-hidden pt-12 pb-24 lg:pt-20 lg:pb-36">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-500/10 rounded-full blur-[150px] pointer-events-none" />
-        <div className="absolute top-[5%] right-[-10%] opacity-80 pointer-events-none hidden lg:block z-0">
-          <AboutObject />
+        <div className="absolute inset-0 pointer-events-none hidden lg:block z-0" aria-hidden="true">
+          <Suspense fallback={null}>
+            <AboutObject />
+          </Suspense>
         </div>
         
         <div className="relative max-container section-padding">
@@ -121,7 +123,7 @@ export default function AboutPage() {
               transition={{ duration: 0.8 }}
               className="relative order-1 lg:order-2"
             >
-              <div className="glass dark:glass-dark bg-white dark:bg-transparent rounded-[40px] p-8 lg:p-12 shadow-xl border border-white/40">
+              <div className="glass dark:glass-dark rounded-[32px] p-8 lg:p-12 shadow-xl">
                 <div className="w-16 h-16 rounded-full bg-brand-50 dark:bg-brand-500/10 flex items-center justify-center mb-8">
                   <CheckCircle className="text-brand-500 w-8 h-8" />
                 </div>
@@ -177,7 +179,7 @@ export default function AboutPage() {
               <motion.div
                 key={idx}
                 variants={fadeInUp}
-                className="glass dark:glass-dark bg-white dark:bg-transparent p-8 lg:p-10 rounded-[32px] hover:-translate-y-2 transition-transform duration-500 shadow-soft hover:shadow-xl"
+                className="glass dark:glass-dark p-8 lg:p-10 rounded-[32px] hover:-translate-y-2 transition-transform duration-500 shadow-soft hover:shadow-xl"
               >
                 <div className="w-14 h-14 rounded-full bg-brand-50 dark:bg-brand-500/10 flex items-center justify-center mb-6">
                   <val.icon className="text-brand-500 w-6 h-6" />

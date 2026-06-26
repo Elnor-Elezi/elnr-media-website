@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion'
 import { Check, Star, ArrowRight, Sparkles } from 'lucide-react'
+import { lazy, Suspense } from 'react'
 import { useSectionInView, useTilt, fadeInUp, stagger } from '../hooks'
-import PricingObject from './objects/PricingObject'
+const PricingObject = lazy(() => import('./objects/PricingObject'))
 
 const plans = [
   {
@@ -163,8 +164,10 @@ export default function Pricing() {
     <section id="pricing" className="relative py-24 lg:py-40 overflow-hidden" aria-label="Pricing plans">
       {/* Background Orbs */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-brand-200/20 rounded-full blur-[150px] pointer-events-none mix-blend-multiply opacity-60" />
-      <div className="absolute top-20 right-0 opacity-40 pointer-events-none hidden lg:block lg:scale-[0.6] xl:scale-75 origin-right translate-x-16">
-        <PricingObject />
+      <div className="absolute inset-0 pointer-events-none hidden lg:block z-0" aria-hidden="true">
+        <Suspense fallback={null}>
+          <PricingObject />
+        </Suspense>
       </div>
 
       <div className="relative max-container section-padding">
@@ -211,7 +214,7 @@ export default function Pricing() {
           transition={{ delay: 0.3, duration: 0.6 }}
           className="mt-20 lg:mt-32 max-w-4xl mx-auto"
         >
-          <div className="glass dark:glass-dark bg-white dark:bg-transparent rounded-[32px] p-6 lg:p-8 flex items-center gap-6 shadow-soft">
+          <div className="glass dark:glass-dark rounded-[32px] p-8 lg:p-10 flex items-center gap-6">
             <div className="w-14 h-14 rounded-full bg-brand-50 dark:bg-brand-500/10 flex items-center justify-center flex-shrink-0">
               <Sparkles size={24} className="text-brand-500" />
             </div>

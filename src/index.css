@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -16,8 +18,8 @@ html {
 }
 
 body {
-  font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
-  @apply bg-white dark:bg-[#0A101C] text-[#333333] dark:text-white transition-colors duration-500;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  @apply bg-charcoal-50 dark:bg-navy-950 text-charcoal-800 dark:text-charcoal-50 transition-colors duration-500;
   overflow-x: hidden;
 }
 
@@ -25,7 +27,7 @@ body {
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: #f9fafb; }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #14b8a6, #0d9488);
+  background: linear-gradient(180deg, #f59e0b, #d97706);
   border-radius: 3px;
 }
 
@@ -129,8 +131,8 @@ body {
 
 /* === Selection style === */
 ::selection {
-  background: rgba(20, 184, 166, 0.15);
-  color: #1e293b;
+  background: rgba(245, 158, 11, 0.2);
+  color: #0f172a;
 }
 
 /* === Smooth section transitions === */
