@@ -1,8 +1,6 @@
 import { motion } from 'framer-motion'
 import { Check, Star, ArrowRight, Sparkles } from 'lucide-react'
-import { lazy, Suspense } from 'react'
 import { useSectionInView, useTilt, fadeInUp, stagger } from '../hooks'
-const PricingObject = lazy(() => import('./objects/PricingObject'))
 
 const plans = [
   {
@@ -181,11 +179,6 @@ export default function Pricing() {
       </script>
       {/* Background Orbs */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-brand-200/20 rounded-full blur-[150px] pointer-events-none mix-blend-multiply opacity-60" />
-      <div className="absolute inset-0 pointer-events-none hidden lg:block z-0" aria-hidden="true">
-        <Suspense fallback={null}>
-          <PricingObject />
-        </Suspense>
-      </div>
 
       <div className="relative max-container section-padding">
         {/* Header */}

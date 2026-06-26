@@ -6,8 +6,6 @@ import {
   Smartphone, Code, Mail, Database
 } from 'lucide-react'
 import { useSectionInView, useTilt, fadeInUp, slideInLeft, slideInRight, stagger, IMAGES } from '../hooks'
-import { lazy, Suspense } from 'react'
-const ServicesObject = lazy(() => import('./objects/ServicesObject'))
 const featuredServices = [
   {
     icon: Film,
@@ -123,11 +121,6 @@ export default function Services() {
       {/* Background elements */}
       <div className="absolute top-1/4 -right-32 w-[800px] h-[800px] bg-brand-200/20 rounded-full blur-[150px] mix-blend-multiply opacity-60 pointer-events-none" />
       <div className="absolute bottom-1/4 -left-32 w-[600px] h-[600px] bg-brand-100/30 dark:bg-brand-900/20 rounded-full blur-[120px] mix-blend-multiply dark:mix-blend-screen opacity-60 pointer-events-none" />
-      <div className="absolute inset-0 pointer-events-none hidden lg:block z-0" aria-hidden="true">
-        <Suspense fallback={null}>
-          <ServicesObject />
-        </Suspense>
-      </div>
 
       <div className="relative max-container section-padding">
         {/* Header */}

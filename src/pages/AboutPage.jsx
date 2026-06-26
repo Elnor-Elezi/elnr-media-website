@@ -4,8 +4,6 @@ import { IMAGES, useSectionInView, fadeInUp, stagger } from '../hooks'
 import FinalCta from '../components/FinalCta'
 import SEO from '../components/SEO'
 import PageTransition from '../components/PageTransition'
-import { lazy, Suspense } from 'react'
-const AboutObject = lazy(() => import('../components/objects/AboutObject'))
 const values = [
   {
     icon: Target,
@@ -42,11 +40,6 @@ export default function AboutPage() {
 
       <section className="relative overflow-hidden pt-12 pb-24 lg:pt-20 lg:pb-36">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-500/10 rounded-full blur-[150px] pointer-events-none" />
-        <div className="absolute inset-0 pointer-events-none hidden lg:block z-0" aria-hidden="true">
-          <Suspense fallback={null}>
-            <AboutObject />
-          </Suspense>
-        </div>
         
         <div className="relative max-container section-padding">
           <div className="max-w-4xl mx-auto text-center">

@@ -4,8 +4,6 @@ import { Mail, MapPin, Phone, Send, CheckCircle } from 'lucide-react'
 import { IMAGES } from '../hooks'
 import SEO from '../components/SEO'
 import PageTransition from '../components/PageTransition'
-import { lazy, Suspense } from 'react'
-const ContactObject = lazy(() => import('../components/objects/ContactObject'))
 export default function ContactPage() {
   const ref = useRef(null)
   const [formData, setFormData] = useState({ name: '', email: '', botcheck: false })
@@ -106,12 +104,6 @@ export default function ContactPage() {
           {/* Radial accent */}
           <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-brand-500/[0.12] rounded-full blur-[120px]" />
           
-          <div className="absolute inset-0 pointer-events-none hidden lg:block z-0" aria-hidden="true">
-            <Suspense fallback={null}>
-              <ContactObject />
-            </Suspense>
-          </div>
-
           {/* Border overlay */}
           <div className="absolute inset-0 border border-white/[0.08] rounded-[40px] pointer-events-none" />
 
