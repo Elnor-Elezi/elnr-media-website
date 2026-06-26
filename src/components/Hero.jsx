@@ -66,14 +66,21 @@ export default function Hero() {
         <div className="absolute bottom-[-20%] left-[-20%] w-[1000px] h-[1000px] bg-brand-100/40 dark:bg-brand-900/20 rounded-full blur-[150px] mix-blend-multiply dark:mix-blend-screen opacity-60" />
       </motion.div>
 
+      {/* Right column: Movement Object */}
+      <div className="absolute inset-0 pointer-events-none z-0" aria-hidden="true">
+        <Suspense fallback={null}>
+          <MovementObject />
+        </Suspense>
+      </div>
+
       {/* Main content grid (Writing on left, Object on right) */}
       <motion.div
         style={{ y: textY, opacity }}
-        className="relative z-10 max-container section-padding w-full min-h-[90vh] pt-32 pb-20 flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8"
+        className="relative z-10 max-container section-padding w-full min-h-[90vh] pt-32 pb-20 flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8 pointer-events-none"
       >
         
         {/* Left column: Typography (Writing on the left) */}
-        <div className="w-full lg:w-[50%] xl:w-[45%] flex flex-col items-start text-left pt-10 lg:pt-32 order-2 lg:order-1 relative z-20">
+        <div className="w-full lg:w-[50%] xl:w-[45%] flex flex-col items-start text-left pt-10 lg:pt-32 order-2 lg:order-1 relative z-20 pointer-events-auto">
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -152,13 +159,6 @@ export default function Hero() {
               </Link>
             </Magnetic>
           </motion.div>
-        </div>
-
-        {/* Right column: Movement Object */}
-        <div className="absolute inset-0 pointer-events-none z-0" aria-hidden="true">
-          <Suspense fallback={null}>
-            <MovementObject />
-          </Suspense>
         </div>
 
       </motion.div>

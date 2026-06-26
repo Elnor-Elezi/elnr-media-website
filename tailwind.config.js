@@ -21,19 +21,19 @@ export default {
           800: '#115e59',
           900: '#134e4a',
         },
-        // Deep Green/Slate for backgrounds matching the scrap reference
+        // Deep Rich Slate for backgrounds (No pure black)
         navy: {
-          50: '#f4fbfa',
-          100: '#e3f6f3',
-          200: '#c6ebe5',
-          300: '#9ddad1',
-          400: '#6dc1b6',
-          500: '#4aa498',
-          600: '#38837a',
-          700: '#306963',
-          800: '#2a5450',
-          900: '#254643',
-          950: '#012622', // Deep premium green matching scrap
+          50: '#f8fafc',
+          100: '#f1f5f9',
+          200: '#e2e8f0',
+          300: '#cbd5e1',
+          400: '#94a3b8',
+          500: '#64748b',
+          600: '#475569',
+          700: '#334155',
+          800: '#1e293b',
+          900: '#0f172a',
+          950: '#020617', // Very dark slate, not pure black
         },
         charcoal: {
           50: '#fafafa',
@@ -54,9 +54,9 @@ export default {
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'hero-gradient': 'linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 50%, #f4f4f5 100%)',
-        'section-gradient': 'linear-gradient(180deg, #ffffff 0%, #f0fdfa 100%)',
-        'dark-gradient': 'linear-gradient(135deg, #012622 0%, #011c19 100%)',
+        'hero-gradient': 'linear-gradient(135deg, #f8fafc 0%, #f0fdfa 50%, #f1f5f9 100%)',
+        'section-gradient': 'linear-gradient(180deg, #ffffff 0%, #f8fafc 100%)',
+        'dark-gradient': 'linear-gradient(135deg, #020617 0%, #0f172a 100%)',
       },
       boxShadow: {
         'soft': '0 4px 20px rgba(0, 0, 0, 0.03)',
