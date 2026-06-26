@@ -7,24 +7,24 @@ const PricingObject = lazy(() => import('./objects/PricingObject'))
 const plans = [
   {
     name: 'Foundation',
-    label: 'Good',
+    label: 'Launch Phase',
     priceFirst: '$500',
     priceAfter: '$400',
     pricePeriod: '/mo',
     priceNote: 'First month $500, then $400/mo',
     featured: false,
     features: [
-      'Organic content: 12 posts/month',
-      '2 ad concepts per month',
-      '4-email nurture sequence',
-      '2 platforms: LinkedIn & Instagram',
-      'Performance report 2x/month',
+      '12 High-Retention Organic Posts',
+      '2 High-Converting Ad Architectures',
+      'Automated 4-Email Nurture Sequence',
+      'LinkedIn & Instagram Dominance',
+      'Bi-Weekly ROI Performance Reports',
     ],
     cta: 'Start with Foundation',
   },
   {
     name: 'Growth',
-    label: 'Better',
+    label: 'Scale Phase',
     badge: 'Most Popular',
     priceFirst: '$880',
     priceAfter: '$780',
@@ -33,16 +33,16 @@ const plans = [
     featured: true,
     features: [
       'Everything in Foundation',
-      'Content: 16 posts + 4 videos',
-      'Paid ads: Meta management',
-      'Retargeting campaigns',
-      'Lead qualification workflow',
+      '16 Posts + 4 Viral-Engineered Videos',
+      'Meta Ad Campaign Management',
+      'Aggressive Retargeting Protocols',
+      'Frictionless Lead Qualification Workflow',
     ],
     cta: 'Choose Growth',
   },
   {
     name: 'Authority',
-    label: 'Best',
+    label: 'Domination Phase',
     priceFirst: '$1,300',
     priceAfter: '$1,700',
     pricePeriod: '/mo',
@@ -50,13 +50,13 @@ const plans = [
     featured: false,
     features: [
       'Everything in Growth',
-      '24 posts + 6 videos',
-      '2 SEO articles per month',
-      'Optional content proxy support',
-      'Multi-segment funnels',
-      'Quarterly strategy session',
-      'Case study production',
-      'Sales call support',
+      '24 Posts + 6 Premium Videos',
+      '2 SEO-Optimized Articles',
+      'Optional Content Proxy Support',
+      'Multi-Segment Conversion Funnels',
+      'Quarterly Boardroom Strategy Session',
+      'In-Depth Case Study Production',
+      'Direct Sales Pipeline Consulting',
     ],
     cta: 'Build Authority',
   },
@@ -141,7 +141,9 @@ function PricingCard({ plan }) {
         </ul>
 
         {/* CTA */}
-        <a
+        <motion.a
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
           href="#contact"
           className={`group/btn relative w-full flex items-center justify-center ${
             plan.featured ? 'btn-pill btn-primary dark:bg-white dark:text-navy-900' : 'btn-pill btn-outline dark:text-white'
@@ -151,7 +153,7 @@ function PricingCard({ plan }) {
             {plan.cta}
             <ArrowRight size={18} className="group-hover/btn:translate-x-1 transition-transform duration-300" />
           </span>
-        </a>
+        </motion.a>
       </div>
     </motion.div>
   )
@@ -162,6 +164,21 @@ export default function Pricing() {
 
   return (
     <section id="pricing" className="relative py-24 lg:py-40 overflow-hidden" aria-label="Pricing plans">
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Product",
+          "name": "ELNR Media Growth Systems",
+          "description": "Complete digital marketing, content creation, and lead generation systems.",
+          "offers": plans.map(plan => ({
+            "@type": "Offer",
+            "name": plan.name,
+            "price": plan.priceFirst.replace(/[^0-9.-]+/g,""),
+            "priceCurrency": "USD",
+            "description": plan.features.join(', ')
+          }))
+        })}
+      </script>
       {/* Background Orbs */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-brand-200/20 rounded-full blur-[150px] pointer-events-none mix-blend-multiply opacity-60" />
       <div className="absolute inset-0 pointer-events-none hidden lg:block z-0" aria-hidden="true">

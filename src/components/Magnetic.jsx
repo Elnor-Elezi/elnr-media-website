@@ -39,6 +39,8 @@ export default function Magnetic({ children, className = "", onClick }) {
       onMouseLeave={reset}
       onClick={handleClick}
       animate={{ x: position.x, y: position.y }}
+      whileHover={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
       transition={{ type: "spring", stiffness: 150, damping: 15, mass: 0.5 }}
       className={`magnetic inline-block ${className}`}
     >
