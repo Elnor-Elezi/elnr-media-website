@@ -4,6 +4,9 @@ import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { useCounter } from '../hooks'
 import Magnetic from './Magnetic'
+import AnimatedAuroraBackground from './backgrounds/AnimatedAuroraBackground'
+import FloatingGlassShapes from './backgrounds/FloatingGlassShapes'
+import ParallaxBackgroundAccents from './backgrounds/ParallaxBackgroundAccents'
 
 const stats = [
   { end: 150, suffix: '+', label: 'Campaigns Launched' },
@@ -24,8 +27,6 @@ function AnimatedStat({ end, suffix, label }) {
   )
 }
 
-import MovementObject from './objects/MovementObject'
-
 export default function Hero() {
   const containerRef = useRef(null)
   const { scrollYProgress } = useScroll({
@@ -40,31 +41,12 @@ export default function Hero() {
     <section
       ref={containerRef}
       id="home"
-      className="relative min-h-screen flex flex-col justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center pt-24 lg:pt-32 pb-16 overflow-hidden"
       aria-label="Welcome to ELNR Media"
     >
-      {/* Fully Animated Moving Background (Reverse-Engineered Jeton Feel) */}
-      <motion.div 
-        animate={{
-          x: ["-5%", "5%", "-5%"],
-          y: ["-5%", "5%", "-5%"],
-        }}
-        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-        className="absolute inset-0 pointer-events-none"
-      >
-        <div className="absolute top-[-10%] right-[-10%] w-[1200px] h-[1200px] bg-brand-200/30 rounded-full blur-[150px] mix-blend-multiply opacity-60" />
-      </motion.div>
-
-      <motion.div 
-        animate={{
-          x: ["5%", "-5%", "5%"],
-          y: ["5%", "-5%", "5%"],
-        }}
-        transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-        className="absolute inset-0 pointer-events-none"
-      >
-        <div className="absolute bottom-[-20%] left-[-20%] w-[1000px] h-[1000px] bg-orange-100/40 rounded-full blur-[150px] mix-blend-multiply opacity-60" />
-      </motion.div>
+      {/* Background System */}
+      <AnimatedAuroraBackground variant="hero" />
+      <ParallaxBackgroundAccents />
 
       {/* Main content grid (Writing on left, Object on right) */}
       <motion.div
@@ -155,8 +137,8 @@ export default function Hero() {
         </div>
 
         {/* Right column: Movement Object */}
-        <div className="absolute lg:relative right-[-20%] lg:right-[-10%] top-[20%] lg:top-0 w-full lg:w-[60%] xl:w-[65%] flex justify-end opacity-30 lg:opacity-100 pointer-events-none lg:pointer-events-auto order-1 lg:order-2 lg:scale-125 xl:scale-150 origin-right">
-          <MovementObject />
+        <div className="absolute lg:relative right-[-20%] lg:right-[-10%] top-[20%] lg:top-0 w-[400px] h-[400px] sm:w-[600px] sm:h-[600px] lg:w-[800px] lg:h-[800px] xl:w-[1000px] xl:h-[1000px] flex justify-end opacity-30 lg:opacity-100 pointer-events-none lg:pointer-events-auto order-1 lg:order-2 lg:scale-125 xl:scale-150 origin-right">
+          <FloatingGlassShapes variant="hero" />
         </div>
 
       </motion.div>

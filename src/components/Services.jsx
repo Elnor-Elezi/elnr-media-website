@@ -1,11 +1,15 @@
 import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import {
-  Film, Megaphone, GitBranch, UserCheck,
-  FileText, BookOpen, Phone, Compass, ArrowUpRight,
-  Smartphone, Code, Mail, Database
+  Film, Megaphone, GitBranch,
+  LineChart, MousePointerClick, Filter, Camera,
+  Smartphone, Code, Mail, Database, ArrowUpRight
 } from 'lucide-react'
-import { useSectionInView, useTilt, fadeInUp, slideInLeft, slideInRight, stagger, IMAGES } from '../hooks'
+import { useSectionInView, fadeInUp, slideInLeft, slideInRight, stagger, IMAGES } from '../hooks'
+import AnimatedAuroraBackground from './backgrounds/AnimatedAuroraBackground'
+import FloatingGlassShapes from './backgrounds/FloatingGlassShapes'
+import ParallaxBackgroundAccents from './backgrounds/ParallaxBackgroundAccents'
+
 const featuredServices = [
   {
     icon: Film,
@@ -118,9 +122,10 @@ export default function Services() {
 
   return (
     <section id="services" className="relative py-24 lg:py-36 overflow-hidden" aria-label="Our services">
-      {/* Background elements */}
-      <div className="absolute top-1/4 -right-32 w-[800px] h-[800px] bg-brand-200/20 rounded-full blur-[150px] mix-blend-multiply opacity-60 pointer-events-none" />
-      <div className="absolute bottom-1/4 -left-32 w-[600px] h-[600px] bg-brand-100/30 dark:bg-brand-900/20 rounded-full blur-[120px] mix-blend-multiply dark:mix-blend-screen opacity-60 pointer-events-none" />
+      {/* Background System */}
+      <AnimatedAuroraBackground variant="services" />
+      <ParallaxBackgroundAccents />
+      <FloatingGlassShapes variant="services" />
 
       <div className="relative max-container section-padding">
         {/* Header */}

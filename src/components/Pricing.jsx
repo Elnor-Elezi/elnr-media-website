@@ -1,6 +1,9 @@
 import { motion } from 'framer-motion'
 import { Check, Star, ArrowRight, Sparkles } from 'lucide-react'
 import { useSectionInView, useTilt, fadeInUp, stagger } from '../hooks'
+import AnimatedAuroraBackground from './backgrounds/AnimatedAuroraBackground'
+import FloatingGlassShapes from './backgrounds/FloatingGlassShapes'
+import ParallaxBackgroundAccents from './backgrounds/ParallaxBackgroundAccents'
 
 const plans = [
   {
@@ -177,8 +180,10 @@ export default function Pricing() {
           }))
         })}
       </script>
-      {/* Background Orbs */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-brand-200/20 rounded-full blur-[150px] pointer-events-none mix-blend-multiply opacity-60" />
+      {/* Background System */}
+      <AnimatedAuroraBackground variant="pricing" />
+      <ParallaxBackgroundAccents />
+      <FloatingGlassShapes variant="pricing" />
 
       <div className="relative max-container section-padding">
         {/* Header */}
