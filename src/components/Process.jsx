@@ -105,11 +105,6 @@ export default function Process() {
       {/* Background */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-brand-50/40 dark:bg-brand-900/10 rounded-full blur-[150px]" />
-        <div className="absolute inset-0 opacity-[0.02] dark:opacity-[0.05]" style={{
-          backgroundImage: `linear-gradient(currentColor 1px, transparent 1px),
-                            linear-gradient(90deg, currentColor 1px, transparent 1px)`,
-          backgroundSize: '80px 80px',
-        }} />
       </div>
 
       <div className="relative max-container section-padding">
