@@ -109,7 +109,7 @@ function FeaturedService({ service, index }) {
         </div>
         {/* Floating accent */}
         <div className="absolute -bottom-6 -right-6 w-32 h-32 rounded-full border border-brand-300/30 -z-10 bg-brand-50/50 backdrop-blur-md" />
-        <div className="absolute -top-6 -left-6 w-20 h-20 rounded-full bg-orange-100/80 -z-10 blur-xl" />
+        <div className="absolute -top-6 -left-6 w-20 h-20 rounded-full bg-brand-100/80 dark:bg-brand-900/40 -z-10 blur-xl" />
       </motion.div>
     </motion.div>
   )
@@ -122,7 +122,7 @@ export default function Services() {
     <section id="services" className="relative py-24 lg:py-36 overflow-hidden" aria-label="Our services">
       {/* Background elements */}
       <div className="absolute top-1/4 -right-32 w-[800px] h-[800px] bg-brand-200/20 rounded-full blur-[150px] mix-blend-multiply opacity-60 pointer-events-none" />
-      <div className="absolute bottom-1/4 -left-32 w-[600px] h-[600px] bg-orange-100/30 rounded-full blur-[120px] mix-blend-multiply opacity-60 pointer-events-none" />
+      <div className="absolute bottom-1/4 -left-32 w-[600px] h-[600px] bg-brand-100/30 dark:bg-brand-900/20 rounded-full blur-[120px] mix-blend-multiply dark:mix-blend-screen opacity-60 pointer-events-none" />
       <div className="absolute inset-0 pointer-events-none hidden lg:block z-0" aria-hidden="true">
         <Suspense fallback={null}>
           <ServicesObject />

@@ -151,7 +151,7 @@ export default function AboutPage() {
 
       {/* Values Section */}
       <section className="py-24 lg:py-36 relative">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-orange-100/40 rounded-full blur-[150px] pointer-events-none mix-blend-multiply" />
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-100/40 rounded-full blur-[150px] pointer-events-none mix-blend-multiply dark:mix-blend-screen dark:bg-brand-900/20" />
         
         <div className="relative max-container section-padding">
           <motion.div

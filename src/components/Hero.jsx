@@ -63,7 +63,7 @@ export default function Hero() {
         transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
         className="absolute inset-0 pointer-events-none"
       >
-        <div className="absolute bottom-[-20%] left-[-20%] w-[1000px] h-[1000px] bg-orange-100/40 rounded-full blur-[150px] mix-blend-multiply opacity-60" />
+        <div className="absolute bottom-[-20%] left-[-20%] w-[1000px] h-[1000px] bg-brand-100/40 dark:bg-brand-900/20 rounded-full blur-[150px] mix-blend-multiply dark:mix-blend-screen opacity-60" />
       </motion.div>
 
       {/* Main content grid (Writing on left, Object on right) */}
@@ -155,7 +155,7 @@ export default function Hero() {
         </div>
 
         {/* Right column: Movement Object */}
-        <div className="absolute lg:relative right-[-20%] lg:right-[-10%] top-[20%] lg:top-0 w-full lg:w-[60%] xl:w-[65%] flex justify-end opacity-30 lg:opacity-100 pointer-events-none lg:pointer-events-auto order-1 lg:order-2 lg:scale-125 xl:scale-150 origin-right" aria-hidden="true">
+        <div className="absolute inset-0 pointer-events-none z-0" aria-hidden="true">
           <Suspense fallback={null}>
             <MovementObject />
           </Suspense>

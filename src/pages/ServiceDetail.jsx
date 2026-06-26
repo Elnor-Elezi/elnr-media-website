@@ -180,6 +180,19 @@ export default function ServiceDetail() {
       <Helmet>
         <title>{service.title} | ELNR Media</title>
         <meta name="description" content={service.heroDesc} />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "serviceType": service.title,
+            "provider": {
+              "@type": "Organization",
+              "name": "ELNR Media",
+              "url": "https://elnrmedia.com"
+            },
+            "description": service.heroDesc
+          })}
+        </script>
       </Helmet>
 
       {/* Hero Section */}
