@@ -178,7 +178,7 @@ export default function ContactPage() {
                 {/* Decorative glow behind form */}
                 <div className="absolute -inset-4 bg-brand-500/20 blur-3xl rounded-full opacity-50" />
                 
-                <div className="glass dark:glass-dark rounded-[32px] p-8 lg:p-12 shadow-xl relative z-10 w-full max-w-xl lg:max-w-none">
+                <div className="bg-navy-900/80 backdrop-blur-md border border-white/10 rounded-[32px] p-8 lg:p-12 shadow-xl relative z-10 w-full max-w-xl lg:max-w-none">
                   <h3 className="font-display text-3xl font-bold text-white mb-3">Book a Strategy Call</h3>
                   <p className="text-white/60 text-base mb-10">Free consultation. No commitment. Response within 24 hours.</p>
 
