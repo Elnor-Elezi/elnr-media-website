@@ -5,7 +5,7 @@ export default function FloatingGlassShapes({ variant = 'hero' }) {
 
   if (shouldReduceMotion) return null
 
-  // --- HERO VARIANT (3D Coin Stack) ---
+  // --- HERO VARIANT (3D Coin Stack - Improved) ---
   if (variant === 'hero') {
     return (
       <motion.div 
@@ -47,51 +47,119 @@ export default function FloatingGlassShapes({ variant = 'hero' }) {
               <div className="absolute inset-[20%] rounded-full border border-white/20 opacity-50" />
             </motion.div>
           ))}
-        </motion.div>
+      </motion.div>
     )
   }
 
-  // --- PRICING VARIANT (Glass Spheres & Rings) ---
+  // --- PRICING VARIANT (Jeton-Style 3D Coin Vault) ---
   if (variant === 'pricing') {
     return (
-      <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
+      <div className="absolute inset-0 pointer-events-none overflow-hidden z-0 flex items-center justify-center lg:justify-end lg:pr-[15%] opacity-40 lg:opacity-100">
         <motion.div 
-          animate={{ y: [-20, 20, -20], rotate: [0, 10, 0] }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-[20%] right-[10%] w-64 h-64 rounded-full border border-white/30 dark:border-white/10 bg-white/10 dark:bg-white/5 backdrop-blur-md shadow-premium"
-          style={{ boxShadow: 'inset 0 0 40px rgba(255,255,255,0.2)' }}
-        />
-        <motion.div 
-          animate={{ y: [20, -20, 20], rotate: [0, -10, 0], scale: [1, 1.05, 1] }}
-          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-          className="absolute bottom-[30%] left-[5%] w-48 h-48 rounded-full border-4 border-brand-400/20 backdrop-blur-sm"
-        />
-        <motion.div 
-          animate={{ x: [-30, 30, -30], y: [-10, 10, -10] }}
-          transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-          className="absolute top-[60%] right-[25%] w-32 h-32 rounded-full border border-white/40 dark:border-white/20 bg-brand-200/20 dark:bg-brand-500/20 backdrop-blur-lg shadow-glow"
-        />
+          animate={{ rotateX: [15, -15, 15], rotateY: [-25, 25, -25] }}
+          transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
+          className="relative w-[500px] h-[500px] lg:w-[800px] lg:h-[800px] flex items-center justify-center perspective-[1500px]"
+          style={{ transformStyle: 'preserve-3d' }}
+        >
+          {/* Main Vault Outer Ring */}
+          <motion.div
+            animate={{ rotateZ: 360 }}
+            transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+            className="absolute w-[80%] h-[80%] rounded-full border border-white/40 dark:border-white/10 bg-brand-500/5 backdrop-blur-md shadow-premium flex items-center justify-center"
+            style={{ 
+              transformStyle: 'preserve-3d', 
+              translateZ: '-100px',
+              boxShadow: 'inset 0 0 100px rgba(20, 184, 166, 0.1), 0 50px 100px rgba(0,0,0,0.05)'
+            }}
+          >
+            {/* Vault Notches */}
+            {[...Array(12)].map((_, i) => (
+              <div key={i} className="absolute w-2 h-8 bg-brand-500/30 rounded-full" style={{ transform: `rotate(${i * 30}deg) translateY(-280px)` }} />
+            ))}
+          </motion.div>
+
+          {/* Jeton 3D Golden Coin Element */}
+          <motion.div
+            animate={{ rotateZ: [-20, 20, -20], y: [-20, 20, -20] }}
+            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute w-[40%] h-[40%] rounded-full bg-gradient-to-br from-yellow-200 via-orange-300 to-brand-500 border-2 border-white/60 backdrop-blur-xl flex items-center justify-center"
+            style={{ 
+              transformStyle: 'preserve-3d', 
+              translateZ: '150px',
+              boxShadow: 'inset 0 10px 20px rgba(255,255,255,0.8), inset 0 -20px 40px rgba(0,0,0,0.2), 0 30px 60px rgba(249, 115, 22, 0.3)'
+            }}
+          >
+            <div className="absolute inset-[15%] rounded-full border-[3px] border-white/50" />
+            <div className="absolute inset-[30%] rounded-full bg-white/20 blur-sm" />
+          </motion.div>
+
+          {/* Floating Data Shards */}
+          {[1, 2, 3].map((shard) => (
+            <motion.div
+              key={shard}
+              animate={{ 
+                rotateX: [0, 360], 
+                rotateY: [0, 360],
+                translateZ: [(shard * 50), (shard * 100), (shard * 50)]
+              }}
+              transition={{ duration: 15 + shard * 5, repeat: Infinity, ease: "linear" }}
+              className="absolute w-16 h-16 bg-white/30 dark:bg-white/10 border border-white/50 backdrop-blur-md rounded-2xl"
+              style={{
+                transformStyle: 'preserve-3d',
+                left: `${shard * 25}%`,
+                top: `${shard * 20}%`
+              }}
+            />
+          ))}
+        </motion.div>
       </div>
     )
   }
 
-  // --- SERVICES VARIANT (Abstract Geometric Panels) ---
+  // --- SERVICES VARIANT (Jeton-Style 3D Data Systems Grid) ---
   if (variant === 'services') {
     return (
-      <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
+      <div className="absolute inset-0 pointer-events-none overflow-hidden z-0 flex items-center justify-center opacity-30 lg:opacity-70">
         <motion.div 
-          animate={{ y: [-30, 30, -30], rotateZ: [-5, 5, -5] }}
-          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-[15%] right-[5%] w-72 h-96 rounded-[40px] border border-white/20 dark:border-white/10 bg-white/5 dark:bg-white/5 backdrop-blur-md shadow-premium rotate-12"
-          style={{ boxShadow: 'inset 0 0 60px rgba(255,255,255,0.1)' }}
-        />
-        <motion.div 
-          animate={{ y: [20, -20, 20], rotateZ: [10, -10, 10] }}
-          transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-          className="absolute bottom-[20%] left-[10%] w-64 h-64 rounded-3xl border border-brand-500/20 bg-brand-500/5 backdrop-blur-sm -rotate-6"
-        />
-        {/* Subtle Grid Accent */}
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjAuNSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBvcGFjaXR5PSIwLjA1Ij48cGF0aCBkPSJNMCAwdjYwaDYwIi8+PC9nPjwvc3ZnPg==')] opacity-50 dark:opacity-20" />
+          animate={{ rotateX: [60, 65, 60], rotateZ: [-10, -5, -10], y: [-30, 30, -30] }}
+          transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
+          className="relative w-[150%] h-[150%] flex items-center justify-center perspective-[1000px]"
+          style={{ transformStyle: 'preserve-3d' }}
+        >
+          {/* Main 3D Grid */}
+          <div 
+            className="absolute inset-[-20%] grid grid-cols-6 grid-rows-6 gap-8 p-12"
+            style={{ transformStyle: 'preserve-3d' }}
+          >
+            {[...Array(36)].map((_, i) => {
+              const isHeroNode = i % 5 === 0;
+              return (
+                <motion.div
+                  key={i}
+                  animate={{ 
+                    translateZ: isHeroNode ? [0, 80, 0] : [0, 20, 0],
+                    opacity: isHeroNode ? [0.4, 0.8, 0.4] : 0.1
+                  }}
+                  transition={{ 
+                    duration: 4 + (i % 3), 
+                    repeat: Infinity, 
+                    ease: "easeInOut",
+                    delay: i * 0.1
+                  }}
+                  className={`w-full h-full rounded-2xl border ${isHeroNode ? 'border-brand-400 bg-brand-500/20 shadow-glow' : 'border-white/20 bg-white/5'} backdrop-blur-sm`}
+                  style={{ transformStyle: 'preserve-3d' }}
+                >
+                  {isHeroNode && (
+                    <div className="absolute inset-1/4 bg-white/40 rounded-full blur-md" />
+                  )}
+                </motion.div>
+              )
+            })}
+          </div>
+          
+          {/* Overlay connection lines */}
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBzdHJva2U9IiMxNGI4YTYiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgb3BhY2l0eT0iMC4xNSI+PHBhdGggZD0iTTAgMHYxMDBoMTAwIi8+PC9nPjwvc3ZnPg==')] bg-repeat opacity-50" />
+        </motion.div>
       </div>
     )
   }

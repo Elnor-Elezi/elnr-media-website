@@ -165,8 +165,9 @@ export default function Pricing() {
 
   return (
     <section id="pricing" className="relative py-24 lg:py-40 overflow-hidden" aria-label="Pricing plans">
-      <script type="application/ld+json">
-        {JSON.stringify({
+      <script 
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Product",
           "name": "ELNR Media Growth Systems",
@@ -178,8 +179,8 @@ export default function Pricing() {
             "priceCurrency": "USD",
             "description": plan.features.join(', ')
           }))
-        })}
-      </script>
+        })}}
+      />
       {/* Background System */}
       <AnimatedAuroraBackground variant="pricing" />
       <ParallaxBackgroundAccents />
