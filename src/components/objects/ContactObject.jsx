@@ -13,7 +13,7 @@ export default function ContactObject() {
         <spotLight position={[10, 10, 10]} intensity={1} color="#ffffff" />
         <Environment preset="city" />
         
-        <PresentationControls global rotation={[0, 0, 0]} polar={[-0.1, 0.2]} azimuth={[-0.2, 0.2]} config={{ mass: 2, tension: 400 }} snap={{ mass: 4, tension: 400 }}>
+        <PresentationControls rotation={[0, 0, 0]} polar={[-0.1, 0.2]} azimuth={[-0.2, 0.2]} config={{ mass: 2, tension: 400 }} snap={true}>
           <Float speed={2} rotationIntensity={1} floatIntensity={1.5}>
             <Sphere args={[3, 64, 64]}>
               <MeshTransmissionMaterial 

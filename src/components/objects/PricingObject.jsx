@@ -13,7 +13,7 @@ export default function PricingObject() {
         <Environment preset="city" />
         
         {/* Floating Cards / Blocks */}
-        <PresentationControls global rotation={[0, 0, 0]} polar={[-0.1, 0.2]} azimuth={[-0.2, 0.2]} config={{ mass: 2, tension: 400 }} snap={{ mass: 4, tension: 400 }}>
+        <PresentationControls rotation={[0, 0, 0]} polar={[-0.1, 0.2]} azimuth={[-0.2, 0.2]} config={{ mass: 2, tension: 400 }} snap={true}>
           <Float speed={2} rotationIntensity={0.5} floatIntensity={1.5} position={[-2.5, 1, 0]} rotation={[0, Math.PI / 6, Math.PI / 12]}>
             <RoundedBox args={[3, 4, 0.5]} radius={0.2} smoothness={4}>
               <MeshTransmissionMaterial backside samples={4} thickness={0.5} chromaticAberration={0.05} color="#5eead4" clearcoat={1} />

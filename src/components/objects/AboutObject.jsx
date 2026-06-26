@@ -12,7 +12,7 @@ export default function AboutObject() {
         <spotLight position={[10, 10, 10]} intensity={1} />
         <Environment preset="city" />
         
-        <PresentationControls global rotation={[0, 0, 0]} polar={[-0.1, 0.2]} azimuth={[-0.2, 0.2]} config={{ mass: 2, tension: 400 }} snap={{ mass: 4, tension: 400 }}>
+        <PresentationControls rotation={[0, 0, 0]} polar={[-0.1, 0.2]} azimuth={[-0.2, 0.2]} config={{ mass: 2, tension: 400 }} snap={true}>
           <Float speed={1.5} rotationIntensity={0.5} floatIntensity={1.5}>
             {/* Core Sphere */}
             <Sphere args={[2, 64, 64]}>

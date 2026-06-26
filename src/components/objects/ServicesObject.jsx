@@ -12,7 +12,7 @@ export default function ServicesObject() {
         <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={1} />
         <Environment preset="city" />
         
-        <PresentationControls global rotation={[0, 0, 0]} polar={[-0.1, 0.2]} azimuth={[-0.2, 0.2]} config={{ mass: 2, tension: 400 }} snap={{ mass: 4, tension: 400 }}>
+        <PresentationControls rotation={[0, 0, 0]} polar={[-0.1, 0.2]} azimuth={[-0.2, 0.2]} config={{ mass: 2, tension: 400 }} snap={true}>
           <Float speed={2} rotationIntensity={0.8} floatIntensity={1.2}>
             <Icosahedron args={[3, 0]} position={[0, 0, 0]}>
               <MeshTransmissionMaterial 

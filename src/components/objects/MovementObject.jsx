@@ -46,7 +46,7 @@ export default function MovementObject() {
         <pointLight position={[-10, -10, -10]} color="#14b8a6" intensity={1} />
         
         {/* Jeton-like slow levitation wrapper with interactivity */}
-        <PresentationControls global rotation={[0, 0, 0]} polar={[-0.1, 0.2]} azimuth={[-0.2, 0.2]} config={{ mass: 2, tension: 400 }} snap={{ mass: 4, tension: 400 }}>
+        <PresentationControls rotation={[0, 0, 0]} polar={[-0.1, 0.2]} azimuth={[-0.2, 0.2]} config={{ mass: 2, tension: 400 }} snap={true}>
           <Float speed={1.5} rotationIntensity={0.5} floatIntensity={1.5} position={[4, 0, -2]}>
             <group rotation={[Math.PI / 4, Math.PI / 6, 0]}>
               <Coin position={[0, -2, 0]} rotation={[0, 0, 0]} scale={[3.5, 3.5, 3.5]} color="#14b8a6" delay={0} />
