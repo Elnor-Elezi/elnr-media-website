@@ -1,51 +1,68 @@
-import { motion } from 'framer-motion'
+import { useRef } from 'react'
+import { Canvas, useFrame } from '@react-three/fiber'
+import { OrbitControls, Torus } from '@react-three/drei'
+import * as THREE from 'three'
+
+function AtomRing({ rotation, color, speed = 1, particleOffset = 0 }) {
+  const groupRef = useRef()
+  const particleRef = useRef()
+
+  useFrame((state, delta) => {
+    groupRef.current.rotation.z += delta * speed * 0.5
+    particleRef.current.position.x = Math.cos(state.clock.elapsedTime * speed * 2 + particleOffset) * 2.2
+    particleRef.current.position.y = Math.sin(state.clock.elapsedTime * speed * 2 + particleOffset) * 2.2
+  })
+
+  return (
+    <group ref={groupRef} rotation={rotation}>
+      <Torus args={[2.2, 0.02, 16, 100]}>
+        <meshStandardMaterial color={color} emissive={color} emissiveIntensity={0.5} transparent opacity={0.3} />
+      </Torus>
+      {/* Orbiting Particle */}
+      <mesh ref={particleRef}>
+        <sphereGeometry args={[0.1, 16, 16]} />
+        <meshBasicMaterial color="#ffffff" />
+        <pointLight color="#ffffff" intensity={2} distance={3} />
+      </mesh>
+    </group>
+  )
+}
+
+function Atom() {
+  const coreRef = useRef()
+  
+  useFrame((state) => {
+    coreRef.current.scale.setScalar(1 + Math.sin(state.clock.elapsedTime * 2) * 0.1)
+  })
+
+  return (
+    <group scale={1.5}>
+      {/* Core */}
+      <mesh ref={coreRef}>
+        <sphereGeometry args={[0.6, 32, 32]} />
+        <meshStandardMaterial color="#0ea5e9" emissive="#0ea5e9" emissiveIntensity={1} />
+        <pointLight color="#0ea5e9" intensity={5} distance={10} />
+      </mesh>
+      
+      {/* Rings */}
+      <AtomRing rotation={[Math.PI / 2, 0, 0]} color="#14b8a6" speed={0.8} particleOffset={0} />
+      <AtomRing rotation={[Math.PI / 3, Math.PI / 3, 0]} color="#0ea5e9" speed={1.2} particleOffset={Math.PI} />
+      <AtomRing rotation={[-Math.PI / 3, Math.PI / 3, 0]} color="#8b5cf6" speed={1} particleOffset={Math.PI / 2} />
+    </group>
+  )
+}
 
 export default function AboutObject() {
   return (
-    <div className="relative w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] flex items-center justify-center perspective-[1200px]">
-      <motion.div
-        animate={{ rotateX: [0, 360], rotateY: [0, 360], rotateZ: [0, 360] }}
-        transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-        className="relative w-full h-full flex items-center justify-center"
-        style={{ transformStyle: 'preserve-3d' }}
-      >
-        {/* Core Glow */}
-        <motion.div 
-          animate={{ scale: [1, 1.2, 1] }}
-          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute inset-0 m-auto w-20 h-20 bg-brand-500 rounded-full blur-[30px] opacity-70"
-          style={{ transform: 'translateZ(0px)' }}
-        />
-
-        {/* 3D Intersecting Rings (Atom Model) */}
-        {[
-          { rotateX: 0, rotateY: 75, rotateZ: 45, color: "border-brand-400/60 dark:border-brand-400/40" },
-          { rotateX: 75, rotateY: 0, rotateZ: 45, color: "border-brand-300/60 dark:border-brand-300/40" },
-          { rotateX: 45, rotateY: 45, rotateZ: 0, color: "border-teal-300/60 dark:border-teal-300/40" }
-        ].map((ring, i) => (
-          <div
-            key={i}
-            className={`absolute inset-0 m-auto w-72 h-72 rounded-full border shadow-[0_0_30px_rgba(20,184,166,0.15)] backdrop-blur-sm ${ring.color}`}
-            style={{ 
-              transformStyle: 'preserve-3d',
-              transform: `rotateX(${ring.rotateX}deg) rotateY(${ring.rotateY}deg) rotateZ(${ring.rotateZ}deg)`
-            }}
-          >
-            {/* Orbiting particle on the ring - perfectly aligned on the line */}
-            <motion.div
-              animate={{ rotateZ: [0, 360] }}
-              transition={{ duration: 10 + i * 2, repeat: Infinity, ease: "linear" }}
-              className="w-full h-full absolute inset-0 m-auto"
-              style={{ transformStyle: 'preserve-3d' }}
-            >
-              <div 
-                className="absolute top-[-8px] left-1/2 w-4 h-4 bg-white rounded-full shadow-[0_0_20px_rgba(255,255,255,0.9)]" 
-                style={{ transform: 'translateX(-50%) translateZ(0px)' }}
-              />
-            </motion.div>
-          </div>
-        ))}
-      </motion.div>
+    <div className="relative w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] flex items-center justify-center cursor-grab active:cursor-grabbing">
+      {/* Fallback/Background Glow */}
+      <div className="absolute inset-0 m-auto w-32 h-32 bg-brand-500 rounded-full blur-[60px] opacity-30 pointer-events-none" />
+      
+      <Canvas camera={{ position: [0, 0, 8], fov: 45 }} className="w-full h-full">
+        <ambientLight intensity={0.2} />
+        <Atom />
+        <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={2} />
+      </Canvas>
     </div>
   )
 }

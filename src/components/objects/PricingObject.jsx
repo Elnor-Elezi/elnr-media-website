@@ -1,44 +1,55 @@
-import { motion } from 'framer-motion'
+import { useRef } from 'react'
+import { Canvas, useFrame } from '@react-three/fiber'
+import { OrbitControls, Torus } from '@react-three/drei'
+import * as THREE from 'three'
+
+function Tier({ radius, y, thickness, color, speed, reverse }) {
+  const ref = useRef()
+  
+  useFrame((state) => {
+    const rotSpeed = state.clock.elapsedTime * speed
+    ref.current.rotation.z = reverse ? -rotSpeed : rotSpeed
+    ref.current.position.y = y + Math.sin(state.clock.elapsedTime * 2 + radius) * 0.1
+  })
+
+  return (
+    <Torus ref={ref} args={[radius, thickness, 32, 100]} position={[0, y, 0]} rotation={[Math.PI / 2, 0, 0]}>
+      <meshStandardMaterial color={color} emissive={color} emissiveIntensity={0.6} transparent opacity={0.8} />
+    </Torus>
+  )
+}
+
+function CoreBeam() {
+  const ref = useRef()
+  useFrame((state) => {
+    ref.current.rotation.y = state.clock.elapsedTime * 0.5
+  })
+  return (
+    <mesh ref={ref}>
+      <cylinderGeometry args={[0.05, 0.05, 6, 32]} />
+      <meshStandardMaterial color="#14b8a6" emissive="#14b8a6" emissiveIntensity={2} transparent opacity={0.5} />
+    </mesh>
+  )
+}
 
 export default function PricingObject() {
   return (
-    <div className="relative w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] flex items-center justify-center perspective-[1000px]">
-      <motion.div 
-        animate={{ rotateY: [0, 360], rotateX: [50, 70, 50] }}
-        transition={{ duration: 25, repeat: Infinity, ease: "easeInOut" }}
-        className="relative w-full h-full flex items-center justify-center"
-        style={{ transformStyle: 'preserve-3d' }}
-      >
-        {/* Tiers */}
-        {[
-          { size: 240, color: 'border-charcoal-200/50 dark:border-white/10', y: 40, duration: 4 },
-          { size: 180, color: 'border-brand-300/40 dark:border-brand-300/20 shadow-[inset_0_0_30px_rgba(94,234,212,0.3)]', y: 0, duration: 5 },
-          { size: 120, color: 'border-brand-500/60 dark:border-brand-500/40 shadow-[inset_0_0_40px_rgba(20,184,166,0.5)]', y: -40, duration: 3 },
-          { size: 60, color: 'bg-brand-400 border-white/90 shadow-[0_0_50px_rgba(20,184,166,0.9)]', y: -80, duration: 2 }
-        ].map((tier, i) => (
-          <motion.div
-            key={i}
-            animate={{ 
-              y: [tier.y, tier.y - 20, tier.y],
-              rotateZ: [0, i % 2 === 0 ? 360 : -360] 
-            }}
-            transition={{ 
-              y: { duration: tier.duration, repeat: Infinity, ease: "easeInOut" },
-              rotateZ: { duration: 20 + i * 5, repeat: Infinity, ease: "linear" }
-            }}
-            className={`absolute rounded-full border-2 ${tier.color} backdrop-blur-md`}
-            style={{ 
-              width: `${tier.size}px`, 
-              height: `${tier.size}px`,
-              transform: `translateZ(${tier.y}px)`
-            }}
-          >
-          </motion.div>
-        ))}
+    <div className="relative w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] flex items-center justify-center cursor-grab active:cursor-grabbing">
+      <div className="absolute inset-0 m-auto w-32 h-64 bg-brand-400 rounded-full blur-[80px] opacity-30 pointer-events-none" />
+      
+      <Canvas camera={{ position: [0, 2, 8], fov: 40 }}>
+        <ambientLight intensity={0.2} />
+        
+        <group rotation={[Math.PI / 8, 0, 0]}>
+          <CoreBeam />
+          <Tier radius={2.5} y={-1.5} thickness={0.02} color="#64748b" speed={0.2} reverse={false} />
+          <Tier radius={1.8} y={-0.5} thickness={0.05} color="#5eead4" speed={0.4} reverse={true} />
+          <Tier radius={1.2} y={0.5} thickness={0.08} color="#14b8a6" speed={0.6} reverse={false} />
+          <Tier radius={0.6} y={1.5} thickness={0.15} color="#115e59" speed={0.8} reverse={true} />
+        </group>
 
-        {/* Central Vertical Beam */}
-        <div className="absolute w-1 h-[400px] bg-gradient-to-b from-transparent via-brand-400/50 to-transparent" style={{ transform: 'rotateX(90deg)' }} />
-      </motion.div>
+        <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={1} />
+      </Canvas>
     </div>
   )
 }
