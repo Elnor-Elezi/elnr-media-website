@@ -124,7 +124,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 1.4 }}
           className="text-charcoal-500 text-base sm:text-lg lg:text-xl leading-relaxed mb-10 max-w-2xl"
         >
-          ELNR Media is a premium digital marketing agency. We build complete content, advertising, and funnel systems for businesses ready to scale with clarity, consistency, and authority.
+          Stop burning capital on isolated marketing tactics. ELNR Media is a premium growth agency that builds interconnected content, advertising, and funnel systems designed to predictably scale B2B brands.
         </motion.p>
 
           {/* CTAs */}

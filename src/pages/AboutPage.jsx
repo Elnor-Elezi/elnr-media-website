@@ -66,7 +66,7 @@ export default function AboutPage() {
               </h1>
               
               <p className="text-charcoal-500 dark:text-charcoal-300 text-lg sm:text-xl leading-relaxed mb-12 max-w-3xl mx-auto">
-                Founded by Elnor Elezi, ELNR Media is a premium digital marketing and growth agency headquartered in Tirana, Albania. We were built to solve a specific problem: businesses were treating marketing as isolated tactics instead of interconnected systems. We exist to fix that.
+                Founded by Elnor Elezi, ELNR Media is a premium growth agency headquartered in Tirana, Albania. We exist to solve one massive problem: businesses burning cash on isolated marketing tactics while their customer acquisition costs skyrocket. Instead of disjointed ads and scattered content, we build compounding media systems.
               </p>
             </motion.div>
 
