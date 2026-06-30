@@ -75,9 +75,9 @@ export default function Hero() {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-              className="font-display font-bold text-5xl sm:text-6xl lg:text-7xl xl:text-[80px] text-navy-900 dark:text-white tracking-tighter leading-[1.1] mb-6"
+              className="font-display font-bold text-4xl sm:text-5xl lg:text-6xl xl:text-[64px] text-navy-900 dark:text-white tracking-tight leading-[1.15] mb-6"
             >
-              Premium Media <br className="hidden sm:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-brand-600">Systems.</span>
+              We build premium media systems <br className="hidden xl:block" /> to help B2B brands <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-brand-600">scale.</span>
             </motion.h1>
           </div>
 
