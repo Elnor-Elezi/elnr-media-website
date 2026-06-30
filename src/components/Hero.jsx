@@ -70,33 +70,15 @@ export default function Hero() {
           </motion.div>
 
           {/* Headline */}
-          <div className="mb-6 w-full flex flex-col items-start">
-            <h1 className="font-display font-bold text-navy-900 dark:text-white tracking-tighter leading-[0.95] flex flex-col items-start">
-              <motion.span
-                initial={{ opacity: 0, y: 40 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                className="text-6xl sm:text-7xl lg:text-[90px] xl:text-[110px]"
-              >
-                Scale B2B
-              </motion.span>
-              <motion.span
-                initial={{ opacity: 0, y: 40 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-                className="text-6xl sm:text-7xl lg:text-[90px] xl:text-[110px]"
-              >
-                revenue
-              </motion.span>
-              <motion.span
-                initial={{ opacity: 0, y: 40 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-                className="text-6xl sm:text-7xl lg:text-[90px] xl:text-[110px]"
-              >
-                systems.
-              </motion.span>
-            </h1>
+          <div className="mb-6 w-full">
+            <motion.h1 
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+              className="font-display font-bold text-5xl sm:text-6xl lg:text-7xl xl:text-[80px] text-navy-900 dark:text-white tracking-tighter leading-[1.1] mb-6"
+            >
+              B2B Digital Marketing, <br className="hidden sm:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-brand-600">Engineered for Revenue.</span>
+            </motion.h1>
           </div>
 
           {/* Subtitle */}
