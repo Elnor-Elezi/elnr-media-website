@@ -15,7 +15,7 @@ const featuredServices = [
   {
     icon: Film,
     title: 'Content Creation',
-    desc: 'We do not just "make posts". We engineer high-retention video and written content designed to dominate organic algorithms, build undeniable authority, and drive inbound B2B leads.',
+    desc: 'We do not just "make posts". We produce high-retention video and written content designed to increase organic visibility, establish measurable authority, and drive inbound B2B leads.',
     img: IMAGES.content,
     stats: [{ value: '16+', label: 'Posts/Month' }, { value: '4+', label: 'Videos' }],
   },
@@ -68,7 +68,7 @@ function FeaturedService({ service, index }) {
         style={{ direction: 'ltr' }}
       >
         <div className="w-16 h-16 rounded-full bg-white dark:bg-navy-900 border border-charcoal-100 dark:border-white/10 shadow-soft flex items-center justify-center mb-6">
-          <service.icon size={26} className="text-brand-500" />
+          <service.icon size={26} aria-hidden="true" className="text-brand-500" />
         </div>
         <h3 className="font-display text-4xl sm:text-5xl font-bold text-navy-900 dark:text-white mb-4 tracking-tight">
           {service.title}
@@ -89,7 +89,7 @@ function FeaturedService({ service, index }) {
           className="group inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-brand-500 hover:text-brand-600 transition-colors duration-300"
         >
           Learn more
-          <ArrowUpRight size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
+          <ArrowUpRight size={18} aria-hidden="true" className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
         </a>
       </motion.div>
 
@@ -104,6 +104,8 @@ function FeaturedService({ service, index }) {
             style={{ y: imgY }}
             src={service.img}
             alt={`${service.title}: ${service.desc.slice(0, 80)}`}
+            width="800"
+            height="600"
             className="w-full h-[400px] sm:h-[500px] object-cover transition-transform duration-1000 group-hover:scale-105"
             loading="lazy"
           />
@@ -172,7 +174,7 @@ export default function Services() {
               className="glass dark:glass-dark p-8 lg:p-10 rounded-[32px] hover:-translate-y-2 transition-transform duration-500 shadow-soft hover:shadow-xl relative overflow-hidden group"
             >
               <div className="w-12 h-12 rounded-full bg-brand-50 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
-                <svc.icon size={20} className="text-brand-500" />
+                <svc.icon size={20} aria-hidden="true" className="text-brand-500" />
               </div>
               <h4 className="font-display font-bold text-navy-900 dark:text-white text-lg mb-2 tracking-tight">{svc.title}</h4>
               <p className="text-sm text-charcoal-500 dark:text-charcoal-300 leading-relaxed">{svc.desc}</p>

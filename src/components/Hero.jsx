@@ -78,7 +78,7 @@ export default function Hero() {
                 transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
                 className="text-6xl sm:text-7xl lg:text-[90px] xl:text-[110px]"
               >
-                Premium
+                Scale B2B
               </motion.span>
               <motion.span
                 initial={{ opacity: 0, y: 40 }}
@@ -86,7 +86,7 @@ export default function Hero() {
                 transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
                 className="text-6xl sm:text-7xl lg:text-[90px] xl:text-[110px]"
               >
-                media
+                revenue
               </motion.span>
               <motion.span
                 initial={{ opacity: 0, y: 40 }}
@@ -106,7 +106,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 1.4 }}
           className="text-charcoal-500 text-base sm:text-lg lg:text-xl leading-relaxed mb-10 max-w-2xl"
         >
-          Stop burning capital on isolated marketing tactics. ELNR Media is a premium growth agency that builds interconnected content, advertising, and funnel systems designed to predictably scale B2B brands.
+          Stop burning capital on isolated marketing tactics. We build interconnected content and ad architectures that lower Customer Acquisition Cost (CAC) and deliver qualified B2B sales calls.
         </motion.p>
 
           {/* CTAs */}
@@ -122,7 +122,7 @@ export default function Hero() {
                 className="group btn-pill btn-primary dark:bg-white dark:text-navy-900 text-base px-10 py-4 flex items-center gap-3 shadow-glow w-full sm:w-auto justify-center"
               >
                 Start your growth
-                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform duration-300" />
+                <ArrowRight size={18} aria-hidden="true" className="group-hover:translate-x-1 transition-transform duration-300" />
               </Link>
             </Magnetic>
             <Magnetic>
@@ -137,7 +137,7 @@ export default function Hero() {
         </div>
 
         {/* Right column: Movement Object */}
-        <div className="absolute lg:relative right-[-20%] lg:right-[-10%] top-[20%] lg:top-0 w-[400px] h-[400px] sm:w-[600px] sm:h-[600px] lg:w-[800px] lg:h-[800px] xl:w-[1000px] xl:h-[1000px] flex justify-end opacity-30 lg:opacity-100 pointer-events-none lg:pointer-events-auto order-1 lg:order-2 lg:scale-125 xl:scale-150 origin-right">
+        <div className="absolute lg:relative right-[-20%] lg:right-[-20%] xl:right-[-30%] top-[20%] lg:top-0 w-[400px] h-[400px] sm:w-[600px] sm:h-[600px] lg:w-[800px] lg:h-[800px] xl:w-[1000px] xl:h-[1000px] flex justify-end opacity-30 lg:opacity-100 pointer-events-none lg:pointer-events-auto order-1 lg:order-2 lg:scale-125 xl:scale-150 origin-right lg:translate-x-12 xl:translate-x-24">
           <FloatingGlassShapes variant="hero" />
         </div>
 

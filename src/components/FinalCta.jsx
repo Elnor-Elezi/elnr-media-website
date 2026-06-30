@@ -85,6 +85,8 @@ export default function FinalCta({ showForm = false }) {
             style={{ scale: imgScale }}
             src={IMAGES.results}
             alt="Successful business growth results from working with ELNR Media"
+            width="1920"
+            height="1080"
             className="absolute inset-0 w-full h-full object-cover"
             loading="lazy"
           />
@@ -116,8 +118,7 @@ export default function FinalCta({ showForm = false }) {
             </h2>
 
             <p className="text-white/70 text-lg sm:text-xl leading-relaxed max-w-2xl mx-auto mb-12">
-              Work with ELNR Media to turn content, ads, and funnels into a consistent
-              growth engine that builds authority and generates leads on autopilot.
+              Work with ELNR Media to turn content, ads, and funnels into interconnected systems that lower CAC and deliver qualified sales calls every week.
             </p>
 
             {/* Conditionally render Form vs Button */}
@@ -165,7 +166,7 @@ export default function FinalCta({ showForm = false }) {
                   >
                     <span className="flex items-center gap-3">
                       Book Your Strategy Call
-                      <Send size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
+                      <Send size={18} aria-hidden="true" className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
                     </span>
                   </motion.button>
                 </form>
@@ -175,7 +176,7 @@ export default function FinalCta({ showForm = false }) {
                   animate={{ opacity: 1, scale: 1 }}
                   className="max-w-md mx-auto mb-6 py-8 px-8 rounded-[32px] bg-brand-500/15 border border-brand-400/20 backdrop-blur-md"
                 >
-                  <CheckCircle size={40} className="text-brand-400 mx-auto mb-4" />
+                  <CheckCircle size={40} aria-hidden="true" className="text-brand-400 mx-auto mb-4" />
                   <p className="text-white font-bold text-xl mb-2">Thank you, {formData.name}!</p>
                   <p className="text-white/60 text-base">We will be in touch within 24 hours.</p>
                 </motion.div>
@@ -188,7 +189,7 @@ export default function FinalCta({ showForm = false }) {
                 >
                   <span className="flex items-center gap-3">
                     Book Your Strategy Call
-                    <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform duration-300" />
+                    <ArrowRight size={18} aria-hidden="true" className="group-hover:translate-x-1 transition-transform duration-300" />
                   </span>
                 </Link>
               </div>
