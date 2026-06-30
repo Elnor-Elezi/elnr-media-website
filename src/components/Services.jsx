@@ -142,10 +142,10 @@ export default function Services() {
           <span className="inline-flex items-center px-4 py-1.5 rounded-full text-[10px] font-semibold tracking-[0.25em] uppercase bg-brand-50 dark:bg-brand-500/10 text-brand-600 dark:text-brand-400 border border-brand-200/60 dark:border-brand-500/20 mb-5">
             What We Do
           </span>
-          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-navy-700 dark:text-white tracking-tight mb-6">
-            Systems That{' '}
-            <span className="text-gradient">Scale Growth</span>
-          </h2>
+          <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-navy-900 dark:text-white tracking-tight mb-6">
+            Premium B2B Media Systems &{' '}
+            <span className="text-gradient">Growth Services</span>
+          </h1>
           <p className="text-charcoal-500 dark:text-charcoal-300 text-base sm:text-lg leading-relaxed">
             We don't just run ads or post content. We build interconnected 
             media systems that turn attention into revenue.

@@ -242,6 +242,33 @@ export default function Pricing() {
             </div>
           </div>
         </motion.div>
+        {/* SEO Copy Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4, duration: 0.6 }}
+          className="mt-16 lg:mt-24 max-w-4xl mx-auto prose prose-navy dark:prose-invert prose-lg"
+        >
+          <h3 className="font-display text-2xl font-bold text-navy-900 dark:text-white mb-4">
+            How to Choose the Right B2B Media System for Your Growth Stage
+          </h3>
+          <p className="text-charcoal-500 dark:text-charcoal-300 mb-4">
+            Scaling a B2B company requires more than just a good product; it requires a predictable machine for generating attention and capturing revenue. At ELNR Media, we understand that $1M-$10M EBITDA founders do not have the time to micromanage isolated marketing tactics. That is exactly why our pricing packages are structured as complete, end-to-end media systems rather than fragmented services.
+          </p>
+          <p className="text-charcoal-500 dark:text-charcoal-300 mb-4">
+            If you are in the Launch Phase, our Foundation package is engineered to establish your digital footprint. We build your authority through consistent, high-retention organic content and deploy initial ad architectures that prove your conversion concept. It is the perfect starting point for businesses ready to dominate LinkedIn and Instagram without burning excess capital.
+          </p>
+          <p className="text-charcoal-500 dark:text-charcoal-300 mb-4">
+            As you move into the Scale Phase, the Growth package becomes our most popular engine. At this tier, we introduce aggressive Meta ad campaign management, advanced retargeting protocols, and frictionless lead qualification workflows. This tier is designed specifically for founders who need to pour gasoline on a proven fire, ensuring every dollar spent on paid acquisition yields measurable pipeline growth.
+          </p>
+          <p className="text-charcoal-500 dark:text-charcoal-300 mb-4">
+            Finally, for established leaders ready to saturate their market, the Authority package delivers a comprehensive domination strategy. We act as your elite, in-house media division—deploying full-scale video production, omni-channel advertising rollouts, and custom CRM integrations.
+          </p>
+          <p className="text-charcoal-500 dark:text-charcoal-300">
+            We don’t just run ads or post content; we build profitable media systems that scale with you. Choose the package that aligns with your current revenue goals, and let our team engineer your predictable growth engine.
+          </p>
+        </motion.div>
       </div>
     </section>
   )
