@@ -110,7 +110,7 @@ export default function Hero() {
             <Magnetic>
               <Link
                 to="/pricing"
-                className="group btn-pill btn-outline text-base px-10 py-4 bg-white/50 dark:bg-navy-800/50 dark:text-white backdrop-blur-md shadow-soft w-full sm:w-auto justify-center"
+                className="group btn-pill btn-outline text-base px-10 py-4 flex items-center justify-center whitespace-nowrap bg-white/50 dark:bg-navy-800/50 dark:text-white backdrop-blur-md shadow-soft w-full sm:w-auto"
               >
                 View Packages
               </Link>
