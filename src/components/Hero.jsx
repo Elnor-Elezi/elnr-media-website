@@ -88,7 +88,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 1.4 }}
           className="text-charcoal-500 text-base sm:text-lg lg:text-xl leading-relaxed mb-10 max-w-2xl"
         >
-          We build systems for brand growth and lead generation. Stop burning capital on isolated marketing tactics. Our interconnected content and ad architectures lower CAC and deliver qualified sales calls.
+          Most B2B companies have a traffic problem or a conversion problem. We solve both. We build media systems that get you more attention, run ads that capture it, and build funnels that turn it into revenue.
         </motion.p>
 
           {/* CTAs */}

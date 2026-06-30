@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 
 export default function SEO({ title, description, name = "ELNR Media", type = "website", image = "https://elnrmedia.com/og-image.jpg" }) {
   const siteTitle = title ? `${title} | ${name}` : name;
-  const siteDescription = description || "ELNR Media builds premium media systems that drive brand growth and lead generation. Scale your business with our content, advertising, and funnel strategies.";
+  const siteDescription = description || "We build premium media systems to help B2B brands scale. We get you more attention, run ads that capture it, and build funnels that turn it into revenue.";
   const location = useLocation();
   const canonicalUrl = `https://elnrmedia.com${location.pathname}`;
 
