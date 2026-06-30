@@ -11,8 +11,8 @@ export default function Home() {
   return (
     <PageTransition>
       <SEO 
-        title="B2B Growth, Paid Ads & Funnels"
-        description="Scale your B2B brand with ELNR Media. We build interconnected content, paid ads, and automated funnels to deliver qualified leads and lower your CAC."
+        title="Premium Media Systems for Brand Growth"
+        description="ELNR Media builds premium media systems that drive brand growth and lead generation. Scale your business with our content, advertising, and funnel strategies."
       />
       <Hero />
       <Marquee />
