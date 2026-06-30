@@ -77,7 +77,7 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
               className="font-display font-bold text-5xl sm:text-6xl lg:text-7xl xl:text-[80px] text-navy-900 dark:text-white tracking-tighter leading-[1.1] mb-6"
             >
-              Premium Media Systems for <br className="hidden sm:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-brand-600">Brand Growth & Lead Generation.</span>
+              Premium Media <br className="hidden sm:block" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-brand-600">Systems.</span>
             </motion.h1>
           </div>
 
@@ -88,7 +88,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 1.4 }}
           className="text-charcoal-500 text-base sm:text-lg lg:text-xl leading-relaxed mb-10 max-w-2xl"
         >
-          Most businesses struggle to scale because they treat their marketing as isolated tactics. At ELNR Media, we solve this by building comprehensive, premium media systems designed exclusively for brand growth and lead generation.
+          We build systems for brand growth and lead generation. Stop burning capital on isolated marketing tactics. Our interconnected content and ad architectures lower CAC and deliver qualified sales calls.
         </motion.p>
 
           {/* CTAs */}
