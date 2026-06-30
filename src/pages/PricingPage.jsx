@@ -8,7 +8,7 @@ import PageTransition from '../components/PageTransition'
 export default function PricingPage() {
   return (
     <PageTransition>
-      <div className="pt-20 lg:pt-24">
+      <div className="relative">
       <SEO 
         title="Pricing & Packages"
         description="Transparent pricing for our premium media systems. Choose the package that fits your growth stage."

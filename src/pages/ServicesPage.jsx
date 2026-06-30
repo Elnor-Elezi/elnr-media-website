@@ -9,7 +9,7 @@ import PageTransition from '../components/PageTransition'
 export default function ServicesPage() {
   return (
     <PageTransition>
-      <div className="pt-20 lg:pt-24">
+      <div className="relative">
       <SEO 
         title="Our Services"
         description="We provide comprehensive media production, paid advertising, and funnel optimization services to scale your brand with certainty."

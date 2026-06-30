@@ -35,13 +35,13 @@ export default function AboutPage() {
 
   return (
     <PageTransition>
-      <div className="pt-24 lg:pt-36">
+      <div className="relative">
       <SEO 
         title="About Us | ELNR Media"
         description="Learn about ELNR Media, our founder Elnor Elezi, and our mission to build premium media systems that scale."
       />
 
-      <section className="relative overflow-hidden pt-12 pb-24 lg:pt-20 lg:pb-36">
+      <section className="relative overflow-hidden pt-32 pb-24 lg:pt-40 lg:pb-36">
         {/* Background System */}
         <AnimatedAuroraBackground variant="about" />
         <ParallaxBackgroundAccents />
