@@ -30,7 +30,7 @@ export default function FloatingGlassShapes({ variant = 'hero' }) {
   // --- HERO VARIANT (WebGL Glass Shapes) ---
   if (variant === 'hero') {
     return (
-      <div className="absolute inset-0 w-[150vw] h-[150vh] -translate-x-1/4 -translate-y-1/4 flex items-center justify-center pointer-events-none opacity-90 lg:opacity-100">
+      <div className="absolute inset-0 w-full h-full flex items-center justify-center pointer-events-none opacity-90 lg:opacity-100">
         <Canvas camera={{ position: [0, 0, 15], fov: 45 }} style={{ pointerEvents: 'auto' }}>
           <ambientLight intensity={0.4} />
           <directionalLight position={[10, 10, 5]} intensity={2} color="#14b8a6" />
@@ -44,7 +44,7 @@ export default function FloatingGlassShapes({ variant = 'hero' }) {
               <Float speed={2} rotationIntensity={0.5} floatIntensity={1} position={[1, 0, 0]}>
                 <Icosahedron args={[3.5, 0]}>
                   <MeshTransmissionMaterial 
-                    backside samples={4} thickness={0.8} chromaticAberration={0.06} 
+                    backside={false} samples={3} resolution={256} thickness={0.8} chromaticAberration={0.06} 
                     anisotropy={0.1} distortion={0.1} clearcoat={1} color="#14b8a6" 
                     roughness={0.05} ior={1.5}
                   />
@@ -55,7 +55,7 @@ export default function FloatingGlassShapes({ variant = 'hero' }) {
               <Float speed={1.5} rotationIntensity={1.5} floatIntensity={2} position={[-3, -2, 2]}>
                 <Torus args={[1.5, 0.4, 16, 32]} rotation={[Math.PI / 4, 0, 0]}>
                   <MeshTransmissionMaterial 
-                    backside samples={4} thickness={0.5} chromaticAberration={0.08} 
+                    backside={false} resolution={128} thickness={0.5} chromaticAberration={0.08} 
                     clearcoat={1} color="#f97316" roughness={0.1} ior={1.2}
                   />
                 </Torus>
@@ -65,7 +65,7 @@ export default function FloatingGlassShapes({ variant = 'hero' }) {
               <Float speed={3} rotationIntensity={2} floatIntensity={2.5} position={[4, 3, -1]}>
                 <Icosahedron args={[1, 1]}>
                   <MeshTransmissionMaterial 
-                    backside samples={4} thickness={0.2} chromaticAberration={0.03} 
+                    backside={false} resolution={128} thickness={0.2} chromaticAberration={0.03} 
                     clearcoat={1} color="#ffffff" roughness={0} ior={1.1}
                   />
                 </Icosahedron>
@@ -74,8 +74,8 @@ export default function FloatingGlassShapes({ variant = 'hero' }) {
             </PresentationControls>
           </MouseTracker>
 
-          <EffectComposer>
-            <Bloom luminanceThreshold={0.5} mipmapBlur intensity={1.5} />
+          <EffectComposer disableNormalPass>
+            <Bloom luminanceThreshold={0.5} intensity={1.5} />
           </EffectComposer>
         </Canvas>
       </div>

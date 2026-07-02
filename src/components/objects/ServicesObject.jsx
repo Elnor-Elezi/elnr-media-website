@@ -18,7 +18,7 @@ export default function ServicesObject() {
           <Float speed={2} rotationIntensity={0.8} floatIntensity={1.2}>
             <Icosahedron args={[3, 0]} position={[0, 0, 0]}>
               <MeshTransmissionMaterial 
-                backside samples={4} thickness={0.5} chromaticAberration={0.05} 
+                backside={false} resolution={256} thickness={0.5} chromaticAberration={0.05} 
                 anisotropy={0.1} distortion={0} clearcoat={1} color="#0d9488" 
               />
             </Icosahedron>
@@ -27,15 +27,15 @@ export default function ServicesObject() {
           <Float speed={1.5} rotationIntensity={1} floatIntensity={2} position={[4, -3, -2]}>
             <Icosahedron args={[1.5, 0]}>
               <MeshTransmissionMaterial 
-                backside samples={4} thickness={0.5} chromaticAberration={0.05} 
+                backside={false} resolution={128} thickness={0.5} chromaticAberration={0.05} 
                 clearcoat={1} color="#14b8a6" 
               />
             </Icosahedron>
           </Float>
         </PresentationControls>
 
-        <EffectComposer>
-          <Bloom luminanceThreshold={0.5} mipmapBlur intensity={1.5} />
+        <EffectComposer disableNormalPass>
+          <Bloom luminanceThreshold={0.5} intensity={1.5} />
         </EffectComposer>
       </Canvas>
     </div>
