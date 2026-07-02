@@ -1,7 +1,6 @@
 import { useRef } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { Environment, Float, MeshTransmissionMaterial, Icosahedron, PresentationControls } from '@react-three/drei'
-import { EffectComposer, Bloom } from '@react-three/postprocessing'
 
 export default function ServicesObject() {
   return (
@@ -10,15 +9,14 @@ export default function ServicesObject() {
       
       <Canvas camera={{ position: [0, 0, 12], fov: 45 }} style={{ pointerEvents: 'auto' }}>
         <ambientLight intensity={0.5} />
-        <directionalLight position={[10, 10, 5]} intensity={2} color="#14b8a6" />
-        <directionalLight position={[-10, -10, -5]} intensity={1} color="#f97316" />
+        <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={1} />
         <Environment preset="city" />
         
         <PresentationControls rotation={[0, 0, 0]} polar={[-0.1, 0.2]} azimuth={[-0.2, 0.2]} config={{ mass: 2, tension: 400 }} snap={true}>
           <Float speed={2} rotationIntensity={0.8} floatIntensity={1.2}>
             <Icosahedron args={[3, 0]} position={[0, 0, 0]}>
               <MeshTransmissionMaterial 
-                backside={false} resolution={256} thickness={0.5} chromaticAberration={0.05} 
+                backside samples={4} thickness={0.5} chromaticAberration={0.05} 
                 anisotropy={0.1} distortion={0} clearcoat={1} color="#0d9488" 
               />
             </Icosahedron>
@@ -27,16 +25,12 @@ export default function ServicesObject() {
           <Float speed={1.5} rotationIntensity={1} floatIntensity={2} position={[4, -3, -2]}>
             <Icosahedron args={[1.5, 0]}>
               <MeshTransmissionMaterial 
-                backside={false} resolution={128} thickness={0.5} chromaticAberration={0.05} 
+                backside samples={4} thickness={0.5} chromaticAberration={0.05} 
                 clearcoat={1} color="#14b8a6" 
               />
             </Icosahedron>
           </Float>
         </PresentationControls>
-
-        <EffectComposer disableNormalPass>
-          <Bloom luminanceThreshold={0.5} intensity={1.5} />
-        </EffectComposer>
       </Canvas>
     </div>
   )
