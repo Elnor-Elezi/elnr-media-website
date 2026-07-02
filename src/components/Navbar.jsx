@@ -40,7 +40,14 @@ export default function Navbar() {
   }, [])
 
   useEffect(() => {
-    document.body.style.overflow = mobileOpen ? 'hidden' : ''
+    if (mobileOpen) {
+      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+      document.body.style.paddingRight = `${scrollbarWidth}px`;
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.paddingRight = '';
+      document.body.style.overflow = '';
+    }
   }, [mobileOpen])
 
   return (
@@ -61,8 +68,10 @@ export default function Navbar() {
       >
         <Link to="/" className="flex items-center pl-4 group" aria-label="ELNR Media home">
           <img 
-            src="/logo.png?v=3" 
+            src="/logo.webp?v=3" 
             alt="ELNR Logo" 
+            width="100"
+            height="40"
             className="h-10 w-auto object-contain transition-transform duration-500 group-hover:scale-[1.02]" 
           />
         </Link>
@@ -72,7 +81,7 @@ export default function Navbar() {
             <div key={link.href} className="relative group">
               <Link
                 to={link.href}
-                className={`relative px-5 py-2.5 rounded-full text-[13px] font-semibold transition-colors duration-300 flex items-center gap-1 ${
+                className={`relative px-5 py-2.5 rounded-full text-sm font-semibold transition-colors duration-300 flex items-center gap-1 ${
                   (activeSection.startsWith(link.href) && link.href !== '/') || (link.href === '/' && activeSection === '/')
                     ? 'text-navy-900 dark:text-white bg-black/[0.03] dark:bg-white/[0.05]' 
                     : 'text-charcoal-500 dark:text-charcoal-300 hover:text-navy-900 dark:hover:text-white hover:bg-black/[0.02] dark:hover:bg-white/[0.02]'
@@ -89,7 +98,7 @@ export default function Navbar() {
                       <Link
                         key={dropItem.href}
                         to={dropItem.href}
-                        className="px-4 py-2.5 rounded-xl text-[13px] font-medium text-charcoal-600 dark:text-charcoal-300 hover:bg-black/[0.03] dark:hover:bg-white/[0.05] hover:text-navy-900 dark:hover:text-white transition-colors whitespace-nowrap"
+                        className="px-4 py-2.5 rounded-xl text-sm font-medium text-charcoal-600 dark:text-charcoal-300 hover:bg-black/[0.03] dark:hover:bg-white/[0.05] hover:text-navy-900 dark:hover:text-white transition-colors whitespace-nowrap"
                       >
                         {dropItem.label}
                       </Link>
@@ -103,7 +112,7 @@ export default function Navbar() {
 
         {/* Desktop Right Actions */}
         <div className="flex items-center gap-2">
-          <button onClick={toggleDark} className="p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-colors text-navy-900 dark:text-white">
+          <button onClick={toggleDark} aria-label="Toggle dark mode" className="p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-colors text-navy-900 dark:text-white">
             {isDark ? <Sun size={18} /> : <Moon size={18} />}
           </button>
           <Magnetic>
@@ -124,19 +133,23 @@ export default function Navbar() {
       }`}>
         <Link to="/" className="flex items-center group" aria-label="ELNR Media home">
           <img 
-            src="/logo.png?v=3" 
+            src="/logo.webp?v=3" 
             alt="ELNR Logo" 
+            width="100"
+            height="40"
             className="h-10 w-auto object-contain" 
           />
         </Link>
         <div className="flex items-center gap-2">
-          <button onClick={toggleDark} className="p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-colors text-navy-900 dark:text-white">
+          <button onClick={toggleDark} aria-label="Toggle dark mode" className="p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-colors text-navy-900 dark:text-white">
             {isDark ? <Sun size={20} /> : <Moon size={20} />}
           </button>
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="p-2 text-navy-900 dark:text-white bg-black/[0.03] dark:bg-white/[0.05] rounded-full hover:bg-black/[0.06] dark:hover:bg-white/[0.1] transition-colors"
             aria-label="Toggle menu"
+            aria-expanded={mobileOpen}
+            aria-controls="mobile-menu"
           >
             {mobileOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
@@ -175,7 +188,7 @@ export default function Navbar() {
                           key={dropItem.href}
                           to={dropItem.href}
                           onClick={() => setMobileOpen(false)}
-                          className="px-4 py-2.5 text-[13px] font-medium rounded-xl text-charcoal-500 dark:text-charcoal-400 hover:bg-black/[0.02] dark:hover:bg-white/[0.02] hover:text-navy-900 dark:hover:text-white transition-colors"
+                          className="px-4 py-2.5 text-sm font-medium rounded-xl text-charcoal-500 dark:text-charcoal-400 hover:bg-black/[0.02] dark:hover:bg-white/[0.02] hover:text-navy-900 dark:hover:text-white transition-colors"
                         >
                           {dropItem.label}
                         </Link>

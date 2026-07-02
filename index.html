@@ -28,8 +28,8 @@
     <meta name="twitter:image" content="https://elnrmedia.com/og-image.jpg" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/logo.png" />
-    <link rel="apple-touch-icon" href="/logo.png" />
+    <link rel="icon" type="image/webp" href="/logo.webp" />
+    <link rel="apple-touch-icon" href="/logo.webp" />
 
     <!-- Fonts: Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -50,7 +50,7 @@
         "@type": "Organization",
         "name": "ELNR Media",
         "url": "https://elnrmedia.com",
-        "logo": "https://elnrmedia.com/favicon.svg",
+        "logo": "https://elnrmedia.com/logo.webp",
         "description": "Proven media systems built to grow your brand with strategic content, advertising, funnels, and lead generation.",
         "contactPoint": {
           "@type": "ContactPoint",
@@ -61,6 +61,17 @@
         "serviceType": ["Content Marketing", "Paid Advertising", "Funnel Strategy", "Lead Generation", "SEO Content"]
       }
     ]
+    </script>
+    
+    <!-- Prevent FOUC for Dark Mode -->
+    <script>
+      try {
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      } catch (_) {}
     </script>
   </head>
   <body>

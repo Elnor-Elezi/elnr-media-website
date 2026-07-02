@@ -35,6 +35,7 @@ export default function SEO({ title, description, name = "ELNR Media", type = "w
           "@type": "LocalBusiness",
           "name": name,
           "image": image,
+          "logo": "https://elnrmedia.com/logo.webp",
           "url": canonicalUrl,
           "description": siteDescription,
           "address": {

@@ -19,6 +19,8 @@ body {
   font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
   @apply bg-white dark:bg-[#0A101C] text-[#333333] dark:text-white transition-colors duration-500;
   overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #14b8a6 #f9fafb;
 }
 
 /* === Scrollbar === */
