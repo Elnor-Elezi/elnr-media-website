@@ -1,6 +1,7 @@
 import { useRef } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { Environment, Float, MeshTransmissionMaterial, Icosahedron, PresentationControls } from '@react-three/drei'
+import { EffectComposer, Bloom } from '@react-three/postprocessing'
 
 export default function ServicesObject() {
   return (
@@ -9,7 +10,8 @@ export default function ServicesObject() {
       
       <Canvas camera={{ position: [0, 0, 12], fov: 45 }} style={{ pointerEvents: 'auto' }}>
         <ambientLight intensity={0.5} />
-        <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={1} />
+        <directionalLight position={[10, 10, 5]} intensity={2} color="#14b8a6" />
+        <directionalLight position={[-10, -10, -5]} intensity={1} color="#f97316" />
         <Environment preset="city" />
         
         <PresentationControls rotation={[0, 0, 0]} polar={[-0.1, 0.2]} azimuth={[-0.2, 0.2]} config={{ mass: 2, tension: 400 }} snap={true}>
@@ -31,6 +33,10 @@ export default function ServicesObject() {
             </Icosahedron>
           </Float>
         </PresentationControls>
+
+        <EffectComposer>
+          <Bloom luminanceThreshold={0.5} mipmapBlur intensity={1.5} />
+        </EffectComposer>
       </Canvas>
     </div>
   )

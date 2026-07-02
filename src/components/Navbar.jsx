@@ -28,6 +28,7 @@ const navLinks = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [hoveredLink, setHoveredLink] = useState(null)
   const { pathname, hash } = useLocation()
   const { isDark, toggleDark } = useTheme()
   
@@ -76,15 +77,26 @@ export default function Navbar() {
           />
         </Link>
 
-        <div className="flex items-center gap-1">
+        <div className="flex items-center gap-1" onMouseLeave={() => setHoveredLink(null)}>
           {navLinks.map((link) => (
-            <div key={link.href} className="relative group">
+            <div 
+              key={link.href} 
+              className="relative group"
+              onMouseEnter={() => setHoveredLink(link.href)}
+            >
+              {hoveredLink === link.href && (
+                <motion.div
+                  layoutId="nav-hover-pill"
+                  className="absolute inset-0 bg-black/[0.04] dark:bg-white/[0.06] rounded-full z-0"
+                  transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                />
+              )}
               <Link
                 to={link.href}
-                className={`relative px-5 py-2.5 rounded-full text-sm font-semibold transition-colors duration-300 flex items-center gap-1 ${
+                className={`relative z-10 px-5 py-2.5 rounded-full text-sm font-semibold transition-colors duration-300 flex items-center gap-1 ${
                   (activeSection.startsWith(link.href) && link.href !== '/') || (link.href === '/' && activeSection === '/')
-                    ? 'text-navy-900 dark:text-white bg-black/[0.03] dark:bg-white/[0.05]' 
-                    : 'text-charcoal-500 dark:text-charcoal-300 hover:text-navy-900 dark:hover:text-white hover:bg-black/[0.02] dark:hover:bg-white/[0.02]'
+                    ? 'text-navy-900 dark:text-white bg-black/[0.02] dark:bg-white/[0.04]' 
+                    : 'text-charcoal-500 dark:text-charcoal-300 hover:text-navy-900 dark:hover:text-white'
                 }`}
               >
                 {link.label}
