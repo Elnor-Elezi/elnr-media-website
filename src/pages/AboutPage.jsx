@@ -100,7 +100,7 @@ export default function AboutPage() {
             >
               <h2 className="font-display text-4xl sm:text-5xl font-bold text-navy-900 dark:text-white tracking-tight mb-6">
                 The New Standard of <br />
-                <span className="text-brand-500">Growth Partners.</span>
+                <span className="text-brand-500">B2B Growth Agencies.</span>
               </h2>
               <div className="space-y-6 text-charcoal-500 dark:text-charcoal-300 text-lg leading-relaxed">
                 <p>
