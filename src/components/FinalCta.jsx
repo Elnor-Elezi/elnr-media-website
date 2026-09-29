@@ -87,8 +87,9 @@ export default function FinalCta({ showForm = false }) {
             alt="Successful business growth results from working with ELNR Media"
             width="1920"
             height="1080"
-            className="absolute inset-0 w-full h-full object-cover"
+            decoding="async"
             loading="lazy"
+            className="absolute inset-0 w-full h-full object-cover"
           />
 
           {/* Overlays */}

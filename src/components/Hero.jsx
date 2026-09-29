@@ -61,15 +61,15 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="mb-8"
+            className="mb-6"
           >
-            <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-[11px] font-bold tracking-[0.2em] uppercase bg-white/80 dark:bg-navy-900/80 backdrop-blur-md border border-charcoal-100 dark:border-white/10 shadow-sm text-navy-900 dark:text-white">
+            <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-[11px] font-bold tracking-[0.2em] uppercase bg-white/90 dark:bg-navy-900/90 backdrop-blur-md border border-brand-500/20 shadow-sm text-navy-900 dark:text-white">
               <span className="w-2 h-2 bg-brand-500 rounded-full animate-pulse" />
-              The Growth Engine
+              Complete B2B Growth Engine • Zero Long-Term Lock-Ins
             </span>
           </motion.div>
 
-          {/* Headline */}
+          {/* Headline (AIDA: Attention) */}
           <div className="mb-6 w-full">
             <motion.h1 
               initial={{ opacity: 0, y: 40 }}
@@ -77,44 +77,62 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
               className="font-display font-bold text-4xl sm:text-5xl lg:text-6xl xl:text-[64px] text-navy-900 dark:text-white tracking-tight leading-[1.15] mb-6"
             >
-              We build proven media systems <br className="hidden xl:block" /> to help B2B brands <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-brand-600">scale.</span>
+              Turn B2B Attention Into <br className="hidden xl:block" /> Predictable <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 via-brand-500 to-brand-600">Revenue.</span>
             </motion.h1>
           </div>
 
-          {/* Subtitle */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1.4 }}
-          className="text-charcoal-500 text-base sm:text-lg lg:text-xl leading-relaxed mb-10 max-w-2xl"
-        >
-          Most B2B companies have a traffic problem or a conversion problem. We solve both. We build media systems that get you more attention, run ads that capture it, and build funnels that turn it into revenue.
-        </motion.p>
+          {/* Subtitle (PAS: Problem -> Agitate -> Solution) */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="text-charcoal-600 dark:text-charcoal-300 text-base sm:text-lg lg:text-xl leading-relaxed mb-8 max-w-2xl font-normal"
+          >
+            Stop burning budget on unoptimized ads and random social posts. We build complete, automated media and lead engines that capture targeted buyer attention, run high-converting ad architectures, and turn prospects into qualified sales calls.
+          </motion.p>
 
-          {/* CTAs */}
+          {/* CTAs with Risk Reversal Microcopy */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.9, ease: [0.16, 1, 0.3, 1] }}
-            className="flex flex-col sm:flex-row items-center justify-start gap-4 w-full"
+            transition={{ duration: 0.8, delay: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            className="flex flex-col sm:flex-row items-stretch sm:items-center justify-start gap-4 w-full mb-6"
           >
             <Magnetic>
               <Link
                 to="/contact"
-                className="group btn-pill btn-primary dark:bg-white dark:text-navy-900 text-base px-10 py-4 flex items-center gap-3 shadow-glow w-full sm:w-auto justify-center"
+                className="group btn-pill btn-primary dark:bg-white dark:text-navy-900 text-base px-9 py-4 flex items-center gap-3 shadow-glow w-full sm:w-auto justify-center font-bold"
               >
-                Start your growth
+                Claim Your Free Growth Audit
                 <ArrowRight size={18} aria-hidden="true" className="group-hover:translate-x-1 transition-transform duration-300" />
               </Link>
             </Magnetic>
             <Magnetic>
               <Link
                 to="/pricing"
-                className="group btn-pill btn-outline text-base px-10 py-4 flex items-center justify-center whitespace-nowrap bg-white/50 dark:bg-navy-800/50 dark:text-white backdrop-blur-md shadow-soft w-full sm:w-auto"
+                className="group btn-pill btn-outline text-base px-9 py-4 flex items-center justify-center whitespace-nowrap bg-white/50 dark:bg-navy-800/50 dark:text-white backdrop-blur-md shadow-soft w-full sm:w-auto font-medium"
               >
-                View Packages
+                View Transparent Packages
               </Link>
             </Magnetic>
+          </motion.div>
+
+          {/* Conversion Friction Reduction Microcopy */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.9 }}
+            className="flex items-center gap-6 text-xs text-charcoal-500 dark:text-charcoal-400 font-medium"
+          >
+            <span className="flex items-center gap-1.5">
+              <span className="text-brand-500 font-bold">✓</span> 15-min strategy call
+            </span>
+            <span className="flex items-center gap-1.5">
+              <span className="text-brand-500 font-bold">✓</span> No pitch deck pressure
+            </span>
+            <span className="flex items-center gap-1.5">
+              <span className="text-brand-500 font-bold">✓</span> 100% custom roadmap
+            </span>
           </motion.div>
         </div>
 

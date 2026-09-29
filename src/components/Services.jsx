@@ -106,8 +106,9 @@ function FeaturedService({ service, index }) {
             alt={`${service.title}: ${service.desc.slice(0, 80)}`}
             width="800"
             height="600"
-            className="w-full h-[400px] sm:h-[500px] object-cover transition-transform duration-1000 group-hover:scale-105"
+            decoding="async"
             loading="lazy"
+            className="w-full h-[400px] sm:h-[500px] object-cover transition-transform duration-1000 group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-navy-900/40 via-transparent to-transparent" />
           <div className="absolute inset-0 border border-white/20 rounded-[40px]" />

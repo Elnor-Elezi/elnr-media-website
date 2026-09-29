@@ -36,8 +36,11 @@ function TiltCard({ item, index }) {
       <img
         src={item.img}
         alt={`${item.label}: ${item.desc}`}
-        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+        width="800"
+        height="600"
+        decoding="async"
         loading="lazy"
+        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
       />
 
       {/* Overlays */}
