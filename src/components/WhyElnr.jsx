@@ -4,133 +4,101 @@ import {
   Zap, BarChart3, Palette, CalendarCheck,
   FileBarChart, Award
 } from 'lucide-react'
-import { useSectionInView, fadeInUp, stagger, IMAGES } from '../hooks'
+import { IMAGES } from '../hooks'
 
 const reasons = [
-  { icon: Zap, title: 'Complete Growth Systems', desc: 'No random content. Every piece works as part of an integrated system designed to compound.' },
-  { icon: BarChart3, title: 'Strategy Before Execution', desc: 'Every campaign starts with deep research and a tailored strategy before a single asset is created.' },
-  { icon: Palette, title: 'Strong Visual Branding', desc: 'Premium design and consistent visual identity across every touchpoint and platform.' },
-  { icon: CalendarCheck, title: 'Consistent Monthly Delivery', desc: 'Reliable, on-time delivery every month. No gaps, no guesswork, just steady momentum.' },
-  { icon: FileBarChart, title: 'Clear Reporting', desc: "Transparent performance reporting so you always know what's working and where to focus next." },
-  { icon: Award, title: 'Built for Long-Term Authority', desc: 'Every system creates lasting brand authority and sustainable lead generation, not quick fixes.' },
+  { icon: Zap, title: 'Complete Growth Systems', desc: 'No random content. Every piece works as part of an integrated system designed to compound revenue mathematically over time.' },
+  { icon: BarChart3, title: 'Strategy Before Execution', desc: 'Every campaign starts with deep research and a tailored strategy before a single asset is created. We audit to win.' },
+  { icon: Palette, title: 'Strong Visual Branding', desc: 'Premium design and consistent visual identity across every touchpoint. You look like a market leader from day one.' },
+  { icon: CalendarCheck, title: 'Consistent Monthly Delivery', desc: 'Reliable, on-time delivery every month. No gaps, no guesswork, just steady momentum and flawless execution.' },
+  { icon: FileBarChart, title: 'Clear Reporting', desc: "Transparent performance reporting so you always know what's working, where your budget goes, and where to focus next." },
+  { icon: Award, title: 'Built for Long-Term Authority', desc: 'Every system creates lasting brand authority and sustainable lead generation, not quick fixes that die off in a week.' },
 ]
 
 export default function WhyElnr() {
-  const { ref, isInView } = useSectionInView(0.08)
-  const sectionRef = useRef(null)
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ['start end', 'end start'],
-  })
-  const imgY = useTransform(scrollYProgress, [0, 1], [50, -50])
-
+  const containerRef = useRef(null)
+  
   return (
-    <section ref={sectionRef} className="relative py-24 lg:py-36 overflow-hidden" aria-label="Why choose ELNR Media">
+    <section ref={containerRef} className="relative py-24 lg:py-48 bg-[#050505] overflow-hidden" aria-label="Why choose ELNR Media">
+      {/* Background glow for dark mode */}
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-500/10 rounded-full blur-[120px] pointer-events-none" />
+      
       <div className="max-container section-padding">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
-          {/* Left: Image */}
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="relative"
-          >
-            <div className="relative rounded-2xl overflow-hidden shadow-premium">
-              <motion.img
-                style={{ y: imgY }}
-                src={IMAGES.team}
-                alt="ELNR Media team collaborating on client growth strategies in a modern workspace"
-                className="w-full h-[400px] lg:h-[550px] object-cover"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy-900/40 via-transparent to-transparent" />
-              <div className="absolute inset-0 border border-charcoal-200/20 rounded-2xl" />
+        <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start relative">
+          
+          {/* Left: Sticky Context & Image */}
+          <div className="w-full lg:w-1/2 lg:sticky lg:top-32 lg:h-[calc(100vh-160px)] flex flex-col justify-between z-10">
+            <div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                <span className="inline-flex items-center px-4 py-1.5 rounded-full text-[10px] font-bold tracking-[0.3em] uppercase bg-white/5 text-brand-400 border border-white/10 mb-6 backdrop-blur-md">
+                  Why ELNR Media
+                </span>
+                <h2 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-white tracking-tighter leading-[1.1] mb-8">
+                  Built Different.<br/>
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-brand-600">Built to Last.</span>
+                </h2>
+                <div className="space-y-6 text-charcoal-300 text-lg leading-relaxed max-w-lg">
+                  <p>
+                    Most agencies focus on vanity metrics. We focus on one thing: scaling your revenue efficiently.
+                  </p>
+                  <p>
+                    We build complete, strategic systems that create authority, generate high-intent leads, and convert them consistently. Our infrastructure is built for longevity.
+                  </p>
+                </div>
+              </motion.div>
             </div>
 
-            {/* Floating stat card */}
+            {/* Pinned Image below text */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
+              initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.5, duration: 0.5 }}
-              className="absolute -bottom-6 -right-4 lg:right-6 bg-white dark:bg-navy-900 rounded-xl p-4 shadow-card-hover border border-charcoal-100 dark:border-white/10"
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="mt-12 relative w-full h-[300px] rounded-3xl overflow-hidden shadow-2xl border border-white/10 hidden lg:block"
             >
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg bg-brand-50 dark:bg-brand-500/10 flex items-center justify-center">
-                  <Award size={20} className="text-brand-500" />
-                </div>
-                <div>
-                  <div className="text-lg font-bold text-navy-700 dark:text-white">98%</div>
-                  <div className="text-[10px] text-charcoal-500 dark:text-charcoal-300">Client Retention Rate</div>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Accent shapes */}
-            <div className="absolute -top-4 -left-4 w-20 h-20 rounded-2xl border border-brand-200/40 -z-10" />
-          </motion.div>
-
-          {/* Right: Content */}
-          <div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="mb-10"
-            >
-              <span className="inline-flex items-center px-4 py-1.5 rounded-full text-[10px] font-semibold tracking-[0.25em] uppercase bg-brand-50 dark:bg-brand-500/10 text-brand-600 dark:text-brand-400 border border-brand-200/60 dark:border-brand-500/20 mb-5">
-                Why ELNR Media
-              </span>
-              <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-700 dark:text-white tracking-tight mb-5">
-                Built Different.{' '}
-                <span className="text-gradient">Built to Last.</span>
-              </h2>
-              <motion.div
-                variants={stagger}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.3 }}
-                className="space-y-6 text-charcoal-500 dark:text-charcoal-300 text-lg leading-relaxed relative z-10"
-              >
-                <motion.p variants={fadeInUp}>
-                  Most agencies focus on vanity metrics. We focus on one thing: scaling your revenue efficiently.
-                </motion.p>
-                <motion.p variants={fadeInUp}>
-                  We build complete, strategic systems that create authority, generate high-intent leads, and convert them consistently.
-                </motion.p>
-                <motion.p variants={fadeInUp}>
-                  Our infrastructure is built for longevity. We set up data tracking, optimize your funnels, and ensure that every dollar you put in compounds over time.
-                </motion.p>
-              </motion.div>
-            </motion.div>
-
-            {/* Bento-style reason cards */}
-            <motion.div
-              ref={ref}
-              initial="hidden"
-              animate={isInView ? 'visible' : 'hidden'}
-              variants={stagger}
-              className="grid grid-cols-1 sm:grid-cols-2 gap-3"
-            >
-              {reasons.map((reason) => (
-                <motion.div
-                  key={reason.title}
-                  variants={fadeInUp}
-                  className="group flex gap-3 p-4 rounded-xl bg-white dark:bg-navy-900/50 border border-charcoal-200/40 dark:border-white/5 shadow-soft hover:shadow-card hover:-translate-y-0.5 transition-all duration-500 cursor-default"
-                >
-                  <div className="w-9 h-9 rounded-lg bg-charcoal-50 dark:bg-white/5 border border-charcoal-200/60 dark:border-white/10 flex items-center justify-center flex-shrink-0 group-hover:bg-brand-50 dark:group-hover:bg-brand-500/20 group-hover:border-brand-200/60 transition-all duration-500">
-                    <reason.icon size={16} className="text-charcoal-400 dark:text-charcoal-500 group-hover:text-brand-500 transition-colors duration-500" />
-                  </div>
-                  <div>
-                    <h4 className="font-display font-semibold text-navy-700 dark:text-white text-sm mb-0.5">{reason.title}</h4>
-                    <p className="text-[11px] text-charcoal-500 dark:text-charcoal-400 leading-relaxed">{reason.desc}</p>
-                  </div>
-                </motion.div>
-              ))}
+              <img
+                src={IMAGES.team}
+                alt="ELNR Media team collaborating"
+                className="w-full h-full object-cover opacity-60 grayscale hover:grayscale-0 transition-all duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#050505] to-transparent" />
             </motion.div>
           </div>
+
+          {/* Right: Scrolling Bento Cards */}
+          <div className="w-full lg:w-1/2 flex flex-col gap-6 lg:gap-8 lg:pt-[40vh] pb-[20vh] z-20">
+            {reasons.map((reason, index) => (
+              <motion.div
+                key={reason.title}
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.7, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
+                className="group relative p-8 lg:p-10 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-xl overflow-hidden hover:bg-white/10 transition-colors duration-500"
+              >
+                {/* Hover gradient flare */}
+                <div className="absolute -inset-20 bg-gradient-to-r from-brand-500/0 via-brand-500/10 to-brand-500/0 opacity-0 group-hover:opacity-100 group-hover:translate-x-full transition-all duration-1000 ease-out skew-x-12" />
+                
+                <div className="relative z-10">
+                  <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-8 group-hover:scale-110 group-hover:border-brand-500/30 transition-all duration-500 shadow-soft">
+                    <reason.icon size={28} className="text-white group-hover:text-brand-400 transition-colors duration-500" />
+                  </div>
+                  <h3 className="font-display text-2xl font-bold text-white mb-4 tracking-tight">
+                    {reason.title}
+                  </h3>
+                  <p className="text-charcoal-300 text-lg leading-relaxed">
+                    {reason.desc}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+          
         </div>
       </div>
     </section>
