@@ -137,7 +137,7 @@ export default function Hero() {
         </div>
 
         {/* Right column: Movement Object */}
-        <div className="absolute right-[-40%] lg:right-[-35%] xl:right-[-25%] top-[10%] lg:top-[5%] w-[400px] h-[400px] sm:w-[600px] sm:h-[600px] lg:w-[800px] lg:h-[800px] xl:w-[1000px] xl:h-[1000px] flex justify-end opacity-60 lg:opacity-100 pointer-events-auto z-10">
+        <div className="absolute right-[-50%] lg:right-[-50%] xl:right-[-40%] top-[10%] lg:top-[5%] w-[400px] h-[400px] sm:w-[600px] sm:h-[600px] lg:w-[800px] lg:h-[800px] xl:w-[1000px] xl:h-[1000px] flex justify-end opacity-60 lg:opacity-100 pointer-events-auto z-10">
           <Reactive3DShapes />
         </div>
 
