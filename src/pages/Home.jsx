@@ -2,6 +2,8 @@ import Hero from '../components/Hero'
 import Marquee from '../components/Marquee'
 import TrustBar from '../components/TrustBar'
 import Results from '../components/Results'
+import CaseStudyShowcase from '../components/CaseStudyShowcase'
+import RoiCalculator from '../components/RoiCalculator'
 import FinalCta from '../components/FinalCta'
 import SEO from '../components/SEO'
 import SeoCopy from '../components/SeoCopy'
@@ -34,6 +36,8 @@ export default function Home() {
       <Marquee />
       <TrustBar />
       <Results />
+      <CaseStudyShowcase />
+      <RoiCalculator />
       <SeoCopy />
       <div className="section-connector" />
       <FinalCta />
