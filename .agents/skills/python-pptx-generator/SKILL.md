@@ -8,7 +8,7 @@ source_type: self
 date_added: "2026-04-06"
 author: spideyashith
 tags: [python, powerpoint, python-pptx, presentations, slide-decks]
-tools: [claude, cursor, gemini, codex]
+tools: [Antigravity, cursor, gemini, codex]
 ---
 
 # Python PPTX Generator

@@ -9,7 +9,7 @@ source_type: community
 date_added: "2026-04-08"
 author: monte-carlo-data
 tags: [data-observability, ingestion, monte-carlo, pycarlo, metadata]
-tools: [claude, cursor, codex]
+tools: [Antigravity, cursor, codex]
 ---
 
 # Monte Carlo Push Ingestion
@@ -133,7 +133,7 @@ All generated scripts MUST use these exact variable names. Do NOT invent alterna
 
 ## What this skill can build for you
 
-Tell Claude your warehouse or data platform and Monte Carlo resource UUID and this skill will
+Tell Antigravity your warehouse or data platform and Monte Carlo resource UUID and this skill will
 generate a ready-to-run Python script that:
 - Connects to your warehouse using the idiomatic driver for that platform
 - Discovers databases, schemas, and tables
@@ -142,7 +142,7 @@ generate a ready-to-run Python script that:
 - Pushes to Monte Carlo and saves an output manifest with the `invocation_id` for tracing
 
 Templates are available for common warehouses (Snowflake, BigQuery, BigQuery Iceberg,
-Databricks, Redshift, Hive). For any other platform, Claude will derive the appropriate
+Databricks, Redshift, Hive). For any other platform, Antigravity will derive the appropriate
 collection queries from the warehouse's system catalog or metadata APIs and generate an
 equivalent script.
 
@@ -202,7 +202,7 @@ all downstream systems.
 
 ## Step 1 — Generate your collection scripts
 
-Ask Claude to build the script for your warehouse:
+Ask Antigravity to build the script for your warehouse:
 
 > "Build me a metadata collection script for Snowflake. My MC resource UUID is `abc-123`."
 

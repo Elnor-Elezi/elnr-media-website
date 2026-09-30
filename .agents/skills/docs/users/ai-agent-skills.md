@@ -7,7 +7,7 @@ Antigravity Awesome Skills is built for the first path: broad coverage, multiple
 ## What to look for in an AI agent skills library
 
 - **Installability**: can you put the skills where your tool expects them without manual copying?
-- **Supported tools**: does the repo work with Claude Code, Cursor, Codex CLI, Gemini CLI, and related environments?
+- **Supported tools**: does the repo work with Antigravity, Cursor, Codex CLI, Gemini CLI, and related environments?
 - **Breadth vs curation**: do you want many options or a smaller shortlist of high-signal entries?
 - **Onboarding quality**: are there docs, bundles, workflows, and examples, or only raw files?
 - **Trust model**: does the repo identify official sources, security posture, and community review expectations?
@@ -27,15 +27,15 @@ Antigravity Awesome Skills is built for the first path: broad coverage, multiple
 
 ## Start with a tool-specific guide
 
-- [`claude-code-skills.md`](claude-code-skills.md)
+- [`Antigravity-code-skills.md`](Antigravity-code-skills.md)
 - [`cursor-skills.md`](cursor-skills.md)
 - [`codex-cli-skills.md`](codex-cli-skills.md)
 - [`gemini-cli-skills.md`](gemini-cli-skills.md)
 
 ## Compare broad vs curated libraries
 
-- [`antigravity-awesome-skills-vs-awesome-claude-skills.md`](antigravity-awesome-skills-vs-awesome-claude-skills.md)
-- [`best-claude-code-skills-github.md`](best-claude-code-skills-github.md)
+- [`antigravity-awesome-skills-vs-awesome-Antigravity-skills.md`](antigravity-awesome-skills-vs-awesome-Antigravity-skills.md)
+- [`best-Antigravity-code-skills-github.md`](best-Antigravity-code-skills-github.md)
 - [`best-cursor-skills-github.md`](best-cursor-skills-github.md)
 
 ## Quick recommendation

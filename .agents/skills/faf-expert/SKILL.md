@@ -9,7 +9,7 @@ source_type: community
 date_added: "2026-04-07"
 author: wolfejam
 tags: [faf, ai-context, project-management, mcp, iana]
-tools: [claude, cursor, gemini, windsurf]
+tools: [Antigravity, cursor, gemini, windsurf]
 ---
 
 # FAF Expert - Advanced AI Context Architecture
@@ -26,7 +26,7 @@ Use FAF Expert when you need:
 |----------|---------------------------|
 | **Complex project setup** | Expert configuration of .faf files and MCP servers |
 | **Championship scoring** | Achieve 85%+ AI-readiness scores for production projects |
-| **Multi-AI workflows** | Universal context that works across Claude, Cursor, Gemini, Windsurf |
+| **Multi-AI workflows** | Universal context that works across Antigravity, Cursor, Gemini, Windsurf |
 | **Legacy codebase revival** | Transform archaeology into AI-readable project DNA |
 | **Team collaboration** | Standardized context format for consistent AI assistance |
 | **Enterprise deployment** | Professional MCP server configuration and management |
@@ -76,13 +76,13 @@ stack:
 - **Bronze Tier (70%+)**: Solid foundation for AI assistance
 
 ### 🔧 MCP Server Configuration
-Expert setup of claude-faf-mcp with 33 tools:
+Expert setup of Antigravity-faf-mcp with 33 tools:
 ```json
 {
   "mcpServers": {
     "faf": {
       "command": "npx",
-      "args": ["-y", "claude-faf-mcp@latest"]
+      "args": ["-y", "Antigravity-faf-mcp@latest"]
     }
   }
 }
@@ -90,7 +90,7 @@ Expert setup of claude-faf-mcp with 33 tools:
 
 ### 🔄 Bi-Directional Sync
 Keep context synchronized across platforms:
-- `.faf` ↔ `CLAUDE.md` 
+- `.faf` ↔ `AGENTS.md` 
 - `.faf` ↔ `.cursorrules`
 - `.faf` ↔ `GEMINI.md`
 - `.faf` ↔ `AGENTS.md`
@@ -132,7 +132,7 @@ faf bi-sync --target all
 faf validate --strict
 
 # Enhanced AI optimization
-faf enhance --model claude --focus completeness
+faf enhance --model Antigravity --focus completeness
 ```
 
 ## Success Metrics
@@ -147,14 +147,14 @@ faf enhance --model claude --focus completeness
 ## Platform Compatibility
 
 ### Supported AI Tools
-- ✅ **Claude Code** - Native MCP integration
+- ✅ **Antigravity** - Native MCP integration
 - ✅ **Cursor** - .cursorrules sync
 - ✅ **Gemini CLI** - GEMINI.md sync  
 - ✅ **Windsurf** - .windsurfrules support
 - ✅ **Universal** - Works with any AI that reads YAML
 
 ### MCP Servers Available
-- `claude-faf-mcp` - 33 tools, 391 tests
+- `Antigravity-faf-mcp` - 33 tools, 391 tests
 - `grok-faf-mcp` - xAI/Grok optimized
 - `rust-faf-mcp` - Native performance (4.3MB binary)
 - `gemini-faf-mcp` - Google Gemini integration

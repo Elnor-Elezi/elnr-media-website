@@ -9,13 +9,13 @@ source_type: community
 date_added: "2026-06-12"
 author: anthony-chaudhary
 tags: [verification, git, ai-agents, trust, quality-gate]
-tools: [claude, cursor, gemini]
+tools: [Antigravity, cursor, gemini]
 license: "MIT"
 license_source: "https://github.com/anthony-chaudhary/dos-kernel/blob/master/LICENSE"
 plugin:
   targets:
     codex: blocked
-    claude: blocked
+    Antigravity: blocked
   setup:
     type: manual
     summary: "Setup installs and executes an external PyPI CLI; keep out of plugin-safe bundles."

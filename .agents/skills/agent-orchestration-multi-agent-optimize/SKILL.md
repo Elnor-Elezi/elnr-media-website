@@ -3,7 +3,6 @@ name: agent-orchestration-multi-agent-optimize
 description: "Optimize multi-agent systems with coordinated profiling, workload distribution, and cost-aware orchestration. Use when improving agent performance, throughput, or reliability."
 risk: unknown
 source: community
-date_added: "2026-02-27"
 ---
 
 # Multi-Agent Optimization Toolkit
@@ -180,8 +179,8 @@ class CostOptimizer:
         self.token_usage = 0
         self.model_costs = {
             'gpt-5': 0.03,
-            'claude-4-sonnet': 0.015,
-            'claude-4-haiku': 0.0025
+            'Antigravity-4-sonnet': 0.015,
+            'Antigravity-4-haiku': 0.0025
         }
 
     def select_optimal_model(self, complexity):
@@ -240,8 +239,3 @@ class CostOptimizer:
 - Implement gradual, reversible changes
 
 Target Optimization: $ARGUMENTS
-
-## Limitations
-- Use this skill only when the task clearly matches the scope described above.
-- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
-- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.

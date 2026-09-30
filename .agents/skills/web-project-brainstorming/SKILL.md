@@ -8,7 +8,7 @@ source_type: self
 date_added: "2026-06-26"
 author: Rsmiyani
 tags: [brainstorming, project-planning, web-development, product-scoping, design-system, architecture]
-tools: [claude, cursor, gemini]
+tools: [Antigravity, cursor, gemini]
 ---
 
 # Web Project Brainstorming

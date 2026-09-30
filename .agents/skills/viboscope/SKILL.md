@@ -7,7 +7,7 @@ source: community
 date_added: "2026-03-29"
 author: ivanschmidt
 tags: [matching, psychology, compatibility, networking, collaboration]
-tools: [claude, cursor, codex, gemini, windsurf]
+tools: [Antigravity, cursor, codex, gemini, windsurf]
 ---
 
 # Viboscope

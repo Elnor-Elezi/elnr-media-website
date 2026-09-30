@@ -11,7 +11,7 @@ author: Genefold AI
 license: Apache-2.0
 license_source: "https://github.com/Genefold/arrowspace-skills/blob/main/LICENSE"
 tags: [vector-search, spectral-analysis, graph-laplacian, embeddings, lambda-tau]
-tools: [claude, cursor, codex, gemini, opencode]
+tools: [Antigravity, cursor, codex, gemini, opencode]
 ---
 
 # ArrowSpace

@@ -8,7 +8,7 @@ source_type: self
 date_added: "2026-04-17"
 author: justmiroslav
 tags: [business-model, osterwalder, strategy, bmc]
-tools: [claude, cursor, gemini]
+tools: [Antigravity, cursor, gemini]
 ---
 
 # Osterwalder Business Model Canvas Architect

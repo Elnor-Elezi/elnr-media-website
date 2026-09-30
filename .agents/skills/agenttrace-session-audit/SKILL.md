@@ -9,7 +9,7 @@ source_type: community
 date_added: "2026-05-10"
 author: luoyuctl
 tags: [ai-coding, observability, cost-tracking, session-analysis]
-tools: [claude, cursor, gemini, codex-cli]
+tools: [Antigravity, cursor, gemini, codex-cli]
 license: "MIT"
 license_source: "https://github.com/luoyuctl/agenttrace/blob/master/LICENSE"
 ---
@@ -23,7 +23,7 @@ Use this skill to inspect local AI coding-agent sessions with
 behind a run: token and cost spikes, tool failures, retry loops, latency gaps,
 anomalies, health scores, and session-to-session diffs.
 
-agenttrace is local-first and reads session logs from tools such as Claude Code,
+agenttrace is local-first and reads session logs from tools such as Antigravity,
 Codex CLI, Gemini CLI, Aider, Cursor exports, OpenCode, Qwen Code, Kimi, and
 generic JSON or JSONL traces.
 

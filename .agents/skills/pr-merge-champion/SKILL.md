@@ -8,7 +8,7 @@ source_type: self
 date_added: "2026-06-16"
 author: himanshu-2l
 tags: [git, github, pull-request, code-review, workflow]
-tools: [claude, cursor, gemini, antigravity]
+tools: [Antigravity, cursor, gemini, antigravity]
 ---
 
 # PR Merge Champion

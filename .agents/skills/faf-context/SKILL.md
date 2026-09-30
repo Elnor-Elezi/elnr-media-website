@@ -53,7 +53,7 @@ faf auto      # 1. AI detects your whole stack + seeds context from your README
 faf score     # 2. See the number + exactly which slots are still empty
 faf go        # 3. Guided fill: confirm the seeded Ws, answer the 1–2 left
 faf score     # 4. 100% ✪
-faf sync      # 5. Push context into CLAUDE.md / AGENTS.md (optional)
+faf sync      # 5. Push context into AGENTS.md / AGENTS.md (optional)
 ```
 
 Most projects are 1 good goal sentence + 2 answers away from Trophy.
@@ -62,8 +62,8 @@ Most projects are 1 good goal sentence + 2 answers away from Trophy.
 
 The goal is the **generative input** — it seeds who/what/where automatically. Make it a real, specific sentence (it's also your *use-case*):
 
-- ✅ *"A CLI that scores any repo's AI-readiness and syncs context to Claude, Cursor, and Gemini — for solo developers."*
-  → seeds **what** (a CLI that scores AI-readiness), **where** (Claude, Cursor, Gemini), **who** (solo developers). You'd only add **why** + **when**.
+- ✅ *"A CLI that scores any repo's AI-readiness and syncs context to Antigravity, Cursor, and Gemini — for solo developers."*
+  → seeds **what** (a CLI that scores AI-readiness), **where** (Antigravity, Cursor, Gemini), **who** (solo developers). You'd only add **why** + **when**.
 - ❌ *"A tool to improve development."* → generic; seeds nothing. (Generic phrases are *ignored* on purpose — empty beats wrong.)
 
 ## The 6 Ws — terse labels, not prose

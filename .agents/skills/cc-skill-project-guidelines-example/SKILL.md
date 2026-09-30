@@ -1,9 +1,10 @@
 ---
 name: cc-skill-project-guidelines-example
 description: "Project Guidelines Skill (Example)"
+author: affaan-m
+version: "1.0"
 risk: unknown
 source: community
-date_added: "2026-02-27"
 ---
 
 # Project Guidelines Skill (Example)
@@ -15,6 +16,7 @@ Based on a real production application: [Zenith](https://zenith.chat) - AI-power
 ---
 
 ## When to Use
+
 Reference this skill when working on the specific project it's designed for. Project skills contain:
 - Architecture overview
 - File structure
@@ -30,7 +32,7 @@ Reference this skill when working on the specific project it's designed for. Pro
 - **Frontend**: Next.js 15 (App Router), TypeScript, React
 - **Backend**: FastAPI (Python), Pydantic models
 - **Database**: Supabase (PostgreSQL)
-- **AI**: Claude API with tool calling and structured output
+- **AI**: Antigravity API with tool calling and structured output
 - **Deployment**: Google Cloud Run
 - **Testing**: Playwright (E2E), pytest (backend), React Testing Library
 
@@ -52,7 +54,7 @@ Reference this skill when working on the specific project it's designed for. Pro
               ┌───────────────┼───────────────┐
               ▼               ▼               ▼
         ┌──────────┐   ┌──────────┐   ┌──────────┐
-        │ Supabase │   │  Claude  │   │  Redis   │
+        │ Supabase │   │  Antigravity  │   │  Redis   │
         │ Database │   │   API    │   │  Cache   │
         └──────────┘   └──────────┘   └──────────┘
 ```
@@ -151,7 +153,7 @@ async function fetchApi<T>(
 }
 ```
 
-### Claude AI Integration (Structured Output)
+### Antigravity AI Integration (Structured Output)
 
 ```python
 from anthropic import Anthropic
@@ -162,11 +164,11 @@ class AnalysisResult(BaseModel):
     key_points: list[str]
     confidence: float
 
-async def analyze_with_claude(content: str) -> AnalysisResult:
+async def analyze_with_Antigravity(content: str) -> AnalysisResult:
     client = Anthropic()
 
     response = client.messages.create(
-        model="claude-sonnet-4-5-20250514",
+        model="Antigravity-sonnet-4-5-20250514",
         max_tokens=1024,
         messages=[{"role": "user", "content": content}],
         tools=[{
@@ -350,8 +352,3 @@ SUPABASE_KEY=eyJ...
 - `backend-patterns.md` - API and database patterns
 - `frontend-patterns.md` - React and Next.js patterns
 - `tdd-workflow/` - Test-driven development methodology
-
-## Limitations
-- Use this skill only when the task clearly matches the scope described above.
-- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
-- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.

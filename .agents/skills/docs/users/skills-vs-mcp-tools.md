@@ -75,7 +75,7 @@ Antigravity Awesome Skills is primarily a **skill library**:
 - installable `SKILL.md` playbooks
 - bundles for role-based starting points
 - workflows for ordered execution patterns
-- tool-specific guides for Claude Code, Cursor, Codex CLI, Gemini CLI, and others
+- tool-specific guides for Antigravity, Cursor, Codex CLI, Gemini CLI, and others
 
 Many skills in this repo also explain how to work with MCP, APIs, and other integrations, but the repository itself is centered on reusable workflow guidance rather than acting as an MCP server.
 

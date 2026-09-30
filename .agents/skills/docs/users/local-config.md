@@ -104,7 +104,7 @@ Additional development tools:
 Specialized creative tools:
 
 - `theme-factory`, `canvas-design`, `algorithmic-art`
-- `claude-d3js-skill`, `slack-gif-creator`
+- `Antigravity-d3js-skill`, `slack-gif-creator`
 
 ### Workflow & Architecture (7 skills)
 

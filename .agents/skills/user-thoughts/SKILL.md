@@ -11,13 +11,13 @@ source_type: community
 date_added: "2026-05-31"
 author: JularDepick
 tags: [userthoughts, documentation, project-management, mdbase]
-tools: [claude, cursor, gemini]
+tools: [Antigravity, cursor, gemini]
 risk: safe
 allowed-tools: read write bash
 metadata:
   author: JularDepick
   category: productivity
-  supported_agents: "[claude, cursor, gemini]"
+  supported_agents: "[Antigravity, cursor, gemini]"
 ---
 
 # user-thoughts.SKILL

@@ -9,12 +9,12 @@ source_type: community
 date_added: "2026-04-08"
 author: monte-carlo-data
 tags: [data-observability, dbt, schema, monte-carlo, lineage]
-tools: [claude, cursor, codex]
+tools: [Antigravity, cursor, codex]
 ---
 
 # Monte Carlo Prevent Skill
 
-This skill brings Monte Carlo's data observability context directly into your editor. When you're modifying a dbt model or SQL pipeline, use it to surface table health, lineage, active alerts, and to generate monitors-as-code without leaving Claude Code.
+This skill brings Monte Carlo's data observability context directly into your editor. When you're modifying a dbt model or SQL pipeline, use it to surface table health, lineage, active alerts, and to generate monitors-as-code without leaving Antigravity.
 
 Reference files live next to this skill file. **Use the Read tool** (not MCP resources) to access them:
 

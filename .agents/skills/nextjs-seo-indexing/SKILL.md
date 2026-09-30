@@ -8,7 +8,7 @@ source_type: self
 date_added: "2026-05-31"
 author: Whoisabhishekadhikari
 tags: [seo, indexing, nextjs, search-console, crawl-budget, canonical, sitemap]
-tools: [claude, cursor, gemini, claude-code]
+tools: [Antigravity, cursor, gemini, Antigravity-code]
 version: 1.0.0
 ---
 

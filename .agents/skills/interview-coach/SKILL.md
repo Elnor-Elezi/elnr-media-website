@@ -7,7 +7,7 @@ source: community
 date_added: "2026-03-11"
 author: dbhat93
 tags: [interview, job-search, coaching, career, storybank, negotiation]
-tools: [claude]
+tools: [Antigravity]
 ---
 
 # Interview Coach

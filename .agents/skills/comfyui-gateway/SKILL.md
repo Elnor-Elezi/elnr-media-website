@@ -11,7 +11,7 @@ tags:
 - image-generation
 - typescript
 tools:
-- claude-code
+- Antigravity-code
 - antigravity
 - cursor
 - gemini-cli
@@ -51,7 +51,7 @@ with priorities, webhook callbacks, result caching, and multiple storage backend
 ┌─────────────┐     ┌──────────────────────────────────┐     ┌──────────┐
 │   Clients    │────▶│        ComfyUI Gateway           │────▶│ ComfyUI  │
 │ (curl, n8n,  │     │                                  │     │ Server   │
-│  Claude,     │     │  ┌─────────┐  ┌──────────────┐  │     │ (local/  │
+│  Antigravity,     │     │  ┌─────────┐  ┌──────────────┐  │     │ (local/  │
 │  Lovable,    │     │  │ Fastify │  │ BullMQ Queue │  │     │  remote) │
 │  Supabase)   │     │  │ API     │──│ (or in-mem)  │  │     └──────────┘
 │              │◀────│  └─────────┘  └──────────────┘  │
@@ -339,7 +339,7 @@ Read `references/integration.md` for ready-to-use examples with:
 - curl commands for every endpoint
 - n8n webhook workflow
 - Supabase Edge Function caller
-- Claude Code / Claude.ai integration
+- Antigravity / Antigravity.ai integration
 - Python requests client
 - JavaScript fetch client
 

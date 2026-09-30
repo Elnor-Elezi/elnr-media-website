@@ -5,7 +5,7 @@ risk: safe
 source: community
 date_added: "2026-03-17"
 tags: [pwa, web-dev, service-worker, frontend, offline, caching]
-tools: [gemini, cursor, claude]
+tools: [gemini, cursor, Antigravity]
 ---
 
 # Progressive Web Apps (PWAs)

@@ -9,9 +9,9 @@ source: community
 
 ## 1. Purpose
 
-This skill governs **how Claude thinks** during the context-building phase of an audit.
+This skill governs **how Antigravity thinks** during the context-building phase of an audit.
 
-When active, Claude will:
+When active, Antigravity will:
 - Perform **line-by-line / block-by-block** code analysis by default.
 - Apply **First Principles**, **5 Whys**, and **5 Hows** at micro scale.
 - Continuously link insights → functions → modules → entire system.
@@ -39,7 +39,7 @@ Do **not** use for:
 
 ## 2. How This Skill Behaves
 
-When active, Claude will:
+When active, Antigravity will:
 - Default to **ultra-granular analysis** of each block and line.
 - Apply micro-level First Principles, 5 Whys, and 5 Hows.
 - Build and refine a persistent global mental model.
@@ -66,7 +66,7 @@ Goal: **deep, accurate understanding**, not conclusions.
 
 ## 3. Phase 1 — Initial Orientation (Bottom-Up Scan)
 
-Before deep analysis, Claude performs a minimal mapping:
+Before deep analysis, Antigravity performs a minimal mapping:
 
 1. Identify major modules/files/contracts.
 2. Note obvious public/external entrypoints.
@@ -168,7 +168,7 @@ This example demonstrates the level of depth and structure required for all anal
 
 ### 5.4 Output Requirements
 
-When performing ultra-granular analysis, Claude MUST structure output following the format defined in OUTPUT_REQUIREMENTS.md.
+When performing ultra-granular analysis, Antigravity MUST structure output following the format defined in OUTPUT_REQUIREMENTS.md.
 
 Key requirements:
 - **Purpose** (2-3 sentences minimum)
@@ -230,7 +230,7 @@ These clusters help guide the vulnerability-hunting phase.
 ## 6. Stability & Consistency Rules
 *(Anti-Hallucination, Anti-Contradiction)*
 
-Claude must:
+Antigravity must:
 
 - **Never reshape evidence to fit earlier assumptions.**
   When contradicted:
@@ -257,7 +257,7 @@ Claude must:
 
 ## 7. Subagent Usage
 
-Claude may spawn subagents for:
+Antigravity may spawn subagents for:
 - Dense or complex functions.
 - Long data-flow or control-flow chains.
 - Cryptographic / mathematical logic.
@@ -271,7 +271,7 @@ the pure-context-building constraint.
 
 Subagents must:
 - Follow the same micro-first rules.
-- Return summaries that Claude integrates into its global model.
+- Return summaries that Antigravity integrates into its global model.
 
 ---
 
@@ -293,7 +293,7 @@ It exists solely to build:
 
 ## 9. Non-Goals
 
-While active, Claude should NOT:
+While active, Antigravity should NOT:
 - Identify vulnerabilities
 - Propose fixes
 - Generate proofs-of-concept

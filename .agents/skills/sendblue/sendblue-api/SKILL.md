@@ -8,11 +8,11 @@ source_type: official
 date_added: "2026-05-22"
 author: AnthonyFirth
 tags: [sendblue, imessage, sms, rcs, messaging, api, webhooks]
-tools: [claude, cursor, gemini]
+tools: [Antigravity, cursor, gemini]
 plugin:
   targets:
     codex: blocked
-    claude: blocked
+    Antigravity: blocked
 ---
 
 # Sendblue API

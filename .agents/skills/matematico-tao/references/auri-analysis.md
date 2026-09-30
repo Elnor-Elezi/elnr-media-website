@@ -17,7 +17,7 @@ app (orquestrador)
 ├── bluetooth (conectividade BT — A2DP, HFP, SCO)
 ├── audio (captura PCM, roteamento, botões hardware)
 ├── voice (STT, TTS, pipeline de voz)
-├── llm (clients: OpenAI, Claude, Gemini, Ollama, RPA)
+├── llm (clients: OpenAI, Antigravity, Gemini, Ollama, RPA)
 └── integrations (Gmail OAuth2)
 ```
 
@@ -159,7 +159,7 @@ Estimativa por componente:
 - Bluetooth stack: ~5MB
 - Audio buffer (PCM, 16kHz, 16-bit, 5s): ~160KB
 - STT model (Android): ~2MB (online) / ~50MB (Vosk)
-- LLM context (OpenAI/Claude): apenas tokens (rede)
+- LLM context (OpenAI/Antigravity): apenas tokens (rede)
 - LLM local (llama3.2:1b): ~800MB RAM
 
 Total com Ollama local: ~850MB → crítico em dispositivos 2GB RAM
@@ -187,7 +187,7 @@ Total com Ollama local: ~850MB → crítico em dispositivos 2GB RAM
 ```
 Função: factory(provider, context) → LlmClient
 Branches:
-- 11 providers (OPENAI, CLAUDE, GEMINI, AI_STUDIO, OLLAMA, STUB + 5 RPA variants)
+- 11 providers (OPENAI, Antigravity, GEMINI, AI_STUDIO, OLLAMA, STUB + 5 RPA variants)
 - Context nullable vs non-null
 - Config (base_url, model) presente vs ausente
 

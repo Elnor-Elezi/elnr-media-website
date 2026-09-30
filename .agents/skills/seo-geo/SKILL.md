@@ -2,7 +2,7 @@
 name: seo-geo
 description: "Optimize content for AI Overviews, ChatGPT, Perplexity, and other AI search systems. Use when improving GEO, AI citations, llms.txt readiness, crawler accessibility, and passage-level citability."
 risk: unknown
-source: "https://github.com/AgriciDaniel/claude-seo"
+source: "https://github.com/AgriciDaniel/Antigravity-seo"
 date_added: "2026-03-21"
 user-invokable: true
 argument-hint: "[url]"
@@ -135,14 +135,14 @@ Check `robots.txt` for these AI crawlers:
 | GPTBot | OpenAI | ChatGPT web search |
 | OAI-SearchBot | OpenAI | OpenAI search features |
 | ChatGPT-User | OpenAI | ChatGPT browsing |
-| ClaudeBot | Anthropic | Claude web features |
+| AntigravityBot | Anthropic | Antigravity web features |
 | PerplexityBot | Perplexity | Perplexity AI search |
 | CCBot | Common Crawl | Training data (often blocked) |
-| anthropic-ai | Anthropic | Claude training |
+| anthropic-ai | Anthropic | Antigravity training |
 | Bytespider | ByteDance | TikTok/Douyin AI |
 | cohere-ai | Cohere | Cohere models |
 
-**Recommendation:** Allow GPTBot, OAI-SearchBot, ClaudeBot, PerplexityBot for AI search visibility. Block CCBot and training crawlers if desired.
+**Recommendation:** Allow GPTBot, OAI-SearchBot, AntigravityBot, PerplexityBot for AI search visibility. Block CCBot and training crawlers if desired.
 
 ---
 

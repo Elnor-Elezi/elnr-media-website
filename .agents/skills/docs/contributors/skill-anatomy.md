@@ -125,7 +125,7 @@ source_type: community
 date_added: "YYYY-MM-DD"
 author: "your-name-or-handle"
 tags: ["react", "typescript", "testing"]
-tools: [claude, cursor, gemini]
+tools: [Antigravity, cursor, gemini]
 ---
 ```
 

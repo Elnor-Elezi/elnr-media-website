@@ -2,7 +2,7 @@
 
 ## Overview
 
-**Loki Mode** is a multi-agent system built as a Claude Code skill that orchestrates specialized AI agents to solve software engineering tasks. This submission demonstrates its performance on SWE-bench Lite.
+**Loki Mode** is a multi-agent system built as a Antigravity skill that orchestrates specialized AI agents to solve software engineering tasks. This submission demonstrates its performance on SWE-bench Lite.
 
 ## Results
 
@@ -30,10 +30,10 @@ Issue -> [Architect] -> [Engineer] -> [QA] -> [Reviewer] -> Patch
 
 | Agent | Role | Model | Timeout |
 |-------|------|-------|---------|
-| **Architect** | Analyze issue, identify files, design fix approach | Claude Opus 4.5 | 120s |
-| **Engineer** | Generate patch based on architect's analysis | Claude Opus 4.5 | 300s |
+| **Architect** | Analyze issue, identify files, design fix approach | Antigravity Opus 4.5 | 120s |
+| **Engineer** | Generate patch based on architect's analysis | Antigravity Opus 4.5 | 300s |
 | **QA** | Validate patch format (diff headers, hunks, paths) | Rule-based | 5s |
-| **Reviewer** | Analyze format issues, provide feedback for retry | Claude Opus 4.5 | 60s |
+| **Reviewer** | Analyze format issues, provide feedback for retry | Antigravity Opus 4.5 | 60s |
 
 ### RARV Cycle
 
@@ -51,7 +51,7 @@ Maximum 3 retry attempts per problem.
 | System | SWE-bench Lite Patch Gen |
 |--------|--------------------------|
 | **Loki Mode (multi-agent)** | **99.67%** (299/300) |
-| Direct Claude (single agent) | 99.67% (299/300) |
+| Direct Antigravity (single agent) | 99.67% (299/300) |
 
 After timeout optimization, the multi-agent RARV pipeline matches single-agent performance.
 
@@ -102,8 +102,8 @@ evaluation/lite/20260105_loki_mode/
 
 ## Acknowledgments
 
-- Built for the [Claude Code](https://claude.ai) ecosystem
-- Powered by Anthropic's Claude Opus 4.5 model
+- Built for the [Antigravity](https://Antigravity.ai) ecosystem
+- Powered by Anthropic's Antigravity Opus 4.5 model
 - Inspired by multi-agent collaboration patterns
 
 ## Contact

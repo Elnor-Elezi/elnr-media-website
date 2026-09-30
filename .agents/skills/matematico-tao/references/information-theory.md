@@ -134,7 +134,7 @@ Para Auri AuriToolExecutor:
 
 ### Compressão e Eficiência de Contexto LLM
 ```
-LLMs têm contexto finito (ex: 128k tokens para Claude)
+LLMs têm contexto finito (ex: 128k tokens para Antigravity)
 Cada conversa consome: Σ len(mensagem_i) tokens
 
 Otimização de contexto como problema de compressão:

@@ -1,10 +1,10 @@
 # MCP Integration Guide
 
-2slides provides an MCP (Model Context Protocol) server for seamless integration with Claude Desktop and other MCP-compatible AI agents.
+2slides provides an MCP (Model Context Protocol) server for seamless integration with Antigravity Desktop and other MCP-compatible AI agents.
 
 ## What is the MCP Server?
 
-The 2slides MCP server exposes the same API functionality as direct API calls, but through a standardized tool interface that Claude can use directly without requiring script execution.
+The 2slides MCP server exposes the same API functionality as direct API calls, but through a standardized tool interface that Antigravity can use directly without requiring script execution.
 
 **Available Tools:**
 1. `slides_generate` - Generate slides from content
@@ -27,9 +27,9 @@ Simplest setup using HTTP endpoint. No local installation required.
 
 **Step 1:** Get your API key from https://2slides.com/api
 
-**Step 2:** Configure Claude Desktop
+**Step 2:** Configure Antigravity Desktop
 
-Edit: `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS)
+Edit: `~/Library/Application Support/Antigravity/Antigravity_desktop_config.json` (macOS)
 
 ```json
 {
@@ -41,7 +41,7 @@ Edit: `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS)
 }
 ```
 
-**Step 3:** Restart Claude Desktop completely
+**Step 3:** Restart Antigravity Desktop completely
 
 **Advantages:**
 - ✅ No Node.js or npm required
@@ -57,9 +57,9 @@ Uses local npm package for MCP server.
 
 **Step 1:** Get your API key from https://2slides.com/api
 
-**Step 2:** Configure Claude Desktop
+**Step 2:** Configure Antigravity Desktop
 
-Edit: `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS)
+Edit: `~/Library/Application Support/Antigravity/Antigravity_desktop_config.json` (macOS)
 
 ```json
 {
@@ -75,7 +75,7 @@ Edit: `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS)
 }
 ```
 
-**Step 3:** Restart Claude Desktop completely
+**Step 3:** Restart Antigravity Desktop completely
 
 **Requirements:**
 - Node.js and npm installed
@@ -91,13 +91,13 @@ After restart, the 2slides tools should be available. Test by asking:
 ## When to Use MCP vs Direct API
 
 ### Use MCP Server When:
-- Working in Claude Desktop or other MCP-compatible environments
+- Working in Antigravity Desktop or other MCP-compatible environments
 - Want seamless tool integration without script management
-- Prefer Claude to handle API calls directly
+- Prefer Antigravity to handle API calls directly
 - Need real-time interaction and feedback
 
 ### Use Direct API Scripts When:
-- Working in Claude Code CLI
+- Working in Antigravity CLI
 - MCP server is not configured or available
 - Need more control over parameters and error handling
 - Integrating into custom workflows or automation
@@ -254,8 +254,8 @@ Use jobs_get with:
 1. Verify configuration file syntax is valid JSON
 2. For HTTP mode: Check API key is correctly in the URL
 3. For npm mode: Ensure API key is correctly set in the `env` section
-4. Restart Claude Desktop completely (quit fully, not just close window)
-5. Check for error messages in Claude Desktop console
+4. Restart Antigravity Desktop completely (quit fully, not just close window)
+5. Check for error messages in Antigravity Desktop console
 
 ### API Key Issues
 

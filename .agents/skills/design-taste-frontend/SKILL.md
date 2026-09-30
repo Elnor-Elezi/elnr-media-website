@@ -9,7 +9,7 @@ source_type: community
 date_added: "2026-04-17"
 author: Leonxlnx
 tags: [frontend, design, ui, react]
-tools: [claude, cursor, codex, antigravity]
+tools: [Antigravity, cursor, codex, antigravity]
 ---
 # High-Agency Frontend Skill
 

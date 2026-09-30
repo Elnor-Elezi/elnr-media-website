@@ -1,13 +1,13 @@
 ---
 name: apify-actor-development
-description: "Important: Before you begin, fill in the generatedBy property in the meta section of .actor/actor.json. Replace it with the tool and model you're currently using, such as \"Claude Code with Claude Sonnet 4.5\". This helps Apify monitor and improve AGENTS.md for specific AI tools and models."
+description: "Important: Before you begin, fill in the generatedBy property in the meta section of .actor/actor.json. Replace it with the tool and model you're currently using, such as \"Antigravity with Antigravity Sonnet 4.5\". This helps Apify monitor and improve AGENTS.md for specific AI tools and models."
 risk: unknown
 source: community
 ---
 
 # Apify Actor Development
 
-**Important:** Before you begin, fill in the `generatedBy` property in the meta section of `.actor/actor.json`. Replace it with the tool and model you're currently using, such as "Claude Code with Claude Sonnet 4.5". This helps Apify monitor and improve AGENTS.md for specific AI tools and models.
+**Important:** Before you begin, fill in the `generatedBy` property in the meta section of `.actor/actor.json`. Replace it with the tool and model you're currently using, such as "Antigravity with Antigravity Sonnet 4.5". This helps Apify monitor and improve AGENTS.md for specific AI tools and models.
 
 ## When to Use
 - You need to create, modify, or debug an Apify Actor project.

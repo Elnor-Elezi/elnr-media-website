@@ -8,7 +8,7 @@
 
 Great question! Here's what just happened and what to do next:
 
-If you came in through a **Claude Code** or **Codex** plugin instead of a full library install, the mental model is the same: you still invoke individual skills in prompts. The main difference is that plugins ship the plugin-safe subset. See [plugins.md](plugins.md) for the install model.
+If you came in through a **Antigravity** or **Codex** plugin instead of a full library install, the mental model is the same: you still invoke individual skills in prompts. The main difference is that plugins ship the plugin-safe subset. See [plugins.md](plugins.md) for the install model.
 
 ### What You Just Did
 
@@ -30,7 +30,7 @@ Think of it like installing a toolbox. You have all the tools now, but you need 
 
 ### What Bundles Are
 
-Bundles are **curated groups** of skills organized by role. They help you decide which skills to start using, and they can also be exposed as focused marketplace plugins for Claude Code and Codex.
+Bundles are **curated groups** of skills organized by role. They help you decide which skills to start using, and they can also be exposed as focused marketplace plugins for Antigravity and Codex.
 
 **Analogy:**
 
@@ -54,7 +54,7 @@ When you see the [Web Wizard bundle](bundles.md#-the-web-wizard-pack), it lists:
 - `tailwind-patterns`
 - etc.
 
-These are **recommendations** for which skills a web developer should try first. If you have the full library installed, you just need to **use them in your prompts**. If you prefer a narrower install surface, you can install the matching bundle plugin in Claude Code or Codex where plugin marketplaces are available.
+These are **recommendations** for which skills a web developer should try first. If you have the full library installed, you just need to **use them in your prompts**. If you prefer a narrower install surface, you can install the matching bundle plugin in Antigravity or Codex where plugin marketplaces are available.
 
 The key distinction is:
 
@@ -85,10 +85,10 @@ This is the part that should have been explained better! Here's how to use skill
 
 The exact syntax varies by tool, but it's always simple:
 
-#### Claude Code (CLI)
+#### Antigravity (CLI)
 
 ```bash
-# In your terminal/chat with Claude Code:
+# In your terminal/chat with Antigravity:
 >> Use @brainstorming to help me design a todo app
 ```
 
@@ -190,7 +190,7 @@ Let's actually use a skill right now. Follow these steps:
 
 1. **Pick a skill:** Let's use `brainstorming` (from the "Essentials" bundle)
 
-2. **Open your AI assistant** (Claude Code, Cursor, etc.)
+2. **Open your AI assistant** (Antigravity, Cursor, etc.)
 
 3. **Type this exact prompt:**
 
@@ -216,7 +216,7 @@ Don't try to use all 1,894+ skills at once. Here's a sensible approach:
 
 If you want a tool-specific starting point before choosing skills, use:
 
-- [Claude Code skills](claude-code-skills.md)
+- [Antigravity skills](Antigravity-code-skills.md)
 - [Cursor skills](cursor-skills.md)
 - [Codex CLI skills](codex-cli-skills.md)
 - [Gemini CLI skills](gemini-cli-skills.md)
@@ -316,11 +316,11 @@ AI: [Creates tests, sets up CI/CD, deploys to Vercel]
 
 ## Common Questions
 
-### "Which tool should I use? Claude Code, Cursor, Gemini?"
+### "Which tool should I use? Antigravity, Cursor, Gemini?"
 
 **Any of them!** Skills work universally. Pick the tool you already use or prefer:
 
-- **Claude Code** - Best for terminal/CLI workflows
+- **Antigravity** - Best for terminal/CLI workflows
 - **Cursor** - Best for IDE integration
 - **Gemini CLI** - Best for Google ecosystem
 - **Codex CLI** - Best for OpenAI ecosystem
@@ -339,7 +339,7 @@ Usually no, but if your AI doesn't recognize a skill:
 
 1. Try restarting your IDE/CLI
 2. Check the installation path matches your tool
-3. Try the explicit path: `npx antigravity-awesome-skills --claude` (or `--cursor`, `--gemini`, etc.)
+3. Try the explicit path: `npx antigravity-awesome-skills --Antigravity` (or `--cursor`, `--gemini`, etc.)
 
 ### "Can I load all skills into the model at once?"
 

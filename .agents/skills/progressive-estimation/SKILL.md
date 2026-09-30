@@ -13,7 +13,7 @@ tags:
   - sprint-planning
   - ai-agents
 tools:
-  - claude
+  - Antigravity
 ---
 
 # Progressive Estimation
@@ -45,7 +45,7 @@ Progressive Estimation adapts to your team's working mode — human-only, hybrid
 ## Examples
 
 **Single task:**
-> "Estimate building a REST API with authentication using Claude Code"
+> "Estimate building a REST API with authentication using Antigravity"
 
 **Batch mode:**
 > "Estimate these 12 JIRA tickets for our next sprint"

@@ -17,7 +17,7 @@ Skills are specialized instruction files that teach AI assistants how to handle 
 It's like having a library - all books are there, but you only read the ones you need.
 **Pro Tip:** Use [Starter Packs](bundles.md) to focus on the skills that match your role first.
 
-If you want a narrower install surface for **Claude Code** or **Codex**, use the new plugin distributions documented in [plugins.md](plugins.md) instead of the full library install.
+If you want a narrower install surface for **Antigravity** or **Codex**, use the new plugin distributions documented in [plugins.md](plugins.md) instead of the full library install.
 
 ### What is the difference between Bundles and Workflows?
 
@@ -42,7 +42,7 @@ For the longer explanation, read [skills-vs-mcp-tools.md](skills-vs-mcp-tools.md
 
 ### Which AI tools work with these skills?
 
-- ✅ **Claude Code** (Anthropic CLI)
+- ✅ **Antigravity** (Anthropic CLI)
 - ✅ **Gemini CLI** (Google)
 - ✅ **Codex CLI** (OpenAI)
 - ✅ **Cursor** (AI IDE)
@@ -125,7 +125,7 @@ It depends on how you install:
 - **Using the installer CLI (`npx antigravity-awesome-skills`)**:
   The default install target is `~/.agents/skills/` for Antigravity's global library.
 - **Using a tool-specific flag**:
-  Use `--claude`, `--cursor`, `--gemini`, `--codex`, `--kiro`, or `--antigravity` to target the matching tool path automatically.
+  Use `--Antigravity`, `--cursor`, `--gemini`, `--codex`, `--kiro`, or `--antigravity` to target the matching tool path automatically.
 - **Using a manual clone or custom workspace path**:
   `.agent/skills/` is still a good universal workspace convention for Antigravity/custom setups.
 
@@ -141,19 +141,19 @@ The installer CLI is the recommended path for most users because it performs a l
 
 **Tool-specific paths:**
 
-- Claude Code: `.claude/skills/`
+- Antigravity: `.Antigravity/skills/`
 - Gemini CLI: `.gemini/skills/`
 - Codex CLI: `.codex/skills/`
 - Cursor: `.cursor/skills/` or project root
 
-**Claude Code plugin marketplace alternative:**
+**Antigravity plugin marketplace alternative:**
 
 ```text
 /plugin marketplace add sickn33/antigravity-awesome-skills
 /plugin install antigravity-awesome-skills
 ```
 
-This repository now includes `.claude-plugin/marketplace.json` and `.claude-plugin/plugin.json` so Claude Code can install the same skill tree through the plugin marketplace.
+This repository now includes `.Antigravity-plugin/marketplace.json` and `.Antigravity-plugin/plugin.json` so Antigravity can install the same skill tree through the plugin marketplace.
 
 **Codex plugin alternative:**
 
@@ -188,7 +188,7 @@ The app may show optional read-only community counts when configured, but clicki
 
 ### What does `plugin-safe` mean?
 
-Plugin-safe means the published Claude Code and Codex plugins only include the subset of skills that is ready for marketplace-style distribution.
+Plugin-safe means the published Antigravity and Codex plugins only include the subset of skills that is ready for marketplace-style distribution.
 
 Skills can stay repo-only for a while if they still need:
 
@@ -323,7 +323,7 @@ No. Bundles are curated lists of skills, not standalone invokable mega-skills.
 Use them in one of these two ways:
 
 - pick individual skills from the bundle and invoke those directly
-- install the dedicated Claude Code or Codex bundle plugin if you want a marketplace-scoped subset
+- install the dedicated Antigravity or Codex bundle plugin if you want a marketplace-scoped subset
 - use the activation scripts if you want only that bundle's skills active in Antigravity
 
 Examples:

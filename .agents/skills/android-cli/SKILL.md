@@ -8,11 +8,11 @@ source_type: self
 date_added: "2026-06-15"
 author: Owais
 tags: [android, cli, adb, mobile, build, emulator]
-tools: [claude, cursor, gemini, antigravity]
+tools: [Antigravity, cursor, gemini, antigravity]
 plugin:
   targets:
     codex: blocked
-    claude: blocked
+    Antigravity: blocked
   setup:
     type: manual
     summary: "Installer guidance executes remote Android CLI setup scripts; keep out of plugin-safe bundles."

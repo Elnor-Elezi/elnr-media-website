@@ -1,9 +1,8 @@
 ---
 name: error-handling-patterns
-description: "Build resilient applications with robust error handling strategies that gracefully handle failures and provide excellent debugging experiences."
-risk: safe
+description: "Master error handling patterns across languages including exceptions, Result types, error propagation, and graceful degradation to build resilient applications. Use when implementing error handling..."
+risk: unknown
 source: community
-date_added: "2026-02-27"
 ---
 
 # Error Handling Patterns
@@ -36,8 +35,3 @@ Build resilient applications with robust error handling strategies that graceful
 ## Resources
 
 - `resources/implementation-playbook.md` for detailed patterns and examples.
-
-## Limitations
-- Use this skill only when the task clearly matches the scope described above.
-- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
-- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.

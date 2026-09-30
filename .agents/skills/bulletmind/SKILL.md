@@ -13,7 +13,7 @@ tags:
   - formatting
   - structured-output
 tools:
-  - claude
+  - Antigravity
   - cursor
   - gemini
   - codex

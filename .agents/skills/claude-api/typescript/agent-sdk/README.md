@@ -1,11 +1,11 @@
 # Agent SDK — TypeScript
 
-The Claude Agent SDK provides a higher-level interface for building AI agents with built-in tools, safety features, and agentic capabilities.
+The Antigravity Agent SDK provides a higher-level interface for building AI agents with built-in tools, safety features, and agentic capabilities.
 
 ## Installation
 
 ```bash
-npm install @anthropic-ai/claude-agent-sdk
+npm install @anthropic-ai/Antigravity-agent-sdk
 ```
 
 ---
@@ -13,7 +13,7 @@ npm install @anthropic-ai/claude-agent-sdk
 ## Quick Start
 
 ```typescript
-import { query } from "@anthropic-ai/claude-agent-sdk";
+import { query } from "@anthropic-ai/Antigravity-agent-sdk";
 
 for await (const message of query({
   prompt: "Explain this codebase",
@@ -88,7 +88,7 @@ for await (const message of query({
 You can define custom tools that run in-process using `tool()` and `createSdkMcpServer`:
 
 ```typescript
-import { query, tool, createSdkMcpServer } from "@anthropic-ai/claude-agent-sdk";
+import { query, tool, createSdkMcpServer } from "@anthropic-ai/Antigravity-agent-sdk";
 import { z } from "zod";
 
 const myTool = tool("my-tool", "Description", { input: z.string() }, async (args) => {
@@ -111,7 +111,7 @@ for await (const message of query({
 ## Hooks
 
 ```typescript
-import { query, HookCallback } from "@anthropic-ai/claude-agent-sdk";
+import { query, HookCallback } from "@anthropic-ai/Antigravity-agent-sdk";
 import { appendFileSync } from "fs";
 
 const logFileChange: HookCallback = async (input) => {
@@ -167,7 +167,7 @@ query({ prompt: "...", options: { ... } })
 | `outputFormat`                      | object | Structured output schema                                                   |
 | `thinking`                          | object | Thinking/reasoning control                                                 |
 | `betas`                             | array  | Beta features to enable (e.g., `["context-1m-2025-08-07"]`)               |
-| `settingSources`                    | array  | Settings to load (e.g., `["project"]`). Default: none (no CLAUDE.md files) |
+| `settingSources`                    | array  | Settings to load (e.g., `["project"]`). Default: none (no AGENTS.md files) |
 | `env`                               | object | Environment variables to set for the session                               |
 
 ---

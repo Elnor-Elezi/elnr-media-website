@@ -3,7 +3,7 @@
 ## Basic Agent
 
 ```typescript
-import { query } from "@anthropic-ai/claude-agent-sdk";
+import { query } from "@anthropic-ai/Antigravity-agent-sdk";
 
 async function main() {
   for await (const message of query({
@@ -29,7 +29,7 @@ main();
 ### After Tool Use Hook
 
 ```typescript
-import { query, HookCallback } from "@anthropic-ai/claude-agent-sdk";
+import { query, HookCallback } from "@anthropic-ai/Antigravity-agent-sdk";
 import { appendFileSync } from "fs";
 
 const logFileChange: HookCallback = async (input) => {
@@ -60,7 +60,7 @@ for await (const message of query({
 ## Subagents
 
 ```typescript
-import { query } from "@anthropic-ai/claude-agent-sdk";
+import { query } from "@anthropic-ai/Antigravity-agent-sdk";
 
 for await (const message of query({
   prompt: "Use the code-reviewer agent to review this codebase",
@@ -103,7 +103,7 @@ for await (const message of query({
 ## Session Resumption
 
 ```typescript
-import { query } from "@anthropic-ai/claude-agent-sdk";
+import { query } from "@anthropic-ai/Antigravity-agent-sdk";
 
 let sessionId: string | undefined;
 
@@ -131,7 +131,7 @@ for await (const message of query({
 ## Custom System Prompt
 
 ```typescript
-import { query } from "@anthropic-ai/claude-agent-sdk";
+import { query } from "@anthropic-ai/Antigravity-agent-sdk";
 
 for await (const message of query({
   prompt: "Review this code",

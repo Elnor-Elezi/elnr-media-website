@@ -1,10 +1,11 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { Helmet } from 'react-helmet-async'
 import { ArrowRight, Calendar, Clock } from 'lucide-react'
 import { fadeInUp, stagger } from '../hooks'
 import { blogPosts } from '../data/blog'
+import SEO from '../components/SEO'
+import PageTransition from '../components/PageTransition'
 
 export default function BlogPage() {
   useEffect(() => {
@@ -12,11 +13,16 @@ export default function BlogPage() {
   }, []);
 
   return (
-    <div className="pt-32 pb-24 lg:pt-40 lg:pb-32 overflow-hidden">
-      <Helmet>
-        <title>Blog | ELNR Media</title>
-        <meta name="description" content="Insights, strategies, and case studies on digital marketing, web development, and brand scaling." />
-      </Helmet>
+    <PageTransition>
+      <div className="pt-32 pb-24 lg:pt-40 lg:pb-32 overflow-hidden">
+        <SEO 
+          title="B2B Media Systems & Growth Insights | ELNR Media"
+          description="Actionable strategies, case studies, and growth insights on B2B lead generation, paid advertising, and automated sales funnels."
+          breadcrumbs={[
+            { name: 'Home', path: '/' },
+            { name: 'Blog', path: '/blog' }
+          ]}
+        />
 
       <section className="relative max-container section-padding mb-16">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-brand-500/10 dark:bg-brand-500/5 rounded-full blur-[120px] pointer-events-none -z-10" />
@@ -92,6 +98,8 @@ export default function BlogPage() {
           ))}
         </div>
       </section>
-    </div>
+
+      </div>
+    </PageTransition>
   )
 }

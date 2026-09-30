@@ -11,7 +11,7 @@ and common platforms. All examples assume the gateway is running at
 1. [curl Examples (Every Endpoint)](#1-curl-examples)
 2. [n8n Webhook Workflow](#2-n8n-webhook-workflow)
 3. [Supabase Edge Function](#3-supabase-edge-function)
-4. [Claude Code Integration](#4-claude-code-integration)
+4. [Antigravity Integration](#4-Antigravity-code-integration)
 5. [Python Requests Client](#5-python-requests-client)
 6. [JavaScript/TypeScript Fetch Client](#6-javascripttypescript-fetch-client)
 7. [Webhook Receiver (Express.js + HMAC)](#7-webhook-receiver-expressjs--hmac)
@@ -517,14 +517,14 @@ curl -X POST https://your-project.supabase.co/functions/v1/generate-image \
 
 ---
 
-## 4. Claude Code Integration
+## 4. Antigravity Integration
 
-How to use the ComfyUI Gateway from within a Claude Code session or any
-environment where Claude has access to shell tools.
+How to use the ComfyUI Gateway from within a Antigravity session or any
+environment where Antigravity has access to shell tools.
 
-### Generating an Image from Claude Code
+### Generating an Image from Antigravity
 
-When Claude Code has access to `bash` or `curl`, you can generate images directly:
+When Antigravity has access to `bash` or `curl`, you can generate images directly:
 
 ```bash
 # 1. Submit a generation job
@@ -539,7 +539,7 @@ JOB_RESPONSE=$(curl -s -X POST http://localhost:3000/jobs \
       "height": 1024,
       "steps": 30
     },
-    "metadata": { "requestId": "claude-session-001" }
+    "metadata": { "requestId": "Antigravity-session-001" }
   }')
 
 JOB_ID=$(echo "$JOB_RESPONSE" | jq -r '.jobId')
@@ -566,7 +566,7 @@ curl -s "http://localhost:3000$OUTPUT_URL" \
   -H "X-API-Key: your-api-key" -o generated_image.png
 ```
 
-### Using Base64 Output in Claude Code
+### Using Base64 Output in Antigravity
 
 If you need the image as base64 (for inline display or further processing):
 
@@ -575,7 +575,7 @@ If you need the image as base64 (for inline display or further processing):
 B64_DATA=$(curl -s "http://localhost:3000${OUTPUT_URL}?format=base64" \
   -H "X-API-Key: your-api-key" | jq -r '.data')
 
-# Save the base64 to a file (can be read by Claude's image viewer)
+# Save the base64 to a file (can be read by Antigravity's image viewer)
 echo "$B64_DATA" | base64 -d > generated_image.png
 ```
 

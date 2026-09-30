@@ -9,7 +9,7 @@ source_type: community
 date_added: "2026-06-06"
 author: Suraj1235
 tags: [multi-agent, orchestration, workflow, adversarial-verification, coding-agents]
-tools: [claude, cursor, codex, gemini, antigravity]
+tools: [Antigravity, cursor, codex, gemini, antigravity]
 # Optional: declare the upstream license if source_repo is set
 license: "MIT"
 license_source: "https://github.com/Suraj1235/open-dynamic-workflows/blob/main/LICENSE"

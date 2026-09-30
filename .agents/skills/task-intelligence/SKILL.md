@@ -11,7 +11,7 @@ tags:
 - risk-analysis
 - orchestration
 tools:
-- claude-code
+- Antigravity-code
 - antigravity
 - cursor
 - gemini-cli
@@ -219,7 +219,7 @@ Este agente **complementa** o agent-orchestrator — não substitui:
 - **agent-orchestrator**: identifica QUAIS skills usar (routing)
 - **task-intelligence**: enriquece COMO usar + quando + com que riscos (briefing)
 
-Ambos devem ser ativados juntos. O CLAUDE.md já exige o orchestrator — este agente adiciona a camada de inteligência sobre ele.
+Ambos devem ser ativados juntos. O AGENTS.md já exige o orchestrator — este agente adiciona a camada de inteligência sobre ele.
 
 ---
 

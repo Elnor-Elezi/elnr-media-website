@@ -666,7 +666,7 @@ cat << EOF > /tmp/standup-context.json
 EOF
 
 # AI prompt for standup generation
-STANDUP_NOTE=$(claude-ai << 'PROMPT'
+STANDUP_NOTE=$(Antigravity-ai << 'PROMPT'
 Analyze the provided context and generate a concise daily standup note.
 
 Instructions:

@@ -1,9 +1,14 @@
 ---
 name: programmatic-seo
-description: Design and evaluate programmatic SEO strategies for creating SEO-driven pages at scale using templates and structured data.
+description: ">"
+  Design and evaluate programmatic SEO strategies for creating SEO-driven pages
+  at scale using templates and structured data. Use when the user mentions
+  programmatic SEO, pages at scale, template pages, directory pages, location pages,
+  comparison pages, integration pages, or keyword-pattern page generation.
+  This skill focuses on feasibility, strategy, and page system design—not execution
+  unless explicitly requested.
 risk: unknown
 source: community
-date_added: '2026-02-27'
 ---
 
 ---
@@ -112,17 +117,6 @@ A high score indicates _structural suitability_, not guaranteed rankings.
 - Scale will not create long-term quality debt
 
 ---
-
-### Scoring Guidance per Category
-
-For each of the six scoring categories, allot points within the category's weight band using these anchors:
-
-- **0–15% of band:** No alignment — the site/topic clearly does not meet the criterion (e.g. fewer than 10 candidate entities for a directory-style PSEO).
-- **16–40% of band:** Partial alignment — the criterion is partially met, OR met for a small subset of pages only.
-- **41–80% of band:** Strong alignment — the criterion holds for most of the planned page set.
-- **81–100% of band:** Exemplary — the criterion holds universally and is reinforced by a structural data source (DB, API, validated CSV).
-
-Sum the per-category scores to compute the Feasibility Index used in §"Feasibility Bands" below.
 
 ### Feasibility Bands (Required)
 
@@ -360,8 +354,3 @@ If triggered, **halt indexing or roll back**:
 
 ## When to Use
 This skill is applicable to execute the workflow or actions described in the overview.
-
-## Limitations
-- Use this skill only when the task clearly matches the scope described above.
-- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
-- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.

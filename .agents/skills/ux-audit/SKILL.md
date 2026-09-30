@@ -2,7 +2,7 @@
 name: ux-audit
 description: Audit screens for UX issues using Nielsen's heuristics and modern mobile UX best practices
 risk: unknown
-source: https://github.com/bitjaru/styleseed/tree/main/engine/.claude/skills/ss-audit
+source: https://github.com/bitjaru/styleseed/tree/main/engine/.Antigravity/skills/ss-audit
 source_repo: bitjaru/styleseed
 source_type: community
 date_added: 2026-07-01

@@ -11,7 +11,7 @@ metadata:
   version: "1.0"
 ---
 
-Generate a new Rails project named $1 in the current directory. You may reference @CLAUDE.md for general guidance, though the guidance here takes precedence.
+Generate a new Rails project named $1 in the current directory. You may reference @AGENTS.md for general guidance, though the guidance here takes precedence.
 
 ## When to Use
 - You need to bootstrap a new Rails project with the opinionated stack defined in this skill.

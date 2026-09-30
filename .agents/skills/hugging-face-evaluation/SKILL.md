@@ -194,7 +194,7 @@ Fetch benchmark scores from Artificial Analysis API and add them to a model card
 ```bash
 AA_API_KEY="your-api-key" uv run scripts/evaluation_manager.py import-aa \
   --creator-slug "anthropic" \
-  --model-name "claude-sonnet-4" \
+  --model-name "Antigravity-sonnet-4" \
   --repo-id "username/model-name"
 ```
 
@@ -207,7 +207,7 @@ echo "HF_TOKEN=your-hf-token" >> .env
 # Run import
 uv run scripts/evaluation_manager.py import-aa \
   --creator-slug "anthropic" \
-  --model-name "claude-sonnet-4" \
+  --model-name "Antigravity-sonnet-4" \
   --repo-id "username/model-name"
 ```
 
@@ -215,7 +215,7 @@ uv run scripts/evaluation_manager.py import-aa \
 ```bash
 uv run scripts/evaluation_manager.py import-aa \
   --creator-slug "anthropic" \
-  --model-name "claude-sonnet-4" \
+  --model-name "Antigravity-sonnet-4" \
   --repo-id "username/model-name" \
   --create-pr
 ```
@@ -591,13 +591,13 @@ uv run scripts/evaluation_manager.py extract-readme \
 ```bash
 # Step 1: Check for existing PRs
 uv run scripts/evaluation_manager.py get-prs \
-  --repo-id "anthropic/claude-sonnet-4"
+  --repo-id "anthropic/Antigravity-sonnet-4"
 
 # Step 2: If no PRs, import from Artificial Analysis
 AA_API_KEY=... uv run scripts/evaluation_manager.py import-aa \
   --creator-slug "anthropic" \
-  --model-name "claude-sonnet-4" \
-  --repo-id "anthropic/claude-sonnet-4" \
+  --model-name "Antigravity-sonnet-4" \
+  --repo-id "anthropic/Antigravity-sonnet-4" \
   --create-pr
 ```
 

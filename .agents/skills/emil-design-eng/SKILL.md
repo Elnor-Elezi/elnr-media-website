@@ -11,7 +11,7 @@ author: Emil Kowalski
 license: MIT
 license_source: "https://github.com/emilkowalski/skills/blob/main/LICENSE.txt"
 tags: [frontend, design, ui, animation, motion]
-tools: [claude, cursor, codex, antigravity]
+tools: [Antigravity, cursor, codex, antigravity]
 ---
 
 # Design Engineering

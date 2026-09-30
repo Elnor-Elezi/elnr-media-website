@@ -8,7 +8,7 @@ source_type: self
 date_added: "2026-04-13"
 author: WHOISABHISHEKADHIKARI
 tags: [seo, architecture, indexing, crawler, sitemap]
-tools: [claude, cursor, gemini, antigravity]
+tools: [Antigravity, cursor, gemini, antigravity]
 ---
 
 # Indexing Issue Auditor & Technical SEO Architect

@@ -19,7 +19,7 @@ Nó giống như việc sở hữu một thư viện - tất cả sách đều �
 
 ### Những công cụ AI nào hoạt động với các kỹ năng này?
 
-- ✅ **Claude Code** (Dòng lệnh CLI của Anthropic)
+- ✅ **Antigravity** (Dòng lệnh CLI của Anthropic)
 - ✅ **Gemini CLI** (Google)
 - ✅ **Codex CLI** (OpenAI)
 - ✅ **Cursor** (IDE tích hợp AI)
@@ -72,7 +72,7 @@ npx antigravity-awesome-skills
 
 **Các đường dẫn cụ thể cho từng công cụ:**
 
-- Claude Code: `.claude/skills/`
+- Antigravity: `.Antigravity/skills/`
 - Gemini CLI: `.gemini/skills/`
 - Codex CLI: `.codex/skills/`
 - Kiro CLI / IDE: `~/.kiro/skills/` hoặc `.kiro/skills/`

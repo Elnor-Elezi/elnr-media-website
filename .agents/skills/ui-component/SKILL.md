@@ -2,7 +2,7 @@
 name: ui-component
 description: Generate a new UI component following the StyleSeed design conventions
 risk: unknown
-source: https://github.com/bitjaru/styleseed/tree/main/engine/.claude/skills/ss-component
+source: https://github.com/bitjaru/styleseed/tree/main/engine/.Antigravity/skills/ss-component
 source_repo: bitjaru/styleseed
 source_type: community
 date_added: 2026-07-01
@@ -29,7 +29,7 @@ Description: $ARGUMENTS
 ## Instructions
 
 1. First, read the design system seed for context:
-   - Read `CLAUDE.md` for component conventions
+   - Read `AGENTS.md` for component conventions
    - Read `css/theme.css` for available design tokens
    - Read `components/ui/button.tsx` as a reference pattern
 

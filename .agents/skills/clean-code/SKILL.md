@@ -1,9 +1,9 @@
 ---
 name: clean-code
-description: "This skill embodies the principles of \"Clean Code\" by Robert C. Martin (Uncle Bob). Use it to transform \"code that works\" into \"code that is clean.\""
+description: "Applies principles from Robert C. Martin's 'Clean Code'. Use this skill when writing, reviewing, or refactoring code to ensure high quality, readability, and maintainability. Covers naming, functio..."
+user-invocable: true
 risk: safe
 source: "ClawForge (https://github.com/jackjin1997/ClawForge)"
-date_added: "2026-02-27"
 ---
 
 # Clean Code Skill
@@ -92,8 +92,3 @@ Use this skill when:
 - [ ] Have I avoided comments by making the code clearer?
 - [ ] Am I passing too many arguments?
 - [ ] Is there a failing test for this change?
-
-## Limitations
-- Use this skill only when the task clearly matches the scope described above.
-- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
-- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.

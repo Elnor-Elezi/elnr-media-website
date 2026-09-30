@@ -1,9 +1,8 @@
 ---
 name: tool-design
-description: "Build tools that agents can use effectively, including architectural reduction patterns. Use when creating new tools for agent systems, debugging tool-related failures or misuse, or optimizing existing tool sets for better agent performance."
-risk: safe
+description: "Build tools that agents can use effectively, including architectural reduction patterns"
 source: "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering/tree/main/skills/tool-design"
-date_added: "2026-02-27"
+risk: safe
 ---
 
 ## When to Use This Skill
@@ -15,7 +14,8 @@ Use this skill when working with build tools that agents can use effectively, in
 
 Tools are the primary mechanism through which agents interact with the world. They define the contract between deterministic systems and non-deterministic agents. Unlike traditional software APIs designed for developers, tool APIs must be designed for language models that reason about intent, infer parameter values, and generate calls from natural language requests. Poor tool design creates failure modes that no amount of prompt engineering can fix. Effective tool design follows specific principles that account for how agents perceive and use tools.
 
-## When to Use
+## When to Activate
+
 Activate this skill when:
 - Creating new tools for agent systems
 - Debugging tool-related failures or misuse
@@ -159,7 +159,7 @@ Without the server prefix, agents may fail to locate tools, especially when mult
 
 ### Using Agents to Optimize Tools
 
-Claude can optimize its own tools. When given a tool and observed failure modes, it diagnoses issues and suggests improvements. Production testing shows this approach achieves 40% reduction in task completion time by helping future agents avoid mistakes.
+Antigravity can optimize its own tools. When given a tool and observed failure modes, it diagnoses issues and suggests improvements. Production testing shows this approach achieves 40% reduction in task completion time by helping future agents avoid mistakes.
 
 **The Tool-Testing Agent Pattern**:
 
@@ -316,8 +316,3 @@ External resources:
 **Last Updated**: 2025-12-23
 **Author**: Agent Skills for Context Engineering Contributors
 **Version**: 1.1.0
-
-## Limitations
-- Use this skill only when the task clearly matches the scope described above.
-- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
-- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.

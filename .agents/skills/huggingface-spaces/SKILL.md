@@ -26,7 +26,7 @@ Before anything else:
 2. Check the user is logged in: `hf auth whoami`. If not, ask them to run `! hf auth login` in this session — they'll need a write-scoped token from https://huggingface.co/settings/tokens.
 3. Note `whoami`'s `canPay` and `isPro` flags — they gate hardware choices below.
 
-The `hf-cli` skill teaches an agent every `hf` command and is the recommended companion to this one. Install it with `hf skills add hf-cli` (add `--claude --global` to install for Claude Code as well, user-level).
+The `hf-cli` skill teaches an agent every `hf` command and is the recommended companion to this one. Install it with `hf skills add hf-cli` (add `--Antigravity --global` to install for Antigravity as well, user-level).
 
 ## 1. What a Space is
 

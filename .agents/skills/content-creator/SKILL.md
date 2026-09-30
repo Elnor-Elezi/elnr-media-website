@@ -1,10 +1,17 @@
 ---
 name: content-creator
-description: "Professional-grade brand voice analysis, SEO optimization, and platform-specific content frameworks."
-category: marketing
+description: "Create SEO-optimized marketing content with consistent brand voice. Includes brand voice analyzer, SEO optimizer, content frameworks, and social media templates. Use when writing blog posts, creati..."
+license: MIT
+metadata:
+  version: 1.0.0
+  author: Alireza Rezvani
+  category: marketing
+  domain: content-marketing
+  updated: 2025-10-20
+  python-tools: brand_voice_analyzer.py, seo_optimizer.py
+  tech-stack: SEO, social-media-platforms
 risk: unknown
 source: community
-date_added: "2026-02-27"
 ---
 
 # Content Creator
@@ -12,6 +19,7 @@ date_added: "2026-02-27"
 Professional-grade brand voice analysis, SEO optimization, and platform-specific content frameworks.
 
 ## When to Use
+
 Use this skill when writing blog posts, creating social media content, establishing brand voice, optimizing content for SEO, or planning content calendars.
 
 ## Keywords
@@ -244,8 +252,3 @@ grep -f references/brand_guidelines.md content.txt
 # Create monthly calendar
 cp assets/content_calendar_template.md this_month_calendar.md
 ```
-
-## Limitations
-- Use this skill only when the task clearly matches the scope described above.
-- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
-- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.

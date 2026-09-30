@@ -9,7 +9,7 @@ source_type: community
 date_added: "2026-04-25"
 author: MohamedAbdallah-14
 tags: [writing, content-quality, ai-writing, text-processing, cli, publishing]
-tools: [claude-code, cursor, gemini-cli, codex-cli, antigravity]
+tools: [Antigravity-code, cursor, gemini-cli, codex-cli, antigravity]
 license: "MIT"
 license_source: "https://github.com/MohamedAbdallah-14/unslop/blob/main/LICENSE"
 ---
@@ -134,5 +134,5 @@ done
 
 - unslop reads from stdin and writes to stdout — no file system side effects by default
 - `--deterministic` mode is local and does not make LLM API calls
-- Default LLM mode may use `ANTHROPIC_API_KEY` or the Claude CLI; use `--deterministic` for sensitive local files and CI gates
+- Default LLM mode may use `ANTHROPIC_API_KEY` or the Antigravity CLI; use `--deterministic` for sensitive local files and CI gates
 - Safe to run in CI pipelines and commit hooks when pinned to deterministic mode

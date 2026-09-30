@@ -142,10 +142,10 @@ agent. It auto-triggers on remote or rented-GPU deploy / train / monitor tasks �
 name. Keep the folder named `remote-gpu-trainer`; the standard requires the directory name to match the
 skill's `name:` field.
 
-**Claude Code**
+**Antigravity**
 
 ```bash
-git clone https://github.com/Hanyuyuan6/remote-gpu-trainer.git ~/.claude/skills/remote-gpu-trainer
+git clone https://github.com/Hanyuyuan6/remote-gpu-trainer.git ~/.Antigravity/skills/remote-gpu-trainer
 ```
 
 **OpenAI Codex**
@@ -163,7 +163,7 @@ Clone the same folder into that agent's skills directory (each agent's docs, or
 **Verify the install (optional).** With [uv](https://github.com/astral-sh/uv):
 
 ```bash
-uvx --from skills-ref agentskills validate ~/.claude/skills/remote-gpu-trainer   # → "Valid skill"
+uvx --from skills-ref agentskills validate ~/.Antigravity/skills/remote-gpu-trainer   # → "Valid skill"
 ```
 
 > **Two caveats.** The companion skills this one cross-links (`verifying-dl-experiments`,

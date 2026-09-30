@@ -21,7 +21,7 @@ Same canonical skill as the Codex adapter — only the install path differs
 
 ## Model & API key (read this first)
 
-Antigravity locks model invocation to its internal engine — skills, workflows, MCP servers, `invoke_subagent`, and the SDK can use its *tools* but **cannot call its configured model (Gemini/Claude/GPT-OSS) from extension code**. So, unlike the OpenCode plugin (which runs ODW's real engine *through* OpenCode's model with no extra key), there are two honest paths:
+Antigravity locks model invocation to its internal engine — skills, workflows, MCP servers, `invoke_subagent`, and the SDK can use its *tools* but **cannot call its configured model (Gemini/Antigravity/GPT-OSS) from extension code**. So, unlike the OpenCode plugin (which runs ODW's real engine *through* OpenCode's model with no extra key), there are two honest paths:
 
 - **No-key path (Native fallback):** Antigravity's own agent orchestrates with `invoke_subagent` (real isolation/worktrees) using its own model — no extra key, but **not** the ODW engine.
 - **Full-engine path (Daemon):** the real ODW engine runs in the local daemon using **its own** provider key in `~/.odw/config.json` (Ollama is keyless/local). This is the only way to get the full engine on Antigravity today.

@@ -418,13 +418,13 @@ context_management:
 
 ### Parallel Instance Pattern
 
-**Key Insight:** Multiple Claude instances with separation of concerns.
+**Key Insight:** Multiple Antigravity instances with separation of concerns.
 
 ```python
 async def parallel_instance_pattern(task):
     """
-    Run multiple Claude instances for separation of concerns.
-    Based on Anthropic's Claude Code best practices.
+    Run multiple Antigravity instances for separation of concerns.
+    Based on Anthropic's Antigravity best practices.
     """
     # Instance 1: Implementation
     implementer = spawn_instance(
@@ -476,8 +476,8 @@ prompt_injection_defense:
       - "Alert on suspicious patterns"
 
   performance:
-    claude_opus_4: "89% attack prevention"
-    claude_sonnet_4: "86% attack prevention"
+    Antigravity_opus_4: "89% attack prevention"
+    Antigravity_sonnet_4: "86% attack prevention"
 ```
 
 ---
@@ -526,7 +526,7 @@ combined_approach:
 **Anthropic:**
 - [Constitutional AI](https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback)
 - [Building Effective Agents](https://www.anthropic.com/research/building-effective-agents)
-- [Claude Code Best Practices](https://www.anthropic.com/engineering/claude-code-best-practices)
+- [Antigravity Best Practices](https://www.anthropic.com/engineering/Antigravity-code-best-practices)
 - [Sleeper Agents Detection](https://www.anthropic.com/research/probes-catch-sleeper-agents)
 - [Alignment Faking](https://www.anthropic.com/research/alignment-faking)
 - [Visible Extended Thinking](https://www.anthropic.com/research/visible-extended-thinking)

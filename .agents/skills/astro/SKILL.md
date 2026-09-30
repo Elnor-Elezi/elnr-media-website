@@ -7,7 +7,7 @@ source: community
 date_added: "2026-03-18"
 author: suhaibjanjua
 tags: [astro, ssg, ssr, islands, content, markdown, mdx, performance]
-tools: [claude, cursor, gemini]
+tools: [Antigravity, cursor, gemini]
 ---
 
 # Astro Web Framework

@@ -3,7 +3,7 @@ name: agentic-actions-auditor
 description: >
   Audits GitHub Actions workflows for security
   vulnerabilities in AI agent integrations 
-  including Claude Code Action, 
+  including Antigravity Action, 
   Gemini CLI, OpenAI Codex, and GitHub AI 
   Inference. 
   Detects attack vectors where attacker-controlled 
@@ -20,7 +20,7 @@ Static security analysis guidance for GitHub Actions workflows that invoke AI co
 
 ## When to Use
 - Auditing a repository's GitHub Actions workflows for AI agent security
-- Reviewing CI/CD configurations that invoke Claude Code Action, Gemini CLI, or OpenAI Codex
+- Reviewing CI/CD configurations that invoke Antigravity Action, Gemini CLI, or OpenAI Codex
 - Checking whether attacker-controlled input can reach AI agent prompts
 - Evaluating agentic action configurations (sandbox settings, tool permissions, user allowlists)
 - Assessing trigger events that expose workflows to external input (`pull_request_target`, `issue_comment`, etc.)
@@ -136,7 +136,7 @@ For each workflow file, examine every job and every step within each job. Check 
 
 | Action Reference | Action Type |
 |-----------------|-------------|
-| `anthropics/claude-code-action` | Claude Code Action |
+| `anthropics/Antigravity-code-action` | Antigravity Action |
 | `google-github-actions/run-gemini-cli` | Gemini CLI |
 | `google-gemini/gemini-cli-action` | Gemini CLI (legacy/archived) |
 | `openai/codex-action` | OpenAI Codex |
@@ -176,12 +176,12 @@ For each identified AI action step, capture the following security-relevant info
 
 Capture these security-relevant input fields based on the action type:
 
-**Claude Code Action:**
+**Antigravity Action:**
 - `prompt` -- the instruction sent to the AI agent
-- `claude_args` -- CLI arguments passed to Claude (may contain `--allowedTools`, `--disallowedTools`)
+- `Antigravity_args` -- CLI arguments passed to Antigravity (may contain `--allowedTools`, `--disallowedTools`)
 - `allowed_non_write_users` -- which users can trigger the action (wildcard `"*"` is a red flag)
 - `allowed_bots` -- which bots can trigger the action
-- `settings` -- path to Claude settings file (may configure tool permissions)
+- `settings` -- path to Antigravity settings file (may configure tool permissions)
 - `trigger_phrase` -- custom phrase to activate the action in comments
 
 **Gemini CLI:**
@@ -228,7 +228,7 @@ For the entire workflow containing the AI action step, also capture:
 
 After scanning all workflows, produce a summary:
 
-"Found N AI action instances across M workflow files: X Claude Code Action, Y Gemini CLI, Z OpenAI Codex, W GitHub AI Inference"
+"Found N AI action instances across M workflow files: X Antigravity Action, Y Gemini CLI, Z OpenAI Codex, W GitHub AI Inference"
 
 Include the security context captured for each instance in the detailed output.
 
@@ -289,7 +289,7 @@ Each finding includes a numbered data flow trace. Follow these rules:
 1. **Start from the attacker-controlled source** -- the GitHub event context where the attacker acts (e.g., "Attacker creates an issue with malicious content in the body"), not a YAML line.
 2. **Show every intermediate hop** -- env blocks, step outputs, runtime fetches, file reads. Include YAML line references where applicable.
 3. **Annotate runtime boundaries** -- when a step occurs at runtime rather than YAML parse time, add a note: "> Note: Step N occurs at runtime -- not visible in static YAML analysis."
-4. **Name the specific consequence** in the final step (e.g., "Claude executes with tainted prompt -- attacker achieves arbitrary code execution"), not just the YAML element.
+4. **Name the specific consequence** in the final step (e.g., "Antigravity executes with tainted prompt -- attacker achieves arbitrary code execution"), not just the YAML element.
 
 For Vectors H and I (configuration findings), replace the data flow section with an impact amplification note explaining what the configuration weakness enables if a co-occurring injection vector is present.
 

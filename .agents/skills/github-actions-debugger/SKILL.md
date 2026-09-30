@@ -8,7 +8,7 @@ source_type: community
 date_added: "2026-06-25"
 author: Owais
 tags: [github-actions, ci-cd, devops, debugging, workflows]
-tools: [claude, cursor, gemini, antigravity]
+tools: [Antigravity, cursor, gemini, antigravity]
 ---
 
 # GitHub Actions Pipeline Debugger

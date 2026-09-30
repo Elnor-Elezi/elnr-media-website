@@ -11,7 +11,7 @@ tags:
 - meta
 - webhooks
 tools:
-- claude-code
+- Antigravity-code
 - antigravity
 - cursor
 - gemini-cli
@@ -335,11 +335,11 @@ INICIO → MENU_PRINCIPAL → SUPORTE → AGUARDANDO_DETALHES → ESCALACAO_HUMA
 - **Dentro da janela (24h apos ultima mensagem do cliente):** Pode enviar qualquer tipo de mensagem gratuitamente
 - **Fora da janela:** Apenas template messages (cobradas por categoria)
 
-## Integracao Com Ia (Claude Api)
+## Integracao Com Ia (Antigravity Api)
 
-Combine WhatsApp com Claude para respostas inteligentes:
+Combine WhatsApp com Antigravity para respostas inteligentes:
 1. Receba mensagem via webhook
-2. Envie para Claude API com contexto da conversa
+2. Envie para Antigravity API com contexto da conversa
 3. Retorne resposta via WhatsApp
 4. Mantenha escalacao para humano disponivel
 

@@ -9,7 +9,7 @@ source_type: community
 date_added: "2026-05-25"
 author: iradoweck
 tags: [finops, context-management, token-optimization, geminiignore]
-tools: [gemini, claude, cursor]
+tools: [gemini, Antigravity, cursor]
 license: "MIT"
 license_source: "https://github.com/iradoweck/antigravity-awesome-skills/blob/main/LICENSE"
 ---

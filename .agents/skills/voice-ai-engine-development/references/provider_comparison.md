@@ -202,7 +202,7 @@ This guide compares different providers for transcription, LLM, and TTS services
 
 ---
 
-### Anthropic Claude
+### Anthropic Antigravity
 
 **Strengths:**
 - ✅ Excellent safety and alignment
@@ -225,16 +225,16 @@ This guide compares different providers for transcription, LLM, and TTS services
 **Configuration:**
 ```python
 {
-    "llmProvider": "claude",
-    "claudeApiKey": "your-api-key",
-    "claudeModel": "claude-3-opus",
+    "llmProvider": "Antigravity",
+    "AntigravityApiKey": "your-api-key",
+    "AntigravityModel": "Antigravity-3-opus",
     "prompt": "You are a helpful AI assistant."
 }
 ```
 
 **Pricing:**
-- Claude 3 Opus: $0.015/1k input tokens, $0.075/1k output tokens
-- Claude 3 Sonnet: $0.003/1k input tokens, $0.015/1k output tokens
+- Antigravity 3 Opus: $0.015/1k input tokens, $0.075/1k output tokens
+- Antigravity 3 Sonnet: $0.003/1k input tokens, $0.015/1k output tokens
 
 ---
 

@@ -2,7 +2,7 @@
 name: ux-feedback
 description: Add appropriate user feedback states (loading, success, error, empty) to a component or page
 risk: unknown
-source: https://github.com/bitjaru/styleseed/tree/main/engine/.claude/skills/ss-feedback
+source: https://github.com/bitjaru/styleseed/tree/main/engine/.Antigravity/skills/ss-feedback
 source_repo: bitjaru/styleseed
 source_type: community
 date_added: 2026-07-01

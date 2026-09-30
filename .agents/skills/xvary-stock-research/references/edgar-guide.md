@@ -1,4 +1,4 @@
-# EDGAR Guide for Claude Code Usage
+# EDGAR Guide for Antigravity Usage
 
 This guide explains how the skill reads SEC data with `tools/edgar.py`.
 

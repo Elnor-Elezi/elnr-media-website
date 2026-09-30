@@ -103,4 +103,4 @@ Apos todas as verificacoes passarem:
 4. Escrever briefing de transicao como ultima mensagem
 
 O briefing de transicao e a peca mais importante — ele fica no topo do contexto
-compactado e e a primeira coisa que o proximo Claude le.
+compactado e e a primeira coisa que o proximo Antigravity le.

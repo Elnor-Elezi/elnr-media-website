@@ -15,7 +15,7 @@ tags:
 - llm-coding
 - simplicity
 tools:
-- claude-code
+- Antigravity-code
 - antigravity
 - cursor
 - gemini-cli

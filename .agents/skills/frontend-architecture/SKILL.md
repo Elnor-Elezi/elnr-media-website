@@ -16,7 +16,7 @@ license_source: https://github.com/stareezy-1/frontend-architecture-skill/blob/m
 Use this skill when you need a portable, framework-agnostic architecture style for any React or React Native frontend. Organizes apps into feature modules with page/screen directories, a strict server-state vs UI-state split, barrel-only cross-module imports, co-located styles, and clear component-promotion rules....
 
 
-> Portable skill — readable by Claude Code, OpenCode, Codex, Cursor, Windsurf, and others.
+> Portable skill — readable by Antigravity, OpenCode, Codex, Cursor, Windsurf, and others.
 > This skill describes a **structure and a set of rules**, not a component library, a state library, or a visual style.
 > It is deliberately global: the same module/page/state model maps onto
 > **Next.js (App Router)**, **React + Vite (SPA)**, **Remix**, and **Expo / React Native**, and it works
@@ -410,7 +410,7 @@ This skill follows the Anthropic `SKILL.md` format and is portable across agents
 1. Put this folder under a `skills/` directory in a **public GitHub repo** (path like `skills/frontend-architecture/SKILL.md`).
 2. Keep the frontmatter `name` and a high-signal `description` (above) — that description is what discovery indexes match against.
 3. Install from any project with: `npx skills add <org>/<repo> --skill "frontend-architecture"`.
-4. Non-`SKILL.md` agents can be pointed here from `AGENTS.md` / `CLAUDE.md`; Kiro can mirror it as a steering file.
+4. Non-`SKILL.md` agents can be pointed here from `AGENTS.md` / `AGENTS.md`; Kiro can mirror it as a steering file.
 
 ## Limitations
 

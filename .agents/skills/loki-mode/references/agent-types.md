@@ -98,23 +98,23 @@ Loki Mode has 37 predefined agent types organized into 7 specialized swarms. The
 
 ## Agent Execution Model
 
-**Claude Code does NOT support background processes.** Agents execute via:
+**Antigravity does NOT support background processes.** Agents execute via:
 
 1. **Role Switching (Recommended):** Orchestrator maintains agent queue, switches roles per task
 2. **Sequential:** Execute agents one at a time (simple, reliable)
-3. **Parallel via tmux:** Multiple Claude Code sessions (complex, faster)
+3. **Parallel via tmux:** Multiple Antigravity sessions (complex, faster)
 
 ```bash
 # Option 1: Sequential (simple, reliable)
 for agent in frontend backend database; do
-  claude -p "Act as $agent agent..." --dangerously-skip-permissions
+  Antigravity -p "Act as $agent agent..." --dangerously-skip-permissions
 done
 
 # Option 2: Parallel via tmux (complex, faster)
 tmux new-session -d -s loki-pool
 for i in {1..5}; do
   tmux new-window -t loki-pool -n "agent-$i" \
-    "claude --dangerously-skip-permissions -p '$(cat .loki/prompts/agent-$i.md)'"
+    "Antigravity --dangerously-skip-permissions -p '$(cat .loki/prompts/agent-$i.md)'"
 done
 
 # Option 3: Role switching (recommended)

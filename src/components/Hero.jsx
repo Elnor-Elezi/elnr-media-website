@@ -1,6 +1,6 @@
 import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, ChevronDown } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { useCounter } from '../hooks'
 import Magnetic from './Magnetic'
@@ -143,6 +143,25 @@ export default function Hero() {
 
       </motion.div>
       
+      {/* Scroll Down Indicator */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 1.6 }}
+        className="absolute bottom-28 lg:bottom-52 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1.5 cursor-pointer hidden lg:flex"
+        onClick={() => window.scrollBy({ top: window.innerHeight * 0.8, behavior: 'smooth' })}
+        role="button"
+        aria-label="Scroll down"
+      >
+        <span className="text-[9px] font-bold tracking-[0.3em] uppercase text-charcoal-400 dark:text-charcoal-500">Scroll</span>
+        <motion.div
+          animate={{ y: [0, 6, 0] }}
+          transition={{ repeat: Infinity, duration: 1.6, ease: 'easeInOut' }}
+        >
+          <ChevronDown size={16} className="text-charcoal-400 dark:text-charcoal-500" />
+        </motion.div>
+      </motion.div>
+
       {/* Stats bar - placed at the absolute bottom like a floating banner */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}

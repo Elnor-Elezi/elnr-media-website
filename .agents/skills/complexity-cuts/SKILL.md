@@ -8,7 +8,7 @@ source_type: community
 date_added: "2026-05-26"
 author: morsechimwai
 tags: [algorithms, big-o, refactoring, optimization, performance, n-plus-one]
-tools: [claude-code, antigravity, cursor, gemini-cli, codex-cli]
+tools: [Antigravity-code, antigravity, cursor, gemini-cli, codex-cli]
 license: "Apache-2.0"
 license_source: "https://github.com/morsechimwai/lemmaly/blob/main/LICENSE"
 ---

@@ -13,7 +13,7 @@ This note records the skill import and normalization work completed on 2026-03-2
 
 ### `anthropics/skills`
 
-- `claude-api`
+- `Antigravity-api`
 - `internal-comms`
 
 Note:
@@ -32,7 +32,7 @@ Note:
 - `sales-enablement`
 - `site-architecture`
 
-### `AgriciDaniel/claude-seo`
+### `AgriciDaniel/Antigravity-seo`
 
 - `seo`
 - `seo-competitor-pages`

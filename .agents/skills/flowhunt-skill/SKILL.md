@@ -9,7 +9,7 @@ source_type: community
 date_added: "2026-05-23"
 author: heyneuron
 tags: [automation, discovery, audit, gmail, calendar, slack, productivity, workflow]
-tools: [claude, codex, gemini, cursor]
+tools: [Antigravity, codex, gemini, cursor]
 license: "MIT"
 license_source: "https://github.com/heyneuron/flowhunt-skill/blob/main/LICENSE"
 ---
@@ -20,7 +20,7 @@ license_source: "https://github.com/heyneuron/flowhunt-skill/blob/main/LICENSE"
 
 FlowHunt is an automation discovery audit skill. It guides agents through a structured 5-question intake to understand the user's business context, then systematically audits connected tools (Gmail, Google Calendar, Slack, task trackers, and more) to surface concrete automation opportunities ranked by impact and effort.
 
-The skill is cross-agent: it works with Claude Code, Codex CLI, Gemini CLI, OpenCode, and any agent that accepts markdown skill files.
+The skill is cross-agent: it works with Antigravity, Codex CLI, Gemini CLI, OpenCode, and any agent that accepts markdown skill files.
 
 Install: `npx skills add heyneuron/flowhunt-skill`
 

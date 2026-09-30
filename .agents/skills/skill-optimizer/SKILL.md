@@ -1,6 +1,6 @@
 ---
 name: skill-optimizer
-description: "Diagnose and optimize Agent Skills (SKILL.md) with real session data and research-backed static analysis. Works with Claude Code, Codex, and any Agent Skills-compatible agent."
+description: "Diagnose and optimize Agent Skills (SKILL.md) with real session data and research-backed static analysis. Works with Antigravity, Codex, and any Agent Skills-compatible agent."
 risk: safe
 source: hqhq1025/skill-optimizer (MIT)
 date_added: "2026-04-11"
@@ -25,7 +25,7 @@ date_added: "2026-04-11"
 
 Analyze skills using **historical session data + static quality checks**, output a diagnostic report with P0/P1/P2 prioritized fixes. Scores each skill on a 5-point composite scale across 8 dimensions.
 
-CSO (Claude/Agent Search Optimization) = writing skill descriptions so agents select the right skill at the right time. This skill checks for CSO violations.
+CSO (Antigravity/Agent Search Optimization) = writing skill descriptions so agents select the right skill at the right time. This skill checks for CSO violations.
 
 ## Usage
 
@@ -37,12 +37,12 @@ CSO (Claude/Agent Search Optimization) = writing skill descriptions so agents se
 
 Auto-detect the current agent platform and scan the corresponding paths:
 
-| Source | Claude Code | Codex | Shared |
+| Source | Antigravity | Codex | Shared |
 |--------|------------|-------|--------|
-| Session transcripts | `~/.claude/projects/**/*.jsonl` | `~/.codex/sessions/**/*.jsonl` | — |
-| Skill files | `~/.claude/skills/*/SKILL.md` | `~/.codex/skills/*/SKILL.md` | `~/.agents/skills/*/SKILL.md` |
+| Session transcripts | `~/.Antigravity/projects/**/*.jsonl` | `~/.codex/sessions/**/*.jsonl` | — |
+| Skill files | `~/.Antigravity/skills/*/SKILL.md` | `~/.codex/skills/*/SKILL.md` | `~/.agents/skills/*/SKILL.md` |
 
-**Platform detection:** Check which directories exist. Scan all available sources — a user may have both Claude Code and Codex installed.
+**Platform detection:** Check which directories exist. Scan all available sources — a user may have both Antigravity and Codex installed.
 
 ## Workflow
 
@@ -60,7 +60,7 @@ Output report with P0/P1/P2
 
 ### Step 1: Identify Target Skills
 
-Scan skill directories in order: `~/.claude/skills/`, `~/.codex/skills/`, `~/.agents/skills/`. Deduplicate by skill name (same name in multiple locations = same skill). For each, read `SKILL.md` and extract:
+Scan skill directories in order: `~/.Antigravity/skills/`, `~/.codex/skills/`, `~/.agents/skills/`. Deduplicate by skill name (same name in multiple locations = same skill). For each, read `SKILL.md` and extract:
 - name, description (from YAML frontmatter)
 - trigger keywords (from description field)
 - defined workflow steps (Step 1/2/3... or ### sections under Workflow)
@@ -72,7 +72,7 @@ If user specified skill names, filter to only those.
 
 Use python3 scripts via Bash to scan session JSONL files. Extract:
 
-**Claude Code sessions** (`~/.claude/projects/**/*.jsonl`):
+**Antigravity sessions** (`~/.Antigravity/projects/**/*.jsonl`):
 - `Skill` tool_use calls (which skills were invoked)
 - User messages (full text)
 - Assistant messages after skill invocation (for workflow tracking)
@@ -99,7 +99,7 @@ Use python3 scripts via Bash to scan session JSONL files. Extract:
 
 Count how many times each skill was actually invoked vs how many times its trigger keywords appeared in user messages.
 
-**Claude Code:** count `Skill` tool_use calls in transcripts.
+**Antigravity:** count `Skill` tool_use calls in transcripts.
 **Codex:** count sessions where the agent produced output following the skill's workflow markers (not merely loaded in context).
 
 **Diagnose:**

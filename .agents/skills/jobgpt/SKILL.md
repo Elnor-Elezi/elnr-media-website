@@ -31,7 +31,7 @@ This skill requires the JobGPT MCP server:
 1. **Create an account** - Sign up at [6figr.com/jobgpt-ai](https://6figr.com/jobgpt-ai)
 2. **Get an API key** - Go to [6figr.com/account](https://6figr.com/account), scroll to MCP Integrations, and click Generate API Key. The key starts with `mcp_`.
 3. **Add the MCP server:**
-   - Claude Code: `claude mcp add jobgpt -t http -u https://mcp.6figr.com/mcp --header "Authorization: <api-key>"`
+   - Antigravity: `Antigravity mcp add jobgpt -t http -u https://mcp.6figr.com/mcp --header "Authorization: <api-key>"`
    - Other tools: Add `jobgpt-mcp-server` as an MCP server with env var `JOBGPT_API_KEY` set. Install via `npx jobgpt-mcp-server`.
 
 Set the `JOBGPT_API_KEY` environment variable when you are running the local `npx jobgpt-mcp-server` path.
@@ -86,7 +86,7 @@ The skill uses `get_application_stats` for an aggregated overview - total counts
 
 | Problem | Solution |
 |---------|----------|
-| "Missing Authorization header" | For Claude Code and other remote HTTP MCP setups, confirm the `Authorization` header is configured on the MCP server entry |
+| "Missing Authorization header" | For Antigravity and other remote HTTP MCP setups, confirm the `Authorization` header is configured on the MCP server entry |
 | "Missing API key" | For the local `npx jobgpt-mcp-server` setup, ensure `JOBGPT_API_KEY` is set to your API key |
 | "Insufficient credits" | Check balance with `get_credits`. Purchase more at 6figr.com/account |
 | Auto-apply not working | Ensure a resume is uploaded and the job hunt has auto-apply enabled |

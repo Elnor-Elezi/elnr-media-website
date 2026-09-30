@@ -9,7 +9,7 @@ source_type: community
 date_added: "2026-04-18"
 author: Slashworks-biz
 tags: [product-management, prd, market-research, mvp, idea-validation, jtbd, swot, competitor-analysis, founder, non-technical]
-tools: [claude, cursor, gemini]
+tools: [Antigravity, cursor, gemini]
 license: "MIT"
 license_source: "https://github.com/Slashworks-biz/idea-os/blob/main/LICENSE"
 ---

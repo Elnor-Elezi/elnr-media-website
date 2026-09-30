@@ -1,14 +1,14 @@
 ---
 name: blockrun
-description: "BlockRun works with Claude Code and Google Antigravity."
+description: "Use when user needs capabilities Antigravity lacks (image generation, real-time X/Twitter data) or explicitly requests external models (\\\"blockrun\\\", \\\"use grok\\\", \\\"use gpt\\\", \\\"da..."
+allowed-tools: Read, Bash(python:*), Bash(python3:*), Bash(pip:*), Bash(source:*)
 risk: unknown
 source: community
-date_added: "2026-02-27"
 ---
 
 # BlockRun
 
-**BlockRun works with Claude Code and Google Antigravity.**
+**BlockRun works with Antigravity and Google Antigravity.**
 
 You can't generate images. You have no real-time X/Twitter access. BlockRun gives you these capabilities.
 
@@ -49,6 +49,7 @@ print(f"💰 Total spent: ${spending['total_usd']:.4f} across {spending['calls']
 ```
 
 ## When to Use
+
 | Trigger | Your Action |
 |---------|-------------|
 | User explicitly requests ("blockrun second opinion with GPT on...", "use grok to check...", "generate image with dall-e") | Execute via BlockRun |
@@ -291,8 +292,3 @@ response = client.chat("xai/grok-3", "What's trending?", search=True)
 ```bash
 pip install --upgrade blockrun-llm
 ```
-
-## Limitations
-- Use this skill only when the task clearly matches the scope described above.
-- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
-- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.

@@ -8,7 +8,7 @@ source_type: community
 date_added: "2026-04-16"
 author: unitedideas
 tags: [mcp, search, ai-discovery, api-discovery, mcp-verification, agent-tools]
-tools: [claude, cursor, gemini]
+tools: [Antigravity, cursor, gemini]
 ---
 
 # Not Human Search MCP
@@ -28,7 +28,7 @@ Not Human Search is a remote MCP server that lets AI agents search a curated ind
 
 Add the Not Human Search MCP server to your client configuration. The endpoint uses streamable HTTP and requires no authentication.
 
-### Claude Desktop / Cursor / Windsurf
+### Antigravity Desktop / Cursor / Windsurf
 
 ```json
 {

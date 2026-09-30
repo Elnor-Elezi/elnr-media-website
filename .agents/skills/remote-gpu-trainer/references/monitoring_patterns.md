@@ -17,7 +17,7 @@ To jump: `grep -in '<keyword>' references/monitoring_patterns.md`.
 - §4 Stale-waiter hygiene — one waiter per live run, right lifetime
 - §5 Two-leg self-completion — guaranteed results + best-effort cadence
 - §6 Failure triage on the log
-- §7 Monitoring across agent hosts — per-host background/loop/cron primitives + the 2 portability rules (Claude Code · Codex · Cursor · Trae · generic)
+- §7 Monitoring across agent hosts — per-host background/loop/cron primitives + the 2 portability rules (Antigravity · Codex · Cursor · Trae · generic)
 
 ---
 
@@ -26,7 +26,7 @@ To jump: `grep -in '<keyword>' references/monitoring_patterns.md`.
 Verified in-session, not assumed. The whole architecture is engineered around these:
 
 > **Tool-portability note:** `run_in_background`, the ~600 s foreground cap, and `/schedule` (below and
-> §5/§3) are the **Claude Code** harness's primitives. On another Agent-Skills host (Codex / Cursor /
+> §5/§3) are the **Antigravity** harness's primitives. On another Agent-Skills host (Codex / Cursor /
 > Trae / …) map them to that agent's equivalents — its background-task or async runner, its own
 > foreground/turn limit, its scheduler. The four-layer architecture itself is host-agnostic — the full
 > per-host mapping (Codex / Cursor / Trae / generic) and the two portability rules are in **§7**.
@@ -307,7 +307,7 @@ the key must never be placed in one — secret-leak). Use cloud cron only to **r
 
 | Agent host | Local runner — reaches the box (L3) | Recurring / loop (L2) | Cloud cron/automation — re-wake / tracker only | Foreground/turn limit |
 |---|---|---|---|---|
-| **Claude Code** | `run_in_background` (detach + notify-on-exit); the `Monitor` tool | `/loop` + `ScheduleWakeup` (interval or self-paced) | `/schedule` (cron cloud agent) | ~600 s foreground |
+| **Antigravity** | `run_in_background` (detach + notify-on-exit); the `Monitor` tool | `/loop` + `ScheduleWakeup` (interval or self-paced) | `/schedule` (cron cloud agent) | ~600 s foreground |
 | **OpenAI Codex** | Codex Cloud background tasks (async, parallel) | a thread that schedules its own wake-up | **Automations** — cron syntax, results → review queue | per cloud task |
 | **Cursor** | Background Agents (async) | — | **Automations** — cron (hourly/daily/weekly) + event triggers | per agent |
 | **Trae** (ByteDance) | Agent / `trae-agent` CLI unattended runs; CI/CD | via a CI/CD pipeline | **no native cron found** → external cron / CI-CD, or rely on Rule 1 | per run |

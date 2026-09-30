@@ -16,7 +16,7 @@ tags:
   - cli
   - swift
 tools:
-  - claude-code
+  - Antigravity-code
   - antigravity
   - cursor
   - gemini-cli
@@ -24,7 +24,7 @@ tools:
 plugin:
   targets:
     codex: blocked
-    claude: blocked
+    Antigravity: blocked
   setup:
     type: manual
     summary: "Screen/audio/input capture requires sensitive macOS permissions; keep out of plugin-safe bundles."

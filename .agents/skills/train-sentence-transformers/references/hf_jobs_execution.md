@@ -10,7 +10,7 @@ Run training on Hugging Face's managed GPUs without provisioning any local infra
 
 ## The three submission paths
 
-### 1. Inline script via MCP (recommended in Claude Code)
+### 1. Inline script via MCP (recommended in Antigravity)
 
 Pass the full training script as `script`. Dependencies come from the PEP 723 header.
 

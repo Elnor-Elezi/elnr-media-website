@@ -1,16 +1,15 @@
 ---
 name: imagen
-description: "AI image generation skill powered by Google Gemini, enabling seamless visual content creation for UI placeholders, documentation, and design assets."
-risk: safe
+description: "|"
 source: "https://github.com/sanjay3290/ai-skills/tree/main/skills/imagen"
-date_added: "2026-02-27"
+risk: safe
 ---
 
 # Imagen - AI Image Generation Skill
 
 ## Overview
 
-This skill generates images using Google Gemini's image generation model (`gemini-3-pro-image-preview`). It enables seamless image creation during any Claude Code session - whether you're building frontend UIs, creating documentation, or need visual representations of concepts.
+This skill generates images using Google Gemini's image generation model (`gemini-3-pro-image-preview`). It enables seamless image creation during any Antigravity session - whether you're building frontend UIs, creating documentation, or need visual representations of concepts.
 
 **Cross-Platform**: Works on Windows, macOS, and Linux.
 
@@ -76,8 +75,3 @@ User: "Create a diagram showing microservices architecture"
 User: "Generate a placeholder avatar image for the user profile component"
 -> Creates image in appropriate size for component use
 ```
-
-## Limitations
-- Use this skill only when the task clearly matches the scope described above.
-- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
-- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.

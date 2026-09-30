@@ -9,11 +9,11 @@ source_type: community
 date_added: "2026-06-26"
 author: takeaseat
 tags: [sql, bigquery, snowflake, redshift, postgres, data-warehouse, cost-optimization, performance, audit, finops]
-tools: [claude, cursor, codex, gemini]
+tools: [Antigravity, cursor, codex, gemini]
 plugin:
   targets:
     codex: blocked
-    claude: blocked
+    Antigravity: blocked
   setup:
     type: manual
     summary: "Clone the upstream analyzer only after pinning or reviewing the exact commit to run."

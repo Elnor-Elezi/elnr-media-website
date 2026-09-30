@@ -8,7 +8,7 @@ source_type: community
 date_added: "2026-04-13"
 author: connerlambden
 tags: [mcp, news, media-bias, stocks, options, finance, research]
-tools: [claude, cursor, gemini]
+tools: [Antigravity, cursor, gemini]
 ---
 
 # Helium MCP
@@ -30,7 +30,7 @@ Helium MCP provides AI coding assistants with access to news intelligence, media
 
 Add the Helium MCP server to your client configuration. The endpoint uses streamable HTTP and requires no authentication.
 
-### Claude Desktop / Cursor / Windsurf
+### Antigravity Desktop / Cursor / Windsurf
 
 ```json
 {

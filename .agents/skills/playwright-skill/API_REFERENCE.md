@@ -36,7 +36,7 @@ Before using this skill, ensure Playwright is available:
 npm list playwright 2>/dev/null || echo "Playwright not installed"
 
 # Install (if needed)
-cd ~/.claude/skills/playwright-skill
+cd ~/.Antigravity/skills/playwright-skill
 npm run setup
 ```
 

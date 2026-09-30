@@ -29,7 +29,7 @@ This walkthrough captures the maintainer-side documentation and release publicat
 
 ### 3. Maintenance fixes verified
 
-- **Issue #344**: Corrected `.claude-plugin/marketplace.json` to use `source: "./"` and added a regression test for the Claude Code marketplace entry
+- **Issue #344**: Corrected `.Antigravity-plugin/marketplace.json` to use `source: "./"` and added a regression test for the Antigravity marketplace entry
 - **.github/MAINTENANCE.md**: Documented the maintainer flow for fork-gated workflows and stale PR metadata
 
 ### 4. Release protocol executed

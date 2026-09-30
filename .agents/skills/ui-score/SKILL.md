@@ -2,7 +2,7 @@
 name: ui-score
 description: Score a UI file's design quality 0-100 against StyleSeed's design language — per-category breakdown, the worst offenders, and a prioritized fix list. A quantified version of /ss-review.
 risk: unknown
-source: https://github.com/bitjaru/styleseed/tree/main/engine/.claude/skills/ss-score
+source: https://github.com/bitjaru/styleseed/tree/main/engine/.Antigravity/skills/ss-score
 source_repo: bitjaru/styleseed
 source_type: community
 date_added: 2026-07-01
@@ -114,7 +114,7 @@ Use letter bands: 90+ A · 80-89 B · 70-79 C · 60-69 D · <60 F.
 
 ## Gate mode (use this as the Quality Gate before showing the user UI)
 
-The Quality Gate (CLAUDE.md / AGENTS.md) is `/ss-score` run as a loop, not a one-off:
+The Quality Gate (AGENTS.md / AGENTS.md) is `/ss-score` run as a loop, not a one-off:
 
 1. Score the just-generated UI.
 2. If **< 80**, apply the "fix first" list (use `/ss-review` to make the edits), then **re-score**.

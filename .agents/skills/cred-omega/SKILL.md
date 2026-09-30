@@ -12,7 +12,7 @@ tags:
 - api-keys
 - vault
 tools:
-- claude-code
+- Antigravity-code
 - antigravity
 - cursor
 - gemini-cli

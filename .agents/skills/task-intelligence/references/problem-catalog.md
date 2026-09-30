@@ -8,7 +8,7 @@
 | `name` ou `description` duplicados no YAML | Média | Grep por `^name:` no arquivo — deve ter 1 ocorrência |
 | skill-installer falha silenciosamente | Média | Usar `--force` e ler output completo |
 | scan_registry.py bug com sets/dicts | Baixa | Atualizar registry manualmente via JSON |
-| Skill no .claude mas não em skills/ | Média | Sempre instalar via skill-installer, não copiar manual |
+| Skill no .Antigravity mas não em skills/ | Média | Sempre instalar via skill-installer, não copiar manual |
 
 ## APIs e Integrações
 

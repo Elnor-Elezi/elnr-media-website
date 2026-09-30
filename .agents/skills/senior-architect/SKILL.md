@@ -1,9 +1,8 @@
 ---
 name: senior-architect
-description: "Complete toolkit for senior architect with modern tools and best practices."
-risk: critical
+description: "Comprehensive software architecture skill for designing scalable, maintainable systems using ReactJS, NextJS, NodeJS, Express, React Native, Swift, Kotlin, Flutter, Postgres, GraphQL, Go, Python. I..."
+risk: unknown
 source: community
-date_added: "2026-02-27"
 ---
 
 # Senior Architect
@@ -213,8 +212,3 @@ Check the comprehensive troubleshooting section in `references/tech_decision_gui
 
 ## When to Use
 This skill is applicable to execute the workflow or actions described in the overview.
-
-## Limitations
-- Use this skill only when the task clearly matches the scope described above.
-- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
-- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.

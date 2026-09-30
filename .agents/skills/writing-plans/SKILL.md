@@ -1,9 +1,8 @@
 ---
 name: writing-plans
 description: "Use when you have a spec or requirements for a multi-step task, before touching code"
-risk: critical
+risk: unknown
 source: community
-date_added: "2026-02-27"
 ---
 
 # Writing Plans
@@ -36,7 +35,7 @@ Assume they are a skilled developer, but know almost nothing about our toolset o
 ```markdown
 # [Feature Name] Implementation Plan
 
-> **For Claude:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task.
+> **For Antigravity:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task.
 
 **Goal:** [One sentence describing what this builds]
 
@@ -120,8 +119,3 @@ After saving the plan, offer execution choice:
 
 ## When to Use
 This skill is applicable to execute the workflow or actions described in the overview.
-
-## Limitations
-- Use this skill only when the task clearly matches the scope described above.
-- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
-- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.

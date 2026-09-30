@@ -7,7 +7,7 @@ source: community
 date_added: "2026-03-07"
 author: MAIOStudio
 tags: [security, audit, skills, bundles, cross-platform]
-tools: [claude, gemini, gpt, llama, mistral, etc]
+tools: [Antigravity, gemini, gpt, llama, mistral, etc]
 ---
 
 # Audit Skills (Premium Universal Security)

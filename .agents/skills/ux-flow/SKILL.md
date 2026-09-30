@@ -2,7 +2,7 @@
 name: ux-flow
 description: Design user flows and navigation structure following proven UX patterns
 risk: unknown
-source: https://github.com/bitjaru/styleseed/tree/main/engine/.claude/skills/ss-flow
+source: https://github.com/bitjaru/styleseed/tree/main/engine/.Antigravity/skills/ss-flow
 source_repo: bitjaru/styleseed
 source_type: community
 date_added: 2026-07-01
@@ -29,7 +29,7 @@ Description: $ARGUMENTS
 ## Instructions
 
 1. Read the design system reference:
-   - `CLAUDE.md` for component inventory
+   - `AGENTS.md` for component inventory
    - `DESIGN-LANGUAGE.md` for layout patterns (sections 13-14, 19-20)
    - `components/patterns/` for available building blocks
 

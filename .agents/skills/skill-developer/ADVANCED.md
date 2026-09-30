@@ -6,7 +6,7 @@ Ideas and concepts for future improvements to the skill system.
 
 ## Dynamic Rule Updates
 
-**Current State:** Requires Claude Code restart to pick up changes to skill-rules.json
+**Current State:** Requires Antigravity restart to pick up changes to skill-rules.json
 
 **Future Enhancement:** Hot-reload configuration without restart
 
@@ -18,7 +18,7 @@ Ideas and concepts for future improvements to the skill system.
 
 **Benefits:**
 - Faster iteration during skill development
-- No need to restart Claude Code
+- No need to restart Antigravity
 - Better developer experience
 
 ---
@@ -122,7 +122,7 @@ Ideas and concepts for future improvements to the skill system.
 {
   "my-skill": {
     "version": "2.1.0",
-    "minClaudeVersion": "1.5.0",
+    "minAntigravityVersion": "1.5.0",
     "changelog": "Added support for new workflow patterns",
     ...
   }

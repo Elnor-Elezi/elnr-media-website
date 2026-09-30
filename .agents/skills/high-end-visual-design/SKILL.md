@@ -9,7 +9,7 @@ source_type: community
 date_added: "2026-04-17"
 author: Leonxlnx
 tags: [frontend, visual-design, motion, ui]
-tools: [claude, cursor, codex, antigravity]
+tools: [Antigravity, cursor, codex, antigravity]
 ---
 # Agent Skill: Principal UI/UX Architect & Motion Choreographer (Awwwards-Tier)
 

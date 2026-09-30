@@ -1,16 +1,16 @@
 ---
 name: skill-check
-description: "Validate Claude Code skills against the agentskills specification. Catches structural, semantic, and naming issues before users do."
+description: "Validate Antigravity skills against the agentskills specification. Catches structural, semantic, and naming issues before users do."
 category: development
 risk: safe
 source: https://github.com/olgasafonova/SkillCheck-Free
 date_added: "2026-03-11"
 author: olgasafonova
 tags: [validation, linter, agentskills, skill-authoring, code-quality]
-tools: [claude, cursor, windsurf, codex-cli]
+tools: [Antigravity, cursor, windsurf, codex-cli]
 license: MIT
 allowed-tools: Read Glob
-compatibility: claude-code
+compatibility: Antigravity-code
 ---
 
 # SkillCheck
@@ -58,7 +58,7 @@ Return structured results: score, grade (Excellent/Good/Needs Work/Poor), issue 
 ### Example 1: Validating a skill
 
 ```
-User: check my skill at ~/.claude/skills/weekly-report/SKILL.md
+User: check my skill at ~/.Antigravity/skills/weekly-report/SKILL.md
 
 SkillCheck output:
 ## weekly-report Check Results [FREE]
@@ -78,7 +78,7 @@ Score: 85/100 (Good)
 ### Example 2: Clean skill passes all checks
 
 ```
-User: skillcheck ~/.claude/skills/processing-pdfs/SKILL.md
+User: skillcheck ~/.Antigravity/skills/processing-pdfs/SKILL.md
 
 Score: 100/100 (Excellent)
 All 31 checks passed. No issues found.

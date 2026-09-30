@@ -9,7 +9,7 @@ source_type: community
 date_added: "2026-06-12"
 author: timwukp
 tags: [compliance, pci-dss, mas-trm, fintech, banking, security-review, audit, financial-services]
-tools: [claude, cursor, gemini, codex, antigravity]
+tools: [Antigravity, cursor, gemini, codex, antigravity]
 license: "MIT"
 license_source: "https://github.com/timwukp/agent-skills-best-practice/blob/main/LICENSE"
 ---

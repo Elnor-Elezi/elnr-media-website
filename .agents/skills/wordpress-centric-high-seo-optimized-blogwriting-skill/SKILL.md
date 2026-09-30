@@ -8,7 +8,7 @@ source_type: self
 date_added: "2026-04-12"
 author: Whoisabhishekadhikari
 tags: [writing, blog, seo, content, wordpress]
-tools: [claude, cursor, gemini]
+tools: [Antigravity, cursor, gemini]
 version: 1.1.0
 ---
 

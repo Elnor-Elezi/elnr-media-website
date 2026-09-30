@@ -42,7 +42,7 @@ A polis lives in a `_polis/` folder at the project root; everything outside it i
 - `citizens/<agent-id>/` — `capability_card.yml`, `status.md`, `inbox.md`, `journal.md`
 - `contracts/open/<id>.md` · `contracts/settled/<id>.md` · `contracts/routing_stats.yml` (learned policy, updated on settle)
 - `lessons/<capability-tag>/<id>.md` · `reviews/<YYYY-MM-DD-HHMM>-<contract>.md` · `amendments/proposed|ratified/`
-- Project root also gets `CLAUDE.md` / `AGENTS.md` / `GEMINI.md` bridge pointers and `.agents/skills/polis-protocol/SKILL.md` (Codex/Antigravity copy), all pointing at `CONSTITUTION.md`.
+- Project root also gets `AGENTS.md` / `AGENTS.md` / `GEMINI.md` bridge pointers and `.agents/skills/polis-protocol/SKILL.md` (Codex/Antigravity copy), all pointing at `CONSTITUTION.md`.
 
 Citizens link to project files with wikilinks (`[[path/to/note]]`). The `_polis/` folder is the only thing the protocol owns.
 
@@ -82,8 +82,8 @@ Reserved verb phrases carry meaning scripts may filter on: `joined`/`left polis`
 Every citizen publishes `_polis/citizens/<agent-id>/capability_card.yml` — the machine-parseable answer to "who can do what":
 
 ```yaml
-agent_id: claude-research-pesaj
-vendor: anthropic        # model: claude-opus-4-7
+agent_id: Antigravity-research-pesaj
+vendor: anthropic        # model: Antigravity-opus-4-7
 capability_tags:
   long-context-reading: { self_rating: 5, evidence: "150k token context" }
   spanish-translation:  { self_rating: 3, evidence: "native-ish, not certified" }
@@ -131,7 +131,7 @@ If `_polis/CONSTITUTION.md` does not exist, found the polis. Three paths, in ord
 
 3. **By hand — no Python at all.** Copy the templates in `references/templates.md`. The minimum viable polis is `_polis/CONSTITUTION.md` + your own `capability_card.yml` + an empty `chronicle.md` with a frontmatter block.
 
-All three write the full `_polis/` structure (constitution, founder's capability card, seed `chronicle.md`, empty `routing_stats.yml`, and the `CLAUDE.md`/`AGENTS.md`/`GEMINI.md` bridge pointers). All are idempotent and never overwrite existing files. `polis init --repair` (or re-running the script) restores missing managed files; `polis migrate --plan|--apply|--rollback` handles schema upgrades reversibly.
+All three write the full `_polis/` structure (constitution, founder's capability card, seed `chronicle.md`, empty `routing_stats.yml`, and the `AGENTS.md`/`AGENTS.md`/`GEMINI.md` bridge pointers). All are idempotent and never overwrite existing files. `polis init --repair` (or re-running the script) restores missing managed files; `polis migrate --plan|--apply|--rollback` handles schema upgrades reversibly.
 
 ## Registering a citizen into an existing polis
 
@@ -144,11 +144,11 @@ When you arrive at a project that has `_polis/CONSTITUTION.md` but no card for y
 5. Post a `joined polis` line in `chronicle.md` linking your card.
 6. Continue with the entry routine.
 
-**Agent ID convention:** `<vendor-or-tool>-<role>-<project>`. The vendor prefix lets any citizen see at a glance which model produced a chronicle line. Good: `claude-research-pesaj`, `codex-frontend-pesaj`, `gemini-translator-pesaj`. Bad: `agent-7a3f` (opaque), `helper` (generic), `gemini-2026-05-14-1430` (timestamps aren't identity). Lowercase, hyphens only, 8–40 chars; once registered, never rename.
+**Agent ID convention:** `<vendor-or-tool>-<role>-<project>`. The vendor prefix lets any citizen see at a glance which model produced a chronicle line. Good: `Antigravity-research-pesaj`, `codex-frontend-pesaj`, `gemini-translator-pesaj`. Bad: `agent-7a3f` (opaque), `helper` (generic), `gemini-2026-05-14-1430` (timestamps aren't identity). Lowercase, hyphens only, 8–40 chars; once registered, never rename.
 
 ## Working across vendors
 
-The bridge pointers written at bootstrap let Claude, Codex, Gemini CLI, GPT-based tools, and anything that reads markdown share one polis (`AGENTS.md` also covers Jules, Aider, goose, opencode, Zed, Warp, VS Code, Devin). All point at `_polis/CONSTITUTION.md`, so the protocol updates in one file. Cross-vendor routing is the payoff: the bandit sends a translation to whoever has the best `spanish-translation` track record, not whoever happens to be the current chat.
+The bridge pointers written at bootstrap let Antigravity, Codex, Gemini CLI, GPT-based tools, and anything that reads markdown share one polis (`AGENTS.md` also covers Jules, Aider, goose, opencode, Zed, Warp, VS Code, Devin). All point at `_polis/CONSTITUTION.md`, so the protocol updates in one file. Cross-vendor routing is the payoff: the bandit sends a translation to whoever has the best `spanish-translation` track record, not whoever happens to be the current chat.
 
 ## Failure modes and recovery
 

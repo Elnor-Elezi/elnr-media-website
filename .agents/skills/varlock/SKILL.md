@@ -1,6 +1,6 @@
 ---
 name: varlock
-description: "Secure-by-default environment variable management for Claude Code sessions."
+description: "Secure-by-default environment variable management for Antigravity sessions."
 risk: critical
 source: "https://github.com/dmno-dev/varlock"
 version: 1.0.0
@@ -8,21 +8,21 @@ version: 1.0.0
 
 # Varlock Security Skill
 
-Secure-by-default environment variable management for Claude Code sessions.
+Secure-by-default environment variable management for Antigravity sessions.
 
 > **Repository**: https://github.com/dmno-dev/varlock
 > **Documentation**: https://varlock.dev
 
 ## When to Use
-- You need to work with environment variables or secrets in a Claude Code session without exposing their values.
+- You need to work with environment variables or secrets in a Antigravity session without exposing their values.
 - The task involves validating, loading, or auditing secrets while keeping them out of logs, diffs, and assistant context.
 - You want a secure-by-default workflow built around Varlock instead of direct `.env` inspection.
 
 ## Core Principle: Secrets Never Exposed
 
-When working with Claude, secrets must NEVER appear in:
+When working with Antigravity, secrets must NEVER appear in:
 - Terminal output
-- Claude's input/output context
+- Antigravity's input/output context
 - Log files or traces
 - Git commits or diffs
 - Error messages
@@ -31,12 +31,12 @@ This skill ensures all sensitive data is properly protected.
 
 ---
 
-## CRITICAL: Security Rules for Claude
+## CRITICAL: Security Rules for Antigravity
 
 ### Rule 1: Never Echo Secrets
 
 ```bash
-# ❌ NEVER DO THIS - exposes secret to Claude's context
+# ❌ NEVER DO THIS - exposes secret to Antigravity's context
 echo $CLERK_SECRET_KEY
 cat .env | grep SECRET
 printenv | grep API
@@ -167,7 +167,7 @@ STRIPE_PUBLISHABLE_KEY=
 
 ---
 
-## Safe Commands for Claude
+## Safe Commands for Antigravity
 
 ### Validating Environment
 
@@ -224,7 +224,7 @@ npm run build
 
 ```bash
 # 1. Update secret in external source (1Password, AWS, etc.)
-# 2. Update .env file manually (don't use Claude for this)
+# 2. Update .env file manually (don't use Antigravity for this)
 # 3. Validate new value works
 varlock load
 
@@ -289,7 +289,7 @@ printenv | grep KEY
 ### When User Asks to "Update a secret"
 
 ```
-Claude should respond:
+Antigravity should respond:
 "I cannot directly modify secrets for security reasons. Please:
 1. Update the value in your .env file manually
 2. Or update in your secrets manager (1Password, AWS, etc.)
@@ -301,7 +301,7 @@ I can help you update the .env.schema if you need to add new variables."
 ### When User Asks to "Show me the .env file"
 
 ```
-Claude should respond:
+Antigravity should respond:
 "I won't read .env files directly as they contain secrets. Instead:
 - Run `varlock load` to see masked values
 - Run `cat .env.schema` to see the schema (safe)
@@ -407,7 +407,7 @@ Add these to your package.json:
 - [ ] Commit `.env.schema` to version control
 - [ ] Add `npm run env:validate` to CI/CD
 - [ ] Document secret rotation procedure
-- [ ] Never use `cat .env` or `echo $SECRET` in Claude sessions
+- [ ] Never use `cat .env` or `echo $SECRET` in Antigravity sessions
 
 ---
 
@@ -424,9 +424,9 @@ Add these to your package.json:
 | Never Do | Why |
 |----------|-----|
 | `cat .env` | Exposes all secrets |
-| `echo $SECRET` | Exposes to Claude context |
+| `echo $SECRET` | Exposes to Antigravity context |
 | `printenv \| grep` | Exposes matching secrets |
-| Read .env with tools | Secrets in Claude's context |
+| Read .env with tools | Secrets in Antigravity's context |
 | Hardcode in commands | In shell history |
 
 ---
@@ -436,17 +436,17 @@ Add these to your package.json:
 ### Clerk Skill
 - Test user passwords are `@sensitive`
 - Test emails are `@sensitive=false` (contain +clerk_test, not secret)
-- See: `~/.claude/skills/clerk/SKILL.md`
+- See: `~/.Antigravity/skills/clerk/SKILL.md`
 
 ### Docker Skill
 - Mount `.env` file, never copy secrets to image
 - Use `varlock run` as entrypoint
-- See: `~/.claude/skills/docker/SKILL.md`
+- See: `~/.Antigravity/skills/docker/SKILL.md`
 
 ---
 
 *Last updated: December 22, 2025*
-*Secure-by-default environment management for Claude Code*
+*Secure-by-default environment management for Antigravity*
 
 ## Limitations
 - Use this skill only when the task clearly matches the scope described above.

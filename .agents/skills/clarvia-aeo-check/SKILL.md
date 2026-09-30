@@ -7,7 +7,7 @@ source: community
 date_added: "2026-03-27"
 author: digitamaz
 tags: [mcp, aeo, tool-quality, agent-readiness, api-scoring, clarvia]
-tools: [claude, cursor, windsurf, cline]
+tools: [Antigravity, cursor, windsurf, cline]
 ---
 
 # Clarvia AEO Check
@@ -42,7 +42,7 @@ Add Clarvia MCP server to your config:
 
 ### Step 1: Score a specific tool
 
-Ask Claude to score any tool by URL or name:
+Ask Antigravity to score any tool by URL or name:
 
 ```
 Score https://github.com/example/my-mcp-server for agent-readiness

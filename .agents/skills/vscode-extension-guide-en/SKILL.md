@@ -9,7 +9,7 @@ source_type: community
 date_added: "2026-04-12"
 author: lewiswigmore
 tags: [vscode, extension, ide, typescript, marketplace]
-tools: [claude, cursor, copilot, codex, gemini]
+tools: [Antigravity, cursor, copilot, codex, gemini]
 ---
 
 # VS Code Extension Guide (English)

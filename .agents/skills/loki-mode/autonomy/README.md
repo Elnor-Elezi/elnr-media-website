@@ -13,24 +13,24 @@ Single script that handles everything: prerequisites, setup, Vibe Kanban monitor
 ```
 
 That's it! The script will:
-1. Check all prerequisites (Claude CLI, Python, Git, etc.)
+1. Check all prerequisites (Antigravity CLI, Python, Git, etc.)
 2. Verify skill installation
 3. Initialize the `.loki/` directory
 4. **Start Vibe Kanban background sync** (monitor tasks in real-time)
-5. Start Claude Code with **live output** (no more waiting blindly)
+5. Start Antigravity with **live output** (no more waiting blindly)
 6. Auto-resume on rate limits or interruptions
 7. Continue until completion or max retries
 
 ## Live Output
 
-Claude's output is displayed in real-time - you can see exactly what's happening:
+Antigravity's output is displayed in real-time - you can see exactly what's happening:
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  CLAUDE CODE OUTPUT (live)
+  Antigravity OUTPUT (live)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-[Claude's output appears here in real-time...]
+[Antigravity's output appears here in real-time...]
 ```
 
 ## Status Monitor (Built-in)
@@ -69,7 +69,7 @@ cat .loki/STATUS.txt
 
 | Prerequisite | Required | Notes |
 |--------------|----------|-------|
-| Claude Code CLI | Yes | Install from https://claude.ai/code |
+| Antigravity CLI | Yes | Install from https://Antigravity.ai/code |
 | Python 3 | Yes | For state management |
 | Git | Yes | For version control |
 | curl | Yes | For web fetches |
@@ -112,12 +112,12 @@ LOKI_MAX_RETRIES=100 LOKI_BASE_WAIT=120 ./autonomy/run.sh ./docs/prd.md
                           │
                           ▼
          ┌────────────────────────────────┐
-         │  Run Claude Code with prompt   │◄────────────────┐
+         │  Run Antigravity with prompt   │◄────────────────┐
          └────────────────────────────────┘                 │
                           │                                 │
                           ▼                                 │
               ┌───────────────────────┐                     │
-              │  Claude exits         │                     │
+              │  Antigravity exits         │                     │
               └───────────────────────┘                     │
                           │                                 │
               ┌───────────┴───────────┐                     │
@@ -161,7 +161,7 @@ The script detects the previous state and continues from where it left off.
 
 | Feature | Manual Mode | Autonomy Mode |
 |---------|-------------|---------------|
-| Start | `claude --dangerously-skip-permissions` | `./autonomy/run.sh` |
+| Start | `Antigravity --dangerously-skip-permissions` | `./autonomy/run.sh` |
 | Prereq check | Manual | Automatic |
 | Rate limit handling | Manual restart | Auto-resume |
 | State persistence | Manual checkpoint | Automatic |
@@ -170,10 +170,10 @@ The script detects the previous state and continues from where it left off.
 
 ## Troubleshooting
 
-### "Claude Code CLI not found"
+### "Antigravity CLI not found"
 ```bash
-npm install -g @anthropic-ai/claude-code
-# or visit https://claude.ai/code
+npm install -g @anthropic-ai/Antigravity-code
+# or visit https://Antigravity.ai/code
 ```
 
 ### "SKILL.md not found"
@@ -184,7 +184,7 @@ cd /path/to/loki-mode
 ./autonomy/run.sh
 
 # Option 2: Install skill globally
-cp -r . ~/.claude/skills/loki-mode/
+cp -r . ~/.Antigravity/skills/loki-mode/
 ```
 
 ### "Max retries exceeded"

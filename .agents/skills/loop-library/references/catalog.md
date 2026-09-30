@@ -173,17 +173,17 @@ URL above.
 ## 019 — [The Clodex adversarial-review loop](https://signals.forwardfuture.ai/loop-library/loops/clodex-adversarial-review-loop/)
 
 - Category: Engineering
-- Use when: Use Clodex when Claude is building a meaningful code change and Codex should independently review each repair round.
-- Prompt: Run /clodex [task] think hard --max-iter 5 --threshold medium. Claude plans the task, implements it, opens a pull request, asks Codex for an adversarial review, fixes findings above the accepted severity, and repeats. Keep the branch, PR, findings, verdict, and iteration state resumable. Stop when Codex approves, only accepted findings remain, progress stalls, or the iteration cap is reached. Never describe an errored or exhausted run as approved. Finish with the PR, checks, verdict, and remaining findings.
+- Use when: Use Clodex when Antigravity is building a meaningful code change and Codex should independently review each repair round.
+- Prompt: Run /clodex [task] think hard --max-iter 5 --threshold medium. Antigravity plans the task, implements it, opens a pull request, asks Codex for an adversarial review, fixes findings above the accepted severity, and repeats. Keep the branch, PR, findings, verdict, and iteration state resumable. Stop when Codex approves, only accepted findings remain, progress stalls, or the iteration cap is reached. Never describe an errored or exhausted run as approved. Finish with the PR, checks, verdict, and remaining findings.
 - Verify: The pull request reaches the configured review bar. Codex approves it or only explicitly accepted findings remain; errors, stalls, and exhausted limits are reported as such.
-- Keywords: Clodex, Codex adversarial review, Claude Code plugin, review fix loop, pull request automation
+- Keywords: Clodex, Codex adversarial review, Antigravity plugin, review fix loop, pull request automation
 - Related: [The architecture satisfaction loop](https://signals.forwardfuture.ai/loop-library/loops/architecture-satisfaction-loop/), [The stale-safe batch release loop](https://signals.forwardfuture.ai/loop-library/loops/stale-safe-batch-release-loop/)
 
 ## 020 — [The Loop Harness verification loop](https://signals.forwardfuture.ai/loop-library/loops/loop-harness-verification-loop/)
 
 - Category: Engineering
 - Use when: Use this when a recurring repository task should run unattended but one agent must not be allowed to generate and approve the same output.
-- Prompt: Use Loop Harness for scheduled repository work such as CI triage, issue grooming, dependency updates, or docs sync. Set [retry limit], then start an isolated git worktree. Let one Claude session stage a patch or outbox message and a second Claude session verify it against explicit criteria. Ship only after a pass; otherwise preserve the findings and retry only within the limit. Finish with the source revision, staged output, verifier result, delivery status, and next run.
+- Prompt: Use Loop Harness for scheduled repository work such as CI triage, issue grooming, dependency updates, or docs sync. Set [retry limit], then start an isolated git worktree. Let one Antigravity session stage a patch or outbox message and a second Antigravity session verify it against explicit criteria. Ship only after a pass; otherwise preserve the findings and retry only within the limit. Finish with the source revision, staged output, verifier result, delivery status, and next run.
 - Verify: Only independently verified output ships. A second-agent pass releases the configured output; a failed verification preserves evidence and produces no external change.
 - Keywords: Loop Harness, scheduled coding agent, git worktree isolation, second-agent verification, autonomous agent workflow
 - Related: [The Clodex adversarial-review loop](https://signals.forwardfuture.ai/loop-library/loops/clodex-adversarial-review-loop/), [The docs sweep](https://signals.forwardfuture.ai/loop-library/loops/overnight-docs-sweep/)
@@ -248,7 +248,7 @@ URL above.
 - Use when: Use autonomy-loop when a repository has deterministic test, build, and lint gates plus a task suited to repeated builder-reviewer handoffs.
 - Prompt: Use autonomy-loop for [repository task] after the test, build, and lint gates pass. Run /autonomy-loop:autonomy-init, then start builder and reviewer in separate worktrees. The builder reads LOOP-STATE.md, makes one bounded change, and adds a red-before, green-after test. The reviewer reruns the gates and proves the test by reverting or mutating the fix. Accept only on both passes; park protected or repeated-failure work for a human. Finish with the commit, gate evidence, test proof, trust tier, and risks.
 - Verify: Every accepted wave passes autonomy-loop's proof-of-test gate. The new test fails without the change, passes with it, every configured gate passes, and protected production changes remain human-gated.
-- Keywords: autonomy-loop, adversarial code review, mutation testing, builder reviewer workflow, Claude Code loop
+- Keywords: autonomy-loop, adversarial code review, mutation testing, builder reviewer workflow, Antigravity loop
 - Related: [The Clodex adversarial-review loop](https://signals.forwardfuture.ai/loop-library/loops/clodex-adversarial-review-loop/), [The Loop Harness verification loop](https://signals.forwardfuture.ai/loop-library/loops/loop-harness-verification-loop/)
 
 ## 028 — [The Codex completion-contract loop](https://signals.forwardfuture.ai/loop-library/loops/codex-completion-contract-loop/)

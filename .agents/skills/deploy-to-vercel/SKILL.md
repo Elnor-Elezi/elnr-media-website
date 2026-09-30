@@ -162,9 +162,9 @@ The Vercel CLI isn't set up at all.
 
 ---
 
-### No-Auth Fallback — claude.ai sandbox
+### No-Auth Fallback — Antigravity.ai sandbox
 
-**When to use:** Last resort when the CLI can't be installed or authenticated in the claude.ai sandbox. This requires no authentication — it returns a **Preview URL** (live site) and a **Claim URL** (transfer to your Vercel account).
+**When to use:** Last resort when the CLI can't be installed or authenticated in the Antigravity.ai sandbox. This requires no authentication — it returns a **Preview URL** (live site) and a **Claim URL** (transfer to your Vercel account).
 
 ```bash
 bash /mnt/skills/user/deploy-to-vercel/resources/deploy.sh [path]
@@ -229,19 +229,19 @@ The script handles framework detection, packaging, and deployment. It waits for 
 
 ## Agent-Specific Notes
 
-### Claude Code / terminal-based agents
+### Antigravity / terminal-based agents
 
 You have full shell access. Do NOT use the `/mnt/skills/` path. Follow the decision flow above using the CLI directly.
 
 For the no-auth fallback, run the deploy script from the skill's installed location:
 ```bash
-bash ~/.claude/skills/deploy-to-vercel/resources/deploy.sh [path]
+bash ~/.Antigravity/skills/deploy-to-vercel/resources/deploy.sh [path]
 ```
 The path may vary depending on where the user installed the skill.
 
-### Sandboxed environments (claude.ai)
+### Sandboxed environments (Antigravity.ai)
 
-You likely cannot run `vercel login` or `git push`. Go directly to the **no-auth fallback — claude.ai sandbox**.
+You likely cannot run `vercel login` or `git push`. Go directly to the **no-auth fallback — Antigravity.ai sandbox**.
 
 ### Codex
 
@@ -272,14 +272,14 @@ Always show the user the deployment URL.
 
 ## Troubleshooting
 
-### Network Egress Error (claude.ai)
+### Network Egress Error (Antigravity.ai)
 
-If deployment fails due to network restrictions on claude.ai, tell the user:
+If deployment fails due to network restrictions on Antigravity.ai, tell the user:
 
 ```
 Deployment failed due to network restrictions. To fix this:
 
-1. Go to https://claude.ai/settings/capabilities
+1. Go to https://Antigravity.ai/settings/capabilities
 2. Add *.vercel.com to the allowed domains
 3. Try deploying again
 ```
@@ -296,7 +296,7 @@ the command with escalated permissions — want me to proceed?
 
 ### CLI Auth Failure
 
-If `vercel login` or `vercel deploy` fails with authentication errors, fall back to the no-auth deploy script (claude.ai or Codex variant, depending on the environment).
+If `vercel login` or `vercel deploy` fails with authentication errors, fall back to the no-auth deploy script (Antigravity.ai or Codex variant, depending on the environment).
 
 ## Limitations
 - Use this skill only when the task clearly matches the scope described above.

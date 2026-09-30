@@ -66,7 +66,7 @@ Loki Mode exports tasks in Vibe Kanban compatible format:
   "title": "Implement user authentication UI",
   "description": "Create login/signup forms with validation",
   "status": "todo",
-  "agent": "claude-code",
+  "agent": "Antigravity-code",
   "tags": ["eng-frontend", "phase-4", "priority-high"],
   "metadata": {
     "lokiPhase": "DEVELOPMENT",
@@ -121,7 +121,7 @@ for task in tasks:
         "title": task.get('payload', {}).get('description', task['type']),
         "description": json.dumps(task.get('payload', {}), indent=2),
         "status": "todo",
-        "agent": "claude-code",
+        "agent": "Antigravity-code",
         "tags": [task['type'], f"priority-{task.get('priority', 5)}"],
         "metadata": {
             "lokiTaskId": task['id'],

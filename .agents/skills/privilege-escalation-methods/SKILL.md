@@ -1,10 +1,11 @@
 ---
 name: privilege-escalation-methods
-description: "Provide comprehensive techniques for escalating privileges from a low-privileged user to root/administrator access on compromised Linux and Windows systems. Essential for penetration testing post-exploitation phase and red team operations."
+description: "This skill should be used when the user asks to \"escalate privileges\", \"get root access\", \"become administrator\", \"privesc techniques\", \"abuse sudo\", \"exploit SUID binaries\", \"K..."
+metadata:
+  author: zebbern
+  version: "1.1"
 risk: unknown
 source: community
-author: zebbern
-date_added: "2026-02-27"
 ---
 
 # Privilege Escalation Methods

@@ -168,7 +168,7 @@ Find relevant articles from knowledge base index:
 ```javascript
 function searchKnowledgeBase(topic) {
   // Read knowledge base index
-  const kbIndex = readFile('.claude/skills/wellally-tech/knowledge-base/index.md');
+  const kbIndex = readFile('.Antigravity/skills/wellally-tech/knowledge-base/index.md');
 
   // Find matching articles
   const articles = kbIndex.categories.filter(cat =>

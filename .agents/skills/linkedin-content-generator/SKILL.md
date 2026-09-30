@@ -9,7 +9,7 @@ source_type: community
 date_added: "2026-06-04"
 author: sarveshkishortalele
 tags: [linkedin, content-creation, social-media, marketing, newsletter, carousel, content-calendar, reinforcement-learning, seo, copywriting]
-tools: [claude]
+tools: [Antigravity]
 license: "MIT"
 license_source: "https://github.com/sarveshtalele/linkedin-content-skill/blob/main/LICENSE"
 ---
@@ -18,7 +18,7 @@ license_source: "https://github.com/sarveshtalele/linkedin-content-skill/blob/ma
 
 ## Overview
 
-A full LinkedIn content-creation suite for Claude Code that turns a topic and niche into
+A full LinkedIn content-creation suite for Antigravity that turns a topic and niche into
 publish-ready posts, multi-slide carousels, long-form newsletter editions, and 30-day content
 calendars — all wired through a personal reinforcement-learning memory system so every output
 improves as you give feedback.
@@ -37,7 +37,7 @@ Seven coordinated commands cover the full content workflow:
 
 All helper scripts are bundled inside `skills/linkedin-content-generator/scripts/` and ship
 alongside this `SKILL.md`. They build richly engineered prompts, inject your saved
-preferences, and enforce LinkedIn SEO rules before Claude generates output.
+preferences, and enforce LinkedIn SEO rules before Antigravity generates output.
 A local `memory.md` file persists your style, tone, successful hooks, and top-performing
 formats across every session.
 
@@ -61,8 +61,8 @@ The skill is self-contained. Install it from the antigravity skills library:
 # Install via antigravity CLI (recommended)
 antigravity install linkedin-content-generator
 
-# Or copy manually into your Claude Code skills directory
-cp -r skills/linkedin-content-generator ~/.claude/skills/
+# Or copy manually into your Antigravity skills directory
+cp -r skills/linkedin-content-generator ~/.Antigravity/skills/
 ```
 
 All six Python scripts and the default `memory.md` are bundled inside the
@@ -85,7 +85,7 @@ Python script builds prompt
   • Injects memory.md preferences
         │
         ▼
-Claude generates publish-ready output
+Antigravity generates publish-ready output
         │
         ▼
 /feedback saves what worked → memory.md
@@ -94,7 +94,7 @@ Claude generates publish-ready output
 
 ### Step 1: Set Up Your Niche (One-Time)
 
-Open `~/.claude/skills/linkedin-content-generator/scripts/memory.md` and update the
+Open `~/.Antigravity/skills/linkedin-content-generator/scripts/memory.md` and update the
 **Primary Niche** field:
 
 ```markdown
@@ -108,7 +108,7 @@ This field is injected into every prompt. Without it, the skill defaults to
 ### Step 2: Generate Content
 
 Run any of the seven commands described in the **Commands Reference** section below.
-Claude reads the script output and produces the final content directly in the chat.
+Antigravity reads the script output and produces the final content directly in the chat.
 
 ### Step 3: Save What Works
 
@@ -407,13 +407,13 @@ optional; they are part of the prompt engineering that makes outputs platform-na
 ## Security & Safety Notes
 
 This skill uses the `Bash` allowed-tool to run Python scripts bundled at
-`~/.claude/skills/linkedin-content-generator/scripts/`. All scripts are read-only
+`~/.Antigravity/skills/linkedin-content-generator/scripts/`. All scripts are read-only
 operations except `memory_manager.py`, which writes only to `memory.md` inside that
 same bundled `scripts/` directory.
 
 - No network requests are made by any script.
 - No credentials, tokens, or secrets are read, written, or logged.
-- No files outside `~/.claude/skills/linkedin-content-generator/scripts/` are modified.
+- No files outside `~/.Antigravity/skills/linkedin-content-generator/scripts/` are modified.
 - The `clear` command in `memory_manager.py` overwrites only the bundled `memory.md`;
   it does not delete any other files.
 - All `--feedback` and `--id` arguments passed to `memory_manager.py` are written
@@ -424,8 +424,8 @@ All Bash commands in this skill are local Python invocations with no elevated pr
 required:
 
 ```bash
-# SKILL_SCRIPTS resolves to ~/.claude/skills/linkedin-content-generator/scripts
-SKILL_SCRIPTS="${HOME}/.claude/skills/linkedin-content-generator/scripts"
+# SKILL_SCRIPTS resolves to ~/.Antigravity/skills/linkedin-content-generator/scripts
+SKILL_SCRIPTS="${HOME}/.Antigravity/skills/linkedin-content-generator/scripts"
 python3 "${SKILL_SCRIPTS}/generate_post.py" --topic "..." --niche "..." --tone professional --style list-based
 python3 "${SKILL_SCRIPTS}/memory_manager.py" add --id "..." --feedback "..." --tags "..."
 python3 "${SKILL_SCRIPTS}/memory_manager.py" read
@@ -440,11 +440,11 @@ python3 "${SKILL_SCRIPTS}/memory_manager.py" clear
   **Solution:** Each script uses `sys.path.insert(0, SCRIPT_DIR)` to locate `utils.py`
   relative to itself, so they must be invoked with an absolute path — not from inside
   the `scripts/` directory. Use
-  `python3 "${HOME}/.claude/skills/linkedin-content-generator/scripts/generate_post.py" ...`.
+  `python3 "${HOME}/.Antigravity/skills/linkedin-content-generator/scripts/generate_post.py" ...`.
 
 - **Problem:** Memory is not being applied to generated content.
   **Solution:** Check that `memory.md` exists at
-  `~/.claude/skills/linkedin-content-generator/scripts/memory.md`. Run `/show-memory`
+  `~/.Antigravity/skills/linkedin-content-generator/scripts/memory.md`. Run `/show-memory`
   to confirm. If missing, run any generator command once — it auto-creates the file from
   the bundled template.
 
@@ -454,7 +454,7 @@ python3 "${SKILL_SCRIPTS}/memory_manager.py" clear
   values directly into the prompt string.
 
 - **Problem:** Carousel slides exceed the requested count.
-  **Solution:** The `slides` value is clamped server-side to `[3, 12]`. If Claude
+  **Solution:** The `slides` value is clamped server-side to `[3, 12]`. If Antigravity
   generates more slides than requested, it is following the style guide structure
   (cover + content + CTA). Specify an exact count and style to get precise control.
 
@@ -465,7 +465,7 @@ python3 "${SKILL_SCRIPTS}/memory_manager.py" clear
 
 - **Problem:** `python3` not found on Windows.
   **Solution:** Install Python 3.8+ from python.org and ensure it is on PATH, or run via
-  `py "%USERPROFILE%\.claude\skills\linkedin-content-generator\scripts\generate_post.py" ...`. On Windows without WSL, the `Bash` tool invocation
+  `py "%USERPROFILE%\.Antigravity\skills\linkedin-content-generator\scripts\generate_post.py" ...`. On Windows without WSL, the `Bash` tool invocation
   may need adjustment in the SKILL.md `allowed-tools` context.
 
 ## Related Skills

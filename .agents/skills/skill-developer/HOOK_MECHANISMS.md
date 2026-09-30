@@ -19,7 +19,7 @@ Technical deep dive into how the UserPromptSubmit and PreToolUse hooks work.
 ```
 User submits prompt
     ↓
-.claude/settings.json registers hook
+.Antigravity/settings.json registers hook
     ↓
 skill-activation-prompt.sh executes
     ↓
@@ -35,18 +35,18 @@ Groups matches by priority (critical → high → medium → low)
     ↓
 Outputs formatted message to stdout
     ↓
-stdout becomes context for Claude (injected before prompt)
+stdout becomes context for Antigravity (injected before prompt)
     ↓
-Claude sees: [skill suggestion] + user's prompt
+Antigravity sees: [skill suggestion] + user's prompt
 ```
 
 ### Key Points
 
 - **Exit code**: Always 0 (allow)
-- **stdout**: → Claude's context (injected as system message)
-- **Timing**: Runs BEFORE Claude processes prompt
+- **stdout**: → Antigravity's context (injected as system message)
+- **Timing**: Runs BEFORE Antigravity processes prompt
 - **Behavior**: Non-blocking, advisory only
-- **Purpose**: Make Claude aware of relevant skills
+- **Purpose**: Make Antigravity aware of relevant skills
 
 ### Input Format
 
@@ -75,7 +75,7 @@ ACTION: Use Skill tool BEFORE responding
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 
-Claude sees this output as additional context before processing the user's prompt.
+Antigravity sees this output as additional context before processing the user's prompt.
 
 ---
 
@@ -84,9 +84,9 @@ Claude sees this output as additional context before processing the user's promp
 ### Execution Sequence
 
 ```
-Claude calls Edit/Write tool
+Antigravity calls Edit/Write tool
     ↓
-.claude/settings.json registers hook (matcher: Edit|Write)
+.Antigravity/settings.json registers hook (matcher: Edit|Write)
     ↓
 skill-verification-guard.sh executes
     ↓
@@ -112,16 +112,16 @@ ELSE:
   Exit with code 0 (ALLOW)
     ↓
 IF BLOCKED:
-  stderr → Claude sees message
+  stderr → Antigravity sees message
   Edit/Write tool does NOT execute
-  Claude must use skill and retry
+  Antigravity must use skill and retry
 IF ALLOWED:
   Tool executes normally
 ```
 
 ### Key Points
 
-- **Exit code 2**: BLOCK (stderr → Claude)
+- **Exit code 2**: BLOCK (stderr → Antigravity)
 - **Exit code 0**: ALLOW
 - **Timing**: Runs BEFORE tool execution
 - **Session tracking**: Prevents repeated blocks in same session
@@ -163,7 +163,7 @@ File: form/src/services/user.ts
 💡 TIP: Add '// @skip-validation' comment to skip future checks
 ```
 
-Claude receives this message and understands it needs to use the skill before retrying the edit.
+Antigravity receives this message and understands it needs to use the skill before retrying the edit.
 
 ---
 
@@ -171,20 +171,20 @@ Claude receives this message and understands it needs to use the skill before re
 
 ### Exit Code Reference Table
 
-| Exit Code | stdout | stderr | Tool Execution | Claude Sees |
+| Exit Code | stdout | stderr | Tool Execution | Antigravity Sees |
 |-----------|--------|--------|----------------|-------------|
 | 0 (UserPromptSubmit) | → Context | → User only | N/A | stdout content |
 | 0 (PreToolUse) | → User only | → User only | **Proceeds** | Nothing |
-| 2 (PreToolUse) | → User only | → **CLAUDE** | **BLOCKED** | stderr content |
+| 2 (PreToolUse) | → User only | → **Antigravity** | **BLOCKED** | stderr content |
 | Other | → User only | → User only | Blocked | Nothing |
 
 ### Why Exit Code 2 Matters
 
 This is THE critical mechanism for enforcement:
 
-1. **Only way** to send message to Claude from PreToolUse
-2. stderr content is "fed back to Claude automatically"
-3. Claude sees the block message and understands what to do
+1. **Only way** to send message to Antigravity from PreToolUse
+2. stderr content is "fed back to Antigravity automatically"
+3. Antigravity sees the block message and understands what to do
 4. Tool execution is prevented
 5. Critical for enforcement of guardrails
 
@@ -193,13 +193,13 @@ This is THE critical mechanism for enforcement:
 ```
 User: "Add a new user service with Prisma"
 
-Claude: "I'll create the user service..."
+Antigravity: "I'll create the user service..."
     [Attempts to Edit form/src/services/user.ts]
 
 PreToolUse Hook: [Exit code 2]
     stderr: "⚠️ BLOCKED - Use database-verification"
 
-Claude sees error, responds:
+Antigravity sees error, responds:
     "I need to verify the database schema first."
     [Uses Skill tool: database-verification]
     [Verifies column names]
@@ -212,11 +212,11 @@ Claude sees error, responds:
 
 ### Purpose
 
-Prevent repeated nagging in the same session - once Claude uses a skill, don't block again.
+Prevent repeated nagging in the same session - once Antigravity uses a skill, don't block again.
 
 ### State File Location
 
-`.claude/hooks/state/skills-used-{session_id}.json`
+`.Antigravity/hooks/state/skills-used-{session_id}.json`
 
 ### State File Structure
 
@@ -235,13 +235,13 @@ Prevent repeated nagging in the same session - once Claude uses a skill, don't b
 1. **First edit** of file with Prisma:
    - Hook blocks with exit code 2
    - Updates session state: adds "database-verification" to skills_used
-   - Claude sees message, uses skill
+   - Antigravity sees message, uses skill
 
 2. **Second edit** (same session):
    - Hook checks session state
    - Finds "database-verification" in skills_used
    - Exits with code 0 (allow)
-   - No message to Claude
+   - No message to Antigravity
 
 3. **Different session**:
    - New session ID = new state file
@@ -251,8 +251,8 @@ Prevent repeated nagging in the same session - once Claude uses a skill, don't b
 
 The hook cannot detect when the skill is *actually* invoked - it just blocks once per session per skill. This means:
 
-- If Claude doesn't use the skill but makes a different edit, it won't block again
-- Trust that Claude follows the instruction
+- If Antigravity doesn't use the skill but makes a different edit, it won't block again
+- Trust that Antigravity follows the instruction
 - Future enhancement: detect actual Skill tool usage
 
 ---

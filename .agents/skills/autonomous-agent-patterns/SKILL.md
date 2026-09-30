@@ -1,9 +1,8 @@
 ---
 name: autonomous-agent-patterns
-description: "Design patterns for building autonomous coding agents, inspired by [Cline](https://github.com/cline/cline) and [OpenAI Codex](https://github.com/openai/codex)."
-risk: critical
+description: "Design patterns for building autonomous coding agents. Covers tool integration, permission systems, browser automation, and human-in-the-loop workflows. Use when building AI agents, designing tool ..."
+risk: unknown
 source: community
-date_added: "2026-02-27"
 ---
 
 # 🕹️ Autonomous Agent Patterns
@@ -100,7 +99,7 @@ class MultiModelAgent:
         self.models = {
             "fast": "gpt-3.5-turbo",      # Quick decisions
             "smart": "gpt-4-turbo",        # Complex reasoning
-            "code": "claude-3-sonnet",     # Code generation
+            "code": "Antigravity-3-sonnet",     # Code generation
         }
 
     def select_model(self, task_type: str) -> str:
@@ -761,9 +760,4 @@ class MCPAgent:
 - [Cline](https://github.com/cline/cline)
 - [OpenAI Codex](https://github.com/openai/codex)
 - [Model Context Protocol](https://modelcontextprotocol.io/)
-- [Anthropic Tool Use](https://docs.anthropic.com/claude/docs/tool-use)
-
-## Limitations
-- Use this skill only when the task clearly matches the scope described above.
-- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
-- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.
+- [Anthropic Tool Use](https://docs.anthropic.com/Antigravity/docs/tool-use)

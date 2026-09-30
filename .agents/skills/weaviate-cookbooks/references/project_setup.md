@@ -54,9 +54,9 @@ git add .gitignore
 git commit -m "initialize project baseline"
 ```
 
-## Claude Safety Baseline (Recommended)
+## Antigravity Safety Baseline (Recommended)
 
-For projects developed with Claude Code, add deny rules for local secret files:
+For projects developed with Antigravity, add deny rules for local secret files:
 
 ```json
 {
@@ -72,4 +72,4 @@ For projects developed with Claude Code, add deny rules for local secret files:
 }
 ```
 
-Save this to `.claude/settings.json` at project root.
+Save this to `.Antigravity/settings.json` at project root.

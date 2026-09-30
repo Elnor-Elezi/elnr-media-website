@@ -9,7 +9,7 @@ Transform raw prompts into optimized, production-ready prompts using 11 establis
 
 ## 📋 Overview
 
-**Prompt Engineer** is an intelligent AI skill that analyzes your intentions and automatically generates optimized prompts for Claude, ChatGPT, or any other AI model. Instead of struggling with how to phrase complex requests, simply describe what you want - the skill handles the rest.
+**Prompt Engineer** is an intelligent AI skill that analyzes your intentions and automatically generates optimized prompts for Antigravity, ChatGPT, or any other AI model. Instead of struggling with how to phrase complex requests, simply describe what you want - the skill handles the rest.
 
 This skill works in **"magic mode"** - it operates silently, only asking questions when absolutely necessary. You provide a rough idea, and it returns a polished, structured prompt ready to use.
 
@@ -597,7 +597,7 @@ copilot> transform into prompt: learn machine learning from zero
 
 ---
 
-### Q: Can I use this for any AI model (Claude, ChatGPT, Gemini)?
+### Q: Can I use this for any AI model (Antigravity, ChatGPT, Gemini)?
 **A:** Yes. The prompts are model-agnostic and work with any conversational AI.
 
 ---

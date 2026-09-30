@@ -1,6 +1,6 @@
 ---
 name: faf-go
-description: Guided interview to Gold Code (100% AI-Readiness). Use when helping users improve their .faf file through questions. Leverages Claude Code's AskUserQuestion for seamless integration. Just type /faf-go and answer questions till done.
+description: Guided interview to Gold Code (100% AI-Readiness). Use when helping users improve their .faf file through questions. Leverages Antigravity's AskUserQuestion for seamless integration. Just type /faf-go and answer questions till done.
 risk: unknown
 source: https://github.com/Wolfe-Jam/faf-skills/tree/main/skills/faf-go
 source_repo: Wolfe-Jam/faf-skills
@@ -14,7 +14,7 @@ license_source: https://github.com/Wolfe-Jam/faf-skills/blob/main/LICENSE
 
 **"Just type /faf-go, answer questions till you're done. 100% target."**
 
-`.faf` is an **IANA-registered context format** (`application/vnd.faf+yaml`) — a typed, portable file *you own*, readable by any AI. **faf-cli scores on 21 slots**; your `app_type` selects which are *active*, and **100% ✪ = every active slot filled**. This skill is the guided interview that gets you there: the AI fills what it can detect, then asks you — via Claude Code's AskUserQuestion — only for the gaps it can't source.
+`.faf` is an **IANA-registered context format** (`application/vnd.faf+yaml`) — a typed, portable file *you own*, readable by any AI. **faf-cli scores on 21 slots**; your `app_type` selects which are *active*, and **100% ✪ = every active slot filled**. This skill is the guided interview that gets you there: the AI fills what it can detect, then asks you — via Antigravity's AskUserQuestion — only for the gaps it can't source.
 
 ## When to Use This Skill
 
@@ -25,14 +25,14 @@ Activate when:
 - After `faf init` to fill in missing fields
 - User says "help me with my .faf"
 
-## Integration with Claude Code
+## Integration with Antigravity
 
-FAF Go is built FOR Claude Code:
-- **AskUserQuestion** - Native Claude Code UI for questions
+FAF Go is built FOR Antigravity:
+- **AskUserQuestion** - Native Antigravity UI for questions
 - **multiSelect: true** - Allow multiple answers (e.g., "pytest + WJTTC")
 - **TodoWrite** - Track progress through the interview
-- **Structured output** - JSON that Claude Code understands
-- **Bi-sync** - Answers flow to .faf AND CLAUDE.md
+- **Structured output** - JSON that Antigravity understands
+- **Bi-sync** - Answers flow to .faf AND AGENTS.md
 
 ### multiSelect Support
 
@@ -64,7 +64,7 @@ faf score --json
 
 ### Step 2: Ask Questions Using AskUserQuestion
 
-For each missing field, use Claude Code's AskUserQuestion tool:
+For each missing field, use Antigravity's AskUserQuestion tool:
 
 **Priority Order (most impactful first):**
 1. `project.goal` - What does this project do?
@@ -222,7 +222,7 @@ If score < 100: Continue with remaining questions
   "options": [
     {"label": "Developers", "description": "Software developers"},
     {"label": "End users", "description": "Non-technical users"},
-    {"label": "AI agents", "description": "Claude, Gemini, etc."},
+    {"label": "AI agents", "description": "Antigravity, Gemini, etc."},
     {"label": "Internal team", "description": "Your team only"}
   ]
 }
@@ -251,7 +251,7 @@ stack:
 ```
 User: /faf-go
 
-Claude: Let me check your current .faf status.
+Antigravity: Let me check your current .faf status.
 
 [Runs: faf score --verbose]
 
@@ -261,13 +261,13 @@ Your score is 45%. Let's get you to Gold Code!
 
 User: [Selects option or types custom]
 
-Claude: Great! Now let's capture why this project exists.
+Antigravity: Great! Now let's capture why this project exists.
 
 [Uses AskUserQuestion for human_context.why]
 
 ... continues until 100% ...
 
-Claude: ✪ GOLD CODE ACHIEVED!
+Antigravity: ✪ GOLD CODE ACHIEVED!
 Your AI now has complete context for championship performance.
 ```
 
@@ -286,13 +286,13 @@ Track progress with todos:
 
 ## CLI Fallback
 
-Outside Claude Code, the same destination is reached with the CLI's own interactive interview:
+Outside Antigravity, the same destination is reached with the CLI's own interactive interview:
 
 ```bash
 faf go            # interactive terminal interview (--resume continues a session)
 ```
 
-This skill is the **Claude-native** version of that interview — AskUserQuestion instead of terminal prompts. For structured, programmatic data, use `faf score --json`.
+This skill is the **Antigravity-native** version of that interview — AskUserQuestion instead of terminal prompts. For structured, programmatic data, use `faf score --json`.
 
 ## Success Metrics
 
@@ -309,10 +309,10 @@ When 100% ✪ is achieved:
 ✪ 100% — Gold Code
 
 project.faf: complete
-CLAUDE.md:   synced from .faf
+AGENTS.md:   synced from .faf
 ```
 
-Optionally run `faf sync` to emit CLAUDE.md / AGENTS.md from the .faf. Your AI now starts every session with complete project context.
+Optionally run `faf sync` to emit AGENTS.md / AGENTS.md from the .faf. Your AI now starts every session with complete project context.
 
 ## Related Skills
 
@@ -327,7 +327,7 @@ Optionally run `faf sync` to emit CLAUDE.md / AGENTS.md from the .faf. Your AI n
 
 ---
 
-*MIT · part of the FAF skill family (faf-context · faf-wizard · faf-expert). Native to Claude Code.*
+*MIT · part of the FAF skill family (faf-context · faf-wizard · faf-expert). Native to Antigravity.*
 
 ## Limitations
 

@@ -17,7 +17,7 @@ import requests
 resp = requests.get(
     "https://api.hasdata.com/scrape/youtube/search",
     headers={"x-api-key": API_KEY},
-    params={"q": "anthropic claude", "sortBy": "views", "date": "month"},
+    params={"q": "anthropic Antigravity", "sortBy": "views", "date": "month"},
     timeout=300,
 )
 for v in resp.json().get("videoResults", []):

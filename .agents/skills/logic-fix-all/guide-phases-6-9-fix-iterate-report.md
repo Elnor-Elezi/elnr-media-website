@@ -17,7 +17,7 @@
 6c. For each finding, write the remedy: **Minimal** (change only what the trace shows is wrong), **Targeted** (no side-effect refactoring), **Justified** (one sentence explaining why this fix).
 
 6d. Remedy target for cross-file contradictions:
-- **Code vs constraint file** (CLAUDE.md/AGENTS.md/GEMINI.md/README): edit the CODE. Exception: if the constraint text is obviously stale (references a removed function/module) and code is internally coherent, edit the CONSTRAINT FILE and note spec drift in the Fix Log.
+- **Code vs constraint file** (AGENTS.md/AGENTS.md/GEMINI.md/README): edit the CODE. Exception: if the constraint text is obviously stale (references a removed function/module) and code is internally coherent, edit the CONSTRAINT FILE and note spec drift in the Fix Log.
 - **Code vs runtime config**: edit the CONFIG. Exception: if the config value is internally coherent for its key AND the code looks typo'd, edit the CODE. When both sides are plausible, record as "Unresolved — unclear whether spec or consumer is wrong".
 - **Doc vs doc**: (1) more recent git mtime wins; (2) deeper path beats root-level; (3) still tied → "Unresolved — ambiguous spec" with both citations.
 - **Config internally inconsistent**: edit at the less-referenced key.

@@ -9,7 +9,7 @@ source_type: community
 date_added: "2026-05-27"
 author: stefan-kp
 tags: [security, supply-chain, incident-response, npm, pypi, tooling]
-tools: [claude]
+tools: [Antigravity]
 license: "MIT"
 license_source: "https://github.com/mycelos-ai/bumblebee-skill/blob/main/LICENSE"
 ---
@@ -187,4 +187,4 @@ See `scripts/render_report.py` for the report layout. Bumblebee's own documentat
 
 ## Credit
 
-Bumblebee is developed by Perplexity (https://github.com/perplexityai/bumblebee, Apache-2.0). All scan logic, output formats, and exposure-catalog semantics belong to that project. This repository is just a thin Claude-skill wrapper around the official `bumblebee` CLI; the wrapper itself is MIT-licensed (see `LICENSE`).
+Bumblebee is developed by Perplexity (https://github.com/perplexityai/bumblebee, Apache-2.0). All scan logic, output formats, and exposure-catalog semantics belong to that project. This repository is just a thin Antigravity-skill wrapper around the official `bumblebee` CLI; the wrapper itself is MIT-licensed (see `LICENSE`).

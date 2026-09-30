@@ -13,7 +13,7 @@ tags:
 plugin:
   targets:
     codex: blocked
-    claude: blocked
+    Antigravity: blocked
 ---
 
 # Bilig WorkPaper

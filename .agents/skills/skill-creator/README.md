@@ -4,7 +4,7 @@
 
 ## What It Does
 
-The skill-creator automates the entire workflow of creating new CLI skills for GitHub Copilot CLI and Claude Code. It guides you through brainstorming, applies standardized templates, validates content quality, and handles installation—all while following Anthropic's official best practices.
+The skill-creator automates the entire workflow of creating new CLI skills for GitHub Copilot CLI and Antigravity. It guides you through brainstorming, applies standardized templates, validates content quality, and handles installation—all while following Anthropic's official best practices.
 
 ## Key Features
 
@@ -44,8 +44,8 @@ Install via symlinks to make the skill available everywhere:
 # For GitHub Copilot CLI
 ln -sf "$(pwd)/.github/skills/skill-creator" ~/.copilot/skills/skill-creator
 
-# For Claude Code
-ln -sf "$(pwd)/.claude/skills/skill-creator" ~/.claude/skills/skill-creator
+# For Antigravity
+ln -sf "$(pwd)/.Antigravity/skills/skill-creator" ~/.Antigravity/skills/skill-creator
 ```
 
 **Benefits of global installation:**
@@ -67,8 +67,8 @@ Simply ask the CLI to create a new skill:
 # GitHub Copilot CLI
 gh copilot "create a new skill for debugging Python errors"
 
-# Claude Code
-claude "create a skill that helps with git workflows"
+# Antigravity
+Antigravity "create a skill that helps with git workflows"
 ```
 
 The skill will guide you through with visual progress tracking:
@@ -115,7 +115,7 @@ The skill will:
 
 The skill will:
 - Generate files only in `.github/skills/`
-- Skip Claude-specific installation
+- Skip Antigravity-specific installation
 - Validate against Copilot requirements
 
 ## Example Walkthrough
@@ -137,7 +137,7 @@ What type of skill?
 > [×] General purpose
 
 Which platforms?
-> [×] Both (Copilot + Claude)
+> [×] Both (Copilot + Antigravity)
 
 [... continues through all phases ...]
 
@@ -145,7 +145,7 @@ Which platforms?
 
 📦 Skill Name: database-migration
 📁 Location: .github/skills/database-migration/
-🔗 Installed: Global (Copilot + Claude)
+🔗 Installed: Global (Copilot + Antigravity)
 ```
 
 ## File Structure
@@ -167,7 +167,7 @@ When you create a skill, this structure is generated:
 ## Configuration
 
 **No configuration needed!** This skill uses runtime discovery to:
-- Detect installed platforms (Copilot CLI, Claude Code)
+- Detect installed platforms (Copilot CLI, Antigravity)
 - Find repository root automatically
 - Extract author info from git config
 - Determine optimal file locations
@@ -251,7 +251,7 @@ Created a useful skill? Share it:
 ## Resources
 
 - **Writing Style Guide:** `resources/templates/writing-style-guide.md`
-- **Anthropic Official Guide:** https://github.com/anthropics/claude-plugins-official
+- **Anthropic Official Guide:** https://github.com/anthropics/Antigravity-plugins-official
 - **Templates Directory:** `resources/templates/`
 - **Validation Scripts:** `scripts/validate-*.sh`
 
@@ -265,6 +265,6 @@ For issues or questions:
 ---
 
 **Version:** 1.1.0  
-**Platform:** GitHub Copilot CLI, Claude Code  
+**Platform:** GitHub Copilot CLI, Antigravity  
 **Author:** Eric Andrade  
 **Last Updated:** 2026-02-01

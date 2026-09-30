@@ -1,25 +1,25 @@
 ---
 name: sendblue-notify
-description: "Text the user's phone when a long-running task, agent turn, or scheduled job finishes — via @sendblue/cli for outbound, optionally wired to a Claude Code Stop hook for automatic fire."
+description: "Text the user's phone when a long-running task, agent turn, or scheduled job finishes — via @sendblue/cli for outbound, optionally wired to a Antigravity Stop hook for automatic fire."
 category: automation
 risk: critical
 source: community
 source_type: official
 date_added: "2026-05-22"
 author: AnthonyFirth
-tags: [sendblue, imessage, sms, notifications, hooks, claude-code, automation]
-tools: [claude, cursor, gemini]
+tags: [sendblue, imessage, sms, notifications, hooks, Antigravity-code, automation]
+tools: [Antigravity, cursor, gemini]
 plugin:
   targets:
     codex: blocked
-    claude: blocked
+    Antigravity: blocked
 ---
 
 # Sendblue Notify
 
 ## Overview
 
-Outbound, fire-and-forget notifications from a local Claude Code session, script, or scheduled job to the user's phone via Sendblue. This is the "walk away from the terminal" pattern: kick off something long, get an iMessage when it lands. This skill owns **when to notify and what to say**. Actual sending goes through [[sendblue-cli]]. Hook wiring (so notifications fire automatically) goes through [[update-config]].
+Outbound, fire-and-forget notifications from a local Antigravity session, script, or scheduled job to the user's phone via Sendblue. This is the "walk away from the terminal" pattern: kick off something long, get an iMessage when it lands. This skill owns **when to notify and what to say**. Actual sending goes through [[sendblue-cli]]. Hook wiring (so notifications fire automatically) goes through [[update-config]].
 
 ## When to Use This Skill
 
@@ -98,20 +98,20 @@ RESULT=$(run-migration 2>&1 | tail -1)
 npx @sendblue/cli send +15551234567 "migration done — $RESULT"
 ```
 
-### Example 2: Claude Code `Stop` hook (opt-in, scoped)
+### Example 2: Antigravity `Stop` hook (opt-in, scoped)
 
-Register a `Stop` hook in `.claude/settings.json` (project-scoped) — never in global settings unless asked. Defer the actual file edit to [[update-config]]. The hook command itself should:
+Register a `Stop` hook in `.Antigravity/settings.json` (project-scoped) — never in global settings unless asked. Defer the actual file edit to [[update-config]]. The hook command itself should:
 
 1. Run cheaply (it fires on *every* `Stop`).
 2. Gate on duration — skip sends for turns under a threshold (e.g. 90s).
 3. Never fail the parent — pipe to `|| true` so a notify error doesn't surface as a hook failure.
 
 ```bash
-[ "$CLAUDE_TURN_DURATION_SECONDS" -ge 90 ] && \
-  npx @sendblue/cli send "$NOTIFY_NUMBER" "turn done in ${CLAUDE_TURN_DURATION_SECONDS}s" || true
+[ "$Antigravity_TURN_DURATION_SECONDS" -ge 90 ] && \
+  npx @sendblue/cli send "$NOTIFY_NUMBER" "turn done in ${Antigravity_TURN_DURATION_SECONDS}s" || true
 ```
 
-(Adjust the env var names to whatever the hook contract actually provides — verify against the current Claude Code hooks reference before writing the config; the harness owns those names, not this skill.)
+(Adjust the env var names to whatever the hook contract actually provides — verify against the current Antigravity hooks reference before writing the config; the harness owns those names, not this skill.)
 
 Show the proposed hook config to the user and get confirmation before invoking [[update-config]]. Automated outbound messages are a footgun if the threshold is wrong.
 
@@ -125,10 +125,10 @@ For `/schedule`, the routine itself can shell out at the end. Same copy rules ap
 
 ## Composing with textme
 
-If the user has `@textme` installed (njerschow/textme — daemon that lets you *text Claude* from your phone), notify is still useful and not redundant. They run in opposite directions:
+If the user has `@textme` installed (njerschow/textme — daemon that lets you *text Antigravity* from your phone), notify is still useful and not redundant. They run in opposite directions:
 
-- **textme**: phone → Claude (user initiates from the phone).
-- **sendblue-notify**: local Claude → phone (Claude initiates from a local session).
+- **textme**: phone → Antigravity (user initiates from the phone).
+- **sendblue-notify**: local Antigravity → phone (Antigravity initiates from a local session).
 
 You can install both: textme on a server for inbound, notify as a local `Stop`-hook for outbound. Different problems, same Sendblue account.
 
@@ -143,7 +143,7 @@ You can install both: textme on a server for inbound, notify as a local `Stop`-h
 
 ## Limitations
 
-- Notify is outbound-only. For "text Claude from the phone" use the `@textme` skill instead.
+- Notify is outbound-only. For "text Antigravity from the phone" use the `@textme` skill instead.
 - On the free Sendblue plan, the destination phone must have texted the Sendblue number at least once before outbound succeeds. Verify with `sendblue contacts` before relying on notify in an unattended workflow.
 - This skill does not own credentials, account setup, or the hook config file format. Those belong to [[sendblue-cli]] and [[update-config]] respectively.
 
@@ -168,8 +168,8 @@ You can install both: textme on a server for inbound, notify as a local `Stop`-h
 
 - `@sendblue-cli` — Owns the actual send mechanism. This skill calls into it.
 - `@sendblue-api` — HTTP alternative for app code where notify lives inside a long-running service.
-- `@update-config` — Wires the `Stop` hook into `.claude/settings.json`. This skill owns the *what* and *when*; update-config owns the *where*.
-- `@textme` — Inbound counterpart (phone → Claude). Composes well with notify.
+- `@update-config` — Wires the `Stop` hook into `.Antigravity/settings.json`. This skill owns the *what* and *when*; update-config owns the *where*.
+- `@textme` — Inbound counterpart (phone → Antigravity). Composes well with notify.
 
 ## Links
 

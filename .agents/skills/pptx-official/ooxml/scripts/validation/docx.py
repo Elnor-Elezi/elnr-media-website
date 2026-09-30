@@ -3,31 +3,12 @@ Validator for Word document XML files against XSD schemas.
 """
 
 import re
-import shutil
 import tempfile
 import zipfile
-from pathlib import Path
 
 import lxml.etree
 
-from .base import BaseSchemaValidator, parse_xml
-
-
-def safe_extract_all(zip_ref, destination):
-    """Extract a zip archive without allowing members to escape destination."""
-    destination = Path(destination).resolve()
-    for member in zip_ref.infolist():
-        target = (destination / member.filename).resolve()
-        try:
-            target.relative_to(destination)
-        except ValueError as exc:
-            raise ValueError(f"Unsafe archive member: {member.filename}") from exc
-        if member.is_dir():
-            target.mkdir(parents=True, exist_ok=True)
-            continue
-        target.parent.mkdir(parents=True, exist_ok=True)
-        with zip_ref.open(member) as src, target.open("wb") as dst:
-            shutil.copyfileobj(src, dst)
+from .base import BaseSchemaValidator
 
 
 class DOCXSchemaValidator(BaseSchemaValidator):
@@ -100,7 +81,7 @@ class DOCXSchemaValidator(BaseSchemaValidator):
                 continue
 
             try:
-                root = parse_xml(str(xml_file)).getroot()
+                root = lxml.etree.parse(str(xml_file)).getroot()
 
                 # Find all w:t elements
                 for elem in root.iter(f"{{{self.WORD_2006_NAMESPACE}}}t"):
@@ -153,7 +134,7 @@ class DOCXSchemaValidator(BaseSchemaValidator):
                 continue
 
             try:
-                root = parse_xml(str(xml_file)).getroot()
+                root = lxml.etree.parse(str(xml_file)).getroot()
 
                 # Find all w:t elements that are descendants of w:del elements
                 namespaces = {"w": self.WORD_2006_NAMESPACE}
@@ -199,7 +180,7 @@ class DOCXSchemaValidator(BaseSchemaValidator):
                 continue
 
             try:
-                root = parse_xml(str(xml_file)).getroot()
+                root = lxml.etree.parse(str(xml_file)).getroot()
                 # Count all w:p elements
                 paragraphs = root.findall(f".//{{{self.WORD_2006_NAMESPACE}}}p")
                 count = len(paragraphs)
@@ -217,11 +198,11 @@ class DOCXSchemaValidator(BaseSchemaValidator):
             with tempfile.TemporaryDirectory() as temp_dir:
                 # Unpack original docx
                 with zipfile.ZipFile(self.original_file, "r") as zip_ref:
-                    safe_extract_all(zip_ref, temp_dir)
+                    zip_ref.extractall(temp_dir)
 
                 # Parse document.xml
                 doc_xml_path = temp_dir + "/word/document.xml"
-                root = parse_xml(doc_xml_path).getroot()
+                root = lxml.etree.parse(doc_xml_path).getroot()
 
                 # Count all w:p elements
                 paragraphs = root.findall(f".//{{{self.WORD_2006_NAMESPACE}}}p")
@@ -244,7 +225,7 @@ class DOCXSchemaValidator(BaseSchemaValidator):
                 continue
 
             try:
-                root = parse_xml(str(xml_file)).getroot()
+                root = lxml.etree.parse(str(xml_file)).getroot()
                 namespaces = {"w": self.WORD_2006_NAMESPACE}
 
                 # Find w:delText in w:ins that are NOT within w:del

@@ -11,7 +11,7 @@
 
 1. Apos login, va para **Account** > **API Keys** (ou acesse direto: https://platform.stability.ai/account/keys)
 2. Clique em **Create API Key**
-3. De um nome (ex: "claude-skills")
+3. De um nome (ex: "Antigravity-skills")
 4. Copie a key gerada (comeca com `sk-`)
 
 ## 3. Configurar a Key

@@ -16,7 +16,7 @@ Extract product data, prices, reviews, and seller information from any e-commerc
 
 ## Prerequisites
 
-- `.env` file with `APIFY_TOKEN` (at `~/.claude/.env`)
+- `.env` file with `APIFY_TOKEN` (at `~/.Antigravity/.env`)
 - Node.js 20.6+ (for native `--env-file` support)
 
 ## Workflow Selection
@@ -216,21 +216,21 @@ Use for seller discovery across multiple stores.
 
 ### Step 1: Set Skill Path
 ```bash
-SKILL_PATH=~/.claude/skills/apify-ecommerce
+SKILL_PATH=~/.Antigravity/skills/apify-ecommerce
 ```
 
 ### Step 2: Run Script
 
 **Quick answer (display in chat):**
 ```bash
-node --env-file=~/.claude/.env $SKILL_PATH/reference/scripts/run_actor.js \
+node --env-file=~/.Antigravity/.env $SKILL_PATH/reference/scripts/run_actor.js \
   --actor "apify/e-commerce-scraping-tool" \
   --input 'JSON_INPUT'
 ```
 
 **CSV export:**
 ```bash
-node --env-file=~/.claude/.env $SKILL_PATH/reference/scripts/run_actor.js \
+node --env-file=~/.Antigravity/.env $SKILL_PATH/reference/scripts/run_actor.js \
   --actor "apify/e-commerce-scraping-tool" \
   --input 'JSON_INPUT' \
   --output YYYY-MM-DD_filename.csv \
@@ -239,7 +239,7 @@ node --env-file=~/.claude/.env $SKILL_PATH/reference/scripts/run_actor.js \
 
 **JSON export:**
 ```bash
-node --env-file=~/.claude/.env $SKILL_PATH/reference/scripts/run_actor.js \
+node --env-file=~/.Antigravity/.env $SKILL_PATH/reference/scripts/run_actor.js \
   --actor "apify/e-commerce-scraping-tool" \
   --input 'JSON_INPUT' \
   --output YYYY-MM-DD_filename.json \
@@ -262,7 +262,7 @@ Report:
 
 | Error | Solution |
 |-------|----------|
-| `APIFY_TOKEN not found` | Ensure `~/.claude/.env` contains `APIFY_TOKEN=your_token` |
+| `APIFY_TOKEN not found` | Ensure `~/.Antigravity/.env` contains `APIFY_TOKEN=your_token` |
 | `Actor not found` | Verify Actor ID: `apify/e-commerce-scraping-tool` |
 | `Run FAILED` | Check Apify console link in error output |
 | `Timeout` | Reduce `maxProductResults` or increase `--timeout` |

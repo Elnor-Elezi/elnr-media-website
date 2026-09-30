@@ -1,11 +1,11 @@
 # Agent SDK — Python
 
-The Claude Agent SDK provides a higher-level interface for building AI agents with built-in tools, safety features, and agentic capabilities.
+The Antigravity Agent SDK provides a higher-level interface for building AI agents with built-in tools, safety features, and agentic capabilities.
 
 ## Installation
 
 ```bash
-pip install claude-agent-sdk
+pip install Antigravity-agent-sdk
 ```
 
 ---
@@ -14,12 +14,12 @@ pip install claude-agent-sdk
 
 ```python
 import anyio
-from claude_agent_sdk import query, ClaudeAgentOptions, ResultMessage
+from Antigravity_agent_sdk import query, AntigravityAgentOptions, ResultMessage
 
 async def main():
     async for message in query(
         prompt="Explain this codebase",
-        options=ClaudeAgentOptions(allowed_tools=["Read", "Glob", "Grep"])
+        options=AntigravityAgentOptions(allowed_tools=["Read", "Glob", "Grep"])
     ):
         if isinstance(message, ResultMessage):
             print(message.result)
@@ -53,27 +53,27 @@ anyio.run(main)
 The `query()` function is the simplest way to run an agent. It returns an async iterator of messages.
 
 ```python
-from claude_agent_sdk import query, ClaudeAgentOptions, ResultMessage
+from Antigravity_agent_sdk import query, AntigravityAgentOptions, ResultMessage
 
 async for message in query(
     prompt="Explain this codebase",
-    options=ClaudeAgentOptions(allowed_tools=["Read", "Glob", "Grep"])
+    options=AntigravityAgentOptions(allowed_tools=["Read", "Glob", "Grep"])
 ):
     if isinstance(message, ResultMessage):
         print(message.result)
 ```
 
-### `ClaudeSDKClient` — Full Control
+### `AntigravitySDKClient` — Full Control
 
-`ClaudeSDKClient` provides full control over the agent lifecycle. Use it when you need custom tools, hooks, streaming, or the ability to interrupt execution.
+`AntigravitySDKClient` provides full control over the agent lifecycle. Use it when you need custom tools, hooks, streaming, or the ability to interrupt execution.
 
 ```python
 import anyio
-from claude_agent_sdk import ClaudeSDKClient, ClaudeAgentOptions, AssistantMessage, TextBlock
+from Antigravity_agent_sdk import AntigravitySDKClient, AntigravityAgentOptions, AssistantMessage, TextBlock
 
 async def main():
-    options = ClaudeAgentOptions(allowed_tools=["Read", "Glob", "Grep"])
-    async with ClaudeSDKClient(options=options) as client:
+    options = AntigravityAgentOptions(allowed_tools=["Read", "Glob", "Grep"])
+    async with AntigravitySDKClient(options=options) as client:
         await client.query("Explain this codebase")
         async for message in client.receive_response():
             if isinstance(message, AssistantMessage):
@@ -84,7 +84,7 @@ async def main():
 anyio.run(main)
 ```
 
-`ClaudeSDKClient` supports:
+`AntigravitySDKClient` supports:
 
 - **Context manager** (`async with`) for automatic resource cleanup
 - **`client.query(prompt)`** to send a prompt to the agent
@@ -97,11 +97,11 @@ anyio.run(main)
 ## Permission System
 
 ```python
-from claude_agent_sdk import query, ClaudeAgentOptions, ResultMessage
+from Antigravity_agent_sdk import query, AntigravityAgentOptions, ResultMessage
 
 async for message in query(
     prompt="Refactor the authentication module",
-    options=ClaudeAgentOptions(
+    options=AntigravityAgentOptions(
         allowed_tools=["Read", "Edit", "Write"],
         permission_mode="acceptEdits"  # Auto-accept file edits
     )
@@ -123,11 +123,11 @@ Permission modes:
 ## MCP (Model Context Protocol) Support
 
 ```python
-from claude_agent_sdk import query, ClaudeAgentOptions, ResultMessage
+from Antigravity_agent_sdk import query, AntigravityAgentOptions, ResultMessage
 
 async for message in query(
     prompt="Open example.com and describe what you see",
-    options=ClaudeAgentOptions(
+    options=AntigravityAgentOptions(
         mcp_servers={
             "playwright": {"command": "npx", "args": ["@playwright/mcp@latest"]}
         }
@@ -144,7 +144,7 @@ async for message in query(
 Customize agent behavior with hooks using callback functions:
 
 ```python
-from claude_agent_sdk import query, ClaudeAgentOptions, HookMatcher, ResultMessage
+from Antigravity_agent_sdk import query, AntigravityAgentOptions, HookMatcher, ResultMessage
 
 async def log_file_change(input_data, tool_use_id, context):
     file_path = input_data.get('tool_input', {}).get('file_path', 'unknown')
@@ -153,7 +153,7 @@ async def log_file_change(input_data, tool_use_id, context):
 
 async for message in query(
     prompt="Refactor utils.py",
-    options=ClaudeAgentOptions(
+    options=AntigravityAgentOptions(
         permission_mode="acceptEdits",
         hooks={
             "PostToolUse": [HookMatcher(matcher="Edit|Write", hooks=[log_file_change])]
@@ -170,10 +170,10 @@ Available hook events: `PreToolUse`, `PostToolUse`, `PostToolUseFailure`, `Notif
 
 ## Common Options
 
-`query()` takes a top-level `prompt` (string) and an `options` object (`ClaudeAgentOptions`):
+`query()` takes a top-level `prompt` (string) and an `options` object (`AntigravityAgentOptions`):
 
 ```python
-async for message in query(prompt="...", options=ClaudeAgentOptions(...)):
+async for message in query(prompt="...", options=AntigravityAgentOptions(...)):
 ```
 
 | Option                              | Type   | Description                                                                |
@@ -194,7 +194,7 @@ async for message in query(prompt="...", options=ClaudeAgentOptions(...)):
 | `output_format`                     | dict   | Structured output schema                                                   |
 | `thinking`                          | dict   | Thinking/reasoning control                                                 |
 | `betas`                             | list   | Beta features to enable (e.g., `["context-1m-2025-08-07"]`)               |
-| `setting_sources`                   | list   | Settings to load (e.g., `["project"]`). Default: none (no CLAUDE.md files) |
+| `setting_sources`                   | list   | Settings to load (e.g., `["project"]`). Default: none (no AGENTS.md files) |
 | `env`                               | dict   | Environment variables to set for the session                               |
 
 ---
@@ -202,11 +202,11 @@ async for message in query(prompt="...", options=ClaudeAgentOptions(...)):
 ## Message Types
 
 ```python
-from claude_agent_sdk import query, ClaudeAgentOptions, ResultMessage, SystemMessage
+from Antigravity_agent_sdk import query, AntigravityAgentOptions, ResultMessage, SystemMessage
 
 async for message in query(
     prompt="Find TODO comments",
-    options=ClaudeAgentOptions(allowed_tools=["Read", "Glob", "Grep"])
+    options=AntigravityAgentOptions(allowed_tools=["Read", "Glob", "Grep"])
 ):
     if isinstance(message, ResultMessage):
         print(message.result)
@@ -219,11 +219,11 @@ async for message in query(
 ## Subagents
 
 ```python
-from claude_agent_sdk import query, ClaudeAgentOptions, AgentDefinition, ResultMessage
+from Antigravity_agent_sdk import query, AntigravityAgentOptions, AgentDefinition, ResultMessage
 
 async for message in query(
     prompt="Use the code-reviewer agent to review this codebase",
-    options=ClaudeAgentOptions(
+    options=AntigravityAgentOptions(
         allowed_tools=["Read", "Glob", "Grep", "Agent"],
         agents={
             "code-reviewer": AgentDefinition(
@@ -243,17 +243,17 @@ async for message in query(
 ## Error Handling
 
 ```python
-from claude_agent_sdk import query, ClaudeAgentOptions, CLINotFoundError, CLIConnectionError, ResultMessage
+from Antigravity_agent_sdk import query, AntigravityAgentOptions, CLINotFoundError, CLIConnectionError, ResultMessage
 
 try:
     async for message in query(
         prompt="...",
-        options=ClaudeAgentOptions(allowed_tools=["Read"])
+        options=AntigravityAgentOptions(allowed_tools=["Read"])
     ):
         if isinstance(message, ResultMessage):
             print(message.result)
 except CLINotFoundError:
-    print("Claude Code CLI not found. Install with: pip install claude-agent-sdk")
+    print("Antigravity CLI not found. Install with: pip install Antigravity-agent-sdk")
 except CLIConnectionError as e:
     print(f"Connection error: {e}")
 ```

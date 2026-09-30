@@ -828,7 +828,7 @@ Not specified
 
 ## internal-comms (`internal-comms-anthropic`)
 
-**Description:** A set of resources to help me write all kinds of internal communications, using the formats that my company likes to use. Claude should use this skill whenever asked to write some sort of internal communications (status reports, leadership updates, 3P updates, company newsletters, FAQs, incident reports, project updates, etc.).
+**Description:** A set of resources to help me write all kinds of internal communications, using the formats that my company likes to use. Antigravity should use this skill whenever asked to write some sort of internal communications (status reports, leadership updates, 3P updates, company newsletters, FAQs, incident reports, project updates, etc.).
 
 ### Use Cases
 To write internal communications, use this skill for:
@@ -847,7 +847,7 @@ Not specified
 
 ## internal-comms (`internal-comms-community`)
 
-**Description:** A set of resources to help me write all kinds of internal communications, using the formats that my company likes to use. Claude should use this skill whenever asked to write some sort of internal communications (status reports, leadership updates, 3P updates, company newsletters, FAQs, incident reports, project updates, etc.).
+**Description:** A set of resources to help me write all kinds of internal communications, using the formats that my company likes to use. Antigravity should use this skill whenever asked to write some sort of internal communications (status reports, leadership updates, 3P updates, company newsletters, FAQs, incident reports, project updates, etc.).
 
 ### Use Cases
 To write internal communications, use this skill for:
@@ -945,7 +945,7 @@ Not specified
 
 ## loki-mode (`loki-mode`)
 
-**Description:** Multi-agent autonomous startup system for Claude Code. Triggers on "Loki Mode". Orchestrates 100+ specialized agents across engineering, QA, DevOps, security, data/ML, business operations, marketing, HR, and customer success. Takes PRD to fully deployed, revenue-generating product with zero human intervention. Features Task tool for subagent dispatch, parallel code review with 3 specialized reviewers, severity-based issue triage, distributed task queue with dead letter handling, automatic deployment to cloud providers, A/B testing, customer feedback loops, incident response, circuit breakers, and self-healing. Handles rate limits via distributed state checkpoints and auto-resume with exponential backoff. Requires --dangerously-skip-permissions flag.
+**Description:** Multi-agent autonomous startup system for Antigravity. Triggers on "Loki Mode". Orchestrates 100+ specialized agents across engineering, QA, DevOps, security, data/ML, business operations, marketing, HR, and customer success. Takes PRD to fully deployed, revenue-generating product with zero human intervention. Features Task tool for subagent dispatch, parallel code review with 3 specialized reviewers, severity-based issue triage, distributed task queue with dead letter handling, automatic deployment to cloud providers, A/B testing, customer feedback loops, incident response, circuit breakers, and self-healing. Handles rate limits via distributed state checkpoints and auto-resume with exponential backoff. Requires --dangerously-skip-permissions flag.
 
 ### Use Cases
 This skill is applicable to execute the workflow or actions described in the overview.
@@ -1127,7 +1127,7 @@ Not specified
 
 ## notebooklm (`notebooklm`)
 
-**Description:** Use this skill to query your Google NotebookLM notebooks directly from Claude Code for source-grounded, citation-backed answers from Gemini. Browser automation, library management, persistent auth. Drastically reduced hallucinations through document-only responses.
+**Description:** Use this skill to query your Google NotebookLM notebooks directly from Antigravity for source-grounded, citation-backed answers from Gemini. Browser automation, library management, persistent auth. Drastically reduced hallucinations through document-only responses.
 
 ### Use Cases
 Trigger when user:

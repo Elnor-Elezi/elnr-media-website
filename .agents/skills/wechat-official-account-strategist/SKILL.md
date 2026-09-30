@@ -9,7 +9,7 @@ source_type: community
 date_added: "2026-05-13"
 author: yundu-ai
 tags: [wechat, chinese-market, content-strategy, marketing, 公众号, 微信]
-tools: [claude, cursor, gemini]
+tools: [Antigravity, cursor, gemini]
 ---
 
 # WeChat Official Account Strategist

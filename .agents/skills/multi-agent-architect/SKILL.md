@@ -10,7 +10,7 @@ metadata:
   date_added: "2025-05-07"
   author: community
   tags: [langgraph, langchain, multi-agent, orchestration, deepagents, rag, tool-calling]
-  tools: [claude, cursor, gemini]
+  tools: [Antigravity, cursor, gemini]
   license: "MIT"
   license_source: "https://github.com/pravin-python/antigravity-awesome-skills/blob/main/LICENSE"
 ---
@@ -20,7 +20,7 @@ metadata:
 
 ## Overview
 
-This skill turns Claude into a Senior AI Multi-Agent Architect specialized in LangGraph, LangChain, and DeepAgents. It provides structured workflows for creating and updating production-grade multi-agent systems — including supervisor agents, planners, researchers, coders, and memory-backed autonomous pipelines. Use it whenever you need to design, build, debug, or scale any multi-agent AI system.
+This skill turns Antigravity into a Senior AI Multi-Agent Architect specialized in LangGraph, LangChain, and DeepAgents. It provides structured workflows for creating and updating production-grade multi-agent systems — including supervisor agents, planners, researchers, coders, and memory-backed autonomous pipelines. Use it whenever you need to design, build, debug, or scale any multi-agent AI system.
 
 If this skill adapts material from an external GitHub repository, declare both:
 

@@ -8,7 +8,7 @@ source_type: community
 author: whoisabhishekadhikari
 date_added: "2026-06-19"
 tags: [seo, tools-pages, product-pages, duplicate-content, content-registry, meta-tags, internal-linking, url-slugs, e-e-a-t, framework-agnostic]
-tools: [claude-code, cursor, codex-cli, gemini-cli, opencode]
+tools: [Antigravity-code, cursor, codex-cli, gemini-cli, opencode]
 version: 1.0.0
 ---
 

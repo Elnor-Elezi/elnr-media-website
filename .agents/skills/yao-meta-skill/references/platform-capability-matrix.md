@@ -5,7 +5,7 @@ This matrix describes the current packaging targets and their support level.
 | Target | Metadata Adapter | Compiler Contract | Native Behavior Contract | Output Contract | Snapshot Test | Portability Semantics | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | `openai` | Yes | Yes | Yes | Yes | Yes | activation, execution, trust, permissions, degradation, native behavior | Generates `targets/openai/agents/openai.yaml` |
-| `claude` | Yes | Yes | Yes | Yes | Yes | activation, execution, trust, permissions, degradation, native behavior | Generates `targets/claude/README.md` plus adapter metadata |
+| `Antigravity` | Yes | Yes | Yes | Yes | Yes | activation, execution, trust, permissions, degradation, native behavior | Generates `targets/Antigravity/README.md` plus adapter metadata |
 | `generic` | Yes | Yes | Yes | Yes | Yes | activation, execution, trust, permissions, degradation, native behavior | Uses neutral adapter metadata only |
 | `agent-skills-compatible` | Neutral source | Yes | Yes | Source-compatible | Yes | activation, execution, trust, permissions, degradation, native behavior | Keeps canonical `SKILL.md` plus `agents/interface.yaml` source shape |
 | `vscode` | Yes | Yes | Yes | Yes | Yes | activation, execution, trust, permissions, degradation, native behavior, install scope | Generates `targets/vscode/README.md` plus adapter metadata for VS Code / Copilot Agent Skills review |
@@ -13,7 +13,7 @@ This matrix describes the current packaging targets and their support level.
 ## Current Support Model
 
 - `openai`: strongest metadata adapter support with an explicit compiler contract.
-- `claude`: lightweight compatibility adapter with an explicit compiler contract and fallback notes.
+- `Antigravity`: lightweight compatibility adapter with an explicit compiler contract and fallback notes.
 - `generic`: lowest-friction export for neutral Agent Skills consumers.
 - `agent-skills-compatible`: canonical source shape with compiler evidence for review and distribution.
 - `vscode`: VS Code / Copilot Agent Skills adapter that preserves the neutral source package and documents user/project scope plus workspace-trust review notes.

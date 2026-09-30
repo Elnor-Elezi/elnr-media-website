@@ -7,7 +7,7 @@ source: community
 date_added: "2026-03-20"
 author: FrancyJGLisboa
 tags: [ai, testing, behavioral-analysis, model-evaluation, red-team, compliance, mcp]
-tools: [claude, cursor, codex, copilot]
+tools: [Antigravity, cursor, codex, copilot]
 ---
 
 # Behavioral X-Ray
@@ -34,14 +34,14 @@ Use it to understand your model before building with it, compare models for task
 
 ```bash
 pip install bdistill
-claude mcp add bdistill -- bdistill-mcp   # Claude Code
+Antigravity mcp add bdistill -- bdistill-mcp   # Antigravity
 ```
 
 For other tools, add bdistill-mcp as an MCP server in your project config.
 
 ### Step 2: Run the probe
 
-In Claude Code:
+In Antigravity:
 ```
 /xray                          # Full behavioral probe (30 questions)
 /xray --dimensions refusal     # Probe just one dimension

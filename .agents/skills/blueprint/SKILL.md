@@ -59,8 +59,8 @@ Blueprint is for multi-session, multi-agent engineering projects where each step
 ## Installation
 
 ```bash
-mkdir -p ~/.claude/skills
-git clone https://github.com/antbotlab/blueprint.git ~/.claude/skills/blueprint
+mkdir -p ~/.Antigravity/skills
+git clone https://github.com/antbotlab/blueprint.git ~/.Antigravity/skills/blueprint
 ```
 
 ## Additional Resources

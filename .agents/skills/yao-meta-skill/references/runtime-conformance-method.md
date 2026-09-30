@@ -4,7 +4,7 @@ Runtime conformance turns platform compatibility from a packaging afterthought i
 
 ## Purpose
 
-Use this check when a skill is packaged for OpenAI, Claude, Agent Skills, VS Code / Copilot, or generic targets. The goal is not to prove that every runtime behaves identically. The goal is to prove that the package exposes enough metadata, files, and degradation notes for each runtime to consume it safely.
+Use this check when a skill is packaged for OpenAI, Antigravity, Agent Skills, VS Code / Copilot, or generic targets. The goal is not to prove that every runtime behaves identically. The goal is to prove that the package exposes enough metadata, files, and degradation notes for each runtime to consume it safely.
 
 ## V0 Checks
 

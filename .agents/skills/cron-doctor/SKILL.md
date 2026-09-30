@@ -9,7 +9,7 @@ source_type: community
 date_added: "2026-06-26"
 author: takeaseat
 tags: [cron, crontab, scheduling, devops, debugging, kubernetes, validation]
-tools: [claude, cursor, codex, gemini, opencode]
+tools: [Antigravity, cursor, codex, gemini, opencode]
 license: "MIT"
 license_source: "https://github.com/takeaseatventure/devops-skills/blob/main/LICENSE"
 ---

@@ -56,7 +56,7 @@ map so your change matches the house style instead of fighting it:
    which `run()` imports `infra/` modules. The import order *is* the dependency
    order; respect it.
 2. **`infra/`** — one file per domain (storage, functions, api, observability…).
-   This is where resources are declared. Check for an `infra/CLAUDE.md` — these
+   This is where resources are declared. Check for an `infra/AGENTS.md` — these
    projects keep IaC-specific rules there, and it's the single most valuable
    file to read first.
 3. **`infra/tests/`** — source-level Vitest assertions that pin resource

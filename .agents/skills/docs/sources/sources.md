@@ -46,27 +46,27 @@ The following skills were added from the curated collection at [VoltAgent/awesom
 | `screenshots`                                                       | [Shpigford](https://github.com/Shpigford/skills)                            | Compatible | Marketing screenshots          |
 | `aws-skills`                                                        | [zxkane](https://github.com/zxkane/aws-skills)                              | Compatible | AWS development patterns       |
 | `deep-research`                                                     | [sanjay3290](https://github.com/sanjay3290/ai-skills)                       | Compatible | Gemini Deep Research Agent     |
-| `ffuf-claude-skill`                                                 | [jthack](https://github.com/jthack/ffuf_claude_skill)                       | Compatible | Web fuzzing with ffuf          |
+| `ffuf-Antigravity-skill`                                                 | [jthack](https://github.com/jthack/ffuf_Antigravity_skill)                       | Compatible | Web fuzzing with ffuf          |
 | `ui-skills`                                                         | [ibelick](https://github.com/ibelick/ui-skills)                             | Compatible | UI development constraints     |
 | `vexor`                                                             | [scarletkc](https://github.com/scarletkc/vexor)                             | Compatible | Vector-powered CLI             |
-| `pypict-skill`                                                      | [omkamal](https://github.com/omkamal/pypict-claude-skill)                   | Compatible | Pairwise test generation       |
+| `pypict-skill`                                                      | [omkamal](https://github.com/omkamal/pypict-Antigravity-skill)                   | Compatible | Pairwise test generation       |
 | `makepad-skills`                                                    | [ZhangHanDong](https://github.com/ZhangHanDong/makepad-skills)              | Compatible | Makepad UI development         |
 | `swiftui-expert-skill`                                              | [AvdLee](https://github.com/AvdLee/SwiftUI-Agent-Skill)                     | Compatible | SwiftUI best practices         |
 | `threejs-skills`                                                    | [CloudAI-X](https://github.com/CloudAI-X/threejs-skills)                    | Compatible | Three.js 3D experiences        |
-| `claude-scientific-skills`                                          | [K-Dense-AI](https://github.com/K-Dense-AI/claude-scientific-skills)        | Compatible | Scientific research skills     |
-| `claude-win11-speckit-update-skill`                                 | [NotMyself](https://github.com/NotMyself/claude-win11-speckit-update-skill) | Compatible | Windows 11 management          |
+| `Antigravity-scientific-skills`                                          | [K-Dense-AI](https://github.com/K-Dense-AI/Antigravity-scientific-skills)        | Compatible | Scientific research skills     |
+| `Antigravity-win11-speckit-update-skill`                                 | [NotMyself](https://github.com/NotMyself/Antigravity-win11-speckit-update-skill) | Compatible | Windows 11 management          |
 | `imagen`                                                            | [sanjay3290](https://github.com/sanjay3290/ai-skills)                       | Compatible | Google Gemini image generation |
 | `security-bluebook-builder`                                         | [SHADOWPR0](https://github.com/SHADOWPR0/security-bluebook-builder)         | Compatible | Security documentation         |
-| `claude-ally-health`                                                | [huifer](https://github.com/huifer/Claude-Ally-Health)                      | Compatible | Health assistant               |
+| `Antigravity-ally-health`                                                | [huifer](https://github.com/huifer/Antigravity-Ally-Health)                      | Compatible | Health assistant               |
 | `clarity-gate`                                                      | [frmoretto](https://github.com/frmoretto/clarity-gate)                      | Compatible | RAG quality verification       |
 | `n8n-code-python`, `n8n-mcp-tools-expert`, `n8n-node-configuration` | [czlonkowski](https://github.com/czlonkowski/n8n-skills)                    | Compatible | n8n automation skills          |
-| `varlock-claude-skill`                                              | [wrsmith108](https://github.com/wrsmith108/varlock-claude-skill)            | Compatible | Secure environment variables   |
+| `varlock-Antigravity-skill`                                              | [wrsmith108](https://github.com/wrsmith108/varlock-Antigravity-skill)            | Compatible | Secure environment variables   |
 | `beautiful-prose`                                                   | [SHADOWPR0](https://github.com/SHADOWPR0/beautiful_prose)                   | Compatible | Writing style guide            |
-| `claude-speed-reader`                                               | [SeanZoR](https://github.com/SeanZoR/claude-speed-reader)                   | Compatible | Speed reading tool             |
+| `Antigravity-speed-reader`                                               | [SeanZoR](https://github.com/SeanZoR/Antigravity-speed-reader)                   | Compatible | Speed reading tool             |
 | `skill-seekers`                                                     | [yusufkaraaslan](https://github.com/yusufkaraaslan/Skill_Seekers)           | Compatible | Skill conversion tool          |
 
 - **frontend-slides** - [zarazhangrui](https://github.com/zarazhangrui/frontend-slides)
-- **linear-claude-skill** - [wrsmith108](https://github.com/wrsmith108/linear-claude-skill)
+- **linear-Antigravity-skill** - [wrsmith108](https://github.com/wrsmith108/linear-Antigravity-skill)
 - **skill-rails-upgrade** - [robzolkos](https://github.com/robzolkos/skill-rails-upgrade)
 - **context-fundamentals** - [muratcankoylan](https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering)
 - **context-degradation** - [muratcankoylan](https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering)
@@ -126,7 +126,7 @@ The following skills were added during the March 2026 skills update:
 | `gmail-automation`, `google-calendar-automation`, `google-docs-automation`, `google-sheets-automation`, `google-drive-automation`, `google-slides-automation` | [sanjay3290/ai-skills](https://github.com/sanjay3290/ai-skills) | Compatible | Google Workspace integration |
 | `n8n-expression-syntax`, `n8n-mcp-tools-expert`, `n8n-workflow-patterns`, `n8n-validation-expert`, `n8n-node-configuration`, `n8n-code-javascript`, `n8n-code-python` | [czlonkowski/n8n-skills](https://github.com/czlonkowski/n8n-skills) | Compatible | n8n workflow automation |
 | `automate-whatsapp` | [gokapso/agent-skills](https://github.com/gokapso/agent-skills) | Compatible | WhatsApp automation |
-| `linear` | [wrsmith108/linear-claude-skill](https://github.com/wrsmith108/linear-claude-skill) | Compatible | Linear project management |
+| `linear` | [wrsmith108/linear-Antigravity-skill](https://github.com/wrsmith108/linear-Antigravity-skill) | Compatible | Linear project management |
 | `rails-upgrade` | [robzolkos](https://github.com/robzolkos/skill-rails-upgrade) | Compatible | Rails upgrade assistant |
 | `vexor-cli` | [scarletkc/vexor](https://github.com/scarletkc/vexor) | Compatible | Semantic file discovery |
 
@@ -134,8 +134,8 @@ The following skills were added during the March 2026 skills update:
 | Skill | Source | License | Notes |
 |-------|--------|---------|-------|
 | `hugging-face-datasets`, `hugging-face-evaluation`, `hugging-face-tool-builder` | [huggingface/skills](https://github.com/huggingface/skills) | Compatible | Hugging Face ecosystem extensions |
-| `numpy`, `pandas`, `scipy`, `matplotlib`, `scikit-learn`, `jupyter-workflow` | [K-Dense-AI/claude-scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills) | Compatible | Data science essentials |
-| `biopython`, `scanpy`, `uniprot-database`, `pubmed-database` | [K-Dense-AI/claude-scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills) | Compatible | Bioinformatics tools |
+| `numpy`, `pandas`, `scipy`, `matplotlib`, `scikit-learn`, `jupyter-workflow` | [K-Dense-AI/Antigravity-scientific-skills](https://github.com/K-Dense-AI/Antigravity-scientific-skills) | Compatible | Data science essentials |
+| `biopython`, `scanpy`, `uniprot-database`, `pubmed-database` | [K-Dense-AI/Antigravity-scientific-skills](https://github.com/K-Dense-AI/Antigravity-scientific-skills) | Compatible | Bioinformatics tools |
 
 ### Security & Auditing
 | Skill | Source | License | Notes |
@@ -152,7 +152,7 @@ The following skills were added during the March 2026 skills update:
 ### Health & Wellness
 | Skill | Source | License | Notes |
 |-------|--------|---------|-------|
-| `sleep-analyzer`, `nutrition-analyzer`, `fitness-analyzer` | [huifer/Claude-Ally-Health](https://github.com/huifer/Claude-Ally-Health) | Compatible | Health tracking |
+| `sleep-analyzer`, `nutrition-analyzer`, `fitness-analyzer` | [huifer/Antigravity-Ally-Health](https://github.com/huifer/Antigravity-Ally-Health) | Compatible | Health tracking |
 
 ### Quality & Verification
 | Skill | Source | License | Notes |

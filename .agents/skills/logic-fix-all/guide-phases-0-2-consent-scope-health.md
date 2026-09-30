@@ -12,7 +12,7 @@
 Scope:    ENTIRE repository, not just recent commits or staged changes.
           Includes runtime-affecting files: source code, runtime
           config (.json/.yaml/.toml/.ini), constraint files
-          (CLAUDE.md, .logic-lens.yaml, AGENTS.md, etc.), and
+          (AGENTS.md, .logic-lens.yaml, AGENTS.md, etc.), and
           behavioral documentation (README, ARCHITECTURE, ADRs).
           Auto-excludes .git, build artifacts, dependency caches,
           binary assets; respects .gitignore and .logic-lens.yaml
@@ -84,7 +84,7 @@ Decision (first match wins):
 1c. Classify every non-excluded file into exactly one bucket:
 - **Source code:** files whose extension matches a language the project uses (inferred from markers in 1b).
 - **Runtime config:** `.json`, `.yaml/.yml`, `.toml`, `.ini`, `.conf`, `*.config.js/ts` — verify by grepping the codebase for the filename before classifying.
-- **Constraint files:** `CLAUDE.md` at every level, `.logic-lens.yaml`, `AGENTS.md`, `GEMINI.md`, schema files (`*.schema.json`, `openapi.yaml`, `*.proto`, `*.graphql`).
+- **Constraint files:** `AGENTS.md` at every level, `.logic-lens.yaml`, `AGENTS.md`, `GEMINI.md`, schema files (`*.schema.json`, `openapi.yaml`, `*.proto`, `*.graphql`).
 - **Behavioral docs:** `README.md`, `CONTRIBUTING.md`, `ARCHITECTURE.md`, `docs/**/*.md` describing runtime behavior, `.env.example`. Skip changelogs, licenses, marketing copy, `.editorconfig`.
 
 1d. Classify each file by risk tier:

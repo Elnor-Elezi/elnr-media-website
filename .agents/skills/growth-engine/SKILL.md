@@ -12,7 +12,7 @@ tags:
 - viral
 - acquisition
 tools:
-- claude-code
+- Antigravity-code
 - antigravity
 - cursor
 - gemini-cli
@@ -70,11 +70,11 @@ AQUISICAO:  Como as pessoas descobrem a Auri?
 
 <title>Auri -- O Assistente de Voz que Realmente Pensa | para Alexa</title>
     <meta name="description" content="Auri transforma seu Alexa em um assistente
-    com Claude AI. Analise de negocios, decisoes estrategicas e memoria real.">
+    com Antigravity AI. Analise de negocios, decisoes estrategicas e memoria real.">
 
     <meta property="og:title" content="Auri -- IA de Voz para Alexa">
     <meta property="og:description" content="O primeiro assistente de voz
-    com raciocinio real. Powered by Claude.">
+    com raciocinio real. Powered by Antigravity.">
 
     <script type="application/ld+json">
     {
@@ -94,7 +94,7 @@ AQUISICAO:  Como as pessoas descobrem a Auri?
 High Intent (converter):
     - "skill alexa inteligente"
     - "assistente alexa com ia"
-    - "como usar claude no alexa"
+    - "como usar Antigravity no alexa"
 
     Informacional (educar):
     - "assistente de voz ia brasil"
@@ -113,7 +113,7 @@ skill_name: "Auri -- IA de Voz Inteligente"
 
     short_description: >
       Auri transforma seu Alexa em um assistente verdadeiramente inteligente.
-      Powered by Claude AI -- pensa, recorda e evolui com voce.
+      Powered by Antigravity AI -- pensa, recorda e evolui com voce.
 
     long_description: >
       Chega de respostas rasas. Auri e o primeiro assistente de voz com
@@ -132,7 +132,7 @@ skill_name: "Auri -- IA de Voz Inteligente"
       - "Me ajuda a decidir entre essas duas opcoes de negocio"
       - "Analisa esse problema para mim"
 
-    keywords: "ia, inteligencia artificial, assistente inteligente, claude, negocios"
+    keywords: "ia, inteligencia artificial, assistente inteligente, Antigravity, negocios"
 
 ---
 

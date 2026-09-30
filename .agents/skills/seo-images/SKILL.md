@@ -6,7 +6,7 @@ description: >
   user says "image optimization", "alt text", "image SEO", "image size",
   or "image audit".
 risk: safe
-source: "https://github.com/AgriciDaniel/claude-seo"
+source: "https://github.com/AgriciDaniel/Antigravity-seo"
 date_added: "2026-03-21"
 user-invokable: true
 argument-hint: "[url]"

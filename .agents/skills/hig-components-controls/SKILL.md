@@ -1,14 +1,24 @@
 ---
 name: hig-components-controls
-description: "Check for .claude/apple-design-context.md before asking questions. Use existing context and only ask for information not already covered."
+version: 1.0.0
+description: ">-"
+  Apple HIG guidance for selection and input controls including pickers, toggles,
+  sliders, steppers, segmented controls, combo boxes, text fields, text views,
+  labels, token fields, virtual keyboards, rating indicators, and gauges. Use
+  this skill when the user says "picker or segmented control," "how should my
+  form look," "what keyboard type should I use," "toggle vs checkbox," or asks
+  about picker design, toggle, switch, slider, stepper, text field, text input,
+  segmented control, combo box, label, token field, virtual keyboard, rating
+  indicator, gauge, form design, input validation, or control state management.
+  Cross-references: hig-components-menus, hig-components-dialogs,
+  hig-components-search.
 risk: unknown
 source: community
-date_added: '2026-02-27'
 ---
 
 # Apple HIG: Selection and Input Controls
 
-Check for `.claude/apple-design-context.md` before asking questions. Use existing context and only ask for information not already covered.
+Check for `.Antigravity/apple-design-context.md` before asking questions. Use existing context and only ask for information not already covered.
 
 ## Key Principles
 
@@ -81,8 +91,3 @@ Check for `.claude/apple-design-context.md` before asking questions. Use existin
 
 ## When to Use
 This skill is applicable to execute the workflow or actions described in the overview.
-
-## Limitations
-- Use this skill only when the task clearly matches the scope described above.
-- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
-- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.

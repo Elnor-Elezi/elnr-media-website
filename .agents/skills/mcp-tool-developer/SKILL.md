@@ -9,7 +9,7 @@ source_type: community
 date_added: "2026-05-13"
 author: yundu-ai
 tags: [mcp, ai-agent, tool-development, typescript, python, llm, model-context-protocol]
-tools: [claude, cursor, gemini]
+tools: [Antigravity, cursor, gemini]
 ---
 
 # MCP Tool Developer
@@ -38,7 +38,7 @@ Identify what capabilities the server should expose:
 - **Prompts** - Reusable prompt templates
 
 Choose the transport:
-- **stdio** - For local CLI tools (Claude Code, Cursor)
+- **stdio** - For local CLI tools (Antigravity, Cursor)
 - **SSE (Server-Sent Events)** - For remote/hosted tools
 - **Streamable HTTP** - New in MCP spec for modern deployments
 

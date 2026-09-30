@@ -15,7 +15,7 @@ tags:
   - compression
   - multi-agent
 tools:
-  - claude
+  - Antigravity
 ---
 
 # Λ (Lambda) Language

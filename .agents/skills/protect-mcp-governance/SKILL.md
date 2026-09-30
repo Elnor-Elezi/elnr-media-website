@@ -42,7 +42,7 @@ Three modes of operation:
 
 1. **Shadow mode** (default) — logs decisions without blocking. Use this to observe what your policies would do before enforcing them.
 2. **Enforce mode** — blocks tool calls that violate policy. Use after shadow-mode validation.
-3. **Hooks mode** — integrates with Claude Code hooks for pre/post tool-call governance.
+3. **Hooks mode** — integrates with Antigravity hooks for pre/post tool-call governance.
 
 ## Core Concepts
 
@@ -101,7 +101,7 @@ The receipt format follows [IETF Internet-Draft draft-farley-acta-signed-receipt
 ### 1. Initialize Governance for a Project
 
 ```bash
-# Install and initialize hooks (Claude Code integration)
+# Install and initialize hooks (Antigravity integration)
 npx protect-mcp init-hooks
 
 # Or run as a standalone MCP gateway
@@ -187,17 +187,17 @@ Exit codes: `0` = signature valid (proven authentic), `1` = signature invalid (p
 
 ## Examples
 
-### Example 1: Governance for a Claude Code Session
+### Example 1: Governance for a Antigravity Session
 
 ```bash
 # Initialize hooks
 npx protect-mcp init-hooks
 
-# Claude Code now generates a signed receipt for every tool call.
+# Antigravity now generates a signed receipt for every tool call.
 # Receipts are stored in .protect-mcp/receipts/
 ```
 
-**Explanation:** After initialization, every tool call Claude Code makes is logged with a signed receipt. No tool calls are blocked (shadow mode).
+**Explanation:** After initialization, every tool call Antigravity makes is logged with a signed receipt. No tool calls are blocked (shadow mode).
 
 ### Example 2: Restrict a Production MCP Server
 

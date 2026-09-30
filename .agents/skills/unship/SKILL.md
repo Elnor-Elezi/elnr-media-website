@@ -9,13 +9,13 @@ source_type: community
 date_added: "2026-06-07"
 author: Marcus Benhard
 tags: [ui-variants, frontend, local-first, coding-agents]
-tools: [claude-code, antigravity, cursor, gemini-cli, codex-cli, opencode]
+tools: [Antigravity-code, antigravity, cursor, gemini-cli, codex-cli, opencode]
 license: "MIT"
 license_source: "https://github.com/mbenhard/unship/blob/main/LICENSE"
 plugin:
   targets:
     codex: blocked
-    claude: blocked
+    Antigravity: blocked
 ---
 
 # Unship

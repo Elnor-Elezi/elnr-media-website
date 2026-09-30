@@ -9,7 +9,7 @@ source_type: community
 date_added: "2026-05-16"
 author: mturac
 tags: [recommender-system, ranking, feed-algorithm, recsys, personalization, for-you-feed, rag-reranker, pipeline-architecture]
-tools: [claude, codex, cursor, gemini, opencode, cline, continue, windsurf]
+tools: [Antigravity, codex, cursor, gemini, opencode, cline, continue, windsurf]
 license: "MIT"
 license_source: "https://github.com/mturac/recsys-pipeline-architect/blob/main/LICENSE"
 ---

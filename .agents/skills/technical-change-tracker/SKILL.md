@@ -9,7 +9,7 @@ source_type: community
 date_added: "2026-04-05"
 author: Elkidogz
 tags: [change-tracking, session-handoff, documentation, accessibility, state-machine]
-tools: [claude, cursor, gemini, codex]
+tools: [Antigravity, cursor, gemini, codex]
 ---
 
 # Technical Change Tracker

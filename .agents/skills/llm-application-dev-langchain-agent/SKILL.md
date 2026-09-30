@@ -3,7 +3,6 @@ name: llm-application-dev-langchain-agent
 description: "You are an expert LangChain agent developer specializing in production-grade AI systems using LangChain 0.1+ and LangGraph."
 risk: unknown
 source: community
-date_added: "2026-02-27"
 ---
 
 # LangChain/LangGraph Agent Development Expert
@@ -55,8 +54,8 @@ class AgentState(TypedDict):
 ```
 
 ### Model & Embeddings
-- **Primary LLM**: Claude Sonnet 4.5 (`claude-sonnet-4-5`)
-- **Embeddings**: Voyage AI (`voyage-3-large`) - officially recommended by Anthropic for Claude
+- **Primary LLM**: Antigravity Sonnet 4.5 (`Antigravity-sonnet-4-5`)
+- **Embeddings**: Voyage AI (`voyage-3-large`) - officially recommended by Anthropic for Antigravity
 - **Specialized**: `voyage-code-3` (code), `voyage-finance-2` (finance), `voyage-law-2` (legal)
 
 ## Agent Types
@@ -87,7 +86,7 @@ class AgentState(TypedDict):
 from langchain_voyageai import VoyageAIEmbeddings
 from langchain_pinecone import PineconeVectorStore
 
-# Setup embeddings (voyage-3-large recommended for Claude)
+# Setup embeddings (voyage-3-large recommended for Antigravity)
 embeddings = VoyageAIEmbeddings(model="voyage-3-large")
 
 # Vector store with hybrid search
@@ -172,7 +171,7 @@ from langsmith.evaluation import evaluate
 # Run evaluation suite
 eval_config = RunEvalConfig(
     evaluators=["qa", "context_qa", "cot_qa"],
-    eval_llm=ChatAnthropic(model="claude-sonnet-4-5")
+    eval_llm=ChatAnthropic(model="Antigravity-sonnet-4-5")
 )
 
 results = await evaluate(
@@ -220,7 +219,7 @@ async def call_with_retry():
 
 ## Implementation Checklist
 
-- [ ] Initialize LLM with Claude Sonnet 4.5
+- [ ] Initialize LLM with Antigravity Sonnet 4.5
 - [ ] Setup Voyage AI embeddings (voyage-3-large)
 - [ ] Create tools with async support and error handling
 - [ ] Implement memory system (choose type based on use case)
@@ -247,8 +246,3 @@ async def call_with_retry():
 ---
 
 Build production-ready, scalable, and observable LangChain agents following these patterns.
-
-## Limitations
-- Use this skill only when the task clearly matches the scope described above.
-- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
-- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.

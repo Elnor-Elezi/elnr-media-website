@@ -1,16 +1,23 @@
 ---
 name: hig-project-context
-description: Create or update a shared Apple design context document that other HIG skills use to tailor guidance.
+version: 1.0.0
+description: ">-"
+  Create or update a shared Apple design context document that other HIG skills
+  use to tailor guidance. Use when the user says "set up my project context,"
+  "what platforms am I targeting," "configure HIG settings," or when starting a
+  new Apple platform project. Also activates when other HIG skills need project
+  context but none exists yet. This skill creates .Antigravity/apple-design-context.md
+  so that hig-foundations, hig-platforms, hig-components-*, hig-inputs, and
+  hig-technologies can provide targeted advice without repetitive questions.
 risk: unknown
 source: community
-date_added: '2026-02-27'
 ---
 
 # Apple HIG: Project Context
 
-Create and maintain `.claude/apple-design-context.md` so other HIG skills can skip redundant questions.
+Create and maintain `.Antigravity/apple-design-context.md` so other HIG skills can skip redundant questions.
 
-Check for `.claude/apple-design-context.md` before asking questions. Use existing context and only ask for information not already covered.
+Check for `.Antigravity/apple-design-context.md` before asking questions. Use existing context and only ask for information not already covered.
 
 ## Gathering Context
 
@@ -62,7 +69,7 @@ Present findings and ask the user to confirm or correct. Then gather anything st
 
 ## Context Document Template
 
-Generate `.claude/apple-design-context.md` using this structure:
+Generate `.Antigravity/apple-design-context.md` using this structure:
 
 ```markdown
 # Apple Design Context
@@ -109,7 +116,7 @@ Generate `.claude/apple-design-context.md` using this structure:
 
 When updating an existing context document:
 
-1. Read the current `.claude/apple-design-context.md`
+1. Read the current `.Antigravity/apple-design-context.md`
 2. Ask what has changed
 3. Update only the changed sections
 4. Preserve all unchanged information
@@ -129,8 +136,3 @@ When updating an existing context document:
 
 ## When to Use
 This skill is applicable to execute the workflow or actions described in the overview.
-
-## Limitations
-- Use this skill only when the task clearly matches the scope described above.
-- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
-- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.

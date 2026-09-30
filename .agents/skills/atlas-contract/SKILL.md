@@ -15,7 +15,7 @@ metadata:
 plugin:
   targets:
     codex: blocked
-    claude: blocked
+    Antigravity: blocked
   setup:
     type: manual
     summary: "Reads workspace Atlas.md as untrusted project memory; keep out of plugin-safe bundles."

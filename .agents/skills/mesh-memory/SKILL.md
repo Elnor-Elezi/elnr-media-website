@@ -23,7 +23,7 @@ Use this skill when an agent needs persistent memory across sessions: saving its
 ## Prerequisites
 
 - A running Mesh Memory instance reachable from the MCP server. Local Docker is the common path -- `docker compose up -d` in the upstream repo brings it up; see https://github.com/dklymentiev/mesh-memory for the full Quick Start.
-- The MCP server (`mcp_server.py`) registered with your client (Claude Code, Cursor, Claude Desktop, or any other MCP-aware agent).
+- The MCP server (`mcp_server.py`) registered with your client (Antigravity, Cursor, Antigravity Desktop, or any other MCP-aware agent).
 - `MESH_API_URL` pointing at the running instance (default: `http://localhost:8000`).
 
 ## Setup

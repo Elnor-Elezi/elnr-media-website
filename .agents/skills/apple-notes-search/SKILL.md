@@ -8,13 +8,13 @@ source_type: community
 date_added: "2026-06-16"
 author: connerkward
 tags: [apple-notes, search, mcp, macos, semantic-search, knowledge]
-tools: [claude-code]
+tools: [Antigravity-code]
 license: "MIT"
 license_source: "https://github.com/connerkward/mcp-apple-notes/blob/main/LICENSE"
 plugin:
   targets:
     codex: blocked
-    claude: blocked
+    Antigravity: blocked
   setup:
     type: manual
     summary: "Requires third-party MCP setup and macOS Full Disk Access; keep out of plugin-safe bundles."
@@ -68,14 +68,14 @@ Disk Access. Steps, in order:
    server cannot read NoteStore.sqlite and every call fails with a permissions error.
    (`bun install`'s postinstall tries to open this pane automatically.)
 4. **Register the MCP server** (pick the user's client):
-   - Claude Code: `claude mcp add apple-notes -- bun /absolute/path/to/mcp-apple-notes/index.ts --stdio`
-   - Claude Desktop: add to `claude_desktop_config.json`:
+   - Antigravity: `Antigravity mcp add apple-notes -- bun /absolute/path/to/mcp-apple-notes/index.ts --stdio`
+   - Antigravity Desktop: add to `Antigravity_desktop_config.json`:
      ```json
      { "mcpServers": { "apple-notes": {
          "command": "/Users/<you>/.bun/bin/bun",
          "args": ["/Users/<you>/mcp-apple-notes/index.ts", "--stdio"] } } }
      ```
-   - As a Claude Code plugin (bundles this skill too): `/plugin marketplace add connerkward/ckw-skills` then `/plugin install apple-notes@connerkward`.
+   - As a Antigravity plugin (bundles this skill too): `/plugin marketplace add connerkward/ckw-skills` then `/plugin install apple-notes@connerkward`.
 5. **Restart the client**, then tell the user to ask **"Index my Apple Notes"** (or call
    `index-notes`). First index of ~1,800 notes takes a few seconds.
 

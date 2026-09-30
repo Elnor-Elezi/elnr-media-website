@@ -13,7 +13,7 @@ tags:
 - hardening
 - pentest
 tools:
-- claude-code
+- Antigravity-code
 - antigravity
 - cursor
 - gemini-cli
@@ -645,7 +645,7 @@ O proprio 007 pratica o que prega:
 
 ## Related Skills
 
-- `claude-code-expert` - Complementary skill for enhanced analysis
+- `Antigravity-code-expert` - Complementary skill for enhanced analysis
 - `cred-omega` - Complementary skill for enhanced analysis
 - `matematico-tao` - Complementary skill for enhanced analysis
 

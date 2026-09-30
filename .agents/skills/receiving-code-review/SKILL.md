@@ -1,9 +1,8 @@
 ---
 name: receiving-code-review
-description: "Code review requires technical evaluation, not emotional performance."
+description: "Use when receiving code review feedback, before implementing suggestions, especially if feedback seems unclear or technically questionable - requires technical rigor and verification, not performat..."
 risk: unknown
 source: community
-date_added: "2026-02-27"
 ---
 
 # Code Review Reception
@@ -30,7 +29,7 @@ WHEN receiving code review feedback:
 ## Forbidden Responses
 
 **NEVER:**
-- "You're absolutely right!" (explicit CLAUDE.md violation)
+- "You're absolutely right!" (explicit AGENTS.md violation)
 - "Great point!" / "Excellent feedback!" (performative)
 - "Let me implement that now" (before verification)
 
@@ -217,8 +216,3 @@ No performative agreement. Technical rigor always.
 
 ## When to Use
 This skill is applicable to execute the workflow or actions described in the overview.
-
-## Limitations
-- Use this skill only when the task clearly matches the scope described above.
-- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
-- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.

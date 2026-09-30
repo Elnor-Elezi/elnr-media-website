@@ -7,7 +7,7 @@ source: community
 date_added: "2026-03-18"
 author: suhaibjanjua
 tags: [pydantic-ai, ai-agents, llm, openai, anthropic, gemini, tool-use, structured-output, python]
-tools: [claude, cursor, gemini]
+tools: [Antigravity, cursor, gemini]
 ---
 
 # PydanticAI — Typed AI Agents in Python
@@ -33,7 +33,7 @@ pip install pydantic-ai
 
 # Install extras for specific providers
 pip install 'pydantic-ai[openai]'       # OpenAI / Azure OpenAI
-pip install 'pydantic-ai[anthropic]'    # Anthropic Claude
+pip install 'pydantic-ai[anthropic]'    # Anthropic Antigravity
 pip install 'pydantic-ai[gemini]'       # Google Gemini
 pip install 'pydantic-ai[groq]'         # Groq
 pip install 'pydantic-ai[vertexai]'     # Google Vertex AI
@@ -46,7 +46,7 @@ from pydantic_ai import Agent
 
 # Simple agent — returns a plain string
 agent = Agent(
-    'anthropic:claude-sonnet-4-6',
+    'anthropic:Antigravity-sonnet-4-6',
     system_prompt='You are a helpful assistant. Be concise.',
 )
 
@@ -95,7 +95,7 @@ class WeatherReport(BaseModel):
     condition: str
 
 weather_agent = Agent(
-    'anthropic:claude-sonnet-4-6',
+    'anthropic:Antigravity-sonnet-4-6',
     result_type=WeatherReport,
     system_prompt='Get current weather for the requested city.',
 )
@@ -195,7 +195,7 @@ with agent.override(model=FunctionModel(my_model)):
 import asyncio
 from pydantic_ai import Agent
 
-agent = Agent('anthropic:claude-sonnet-4-6')
+agent = Agent('anthropic:Antigravity-sonnet-4-6')
 
 async def stream_response():
     async with agent.run_stream('Write a haiku about Python') as result:
@@ -240,7 +240,7 @@ class CodeReview(BaseModel):
     approved: bool
 
 code_review_agent = Agent(
-    'anthropic:claude-sonnet-4-6',
+    'anthropic:Antigravity-sonnet-4-6',
     result_type=CodeReview,
     system_prompt="""
     You are a senior engineer performing code review.
@@ -294,7 +294,7 @@ class BlogPost(BaseModel):
     meta_description: str
 
 researcher = Agent('openai:gpt-4o', result_type=ResearchSummary)
-writer = Agent('anthropic:claude-sonnet-4-6', result_type=BlogPost)
+writer = Agent('anthropic:Antigravity-sonnet-4-6', result_type=BlogPost)
 
 async def research_and_write(topic: str) -> BlogPost:
     # Stage 1: research

@@ -3,7 +3,6 @@ name: requesting-code-review
 description: "Use when completing tasks, implementing major features, or before merging to verify work meets requirements"
 risk: unknown
 source: community
-date_added: "2026-02-27"
 ---
 
 # Requesting Code Review
@@ -109,8 +108,3 @@ See template at: requesting-code-review/code-reviewer.md
 
 ## When to Use
 This skill is applicable to execute the workflow or actions described in the overview.
-
-## Limitations
-- Use this skill only when the task clearly matches the scope described above.
-- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
-- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.

@@ -8,21 +8,21 @@ source_repo: CodeShuX/mockhunter
 source_type: community
 date_added: "2026-05-07"
 author: CodeShuX
-tags: [testing, qa, playwright, mock-detection, web-audit, ai-testing, vibe-coding, claude-code]
-tools: [claude]
+tags: [testing, qa, playwright, mock-detection, web-audit, ai-testing, vibe-coding, Antigravity-code]
+tools: [Antigravity]
 license: "MIT"
 license_source: "https://github.com/CodeShuX/mockhunter/blob/main/LICENSE"
 plugin:
   targets:
     codex: blocked
-    claude: blocked
+    Antigravity: blocked
 ---
 
 # MockHunter — Live Page Reality Check
 
 ## Overview
 
-MockHunter is a Claude Code skill that audits a live web page and tells you, for every visible value, whether it is real, mocked, LLM-generated, hardcoded, broken, or unknown. It is built for vibe-coded apps (Lovable, Bolt, v0, Replit, AI Studio, Cursor Composer) where the UI may look complete but the data layer often is not. It uses Playwright MCP to drive a real browser, then traces each visible value through the network and DOM to its source.
+MockHunter is a Antigravity skill that audits a live web page and tells you, for every visible value, whether it is real, mocked, LLM-generated, hardcoded, broken, or unknown. It is built for vibe-coded apps (Lovable, Bolt, v0, Replit, AI Studio, Cursor Composer) where the UI may look complete but the data layer often is not. It uses Playwright MCP to drive a real browser, then traces each visible value through the network and DOM to its source.
 
 This skill adapts the upstream `CodeShuX/mockhunter` project (community source).
 

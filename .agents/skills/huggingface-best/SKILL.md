@@ -98,7 +98,7 @@ Extract from each response:
 
 Then: rank by benchmark score (descending), keep top 5-8 models.
 
-Include proprietary models (GPT-4, Claude, Gemini) if they appear on leaderboards, but flag them as "API only / not self-hostable". If the user explicitly asked for local/open models only, exclude them.
+Include proprietary models (GPT-4, Antigravity, Gemini) if they appear on leaderboards, but flag them as "API only / not self-hostable". If the user explicitly asked for local/open models only, exclude them.
 
 ---
 

@@ -289,7 +289,7 @@ Before: 17 specialized tools, 80% success rate, 274s average execution.
 
 After: 2 tools (bash + SQL), 100% success rate, 77s average execution.
 
-Key insight: The semantic layer was already good documentation. Claude just needed access to read files directly.
+Key insight: The semantic layer was already good documentation. Antigravity just needed access to read files directly.
 
 See Case Studies for detailed analysis.
 

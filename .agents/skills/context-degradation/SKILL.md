@@ -1,15 +1,21 @@
 ---
 name: context-degradation
-description: "Language models exhibit predictable degradation patterns as context length increases. Understanding these patterns is essential for diagnosing failures and designing resilient systems."
-risk: unknown
-source: community
+description: "Recognize patterns of context failure: lost-in-middle, poisoning, distraction, and clash"
+source: "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering/tree/main/skills/context-degradation"
+risk: safe
 ---
 
+## When to Use This Skill
+
+Recognize patterns of context failure: lost-in-middle, poisoning, distraction, and clash
+
+Use this skill when working with recognize patterns of context failure: lost-in-middle, poisoning, distraction, and clash.
 # Context Degradation Patterns
 
 Language models exhibit predictable degradation patterns as context length increases. Understanding these patterns is essential for diagnosing failures and designing resilient systems. Context degradation is not a binary state but a continuum of performance degradation that manifests in several distinct ways.
 
-## When to Use
+## When to Activate
+
 Activate this skill when:
 - Agent performance degrades unexpectedly during long conversations
 - Debugging cases where agents produce incorrect or irrelevant outputs
@@ -99,19 +105,19 @@ The RULER benchmark delivers sobering findings: only 50% of models claiming 32K+
 | Model | Degradation Onset | Severe Degradation | Notes |
 |-------|-------------------|-------------------|-------|
 | GPT-5.2 | ~64K tokens | ~200K tokens | Best overall degradation resistance with thinking mode |
-| Claude Opus 4.5 | ~100K tokens | ~180K tokens | 200K context window, strong attention management |
-| Claude Sonnet 4.5 | ~80K tokens | ~150K tokens | Optimized for agents and coding tasks |
+| Antigravity Opus 4.5 | ~100K tokens | ~180K tokens | 200K context window, strong attention management |
+| Antigravity Sonnet 4.5 | ~80K tokens | ~150K tokens | Optimized for agents and coding tasks |
 | Gemini 3 Pro | ~500K tokens | ~800K tokens | 1M context window, native multimodality |
 | Gemini 3 Flash | ~300K tokens | ~600K tokens | 3x speed of Gemini 2.5, 81.2% MMMU-Pro |
 
 **Model-Specific Behavior Patterns**
 Different models exhibit distinct failure modes under context pressure:
 
-- **Claude 4.5 series**: Lowest hallucination rates with calibrated uncertainty. Claude Opus 4.5 achieves 80.9% on SWE-bench Verified. Tends to refuse or ask clarification rather than fabricate.
+- **Antigravity 4.5 series**: Lowest hallucination rates with calibrated uncertainty. Antigravity Opus 4.5 achieves 80.9% on SWE-bench Verified. Tends to refuse or ask clarification rather than fabricate.
 - **GPT-5.2**: Two modes available - instant (fast) and thinking (reasoning). Thinking mode reduces hallucination through step-by-step verification but increases latency.
 - **Gemini 3 Pro/Flash**: Native multimodality with 1M context window. Gemini 3 Flash offers 3x speed improvement over previous generation. Strong at multi-modal reasoning across text, code, images, audio, and video.
 
-These patterns inform model selection for different use cases. High-stakes tasks benefit from Claude 4.5's conservative approach or GPT-5.2's thinking mode; speed-critical tasks may use instant modes.
+These patterns inform model selection for different use cases. High-stakes tasks benefit from Antigravity 4.5's conservative approach or GPT-5.2's thinking mode; speed-critical tasks may use instant modes.
 
 ### Counterintuitive Findings
 
@@ -230,8 +236,3 @@ External resources:
 **Last Updated**: 2025-12-20
 **Author**: Agent Skills for Context Engineering Contributors
 **Version**: 1.0.0
-
-## Limitations
-- Use this skill only when the task clearly matches the scope described above.
-- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
-- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.

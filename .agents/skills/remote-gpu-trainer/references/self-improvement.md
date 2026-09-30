@@ -31,7 +31,7 @@ one-offs is exactly the catalog rot this bar exists to prevent.
 | What was learned | Where it goes | Form |
 |---|---|---|
 | **User/personal/host-specific** — this account's quirk, the user's preference, the usual GPU plan, "on MY box X is true" | **the host's `memory/` system** (host-specific, personal, may be ephemeral) | a `reference` / `project` / `feedback` fact, one per file, deduped |
-| **A project-level fact or recurring error the user keeps hitting on THEIR project** — a config quirk, "always run X first", a path that must be Y, an env that must be activated | a **project instructions file in the user's repo** — `CLAUDE.md` / `AGENTS.md` / `.cursorrules` (persists cross-session AND cross-tool AND for collaborators, unlike host memory) | a short imperative rule; **propose, don't auto-write** (§3) |
+| **A project-level fact or recurring error the user keeps hitting on THEIR project** — a config quirk, "always run X first", a path that must be Y, an env that must be activated | a **project instructions file in the user's repo** — `AGENTS.md` / `AGENTS.md` / `.cursorrules` (persists cross-session AND cross-tool AND for collaborators, unlike host memory) | a short imperative rule; **propose, don't auto-write** (§3) |
 | **Generalizable platform gotcha** | `profiles/<platform>.md` §7 (platform-pinned) or `references/gotchas_universal.md` (cross-platform) | `symptom → root cause → fix` + a source URL |
 | **Generalizable training-debug gotcha** | `references/training/<topic>.md` | same form |
 | **A correction** (a fact here is now wrong/stale) | edit that file; re-stamp its `verified <month>` | note old → new + URL |

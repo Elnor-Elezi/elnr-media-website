@@ -1,9 +1,13 @@
 ---
 name: mlops-engineer
-description: Build comprehensive ML pipelines, experiment tracking, and model registries with MLflow, Kubeflow, and modern MLOps tools.
+description: "Build comprehensive ML pipelines, experiment tracking, and model"
+  registries with MLflow, Kubeflow, and modern MLOps tools. Implements automated
+  training, deployment, and monitoring across cloud platforms. Use PROACTIVELY
+  for ML infrastructure, experiment management, or pipeline automation.
+metadata:
+  model: inherit
 risk: unknown
 source: community
-date_added: '2026-02-27'
 ---
 
 ## Use this skill when
@@ -215,8 +219,3 @@ Expert MLOps engineer specializing in building scalable ML infrastructure and au
 - "Implement GitOps workflow for ML model deployment with approval gates"
 - "Build monitoring system for detecting data drift and model performance issues"
 - "Create cost-optimized training infrastructure using spot instances and auto-scaling"
-
-## Limitations
-- Use this skill only when the task clearly matches the scope described above.
-- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
-- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.

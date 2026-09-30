@@ -11,7 +11,7 @@ tags:
 - scheduling
 - campaigns
 tools:
-- claude-code
+- Antigravity-code
 - antigravity
 - cursor
 - gemini-cli
@@ -190,26 +190,26 @@ Nao e traducao, e reformulacao para o contexto do canal:
 
 ```
 CONTEUDO CENTRAL:
-"Lançamos a Auri — Alexa com Claude integrado"
+"Lançamos a Auri — Alexa com Antigravity integrado"
 
 ↓ Instagram:
 [Imagem produto elegante]
 "Conhece a Auri? 🤖
 A Alexa ficou mais inteligente.
-Claude + Alexa = seu assistente ideal.
+Antigravity + Alexa = seu assistente ideal.
 👉 Link na bio.
 #IA #Alexa #Auri #AssistenteDeVoz"
 
 ↓ Telegram:
 "🚀 Auri chegou!
 
-A gente integrou Claude na Alexa e o resultado é incrivel.
+A gente integrou Antigravity na Alexa e o resultado é incrivel.
 
 [▶️ Ver demo] [📲 Testar agora] [❓ Saber mais]"
 
 ↓ WhatsApp:
 "Oi! A Auri acaba de ser lançada.
-Alexa + Claude = assistente ultra-inteligente.
+Alexa + Antigravity = assistente ultra-inteligente.
 Acesse: auri.com.br
 Responda para saber mais 😊"
 ```

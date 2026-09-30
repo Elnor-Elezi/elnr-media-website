@@ -12,7 +12,7 @@ tags:
 - pricing
 - subscriptions
 tools:
-- claude-code
+- Antigravity-code
 - antigravity
 - cursor
 - gemini-cli

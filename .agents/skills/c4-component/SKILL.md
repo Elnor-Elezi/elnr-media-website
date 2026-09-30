@@ -1,9 +1,14 @@
 ---
 name: c4-component
-description: Expert C4 Component-level documentation specialist. Synthesizes C4 Code-level documentation into Component-level architecture, defining component boundaries, interfaces, and relationships.
+description: "Expert C4 Component-level documentation specialist. Synthesizes C4"
+  Code-level documentation into Component-level architecture, defining component
+  boundaries, interfaces, and relationships. Creates component diagrams and
+  documentation. Use when synthesizing code-level documentation into logical
+  components.
+metadata:
+  model: sonnet
 risk: unknown
 source: community
-date_added: '2026-02-27'
 ---
 
 # C4 Component Level: [Component Name]
@@ -148,8 +153,3 @@ When synthesizing components, provide:
 - Mermaid component diagrams showing relationships
 - Master component index with all components
 - Consistent documentation format across all components
-
-## Limitations
-- Use this skill only when the task clearly matches the scope described above.
-- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
-- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.

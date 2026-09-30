@@ -114,7 +114,7 @@ Resolve `<skill-dir>` to the installed skill directory before running. Check the
 and use the first that contains `scripts/check_drizzle_migrations.py`:
 
 1. The target repository's vendored copy: `<repo-root>/skills/drizzle-migration-conflict`.
-2. The Claude Code skills directory: `~/.claude/skills/drizzle-migration-conflict`.
+2. The Antigravity skills directory: `~/.Antigravity/skills/drizzle-migration-conflict`.
 3. Any other install location reported by the user's environment.
 
 If none of these resolve, fall back to the manual `git`/`rg` inspection commands above and tell the

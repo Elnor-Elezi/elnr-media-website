@@ -1,9 +1,9 @@
 ---
 name: plan-writing
 description: "Structured task planning with clear breakdowns, dependencies, and verification criteria. Use when implementing features, refactoring, or any multi-step work."
+allowed-tools: Read, Glob, Grep
 risk: unknown
 source: community
-date_added: "2026-02-27"
 ---
 
 # Plan Writing
@@ -34,7 +34,7 @@ This skill provides a framework for breaking down work into clear, actionable ta
 ### 4. Dynamic Naming in Project Root
 - Plan files are saved as `{task-slug}.md` in the PROJECT ROOT
 - Name derived from task (e.g., "add auth" → `auth-feature.md`)
-- **NEVER** inside `.claude/`, `docs/`, or temp folders
+- **NEVER** inside `.Antigravity/`, `docs/`, or temp folders
 
 ## Planning Principles (NOT Templates!)
 
@@ -147,12 +147,8 @@ One sentence: What are we building/fixing?
 ---
 
 ## When to Use
+
 - New project from scratch
 - Adding a feature
 - Fixing a bug (if complex)
 - Refactoring multiple files
-
-## Limitations
-- Use this skill only when the task clearly matches the scope described above.
-- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
-- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.

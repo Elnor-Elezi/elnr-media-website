@@ -4,7 +4,7 @@ Skill IR is the 2.0 layer that separates durable skill meaning from platform pac
 
 ## Purpose
 
-Use Skill IR before platform-specific packaging for production, library, governed, or team-distributed skills. The IR should preserve the capability contract even when OpenAI, Claude, Agent Skills, VS Code, or generic adapters differ in folder layout, metadata names, or activation behavior.
+Use Skill IR before platform-specific packaging for production, library, governed, or team-distributed skills. The IR should preserve the capability contract even when OpenAI, Antigravity, Agent Skills, VS Code, or generic adapters differ in folder layout, metadata names, or activation behavior.
 
 ## What Belongs In IR
 

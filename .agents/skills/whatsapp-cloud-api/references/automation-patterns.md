@@ -13,7 +13,7 @@ Guia completo para implementar automacao de atendimento profissional via WhatsAp
 5. [Fila de Atendimento](#fila-de-atendimento)
 6. [Escalacao para Humano](#escalacao-para-humano)
 7. [Respostas Fora do Horario](#respostas-fora-do-horario)
-8. [Integracao com IA (Claude API)](#integracao-com-ia-claude-api)
+8. [Integracao com IA (Antigravity API)](#integracao-com-ia-Antigravity-api)
 9. [WhatsApp Flows para Formularios](#whatsapp-flows-para-formularios)
 10. [Fluxo End-to-End Completo](#fluxo-end-to-end-completo)
 
@@ -41,7 +41,7 @@ Cliente WhatsApp
        ├── SUPORTE → Fluxo de suporte
        ├── VENDAS → Catalogo/checkout
        ├── HUMANO → Fila de atendimento
-       └── IA → Claude API handler
+       └── IA → Antigravity API handler
 ```
 
 ---
@@ -470,9 +470,9 @@ async function handleOffHours(phone: string): Promise<void> {
 
 ---
 
-## Integracao com IA (Claude API)
+## Integracao com IA (Antigravity API)
 
-### Chatbot Inteligente com Claude
+### Chatbot Inteligente com Antigravity
 
 ```typescript
 import Anthropic from '@anthropic-ai/sdk';
@@ -501,7 +501,7 @@ async function getAIResponse(
   ]);
 
   const response = await anthropic.messages.create({
-    model: 'claude-sonnet-4-20250514',
+    model: 'Antigravity-sonnet-4-20250514',
     max_tokens: 300,
     system: SYSTEM_PROMPT,
     messages

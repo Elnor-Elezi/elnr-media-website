@@ -17,7 +17,7 @@ tags:
   - archival
   - attribution
 tools:
-  - claude-code
+  - Antigravity-code
   - antigravity
   - cursor
   - gemini-cli
@@ -89,7 +89,7 @@ not single shots. So:
 ## Audio: freesound + audio QA
 
 `webmedia.py` is image/video. For **sound effects** (real, CC-licensed) and for
-**judging audio** (since Claude can't hear), two sibling scripts live in
+**judging audio** (since Antigravity can't hear), two sibling scripts live in
 `central/scripts/`:
 
 - **`freesound-fetch.py "<query>" [count] [max_sec] [out_dir]`** — searches freesound.org

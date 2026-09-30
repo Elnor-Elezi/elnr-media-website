@@ -1,11 +1,15 @@
 ---
 name: audio-transcriber
 description: "Transform audio recordings into professional Markdown documentation with intelligent summaries using LLM integration"
+version: 1.2.0
+author: Eric Andrade
+created: 2025-02-01
+updated: 2026-02-04
+platforms: [github-copilot-cli, Antigravity-code, codex]
 category: content
+tags: [audio, transcription, whisper, meeting-minutes, speech-to-text]
 risk: safe
 source: community
-tags: "[audio, transcription, whisper, meeting-minutes, speech-to-text]"
-date_added: "2026-02-27"
 ---
 
 ## Purpose
@@ -15,6 +19,7 @@ This skill automates audio-to-text transcription with professional Markdown outp
 Inspired by tools like Plaud, this skill transforms raw audio recordings into actionable documentation, making it ideal for meetings, interviews, lectures, and content analysis.
 
 ## When to Use
+
 Invoke this skill when:
 
 - User needs to transcribe audio/video files to text
@@ -232,7 +237,7 @@ fi
 
 **Implementation:**
 
-Use Python or bash with AI model (Claude/GPT) for intelligent summarization:
+Use Python or bash with AI model (Antigravity/GPT) for intelligent summarization:
 
 ```python
 def generate_meeting_minutes(segments):
@@ -254,7 +259,7 @@ def generate_meeting_minutes(segments):
     }
 
 def generate_summary(segments, max_paragraphs=5):
-    """Create executive summary using AI (Claude/GPT via API or local model)."""
+    """Create executive summary using AI (Antigravity/GPT via API or local model)."""
     
     full_text = " ".join([s["text"] for s in segments])
     
@@ -267,7 +272,7 @@ def generate_summary(segments, max_paragraphs=5):
     {full_text}
     """
     
-    # Call AI model (placeholder - user can integrate Claude API or use local model)
+    # Call AI model (placeholder - user can integrate Antigravity API or use local model)
     summary = call_ai_model(summary_prompt)
     
     return summary
@@ -342,7 +347,7 @@ Once prompt is finalized:
 ```python
 from rich.progress import Progress, SpinnerColumn, TextColumn
 
-def process_with_llm(transcript, prompt, cli_tool='claude'):
+def process_with_llm(transcript, prompt, cli_tool='Antigravity'):
     full_prompt = f"{prompt}\n\n---\n\nTranscrição:\n\n{transcript}"
     
     with Progress(
@@ -355,9 +360,9 @@ def process_with_llm(transcript, prompt, cli_tool='claude'):
             total=None
         )
         
-        if cli_tool == 'claude':
+        if cli_tool == 'Antigravity':
             result = subprocess.run(
-                ['claude', '-'],
+                ['Antigravity', '-'],
                 input=full_prompt,
                 capture_output=True,
                 text=True,
@@ -379,7 +384,7 @@ def process_with_llm(transcript, prompt, cli_tool='claude'):
 
 **Progress output:**
 ```
-🤖 Processando com claude... ⠋
+🤖 Processando com Antigravity... ⠋
 [After completion:]
 ✅ Ata gerada com sucesso!
 ```
@@ -552,8 +557,3 @@ Continue? [Y/n]:
 
 
 This skill is **platform-agnostic** and works in any terminal context where GitHub Copilot CLI is available. It does not depend on specific project configurations or external APIs, following the zero-configuration philosophy.
-
-## Limitations
-- Use this skill only when the task clearly matches the scope described above.
-- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
-- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.

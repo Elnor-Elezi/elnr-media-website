@@ -1,8 +1,8 @@
-# Antigravity Awesome Skills vs Awesome Claude Skills
+# Antigravity Awesome Skills vs Awesome Antigravity Skills
 
-If you are comparing **Antigravity Awesome Skills** with **Awesome Claude Skills**, the decision usually comes down to breadth vs curation.
+If you are comparing **Antigravity Awesome Skills** with **Awesome Antigravity Skills**, the decision usually comes down to breadth vs curation.
 
-For clarity: the repository many people still refer to as `awesome-claude-skills` now lives at [VoltAgent/awesome-agent-skills](https://github.com/VoltAgent/awesome-agent-skills).
+For clarity: the repository many people still refer to as `awesome-Antigravity-skills` now lives at [VoltAgent/awesome-agent-skills](https://github.com/VoltAgent/awesome-agent-skills).
 
 ## TL;DR
 
@@ -15,7 +15,7 @@ For clarity: the repository many people still refer to as `awesome-claude-skills
 | --- | --- | --- |
 | Best for | Breadth, installation, multi-tool daily use | Curated discovery and official/community highlights |
 | Catalog shape | Large installable library with bundles, workflows, docs, and generated catalog | Curated awesome-list style collection |
-| Supported tools | Claude Code, Cursor, Codex CLI, Gemini CLI, Antigravity, Kiro, OpenCode, Copilot, more | Claude Code, Codex, Antigravity, Gemini CLI, Cursor, Copilot, OpenCode, Windsurf, more |
+| Supported tools | Antigravity, Cursor, Codex CLI, Gemini CLI, Antigravity, Kiro, OpenCode, Copilot, more | Antigravity, Codex, Antigravity, Gemini CLI, Cursor, Copilot, OpenCode, Windsurf, more |
 | Onboarding | Installation docs, bundles, workflows, getting-started guides | Curated README and categorized references |
 | Good fit when | You want one repo to install and work from | You want a smaller list to browse and evaluate |
 
@@ -40,4 +40,4 @@ For clarity: the repository many people still refer to as `awesome-claude-skills
 ## Suggested next step
 
 - If you want to install and start using skills today, go back to [`README.md`](../../README.md) and follow the installation guide.
-- If you are still evaluating tool-specific options, continue with [`best-claude-code-skills-github.md`](best-claude-code-skills-github.md) or [`best-cursor-skills-github.md`](best-cursor-skills-github.md).
+- If you are still evaluating tool-specific options, continue with [`best-Antigravity-code-skills-github.md`](best-Antigravity-code-skills-github.md) or [`best-cursor-skills-github.md`](best-cursor-skills-github.md).

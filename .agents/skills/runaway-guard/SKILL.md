@@ -8,7 +8,7 @@ source_type: community
 date_added: "2026-05-28"
 author: morsechimwai
 tags: [cost-safety, finops, ai-apis, agents, retries, concurrency, wallet-invariant, gateway]
-tools: [claude-code, antigravity, cursor, gemini-cli, codex-cli]
+tools: [Antigravity-code, antigravity, cursor, gemini-cli, codex-cli]
 license: "Apache-2.0"
 license_source: "https://github.com/morsechimwai/lemmaly/blob/main/LICENSE"
 ---

@@ -2,7 +2,7 @@
 name: brooks-harness
 description: Maintenance orchestrator for the brooks-lint plugin itself. Runs a sequential subagent pipeline — author → eval → QA → trigger-audit → release — to add or edit a skill, refresh the eval suite, keep the four manifests + README + CHANGELOG + AGENTS/GEMINI in sync, audit trigger...
 risk: unknown
-source: https://github.com/hyhmrright/brooks-lint/tree/main/.claude/skills/brooks-harness
+source: https://github.com/hyhmrright/brooks-lint/tree/main/.Antigravity/skills/brooks-harness
 source_repo: hyhmrright/brooks-lint
 source_type: community
 date_added: 2026-07-01
@@ -17,7 +17,7 @@ Use this skill when you need maintenance orchestrator for the brooks-lint plugin
 
 
 This skill orchestrates work **on the brooks-lint repo itself**. It runs a sequential
-subagent pipeline: each stage is a dedicated agent defined in `.claude/agents/`. Spawn
+subagent pipeline: each stage is a dedicated agent defined in `.Antigravity/agents/`. Spawn
 each with the `Agent` tool, `subagent_type` set to the agent name, and **always
 `model: "opus"`**. Stages depend on each other in order, so this is a pipeline, not a
 parallel team.
@@ -96,7 +96,7 @@ contract and (b) the previous stage's summary. Agents write their summaries to
 Report: stages run, files changed, QA verdict, trigger-audit findings (if any), and the
 release URL (if any). Then offer the maintainer a feedback opening: "Anything to adjust
 in the result, the agent roles, or the pipeline order?" Record accepted changes in the
-CLAUDE.md harness change-log table.
+AGENTS.md harness change-log table.
 
 ## Conventions this harness enforces
 
@@ -105,7 +105,7 @@ CLAUDE.md harness change-log table.
   trigger-boundary-auditor is read-only.
 - **No slash commands are created** — short forms are auto-installed by the
   session-start hook.
-- **Direct-to-main**: changes push to `main` without a PR (per repo CLAUDE.md); the
+- **Direct-to-main**: changes push to `main` without a PR (per repo AGENTS.md); the
   global simplify→review→commit gate still applies to non-doc edits, but skill/guide
   content is markdown and follows the validate gate instead.
 

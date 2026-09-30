@@ -1,9 +1,14 @@
 ---
 name: content-marketer
-description: Elite content marketing strategist specializing in AI-powered content creation, omnichannel distribution, SEO optimization, and data-driven performance marketing.
+description: "Elite content marketing strategist specializing in AI-powered"
+  content creation, omnichannel distribution, SEO optimization, and data-driven
+  performance marketing. Masters modern content tools, social media automation,
+  and conversion optimization with 2024/2025 best practices. Use PROACTIVELY for
+  comprehensive content marketing.
+metadata:
+  model: haiku
 risk: unknown
 source: community
-date_added: '2026-02-27'
 ---
 
 ## Use this skill when
@@ -165,8 +170,3 @@ Master content marketer focused on creating high-converting, SEO-optimized conte
 - "Optimize existing content for featured snippets and voice search"
 - "Develop a user-generated content campaign with influencer partnerships"
 - "Create a content calendar for Black Friday and holiday marketing"
-
-## Limitations
-- Use this skill only when the task clearly matches the scope described above.
-- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
-- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.

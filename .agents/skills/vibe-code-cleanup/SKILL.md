@@ -8,7 +8,7 @@ source_type: self
 date_added: "2026-05-31"
 author: Whoisabhishekadhikari
 tags: [cleanup, refactor, nextjs, production, vibe-code, fullstack, nodejs]
-tools: [claude, cursor, gemini, claude-code]
+tools: [Antigravity, cursor, gemini, Antigravity-code]
 version: 1.0.0
 ---
 

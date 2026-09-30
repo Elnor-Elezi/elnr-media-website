@@ -34,7 +34,7 @@ If the YIELD INTELLIGENCE MCP server is configured, call it directly for live ra
 - `analyze_yield_opportunities` — Scans dividend ETFs, REITs, preferred stocks, and Treasuries; returns ranked opportunities with yield, risk score, and liquidity
 - `optimize_income_portfolio` — Builds a portfolio allocation targeting a specific monthly income goal
 
-**Quick config (Claude Desktop / Claude Code):**
+**Quick config (Antigravity Desktop / Antigravity):**
 ```json
 {
   "mcpServers": {

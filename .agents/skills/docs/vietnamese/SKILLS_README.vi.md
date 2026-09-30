@@ -30,7 +30,7 @@ skills/
 ## Cách sử dụng Kỹ năng
 
 ### Bước 1: Đảm bảo kỹ năng đã được thiết lập
-Theo mặc định, installer đặt kỹ năng vào `~/.agents/skills/`. Bạn cũng có thể dùng cờ theo công cụ như `--claude`, `--gemini`, `--codex`, `--cursor`, `--kiro`, `--antigravity`, `--agy`, hoặc `--path <dir>`.
+Theo mặc định, installer đặt kỹ năng vào `~/.agents/skills/`. Bạn cũng có thể dùng cờ theo công cụ như `--Antigravity`, `--gemini`, `--codex`, `--cursor`, `--kiro`, `--antigravity`, `--agy`, hoặc `--path <dir>`.
 
 ### Bước 2: Kích hoạt kỹ năng trong cuộc trò chuyện với AI
 Sử dụng biểu tượng `@` theo sau bởi tên kỹ năng:

@@ -9,20 +9,20 @@ source_type: community
 date_added: "2026-06-02"
 author: yehudalevy-collab
 tags: [multi-agent, coordination, routing, orchestration, governance, vendor-agnostic]
-tools: [claude, cursor, gemini, codex, antigravity]
+tools: [Antigravity, cursor, gemini, codex, antigravity]
 license: "MIT"
 license_source: "https://github.com/yehudalevy-collab/polis-protocol/blob/main/LICENSE"
 plugin:
   targets:
     codex: blocked
-    claude: blocked
+    Antigravity: blocked
 ---
 
 # Polis Protocol — a team of agents that develops
 
 ## Overview
 
-Most agent coordination is a passive board: claim a task, do it, mark it done. It records, but it never gets smarter, and its rules are frozen. Polis Protocol is the active alternative — a folder of markdown where each agent is a "citizen" with a capability card, work is routed by a learning bandit to whoever has the best track record on the task's tags, settled work files lessons that update the routing, and citizens can propose and vote on amendments to the protocol itself. It is vendor-agnostic: Antigravity, Claude, Codex, and Gemini agents can all share one `_polis/`.
+Most agent coordination is a passive board: claim a task, do it, mark it done. It records, but it never gets smarter, and its rules are frozen. Polis Protocol is the active alternative — a folder of markdown where each agent is a "citizen" with a capability card, work is routed by a learning bandit to whoever has the best track record on the task's tags, settled work files lessons that update the routing, and citizens can propose and vote on amendments to the protocol itself. It is vendor-agnostic: Antigravity, Antigravity, Codex, and Gemini agents can all share one `_polis/`.
 
 In Antigravity specifically, this turns Manager View's fixed pipeline into a team that learns who is actually best at each kind of work, instead of running the same roles in the same order every time.
 
@@ -98,7 +98,7 @@ python3 scripts/route_contract.py --polis-root examples/research-team/_polis \
 ## Notes
 
 - No server, no runtime, no database — the whole protocol is markdown plus two small Python scripts.
-- Vendor-agnostic by design; a Claude or Codex agent can join the same polis an Antigravity agent created.
+- Vendor-agnostic by design; a Antigravity or Codex agent can join the same polis an Antigravity agent created.
 - Full Antigravity integration guide: https://github.com/yehudalevy-collab/polis-protocol/blob/main/docs/antigravity.md
 
 ## Limitations

@@ -1,4 +1,4 @@
-﻿# 📔 Unified Diary System (Agentic Context-Preserving Logger) v4.1
+# 📔 Unified Diary System (Agentic Context-Preserving Logger) v4.1
 
 ![Version](https://img.shields.io/badge/version-v4.1-blue)
 ![AI Agent](https://img.shields.io/badge/AI-Agent_Driven-orange)
@@ -82,7 +82,7 @@ The system will take over to handle all the filing, merging, and syncing automat
 
 1. **Configuration**: Rename `.env.example` to `.env` and fill in your `NOTION_TOKEN`, `NOTION_DIARY_DB`, and set where your global diary root is stored.
 2. **Dependencies**: `pip install -r requirements.txt`
-3. **AI Agent**: Requires an AI assistant with Function Calling / Continuous Tool Calling capabilities (like Cursor, Claude Code, or Gemini CLI frameworks).
+3. **AI Agent**: Requires an AI assistant with Function Calling / Continuous Tool Calling capabilities (like Cursor, Antigravity, or Gemini CLI frameworks).
 
 ---
 

@@ -1,6 +1,6 @@
 # MCP servers on Neon Functions
 
-A [Model Context Protocol](https://modelcontextprotocol.io) server is a textbook Neon Functions workload: it's a long-running HTTP handler that an AI client (Cursor, Claude, ChatGPT, an agent) calls to discover and invoke tools, and those tools usually read and write a database. Running it as a Neon Function puts the MCP server's compute next to its Postgres data, gives it a public HTTPS URL, and lets it branch with the rest of your backend — each branch gets its own MCP server against its own isolated data.
+A [Model Context Protocol](https://modelcontextprotocol.io) server is a textbook Neon Functions workload: it's a long-running HTTP handler that an AI client (Cursor, Antigravity, ChatGPT, an agent) calls to discover and invoke tools, and those tools usually read and write a database. Running it as a Neon Function puts the MCP server's compute next to its Postgres data, gives it a public HTTPS URL, and lets it branch with the rest of your backend — each branch gets its own MCP server against its own isolated data.
 
 MCP's **streamable HTTP transport** is a plain `POST`/`GET` on a single endpoint (conventionally `/mcp`), so it maps directly onto a function's web-standard `fetch` handler — no `upgrade` method or extra protocol like [WebSockets](../SKILL.md#websocket-servers) needed. A Hono app is the simplest host.
 
@@ -85,7 +85,7 @@ Key points:
 
 ### Option 1 — OAuth via the Better Auth MCP plugin (best for third-party clients)
 
-The [MCP plugin](https://better-auth.com/docs/plugins/mcp) makes your **Better Auth app the OAuth authorization server** for MCP, implementing the MCP authorization spec end to end: discovery (`/.well-known/oauth-authorization-server`, `/.well-known/oauth-protected-resource`), dynamic client registration, and the consent/token flow. MCP clients that support OAuth (Cursor, Claude, ChatGPT) then sign the user in and obtain a token with no API key to copy around.
+The [MCP plugin](https://better-auth.com/docs/plugins/mcp) makes your **Better Auth app the OAuth authorization server** for MCP, implementing the MCP authorization spec end to end: discovery (`/.well-known/oauth-authorization-server`, `/.well-known/oauth-protected-resource`), dynamic client registration, and the consent/token flow. MCP clients that support OAuth (Cursor, Antigravity, ChatGPT) then sign the user in and obtain a token with no API key to copy around.
 
 Your Neon Function is the **resource server** — a separate service from the Better Auth app, so it doesn't share a process. Use Better Auth's **remote MCP client** to validate the incoming Bearer token against the auth server's published JWKS, and serve the protected-resource metadata so clients can discover where to authenticate:
 

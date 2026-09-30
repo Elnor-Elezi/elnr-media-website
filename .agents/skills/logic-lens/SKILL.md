@@ -1,6 +1,6 @@
 ---
 name: logic-lens
-description: "AI-powered Claude Code skill that performs deep code review using formal logic and reasoning frameworks to detect bugs, anti-patterns, and security risks beyond what linters catch."
+description: "AI-powered Antigravity skill that performs deep code review using formal logic and reasoning frameworks to detect bugs, anti-patterns, and security risks beyond what linters catch."
 category: development
 risk: safe
 source: community
@@ -10,15 +10,15 @@ license: "MIT"
 license_source: "https://github.com/hyhmrright/logic-lens/blob/main/LICENSE"
 date_added: "2026-04-29"
 author: hyhmrright
-tags: [code-review, logic-analysis, debugging, security-review, claude-code]
-tools: [claude, codex, cursor, gemini]
+tags: [code-review, logic-analysis, debugging, security-review, Antigravity-code]
+tools: [Antigravity, codex, cursor, gemini]
 ---
 
 # Logic Lens
 
 ## Overview
 
-Logic Lens is a Claude Code skill that performs deep, logic-driven code review using formal reasoning frameworks. Unlike traditional linters that check syntax and style, Logic Lens analyzes your code for logical errors, race conditions, security vulnerabilities, type mismatches, and algorithmic flaws that only appear when you reason through the code's behavior.
+Logic Lens is a Antigravity skill that performs deep, logic-driven code review using formal reasoning frameworks. Unlike traditional linters that check syntax and style, Logic Lens analyzes your code for logical errors, race conditions, security vulnerabilities, type mismatches, and algorithmic flaws that only appear when you reason through the code's behavior.
 
 Powered by structured AI analysis, Logic Lens applies systematic logical inspection across 9 risk categories: null/undefined handling, type safety, concurrency, resource management, security injection, boundary conditions, algorithm correctness, state management, and API contract violations.
 
@@ -32,7 +32,7 @@ Powered by structured AI analysis, Logic Lens applies systematic logical inspect
 
 ## How It Works
 
-Logic Lens uses Claude Code's reasoning capabilities to:
+Logic Lens uses Antigravity's reasoning capabilities to:
 
 1. Parse code structure and build a mental model of data flow
 2. Apply formal logic checks across 9 risk categories
@@ -43,11 +43,11 @@ Logic Lens uses Claude Code's reasoning capabilities to:
 ## Installation
 
 ```bash
-# Install via Claude Code plugin marketplace
-# Search: "logic-lens" in Claude Code > Extensions
+# Install via Antigravity plugin marketplace
+# Search: "logic-lens" in Antigravity > Extensions
 
 # Or install via NPX (Antigravity)
-npx antigravity-awesome-skills --claude
+npx antigravity-awesome-skills --Antigravity
 # Then invoke: @logic-lens
 ```
 
@@ -118,7 +118,7 @@ Logic Lens was tested against real-world codebases and caught issues missed by E
 
 - [GitHub Repository](https://github.com/hyhmrright/logic-lens)
 - [Dev.to Article: Why AI Code Review Misses the Most Dangerous Bugs](https://dev.to/hyhmrright/why-ai-code-review-misses-the-most-dangerous-bugs-logic-lens-fixes-that-4a8l)
-- [Claude Code Skills Documentation](https://docs.anthropic.com/claude-code)
+- [Antigravity Skills Documentation](https://docs.anthropic.com/Antigravity-code)
 
 ## Limitations
 

@@ -8,7 +8,7 @@ source_type: self
 date_added: "2026-05-31"
 author: Whoisabhishekadhikari
 tags: [seo, open-graph, twitter-card, social-sharing, og-image, nextjs, metadata]
-tools: [claude, cursor, gemini, claude-code]
+tools: [Antigravity, cursor, gemini, Antigravity-code]
 version: 1.0.0
 ---
 

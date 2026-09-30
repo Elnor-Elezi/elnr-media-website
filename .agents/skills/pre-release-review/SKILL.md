@@ -50,7 +50,7 @@ release steps begin.
 ## Project guidance discovery
 
 Before interpreting the release diff, look for project-local guidance files such as `AGENTS.md` and
-`CLAUDE.md` in the repository root and relevant service directories. Read them when present so the
+`AGENTS.md` in the repository root and relevant service directories. Read them when present so the
 review respects the user's project-specific conventions, service boundaries, release rules,
 validation expectations, ownership hints, and known operational constraints.
 
@@ -93,7 +93,7 @@ git status --short
 git rev-parse --show-toplevel
 git rev-parse --abbrev-ref HEAD
 git rev-parse HEAD
-rg --files -g 'AGENTS.md' -g 'CLAUDE.md'
+rg --files -g 'AGENTS.md' -g 'AGENTS.md'
 git tag --merged HEAD --sort=-creatordate
 git tag --points-at HEAD
 git for-each-ref --sort=-creatordate --format="%(refname:short) %(objectname:short)" refs/tags

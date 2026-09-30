@@ -11,7 +11,7 @@ tags:
 - quality
 - skill-health
 tools:
-- claude-code
+- Antigravity-code
 - antigravity
 - cursor
 - gemini-cli

@@ -1,10 +1,10 @@
 # Audio Transcriber Skill v1.1.0
 
-Transform audio recordings into professional Markdown documentation with **intelligent atas/summaries using LLM integration** (Claude/Copilot CLI) and automatic prompt engineering.
+Transform audio recordings into professional Markdown documentation with **intelligent atas/summaries using LLM integration** (Antigravity/Copilot CLI) and automatic prompt engineering.
 
 ## 🆕 What's New in v1.1.0
 
-- **🧠 LLM Integration** - Claude CLI (primary) or GitHub Copilot CLI (fallback) for intelligent processing
+- **🧠 LLM Integration** - Antigravity CLI (primary) or GitHub Copilot CLI (fallback) for intelligent processing
 - **✨ Smart Prompts** - Automatic integration with prompt-engineer skill
   - User-provided prompts → automatically improved → user chooses version
   - No prompt → analyzes transcript → suggests format → generates structured prompt
@@ -20,7 +20,7 @@ See **[CHANGELOG.md](./CHANGELOG.md)** for complete v1.1.0 details.
 - **📝 Rich Markdown Output** - Structured reports with metadata tables, timestamps, and formatting
 - **🎙️ Speaker Diarization** - Automatically identifies and labels different speakers
 - **📊 Technical Metadata** - Extracts file size, duration, language, processing time
-- **📋 Intelligent Atas/Summaries** - Generated via LLM (Claude/Copilot) with customizable prompts
+- **📋 Intelligent Atas/Summaries** - Generated via LLM (Antigravity/Copilot) with customizable prompts
 - **💡 Executive Summaries** - AI-generated structured summaries with topics, decisions, action items
 - **🌍 Multi-language** - Supports 99 languages with auto-detection
 - **⚡ Zero Configuration** - Auto-discovers Faster-Whisper/Whisper installation
@@ -68,9 +68,9 @@ apt install ffmpeg
 
 #### 3. Install LLM CLI (Optional - for intelligent summaries)
 
-**Claude CLI (recommended):**
+**Antigravity CLI (recommended):**
 ```bash
-# Follow: https://docs.anthropic.com/en/docs/claude-cli
+# Follow: https://docs.anthropic.com/en/docs/Antigravity-cli
 ```
 
 **GitHub Copilot CLI (alternative):**

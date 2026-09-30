@@ -9,7 +9,7 @@ source_type: community
 date_added: "2026-06-21"
 author: Necmttn
 tags: [ai-coding, workflow-reconstruction, session-analysis, observability]
-tools: [claude, cursor, gemini, codex-cli]
+tools: [Antigravity, cursor, gemini, codex-cli]
 license: "AGPL-3.0-only"
 license_source: "https://github.com/Necmttn/ax/blob/main/LICENSE"
 ---

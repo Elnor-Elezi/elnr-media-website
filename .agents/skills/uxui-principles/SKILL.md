@@ -7,7 +7,7 @@ source: community
 date_added: "2026-04-03"
 author: uxuiprinciples
 tags: [ux, ui, design, evaluation, principles, antipatterns, accessibility]
-tools: [claude, cursor, windsurf]
+tools: [Antigravity, cursor, windsurf]
 ---
 
 # UX/UI Principles

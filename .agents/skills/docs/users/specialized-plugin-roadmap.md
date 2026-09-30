@@ -1,6 +1,6 @@
 # Specialized Plugin Roadmap
 
-This roadmap shifts Antigravity Awesome Skills from "one giant plugin with every safe skill" toward a smaller set of focused, high-value Codex and Claude plugins.
+This roadmap shifts Antigravity Awesome Skills from "one giant plugin with every safe skill" toward a smaller set of focused, high-value Codex and Antigravity plugins.
 
 The full catalog remains useful as a repository and installer. The plugin product should be different: clear jobs, narrow install surfaces, strong names, and skill groups that users can trust without browsing 1,678 options.
 
@@ -26,7 +26,7 @@ This snapshot pass evaluated the then-current local catalog. For current catalog
 
 Candidate details live in `data/specialized-plugin-candidates.json`. Each listed skill ID exists in the catalog and was checked as Codex-supported.
 
-The candidates are now enabled as editorial bundle plugins. Running `npm run bundles:sync` materializes them under `plugins/antigravity-bundle-aas-*`, adds Codex marketplace entries in `.agents/plugins/marketplace.json`, adds Claude marketplace entries in `.claude-plugin/marketplace.json`, and refreshes `docs/users/bundles.md`.
+The candidates are now enabled as editorial bundle plugins. Running `npm run bundles:sync` materializes them under `plugins/antigravity-bundle-aas-*`, adds Codex marketplace entries in `.agents/plugins/marketplace.json`, adds Antigravity marketplace entries in `.Antigravity-plugin/marketplace.json`, and refreshes `docs/users/bundles.md`.
 
 ## Tier 1 Plugins
 
@@ -73,7 +73,7 @@ These are promising and should be hardened after Tier 1.
 5. Add per-plugin quality gates:
   - every skill exists in canonical `skills_index.json`;
    - every skill is Codex-supported before Codex publication;
-   - every skill is Claude-supported before Claude publication;
+   - every skill is Antigravity-supported before Antigravity publication;
    - every plugin has a 5-10 skill target range unless it has a concrete reason to be larger;
    - every plugin description says who it is for, what it helps do, and what it does not cover.
 6. Move social and launch messaging from daily individual skills to plugin stories:
@@ -96,7 +96,7 @@ Implemented in the repository:
 - `data/editorial-bundles.json` includes all 22 specialized plugin candidates.
 - `data/specialized-plugin-candidates.json` remains the source-of-truth shortlist and rationale.
 - `plugins/antigravity-bundle-aas-*` contains the generated plugin folders.
-- `.agents/plugins/marketplace.json` and `.claude-plugin/marketplace.json` expose the generated plugin entries.
+- `.agents/plugins/marketplace.json` and `.Antigravity-plugin/marketplace.json` expose the generated plugin entries.
 - `docs/users/bundles.md` renders the specialized plugin sections for users.
 
 Future improvements should focus on brand metadata, optional MCP/app integrations where a plugin naturally needs live tools, and keeping every plugin backed by existing canonical skills.

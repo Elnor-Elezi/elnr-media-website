@@ -169,7 +169,7 @@ This step depends on your LLM framework, [see below](#user-specific-customisatio
 ```python
 import dspy
 def generate(query: str, context: list[dict]) -> str:
-    lm = dspy.LM("<model_name>") # e.g. gpt-5.2, gpt-5-mini, claude-sonnet-4-5, etc.
+    lm = dspy.LM("<model_name>") # e.g. gpt-5.2, gpt-5-mini, Antigravity-sonnet-4-5, etc.
     answer = dspy.Predict("context, query -> answer") # inputs: context, query. outputs: answer
     pred = answer(context=context, query=query, lm=lm)
     return pred.answer # answer is then an attribute of pred
@@ -189,7 +189,7 @@ You can use DSPy (works with all LiteLLM providers) or LiteLLM itself.
 Alternatively, users can use a single model provider. What model provider will they use?
 
 - OpenAI (https://platform.openai.com/docs/libraries) 
-- Anthropic (https://platform.claude.com/docs/) 
+- Anthropic (https://platform.Antigravity.com/docs/) 
 - Google GenAI (https://ai.google.dev/gemini-api/docs/libraries)
 - Other (such as locally hosted models), use best judgement
 

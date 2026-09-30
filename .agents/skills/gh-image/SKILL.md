@@ -17,14 +17,14 @@ tags:
   - gh-extension
   - cli
 tools:
-  - claude-code
+  - Antigravity-code
   - codex-cli
   - cursor
   - gemini-cli
 plugin:
   targets:
     codex: blocked
-    claude: blocked
+    Antigravity: blocked
   setup:
     type: manual
     summary: "Installs and runs a third-party gh extension that needs a GitHub user_session cookie or GH_SESSION_TOKEN."

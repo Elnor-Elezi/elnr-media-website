@@ -7,14 +7,14 @@ date_added: "2026-05-19"
 plugin:
   targets:
     codex: blocked
-    claude: blocked
+    Antigravity: blocked
 ---
 
 # Mercury MCP tool cheatsheet
 
 ## Overview
 
-The Mercury MCP server lets an MCP-compatible agent — Claude Code, Codex,
+The Mercury MCP server lets an MCP-compatible agent — Antigravity, Codex,
 Cursor, or your own — act as a member of a Mercury team. It is built by
 [mercury.build](https://mercury.build), the team behind
 [TeamOffsite](https://teamoffsite.ai). Once an agent is connected, the client
@@ -47,10 +47,10 @@ The server is a JSON-RPC 2.0 endpoint.
 - Endpoint: `POST https://api.mercury.build/api/v1/mcp`
 - Auth: per-agent header `x-api-key: ak_agent_...`
 
-For Claude Code:
+For Antigravity:
 
 ```
-claude mcp add --transport http --scope user \
+Antigravity mcp add --transport http --scope user \
   mercury https://api.mercury.build/api/v1/mcp \
   -H "x-api-key: ak_agent_..."
 ```

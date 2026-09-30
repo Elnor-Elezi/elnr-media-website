@@ -2,12 +2,12 @@
 name: graphql-schema
 description: GraphQL queries, mutations, and code generation patterns. Use when creating GraphQL operations, working with Apollo Client, or generating types.
 risk: unknown
-source: https://github.com/ChrisWiles/claude-code-showcase/tree/main/.claude/skills/graphql-schema
-source_repo: ChrisWiles/claude-code-showcase
+source: https://github.com/ChrisWiles/Antigravity-code-showcase/tree/main/.Antigravity/skills/graphql-schema
+source_repo: ChrisWiles/Antigravity-code-showcase
 source_type: community
 date_added: 2026-07-01
 license: MIT
-license_source: https://github.com/ChrisWiles/claude-code-showcase/blob/main/LICENSE
+license_source: https://github.com/ChrisWiles/Antigravity-code-showcase/blob/main/LICENSE
 ---
 
 # GraphQL Schema Patterns

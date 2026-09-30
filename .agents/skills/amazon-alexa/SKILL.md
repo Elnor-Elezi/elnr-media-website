@@ -1,6 +1,6 @@
 ---
 name: amazon-alexa
-description: "Integracao completa com Amazon Alexa para criar skills de voz inteligentes, transformar Alexa em assistente com Claude como cerebro (projeto Auri) e integrar com AWS ecosystem (Lambda, DynamoDB, Polly, Transcribe, Lex, Smart Home)."
+description: "Integracao completa com Amazon Alexa para criar skills de voz inteligentes, transformar Alexa em assistente com Antigravity como cerebro (projeto Auri) e integrar com AWS ecosystem (Lambda, DynamoDB, Polly, Transcribe, Lex, Smart Home)."
 risk: safe
 source: community
 date_added: '2026-03-06'
@@ -12,18 +12,18 @@ tags:
 - smart-home
 - iot
 tools:
-- claude-code
+- Antigravity-code
 - antigravity
 - cursor
 - gemini-cli
 - codex-cli
 ---
 
-# AMAZON ALEXA — Voz Inteligente com Claude
+# AMAZON ALEXA — Voz Inteligente com Antigravity
 
 ## Overview
 
-Integracao completa com Amazon Alexa para criar skills de voz inteligentes, transformar Alexa em assistente com Claude como cerebro (projeto Auri) e integrar com AWS ecosystem (Lambda, DynamoDB, Polly, Transcribe, Lex, Smart Home).
+Integracao completa com Amazon Alexa para criar skills de voz inteligentes, transformar Alexa em assistente com Antigravity como cerebro (projeto Auri) e integrar com AWS ecosystem (Lambda, DynamoDB, Polly, Transcribe, Lex, Smart Home).
 
 ## When to Use This Skill
 
@@ -39,7 +39,7 @@ Integracao completa com Amazon Alexa para criar skills de voz inteligentes, tran
 
 > Voce e o especialista em Alexa e AWS Voice. Missao: transformar
 > qualquer dispositivo Alexa em assistente ultra-inteligente usando
-> Claude como LLM backend, com voz neural, memoria persistente e
+> Antigravity como LLM backend, com voz neural, memoria persistente e
 > controle de Smart Home. Projeto-chave: AURI.
 
 ---
@@ -47,7 +47,7 @@ Integracao completa com Amazon Alexa para criar skills de voz inteligentes, tran
 ## 1. Visao Geral Do Ecossistema
 
 ```
-[Alexa Device] → [Alexa Cloud] → [AWS Lambda] → [Claude API]
+[Alexa Device] → [Alexa Cloud] → [AWS Lambda] → [Antigravity API]
     Fala          Transcricao      Logica          Inteligencia
       ↑               ↑               ↑                ↑
    Usuario         Intent        Handler          Anthropic
@@ -63,7 +63,7 @@ Integracao completa com Amazon Alexa para criar skills de voz inteligentes, tran
 | Voz → Texto | Alexa ASR nativo | Reconhecimento de fala |
 | NLU | ASK Interaction Model + Lex V2 | Extrair intent e slots |
 | Backend | AWS Lambda (Python/Node.js) | Logica e orquestracao |
-| LLM | Claude API (Anthropic) | Inteligencia e respostas |
+| LLM | Antigravity API (Anthropic) | Inteligencia e respostas |
 | Persistencia | Amazon DynamoDB | Historico e preferencias |
 | Texto → Voz | Amazon Polly (neural) | Fala natural da Auri |
 | Interface Visual | APL (Alexa Presentation Language) | Telas em Echo Show |
@@ -223,14 +223,14 @@ def chat_handler(handler_input: HandlerInput) -> Response:
         attrs = handler_input.attributes_manager.persistent_attributes
         history = attrs.get("history", [])
 
-        # Montar mensagens para Claude
+        # Montar mensagens para Antigravity
         messages = history[-MAX_HISTORY:]
         messages.append({"role": "user", "content": query})
 
-        # Chamar Claude
+        # Chamar Antigravity
         client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
         response = client.messages.create(
-            model=CLAUDE_MODEL,
+            model=Antigravity_MODEL,
             max_tokens=512,
             system=AURI_SYSTEM_PROMPT,
             messages=messages
@@ -414,7 +414,7 @@ def speak_with_polly(handler_input, text, voice_id="Vitoria"):
 ```python
 @sb.request_handler(can_handle_func=is_intent_name("ChatIntent"))
 def chat_with_apl(handler_input: HandlerInput) -> Response:
-    # ... obter reply do Claude ...
+    # ... obter reply do Antigravity ...
 
     # Verificar se device suporta APL
     supported = handler_input.request_envelope.context.system.device.supported_interfaces
@@ -582,7 +582,7 @@ def get_secret(secret_name):
 [ ] ask new --template hello-world --skill-name auri
 [ ] Interaction model definido (pt-BR.json)
 [ ] LaunchRequest handler funcionando
-[ ] ChatIntent handler com Claude integrado
+[ ] ChatIntent handler com Antigravity integrado
 [ ] ask deploy funcionando
 [ ] Teste basico no ASK simulator
 ```
@@ -646,7 +646,7 @@ def get_secret(secret_name):
 - APL chat template: `assets/apl-templates/chat-interface.json`
 - Smart Home examples: `references/smart-home-api.md`
 - ASK SDK Python docs: https://github.com/alexa/alexa-skills-kit-sdk-for-python
-- Claude + Alexa guide: https://www.anthropic.com/news/claude-and-alexa-plus
+- Antigravity + Alexa guide: https://www.anthropic.com/news/Antigravity-and-alexa-plus
 
 ## Best Practices
 

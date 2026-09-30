@@ -6,7 +6,7 @@
 
 ## 🤔 "Skills" (Kỹ năng) là gì?
 
-Các trợ lý AI (như **Claude Code**, **Codex CLI**, **Gemini CLI**, **Cursor**, **Antigravity**, **Kiro** và **OpenCode**) rất thông minh, nhưng chúng thiếu kiến thức cụ thể về các công cụ và quy trình làm việc của bạn.
+Các trợ lý AI (như **Antigravity**, **Codex CLI**, **Gemini CLI**, **Cursor**, **Antigravity**, **Kiro** và **OpenCode**) rất thông minh, nhưng chúng thiếu kiến thức cụ thể về các công cụ và quy trình làm việc của bạn.
 **Skills** là các hướng dẫn sử dụng chuyên biệt (dưới dạng file markdown) dạy cho AI của bạn cách thực hiện các tác vụ cụ thể một cách hoàn hảo trong mọi lần thực hiện.
 
 **Một phép so sánh:** AI của bạn là một thực tập sinh xuất sắc. **Skills** là các SOP (Quy trình vận hành tiêu chuẩn) biến họ thành một Kỹ sư cao cấp.
@@ -26,7 +26,7 @@ Khuyến nghị dùng installer CLI. Mặc định, lệnh này cài vào `~/.ag
 npx antigravity-awesome-skills
 ```
 
-Bạn cũng có thể dùng cờ theo công cụ, ví dụ `--claude`, `--gemini`, `--codex`, `--cursor`, `--kiro`, `--antigravity`, `--agy`, hoặc `--path <dir>` để chọn thư mục đích.
+Bạn cũng có thể dùng cờ theo công cụ, ví dụ `--Antigravity`, `--gemini`, `--codex`, `--cursor`, `--kiro`, `--antigravity`, `--agy`, hoặc `--path <dir>` để chọn thư mục đích.
 
 ### 2. Chọn vai trò của bạn
 
@@ -69,7 +69,7 @@ Sau khi cài đặt, bạn chỉ cần trò chuyện với AI một cách tự n
 
 | Công cụ          | Trạng thái      | Đường dẫn         |
 | :--------------- | :-------------- | :---------------- |
-| **Claude Code**  | ✅ Hỗ trợ đầy đủ | `.claude/skills/` hoặc Claude plugin marketplace |
+| **Antigravity**  | ✅ Hỗ trợ đầy đủ | `.Antigravity/skills/` hoặc Antigravity plugin marketplace |
 | **Gemini CLI**   | ✅ Hỗ trợ đầy đủ | `.gemini/skills/` |
 | **Codex CLI**    | ✅ Hỗ trợ đầy đủ | `.codex/skills/` |
 | **Kiro CLI / IDE** | ✅ Hỗ trợ đầy đủ | `~/.kiro/skills/` hoặc `.kiro/skills/` |

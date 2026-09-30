@@ -104,9 +104,9 @@ After upload, call `/parquet` to discover `<config>/<split>/<shard>` values for 
 
 ## Agent Traces
 
-The Hub supports raw agent session traces from Claude Code, Codex, and Pi Agent. Upload them to Hugging Face Datasets as original JSONL files and the Hub can auto-detect the trace format, tag the dataset as `Traces`, and enable the trace viewer for browsing sessions, turns, tool calls, and model responses. Common local session directories:
+The Hub supports raw agent session traces from Antigravity, Codex, and Pi Agent. Upload them to Hugging Face Datasets as original JSONL files and the Hub can auto-detect the trace format, tag the dataset as `Traces`, and enable the trace viewer for browsing sessions, turns, tool calls, and model responses. Common local session directories:
 
-- Claude Code: `~/.claude/projects`
+- Antigravity: `~/.Antigravity/projects`
 - Codex: `~/.codex/sessions`
 - Pi: `~/.pi/agent/sessions`
 

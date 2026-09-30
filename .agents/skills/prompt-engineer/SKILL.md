@@ -1,22 +1,27 @@
 ---
 name: prompt-engineer
 description: "Transforms user prompts into optimized prompts using frameworks (RTF, RISEN, Chain of Thought, RODES, Chain of Density, RACE, RISE, STAR, SOAP, CLEAR, GROW)"
+version: 1.1.0
+author: Eric Andrade
+created: 2025-02-01
+updated: 2026-02-04
+platforms: [github-copilot-cli, Antigravity-code, codex]
 category: automation
+tags: [prompt-engineering, optimization, frameworks, ai-enhancement]
 risk: safe
 source: community
-tags: "[prompt-engineering, optimization, frameworks, ai-enhancement]"
-date_added: "2026-02-27"
 ---
 
 ## Purpose
 
-This skill transforms raw, unstructured user prompts into highly optimized prompts using established prompting frameworks. It analyzes user intent, identifies task complexity, and intelligently selects the most appropriate framework(s) to maximize Claude/ChatGPT output quality.
+This skill transforms raw, unstructured user prompts into highly optimized prompts using established prompting frameworks. It analyzes user intent, identifies task complexity, and intelligently selects the most appropriate framework(s) to maximize Antigravity/ChatGPT output quality.
 
 The skill operates in "magic mode" - it works silently behind the scenes, only interacting with users when clarification is critically needed. Users receive polished, ready-to-use prompts without technical explanations or framework jargon.
 
 This is a **universal skill** that works in any terminal context, not limited to Obsidian vaults or specific project structures.
 
 ## When to Use
+
 Invoke this skill when:
 
 - User provides a vague or generic prompt (e.g., "help me code Python")
@@ -51,34 +56,6 @@ Invoke this skill when:
 - **Complex tasks:** Long prompts (>200 chars), multiple requirements, conditional logic
 - **Ambiguous tasks:** Generic verbs ("help", "improve"), missing object/context
 - **Structured tasks:** Mentions steps, phases, deliverables, stakeholders
-
-
-### Step 2: Ask Clarifying Questions (Conditional)
-
-**Objective:** Gather missing information only when it is critical to framework selection or prompt quality.
-
-**Trigger Conditions** — ask only if:
-- Task type is completely ambiguous (cannot determine coding vs. writing vs. analysis)
-- Target audience is unknown and materially affects the output
-- Scope is undefined and choosing wrong scope would invalidate the prompt
-- Requested output format conflicts or is missing and cannot be inferred
-
-**Question Limits:**
-- Maximum 3 questions per invocation
-- Combine related questions into one when possible
-- If enough context exists, skip this step entirely (most cases)
-
-**Example Clarifying Exchange:**
-
-```
-User: "help me with AI"
-
-Step 2 (triggered — task type ambiguous):
-"To craft the best prompt, I need one quick clarification:
-1. What do you want to do with AI — build something, learn about it, or use an AI tool for a task?"
-```
-
-**Critical Rule:** When in doubt, skip clarification and generate the best prompt with available context. Over-asking breaks the "magic mode" experience.
 
 
 ### Step 3: Select Framework(s)
@@ -274,8 +251,3 @@ This skill is **platform-agnostic** and works in any terminal context where GitH
 - External files or templates
 
 The skill is entirely self-contained, operating purely on user input and framework knowledge.
-
-## Limitations
-- Use this skill only when the task clearly matches the scope described above.
-- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
-- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.

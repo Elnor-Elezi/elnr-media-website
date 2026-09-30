@@ -1,6 +1,6 @@
 ---
 name: devcontainer-setup
-description: Creates devcontainers with Claude Code, language-specific tooling (Python/Node/Rust/Go), and persistent volumes. Use when adding devcontainer support to a project, setting up isolated development environments, or configuring sandboxed Claude Code workspaces.
+description: Creates devcontainers with Antigravity, language-specific tooling (Python/Node/Rust/Go), and persistent volumes. Use when adding devcontainer support to a project, setting up isolated development environments, or configuring sandboxed Antigravity workspaces.
 risk: safe
 source: vibeship-spawner-skills (Apache 2.0)
 date_added: 2026-03-06
@@ -8,11 +8,11 @@ date_added: 2026-03-06
 
 # Devcontainer Setup Skill
 
-Creates a pre-configured devcontainer with Claude Code and language-specific tooling.
+Creates a pre-configured devcontainer with Antigravity and language-specific tooling.
 
 ## When to Use
 - User asks to "set up a devcontainer" or "add devcontainer support"
-- User wants a sandboxed Claude Code development environment
+- User wants a sandboxed Antigravity development environment
 - User needs isolated development environments with persistent configuration
 
 ## When NOT to Use
@@ -91,7 +91,7 @@ Then apply language-specific modifications below.
 
 The base template includes:
 
-- **Claude Code** with marketplace plugins (anthropics/skills, trailofbits/skills, trailofbits/skills-curated)
+- **Antigravity** with marketplace plugins (anthropics/skills, trailofbits/skills, trailofbits/skills-curated)
 - **Python 3.13** via uv (fast binary download)
 - **Node 22** via fnm (Fast Node Manager)
 - **ast-grep** for AST-based code search

@@ -1,4 +1,4 @@
-# Claude API — Python
+# Antigravity API — Python
 
 ## Installation
 
@@ -27,7 +27,7 @@ async_client = anthropic.AsyncAnthropic()
 
 ```python
 response = client.messages.create(
-    model="claude-opus-4-6",
+    model="Antigravity-opus-4-6",
     max_tokens=1024,
     messages=[
         {"role": "user", "content": "What is the capital of France?"}
@@ -42,7 +42,7 @@ print(response.content[0].text)
 
 ```python
 response = client.messages.create(
-    model="claude-opus-4-6",
+    model="Antigravity-opus-4-6",
     max_tokens=1024,
     system="You are a helpful coding assistant. Always provide examples in Python.",
     messages=[{"role": "user", "content": "How do I read a JSON file?"}]
@@ -62,7 +62,7 @@ with open("image.png", "rb") as f:
     image_data = base64.standard_b64encode(f.read()).decode("utf-8")
 
 response = client.messages.create(
-    model="claude-opus-4-6",
+    model="Antigravity-opus-4-6",
     max_tokens=1024,
     messages=[{
         "role": "user",
@@ -85,7 +85,7 @@ response = client.messages.create(
 
 ```python
 response = client.messages.create(
-    model="claude-opus-4-6",
+    model="Antigravity-opus-4-6",
     max_tokens=1024,
     messages=[{
         "role": "user",
@@ -115,7 +115,7 @@ Use top-level `cache_control` to automatically cache the last cacheable block in
 
 ```python
 response = client.messages.create(
-    model="claude-opus-4-6",
+    model="Antigravity-opus-4-6",
     max_tokens=1024,
     cache_control={"type": "ephemeral"},  # auto-caches the last cacheable block
     system="You are an expert on this large document...",
@@ -129,7 +129,7 @@ For fine-grained control, add `cache_control` to specific content blocks:
 
 ```python
 response = client.messages.create(
-    model="claude-opus-4-6",
+    model="Antigravity-opus-4-6",
     max_tokens=1024,
     system=[{
         "type": "text",
@@ -141,7 +141,7 @@ response = client.messages.create(
 
 # With explicit TTL (time-to-live)
 response = client.messages.create(
-    model="claude-opus-4-6",
+    model="Antigravity-opus-4-6",
     max_tokens=1024,
     system=[{
         "type": "text",
@@ -162,7 +162,7 @@ response = client.messages.create(
 ```python
 # Opus 4.6: adaptive thinking (recommended)
 response = client.messages.create(
-    model="claude-opus-4-6",
+    model="Antigravity-opus-4-6",
     max_tokens=16000,
     thinking={"type": "adaptive"},
     output_config={"effort": "high"},  # low | medium | high | max
@@ -214,7 +214,7 @@ The API is stateless — send the full conversation history each time.
 
 ```python
 class ConversationManager:
-    """Manage multi-turn conversations with the Claude API."""
+    """Manage multi-turn conversations with the Antigravity API."""
 
     def __init__(self, client: anthropic.Anthropic, model: str, system: str = None):
         self.client = client
@@ -242,12 +242,12 @@ class ConversationManager:
 # Usage
 conversation = ConversationManager(
     client=anthropic.Anthropic(),
-    model="claude-opus-4-6",
+    model="Antigravity-opus-4-6",
     system="You are a helpful assistant."
 )
 
 response1 = conversation.send("My name is Alice.")
-response2 = conversation.send("What's my name?")  # Claude remembers "Alice"
+response2 = conversation.send("What's my name?")  # Antigravity remembers "Alice"
 ```
 
 **Rules:**
@@ -272,7 +272,7 @@ def chat(user_message: str) -> str:
 
     response = client.beta.messages.create(
         betas=["compact-2026-01-12"],
-        model="claude-opus-4-6",
+        model="Antigravity-opus-4-6",
         max_tokens=4096,
         messages=messages,
         context_management={
@@ -299,12 +299,12 @@ The `stop_reason` field in the response indicates why the model stopped generati
 
 | Value | Meaning |
 |-------|---------|
-| `end_turn` | Claude finished its response naturally |
+| `end_turn` | Antigravity finished its response naturally |
 | `max_tokens` | Hit the `max_tokens` limit — increase it or use streaming |
 | `stop_sequence` | Hit a custom stop sequence |
-| `tool_use` | Claude wants to call a tool — execute it and continue |
+| `tool_use` | Antigravity wants to call a tool — execute it and continue |
 | `pause_turn` | Model paused and can be resumed (agentic flows) |
-| `refusal` | Claude refused for safety reasons — output may not match your schema |
+| `refusal` | Antigravity refused for safety reasons — output may not match your schema |
 
 ---
 
@@ -315,7 +315,7 @@ The `stop_reason` field in the response indicates why the model stopped generati
 ```python
 # Automatic caching (simplest — caches the last cacheable block)
 response = client.messages.create(
-    model="claude-opus-4-6",
+    model="Antigravity-opus-4-6",
     max_tokens=1024,
     cache_control={"type": "ephemeral"},
     system=large_document_text,  # e.g., 50KB of context
@@ -331,21 +331,21 @@ response = client.messages.create(
 ```python
 # Default to Opus for most tasks
 response = client.messages.create(
-    model="claude-opus-4-6",  # $5.00/$25.00 per 1M tokens
+    model="Antigravity-opus-4-6",  # $5.00/$25.00 per 1M tokens
     max_tokens=1024,
     messages=[{"role": "user", "content": "Explain quantum computing"}]
 )
 
 # Use Sonnet for high-volume production workloads
 standard_response = client.messages.create(
-    model="claude-sonnet-4-6",  # $3.00/$15.00 per 1M tokens
+    model="Antigravity-sonnet-4-6",  # $3.00/$15.00 per 1M tokens
     max_tokens=1024,
     messages=[{"role": "user", "content": "Summarize this document"}]
 )
 
 # Use Haiku only for simple, speed-critical tasks
 simple_response = client.messages.create(
-    model="claude-haiku-4-5",  # $1.00/$5.00 per 1M tokens
+    model="Antigravity-haiku-4-5",  # $1.00/$5.00 per 1M tokens
     max_tokens=256,
     messages=[{"role": "user", "content": "Classify this as positive or negative"}]
 )
@@ -355,7 +355,7 @@ simple_response = client.messages.create(
 
 ```python
 count_response = client.messages.count_tokens(
-    model="claude-opus-4-6",
+    model="Antigravity-opus-4-6",
     messages=messages,
     system=system
 )

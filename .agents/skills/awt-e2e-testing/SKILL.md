@@ -22,7 +22,7 @@ AWT gives AI coding tools the ability to see and interact with web applications 
 - Platform auto-detection: Flutter, React, Next.js, Vue, Angular, Svelte
 - Structured failure diagnosis with investigation checklists
 - Learning DB: failure→fix patterns in SQLite
-- 5 AI providers: Claude, OpenAI, Gemini, DeepSeek, Ollama
+- 5 AI providers: Antigravity, OpenAI, Gemini, DeepSeek, Ollama
 - Skill Mode: no extra AI API key needed
 
 ## Links

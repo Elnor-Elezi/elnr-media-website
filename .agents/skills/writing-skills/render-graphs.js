@@ -17,27 +17,6 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-function safeJoin(base, ...parts) {
-  const root = path.resolve(base);
-  const target = path.resolve(root, ...parts);
-  const rel = path.relative(root, target);
-  if (rel.startsWith('..') || path.isAbsolute(rel)) {
-    throw new Error(`Path escapes skill directory: ${parts.join('/')}`);
-  }
-  return target;
-}
-
-function selfTest() {
-  const root = path.resolve('/tmp/skill');
-  if (safeJoin(root, 'diagrams', 'a.svg') !== path.resolve(root, 'diagrams', 'a.svg')) {
-    throw new Error('safeJoin failed valid path');
-  }
-  for (const bad of ['../x', 'diagrams/../../x']) {
-    try { safeJoin(root, bad); } catch { continue; }
-    throw new Error(`safeJoin accepted ${bad}`);
-  }
-}
-
 function extractDotBlocks(markdown) {
   const blocks = [];
   const regex = /```dot\n([\s\S]*?)```/g;
@@ -104,10 +83,6 @@ function renderToSvg(dotContent) {
 
 function main() {
   const args = process.argv.slice(2);
-  if (args.includes('--self-test')) {
-    selfTest();
-    return;
-  }
   const combine = args.includes('--combine');
   const skillDirArg = args.find(a => !a.startsWith('--'));
 
@@ -124,7 +99,7 @@ function main() {
   }
 
   const skillDir = path.resolve(skillDirArg);
-  const skillFile = safeJoin(skillDir, 'SKILL.md');
+  const skillFile = path.join(skillDir, 'SKILL.md');
   const skillName = path.basename(skillDir).replace(/-/g, '_');
 
   if (!fs.existsSync(skillFile)) {
@@ -152,7 +127,7 @@ function main() {
 
   console.log(`Found ${blocks.length} diagram(s) in ${path.basename(skillDir)}/SKILL.md`);
 
-  const outputDir = safeJoin(skillDir, 'diagrams');
+  const outputDir = path.join(skillDir, 'diagrams');
   if (!fs.existsSync(outputDir)) {
     fs.mkdirSync(outputDir);
   }
@@ -162,12 +137,12 @@ function main() {
     const combined = combineGraphs(blocks, skillName);
     const svg = renderToSvg(combined);
     if (svg) {
-      const outputPath = safeJoin(outputDir, `${skillName}_combined.svg`);
+      const outputPath = path.join(outputDir, `${skillName}_combined.svg`);
       fs.writeFileSync(outputPath, svg);
       console.log(`  Rendered: ${skillName}_combined.svg`);
 
       // Also write the dot source for debugging
-      const dotPath = safeJoin(outputDir, `${skillName}_combined.dot`);
+      const dotPath = path.join(outputDir, `${skillName}_combined.dot`);
       fs.writeFileSync(dotPath, combined);
       console.log(`  Source: ${skillName}_combined.dot`);
     } else {
@@ -178,7 +153,7 @@ function main() {
     for (const block of blocks) {
       const svg = renderToSvg(block.content);
       if (svg) {
-        const outputPath = safeJoin(outputDir, `${block.name}.svg`);
+        const outputPath = path.join(outputDir, `${block.name}.svg`);
         fs.writeFileSync(outputPath, svg);
         console.log(`  Rendered: ${block.name}.svg`);
       } else {

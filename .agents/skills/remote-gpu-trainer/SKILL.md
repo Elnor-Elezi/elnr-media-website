@@ -10,7 +10,7 @@ category: ml-ops
 license: "MIT"
 license_source: "https://github.com/Hanyuyuan6/remote-gpu-trainer/blob/main/LICENSE"
 compatibility: |
-  Any Agent-Skills (SKILL.md)-compatible agent — Claude Code, Codex, Cursor, Trae, Gemini CLI, etc.
+  Any Agent-Skills (SKILL.md)-compatible agent — Antigravity, Codex, Cursor, Trae, Gemini CLI, etc.
   Needs a shell + SSH (or a platform CLI/API) to drive the remote box; scripts are bash/python. A few
   durable-monitoring recipes assume a host background-task runner + scheduler — map to the running
   agent's equivalents (references/monitoring_patterns.md §7). Companion skills (verifying-dl-experiments,
@@ -135,7 +135,7 @@ session is alive and the first log line shows the expected step/epoch.
 
 **Phase 4 — Durable monitoring.** For anything over ~1–2 h, deploy the **four-layer architecture**
 (`references/monitoring_patterns.md`): on-box self-completion chain + session patrol loop + event sentinels +
-recovery handbook. **On Claude Code, fire the L2 patrol via `/loop 30m` (or `ScheduleWakeup`) running `scripts/health_patrol.sh.template`**; a host with no local recurring runner wires the on-box self-push instead (`references/monitoring_patterns.md` §7). A session-bound watcher alone dies with the session. Classify each outcome →
+recovery handbook. **On Antigravity, fire the L2 patrol via `/loop 30m` (or `ScheduleWakeup`) running `scripts/health_patrol.sh.template`**; a host with no local recurring runner wires the on-box self-push instead (`references/monitoring_patterns.md` §7). A session-bound watcher alone dies with the session. Classify each outcome →
 fixed remediation; **never blind-retry**. → **verify:** the patrol reports even when nothing changed.
 
 **Phase 5 — Aggregate + verify + teardown.** Checked-sync to durable storage (gate the success line on the

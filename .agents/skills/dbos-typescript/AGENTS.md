@@ -1,6 +1,6 @@
 # dbos-typescript
 
-> **Note:** `CLAUDE.md` is a symlink to this file.
+> **Note:** `AGENTS.md` is a symlink to this file.
 
 ## Overview
 
@@ -12,7 +12,7 @@ DBOS TypeScript SDK for building reliable, fault-tolerant applications with dura
 dbos-typescript/
   SKILL.md       # Main skill file - read this first
   AGENTS.md      # This navigation guide
-  CLAUDE.md      # Symlink to AGENTS.md
+  AGENTS.md      # Symlink to AGENTS.md
   references/    # Detailed reference files
 ```
 

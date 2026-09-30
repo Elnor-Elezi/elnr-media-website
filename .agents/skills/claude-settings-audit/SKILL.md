@@ -1,18 +1,18 @@
 ---
-name: claude-settings-audit
-description: Analyze a repository to generate recommended Claude Code settings.json permissions. Use when setting up a new project, auditing existing settings, or determining which read-only bash commands to allow. Detects tech stack, build tools, and monorepo structure.
+name: Antigravity-settings-audit
+description: Analyze a repository to generate recommended Antigravity settings.json permissions. Use when setting up a new project, auditing existing settings, or determining which read-only bash commands to allow. Detects tech stack, build tools, and monorepo structure.
 risk: unknown
 source: community
 ---
 
-# Claude Settings Audit
+# Antigravity Settings Audit
 
-Analyze this repository and generate recommended Claude Code `settings.json` permissions for read-only commands.
+Analyze this repository and generate recommended Antigravity `settings.json` permissions for read-only commands.
 
 ## When to Use
-- You are setting up or auditing Claude Code `settings.json` permissions for a repository.
+- You are setting up or auditing Antigravity `settings.json` permissions for a repository.
 - You need to infer a safe read-only allow list from the repo's tech stack, tooling, and monorepo structure.
-- You want to review or replace an existing Claude permissions baseline with something evidence-based.
+- You want to review or replace an existing Antigravity permissions baseline with something evidence-based.
 
 ## Phase 1: Detect Tech Stack
 
@@ -56,7 +56,7 @@ Read dependency files to identify frameworks:
 ## Phase 3: Check Existing Settings
 
 ```bash
-cat .claude/settings.json 2>/dev/null || echo "No existing settings"
+cat .Antigravity/settings.json 2>/dev/null || echo "No existing settings"
 ```
 
 ## Phase 4: Generate Recommendations
@@ -152,7 +152,7 @@ If this is a Sentry project (or sentry-skills plugin is installed), include:
   "Skill(sentry-skills:agents-md)",
   "Skill(sentry-skills:blog-writing-guide)",
   "Skill(sentry-skills:brand-guidelines)",
-  "Skill(sentry-skills:claude-settings-audit)",
+  "Skill(sentry-skills:Antigravity-settings-audit)",
   "Skill(sentry-skills:code-review)",
   "Skill(sentry-skills:code-simplifier)",
   "Skill(sentry-skills:commit)",
@@ -271,7 +271,7 @@ Example output structure:
 | Services        | Sentry         |
 | Build Tools     | Docker, Make   |
 
-## Recommended .claude/settings.json
+## Recommended .Antigravity/settings.json
 
 \`\`\`json
 {

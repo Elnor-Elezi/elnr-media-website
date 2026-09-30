@@ -1,9 +1,8 @@
 ---
 name: github-workflow-automation
-description: "Patterns for automating GitHub workflows with AI assistance, inspired by [Gemini CLI](https://github.com/google-gemini/gemini-cli) and modern DevOps practices."
-risk: critical
+description: "Automate GitHub workflows with AI assistance. Includes PR reviews, issue triage, CI/CD integration, and Git operations. Use when automating GitHub workflows, setting up PR review automation, creati..."
+risk: unknown
 source: community
-date_added: "2026-02-27"
 ---
 
 # 🔧 GitHub Workflow Automation
@@ -70,7 +69,7 @@ jobs:
             const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
             const response = await client.messages.create({
-              model: "claude-3-sonnet-20240229",
+              model: "Antigravity-3-sonnet-20240229",
               max_tokens: 4096,
               messages: [{
                 role: "user",
@@ -847,8 +846,3 @@ Dockerfile @org/devops-team
 - [GitHub Actions Documentation](https://docs.github.com/en/actions)
 - [GitHub REST API](https://docs.github.com/en/rest)
 - [CODEOWNERS Syntax](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners)
-
-## Limitations
-- Use this skill only when the task clearly matches the scope described above.
-- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
-- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.

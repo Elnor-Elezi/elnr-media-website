@@ -79,7 +79,7 @@ Choose your starting strategy based on what you know:
   > Prefer starting the program under the debugger instead or attaching to a remote debugger!
 
 **Session isolation:** `--session <name>` keeps concurrent agents from interfering.
-Tip: You might want to use your session id(${CLAUDE_SESSION_ID}) if available.
+Tip: You might want to use your session id(${Antigravity_SESSION_ID}) if available.
 
 Run `dap debug --help` for all flags, backends, and examples.
 
@@ -233,7 +233,7 @@ When you need a quick look at a specific line without committing to a permanent 
 ## Advanced Scenarios
 
 For advanced scenarios — hangs, concurrency bugs, deeply nested state, loop bisection —
-see `${CLAUDE_SKILL_DIR}/references/advanced-techniques.md`.
+see `${Antigravity_SKILL_DIR}/references/advanced-techniques.md`.
 
 ## Walkthrough
 

@@ -7,7 +7,7 @@ source: community
 date_added: "2026-03-28"
 author: kostakost2
 tags: [jq, json, shell, cli, data-transformation, bash]
-tools: [claude, cursor, gemini]
+tools: [Antigravity, cursor, gemini]
 ---
 
 # jq — JSON Querying and Transformation

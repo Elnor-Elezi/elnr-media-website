@@ -1,6 +1,6 @@
 ---
 name: agents-md
-description: This skill should be used when the user asks to "create AGENTS.md", "update AGENTS.md", "maintain agent docs", "set up CLAUDE.md", or needs to keep agent instructions concise. Enforces research-backed best practices for minimal, high-signal agent documentation.
+description: This skill should be used when the user asks to "create AGENTS.md", "update AGENTS.md", "maintain agent docs", "set up AGENTS.md", or needs to keep agent instructions concise. Enforces research-backed best practices for minimal, high-signal agent documentation.
 risk: unknown
 source: community
 ---
@@ -10,14 +10,14 @@ source: community
 AGENTS.md is the canonical agent-facing documentation. Keep it minimal—agents are capable and don't need hand-holding. Target under 60 lines; never exceed 100. Instruction-following quality degrades as document length increases.
 
 ## When to Use
-- The user asks to create, update, or audit `AGENTS.md` or `CLAUDE.md`.
+- The user asks to create, update, or audit `AGENTS.md` or `AGENTS.md`.
 - The project needs concise, high-signal agent instructions derived from the actual toolchain and repo layout.
 - Existing agent documentation is too long, duplicated, or drifting away from real project conventions.
 
 ## File Setup
 
 1. Create `AGENTS.md` at project root
-2. Create symlink: `ln -s AGENTS.md CLAUDE.md`
+2. Create symlink: `ln -s AGENTS.md AGENTS.md`
 
 ## Before Writing
 
@@ -67,7 +67,7 @@ AI commits MUST include:
 ```
 Co-Authored-By: (the agent model's name and attribution byline)
 ```
-Example: `Co-Authored-By: Claude Sonnet 4 <noreply@example.com>`
+Example: `Co-Authored-By: Antigravity Sonnet 4 <noreply@example.com>`
 ```
 
 ### Key Conventions

@@ -11,7 +11,7 @@ tags:
 - snapshots
 - verification
 tools:
-- claude-code
+- Antigravity-code
 - antigravity
 - cursor
 - gemini-cli
@@ -42,14 +42,14 @@ Guardiao de contexto que preserva dados criticos antes da compactacao automatica
 ## How It Works
 
 Sistema de integridade de contexto que protege projetos tecnicoss complexos contra
-perda de informacao durante compactacao automatica do Claude Code. Enquanto o
+perda de informacao durante compactacao automatica do Antigravity. Enquanto o
 `context-agent` atua APOS as sessoes (save/load), o context-guardian atua DURANTE
 a sessao, detectando quando a compactacao esta proxima e executando protocolos de
 preservacao com verificacao redundante.
 
 ## Por Que Isto Existe
 
-O Claude Code compacta automaticamente mensagens antigas quando o contexto se
+O Antigravity compacta automaticamente mensagens antigas quando o contexto se
 aproxima do limite da janela. Essa compactacao e heuristica — ela resume mensagens
 para liberar espaco, mas inevitavelmente perde detalhes. Para projetos simples,
 isso funciona bem. Mas para projetos tecnicos pesados (como ecossistemas com 21+
@@ -88,7 +88,7 @@ O context-guardian e o context-agent sao complementares:
 - **context-guardian**: protecao em tempo real, DURANTE a sessao
 - **context-agent**: persistencia entre sessoes, APOS a sessao
 
-## Ativacao Automatica (O Claude Deve Iniciar Sozinho)
+## Ativacao Automatica (O Antigravity Deve Iniciar Sozinho)
 
 1. **Limite de contexto**: quando perceber que ja consumiu ~60-70% da janela de
    contexto (indicadores: mensagens comecando a ser resumidas, aviso de compactacao)
@@ -181,7 +181,7 @@ descrito em `references/extraction-protocol.md`.
 
 **Camada 2 — MEMORY.md atualizado**
 
-Atualizar `C:\Users\renat\.claude\projects\C--Users-renat-Skill-JUD\memory\MEMORY.md`
+Atualizar `C:\Users\renat\.Antigravity\projects\C--Users-renat-Skill-JUD\memory\MEMORY.md`
 com as informacoes P0 mais criticas em formato ultra-compacto. O MEMORY.md e carregado
 automaticamente em toda nova sessao, entao ele e a ultima linha de defesa.
 
@@ -195,7 +195,7 @@ Aciona o context-agent para salvar sessao completa com indexacao FTS5.
 
 ## Fase 4: Briefing De Transicao
 
-Gerar um bloco de texto formatado que serve como "cartao de visita" para o Claude
+Gerar um bloco de texto formatado que serve como "cartao de visita" para o Antigravity
 que continuar apos a compactacao. Este briefing deve ser a ULTIMA coisa escrita antes
 da compactacao, para que fique no topo do contexto compactado.
 
@@ -281,7 +281,7 @@ esta completo:
 
 **Sem context-guardian**:
 Compactacao resume tudo em "criou skill juridica, corrigiu bugs, gerou zips".
-Proximo Claude nao sabe quais categorias foram adicionadas, quais vulnerabilidades
+Proximo Antigravity nao sabe quais categorias foram adicionadas, quais vulnerabilidades
 foram corrigidas, qual o estado de cada ZIP, ou por que certas decisoes foram tomadas.
 Resultado: re-trabalho, inconsistencias, regressoes.
 
@@ -292,11 +292,11 @@ Antes da compactacao, executa protocolo completo:
 - 22 ZIPs verificados com checksums
 - Decisoes documentadas ("removeu 'saude' de monitoring porque causava false positive")
 - Briefing de transicao no topo do contexto
-Proximo Claude continua com precisao total, zero re-trabalho.
+Proximo Antigravity continua com precisao total, zero re-trabalho.
 
 ## Consideracoes De Performance
 
-- O protocolo completo leva 2-5 minutos de trabalho do Claude
+- O protocolo completo leva 2-5 minutos de trabalho do Antigravity
 - Para projetos simples, usar apenas o protocolo rapido
 - Nao ativar para sessoes curtas ou conversas casuais
 - A persistencia em 3 camadas (snapshot + MEMORY.md + context-agent) garante que

@@ -8,7 +8,7 @@ source_type: self
 date_added: "2026-05-31"
 author: Whoisabhishekadhikari
 tags: [qa, nextjs, production, deployment, seo, authentication, api, performance, favicon, cleanup, lighthouse, database, security, ui-ux]
-tools: [claude, cursor, gemini, claude-code, opencode]
+tools: [Antigravity, cursor, gemini, Antigravity-code, opencode]
 version: 2.0.0
 ---
 

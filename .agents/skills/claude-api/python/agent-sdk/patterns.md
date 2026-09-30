@@ -4,12 +4,12 @@
 
 ```python
 import anyio
-from claude_agent_sdk import query, ClaudeAgentOptions, ResultMessage
+from Antigravity_agent_sdk import query, AntigravityAgentOptions, ResultMessage
 
 async def main():
     async for message in query(
         prompt="Explain what this repository does",
-        options=ClaudeAgentOptions(
+        options=AntigravityAgentOptions(
             cwd="/path/to/project",
             allowed_tools=["Read", "Glob", "Grep"]
         )
@@ -24,15 +24,15 @@ anyio.run(main)
 
 ## Custom Tools
 
-Custom tools require an MCP server. Use `ClaudeSDKClient` for full control, or pass the server to `query()` via `mcp_servers`.
+Custom tools require an MCP server. Use `AntigravitySDKClient` for full control, or pass the server to `query()` via `mcp_servers`.
 
 ```python
 import anyio
-from claude_agent_sdk import (
+from Antigravity_agent_sdk import (
     tool,
     create_sdk_mcp_server,
-    ClaudeSDKClient,
-    ClaudeAgentOptions,
+    AntigravitySDKClient,
+    AntigravityAgentOptions,
     AssistantMessage,
     TextBlock,
 )
@@ -45,8 +45,8 @@ async def get_weather(args):
 server = create_sdk_mcp_server("weather-tools", tools=[get_weather])
 
 async def main():
-    options = ClaudeAgentOptions(mcp_servers={"weather": server})
-    async with ClaudeSDKClient(options=options) as client:
+    options = AntigravityAgentOptions(mcp_servers={"weather": server})
+    async with AntigravitySDKClient(options=options) as client:
         await client.query("What's the weather in Paris?")
         async for message in client.receive_response():
             if isinstance(message, AssistantMessage):
@@ -68,7 +68,7 @@ Log file changes after any edit:
 ```python
 import anyio
 from datetime import datetime
-from claude_agent_sdk import query, ClaudeAgentOptions, HookMatcher, ResultMessage
+from Antigravity_agent_sdk import query, AntigravityAgentOptions, HookMatcher, ResultMessage
 
 async def log_file_change(input_data, tool_use_id, context):
     file_path = input_data.get('tool_input', {}).get('file_path', 'unknown')
@@ -79,7 +79,7 @@ async def log_file_change(input_data, tool_use_id, context):
 async def main():
     async for message in query(
         prompt="Refactor utils.py to improve readability",
-        options=ClaudeAgentOptions(
+        options=AntigravityAgentOptions(
             allowed_tools=["Read", "Edit", "Write"],
             permission_mode="acceptEdits",
             hooks={
@@ -99,12 +99,12 @@ anyio.run(main)
 
 ```python
 import anyio
-from claude_agent_sdk import query, ClaudeAgentOptions, AgentDefinition, ResultMessage
+from Antigravity_agent_sdk import query, AntigravityAgentOptions, AgentDefinition, ResultMessage
 
 async def main():
     async for message in query(
         prompt="Use the code-reviewer agent to review this codebase",
-        options=ClaudeAgentOptions(
+        options=AntigravityAgentOptions(
             allowed_tools=["Read", "Glob", "Grep", "Agent"],
             agents={
                 "code-reviewer": AgentDefinition(
@@ -129,12 +129,12 @@ anyio.run(main)
 
 ```python
 import anyio
-from claude_agent_sdk import query, ClaudeAgentOptions, ResultMessage
+from Antigravity_agent_sdk import query, AntigravityAgentOptions, ResultMessage
 
 async def main():
     async for message in query(
         prompt="Open example.com and describe what you see",
-        options=ClaudeAgentOptions(
+        options=AntigravityAgentOptions(
             mcp_servers={
                 "playwright": {"command": "npx", "args": ["@playwright/mcp@latest"]}
             }
@@ -151,12 +151,12 @@ anyio.run(main)
 ```python
 import os
 import anyio
-from claude_agent_sdk import query, ClaudeAgentOptions, ResultMessage
+from Antigravity_agent_sdk import query, AntigravityAgentOptions, ResultMessage
 
 async def main():
     async for message in query(
         prompt="Show me the top 10 users by order count",
-        options=ClaudeAgentOptions(
+        options=AntigravityAgentOptions(
             mcp_servers={
                 "postgres": {
                     "command": "npx",
@@ -178,13 +178,13 @@ anyio.run(main)
 
 ```python
 import anyio
-from claude_agent_sdk import query, ClaudeAgentOptions
+from Antigravity_agent_sdk import query, AntigravityAgentOptions
 
 async def main():
     # Default: prompt for dangerous operations
     async for message in query(
         prompt="Delete all test files",
-        options=ClaudeAgentOptions(
+        options=AntigravityAgentOptions(
             allowed_tools=["Bash"],
             permission_mode="default"  # Will prompt before deleting
         )
@@ -194,7 +194,7 @@ async def main():
     # Plan: agent creates a plan before making changes
     async for message in query(
         prompt="Refactor the auth system",
-        options=ClaudeAgentOptions(
+        options=AntigravityAgentOptions(
             allowed_tools=["Read", "Edit"],
             permission_mode="plan"
         )
@@ -204,7 +204,7 @@ async def main():
     # Accept edits: auto-accept file edits
     async for message in query(
         prompt="Refactor this module",
-        options=ClaudeAgentOptions(
+        options=AntigravityAgentOptions(
             allowed_tools=["Read", "Edit"],
             permission_mode="acceptEdits"
         )
@@ -214,7 +214,7 @@ async def main():
     # Bypass: skip all prompts (use with caution)
     async for message in query(
         prompt="Set up the development environment",
-        options=ClaudeAgentOptions(
+        options=AntigravityAgentOptions(
             allowed_tools=["Bash", "Write"],
             permission_mode="bypassPermissions",
             allow_dangerously_skip_permissions=True
@@ -231,9 +231,9 @@ anyio.run(main)
 
 ```python
 import anyio
-from claude_agent_sdk import (
+from Antigravity_agent_sdk import (
     query,
-    ClaudeAgentOptions,
+    AntigravityAgentOptions,
     CLINotFoundError,
     CLIConnectionError,
     ProcessError,
@@ -244,7 +244,7 @@ async def run_with_recovery():
     try:
         async for message in query(
             prompt="Fix the failing tests",
-            options=ClaudeAgentOptions(
+            options=AntigravityAgentOptions(
                 allowed_tools=["Read", "Edit", "Bash"],
                 max_turns=10
             )
@@ -252,7 +252,7 @@ async def run_with_recovery():
             if isinstance(message, ResultMessage):
                 print(message.result)
     except CLINotFoundError:
-        print("Claude Code CLI not found. Install with: pip install claude-agent-sdk")
+        print("Antigravity CLI not found. Install with: pip install Antigravity-agent-sdk")
     except CLIConnectionError as e:
         print(f"Connection error: {e}")
     except ProcessError as e:
@@ -267,7 +267,7 @@ anyio.run(run_with_recovery)
 
 ```python
 import anyio
-from claude_agent_sdk import query, ClaudeAgentOptions, ResultMessage, SystemMessage
+from Antigravity_agent_sdk import query, AntigravityAgentOptions, ResultMessage, SystemMessage
 
 async def main():
     session_id = None
@@ -275,7 +275,7 @@ async def main():
     # First query: capture the session ID
     async for message in query(
         prompt="Read the authentication module",
-        options=ClaudeAgentOptions(allowed_tools=["Read", "Glob"])
+        options=AntigravityAgentOptions(allowed_tools=["Read", "Glob"])
     ):
         if isinstance(message, SystemMessage) and message.subtype == "init":
             session_id = message.session_id
@@ -283,7 +283,7 @@ async def main():
     # Resume with full context from the first query
     async for message in query(
         prompt="Now find all places that call it",  # "it" = auth module
-        options=ClaudeAgentOptions(resume=session_id)
+        options=AntigravityAgentOptions(resume=session_id)
     ):
         if isinstance(message, ResultMessage):
             print(message.result)
@@ -297,12 +297,12 @@ anyio.run(main)
 
 ```python
 import anyio
-from claude_agent_sdk import query, ClaudeAgentOptions, ResultMessage
+from Antigravity_agent_sdk import query, AntigravityAgentOptions, ResultMessage
 
 async def main():
     async for message in query(
         prompt="Review this code",
-        options=ClaudeAgentOptions(
+        options=AntigravityAgentOptions(
             allowed_tools=["Read", "Glob", "Grep"],
             system_prompt="""You are a senior code reviewer focused on:
 1. Security vulnerabilities

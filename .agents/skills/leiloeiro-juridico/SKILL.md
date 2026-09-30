@@ -11,7 +11,7 @@ tags:
 - brazilian
 - judicial
 tools:
-- claude-code
+- Antigravity-code
 - antigravity
 - cursor
 - gemini-cli

@@ -1,8 +1,9 @@
 import { useEffect, useMemo } from 'react'
 import { useParams, Navigate, Link } from 'react-router-dom'
-import { Helmet } from 'react-helmet-async'
 import { ArrowLeft, Calendar, Clock, User } from 'lucide-react'
 import { blogPosts } from '../data/blog'
+import SEO from '../components/SEO'
+import PageTransition from '../components/PageTransition'
 
 export default function BlogPost() {
   const { slug } = useParams();
@@ -18,11 +19,19 @@ export default function BlogPost() {
   }
 
   return (
-    <div className="pt-32 pb-24 lg:pt-40 lg:pb-32">
-      <Helmet>
-        <title>{post.title} | ELNR Media Blog</title>
-        <meta name="description" content={post.excerpt} />
-      </Helmet>
+    <PageTransition>
+      <div className="pt-32 pb-24 lg:pt-40 lg:pb-32">
+        <SEO 
+          title={`${post.title} | ELNR Media Blog`}
+          description={post.excerpt}
+          image={post.image}
+          type="article"
+          breadcrumbs={[
+            { name: 'Home', path: '/' },
+            { name: 'Blog', path: '/blog' },
+            { name: post.title, path: `/blog/${post.slug}` }
+          ]}
+        />
 
       <article className="max-w-3xl mx-auto px-4 sm:px-6">
         <Link 
@@ -70,6 +79,7 @@ export default function BlogPost() {
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
       </article>
-    </div>
+      </div>
+    </PageTransition>
   )
 }

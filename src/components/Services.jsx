@@ -15,6 +15,7 @@ const featuredServices = [
   {
     icon: Film,
     title: 'Content Creation',
+    slug: 'content-creation',
     desc: 'We do not just "make posts". We produce high-retention video and written content designed to increase organic visibility, establish measurable authority, and drive inbound B2B leads.',
     img: IMAGES.content,
     stats: [{ value: '16+', label: 'Posts/Month' }, { value: '4+', label: 'Videos' }],
@@ -22,6 +23,7 @@ const featuredServices = [
   {
     icon: Megaphone,
     title: 'Paid Advertising',
+    slug: 'paid-advertising',
     desc: 'Stop renting low-quality clicks. We build ROI-obsessed ad architectures across Meta, LinkedIn, and Google to capture high-intent buyers and dramatically lower your acquisition costs.',
     img: IMAGES.analytics,
     stats: [{ value: '340%', label: 'Avg ROI' }, { value: '24/7', label: 'Monitoring' }],
@@ -29,6 +31,7 @@ const featuredServices = [
   {
     icon: GitBranch,
     title: 'Funnel Building',
+    slug: 'funnel-building',
     desc: 'Traffic is useless without conversion. We construct frictionless, automated sales funnels that systematically nurture cold prospects into warm, closed deals while you sleep.',
     img: IMAGES.funnel,
     stats: [{ value: 'End-to-End', label: 'Systems' }, { value: 'Auto', label: 'Follow-up' }],
@@ -36,11 +39,11 @@ const featuredServices = [
 ]
 
 const gridServices = [
-  { icon: Smartphone, title: 'Social Media Management', desc: 'Consistent, brand-aligned presence across all key platforms.' },
-  { icon: Code, title: 'Web Development', desc: 'High-converting, perfectly optimized landing pages and websites.' },
-  { icon: Mail, title: 'Email Marketing', desc: 'Automated nurture sequences and engaging weekly newsletters.' },
-  { icon: Database, title: 'CRM Implementation', desc: 'Organized lead tracking and seamless sales pipeline setups.' },
-  { icon: Compass, title: 'Strategy Consulting', desc: 'Quarterly deep-dives to optimize your brand growth.' },
+  { icon: Smartphone, title: 'Social Media Management', slug: 'social-media-management', desc: 'Consistent, brand-aligned presence across all key platforms.' },
+  { icon: Code, title: 'Web Development', slug: 'web-development', desc: 'High-converting, perfectly optimized landing pages and websites.' },
+  { icon: Mail, title: 'Email Marketing', slug: 'email-marketing', desc: 'Automated nurture sequences and engaging weekly newsletters.' },
+  { icon: Database, title: 'CRM Implementation', slug: 'crm', desc: 'Organized lead tracking and seamless sales pipeline setups.' },
+  { icon: Compass, title: 'Strategy Consulting', slug: 'strategy-consulting', desc: 'Quarterly deep-dives to optimize your brand growth.' },
 ]
 
 function FeaturedService({ service, index }) {
@@ -84,13 +87,13 @@ function FeaturedService({ service, index }) {
             </div>
           ))}
         </div>
-        <a
-          href="#contact"
+        <Link
+          to={`/services/${service.slug}`}
           className="group inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-brand-500 hover:text-brand-600 transition-colors duration-300"
         >
-          Learn more
+          Explore Service Details
           <ArrowUpRight size={18} aria-hidden="true" className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
-        </a>
+        </Link>
       </motion.div>
 
       {/* Image */}
@@ -143,10 +146,10 @@ export default function Services() {
           <span className="inline-flex items-center px-4 py-1.5 rounded-full text-[10px] font-semibold tracking-[0.25em] uppercase bg-brand-50 dark:bg-brand-500/10 text-brand-600 dark:text-brand-400 border border-brand-200/60 dark:border-brand-500/20 mb-5">
             What We Do
           </span>
-          <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-navy-900 dark:text-white tracking-tight mb-6">
+          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-navy-900 dark:text-white tracking-tight mb-6">
             Premium B2B Media Systems &{' '}
             <span className="text-gradient">Growth Services</span>
-          </h1>
+          </h2>
           <p className="text-charcoal-500 dark:text-charcoal-300 text-base sm:text-lg leading-relaxed">
             We don't just run ads or post content. We build interconnected 
             media systems that turn attention into revenue.
@@ -172,13 +175,20 @@ export default function Services() {
             <motion.div
               key={svc.title}
               variants={fadeInUp}
-              className="glass dark:glass-dark p-8 lg:p-10 rounded-[32px] hover:-translate-y-2 transition-transform duration-500 shadow-soft hover:shadow-xl relative overflow-hidden group"
             >
-              <div className="w-12 h-12 rounded-full bg-brand-50 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
-                <svc.icon size={20} aria-hidden="true" className="text-brand-500" />
-              </div>
-              <h4 className="font-display font-bold text-navy-900 dark:text-white text-lg mb-2 tracking-tight">{svc.title}</h4>
-              <p className="text-sm text-charcoal-500 dark:text-charcoal-300 leading-relaxed">{svc.desc}</p>
+              <Link
+                to={`/services/${svc.slug}`}
+                className="block glass dark:glass-dark p-8 lg:p-10 rounded-[32px] hover:-translate-y-2 transition-transform duration-500 shadow-soft hover:shadow-xl relative overflow-hidden group h-full"
+              >
+                <div className="w-12 h-12 rounded-full bg-brand-50 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+                  <svc.icon size={20} aria-hidden="true" className="text-brand-500" />
+                </div>
+                <h3 className="font-display font-bold text-navy-900 dark:text-white text-lg mb-2 tracking-tight flex items-center gap-1">
+                  {svc.title}
+                  <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity text-brand-500" />
+                </h3>
+                <p className="text-sm text-charcoal-500 dark:text-charcoal-300 leading-relaxed">{svc.desc}</p>
+              </Link>
             </motion.div>
           ))}
         </motion.div>

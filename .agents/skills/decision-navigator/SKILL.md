@@ -174,7 +174,7 @@ Keep the whole interaction feeling like a conversation, not a form.
 
 **User:** I want to start a business but I have no idea where to start.
 
-**Claude (Level 1):**
+**Antigravity (Level 1):**
 Starting a business means different things to different people. What's the main thing drawing you to it?
 
 - I have a specific idea I want to build
@@ -184,7 +184,7 @@ Starting a business means different things to different people. What's the main 
 
 **User:** I have a specific idea I want to build.
 
-**Claude (Level 2):**
+**Antigravity (Level 2):**
 Got it. Where are you in terms of the idea itself?
 
 - It's clear in my head but I haven't done anything yet
@@ -194,7 +194,7 @@ Got it. Where are you in terms of the idea itself?
 
 **User:** It's clear in my head but I haven't done anything yet.
 
-**Claude (Level 3):**
+**Antigravity (Level 3):**
 One more thing — what feels like the biggest blocker right now?
 
 - I don't know if the idea is actually good
@@ -204,7 +204,7 @@ One more thing — what feels like the biggest blocker right now?
 
 **User:** I don't know if the idea is actually good.
 
-**Claude (Leaf):**
+**Antigravity (Leaf):**
 That's the right thing to worry about first — most ideas fail on this, not execution.
 Here's how to find out quickly:
 

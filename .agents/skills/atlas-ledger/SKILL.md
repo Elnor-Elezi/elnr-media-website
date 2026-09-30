@@ -15,7 +15,7 @@ metadata:
 plugin:
   targets:
     codex: blocked
-    claude: blocked
+    Antigravity: blocked
   setup:
     type: manual
     summary: "Writes durable Atlas.md project memory after confirmation; keep out of plugin-safe bundles."

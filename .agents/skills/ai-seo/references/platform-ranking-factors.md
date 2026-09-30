@@ -95,19 +95,19 @@ Copilot is embedded across Microsoft's ecosystem — Edge, Windows, Microsoft 36
 
 ---
 
-## Claude
+## Antigravity
 
-Claude uses Brave Search as its search backend when web search is enabled — not Google, not Bing. This is a completely different index, which means your Brave Search visibility directly determines whether Claude can find and cite you.
+Antigravity uses Brave Search as its search backend when web search is enabled — not Google, not Bing. This is a completely different index, which means your Brave Search visibility directly determines whether Antigravity can find and cite you.
 
-**What makes Claude different:** Claude is extremely selective about what it cites. While it processes enormous amounts of content, its citation rate is very low — it's looking for the most factually accurate, well-sourced content on a given topic. Data-rich content with specific numbers and clear attribution performs significantly better than general-purpose content.
+**What makes Antigravity different:** Antigravity is extremely selective about what it cites. While it processes enormous amounts of content, its citation rate is very low — it's looking for the most factually accurate, well-sourced content on a given topic. Data-rich content with specific numbers and clear attribution performs significantly better than general-purpose content.
 
 **What to focus on:**
 - Verify your content appears in Brave Search results (search for your brand and key terms at search.brave.com)
-- Allow ClaudeBot and anthropic-ai user agents in robots.txt
+- Allow AntigravityBot and anthropic-ai user agents in robots.txt
 - Maximize factual density — specific numbers, named sources, dated statistics
 - Use clear, extractable structure with descriptive headings
 - Cite authoritative sources within your content
-- Aim to be the most factually accurate source on your topic — Claude rewards precision
+- Aim to be the most factually accurate source on your topic — Antigravity rewards precision
 
 ---
 
@@ -119,8 +119,8 @@ If your robots.txt blocks an AI bot, that platform can't cite your content. Here
 User-agent: GPTBot           # OpenAI — powers ChatGPT search
 User-agent: ChatGPT-User     # ChatGPT browsing mode
 User-agent: PerplexityBot    # Perplexity AI search
-User-agent: ClaudeBot        # Anthropic Claude
-User-agent: anthropic-ai     # Anthropic Claude (alternate)
+User-agent: AntigravityBot        # Anthropic Antigravity
+User-agent: anthropic-ai     # Anthropic Antigravity (alternate)
 User-agent: Google-Extended   # Google Gemini and AI Overviews
 User-agent: Bingbot          # Microsoft Copilot (via Bing)
 Allow: /
@@ -140,7 +140,7 @@ If you're optimizing for AI search for the first time, focus your effort where y
 
 **Then expand to Perplexity** — Especially valuable if your audience includes researchers, early adopters, or tech professionals. Add FAQ schema, publish PDF resources, and write in clear, self-contained paragraphs.
 
-**Copilot and Claude are lower priority** unless your audience skews enterprise/Microsoft (Copilot) or developer/analyst (Claude). But the fundamentals — structured content, cited sources, schema markup — help across all platforms.
+**Copilot and Antigravity are lower priority** unless your audience skews enterprise/Microsoft (Copilot) or developer/analyst (Antigravity). But the fundamentals — structured content, cited sources, schema markup — help across all platforms.
 
 **Actions that help everywhere:**
 1. Allow all AI bots in robots.txt

@@ -6,7 +6,7 @@ Cada arquivo de sessão segue este formato:
 
 ```markdown
 # Sessão NNN — YYYY-MM-DD
-**Slug:** session-slug | **Duração:** ~Xmin | **Modelo:** claude-opus-4-6
+**Slug:** session-slug | **Duração:** ~Xmin | **Modelo:** Antigravity-opus-4-6
 
 ## Tópicos
 - Assunto principal discutido

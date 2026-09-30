@@ -9,7 +9,7 @@ source_type: community
 date_added: "2026-04-06"
 author: pumanitro
 tags: [mcp, ai-agents, agent-discovery, agents-txt, a2a, developer-tools]
-tools: [claude, cursor, gemini, codex]
+tools: [Antigravity, cursor, gemini, codex]
 ---
 
 # Global Chat Agent Discovery
@@ -29,7 +29,7 @@ Global Chat is a cross-protocol AI agent discovery platform that aggregates MCP 
 
 ### Option 1: Use the MCP Server (Recommended for Agents)
 
-Install the Global Chat MCP server to search the directory programmatically from Claude Code, Cursor, or any MCP client.
+Install the Global Chat MCP server to search the directory programmatically from Antigravity, Cursor, or any MCP client.
 
 ```bash
 npm install -g @global-chat/mcp-server

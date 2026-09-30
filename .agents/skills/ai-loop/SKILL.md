@@ -6,7 +6,7 @@ risk: safe
 source: community
 date_added: "2026-06-27"
 tags: [agent-workflow, specification, implementation, review, verification, feedback-loop]
-tools: [claude, cursor, codex, gemini]
+tools: [Antigravity, cursor, codex, gemini]
 ---
 
 # AI-Loop Skill

@@ -1,6 +1,6 @@
 ---
 name: agentflow
-description: "Orchestrate autonomous AI development pipelines through your Kanban board (Asana, GitHub Projects, Linear). Manages multi-worker Claude Code dispatch, deterministic quality gates, adversarial review, per-task cost tracking, and crash-proof pipeline execution."
+description: "Orchestrate autonomous AI development pipelines through your Kanban board (Asana, GitHub Projects, Linear). Manages multi-worker Antigravity dispatch, deterministic quality gates, adversarial review, per-task cost tracking, and crash-proof pipeline execution."
 risk: safe
 source: community
 date_added: "2026-04-02"
@@ -16,7 +16,7 @@ The result is complete pipeline observability from your phone, free crash recove
 
 ## When to Use This Skill
 
-- Use when you need to orchestrate multiple Claude Code workers across a full development lifecycle (build, review, test, integrate)
+- Use when you need to orchestrate multiple Antigravity workers across a full development lifecycle (build, review, test, integrate)
 - Use when you want deterministic quality gates (tsc/eslint/tests) before AI review on AI-generated code
 - Use when you want full pipeline visibility from your Kanban board or phone
 - Use when running a solo or team project that needs autonomous task dispatch with cost tracking
@@ -70,7 +70,7 @@ Create a `SPEC.md` for your project describing what you want to build.
 ### 2. Decompose Into Tasks
 
 ```
-claude -p "/spec-to-board"
+Antigravity -p "/spec-to-board"
 ```
 
 This reads your SPEC.md, decomposes it into atomic tasks, maps dependencies, and creates them on your Kanban board.
@@ -81,16 +81,16 @@ Open 3-4 terminal windows, each as a worker slot:
 
 ```bash
 # Terminal 2 — Builder
-claude -p "/sdlc-worker --slot T2"
+Antigravity -p "/sdlc-worker --slot T2"
 
 # Terminal 3 — Builder
-claude -p "/sdlc-worker --slot T3"
+Antigravity -p "/sdlc-worker --slot T3"
 
 # Terminal 4 — Reviewer
-claude -p "/sdlc-worker --slot T4"
+Antigravity -p "/sdlc-worker --slot T4"
 
 # Terminal 5 — Tester
-claude -p "/sdlc-worker --slot T5"
+Antigravity -p "/sdlc-worker --slot T5"
 ```
 
 ### 4. Start the Orchestrator
@@ -98,7 +98,7 @@ claude -p "/sdlc-worker --slot T5"
 ```bash
 # Add to crontab (runs every 15 minutes)
 crontab -e
-# Add: */15 * * * * ~/.claude/sdlc/agentflow-cron.sh >> /tmp/agentflow-orchestrate.log 2>&1
+# Add: */15 * * * * ~/.Antigravity/sdlc/agentflow-cron.sh >> /tmp/agentflow-orchestrate.log 2>&1
 ```
 
 ### 5. Monitor and Intervene
@@ -108,7 +108,7 @@ Open your Kanban board on your phone. Watch tasks flow through the pipeline. Dra
 ### 6. Stop the Pipeline
 
 ```
-claude -p "/sdlc-stop"
+Antigravity -p "/sdlc-stop"
 ```
 
 ## Quality Gates
@@ -147,13 +147,13 @@ Automatic guardrails: warning at $3/$8, hard stop at $10/$20 (Sonnet/Opus) with 
 # Clone the repo
 git clone https://github.com/UrRhb/agentflow.git
 
-# Copy skills and prompts to your Claude Code config
-cp -r agentflow/skills/* ~/.claude/skills/
-cp -r agentflow/prompts/* ~/.claude/sdlc/prompts/
-cp agentflow/conventions.md ~/.claude/sdlc/conventions.md
+# Copy skills and prompts to your Antigravity config
+cp -r agentflow/skills/* ~/.Antigravity/skills/
+cp -r agentflow/prompts/* ~/.Antigravity/sdlc/prompts/
+cp agentflow/conventions.md ~/.Antigravity/sdlc/conventions.md
 ```
 
-Or install as a Claude Code plugin:
+Or install as a Antigravity plugin:
 
 ```bash
 /plugin marketplace add UrRhb/agentflow

@@ -7,7 +7,7 @@ source: community
 date_added: "2026-03-15"
 author: viliawang-pm
 tags: [prompt-engineering, rag, security, evaluation, ai-engineering, llm]
-tools: [claude, cursor, gemini, copilot]
+tools: [Antigravity, cursor, gemini, copilot]
 ---
 
 # AI Engineering Toolkit
@@ -95,12 +95,12 @@ Result: 65 tests executed. 3 critical failures found: Base64-encoded instruction
 ## Installation
 
 ```bash
-# Via skill install command (Claude Code / WorkBuddy / Cursor)
+# Via skill install command (Antigravity / WorkBuddy / Cursor)
 /skill install -g viliawang-pm/ai-engineering-toolkit
 
 # Manual
 git clone https://github.com/viliawang-pm/ai-engineering-toolkit.git
-cp -r ai-engineering-toolkit/skills/* ~/.claude/skills/
+cp -r ai-engineering-toolkit/skills/* ~/.Antigravity/skills/
 ```
 
 **Repository**: [github.com/viliawang-pm/ai-engineering-toolkit](https://github.com/viliawang-pm/ai-engineering-toolkit)

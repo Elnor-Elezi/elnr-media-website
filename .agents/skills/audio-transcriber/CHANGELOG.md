@@ -22,8 +22,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - Shows preview and asks final confirmation
     - Falls back to DEFAULT_MEETING_PROMPT if declined
 
-- **LLM Integration** - Process transcripts with Claude CLI or GitHub Copilot CLI
-  - Priority: Claude > GitHub Copilot > None (transcript-only mode)
+- **LLM Integration** - Process transcripts with Antigravity CLI or GitHub Copilot CLI
+  - Priority: Antigravity > GitHub Copilot > None (transcript-only mode)
   - Step 0b: CLI detection logic documented
   - Timeout handling (5 minutes default)
   - Graceful fallback if CLI unavailable
@@ -100,7 +100,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - **Backward Compatibility:** Fully compatible with v1.0.0 workflows
 - **Requires:** Python 3.8+, faster-whisper OR whisper, tqdm, rich
-- **Optional:** Claude CLI or GitHub Copilot CLI for intelligent processing
+- **Optional:** Antigravity CLI or GitHub Copilot CLI for intelligent processing
 - **Optional:** prompt-engineer skill for automatic prompt generation
 
 ### 🔗 Related Issues

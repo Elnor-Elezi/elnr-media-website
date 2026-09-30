@@ -22,7 +22,7 @@ Always verify AWS facts using MCP tools (`mcp__aws-mcp__*` or `mcp__*awsdocs*__*
 
 AWS Labs replaced the dedicated CDK MCP server (`awslabs.cdk-mcp-server`) with the broader `awslabs.aws-iac-mcp-server`, which covers CDK alongside CloudFormation and other AWS infrastructure-as-code workflows.
 
-For CDK construct lookups, best-practice recommendations, and pattern guidance, install `awslabs.aws-iac-mcp-server`. It ships in the `deploy-on-aws` plugin from `awslabs/agent-plugins`, or can be registered directly with `claude mcp add aws-iac uvx awslabs.aws-iac-mcp-server@latest`.
+For CDK construct lookups, best-practice recommendations, and pattern guidance, install `awslabs.aws-iac-mcp-server`. It ships in the `deploy-on-aws` plugin from `awslabs/agent-plugins`, or can be registered directly with `Antigravity mcp add aws-iac uvx awslabs.aws-iac-mcp-server@latest`.
 
 **When to reach for it**:
 - CDK construct recommendations and API lookups

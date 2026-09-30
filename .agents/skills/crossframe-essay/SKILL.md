@@ -13,7 +13,7 @@ license_source: https://github.com/xi-kari/crossframe-skill/blob/main/LICENSE
 tools:
   - "Agent Skills"
   - Codex
-  - Claude
+  - Antigravity
 tags:
   - crossframe
   - chinese

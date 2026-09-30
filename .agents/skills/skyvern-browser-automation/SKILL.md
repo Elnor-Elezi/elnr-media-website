@@ -9,7 +9,7 @@ source_type: official
 date_added: "2026-04-23"
 author: mark1ian
 tags: [browser-automation, mcp, web-scraping, form-filling, ai-agents, workflow-automation]
-tools: [claude, cursor, gemini, codex]
+tools: [Antigravity, cursor, gemini, codex]
 license: "AGPL-3.0"
 license_source: "https://github.com/Skyvern-AI/skyvern/blob/main/LICENSE"
 ---

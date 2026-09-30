@@ -9,7 +9,7 @@ source_type: community
 date_added: "2026-07-02"
 author: bin1874
 tags: [product-validation, planning, ai-coding, risk-review]
-tools: [claude, cursor, codex, gemini, antigravity]
+tools: [Antigravity, cursor, codex, gemini, antigravity]
 license: "MIT"
 license_source: "https://github.com/bin1874/before-you-build-skill/blob/main/LICENSE"
 ---

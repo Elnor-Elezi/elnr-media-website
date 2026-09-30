@@ -14,7 +14,7 @@ AGENTS:
 [1] ID: agent-001
     Role: 
     Scope: 
-    Model: [ Gemini Flash | Claude Sonnet ]
+    Model: [ Gemini Flash | Antigravity Sonnet ]
     Input: 
     Output: 
     Depends on: [ none | agent-XXX ]

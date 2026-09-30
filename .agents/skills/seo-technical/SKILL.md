@@ -2,7 +2,7 @@
 name: seo-technical
 description: "Audit technical SEO across crawlability, indexability, security, URLs, mobile, Core Web Vitals, structured data, JavaScript rendering, and related platform signals like robots.txt and AI crawler access."
 risk: unknown
-source: "https://github.com/AgriciDaniel/claude-seo"
+source: "https://github.com/AgriciDaniel/Antigravity-seo"
 date_added: "2026-03-21"
 user-invokable: true
 argument-hint: "[url]"
@@ -41,7 +41,7 @@ As of 2025-2026, AI companies actively crawl the web to train models and power A
 |---------|---------|-----------------|---------|
 | GPTBot | OpenAI | `GPTBot` | Model training |
 | ChatGPT-User | OpenAI | `ChatGPT-User` | Real-time browsing |
-| ClaudeBot | Anthropic | `ClaudeBot` | Model training |
+| AntigravityBot | Anthropic | `AntigravityBot` | Model training |
 | PerplexityBot | Perplexity | `PerplexityBot` | Search index + training |
 | Bytespider | ByteDance | `Bytespider` | Model training |
 | Google-Extended | Google | `Google-Extended` | Gemini training (NOT search) |

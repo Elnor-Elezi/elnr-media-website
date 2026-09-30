@@ -2,7 +2,7 @@
 name: ui-pattern
 description: Generate a composed UI pattern (card layout, list, form section, grid, etc.) using design system primitives
 risk: unknown
-source: https://github.com/bitjaru/styleseed/tree/main/engine/.claude/skills/ss-pattern
+source: https://github.com/bitjaru/styleseed/tree/main/engine/.Antigravity/skills/ss-pattern
 source_repo: bitjaru/styleseed
 source_type: community
 date_added: 2026-07-01
@@ -50,7 +50,7 @@ Description: $ARGUMENTS
 ## Instructions
 
 1. Read the design system reference:
-   - `CLAUDE.md` for conventions
+   - `AGENTS.md` for conventions
    - `components/ui/` for available primitives
    - `components/patterns/` for existing patterns
 

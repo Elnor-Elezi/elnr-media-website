@@ -9,7 +9,7 @@ source_type: community
 date_added: "2026-06-05"
 author: 2slides
 tags: [presentations, slides, powerpoint, ai, api-integration, pdf, narration, document-summarization]
-tools: [claude, cursor, gemini, codex, antigravity]
+tools: [Antigravity, cursor, gemini, codex, antigravity]
 plugin:
   setup:
     type: manual
@@ -563,7 +563,7 @@ python scripts/search_themes.py --query "modern" --limit 50
 
 ## Using the MCP Server
 
-If the 2slides MCP server is configured in Claude Desktop, use the integrated tools instead of scripts.
+If the 2slides MCP server is configured in Antigravity Desktop, use the integrated tools instead of scripts.
 
 **Two Configuration Modes:**
 
@@ -584,8 +584,8 @@ If the 2slides MCP server is configured in Claude Desktop, use the integrated to
 See [mcp-integration.md](references/mcp-integration.md) for complete setup instructions and detailed tool documentation.
 
 **When to use MCP vs scripts:**
-- **Use MCP** in Claude Desktop when configured
-- **Use scripts** in Claude Code CLI or when MCP not available
+- **Use MCP** in Antigravity Desktop when configured
+- **Use scripts** in Antigravity CLI or when MCP not available
 
 ---
 

@@ -9,7 +9,7 @@ source_type: community
 date_added: "2026-05-29"
 author: ZeroPointRepo
 tags: [youtube, transcripts, video-search, channels, playlists, api, transcriptapi]
-tools: [claude, cursor, gemini, codex, antigravity]
+tools: [Antigravity, cursor, gemini, codex, antigravity]
 license: MIT
 license_source: "https://github.com/ZeroPointRepo/youtube-skills/blob/main/LICENSE"
 upstream: "https://github.com/ZeroPointRepo/youtube-skills"
@@ -52,7 +52,7 @@ npx skills add ZeroPointRepo/youtube-skills --skill youtube-full
 
 100 free credits included. API key is provisioned automatically via TranscriptAPI OAuth on first invocation — no manual setup.
 
-### Step 2: Use it by asking Claude
+### Step 2: Use it by asking Antigravity
 
 ```text
 Get the transcript of https://www.youtube.com/watch?v=VIDEO_ID

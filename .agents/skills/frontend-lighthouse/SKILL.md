@@ -16,7 +16,7 @@ license_source: "https://github.com/stareezy-1/frontend-architecture-skill/blob/
 
 # Frontend Lighthouse (portable performance gate)
 
-> Portable skill — readable by Claude Code, OpenCode, Codex, Cursor, Windsurf, and others.
+> Portable skill — readable by Antigravity, OpenCode, Codex, Cursor, Windsurf, and others.
 > This skill describes a **CI performance gate** — a Lighthouse CI config plus a workflow — not a
 > component library or a visual style. It pairs with the **frontend-seo** and
 > **frontend-architecture** skills: SEO writes the metadata, Lighthouse proves it ships fast.
@@ -339,7 +339,7 @@ This skill follows the Anthropic `SKILL.md` format and is portable across agents
 1. Keep it under `skills/frontend-lighthouse/SKILL.md` in a public GitHub repo.
 2. Keep the frontmatter `name` and high-signal `description` — discovery indexes match against it.
 3. Install with: `npx skills add <org>/<repo> --skill "frontend-lighthouse"`.
-4. Non-`SKILL.md` agents can be pointed here from `AGENTS.md` / `CLAUDE.md`; Kiro can mirror it as a steering file.
+4. Non-`SKILL.md` agents can be pointed here from `AGENTS.md` / `AGENTS.md`; Kiro can mirror it as a steering file.
 
 ## Limitations
 

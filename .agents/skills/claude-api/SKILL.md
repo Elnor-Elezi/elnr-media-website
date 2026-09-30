@@ -1,26 +1,26 @@
 ---
-name: claude-api
-description: "Build apps with the Claude API or Anthropic SDK. TRIGGER when: code imports `anthropic`/`@anthropic-ai/sdk`/`claude_agent_sdk`, or user asks to use Claude API, Anthropic SDKs, or Agent SDK. DO NOT TRIGGER when: code imports `openai`/other AI SDK, general programming, or ML/data-science tasks."
+name: Antigravity-api
+description: "Build apps with the Antigravity API or Anthropic SDK. TRIGGER when: code imports `anthropic`/`@anthropic-ai/sdk`/`Antigravity_agent_sdk`, or user asks to use Antigravity API, Anthropic SDKs, or Agent SDK. DO NOT TRIGGER when: code imports `openai`/other AI SDK, general programming, or ML/data-science tasks."
 risk: unknown
 source: "https://github.com/anthropics/skills"
 date_added: "2026-03-21"
 license: Complete terms in LICENSE.txt
 ---
 
-# Building LLM-Powered Applications with Claude
+# Building LLM-Powered Applications with Antigravity
 
-This skill helps you build LLM-powered applications with Claude. Choose the right surface based on your needs, detect the project language, then read the relevant language-specific documentation.
+This skill helps you build LLM-powered applications with Antigravity. Choose the right surface based on your needs, detect the project language, then read the relevant language-specific documentation.
 
 ## When to Use
-- Use when building with the Claude API, Anthropic SDKs, or the Agent SDK.
-- Use when code imports `anthropic`, `@anthropic-ai/sdk`, or related Claude SDK packages.
-- Do not use for general coding work unrelated to Claude integrations.
+- Use when building with the Antigravity API, Anthropic SDKs, or the Agent SDK.
+- Use when code imports `anthropic`, `@anthropic-ai/sdk`, or related Antigravity SDK packages.
+- Do not use for general coding work unrelated to Antigravity integrations.
 
 ## Defaults
 
 Unless the user requests otherwise:
 
-For the Claude model version, please use Claude Opus 4.6, which you can access via the exact model string `claude-opus-4-6`. Please default to using adaptive thinking (`thinking: {type: "adaptive"}`) for anything remotely complicated. And finally, please default to streaming for any request that may involve long input, long output, or high `max_tokens` — it prevents hitting request timeouts. Use the SDK's `.get_final_message()` / `.finalMessage()` helper to get the complete response if you don't need to handle individual stream events
+For the Antigravity model version, please use Antigravity Opus 4.6, which you can access via the exact model string `Antigravity-opus-4-6`. Please default to using adaptive thinking (`thinking: {type: "adaptive"}`) for anything remotely complicated. And finally, please default to streaming for any request that may involve long input, long output, or high `max_tokens` — it prevents hitting request timeouts. Use the SDK's `.get_final_message()` / `.finalMessage()` helper to get the complete response if you don't need to handle individual stream events
 
 ---
 
@@ -44,7 +44,7 @@ Before reading code examples, determine which language the user is working in:
 2. **If multiple languages detected** (e.g., both Python and TypeScript files):
 
    - Check which language the user's current file or question relates to
-   - If still ambiguous, ask: "I detected both Python and TypeScript files. Which language are you using for the Claude API integration?"
+   - If still ambiguous, ask: "I detected both Python and TypeScript files. Which language are you using for the Antigravity API integration?"
 
 3. **If language can't be inferred** (empty project, no source files, or unsupported language):
 
@@ -79,15 +79,15 @@ Before reading code examples, determine which language the user is working in:
 
 | Use Case                                        | Tier            | Recommended Surface       | Why                                     |
 | ----------------------------------------------- | --------------- | ------------------------- | --------------------------------------- |
-| Classification, summarization, extraction, Q&A  | Single LLM call | **Claude API**            | One request, one response               |
-| Batch processing or embeddings                  | Single LLM call | **Claude API**            | Specialized endpoints                   |
-| Multi-step pipelines with code-controlled logic | Workflow        | **Claude API + tool use** | You orchestrate the loop                |
-| Custom agent with your own tools                | Agent           | **Claude API + tool use** | Maximum flexibility                     |
+| Classification, summarization, extraction, Q&A  | Single LLM call | **Antigravity API**            | One request, one response               |
+| Batch processing or embeddings                  | Single LLM call | **Antigravity API**            | Specialized endpoints                   |
+| Multi-step pipelines with code-controlled logic | Workflow        | **Antigravity API + tool use** | You orchestrate the loop                |
+| Custom agent with your own tools                | Agent           | **Antigravity API + tool use** | Maximum flexibility                     |
 | AI agent with file/web/terminal access          | Agent           | **Agent SDK**             | Built-in tools, safety, and MCP support |
 | Agentic coding assistant                        | Agent           | **Agent SDK**             | Designed for this use case              |
 | Want built-in permissions and guardrails        | Agent           | **Agent SDK**             | Safety features included                |
 
-> **Note:** The Agent SDK is for when you want built-in file/web/terminal tools, permissions, and MCP out of the box. If you want to build an agent with your own tools, Claude API is the right choice — use the tool runner for automatic loop handling, or the manual loop for fine-grained control (approval gates, custom logging, conditional execution).
+> **Note:** The Agent SDK is for when you want built-in file/web/terminal tools, permissions, and MCP out of the box. If you want to build an agent with your own tools, Antigravity API is the right choice — use the tool runner for automatic loop handling, or the manual loop for fine-grained control (approval gates, custom logging, conditional execution).
 
 ### Decision Tree
 
@@ -95,20 +95,20 @@ Before reading code examples, determine which language the user is working in:
 What does your application need?
 
 1. Single LLM call (classification, summarization, extraction, Q&A)
-   └── Claude API — one request, one response
+   └── Antigravity API — one request, one response
 
-2. Does Claude need to read/write files, browse the web, or run shell commands
-   as part of its work? (Not: does your app read a file and hand it to Claude —
-   does Claude itself need to discover and access files/web/shell?)
+2. Does Antigravity need to read/write files, browse the web, or run shell commands
+   as part of its work? (Not: does your app read a file and hand it to Antigravity —
+   does Antigravity itself need to discover and access files/web/shell?)
    └── Yes → Agent SDK — built-in tools, don't reimplement them
        Examples: "scan a codebase for bugs", "summarize every file in a directory",
                  "find bugs using subagents", "research a topic via web search"
 
 3. Workflow (multi-step, code-orchestrated, with your own tools)
-   └── Claude API with tool use — you control the loop
+   └── Antigravity API with tool use — you control the loop
 
 4. Open-ended agent (model decides its own trajectory, your own tools)
-   └── Claude API agentic loop (maximum flexibility)
+   └── Antigravity API agentic loop (maximum flexibility)
 ```
 
 ### Should I Build an Agent?
@@ -117,7 +117,7 @@ Before choosing the agent tier, check all four criteria:
 
 - **Complexity** — Is the task multi-step and hard to fully specify in advance? (e.g., "turn this design doc into a PR" vs. "extract the title from this PDF")
 - **Value** — Does the outcome justify higher cost and latency?
-- **Viability** — Is Claude capable at this task type?
+- **Viability** — Is Antigravity capable at this task type?
 - **Cost of error** — Can errors be caught and recovered from? (tests, review, rollback)
 
 If the answer is "no" to any of these, stay at a simpler tier (single call or workflow).
@@ -128,9 +128,9 @@ If the answer is "no" to any of these, stay at a simpler tier (single call or wo
 
 Everything goes through `POST /v1/messages`. Tools and output constraints are features of this single endpoint — not separate APIs.
 
-**User-defined tools** — You define tools (via decorators, Zod schemas, or raw JSON), and the SDK's tool runner handles calling the API, executing your functions, and looping until Claude is done. For full control, you can write the loop manually.
+**User-defined tools** — You define tools (via decorators, Zod schemas, or raw JSON), and the SDK's tool runner handles calling the API, executing your functions, and looping until Antigravity is done. For full control, you can write the loop manually.
 
-**Server-side tools** — Anthropic-hosted tools that run on Anthropic's infrastructure. Code execution is fully server-side (declare it in `tools`, Claude runs code automatically). Computer use can be server-hosted or self-hosted.
+**Server-side tools** — Anthropic-hosted tools that run on Anthropic's infrastructure. Code execution is fully server-side (declare it in `tools`, Antigravity runs code automatically). Computer use can be server-hosted or self-hosted.
 
 **Structured outputs** — Constrains the Messages API response format (`output_config.format`) and/or tool parameter validation (`strict: true`). The recommended approach is `client.messages.parse()` which validates responses against your schema automatically. Note: the old `output_format` parameter is deprecated; use `output_config: {format: {...}}` on `messages.create()`.
 
@@ -142,13 +142,13 @@ Everything goes through `POST /v1/messages`. Tools and output constraints are fe
 
 | Model             | Model ID            | Context        | Input $/1M | Output $/1M |
 | ----------------- | ------------------- | -------------- | ---------- | ----------- |
-| Claude Opus 4.6   | `claude-opus-4-6`   | 200K (1M beta) | $5.00      | $25.00      |
-| Claude Sonnet 4.6 | `claude-sonnet-4-6` | 200K (1M beta) | $3.00      | $15.00      |
-| Claude Haiku 4.5  | `claude-haiku-4-5`  | 200K           | $1.00      | $5.00       |
+| Antigravity Opus 4.6   | `Antigravity-opus-4-6`   | 200K (1M beta) | $5.00      | $25.00      |
+| Antigravity Sonnet 4.6 | `Antigravity-sonnet-4-6` | 200K (1M beta) | $3.00      | $15.00      |
+| Antigravity Haiku 4.5  | `Antigravity-haiku-4-5`  | 200K           | $1.00      | $5.00       |
 
-**ALWAYS use `claude-opus-4-6` unless the user explicitly names a different model.** This is non-negotiable. Do not use `claude-sonnet-4-6`, `claude-sonnet-4-5`, or any other model unless the user literally says "use sonnet" or "use haiku". Never downgrade for cost — that's the user's decision, not yours.
+**ALWAYS use `Antigravity-opus-4-6` unless the user explicitly names a different model.** This is non-negotiable. Do not use `Antigravity-sonnet-4-6`, `Antigravity-sonnet-4-5`, or any other model unless the user literally says "use sonnet" or "use haiku". Never downgrade for cost — that's the user's decision, not yours.
 
-**CRITICAL: Use only the exact model ID strings from the table above — they are complete as-is. Do not append date suffixes.** For example, use `claude-sonnet-4-5`, never `claude-sonnet-4-5-20250514` or any other date-suffixed variant you might recall from training data. If the user requests an older model not in the table (e.g., "opus 4.5", "sonnet 3.7"), read `shared/models.md` for the exact ID — do not construct one yourself.
+**CRITICAL: Use only the exact model ID strings from the table above — they are complete as-is. Do not append date suffixes.** For example, use `Antigravity-sonnet-4-5`, never `Antigravity-sonnet-4-5-20250514` or any other date-suffixed variant you might recall from training data. If the user requests an older model not in the table (e.g., "opus 4.5", "sonnet 3.7"), read `shared/models.md` for the exact ID — do not construct one yourself.
 
 A note: if any of the model strings above look unfamiliar to you, that's to be expected — that just means they were released after your training data cutoff. Rest assured they are real models; we wouldn't mess with you like that.
 
@@ -156,7 +156,7 @@ A note: if any of the model strings above look unfamiliar to you, that's to be e
 
 ## Thinking & Effort (Quick Reference)
 
-**Opus 4.6 — Adaptive thinking (recommended):** Use `thinking: {type: "adaptive"}`. Claude dynamically decides when and how much to think. No `budget_tokens` needed — `budget_tokens` is deprecated on Opus 4.6 and Sonnet 4.6 and must not be used. Adaptive thinking also automatically enables interleaved thinking (no beta header needed). **When the user asks for "extended thinking", a "thinking budget", or `budget_tokens`: always use Opus 4.6 with `thinking: {type: "adaptive"}`. The concept of a fixed token budget for thinking is deprecated — adaptive thinking replaces it. Do NOT use `budget_tokens` and do NOT switch to an older model.**
+**Opus 4.6 — Adaptive thinking (recommended):** Use `thinking: {type: "adaptive"}`. Antigravity dynamically decides when and how much to think. No `budget_tokens` needed — `budget_tokens` is deprecated on Opus 4.6 and Sonnet 4.6 and must not be used. Adaptive thinking also automatically enables interleaved thinking (no beta header needed). **When the user asks for "extended thinking", a "thinking budget", or `budget_tokens`: always use Opus 4.6 with `thinking: {type: "adaptive"}`. The concept of a fixed token budget for thinking is deprecated — adaptive thinking replaces it. Do NOT use `budget_tokens` and do NOT switch to an older model.**
 
 **Effort parameter (GA, no beta header):** Controls thinking depth and overall token spend via `output_config: {effort: "low"|"medium"|"high"|"max"}` (inside `output_config`, not top-level). Default is `high` (equivalent to omitting it). `max` is Opus 4.6 only. Works on Opus 4.5, Opus 4.6, and Sonnet 4.6. Will error on Sonnet 4.5 / Haiku 4.5. Combine with adaptive thinking for the best cost-quality tradeoffs. Use `low` for subagents or simple tasks; `max` for the deepest reasoning.
 
@@ -172,7 +172,7 @@ A note: if any of the model strings above look unfamiliar to you, that's to be e
 
 **Critical:** Append `response.content` (not just the text) back to your messages on every turn. Compaction blocks in the response must be preserved — the API uses them to replace the compacted history on the next request. Extracting only the text string and appending that will silently lose the compaction state.
 
-See `{lang}/claude-api/README.md` (Compaction section) for code examples. Full docs via WebFetch in `shared/live-sources.md`.
+See `{lang}/Antigravity-api/README.md` (Compaction section) for code examples. Full docs via WebFetch in `shared/live-sources.md`.
 
 ---
 
@@ -183,36 +183,36 @@ After detecting the language, read the relevant files based on what the user nee
 ### Quick Task Reference
 
 **Single text classification/summarization/extraction/Q&A:**
-→ Read only `{lang}/claude-api/README.md`
+→ Read only `{lang}/Antigravity-api/README.md`
 
 **Chat UI or real-time response display:**
-→ Read `{lang}/claude-api/README.md` + `{lang}/claude-api/streaming.md`
+→ Read `{lang}/Antigravity-api/README.md` + `{lang}/Antigravity-api/streaming.md`
 
 **Long-running conversations (may exceed context window):**
-→ Read `{lang}/claude-api/README.md` — see Compaction section
+→ Read `{lang}/Antigravity-api/README.md` — see Compaction section
 
 **Function calling / tool use / agents:**
-→ Read `{lang}/claude-api/README.md` + `shared/tool-use-concepts.md` + `{lang}/claude-api/tool-use.md`
+→ Read `{lang}/Antigravity-api/README.md` + `shared/tool-use-concepts.md` + `{lang}/Antigravity-api/tool-use.md`
 
 **Batch processing (non-latency-sensitive):**
-→ Read `{lang}/claude-api/README.md` + `{lang}/claude-api/batches.md`
+→ Read `{lang}/Antigravity-api/README.md` + `{lang}/Antigravity-api/batches.md`
 
 **File uploads across multiple requests:**
-→ Read `{lang}/claude-api/README.md` + `{lang}/claude-api/files-api.md`
+→ Read `{lang}/Antigravity-api/README.md` + `{lang}/Antigravity-api/files-api.md`
 
 **Agent with built-in tools (file/web/terminal):**
 → Read `{lang}/agent-sdk/README.md` + `{lang}/agent-sdk/patterns.md`
 
-### Claude API (Full File Reference)
+### Antigravity API (Full File Reference)
 
-Read the **language-specific Claude API folder** (`{language}/claude-api/`):
+Read the **language-specific Antigravity API folder** (`{language}/Antigravity-api/`):
 
-1. **`{language}/claude-api/README.md`** — **Read this first.** Installation, quick start, common patterns, error handling.
+1. **`{language}/Antigravity-api/README.md`** — **Read this first.** Installation, quick start, common patterns, error handling.
 2. **`shared/tool-use-concepts.md`** — Read when the user needs function calling, code execution, memory, or structured outputs. Covers conceptual foundations.
-3. **`{language}/claude-api/tool-use.md`** — Read for language-specific tool use code examples (tool runner, manual loop, code execution, memory, structured outputs).
-4. **`{language}/claude-api/streaming.md`** — Read when building chat UIs or interfaces that display responses incrementally.
-5. **`{language}/claude-api/batches.md`** — Read when processing many requests offline (not latency-sensitive). Runs asynchronously at 50% cost.
-6. **`{language}/claude-api/files-api.md`** — Read when sending the same file across multiple requests without re-uploading.
+3. **`{language}/Antigravity-api/tool-use.md`** — Read for language-specific tool use code examples (tool runner, manual loop, code execution, memory, structured outputs).
+4. **`{language}/Antigravity-api/streaming.md`** — Read when building chat UIs or interfaces that display responses incrementally.
+5. **`{language}/Antigravity-api/batches.md`** — Read when processing many requests offline (not latency-sensitive). Runs asynchronously at 50% cost.
+6. **`{language}/Antigravity-api/files-api.md`** — Read when sending the same file across multiple requests without re-uploading.
 7. **`shared/error-codes.md`** — Read when debugging HTTP errors or implementing error handling.
 8. **`shared/live-sources.md`** — WebFetch URLs for fetching the latest official documentation.
 
@@ -248,7 +248,7 @@ Live documentation URLs are in `shared/live-sources.md`.
 - **Structured outputs (all models):** Use `output_config: {format: {...}}` instead of the deprecated `output_format` parameter on `messages.create()`. This is a general API change, not 4.6-specific.
 - **Don't reimplement SDK functionality:** The SDK provides high-level helpers — use them instead of building from scratch. Specifically: use `stream.finalMessage()` instead of wrapping `.on()` events in `new Promise()`; use typed exception classes (`Anthropic.RateLimitError`, etc.) instead of string-matching error messages; use SDK types (`Anthropic.MessageParam`, `Anthropic.Tool`, `Anthropic.Message`, etc.) instead of redefining equivalent interfaces.
 - **Don't define custom types for SDK data structures:** The SDK exports types for all API objects. Use `Anthropic.MessageParam` for messages, `Anthropic.Tool` for tool definitions, `Anthropic.ToolUseBlock` / `Anthropic.ToolResultBlockParam` for tool results, `Anthropic.Message` for responses. Defining your own `interface ChatMessage { role: string; content: unknown }` duplicates what the SDK already provides and loses type safety.
-- **Report and document output:** For tasks that produce reports, documents, or visualizations, the code execution sandbox has `python-docx`, `python-pptx`, `matplotlib`, `pillow`, and `pypdf` pre-installed. Claude can generate formatted files (DOCX, PDF, charts) and return them via the Files API — consider this for "report" or "document" type requests instead of plain stdout text.
+- **Report and document output:** For tasks that produce reports, documents, or visualizations, the code execution sandbox has `python-docx`, `python-pptx`, `matplotlib`, `pillow`, and `pypdf` pre-installed. Antigravity can generate formatted files (DOCX, PDF, charts) and return them via the Files API — consider this for "report" or "document" type requests instead of plain stdout text.
 
 ## Limitations
 - Use this skill only when the task clearly matches the scope described above.

@@ -5,7 +5,7 @@
 ## Current Targets
 
 - `openai`
-- `claude`
+- `Antigravity`
 - `generic`
 
 ## Contract Shape

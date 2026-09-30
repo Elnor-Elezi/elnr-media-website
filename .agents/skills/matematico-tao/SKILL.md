@@ -11,7 +11,7 @@ tags:
 - algorithms
 - formal-methods
 tools:
-- claude-code
+- Antigravity-code
 - antigravity
 - cursor
 - gemini-cli
@@ -667,7 +667,7 @@ Para análise detalhada, consulte:
 ## Related Skills
 
 - `007` - Complementary skill for enhanced analysis
-- `claude-code-expert` - Complementary skill for enhanced analysis
+- `Antigravity-code-expert` - Complementary skill for enhanced analysis
 
 ## Limitations
 - Use this skill only when the task clearly matches the scope described above.

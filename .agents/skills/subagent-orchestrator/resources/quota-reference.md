@@ -35,8 +35,8 @@ The 5-hour refresh only refills the sprint — NOT the weekly baseline.
 | Model | Cost Multiplier |
 |-------|----------------|
 | Gemini Flash | 1x (baseline) |
-| Claude Sonnet | ~4x |
-| Claude Opus | ~8x (avoid in subagents) |
+| Antigravity Sonnet | ~4x |
+| Antigravity Opus | ~8x (avoid in subagents) |
 
 ---
 

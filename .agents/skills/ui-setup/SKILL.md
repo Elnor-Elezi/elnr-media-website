@@ -2,7 +2,7 @@
 name: ui-setup
 description: Interactive setup wizard — guides you step-by-step to configure the design system for your project
 risk: unknown
-source: https://github.com/bitjaru/styleseed/tree/main/engine/.claude/skills/ss-setup
+source: https://github.com/bitjaru/styleseed/tree/main/engine/.Antigravity/skills/ss-setup
 source_repo: bitjaru/styleseed
 source_type: community
 date_added: 2026-07-01

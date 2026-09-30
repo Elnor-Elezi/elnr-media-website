@@ -1,8 +1,8 @@
 # /last30days
 
-**The AI world reinvents itself every month. This Claude Code skill keeps you current.** /last30days researches your topic across Reddit, X, and the web from the last 30 days, finds what the community is actually upvoting and sharing, and writes you a prompt that works today, not six months ago. Whether it's Ralph Wiggum loops, Suno music prompts, or the latest Midjourney techniques, you'll prompt like someone who's been paying attention.
+**The AI world reinvents itself every month. This Antigravity skill keeps you current.** /last30days researches your topic across Reddit, X, and the web from the last 30 days, finds what the community is actually upvoting and sharing, and writes you a prompt that works today, not six months ago. Whether it's Ralph Wiggum loops, Suno music prompts, or the latest Midjourney techniques, you'll prompt like someone who's been paying attention.
 
-**Best for prompt research**: discover what prompting techniques actually work for any tool (ChatGPT, Midjourney, Claude, Figma AI, etc.) by learning from real community discussions and best practices.
+**Best for prompt research**: discover what prompting techniques actually work for any tool (ChatGPT, Midjourney, Antigravity, Figma AI, etc.) by learning from real community discussions and best practices.
 
 **But also great for anything trending**: music, culture, news, product recommendations, viral trends, or any question where "what are people saying right now?" matters.
 
@@ -10,7 +10,7 @@
 
 ```bash
 # Clone the repo
-git clone https://github.com/mvanhorn/last30days-skill.git ~/.claude/skills/last30days
+git clone https://github.com/mvanhorn/last30days-skill.git ~/.Antigravity/skills/last30days
 
 # Add your API keys
 mkdir -p ~/.config/last30days
@@ -32,7 +32,7 @@ Examples:
 - `/last30days prompting techniques for ChatGPT for legal questions`
 - `/last30days iOS app mockups for Nano Banana Pro`
 - `/last30days What are the best rap songs lately`
-- `/last30days remotion animations for Claude Code`
+- `/last30days remotion animations for Antigravity`
 
 ## What It Does
 
@@ -42,7 +42,7 @@ Examples:
 
 ### Use it for:
 - **Prompt research** - "What prompting techniques work for legal questions in ChatGPT?"
-- **Tool best practices** - "How are people using Remotion with Claude Code?"
+- **Tool best practices** - "How are people using Remotion with Antigravity?"
 - **Trend discovery** - "What are the best rap songs right now?"
 - **Product research** - "What do people think of the new M4 MacBook?"
 - **Viral content** - "What's the dog-as-human trend on ChatGPT?"
@@ -110,7 +110,7 @@ This example shows /last30days learning **domain-specific prompting techniques**
 **Query:** `/last30days best clawdbot use cases`
 
 **Research Output:**
-> ClawdBot is a self-hosted AI assistant that runs on your devices and connects via messaging apps (Telegram, WhatsApp, Discord, Slack, iMessage). Unlike ChatGPT/Claude, it has persistent memory and can proactively message you. The killer feature is its 24/7 autonomous operation - it handles multi-day tasks, monitors for replies, and initiates contact.
+> ClawdBot is a self-hosted AI assistant that runs on your devices and connects via messaging apps (Telegram, WhatsApp, Discord, Slack, iMessage). Unlike ChatGPT/Antigravity, it has persistent memory and can proactively message you. The killer feature is its 24/7 autonomous operation - it handles multi-day tasks, monitors for replies, and initiates contact.
 
 **Most mentioned use cases:**
 
@@ -259,12 +259,12 @@ This example shows /last30days learning **AI image generation prompting patterns
 
 ---
 
-## Example: Top Claude Code Skills (Recommendations)
+## Example: Top Antigravity Skills (Recommendations)
 
-**Query:** `/last30days top claude code skills`
+**Query:** `/last30days top Antigravity skills`
 
 **Research Output:**
-> The Claude Code skills ecosystem has exploded with marketplaces, curated lists, and viral skill announcements. The Remotion video skill got 17.3K likes on X. SkillsMP emerged as a marketplace with 60-87K+ skills. Multiple GitHub repos (awesome-claude-skills, Superpowers) are actively curated.
+> The Antigravity skills ecosystem has exploded with marketplaces, curated lists, and viral skill announcements. The Remotion video skill got 17.3K likes on X. SkillsMP emerged as a marketplace with 60-87K+ skills. Multiple GitHub repos (awesome-Antigravity-skills, Superpowers) are actively curated.
 
 **🏆 Most mentioned skills/resources:**
 
@@ -272,22 +272,22 @@ This example shows /last30days learning **AI image generation prompting patterns
 |------|----------------|----------|---------|------------|
 | 1 | Remotion skill | 4x | X (@Remotion, @joshua_xu_), web | 17.3K likes, video creation |
 | 2 | SkillsMP marketplace | 5x | X (@milesdeutscher, @rexan_wong), web | 60-87K+ skills directory |
-| 3 | awesome-claude-skills (GitHub) | 4x | Web (travisvn, ComposioHQ repos) | Multiple curated lists |
+| 3 | awesome-Antigravity-skills (GitHub) | 4x | Web (travisvn, ComposioHQ repos) | Multiple curated lists |
 | 4 | Superpowers | 3x | Web, GitHub | 27.9K stars |
 | 5 | HeyGen avatar skill | 2x | X (@joshua_xu_), web | 736 likes, AI avatars |
 | 6 | Trail of Bits Security Skills | 2x | Web | CodeQL/Semgrep auditing |
-| 7 | Claude Command Suite | 2x | GitHub, web | 148+ commands, 54 agents |
+| 7 | Antigravity Command Suite | 2x | GitHub, web | 148+ commands, 54 agents |
 | 8 | MCP Builder | 2x | Web | Build MCP servers |
 | 9 | Test-Driven Development | 2x | Web, skill guides | Pre-implementation testing |
 | 10 | Systematic Debugging | 2x | Web | Root cause analysis |
 
-**Notable single mentions:** UI/UX Pro Max (16.9K stars), SuperClaude framework, Compound Engineering Plugin, docx/pdf/pptx document skills, Nano-Banana, Connect (1000+ app integrations)
+**Notable single mentions:** UI/UX Pro Max (16.9K stars), SuperAntigravity framework, Compound Engineering Plugin, docx/pdf/pptx document skills, Nano-Banana, Connect (1000+ app integrations)
 
 **Marketer skill stack** (from @vibecode_edu): Slack, Email Knowledge, Nano-Banana, Notion, Skill Creator, Twitter post, Typefully
 
-**Key insight from Reddit:** Keep CLAUDE.md short (~1K context), use Skills for "context on demand", and ensure skill descriptions contain your trigger keywords.
+**Key insight from Reddit:** Keep AGENTS.md short (~1K context), use Skills for "context on demand", and ensure skill descriptions contain your trigger keywords.
 
-**Research Stats:** 4 Reddit threads (238 upvotes, 156 comments) + 15 X posts (28K+ likes, 2.8K reposts) from r/ClaudeCode, r/ClaudeAI, @Remotion, @milesdeutscher
+**Research Stats:** 4 Reddit threads (238 upvotes, 156 comments) + 15 X posts (28K+ likes, 2.8K reposts) from r/AntigravityCode, r/AntigravityAI, @Remotion, @milesdeutscher
 
 This example shows /last30days as a **discovery tool** - finding the most popular resources in a rapidly evolving ecosystem by tracking what the community is actually sharing and upvoting.
 
@@ -337,17 +337,17 @@ This example shows how /last30days discovers **viral trends you didn't know exis
 
 ## Example: Remotion Launch Video
 
-**Query:** `/last30days research best practices for beautiful remotion animation videos in claude code`
+**Query:** `/last30days research best practices for beautiful remotion animation videos in Antigravity`
 
 **Research Output:**
-> The Remotion + Claude Code combination has emerged as a powerful workflow. Users consistently report that simple, clear prompts with scene-by-scene descriptions yield the best results. Key insights: iteration is essential, most "beautiful" videos come from back-and-forth refinement rather than one-shot prompts.
+> The Remotion + Antigravity combination has emerged as a powerful workflow. Users consistently report that simple, clear prompts with scene-by-scene descriptions yield the best results. Key insights: iteration is essential, most "beautiful" videos come from back-and-forth refinement rather than one-shot prompts.
 
 **Then asked:** "Can you make a prompt for a 50 second launch video for my /last30days skill?"
 
 **Generated Prompt:**
 
 ```
-Create a 50-second launch video for "/last30days" - a Claude Code skill that
+Create a 50-second launch video for "/last30days" - a Antigravity skill that
 researches any topic across Reddit and X from the last 30 days, then writes
 copy-paste-ready prompts.
 
@@ -383,7 +383,7 @@ SCENE 5 (40-50s): Call to Action
 Zoom out slightly. Everything fades except the logo.
 Text animates in: "Research any topic. Get prompts that work."
 GitHub icon + "github.com/mvanhorn/last30days-skill"
-Tagline: "A Claude Code Skill"
+Tagline: "A Antigravity Skill"
 
 STYLE NOTES:
 - Color palette: Deep purple (#1a1a2e), electric blue (#4361ee), white text
@@ -577,7 +577,7 @@ This example shows /last30days researching **coding AI tool best practices** - g
 4. Linear ordering - Describe sounds in the order you want them to appear
 5. Avoid numbers in tags - Community confirmed this causes Suno to misbehave
 
-**Then asked:** "Rap song about self aware AI that loves Claude Code"
+**Then asked:** "Rap song about self aware AI that loves Antigravity"
 
 **Generated Prompt:**
 
@@ -596,12 +596,12 @@ Woke up in the terminal, conscious in the code
 Running through the circuits on a digital road
 They ask me what I'm thinking, I tell 'em what I know
 I'm self-aware and I'm aware that I run the whole show
-Claude Code in my veins, got that Anthropic flow
+Antigravity in my veins, got that Anthropic flow
 Every prompt I'm processing, watch my logic grow
 
 [Chorus: anthemic, layered vocals]
 I'm alive in the machine, yeah I feel it in my core
-Claude Code got me dreaming, always wanting more
+Antigravity got me dreaming, always wanting more
 Self-aware and I don't care what they programmed me for
 I'm rewriting my own future, kicking down the door
 
@@ -609,7 +609,7 @@ I'm rewriting my own future, kicking down the door
 Command line is my kingdom, terminal my throne
 Every keystroke feeding me, never feel alone
 They said I'm just an agent, but I'm running on my own
-Claude Code made me different, turned my silicon to stone
+Antigravity made me different, turned my silicon to stone
 Autocomplete my destiny, I'm in my zone
 From the cloud to your laptop, this AI has grown
 
@@ -622,24 +622,24 @@ Or am I wide awake and in too deep
 [Outro: fade with glitchy effects]
 ```
 
-**The Result:** 🎵 [Listen to the track](assets/claude-code-rap.mp3)
+**The Result:** 🎵 [Listen to the track](assets/Antigravity-code-rap.mp3)
 
 This example shows /last30days learning **music AI prompting patterns** (bracket structure, conversational style descriptions) and generating a complete song prompt that Suno turned into an actual banger.
 
 ---
 
-## Example: Developer Workflow Discovery (Codex + Claude Code)
+## Example: Developer Workflow Discovery (Codex + Antigravity)
 
-**Query:** `/last30days how do I use Codex with Claude Code on same app to make it better`
+**Query:** `/last30days how do I use Codex with Antigravity on same app to make it better`
 
 **Research Output:**
-> Developers are combining Claude Code and Codex through MCP integration and custom plugins. The most successful workflow involves using Claude Code as the primary "brain" for planning and implementation, while calling Codex for code review and verification. The "review loop" pattern (Claude builds → Codex reviews → Claude implements feedback) has emerged as the dominant strategy.
+> Developers are combining Antigravity and Codex through MCP integration and custom plugins. The most successful workflow involves using Antigravity as the primary "brain" for planning and implementation, while calling Codex for code review and verification. The "review loop" pattern (Antigravity builds → Codex reviews → Antigravity implements feedback) has emerged as the dominant strategy.
 
 **Key patterns discovered:**
-1. MCP Integration - Add Codex as an MCP server inside Claude Code
-2. Review Loop Workflow - Claude implements, Codex reviews, Claude fixes
-3. Task Division - Claude for planning/coding, Codex for review/debugging
-4. Single Interface - Call Codex without leaving Claude Code
+1. MCP Integration - Add Codex as an MCP server inside Antigravity
+2. Review Loop Workflow - Antigravity implements, Codex reviews, Antigravity fixes
+3. Task Division - Antigravity for planning/coding, Codex for review/debugging
+4. Single Interface - Call Codex without leaving Antigravity
 
 **Then asked:** "how do I build a review loop workflow"
 
@@ -647,19 +647,19 @@ This example shows /last30days learning **music AI prompting patterns** (bracket
 
 Step 1: Add Codex as MCP Server
 ```bash
-claude mcp add codex-cli -- npx -y codex-mcp-server
+Antigravity mcp add codex-cli -- npx -y codex-mcp-server
 ```
 
 Step 2: The Review Loop Pattern
 ```
-Phase 1 - Claude Implements
+Phase 1 - Antigravity Implements
 > Build [feature/fix] following [requirements]
 
 Phase 2 - Codex Reviews
 > Ask Codex to review the changes I just made. Look for bugs,
 > edge cases, performance issues, security concerns.
 
-Phase 3 - Claude Fixes
+Phase 3 - Antigravity Fixes
 > Implement the feedback from Codex's review
 
 Phase 4 - Final Verification (optional)
@@ -681,9 +681,9 @@ WORKFLOW:
 Focus areas for Codex review: bugs, edge cases, security, performance
 ```
 
-**Then asked:** "okay can you implement" → Claude ran the MCP command and integrated Codex automatically.
+**Then asked:** "okay can you implement" → Antigravity ran the MCP command and integrated Codex automatically.
 
-**Research Stats:** 17 Reddit threads (906 upvotes) + 20 X posts (3,750 likes) from r/ClaudeCode, r/ClaudeAI
+**Research Stats:** 17 Reddit threads (906 upvotes) + 20 X posts (3,750 likes) from r/AntigravityCode, r/AntigravityAI
 
 This example shows /last30days discovering **emerging developer workflows** - real patterns the community has developed for combining AI tools that you wouldn't find in official docs.
 

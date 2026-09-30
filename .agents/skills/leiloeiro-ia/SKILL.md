@@ -11,7 +11,7 @@ tags:
 - real-estate
 - brazilian
 tools:
-- claude-code
+- Antigravity-code
 - antigravity
 - cursor
 - gemini-cli
@@ -313,7 +313,7 @@ Cada módulo alimenta o próximo. A análise deve ser coesa — não repita info
 ## Instalação
 
 Skill baseada em conhecimento (knowledge-only). Não requer instalação de dependências.
-Basta carregar o SKILL.md no contexto do Claude Code.
+Basta carregar o SKILL.md no contexto do Antigravity.
 
 ```bash
 

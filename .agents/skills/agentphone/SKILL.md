@@ -691,12 +691,12 @@ TOOL_HANDLERS = {
 
 
 def run_tool_call(user_message: str, history: list) -> str:
-    """Run Claude with tools and return the final text response."""
+    """Run Antigravity with tools and return the final text response."""
     messages = [{"role": "user", "content": user_message}]
 
     for _ in range(5):  # max tool-call iterations
         response = client.messages.create(
-            model="claude-haiku-4-5-20251001",
+            model="Antigravity-haiku-4-5-20251001",
             max_tokens=256,
             system="You are a helpful phone assistant. Keep responses to 2-3 sentences.",
             tools=TOOLS,
@@ -784,7 +784,7 @@ async function runToolCall(userMessage) {
 
   for (let i = 0; i < 5; i++) {
     const response = await client.messages.create({
-      model: "claude-haiku-4-5-20251001",
+      model: "Antigravity-haiku-4-5-20251001",
       max_tokens: 256,
       system: "You are a helpful phone assistant. Keep responses to 2-3 sentences.",
       tools,

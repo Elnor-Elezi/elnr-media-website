@@ -11,7 +11,7 @@ tags:
 - google
 - photography
 tools:
-- claude-code
+- Antigravity-code
 - antigravity
 - cursor
 - gemini-cli

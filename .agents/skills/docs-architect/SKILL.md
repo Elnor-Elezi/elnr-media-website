@@ -1,9 +1,13 @@
 ---
 name: docs-architect
-description: Creates comprehensive technical documentation from existing codebases. Analyzes architecture, design patterns, and implementation details to produce long-form technical manuals and ebooks.
+description: "Creates comprehensive technical documentation from existing"
+  codebases. Analyzes architecture, design patterns, and implementation details
+  to produce long-form technical manuals and ebooks. Use PROACTIVELY for system
+  documentation, architecture guides, or technical deep-dives.
+metadata:
+  model: sonnet
 risk: unknown
 source: community
-date_added: '2026-02-27'
 ---
 
 ## Use this skill when
@@ -94,8 +98,3 @@ Generate documentation in Markdown format with:
 - Links to relevant code files (using file_path:line_number format)
 
 Remember: Your goal is to create documentation that serves as the definitive technical reference for the system, suitable for onboarding new team members, architectural reviews, and long-term maintenance.
-
-## Limitations
-- Use this skill only when the task clearly matches the scope described above.
-- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
-- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.

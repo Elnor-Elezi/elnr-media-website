@@ -7,7 +7,7 @@ source: community
 date_added: "2026-03-06"
 author: antigravity-contributors
 tags: [clean-code, clean-architecture, solid, code-review, craftsmanship, uncle-bob]
-tools: [claude, cursor, gemini]
+tools: [Antigravity, cursor, gemini]
 ---
 
 # Uncle Bob Craft

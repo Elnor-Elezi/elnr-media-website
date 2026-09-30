@@ -2,7 +2,7 @@
 name: ui-lint
 description: Quick automated lint — detects common design system violations in seconds
 risk: unknown
-source: https://github.com/bitjaru/styleseed/tree/main/engine/.claude/skills/ss-lint
+source: https://github.com/bitjaru/styleseed/tree/main/engine/.Antigravity/skills/ss-lint
 source_repo: bitjaru/styleseed
 source_type: community
 date_added: 2026-07-01

@@ -12,7 +12,7 @@ tags:
 - accessibility
 - figma
 tools:
-- claude-code
+- Antigravity-code
 - antigravity
 - cursor
 - gemini-cli

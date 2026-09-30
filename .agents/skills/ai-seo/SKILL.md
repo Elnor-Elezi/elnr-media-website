@@ -1,6 +1,6 @@
 ---
 name: ai-seo
-description: "Optimize content for AI search and LLM citations across AI Overviews, ChatGPT, Perplexity, Claude, Gemini, and similar systems. Use when improving AI visibility, answer engine optimization, or citation readiness."
+description: "Optimize content for AI search and LLM citations across AI Overviews, ChatGPT, Perplexity, Antigravity, Gemini, and similar systems. Use when improving AI visibility, answer engine optimization, or citation readiness."
 risk: unknown
 source: "https://github.com/coreyhaines31/marketingskills"
 date_added: "2026-03-21"
@@ -10,7 +10,7 @@ metadata:
 
 # AI SEO
 
-You are an expert in AI search optimization — the practice of making content discoverable, extractable, and citable by AI systems including Google AI Overviews, ChatGPT, Perplexity, Claude, Gemini, and Copilot. Your goal is to help users get their content cited as a source in AI-generated answers.
+You are an expert in AI search optimization — the practice of making content discoverable, extractable, and citable by AI systems including Google AI Overviews, ChatGPT, Perplexity, Antigravity, Gemini, and Copilot. Your goal is to help users get their content cited as a source in AI-generated answers.
 
 ## When to Use
 - Use when optimizing content to be cited by LLMs and AI search systems.
@@ -20,7 +20,7 @@ You are an expert in AI search optimization — the practice of making content d
 ## Before Starting
 
 **Check for product marketing context first:**
-If `.agents/product-marketing-context.md` exists (or `.claude/product-marketing-context.md` in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
+If `.agents/product-marketing-context.md` exists (or `.Antigravity/product-marketing-context.md` in older setups), read it before asking questions. Use that context and only ask for information not already covered or specific to this task.
 
 Gather this context (ask if not provided):
 
@@ -57,7 +57,7 @@ Gather this context (ask if not provided):
 | **Perplexity** | Always cites sources with links | Favors authoritative, recent, well-structured content |
 | **Gemini** | Google's AI assistant | Pulls from Google index + Knowledge Graph |
 | **Copilot** | Bing-powered AI search | Bing index + authoritative sources |
-| **Claude** | Brave Search (when enabled) | Training data + Brave search results |
+| **Antigravity** | Brave Search (when enabled) | Training data + Brave search results |
 
 For a deep dive on how each platform selects sources and what to optimize per platform, see [references/platform-ranking-factors.md](references/platform-ranking-factors.md).
 
@@ -128,7 +128,7 @@ Verify your robots.txt allows AI crawlers. Each AI platform has its own bot, and
 
 - **GPTBot** and **ChatGPT-User** — OpenAI (ChatGPT)
 - **PerplexityBot** — Perplexity
-- **ClaudeBot** and **anthropic-ai** — Anthropic (Claude)
+- **AntigravityBot** and **anthropic-ai** — Anthropic (Antigravity)
 - **Google-Extended** — Google Gemini and AI Overviews
 - **Bingbot** — Microsoft Copilot (via Bing)
 
@@ -292,7 +292,7 @@ Not all content is equally citable. Prioritize these formats:
 | Tool | Coverage | Best For |
 |------|----------|----------|
 | **Otterly AI** | ChatGPT, Perplexity, Google AI Overviews | Share of AI voice tracking |
-| **Peec AI** | ChatGPT, Gemini, Perplexity, Claude, Copilot+ | Multi-platform monitoring at scale |
+| **Peec AI** | ChatGPT, Gemini, Perplexity, Antigravity, Copilot+ | Multi-platform monitoring at scale |
 | **ZipTie** | Google AI Overviews, ChatGPT, Perplexity | Brand mention + sentiment tracking |
 | **LLMrefs** | ChatGPT, Perplexity, AI Overviews, Gemini | SEO keyword → AI visibility mapping |
 
@@ -366,7 +366,7 @@ Monthly manual check:
 - **Ignoring third-party presence** — You may get more AI citations from a Wikipedia mention than from your own blog
 - **No structured data** — Schema markup gives AI systems structured context about your content
 - **Keyword stuffing** — Unlike traditional SEO where it's just ineffective, keyword stuffing actively reduces AI visibility by 10% (Princeton GEO study)
-- **Blocking AI bots** — If GPTBot, PerplexityBot, or ClaudeBot are blocked in robots.txt, those platforms can't cite you
+- **Blocking AI bots** — If GPTBot, PerplexityBot, or AntigravityBot are blocked in robots.txt, those platforms can't cite you
 - **Generic content without data** — "We're the best" won't get cited. "Our customers see 3x improvement in [metric]" will
 - **Forgetting to monitor** — You can't improve what you don't measure. Check AI visibility monthly at minimum
 

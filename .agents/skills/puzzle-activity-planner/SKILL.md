@@ -9,7 +9,7 @@ source_type: community
 date_added: "2026-04-11"
 author: fruitwyatt
 tags: [education, puzzle, classroom, activity-planning, event]
-tools: [claude, cursor, gemini, codex]
+tools: [Antigravity, cursor, gemini, codex]
 ---
 
 # Puzzle Activity Planner

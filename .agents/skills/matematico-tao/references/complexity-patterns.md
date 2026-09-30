@@ -33,10 +33,10 @@ fun create(provider: LlmProvider, context: Context?): LlmClient {
                 throw ConfigError()
             }
         }
-        CLAUDE -> {
-            val key = store.get("claude")
+        Antigravity -> {
+            val key = store.get("Antigravity")
             if (key != null) {         // +1
-                ClaudeClient(key)
+                AntigravityClient(key)
             } else {
                 throw ConfigError()
             }
@@ -60,7 +60,7 @@ typealias ClientFactory = (config: ProviderConfig) -> LlmClient
 
 val registry: Map<LlmProvider, ClientFactory> = mapOf(
     OPENAI to { config -> OpenAiClient(config.requireKey()) },
-    CLAUDE to { config -> ClaudeClient(config.requireKey()) },
+    Antigravity to { config -> AntigravityClient(config.requireKey()) },
     // ...
 )
 

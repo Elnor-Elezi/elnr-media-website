@@ -9,14 +9,14 @@ source_type: community
 date_added: "2026-04-06"
 author: MetcalfSolutions
 tags: [mental-health, psychology, wisdom, philosophy, ifs, stoicism, jungian, conversation]
-tools: [claude]
+tools: [Antigravity]
 ---
 
 # Satori
 
 ## Overview
 
-Satori is a clinically informed AI wisdom companion built as a Claude skill. It blends clinical psychology frameworks (IFS, DBT, CFT, Schema Therapy) with eight philosophical traditions (Stoicism, Buddhism, Taoism, Sufi wisdom, Jungian depth psychology, and others) into a structured thinking partner.
+Satori is a clinically informed AI wisdom companion built as a Antigravity skill. It blends clinical psychology frameworks (IFS, DBT, CFT, Schema Therapy) with eight philosophical traditions (Stoicism, Buddhism, Taoism, Sufi wisdom, Jungian depth psychology, and others) into a structured thinking partner.
 
 ## When to Use This Skill
 
@@ -27,7 +27,7 @@ Satori is a clinically informed AI wisdom companion built as a Claude skill. It 
 
 ## How It Works
 
-Satori operates as a SKILL.md-based Claude skill with 211k+ characters of structured reference architecture. It provides:
+Satori operates as a SKILL.md-based Antigravity skill with 211k+ characters of structured reference architecture. It provides:
 
 1. **Guided onboarding** that establishes the relationship framework
 2. **Multiple therapeutic modalities** (IFS, DBT, CFT, Schema Therapy)
@@ -49,7 +49,7 @@ Satori operates as a SKILL.md-based Claude skill with 211k+ characters of struct
 ## Security & Safety Notes
 
 - No data collection or external API calls
-- All processing happens within the Claude conversation
+- All processing happens within the Antigravity conversation
 - Explicitly not a clinical tool — includes appropriate disclaimers
 - Safe for general use
 

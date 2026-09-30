@@ -9,7 +9,7 @@ source_type: community
 date_added: "2026-04-07"
 author: wolfejam
 tags: [faf, automation, project-setup, ai-context, productivity]
-tools: [claude, cursor, gemini, windsurf, any-ai]
+tools: [Antigravity, cursor, gemini, windsurf, any-ai]
 ---
 
 # FAF Wizard - One-Click AI Intelligence
@@ -125,7 +125,7 @@ Automatically detects and configures:
 ## Universal Compatibility
 
 ### Works With Every AI Tool
-- ✅ **Claude Code** - Reads .faf natively
+- ✅ **Antigravity** - Reads .faf natively
 - ✅ **Cursor** - Auto-syncs to .cursorrules  
 - ✅ **Gemini CLI** - Converts to GEMINI.md
 - ✅ **Windsurf** - Syncs to .windsurfrules
@@ -137,7 +137,7 @@ Already have AI context files?
 ```bash
 # Migrates existing context
 faf migrate --from .cursorrules
-faf migrate --from CLAUDE.md  
+faf migrate --from AGENTS.md  
 faf migrate --from README.md
 
 # One format, works everywhere
@@ -153,13 +153,13 @@ cd your-project
 faf auto
 ```
 
-### Option 2: MCP Server (Claude Code)
+### Option 2: MCP Server (Antigravity)
 ```json
 {
   "mcpServers": {
     "faf": {
       "command": "npx", 
-      "args": ["-y", "claude-faf-mcp@latest"]
+      "args": ["-y", "Antigravity-faf-mcp@latest"]
     }
   }
 }

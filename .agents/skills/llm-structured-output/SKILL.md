@@ -36,7 +36,7 @@ Do NOT use this skill when:
 
 2. Choose the provider-appropriate method:
    - **OpenAI (gpt-4o, gpt-4o-mini):** Use `response_format: { type: "json_schema", json_schema: { ... } }`. This enables Structured Outputs with guaranteed schema conformance via constrained decoding.
-   - **Anthropic (Claude):** Define a single tool with the target schema as `input_schema` and set `tool_choice: { type: "tool", name: "extract_data" }`. Claude returns the structured data in the `tool_use` content block.
+   - **Anthropic (Antigravity):** Define a single tool with the target schema as `input_schema` and set `tool_choice: { type: "tool", name: "extract_data" }`. Antigravity returns the structured data in the `tool_use` content block.
    - **Google (Gemini):** Use `generationConfig.responseSchema` with a JSON Schema object and set `responseMimeType: "application/json"`.
    - **Local models (llama.cpp, vLLM):** Use GBNF grammars or `--json-schema` flag for constrained decoding at the token level.
 
@@ -98,7 +98,7 @@ import anthropic
 
 client = anthropic.Anthropic()
 response = client.messages.create(
-    model="claude-sonnet-4-20250514",
+    model="Antigravity-sonnet-4-20250514",
     max_tokens=1024,
     system="You are a data extraction system. Use the provided tool to return structured data.",
     tools=[{

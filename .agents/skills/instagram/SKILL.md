@@ -11,7 +11,7 @@ tags:
 - graph-api
 - content
 tools:
-- claude-code
+- Antigravity-code
 - antigravity
 - cursor
 - gemini-cli

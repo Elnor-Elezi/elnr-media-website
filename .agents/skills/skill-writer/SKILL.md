@@ -76,7 +76,7 @@ Read `references/description-optimization.md`.
 
 1. Validate should-trigger and should-not-trigger query sets.
 2. Reduce false positives and false negatives with targeted description edits.
-3. Keep trigger language generic across Codex and Claude.
+3. Keep trigger language generic across Codex and Antigravity.
 
 ## Step 6: Evaluate outcomes
 

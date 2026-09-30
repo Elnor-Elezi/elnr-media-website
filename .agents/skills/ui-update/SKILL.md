@@ -2,7 +2,7 @@
 name: ui-update
 description: Update StyleSeed engine in your project — analyzes what's outdated and updates safely
 risk: unknown
-source: https://github.com/bitjaru/styleseed/tree/main/engine/.claude/skills/ss-update
+source: https://github.com/bitjaru/styleseed/tree/main/engine/.Antigravity/skills/ss-update
 source_repo: bitjaru/styleseed
 source_type: community
 date_added: 2026-07-01
@@ -46,11 +46,11 @@ Scan the project to find where StyleSeed files are:
 # Find DESIGN-LANGUAGE.md
 find . -name "DESIGN-LANGUAGE.md" -not -path "*/node_modules/*"
 
-# Find CLAUDE.md
-find . -name "CLAUDE.md" -not -path "*/node_modules/*"
+# Find AGENTS.md
+find . -name "AGENTS.md" -not -path "*/node_modules/*"
 
 # Find skills (ss-* is current; ui-*/ux-* are legacy names to migrate from)
-find . -path "*/.claude/skills/ss-*" -o -path "*/.claude/skills/ui-*" -o -path "*/.claude/skills/ux-*" | head -20
+find . -path "*/.Antigravity/skills/ss-*" -o -path "*/.Antigravity/skills/ui-*" -o -path "*/.Antigravity/skills/ux-*" | head -20
 
 # Find theme.css
 find . -name "theme.css" -not -path "*/node_modules/*"
@@ -85,8 +85,8 @@ fi
 Compare:
 - `engine/VERSION` (or `version.json`) vs the local copy — the source of truth
 - DESIGN-LANGUAGE.md rule count + Table of Contents
-- Skills present in `.claude/skills/` vs upstream (don't hardcode a count — list the diff)
-- Whether `CLAUDE.md`, `AGENTS.md`, and `.cursorrules` exist (ship all three)
+- Skills present in `.Antigravity/skills/` vs upstream (don't hardcode a count — list the diff)
+- Whether `AGENTS.md`, `AGENTS.md`, and `.cursorrules` exist (ship all three)
 - New engine docs (VISUAL-CRAFT.md, APP-PLAYBOOKS.md, PAGE-TYPES.md)
 
 ### Step 3: Report & Ask
@@ -106,7 +106,7 @@ Recommended updates:
 1. ✅ [safe] Update skills (X → 12)
 2. ✅ [safe] Add .cursorrules
 3. ⚠️ [review] Update DESIGN-LANGUAGE.md ([old line count] → [new line count])
-4. ⚠️ [merge] Add Golden Rules to CLAUDE.md (won't overwrite existing content)
+4. ⚠️ [merge] Add Golden Rules to AGENTS.md (won't overwrite existing content)
 
 Shall I proceed? (I'll ask before each ⚠️ item)
 ```
@@ -116,7 +116,7 @@ Shall I proceed? (I'll ask before each ⚠️ item)
 For each update, in order:
 
 **Always safe (do without asking):**
-- Copy skills: `cp -r /tmp/styleseed/engine/.claude/skills/ .claude/skills/`
+- Copy skills: `cp -r /tmp/styleseed/engine/.Antigravity/skills/ .Antigravity/skills/`
 - Copy .cursorrules (if not exists): `cp /tmp/styleseed/engine/.cursorrules .cursorrules`
 
 **Ask before doing:**
@@ -126,9 +126,9 @@ For DESIGN-LANGUAGE.md:
 - Ask: "Update DESIGN-LANGUAGE.md? (Y/N)"
 - If yes: copy to the detected location
 
-For CLAUDE.md (Golden Rules):
+For AGENTS.md (Golden Rules):
 - Check if Golden Rules section already exists
-- If not: ask "Add Golden Rules section to your CLAUDE.md? This adds 10 lines at the top. Your existing content stays untouched."
+- If not: ask "Add Golden Rules section to your AGENTS.md? This adds 10 lines at the top. Your existing content stays untouched."
 - If yes: insert Golden Rules after the first heading
 
 **Never touch:**
@@ -143,7 +143,7 @@ Update complete!
 ✅ Skills: 12 (added X new)
 ✅ .cursorrules: added
 ✅ DESIGN-LANGUAGE.md: updated to latest
-✅ Golden Rules: added to CLAUDE.md
+✅ Golden Rules: added to AGENTS.md
 
 Not touched:
 - theme.css (your skin)
@@ -155,7 +155,7 @@ Next: run /ss-lint on your pages to check for rule violations.
 ## Important
 
 - NEVER overwrite theme.css
-- NEVER overwrite a project-specific CLAUDE.md — only MERGE the Golden Rules section
+- NEVER overwrite a project-specific AGENTS.md — only MERGE the Golden Rules section
 - NEVER overwrite components without explicit user approval
 - Always show what will change before changing it
 - If unsure, ask the user

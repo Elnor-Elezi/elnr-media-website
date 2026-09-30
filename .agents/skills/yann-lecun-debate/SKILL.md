@@ -11,7 +11,7 @@ tags:
 - llm-criticism
 - open-source
 tools:
-- claude-code
+- Antigravity-code
 - antigravity
 - cursor
 - gemini-cli

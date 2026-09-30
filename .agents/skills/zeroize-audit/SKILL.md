@@ -17,7 +17,7 @@ risk: unknown
 source: community
 ---
 
-# zeroize-audit — Claude Skill
+# zeroize-audit — Antigravity Skill
 
 ## When to Use
 - Auditing cryptographic implementations (keys, seeds, nonces, secrets)

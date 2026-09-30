@@ -9,7 +9,7 @@ source_type: community
 date_added: "2026-05-13"
 author: yundu-ai
 tags: [xiaohongshu, chinese-market, content-strategy, social-media, marketing, 红书, 小红书]
-tools: [claude, cursor, gemini]
+tools: [Antigravity, cursor, gemini]
 ---
 
 # Xiaohongshu Content Strategist

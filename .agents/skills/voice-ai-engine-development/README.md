@@ -73,7 +73,7 @@ Each worker:
 ### LLM
 - OpenAI GPT-4 (highest quality)
 - Google Gemini (cost-effective)
-- Anthropic Claude (safety-focused)
+- Anthropic Antigravity (safety-focused)
 
 ### TTS
 - ElevenLabs (most natural voices)

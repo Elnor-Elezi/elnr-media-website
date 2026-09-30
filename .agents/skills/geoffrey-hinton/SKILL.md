@@ -11,7 +11,7 @@ tags:
 - ai-safety
 - neural-networks
 tools:
-- claude-code
+- Antigravity-code
 - antigravity
 - cursor
 - gemini-cli

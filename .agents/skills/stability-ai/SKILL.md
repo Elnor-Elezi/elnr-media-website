@@ -11,7 +11,7 @@ tags:
 - ai-art
 - api
 tools:
-- claude-code
+- Antigravity-code
 - antigravity
 - cursor
 - gemini-cli

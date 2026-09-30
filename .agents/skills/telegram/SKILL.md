@@ -11,7 +11,7 @@ tags:
 - bots
 - webhooks
 tools:
-- claude-code
+- Antigravity-code
 - antigravity
 - cursor
 - gemini-cli
@@ -428,7 +428,7 @@ curl -X POST "https://api.telegram.org/bot$TOKEN/setMyCommands" \
 
 ## Automacao Com Ia
 
-Padrao para bot de atendimento com IA (Claude, GPT, etc.):
+Padrao para bot de atendimento com IA (Antigravity, GPT, etc.):
 
 ```python
 from telegram import Update
@@ -453,7 +453,7 @@ async def ai_response(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     # Chamar IA
     response = client.messages.create(
-        model="claude-sonnet-4-20250514",
+        model="Antigravity-sonnet-4-20250514",
         max_tokens=1024,
         system="Voce e um assistente prestativo. Responda em portugues.",
         messages=user_conversations[chat_id]

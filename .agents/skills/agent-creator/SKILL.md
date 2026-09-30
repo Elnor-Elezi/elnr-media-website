@@ -7,7 +7,7 @@ date_added: "2026-06-20"
 plugin:
   targets:
     codex: blocked
-    claude: blocked
+    Antigravity: blocked
 ---
 
 # Agent Creator

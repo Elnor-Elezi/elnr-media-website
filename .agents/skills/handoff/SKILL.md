@@ -17,7 +17,7 @@ tags:
   - workflow
   - coding-agents
 tools:
-  - claude-code
+  - Antigravity-code
   - codex-cli
   - cursor
 ---

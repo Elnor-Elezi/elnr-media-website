@@ -12,7 +12,7 @@ date_added: "2026-03-28"
 
 AI coding agents see an error and immediately edit code. They guess at fixes, get it wrong, and spiral. This skill enforces a strict 5-phase protocol where you CANNOT edit source code until the root cause is identified and confirmed.
 
-Based on [claude-debug](https://github.com/krabat-l/claude-debug) (full plugin with PreToolUse hook enforcement).
+Based on [Antigravity-debug](https://github.com/krabat-l/Antigravity-debug) (full plugin with PreToolUse hook enforcement).
 
 ## When to Use
 Use this skill when:

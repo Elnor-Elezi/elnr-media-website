@@ -1,4 +1,4 @@
-# Claude API — cURL / Raw HTTP
+# Antigravity API — cURL / Raw HTTP
 
 Use these examples when the user needs raw HTTP requests or is working in a language without an official SDK.
 
@@ -18,7 +18,7 @@ curl https://api.anthropic.com/v1/messages \
   -H "x-api-key: $ANTHROPIC_API_KEY" \
   -H "anthropic-version: 2023-06-01" \
   -d '{
-    "model": "claude-opus-4-6",
+    "model": "Antigravity-opus-4-6",
     "max_tokens": 1024,
     "messages": [
       {"role": "user", "content": "What is the capital of France?"}
@@ -36,7 +36,7 @@ curl https://api.anthropic.com/v1/messages \
   -H "x-api-key: $ANTHROPIC_API_KEY" \
   -H "anthropic-version: 2023-06-01" \
   -d '{
-    "model": "claude-opus-4-6",
+    "model": "Antigravity-opus-4-6",
     "max_tokens": 1024,
     "stream": true,
     "messages": [{"role": "user", "content": "Write a haiku"}]
@@ -75,7 +75,7 @@ curl https://api.anthropic.com/v1/messages \
   -H "x-api-key: $ANTHROPIC_API_KEY" \
   -H "anthropic-version: 2023-06-01" \
   -d '{
-    "model": "claude-opus-4-6",
+    "model": "Antigravity-opus-4-6",
     "max_tokens": 1024,
     "tools": [{
       "name": "get_weather",
@@ -92,7 +92,7 @@ curl https://api.anthropic.com/v1/messages \
   }'
 ```
 
-When Claude responds with a `tool_use` block, send the result back:
+When Antigravity responds with a `tool_use` block, send the result back:
 
 ```bash
 curl https://api.anthropic.com/v1/messages \
@@ -100,7 +100,7 @@ curl https://api.anthropic.com/v1/messages \
   -H "x-api-key: $ANTHROPIC_API_KEY" \
   -H "anthropic-version: 2023-06-01" \
   -d '{
-    "model": "claude-opus-4-6",
+    "model": "Antigravity-opus-4-6",
     "max_tokens": 1024,
     "tools": [{
       "name": "get_weather",
@@ -140,7 +140,7 @@ curl https://api.anthropic.com/v1/messages \
   -H "x-api-key: $ANTHROPIC_API_KEY" \
   -H "anthropic-version: 2023-06-01" \
   -d '{
-    "model": "claude-opus-4-6",
+    "model": "Antigravity-opus-4-6",
     "max_tokens": 16000,
     "thinking": {
       "type": "adaptive"

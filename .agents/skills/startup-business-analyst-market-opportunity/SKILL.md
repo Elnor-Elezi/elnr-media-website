@@ -1,13 +1,10 @@
 ---
 name: startup-business-analyst-market-opportunity
-description: 'Generate comprehensive market opportunity analysis with TAM/SAM/SOM
-
+description: "Generate comprehensive market opportunity analysis with TAM/SAM/SOM"
   calculations
-
-  '
+allowed-tools: Read Write Edit Glob Grep Bash WebSearch WebFetch
 risk: unknown
 source: community
-date_added: '2026-02-27'
 ---
 
 # Market Opportunity Analysis
@@ -42,7 +39,7 @@ This command guides through an interactive market sizing process to:
 6. Estimate realistic SOM (3-5 year opportunity)
 7. Present findings in a formatted report
 
-## Instructions for Claude
+## Instructions for Antigravity
 
 When this command is invoked, follow these steps:
 
@@ -217,7 +214,7 @@ Offer to save the report as a markdown file:
 ```
 User: /market-opportunity
 
-Claude: I'll help you create a comprehensive market opportunity analysis. Let me start by gathering some context.
+Antigravity: I'll help you create a comprehensive market opportunity analysis. Let me start by gathering some context.
 
 What product or service are you analyzing?
 → "AI-powered email marketing for e-commerce companies"
@@ -228,7 +225,7 @@ Who are your target customers?
 What's your pricing model?
 → "Subscription: $50-500/month based on email volume, average $300/month"
 
-[Claude proceeds with analysis, gathering data, calculating TAM/SAM/SOM, and generating report]
+[Antigravity proceeds with analysis, gathering data, calculating TAM/SAM/SOM, and generating report]
 ```
 
 ## Integration with Other Commands
@@ -243,8 +240,3 @@ This command pairs well with:
 - Quality depends on data availability - explain limitations
 - Update annually as market evolves
 - Conservative estimates build credibility with investors
-
-## Limitations
-- Use this skill only when the task clearly matches the scope described above.
-- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
-- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.

@@ -23,7 +23,7 @@ The document is stored at `.agents/product-marketing-context.md`.
 
 ### Step 1: Check for Existing Context
 
-First, check if `.agents/product-marketing-context.md` already exists. Also check `.claude/product-marketing-context.md` for older setups — if found there but not in `.agents/`, offer to move it.
+First, check if `.agents/product-marketing-context.md` already exists. Also check `.Antigravity/product-marketing-context.md` for older setups — if found there but not in `.agents/`, offer to move it.
 
 **If it exists:**
 - Read it and summarize what's captured

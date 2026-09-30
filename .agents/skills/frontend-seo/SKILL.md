@@ -16,7 +16,7 @@ license_source: https://github.com/stareezy-1/frontend-architecture-skill/blob/m
 Use this skill when you need a portable, framework-agnostic SEO system for any React or React Native-for-web frontend. Centralizes site metadata in one constants module, derives canonical URLs from a single base, builds per-route metadata (title, description, canonical, Open Graph, Twitter/X cards), generates...
 
 
-> Portable skill — readable by Claude Code, OpenCode, Codex, Cursor, Windsurf, and others.
+> Portable skill — readable by Antigravity, OpenCode, Codex, Cursor, Windsurf, and others.
 > This skill describes an **SEO system** — a set of pure builder functions plus a thin
 > framework adapter — not a component library or a visual style.
 > It pairs with the **frontend-architecture** skill: the SEO system lives in a single
@@ -701,7 +701,7 @@ This skill follows the Anthropic `SKILL.md` format and is portable across agents
 1. Keep it under `skills/frontend-seo/SKILL.md` in a public GitHub repo.
 2. Keep the frontmatter `name` and high-signal `description` — discovery indexes match against it.
 3. Install with: `npx skills add <org>/<repo> --skill "frontend-seo"`.
-4. Non-`SKILL.md` agents can be pointed here from `AGENTS.md` / `CLAUDE.md`; Kiro can mirror it as a steering file.
+4. Non-`SKILL.md` agents can be pointed here from `AGENTS.md` / `AGENTS.md`; Kiro can mirror it as a steering file.
 
 ## Limitations
 

@@ -8,7 +8,7 @@ source_type: self
 date_added: "2026-06-17"
 author: community
 tags: [design, ui, frontend]
-tools: [claude, cursor, gemini]
+tools: [Antigravity, cursor, gemini]
 ---
 
 # Design-It: Sophisticated UI Style Router

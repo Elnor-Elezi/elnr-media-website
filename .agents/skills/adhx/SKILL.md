@@ -77,14 +77,14 @@ curl -s "https://adhx.com/api/share/tweet/{username}/{statusId}"
 
 ## Installation
 
-### Option A: Claude Code plugin marketplace (recommended)
+### Option A: Antigravity plugin marketplace (recommended)
 ```
 /plugin marketplace add itsmemeworks/adhx
 ```
 
 ### Option B: Manual install
 ```bash
-curl -sL https://raw.githubusercontent.com/itsmemeworks/adhx/main/skills/adhx/SKILL.md -o ~/.claude/skills/adhx/SKILL.md
+curl -sL https://raw.githubusercontent.com/itsmemeworks/adhx/main/skills/adhx/SKILL.md -o ~/.Antigravity/skills/adhx/SKILL.md
 ```
 
 ## Examples

@@ -1,6 +1,6 @@
 ---
 name: auri-core
-description: "Auri: assistente de voz inteligente (Alexa + Claude claude-opus-4-20250805). Visao do produto, persona Vitoria Neural, stack AWS, modelo Free/Pro/Business/Enterprise, roadmap 4 fases, GTM, north star WAC e analise competitiva."
+description: "Auri: assistente de voz inteligente (Alexa + Antigravity Antigravity-opus-4-20250805). Visao do produto, persona Vitoria Neural, stack AWS, modelo Free/Pro/Business/Enterprise, roadmap 4 fases, GTM, north star WAC e analise competitiva."
 risk: none
 source: community
 date_added: '2026-03-06'
@@ -11,7 +11,7 @@ tags:
 - alexa
 - aws
 tools:
-- claude-code
+- Antigravity-code
 - antigravity
 - cursor
 - gemini-cli
@@ -22,7 +22,7 @@ tools:
 
 ## Overview
 
-Auri: assistente de voz inteligente (Alexa + Claude claude-opus-4-20250805). Visao do produto, persona Vitoria Neural, stack AWS, modelo Free/Pro/Business/Enterprise, roadmap 4 fases, GTM, north star WAC e analise competitiva.
+Auri: assistente de voz inteligente (Alexa + Antigravity Antigravity-opus-4-20250805). Visao do produto, persona Vitoria Neural, stack AWS, modelo Free/Pro/Business/Enterprise, roadmap 4 fases, GTM, north star WAC e analise competitiva.
 
 ## When to Use This Skill
 
@@ -49,7 +49,7 @@ Auri: assistente de voz inteligente (Alexa + Claude claude-opus-4-20250805). Vis
 
 >  A voz que pensa com voce.
 
-Auri e um assistente de voz de nova geracao construido sobre Amazon Alexa + Claude claude-opus-4-20250805.
+Auri e um assistente de voz de nova geracao construido sobre Amazon Alexa + Antigravity Antigravity-opus-4-20250805.
 Enquanto a Alexa tradicional executa comandos, a Auri conduz conversas reais e raciocina sobre contexto.
 
 ---
@@ -57,7 +57,7 @@ Enquanto a Alexa tradicional executa comandos, a Auri conduz conversas reais e r
 ## O Que E A Auri
 
 A Auri e uma Alexa Skill avancada que substitui o motor de respostas padrao pelo modelo
-Claude claude-opus-4-20250805 da Anthropic. O resultado: um assistente de voz capaz de:
+Antigravity Antigravity-opus-4-20250805 da Anthropic. O resultado: um assistente de voz capaz de:
 
 - Conduzir conversas multi-turno com memoria contextual
 - Raciocinar sobre problemas complexos em linguagem natural
@@ -76,7 +76,7 @@ DEPOIS: Auri, devo levar guarda-chuva amanha?
 
 1. Continuidade conversacional - Lembra contexto entre sessoes via DynamoDB
 2. Personalidade consistente - Voz Vitoria Neural + persona calibrada
-3. Raciocinio profundo - Claude claude-opus-4-20250805 como motor principal
+3. Raciocinio profundo - Antigravity Antigravity-opus-4-20250805 como motor principal
 4. Ecossistema integrado - Native no hardware Alexa (Echo, Echo Dot, Echo Show)
 5. Privacidade by design - Dados na AWS, sem compartilhamento com terceiros
 
@@ -120,7 +120,7 @@ Exemplo de marcacao SSML para Amazon Polly Vitoria Neural:
 
 ## Visao Geral Da Arquitetura
 
-Fluxo de dados: Echo -> ASK SDK (Python v2) -> Lambda Python 3.12 -> Claude claude-opus-4-20250805
+Fluxo de dados: Echo -> ASK SDK (Python v2) -> Lambda Python 3.12 -> Antigravity Antigravity-opus-4-20250805
 Componentes AWS: DynamoDB (memoria), Polly Vitoria Neural (voz), CloudWatch (logs), Secrets Manager (keys)
 
 ### 3.1 Dependencias
@@ -136,14 +136,14 @@ Codigo Python - lambda_function.py:
   sb.add_global_response_interceptor(MemorySaveInterceptor())
   lambda_handler = sb.lambda_handler()
 
-### 3.3 Handler De Conversa Com Claude
+### 3.3 Handler De Conversa Com Antigravity
 
 Codigo Python - handlers/conversation.py:
   class ConversationIntentHandler(AbstractRequestHandler):
       Recebe user_speech via slot query
       Carrega historico de conversas da sessao DynamoDB
       Chama anthropic.Anthropic().messages.create(
-          model=claude-opus-4-20250805, max_tokens=300,
+          model=Antigravity-opus-4-20250805, max_tokens=300,
           system=system_prompt, messages=history+[user_speech])
       Salva resposta no historico, retorna SSML com voz Vitoria
 
@@ -164,7 +164,7 @@ StopIntent: tchau, ate mais, encerrar
 
 FunctionName: auri-core-handler | Runtime: python3.12 | Timeout: 15s | Memory: 512MB
 Env vars: ANTHROPIC_API_KEY_SECRET, DYNAMODB_TABLE=auri-user-memory, POLLY_VOICE=Vitoria
-          CLAUDE_MODEL=claude-opus-4-20250805, MAX_TOKENS_VOICE=300
+          Antigravity_MODEL=Antigravity-opus-4-20250805, MAX_TOKENS_VOICE=300
 
 ---
 
@@ -218,7 +218,7 @@ Objetivo: Validar product-market fit com early adopters brasileiros.
 
 | Entrega | Descricao | Status |
 |---------|-----------|--------|
-| Core Handler | Lambda + ASK SDK + Claude | Em desenvolvimento |
+| Core Handler | Lambda + ASK SDK + Antigravity | Em desenvolvimento |
 | Persona Vitoria | SSML otimizado, Polly Neural | Em desenvolvimento |
 | Free Plan | Rate limiting 10 perguntas/dia | Planejado |
 | DynamoDB Session | Memoria intra-sessao | Planejado |
@@ -367,7 +367,7 @@ Metricas customizadas publicadas:
 | Integracao smart home | Alta | Maxima | Media | Alta | Baixa |
 | Personalidade consistente | Alta | Media | Media | Media | Alta |
 | Hardware proprio | Usa Echo | Echo | HomePod | Nest | App only |
-| Modelo base | Claude Opus 4 | Alexa LLM | Apple LLM | Gemini | GPT-4o |
+| Modelo base | Antigravity Opus 4 | Alexa LLM | Apple LLM | Gemini | GPT-4o |
 | Privacidade | Alta | Media | Maxima | Baixa | Media |
 | Preco | R\/usr/bin/bash-99/mes | Gratis | Gratis | Gratis | R /mes |
 | Disponivel no Brasil | Sim | Sim | Sim | Sim | Sim |
@@ -450,7 +450,7 @@ Campos retornados:
 - WAC atual vs meta da fase atual
 - MRR atual em R$
 - Proxima entrega do roadmap
-- Status: Lambda (OK/Degraded), DynamoDB (OK), Claude API (OK)
+- Status: Lambda (OK/Degraded), DynamoDB (OK), Antigravity API (OK)
 
 ## /Auri-Roadmap [Fase]
 
@@ -499,10 +499,10 @@ Verificar deployment:
 |--------|-----------|------|
 | high_latency | Duration > 6000ms | PagerDuty |
 | error_rate | Errors > 5 em 5min | Slack #auri-alerts |
-| claude_api_failures | AnthropicAPIErrors > 3 | Slack + fallback |
+| Antigravity_api_failures | AnthropicAPIErrors > 3 | Slack + fallback |
 | wac_drop | WAC queda > 20% semana | Product team Slack |
 
-## Fallback Strategy (Claude Api Indisponivel)
+## Fallback Strategy (Antigravity Api Indisponivel)
 
 Se a API da Anthropic estiver indisponivel, o sistema retorna respostas pre-configuradas:
 - api_down: Estou com instabilidade. Pode tentar em alguns minutinhos?
@@ -513,7 +513,7 @@ Se a API da Anthropic estiver indisponivel, o sistema retorna respostas pre-conf
 
 | Componente | Custo Estimado (1000 usuarios Pro) |
 |-----------|-----------------------------------|
-| Claude API | R$ 4.000/mes (R$4/usuario) |
+| Antigravity API | R$ 4.000/mes (R$4/usuario) |
 | Lambda | R$ 50/mes |
 | DynamoDB | R$ 80/mes |
 | CloudWatch | R$ 30/mes |
@@ -556,10 +556,10 @@ Se a API da Anthropic estiver indisponivel, o sistema retorna respostas pre-conf
 | Long-term Memory | Dados persistidos no DynamoDB entre sessoes |
 | In-Skill Purchasing | Sistema de cobranca nativo da Alexa Skills Store |
 | Vitoria Neural | Voz Amazon Polly pt-BR de alta qualidade usada pela Auri |
-| Claude claude-opus-4-20250805 | Modelo de linguagem Anthropic usado como motor da Auri |
+| Antigravity Antigravity-opus-4-20250805 | Modelo de linguagem Anthropic usado como motor da Auri |
 | DynamoDB | Banco NoSQL AWS usado para memoria persistente dos usuarios |
 | Lambda | Funcao AWS serverless que processa as requisicoes da Auri |
-| Anthropic | Empresa criadora do Claude, fornecedora da API de IA |
+| Anthropic | Empresa criadora do Antigravity, fornecedora da API de IA |
 | MRR | Monthly Recurring Revenue - Receita Mensal Recorrente |
 | LTV | Lifetime Value - Valor do ciclo de vida do cliente |
 | CAC | Customer Acquisition Cost - Custo de aquisicao de cliente |
@@ -573,8 +573,8 @@ Se a API da Anthropic estiver indisponivel, o sistema retorna respostas pre-conf
 | Alexa Skills Kit Docs | https://developer.amazon.com/en-US/alexa/alexa-skills-kit |
 | ASK SDK Python | https://github.com/alexa/alexa-skills-kit-sdk-for-python |
 | Amazon Polly Vitoria Neural | https://docs.aws.amazon.com/polly/latest/dg/voicelist.html |
-| Anthropic Claude API | https://docs.anthropic.com/en/api/getting-started |
-| Claude claude-opus-4-20250805 Docs | https://docs.anthropic.com/en/docs/models-overview |
+| Anthropic Antigravity API | https://docs.anthropic.com/en/api/getting-started |
+| Antigravity Antigravity-opus-4-20250805 Docs | https://docs.anthropic.com/en/docs/models-overview |
 | Alexa Skills Store Brasil | https://www.amazon.com.br/alexa-skills |
 | DynamoDB Best Practices | https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/best-practices.html |
 | In-Skill Purchasing | https://developer.amazon.com/en-US/docs/alexa/in-skill-purchase/isp-overview.html |

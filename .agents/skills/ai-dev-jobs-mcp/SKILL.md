@@ -8,7 +8,7 @@ source_type: community
 date_added: "2026-04-16"
 author: unitedideas
 tags: [mcp, jobs, ai-jobs, ml-jobs, recruiting, job-search, career]
-tools: [claude, cursor, gemini]
+tools: [Antigravity, cursor, gemini]
 ---
 
 # AI Dev Jobs MCP
@@ -28,7 +28,7 @@ AI Dev Jobs is a remote MCP server that gives AI agents access to a live index o
 
 Add the AI Dev Jobs MCP server to your client configuration. The endpoint uses streamable HTTP and requires no authentication.
 
-### Claude Desktop / Cursor / Windsurf
+### Antigravity Desktop / Cursor / Windsurf
 
 ```json
 {

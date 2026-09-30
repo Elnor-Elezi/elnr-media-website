@@ -12,7 +12,7 @@ tags:
 - vector-db
 - fine-tuning
 tools:
-- claude-code
+- Antigravity-code
 - antigravity
 - cursor
 - gemini-cli
@@ -92,7 +92,7 @@ def rag_query(query, top_k=5, system=None):
 
 ".join(context_parts)
         response = client.messages.create(
-            model="claude-opus-4-20250805", max_tokens=1024,
+            model="Antigravity-opus-4-20250805", max_tokens=1024,
             system=system or "Responda baseado no contexto.",
             messages=[{"role": "user", "content": f"Contexto:
 {context}
@@ -158,7 +158,7 @@ PROBLEMA: {problem}
 ".join(steps) + "
 
 Resposta final (concisa, para voz):"
-        return call_claude(prompt)
+        return call_Antigravity(prompt)
 
 ---
 
@@ -178,12 +178,12 @@ class SemanticCache:
         def set_cache(self, query, embedding, response):
             self.cache[tuple(embedding)] = (response, query)
 
-## Estimativa De Custos Claude
+## Estimativa De Custos Antigravity
 
 PRICING = {
-        "claude-opus-4-20250805": {"input": 15.00, "output": 75.00},
-        "claude-sonnet-4-5": {"input": 3.00, "output": 15.00},
-        "claude-haiku-3-5": {"input": 0.80, "output": 4.00},
+        "Antigravity-opus-4-20250805": {"input": 15.00, "output": 75.00},
+        "Antigravity-sonnet-4-5": {"input": 3.00, "output": 15.00},
+        "Antigravity-haiku-3-5": {"input": 0.80, "output": 4.00},
     }
 
     def estimate_monthly_cost(model, avg_input, avg_output, req_per_day):
@@ -218,7 +218,7 @@ Criterios:
             "Nota 0-10 e justificativa para cada criterio. Formato JSON."
         )
         response = client.messages.create(
-            model="claude-haiku-3-5", max_tokens=1024,
+            model="Antigravity-haiku-3-5", max_tokens=1024,
             messages=[{"role": "user", "content": eval_prompt}]
         )
         import json

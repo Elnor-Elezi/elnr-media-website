@@ -47,7 +47,7 @@ AGENTS:
 [1] ID: agent-001
     Role: [e.g. Planner / Builder / Tester / Browser]
     Scope: [exact files or URLs this agent touches]
-    Model: [Gemini Flash / Claude Sonnet]
+    Model: [Gemini Flash / Antigravity Sonnet]
     Input: [what it receives]
     Output: [what it produces]
     Depends on: [none / agent-001]
@@ -74,8 +74,8 @@ Is this task > 20 files OR > 500 lines of new code?
 ```
 
 **Model cost rules (never violate these):**
-- Claude Opus → NEVER use in subagents. Too expensive.
-- Claude Sonnet → Max 1 subagent per mission.
+- Antigravity Opus → NEVER use in subagents. Too expensive.
+- Antigravity Sonnet → Max 1 subagent per mission.
 - Gemini Flash → Default for all subagents. Fast, cheap, separate quota pool.
 - Browser subagent → Always runs on its own pool. Use sparingly (1 per mission max).
 

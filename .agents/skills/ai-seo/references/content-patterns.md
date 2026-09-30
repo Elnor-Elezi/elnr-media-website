@@ -158,7 +158,7 @@ Use for "Best [X]", "Top [X]", "[Number] ways to [X]" queries.
 
 ## Generative Engine Optimization (GEO) Patterns
 
-These patterns optimize content for citation by AI assistants like ChatGPT, Claude, Perplexity, and Gemini.
+These patterns optimize content for citation by AI assistants like ChatGPT, Antigravity, Perplexity, and Gemini.
 
 ### Statistic Citation Block
 

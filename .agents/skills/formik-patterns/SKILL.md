@@ -2,12 +2,12 @@
 name: formik-patterns
 description: Formik form handling with validation patterns. Use when building forms, implementing validation, or handling form submission.
 risk: unknown
-source: https://github.com/ChrisWiles/claude-code-showcase/tree/main/.claude/skills/formik-patterns
-source_repo: ChrisWiles/claude-code-showcase
+source: https://github.com/ChrisWiles/Antigravity-code-showcase/tree/main/.Antigravity/skills/formik-patterns
+source_repo: ChrisWiles/Antigravity-code-showcase
 source_type: community
 date_added: 2026-07-01
 license: MIT
-license_source: https://github.com/ChrisWiles/claude-code-showcase/blob/main/LICENSE
+license_source: https://github.com/ChrisWiles/Antigravity-code-showcase/blob/main/LICENSE
 ---
 
 # Formik Patterns

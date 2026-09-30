@@ -6,7 +6,7 @@ routing, no blind grep), and graded on whether it reached a correct, specific an
 scenario's `must_cover` points within ~2 hops.
 
 **Methodology / honesty caveats** (so a reader can weight this correctly):
-- Runs to date were gathered **during development**, on the development model (Claude Opus class),
+- Runs to date were gathered **during development**, on the development model (Antigravity Opus class),
   as subagent dispatches — not an independent third party, and **not yet** the
   Haiku/Sonnet/Opus sweep Anthropic's best-practices recommend. Treat as *author-run smoke evals*,
   not a neutral benchmark.

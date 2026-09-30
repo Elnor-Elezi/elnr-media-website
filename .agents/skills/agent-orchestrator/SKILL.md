@@ -11,7 +11,7 @@ tags:
 - workflow
 - automation
 tools:
-- claude-code
+- Antigravity-code
 - antigravity
 - cursor
 - gemini-cli
@@ -104,7 +104,7 @@ agent-orchestrator/data/registry.json
 ## Locais De Busca
 
 O scanner procura SKILL.md em:
-1. `.claude/skills/*/` (skills registradas no Claude Code)
+1. `.Antigravity/skills/*/` (skills registradas no Antigravity)
 2. `*/` (skills standalone no top-level)
 3. `*/*\` (skills em subpastas, ate profundidade 3)
 
@@ -118,7 +118,7 @@ Cada entrada no registry contem:
 | description    | Descricao completa (triggers inclusos)             |
 | location       | Caminho absoluto do diretorio                      |
 | skill_md       | Caminho absoluto do SKILL.md                       |
-| registered     | Se esta em .claude/skills/ (true/false)            |
+| registered     | Se esta em .Antigravity/skills/ (true/false)            |
 | capabilities   | Tags de capacidade (auto-extraidas + explicitas)   |
 | triggers       | Keywords de ativacao extraidas da description      |
 | language       | Linguagem principal (python/nodejs/bash/none)      |
@@ -259,8 +259,8 @@ description: "Descricao com keywords de ativacao..."
 ```
 3. **Pronto!** O auto-discovery detecta automaticamente na proxima solicitacao.
 
-Opcionalmente, para discovery nativo do Claude Code:
-4. Copiar o SKILL.md para `.claude/skills/<nome>/SKILL.md`
+Opcionalmente, para discovery nativo do Antigravity:
+4. Copiar o SKILL.md para `.Antigravity/skills/<nome>/SKILL.md`
 
 ## Tags De Capacidade Explicitas (Opcional)
 

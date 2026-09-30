@@ -84,7 +84,7 @@ ou logica nao-obvia.
 - [padrao]: [descricao] — [onde se aplica]
 ```
 
-Exemplos: "ZIPs devem conter {skill-name}/ E .claude/skills/{skill-name}/",
+Exemplos: "ZIPs devem conter {skill-name}/ E .Antigravity/skills/{skill-name}/",
 "SQL usa ? placeholders, nunca f-strings", "Tokens mascarados com [:8]...masked".
 
 ## Passo 7: Dependencias Criticas
@@ -118,7 +118,7 @@ nesta ordem, precedidas por um cabecalho:
 # Context Guardian Snapshot — YYYY-MM-DD HH:MM:SS
 **Sessao**: [identificador ou slug]
 **Projeto**: [nome do projeto]
-**Modelo**: [claude-opus-4-6 etc]
+**Modelo**: [Antigravity-opus-4-6 etc]
 **Contexto consumido**: ~X% (estimativa)
 
 [Todas as secoes do Passo 1-8]

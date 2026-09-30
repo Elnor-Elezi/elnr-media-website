@@ -9,7 +9,7 @@ source_type: community
 date_added: "2026-05-26"
 author: Intelligent Internet
 tags: [research, arxiv, pubmed, pmc, policy, retrieval, cli, codex]
-tools: [claude, cursor, gemini, codex, antigravity]
+tools: [Antigravity, cursor, gemini, codex, antigravity]
 license: "Apache-2.0"
 license_source: "https://github.com/Intelligent-Internet/II-Commons-Skills/blob/main/LICENSE"
 ---

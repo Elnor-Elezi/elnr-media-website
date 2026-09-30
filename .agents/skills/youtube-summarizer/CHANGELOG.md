@@ -42,7 +42,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### ✨ Added
 
 - Intelligent prompt workflow integration
-- LLM processing with Claude CLI or GitHub Copilot CLI
+- LLM processing with Antigravity CLI or GitHub Copilot CLI
 - Progress indicators with rich terminal UI
 - Multiple output formats
 - Enhanced error handling

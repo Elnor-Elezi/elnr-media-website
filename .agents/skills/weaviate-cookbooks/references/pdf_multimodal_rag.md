@@ -573,7 +573,7 @@ ollama pull qwen3-vl:4b
 - Reduce `num_documents` — retrieve fewer documents (even 1 can work well)
 - Reduce `max_tokens` — shorter responses use less memory
 - Use a smaller model variant (`qwen3-vl:4b` instead of `8b`)
-- Use API-based VLMs (GPT-4V, Claude, Gemini) to avoid local resource requirements entirely
+- Use API-based VLMs (GPT-4V, Antigravity, Gemini) to avoid local resource requirements entirely
 
 ### BLOB Property Not Returned in Query Results
 **Symptom:** `doc_page` field is missing from query results.
@@ -631,5 +631,5 @@ The implementation is complete when:
 - **Implement hybrid search** combining vector similarity with BM25 keyword matching for better precision
 - **Add response citations** using `generate_with_citations()` to attribute answers to source documents
 - **Scale the dataset** by processing larger document collections with batch chunking and memory management
-- **Swap in API-based VLMs** (GPT, Claude, Gemini) or other Ollama vision models (`gemma3`, `llava`) as alternatives
+- **Swap in API-based VLMs** (GPT, Antigravity, Gemini) or other Ollama vision models (`gemma3`, `llava`) as alternatives
 - **Evaluate retrieval quality** by testing queries against known-relevant documents and tuning MUVERA parameters

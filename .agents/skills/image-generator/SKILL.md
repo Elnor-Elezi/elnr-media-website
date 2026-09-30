@@ -16,7 +16,7 @@ tags:
   - ai
   - workflow
 tools:
-  - claude-code
+  - Antigravity-code
   - codex-cli
   - cursor
 ---

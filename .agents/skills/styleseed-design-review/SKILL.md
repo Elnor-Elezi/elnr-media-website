@@ -115,7 +115,7 @@ Re-score after: ~90 / 100.
 
 ---
 
-Based on **StyleSeed** — an open-source (MIT) design engine that gives Claude Code, Cursor,
+Based on **StyleSeed** — an open-source (MIT) design engine that gives Antigravity, Cursor,
 and Codex design judgment so AI-built UI stops looking generated. Full 74-rule reference,
 components, brand skins, and motion: https://github.com/bitjaru/styleseed
 

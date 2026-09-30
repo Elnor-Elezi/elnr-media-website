@@ -56,7 +56,7 @@ Passed:
 - `actionlint v1.7.12` run from `/tmp` over `.github/workflows/*.yml`
 - Global frontmatter parse over all tracked `*SKILL.md` files
 - Full-plugin and bundle-plugin file drift checks against canonical `skills/` sources
-- Plugin manifest parse/check over `.codex-plugin/plugin.json` and `.claude-plugin/plugin.json`
+- Plugin manifest parse/check over `.codex-plugin/plugin.json` and `.Antigravity-plugin/plugin.json`
 - Canonical `skills_index.json` ID/path duplicate check
 - Targeted typo/refuso scan for common English misspellings across active repo sources, excluding generated output and plugin mirrors
 - Tracked temporary/bytecode artifact scan for `__pycache__`, `*.pyc`, `.DS_Store`, `*.tmp`, `*.bak`, and `*.orig`

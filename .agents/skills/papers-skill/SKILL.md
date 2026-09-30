@@ -9,7 +9,7 @@ source_type: community
 date_added: "2026-06-11"
 author: xwmxcz
 tags: [research, academic, papers, citations, arxiv, semantic-scholar, pdf]
-tools: [claude-code, antigravity, cursor, gemini-cli, codex-cli, opencode]
+tools: [Antigravity-code, antigravity, cursor, gemini-cli, codex-cli, opencode]
 license: "MIT"
 license_source: "https://github.com/xwmxcz/papers-skill/blob/main/LICENSE"
 ---
@@ -28,7 +28,7 @@ or a reading list.
 This skill is the Skill-mode port of the
 [papers-mcp](https://github.com/xwmxcz/papers-mcp) MCP server by the same
 author. Both projects share the same feature set; this one ships as a
-Claude Code plugin so it can be installed with a single command and needs no
+Antigravity plugin so it can be installed with a single command and needs no
 long-running MCP process.
 
 ## When to Use This Skill
@@ -68,12 +68,12 @@ interpreter, e.g. `py -m pip install httpx arxiv PyMuPDF`.
 
 ### Step 2: Invoke the bundled CLI
 
-The script lives at `${CLAUDE_PLUGIN_ROOT}/skills/papers-skill/scripts/papers.py`
+The script lives at `${Antigravity_PLUGIN_ROOT}/skills/papers-skill/scripts/papers.py`
 and is bundled with this skill (no separate install needed). Always quote the
 path so it survives spaces.
 
 ```bash
-python "${CLAUDE_PLUGIN_ROOT}/skills/papers-skill/scripts/papers.py" <subcommand> [args]
+python "${Antigravity_PLUGIN_ROOT}/skills/papers-skill/scripts/papers.py" <subcommand> [args]
 ```
 
 ### Step 3: Pick the right subcommand
@@ -96,7 +96,7 @@ long hex strings are treated as Semantic Scholar `paperId`s.
 ### Example 1: Literature scan on a topic
 
 ```bash
-python "${CLAUDE_PLUGIN_ROOT}/skills/papers-skill/scripts/papers.py" search "retrieval augmented generation" --limit 10
+python "${Antigravity_PLUGIN_ROOT}/skills/papers-skill/scripts/papers.py" search "retrieval augmented generation" --limit 10
 ```
 
 Present results as a ranked table with **# | Title | Year | Citations | ID**,
@@ -106,11 +106,11 @@ then ask the user which papers to dig into.
 
 ```bash
 # 1. Confirm match
-python "${CLAUDE_PLUGIN_ROOT}/skills/papers-skill/scripts/papers.py" detail 2005.11401
+python "${Antigravity_PLUGIN_ROOT}/skills/papers-skill/scripts/papers.py" detail 2005.11401
 # 2. Download
-python "${CLAUDE_PLUGIN_ROOT}/skills/papers-skill/scripts/papers.py" download 2005.11401 --save-dir ./pdfs
+python "${Antigravity_PLUGIN_ROOT}/skills/papers-skill/scripts/papers.py" download 2005.11401 --save-dir ./pdfs
 # 3. Extract abstract + intro + conclusion
-python "${CLAUDE_PLUGIN_ROOT}/skills/papers-skill/scripts/papers.py" read ./pdfs/2005.11401v4.RAG.pdf --max-pages 10
+python "${Antigravity_PLUGIN_ROOT}/skills/papers-skill/scripts/papers.py" read ./pdfs/2005.11401v4.RAG.pdf --max-pages 10
 ```
 
 Summarize as: **problem · method · key result · limitations**.
@@ -118,8 +118,8 @@ Summarize as: **problem · method · key result · limitations**.
 ### Example 3: Impact analysis on an anchor paper
 
 ```bash
-python "${CLAUDE_PLUGIN_ROOT}/skills/papers-skill/scripts/papers.py" detail 10.48550/arXiv.2005.11401
-python "${CLAUDE_PLUGIN_ROOT}/skills/papers-skill/scripts/papers.py" citations 10.48550/arXiv.2005.11401 --limit 20
+python "${Antigravity_PLUGIN_ROOT}/skills/papers-skill/scripts/papers.py" detail 10.48550/arXiv.2005.11401
+python "${Antigravity_PLUGIN_ROOT}/skills/papers-skill/scripts/papers.py" citations 10.48550/arXiv.2005.11401 --limit 20
 ```
 
 Cluster the citing papers by year/theme and highlight the most-cited

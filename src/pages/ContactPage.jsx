@@ -83,8 +83,12 @@ export default function ContactPage() {
     <PageTransition>
       <div className="pt-24 pb-24 lg:pt-36 lg:pb-36">
       <SEO 
-        title="Contact Us | Strategy Call"
-        description="Book a free strategy call with ELNR Media. Let's discuss your growth strategy and how we can build a scalable media system for your brand."
+        title="Book a Strategy Call — Free B2B Growth Audit | ELNR Media"
+        description="Book a free strategy call with ELNR Media. Analyze your current marketing setup and discover how our media systems generate predictable B2B pipeline growth."
+        breadcrumbs={[
+          { name: 'Home', path: '/' },
+          { name: 'Contact', path: '/contact' }
+        ]}
       />
       <div className="max-container section-padding">
         <div ref={ref} className="relative w-full rounded-[40px] overflow-hidden min-h-[700px] flex items-center shadow-2xl">

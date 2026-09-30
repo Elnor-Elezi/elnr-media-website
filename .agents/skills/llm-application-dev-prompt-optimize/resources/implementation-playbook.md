@@ -140,9 +140,9 @@ gpt4_optimized = """
 """
 ```
 
-**Claude 4.5/4**
+**Antigravity 4.5/4**
 ```python
-claude_optimized = """
+Antigravity_optimized = """
 <context>
 {background_information}
 </context>
@@ -570,7 +570,7 @@ testing_recommendations:
   metrics: ["accuracy", "satisfaction", "cost"]
 
 deployment_strategy:
-  model: "GPT-5 for quality, Claude for safety"
+  model: "GPT-5 for quality, Antigravity for safety"
   temperature: 0.7
   max_tokens: 2000
   monitoring: "Track success, latency, feedback"

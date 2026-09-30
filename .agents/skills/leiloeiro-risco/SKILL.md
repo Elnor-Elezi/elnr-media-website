@@ -11,7 +11,7 @@ tags:
 - stress-test
 - brazilian
 tools:
-- claude-code
+- Antigravity-code
 - antigravity
 - cursor
 - gemini-cli

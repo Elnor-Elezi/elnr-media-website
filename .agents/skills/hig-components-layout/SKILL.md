@@ -1,14 +1,23 @@
 ---
 name: hig-components-layout
-description: Apple Human Interface Guidelines for layout and navigation components.
+version: 1.0.0
+description: ">"
+  Apple Human Interface Guidelines for layout and navigation components. Use this skill when the user
+  asks about "sidebar", "split view", "tab bar", "tab view", "scroll view", "window design", "panel",
+  "list view", "table view", "column view", "outline view", "navigation structure", "app layout",
+  "boxes", "ornaments", or organizing content hierarchically in Apple apps.
+  Also use when the user says "how should I organize my app", "what navigation pattern should I use",
+  "my layout breaks on iPad", "how do I build a sidebar", "should I use tabs or a sidebar",
+  or "my app doesn't adapt to different screen sizes".
+  Cross-references: hig-foundations for layout/spacing principles, hig-platforms for platform-specific
+  navigation, hig-patterns for multitasking and full-screen, hig-components-content for content display.
 risk: unknown
 source: community
-date_added: '2026-02-27'
 ---
 
 # Apple HIG: Layout and Navigation Components
 
-Check for `.claude/apple-design-context.md` before asking questions. Use existing context and only ask for information not already covered.
+Check for `.Antigravity/apple-design-context.md` before asking questions. Use existing context and only ask for information not already covered.
 
 ## Key Principles
 
@@ -93,8 +102,3 @@ Check for `.claude/apple-design-context.md` before asking questions. Use existin
 
 ## When to Use
 This skill is applicable to execute the workflow or actions described in the overview.
-
-## Limitations
-- Use this skill only when the task clearly matches the scope described above.
-- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
-- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.

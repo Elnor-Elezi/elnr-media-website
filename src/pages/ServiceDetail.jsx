@@ -1,7 +1,8 @@
 import { useEffect, useMemo } from 'react'
 import { useParams, Navigate, Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { Helmet } from 'react-helmet-async'
+import SEO from '../components/SEO'
+import PageTransition from '../components/PageTransition'
 import { 
   Smartphone, Code, Mail, GitBranch, Database, Film, 
   CheckCircle2, ArrowRight, Zap, Target, TrendingUp, Users
@@ -176,24 +177,18 @@ export default function ServiceDetail() {
   const Icon = service.icon;
 
   return (
-    <div className="pt-32 pb-24 lg:pt-40 lg:pb-32 overflow-hidden">
-      <Helmet>
-        <title>{service.title} | ELNR Media</title>
-        <meta name="description" content={service.heroDesc} />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "serviceType": service.title,
-            "provider": {
-              "@type": "Organization",
-              "name": "ELNR Media",
-              "url": "https://elnrmedia.com"
-            },
-            "description": service.heroDesc
-          })}
-        </script>
-      </Helmet>
+    <PageTransition>
+      <div className="pt-32 pb-24 lg:pt-40 lg:pb-32 overflow-hidden">
+        <SEO 
+          title={`${service.title} Services — B2B Growth Architecture | ELNR Media`}
+          description={service.heroDesc}
+          serviceName={service.title}
+          breadcrumbs={[
+            { name: 'Home', path: '/' },
+            { name: 'Services', path: '/services' },
+            { name: service.title, path: `/services/${slug}` }
+          ]}
+        />
 
       {/* Hero Section */}
       <section className="relative max-container section-padding mb-24">
@@ -357,6 +352,7 @@ export default function ServiceDetail() {
         </section>
       )}
 
-    </div>
+      </div>
+    </PageTransition>
   )
 }

@@ -11,7 +11,7 @@ tags:
 - ai-art
 - photography
 tools:
-- claude-code
+- Antigravity-code
 - antigravity
 - cursor
 - gemini-cli

@@ -2,7 +2,7 @@
 name: ui-review
 description: Review UI code for design system compliance, accessibility, and best practices
 risk: unknown
-source: https://github.com/bitjaru/styleseed/tree/main/engine/.claude/skills/ss-review
+source: https://github.com/bitjaru/styleseed/tree/main/engine/.Antigravity/skills/ss-review
 source_repo: bitjaru/styleseed
 source_type: community
 date_added: 2026-07-01
@@ -64,7 +64,7 @@ Review the file: **$ARGUMENTS**
 
 ### 6. Typography
 - [ ] Uses the Pretendard/Inter font stack
-- [ ] Font sizes from the 14-step scale (10-48px, see CLAUDE.md)
+- [ ] Font sizes from the 14-step scale (10-48px, see AGENTS.md)
 - [ ] Proper font weights (400, 500, 600, 700)
 - [ ] Display text (36-48px): `leading-none` + `tracking-[-0.02em]`
 - [ ] Heading text (18-24px): `leading-snug` + `tracking-[-0.01em]`

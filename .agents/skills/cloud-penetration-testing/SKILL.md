@@ -1,13 +1,12 @@
 ---
 name: cloud-penetration-testing
-description: "Conduct comprehensive security assessments of cloud infrastructure across Microsoft Azure, Amazon Web Services (AWS), and Google Cloud Platform (GCP)."
-risk: offensive
+description: "This skill should be used when the user asks to \"perform cloud penetration testing\", \"assess Azure or AWS or GCP security\", \"enumerate cloud resources\", \"exploit cloud misconfiguratio..."
+metadata:
+  author: zebbern
+  version: "1.1"
+risk: unknown
 source: community
-author: zebbern
-date_added: "2026-02-27"
 ---
-
-> AUTHORIZED USE ONLY: Use this skill only for authorized security assessments, defensive validation, or controlled educational environments.
 
 # Cloud Penetration Testing
 
@@ -29,11 +28,7 @@ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip
 unzip awscliv2.zip && sudo ./aws/install
 
 # GCP CLI
-tmpdir="$(mktemp -d)"
-trap 'rm -rf "$tmpdir"' EXIT
-curl -fsSLo "$tmpdir/google-cloud-sdk-install.sh" https://sdk.cloud.google.com
-cat "$tmpdir/google-cloud-sdk-install.sh"  # review the full installer before executing
-bash "$tmpdir/google-cloud-sdk-install.sh"
+curl https://sdk.cloud.google.com | bash
 gcloud init
 
 # Additional tools

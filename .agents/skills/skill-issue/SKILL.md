@@ -10,7 +10,7 @@ source_type: community
 date_added: "2026-06-02"
 author: mishanefedov
 tags: [skills, linter, activation, meta, ci]
-tools: [claude, cursor, gemini, codex]
+tools: [Antigravity, cursor, gemini, codex]
 license: "MIT"
 license_source: "https://github.com/mishanefedov/skill-issue/blob/main/LICENSE"
 ---
@@ -38,21 +38,21 @@ reporting collision clusters where one skill shadows another.
 Install the CLI (`npm i -g @misha_misha/skill-issue`, `brew install mishanefedov/skill-issue/skill-issue`, or `npx @misha_misha/skill-issue`), then:
 
 ```bash
-skill-issue ~/.claude/skills                       # grade every skill A–F (+ collisions summary)
+skill-issue ~/.Antigravity/skills                       # grade every skill A–F (+ collisions summary)
 skill-issue ~/.codex/skills --why "deploy to prod" # which skill fires for this prompt, and why
 skill-issue <dir> --collisions                     # clusters of skills that shadow each other
 skill-issue <dir> --fix                            # append a "Use when …" clause to weak descriptions
 skill-issue <dir> --json                           # machine-readable; exits non-zero on errors
 ```
 
-Offline heuristic by default; add `--llm` to judge with a local `claude`/`codex` CLI.
+Offline heuristic by default; add `--llm` to judge with a local `Antigravity`/`codex` CLI.
 
 ## Examples
 
 ### Example 1: Audit installed skills
 
 ```bash
-skill-issue ~/.claude/skills
+skill-issue ~/.Antigravity/skills
 # F  deploy-helper  ✗ no description — can never fire
 # C  shipit         ! no "use when …" trigger clause
 # A  rollback-prod  ✓ will fire on its triggers
@@ -61,7 +61,7 @@ skill-issue ~/.claude/skills
 ### Example 2: Diagnose a collision
 
 ```bash
-skill-issue ~/.claude/skills --why "deploy the app to prod"
+skill-issue ~/.Antigravity/skills --why "deploy the app to prod"
 #  1. shipit       0.74  ← would fire
 #  2. land-deploy  0.69  (margin 0.05 — ambiguous, likely collision)
 ```

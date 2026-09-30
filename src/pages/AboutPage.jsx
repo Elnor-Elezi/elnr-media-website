@@ -37,8 +37,12 @@ export default function AboutPage() {
     <PageTransition>
       <div className="relative">
       <SEO 
-        title="About Us | ELNR Media"
-        description="Learn about ELNR Media, our founder Elnor Elezi, and our mission to build premium media systems that scale."
+        title="About ELNR Media — B2B Growth Agency & Founder Elnor Elezi"
+        description="Learn about ELNR Media, our founder Elnor Elezi, and our mission to build compounding B2B media systems that scale revenue with data-driven precision."
+        breadcrumbs={[
+          { name: 'Home', path: '/' },
+          { name: 'About Us', path: '/about' }
+        ]}
       />
 
       <section className="relative overflow-hidden pt-32 pb-24 lg:pt-40 lg:pb-36">

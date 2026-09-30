@@ -9,20 +9,20 @@ source_type: official
 date_added: "2026-05-22"
 author: AnthonyFirth
 tags: [sendblue, imessage, sms, cli, messaging, notifications]
-tools: [claude, cursor, gemini]
+tools: [Antigravity, cursor, gemini]
 license: "MIT"
 license_source: "https://github.com/sendblue-api/sendblue-cli/blob/main/LICENSE"
 plugin:
   targets:
     codex: blocked
-    claude: blocked
+    Antigravity: blocked
 ---
 
 # Sendblue CLI
 
 ## Overview
 
-`@sendblue/cli` is a Node CLI that creates a Sendblue account, provisions an iMessage-enabled number, and sends messages. It is the fastest way to text from a shell, script, or Claude Code hook — no API client, no webhook server, no credentials in env vars. Credentials live at `~/.sendblue/credentials.json` (mode `600`) and Node.js 18+ is required.
+`@sendblue/cli` is a Node CLI that creates a Sendblue account, provisions an iMessage-enabled number, and sends messages. It is the fastest way to text from a shell, script, or Antigravity hook — no API client, no webhook server, no credentials in env vars. Credentials live at `~/.sendblue/credentials.json` (mode `600`) and Node.js 18+ is required.
 
 ## When to Use This Skill
 
@@ -104,7 +104,7 @@ sendblue messages -n +15551234567 --inbound --limit 50
 sendblue whoami || sendblue login
 ```
 
-### Example 4: Wire to a Claude Code `Stop` hook
+### Example 4: Wire to a Antigravity `Stop` hook
 
 To text yourself at the end of every agent turn, register a `Stop` hook in `settings.json` that shells out to `sendblue send`. Defer the actual hook wiring to [[update-config]] and the trigger logic to [[sendblue-notify]] — this skill only owns the CLI invocation.
 
@@ -141,7 +141,7 @@ To text yourself at the end of every agent turn, register a `Stop` hook in `sett
 
 - `@sendblue-api` — HTTP/JSON alternative for application code, webhooks, and features the CLI does not expose.
 - `@sendblue-notify` — Patterns and copy rules for "text me when X is done" workflows that sit on top of this CLI.
-- `@update-config` — Wires `sendblue send` into Claude Code hooks (`Stop`, `Notification`) without owning the message logic.
+- `@update-config` — Wires `sendblue send` into Antigravity hooks (`Stop`, `Notification`) without owning the message logic.
 
 ## Links
 

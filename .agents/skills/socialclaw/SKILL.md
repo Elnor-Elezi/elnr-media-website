@@ -9,13 +9,13 @@ source_type: community
 date_added: "2026-05-25"
 author: ndesv21
 tags: [social-media, publishing, scheduling, marketing, twitter, linkedin, instagram, tiktok, discord, telegram, reddit, wordpress, pinterest]
-tools: [claude]
+tools: [Antigravity]
 license: "MIT"
 license_source: "https://github.com/ndesv21/socialclaw/blob/main/LICENSE"
 plugin:
   targets:
     codex: blocked
-    claude: blocked
+    Antigravity: blocked
 ---
 
 # SocialClaw — Social Media Publisher

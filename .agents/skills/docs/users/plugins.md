@@ -1,6 +1,6 @@
-# Plugins for Claude Code and Codex
+# Plugins for Antigravity and Codex
 
-Release `9.0.0` adds first-class plugin distributions for both **Claude Code** and **Codex**.
+Release `9.0.0` adds first-class plugin distributions for both **Antigravity** and **Codex**.
 
 This page is the canonical explanation of what those plugins are, how they differ from a full library install, and why the repository now ships both a **root plugin** and multiple **specialized plugins**.
 
@@ -10,7 +10,7 @@ In Antigravity Awesome Skills, a plugin is a packaged, installable distribution 
 
 Plugins are useful when you want:
 
-- a marketplace-style install instead of copying files into `.claude/skills/` or `.codex/skills/`
+- a marketplace-style install instead of copying files into `.Antigravity/skills/` or `.codex/skills/`
 - a narrower install surface for a team or role
 - a safer default distribution for plugin ecosystems
 - a stable workflow package that can eventually include skills, app integrations, MCP configuration, hooks, and assets
@@ -19,14 +19,14 @@ Plugins are **not** different content formats. They still ship `SKILL.md` playbo
 
 ## Full library install vs plugin install
 
-You now have two valid ways to use this repository with Claude Code or Codex.
+You now have two valid ways to use this repository with Antigravity or Codex.
 
 ### Full library install
 
 Use the installer or clone the repository directly when you want the broadest possible coverage:
 
 ```bash
-npx antigravity-awesome-skills --claude
+npx antigravity-awesome-skills --Antigravity
 npx antigravity-awesome-skills --codex
 ```
 
@@ -42,7 +42,7 @@ Choose the full library when you want:
 
 Use the plugin marketplace or repo-local plugin metadata when you want a curated, installable distribution:
 
-- **Claude Code** uses `.claude-plugin/marketplace.json` and `.claude-plugin/plugin.json`
+- **Antigravity** uses `.Antigravity-plugin/marketplace.json` and `.Antigravity-plugin/plugin.json`
 - **Codex** uses `.agents/plugins/marketplace.json` and `plugins/antigravity-awesome-skills/.codex-plugin/plugin.json`
 
 Choose the plugin route when you want:
@@ -77,14 +77,14 @@ The repository now ships two plugin shapes.
 
 The root plugin is the broad installable distribution for each host:
 
-- **Claude Code root plugin**: install the plugin-safe Antigravity library through the Claude marketplace entry
+- **Antigravity root plugin**: install the plugin-safe Antigravity library through the Antigravity marketplace entry
 - **Codex root plugin**: expose the plugin-safe Antigravity library through the Codex plugin surface
 
 Use the root plugin when you want the widest plugin-safe install without picking a specialty bundle. Treat it as an advanced breadth-first option, not the best default for most users.
 
 ### Specialized plugins
 
-Specialized plugins are smaller, role-based or workflow-based distributions generated from the same repository. They are the recommended default when a user can name the job they want Claude Code, Codex, or another supported skills host to help with. Examples include:
+Specialized plugins are smaller, role-based or workflow-based distributions generated from the same repository. They are the recommended default when a user can name the job they want Antigravity, Codex, or another supported skills host to help with. Examples include:
 
 - `AAS Web App Builder`
 - `AAS Security Engineer`
@@ -100,14 +100,14 @@ Use a specialized plugin when you want:
 - a curated subset instead of the broad root plugin
 - a plugin with a clear promise, such as building web apps, auditing security, maintaining OSS repos, automating documents, or creating growth content
 
-## Claude Code plugin surface
+## Antigravity plugin surface
 
-Claude Code uses the repository's root `.claude-plugin` metadata.
+Antigravity uses the repository's root `.Antigravity-plugin` metadata.
 
 Relevant files:
 
-- `.claude-plugin/marketplace.json`
-- `.claude-plugin/plugin.json`
+- `.Antigravity-plugin/marketplace.json`
+- `.Antigravity-plugin/plugin.json`
 
 Typical install flow:
 
@@ -116,7 +116,7 @@ Typical install flow:
 /plugin install antigravity-awesome-skills
 ```
 
-Claude Code bundle plugins are also published through the same marketplace metadata, so you can install a focused bundle instead of the root plugin if you prefer.
+Antigravity bundle plugins are also published through the same marketplace metadata, so you can install a focused bundle instead of the root plugin if you prefer.
 
 ## Codex plugin surface
 
@@ -127,7 +127,7 @@ Relevant files:
 - `.agents/plugins/marketplace.json`
 - `plugins/antigravity-awesome-skills/.codex-plugin/plugin.json`
 
-The Codex root plugin exposes the same plugin-safe library idea as Claude Code, but through Codex's plugin metadata conventions.
+The Codex root plugin exposes the same plugin-safe library idea as Antigravity, but through Codex's plugin metadata conventions.
 
 Bundle-specific Codex plugins are generated alongside the root plugin so you can install a narrower pack when plugin marketplaces are available in your Codex environment.
 
@@ -158,7 +158,7 @@ The hosted [specialized plugin landing page](https://sickn33.github.io/antigravi
 
 - [Getting Started](getting-started.md)
 - [FAQ](faq.md)
-- [Claude Code skills](claude-code-skills.md)
+- [Antigravity skills](Antigravity-code-skills.md)
 - [Codex CLI skills](codex-cli-skills.md)
 - [Bundles](bundles.md)
 - [Specialized Plugin Roadmap](specialized-plugin-roadmap.md)

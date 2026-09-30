@@ -1,4 +1,4 @@
-# Claude API — C#
+# Antigravity API — C#
 
 > **Note:** The C# SDK is the official Anthropic SDK for C#. Tool use is supported via the Messages API. A class-annotation-based tool runner is not available; use raw tool definitions with JSON schema. The SDK also supports Microsoft.Extensions.AI IChatClient integration with function invocation.
 
@@ -31,7 +31,7 @@ using Anthropic.Models.Messages;
 
 var parameters = new MessageCreateParams
 {
-    Model = Model.ClaudeOpus4_6,
+    Model = Model.AntigravityOpus4_6,
     MaxTokens = 1024,
     Messages = [new() { Role = Role.User, Content = "What is the capital of France?" }]
 };
@@ -48,7 +48,7 @@ using Anthropic.Models.Messages;
 
 var parameters = new MessageCreateParams
 {
-    Model = Model.ClaudeOpus4_6,
+    Model = Model.AntigravityOpus4_6,
     MaxTokens = 1024,
     Messages = [new() { Role = Role.User, Content = "Write a haiku" }]
 };

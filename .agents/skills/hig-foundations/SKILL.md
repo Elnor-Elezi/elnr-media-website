@@ -1,14 +1,23 @@
 ---
 name: hig-foundations
-description: Apple Human Interface Guidelines design foundations.
+version: 1.0.0
+description: ">"
+  Apple Human Interface Guidelines design foundations. Use this skill when the user asks about
+  "HIG color", "Apple typography", "SF Symbols", "dark mode guidelines", "accessible design",
+  "Apple design foundations", "app icon", "layout guidelines", "materials", "motion", "privacy",
+  "right to left", "RTL", "inclusive design", branding, images, spatial layout, or writing style.
+  Also use when the user says "my colors look wrong in dark mode", "what font should I use",
+  "is my app accessible enough", "how do I support Dynamic Type", "what contrast ratio do I need",
+  "how do I pick system colors", or "my icons don't match the system style".
+  Cross-references: hig-platforms for platform-specific guidance, hig-patterns for interaction
+  patterns, hig-components-layout for structural components, hig-components-content for display.
 risk: unknown
 source: community
-date_added: '2026-02-27'
 ---
 
 # Apple HIG: Design Foundations
 
-Check for `.claude/apple-design-context.md` before asking questions. Use existing context and only ask for information not already covered.
+Check for `.Antigravity/apple-design-context.md` before asking questions. Use existing context and only ask for information not already covered.
 
 ## Key Principles
 
@@ -92,8 +101,3 @@ Consider how principles interact:
 
 ## When to Use
 This skill is applicable to execute the workflow or actions described in the overview.
-
-## Limitations
-- Use this skill only when the task clearly matches the scope described above.
-- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
-- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.

@@ -8,7 +8,7 @@ source_type: community
 date_added: "2026-05-08"
 author: Mann-Makhecha
 tags: [unity, game-development, ai-generation, asset-pipeline, scene-design, music-generation, game-design-document]
-tools: [claude, cursor, gemini, codex, antigravity]
+tools: [Antigravity, cursor, gemini, codex, antigravity]
 ---
 
 # Unity AI Game Creator

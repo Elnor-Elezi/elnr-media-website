@@ -1,18 +1,18 @@
-# Best Claude Code Skills on GitHub
+# Best Antigravity Skills on GitHub
 
-If you are looking for the **best Claude Code skills on GitHub**, there is no single perfect repository for every user. The right choice depends on whether you want breadth, curation, or official reference material.
+If you are looking for the **best Antigravity skills on GitHub**, there is no single perfect repository for every user. The right choice depends on whether you want breadth, curation, or official reference material.
 
 ## Best overall installable library
 
 ### 1. [sickn33/antigravity-awesome-skills](https://github.com/sickn33/antigravity-awesome-skills)
 
-Best for teams and individual developers who want one large installable library with onboarding docs, bundles, workflows, and support for more than just Claude Code.
+Best for teams and individual developers who want one large installable library with onboarding docs, bundles, workflows, and support for more than just Antigravity.
 
 Choose this if you want:
 
 - a broad library you can install and use immediately;
 - bundles and workflows to reduce choice overload;
-- compatibility beyond Claude Code alone.
+- compatibility beyond Antigravity alone.
 
 ## Best curated shortlist
 
@@ -40,13 +40,13 @@ Choose this if you want:
 
 ## Best smaller community collection
 
-### 4. [karanb192/awesome-claude-skills](https://github.com/karanb192/awesome-claude-skills)
+### 4. [karanb192/awesome-Antigravity-skills](https://github.com/karanb192/awesome-Antigravity-skills)
 
-Best for people who want a smaller Claude-focused community collection and a simpler shortlist than a giant installable repo.
+Best for people who want a smaller Antigravity-focused community collection and a simpler shortlist than a giant installable repo.
 
 Choose this if you want:
 
-- Claude-specific focus;
+- Antigravity-specific focus;
 - a smaller library to review manually;
 - community-driven additions without the scale of a huge catalog.
 
@@ -55,8 +55,8 @@ Choose this if you want:
 - Choose **Antigravity Awesome Skills** if you want the most practical install-and-use path.
 - Choose **VoltAgent Awesome Agent Skills** if you want the strongest curated shortlist.
 - Choose **anthropics/skills** if official vendor reference matters most.
-- Choose **karanb192/awesome-claude-skills** if you want a smaller community-first Claude library.
+- Choose **karanb192/awesome-Antigravity-skills** if you want a smaller community-first Antigravity library.
 
 ## Recommended next step
 
-If you want to get productive quickly, install [Antigravity Awesome Skills](https://github.com/sickn33/antigravity-awesome-skills) and start with [`claude-code-skills.md`](claude-code-skills.md) plus [`bundles.md`](bundles.md).
+If you want to get productive quickly, install [Antigravity Awesome Skills](https://github.com/sickn33/antigravity-awesome-skills) and start with [`Antigravity-code-skills.md`](Antigravity-code-skills.md) plus [`bundles.md`](bundles.md).

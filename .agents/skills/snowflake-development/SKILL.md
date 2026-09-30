@@ -212,7 +212,7 @@ Snowflake-specific configs (combine with any materialization):
 - **Search Optimization**: `ALTER TABLE t ADD SEARCH OPTIMIZATION ON EQUALITY(col);`
 - **Warehouse sizing**: Start X-Small, scale up. `AUTO_SUSPEND = 60`, `AUTO_RESUME = TRUE`.
 - **Separate warehouses** per workload.
-- Estimate AI costs first: `SELECT SUM(AI_COUNT_TOKENS('claude-4-sonnet', text)) FROM table;`
+- Estimate AI costs first: `SELECT SUM(AI_COUNT_TOKENS('Antigravity-4-sonnet', text)) FROM table;`
 
 ## Security
 

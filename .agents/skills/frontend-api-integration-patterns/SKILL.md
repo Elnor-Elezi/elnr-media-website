@@ -13,7 +13,7 @@ tags:
   - react
   - async
 tools:
-  - claude
+  - Antigravity
   - cursor
   - gemini
   - codex

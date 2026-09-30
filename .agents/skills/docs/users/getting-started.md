@@ -8,7 +8,7 @@
 
 ## What Are "Skills"?
 
-AI Agents (like **Claude Code**, **Gemini**, **Cursor**) are smart, but they lack specific knowledge about your tools.
+AI Agents (like **Antigravity**, **Gemini**, **Cursor**) are smart, but they lack specific knowledge about your tools.
 **Skills** are specialized instruction manuals (markdown files) that teach your AI how to perform specific tasks perfectly, every time.
 
 **Analogy:** Your AI is a brilliant intern. **Skills** are the SOPs (Standard Operating Procedures) that make them a Senior Engineer.
@@ -22,7 +22,7 @@ We have curated **Starter Packs** to get you running immediately.
 
 You **install the full repo once** (npx or clone); Starter Packs are curated lists to help you **pick which skills to use** by role (e.g. Web Wizard, Hacker Pack)—they are not a different way to install.
 
-If you prefer a marketplace-style install for **Claude Code** or **Codex**, use the new plugin distributions described in [plugins.md](plugins.md).
+If you prefer a marketplace-style install for **Antigravity** or **Codex**, use the new plugin distributions described in [plugins.md](plugins.md).
 
 ### 1. Install the Repo
 
@@ -32,7 +32,7 @@ If you prefer a marketplace-style install for **Claude Code** or **Codex**, use 
 npx antigravity-awesome-skills
 ```
 
-This clones to `~/.agents/skills` by default. Use `--cursor`, `--claude`, `--gemini`, `--codex`, `--kiro`, or `--agy` to install for a specific tool, or `--path <dir>` for a custom location. Run `npx antigravity-awesome-skills --help` for details.
+This clones to `~/.agents/skills` by default. Use `--cursor`, `--Antigravity`, `--gemini`, `--codex`, `--kiro`, or `--agy` to install for a specific tool, or `--path <dir>` for a custom location. Run `npx antigravity-awesome-skills --help` for details.
 The installer uses a shallow clone by default so you get the current library without paying for the full git history on first install.
 
 If you see a 404 error, use: `npx github:sickn33/antigravity-awesome-skills`
@@ -100,7 +100,7 @@ Once installed, just talk to your AI naturally.
 
 | Tool            | Status          | Path                                                                  |
 | :-------------- | :-------------- | :-------------------------------------------------------------------- |
-| **Claude Code** | ✅ Full Support | `.claude/skills/` or install via `/plugin marketplace add sickn33/antigravity-awesome-skills` |
+| **Antigravity** | ✅ Full Support | `.Antigravity/skills/` or install via `/plugin marketplace add sickn33/antigravity-awesome-skills` |
 | **Gemini CLI**  | ✅ Full Support | `.gemini/skills/`                                                     |
 | **Codex CLI**   | ✅ Full Support | `.codex/skills/` or use the repo-local plugin metadata described in [plugins.md](plugins.md) |
 | **Kiro CLI**    | ✅ Full Support | Global: `~/.kiro/skills/` · Workspace: `.kiro/skills/`                |
@@ -134,7 +134,7 @@ _Check the [Skill Catalog](../../CATALOG.md) for the full list._
 
 If you prefer a plugin install instead of copying skills into tool directories, start with [plugins.md](plugins.md).
 
-For Claude Code, use:
+For Antigravity, use:
 
 ```text
 /plugin marketplace add sickn33/antigravity-awesome-skills
@@ -170,8 +170,8 @@ A: Yes. Original code and tooling are MIT-licensed, and original documentation/n
 
 Need a tool-specific starting point first?
 
-- [Claude Code skills](claude-code-skills.md)
-- [Plugins for Claude Code and Codex](plugins.md)
+- [Antigravity skills](Antigravity-code-skills.md)
+- [Plugins for Antigravity and Codex](plugins.md)
 - [Cursor skills](cursor-skills.md)
 - [Codex CLI skills](codex-cli-skills.md)
 - [Gemini CLI skills](gemini-cli-skills.md)

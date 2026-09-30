@@ -7,8 +7,8 @@ Complete installation instructions for all platforms and use cases.
 ## Table of Contents
 
 - [Quick Install (Recommended)](#quick-install-recommended)
-- [Claude Code (CLI)](#claude-code-cli)
-- [Claude.ai (Web)](#claudeai-web)
+- [Antigravity (CLI)](#Antigravity-code-cli)
+- [Antigravity.ai (Web)](#Antigravityai-web)
 - [Anthropic API Console](#anthropic-api-console)
 - [Verify Installation](#verify-installation)
 - [Troubleshooting](#troubleshooting)
@@ -17,26 +17,26 @@ Complete installation instructions for all platforms and use cases.
 
 ## Quick Install (Recommended)
 
-**For Claude Code users:**
+**For Antigravity users:**
 
 ```bash
 # Clone to your skills directory
-git clone https://github.com/asklokesh/loki-mode.git ~/.claude/skills/loki-mode
+git clone https://github.com/asklokesh/loki-mode.git ~/.Antigravity/skills/loki-mode
 ```
 
 **Done!** Skip to [Verify Installation](#verify-installation).
 
 ---
 
-## Claude Code (CLI)
+## Antigravity (CLI)
 
-Loki Mode can be installed for Claude Code in three ways:
+Loki Mode can be installed for Antigravity in three ways:
 
 ### Option A: Git Clone (Recommended)
 
 **Personal installation (available in all projects):**
 ```bash
-git clone https://github.com/asklokesh/loki-mode.git ~/.claude/skills/loki-mode
+git clone https://github.com/asklokesh/loki-mode.git ~/.Antigravity/skills/loki-mode
 ```
 
 **Project-specific installation:**
@@ -45,24 +45,24 @@ git clone https://github.com/asklokesh/loki-mode.git ~/.claude/skills/loki-mode
 cd /path/to/your/project
 
 # Clone to local skills directory
-git clone https://github.com/asklokesh/loki-mode.git .claude/skills/loki-mode
+git clone https://github.com/asklokesh/loki-mode.git .Antigravity/skills/loki-mode
 ```
 
 ### Option B: Download from Releases
 
 ```bash
 # Navigate to skills directory
-cd ~/.claude/skills
+cd ~/.Antigravity/skills
 
 # Get latest version number
 VERSION=$(curl -s https://api.github.com/repos/asklokesh/loki-mode/releases/latest | grep tag_name | cut -d'"' -f4 | tr -d 'v')
 
 # Download and extract
-curl -L -o loki-mode.zip "https://github.com/asklokesh/loki-mode/releases/download/v${VERSION}/loki-mode-claude-code-${VERSION}.zip"
+curl -L -o loki-mode.zip "https://github.com/asklokesh/loki-mode/releases/download/v${VERSION}/loki-mode-Antigravity-code-${VERSION}.zip"
 unzip loki-mode.zip && rm loki-mode.zip
 ```
 
-**Result:** Creates `~/.claude/skills/loki-mode/SKILL.md`
+**Result:** Creates `~/.Antigravity/skills/loki-mode/SKILL.md`
 
 ### Option C: Minimal Install (curl)
 
@@ -70,22 +70,22 @@ If you only want the essential files without the full repository:
 
 ```bash
 # Create directory structure
-mkdir -p ~/.claude/skills/loki-mode/references
+mkdir -p ~/.Antigravity/skills/loki-mode/references
 
 # Download core skill file
-curl -o ~/.claude/skills/loki-mode/SKILL.md \
+curl -o ~/.Antigravity/skills/loki-mode/SKILL.md \
   https://raw.githubusercontent.com/asklokesh/loki-mode/main/SKILL.md
 
 # Download agent definitions
-curl -o ~/.claude/skills/loki-mode/references/agents.md \
+curl -o ~/.Antigravity/skills/loki-mode/references/agents.md \
   https://raw.githubusercontent.com/asklokesh/loki-mode/main/references/agents.md
 
 # Download deployment guides
-curl -o ~/.claude/skills/loki-mode/references/deployment.md \
+curl -o ~/.Antigravity/skills/loki-mode/references/deployment.md \
   https://raw.githubusercontent.com/asklokesh/loki-mode/main/references/deployment.md
 
 # Download business operations reference
-curl -o ~/.claude/skills/loki-mode/references/business-ops.md \
+curl -o ~/.Antigravity/skills/loki-mode/references/business-ops.md \
   https://raw.githubusercontent.com/asklokesh/loki-mode/main/references/business-ops.md
 ```
 
@@ -93,9 +93,9 @@ curl -o ~/.claude/skills/loki-mode/references/business-ops.md \
 
 ---
 
-## Claude.ai (Web)
+## Antigravity.ai (Web)
 
-For using Loki Mode on the Claude.ai web interface:
+For using Loki Mode on the Antigravity.ai web interface:
 
 ### Step 1: Download the Skill Package
 
@@ -106,15 +106,15 @@ For using Loki Mode on the Claude.ai web interface:
 
    Both contain the same skill and will work.
 
-### Step 2: Upload to Claude.ai
+### Step 2: Upload to Antigravity.ai
 
-1. Open [Claude.ai](https://claude.ai)
+1. Open [Antigravity.ai](https://Antigravity.ai)
 2. Go to **Settings** (gear icon)
 3. Navigate to **Features → Skills**
 4. Click **Upload Skill**
 5. Select the downloaded `.zip` or `.skill` file
 
-**File Structure:** The Claude.ai package has `SKILL.md` at the root level as required by the web interface.
+**File Structure:** The Antigravity.ai package has `SKILL.md` at the root level as required by the web interface.
 
 ---
 
@@ -142,12 +142,12 @@ For using Loki Mode through the Anthropic API Console (console.anthropic.com):
 
 ## Verify Installation
 
-### For Claude Code (CLI)
+### For Antigravity (CLI)
 
 Check that the skill file is in place:
 
 ```bash
-cat ~/.claude/skills/loki-mode/SKILL.md | head -10
+cat ~/.Antigravity/skills/loki-mode/SKILL.md | head -10
 ```
 
 **Expected output:** Should show YAML frontmatter starting with:
@@ -159,11 +159,11 @@ description: Multi-Agent Autonomous Startup System
 ---
 ```
 
-### For Claude.ai (Web)
+### For Antigravity.ai (Web)
 
 1. Start a new conversation
 2. Type: `Loki Mode`
-3. Claude should recognize the skill and ask for a PRD
+3. Antigravity should recognize the skill and ask for a PRD
 
 ### For API Console
 
@@ -213,23 +213,23 @@ loki-mode/
 
 ### Skill Not Found
 
-**Problem:** Claude doesn't recognize "Loki Mode" command.
+**Problem:** Antigravity doesn't recognize "Loki Mode" command.
 
 **Solutions:**
 1. **Check installation path:**
    ```bash
-   ls -la ~/.claude/skills/loki-mode/SKILL.md
+   ls -la ~/.Antigravity/skills/loki-mode/SKILL.md
    ```
 
 2. **Verify YAML frontmatter:**
    ```bash
-   cat ~/.claude/skills/loki-mode/SKILL.md | head -5
+   cat ~/.Antigravity/skills/loki-mode/SKILL.md | head -5
    ```
    Should show `name: loki-mode`
 
-3. **Restart Claude Code:**
+3. **Restart Antigravity:**
    ```bash
-   # Exit and restart claude command
+   # Exit and restart Antigravity command
    ```
 
 ### Permission Denied
@@ -239,10 +239,10 @@ loki-mode/
 **Solution:**
 ```bash
 # Ensure skills directory exists
-mkdir -p ~/.claude/skills
+mkdir -p ~/.Antigravity/skills
 
 # Check permissions
-ls -la ~/.claude/
+ls -la ~/.Antigravity/
 ```
 
 ### Download Fails
@@ -255,13 +255,13 @@ ls -la ~/.claude/
 2. **Try alternate download method:**
    ```bash
    # Use wget instead of curl
-   wget -O ~/.claude/skills/loki-mode/SKILL.md \
+   wget -O ~/.Antigravity/skills/loki-mode/SKILL.md \
      https://raw.githubusercontent.com/asklokesh/loki-mode/main/SKILL.md
    ```
 
 3. **Manual download:**
    - Visit the URL in a browser
-   - Save file manually to `~/.claude/skills/loki-mode/`
+   - Save file manually to `~/.Antigravity/skills/loki-mode/`
 
 ### Autonomous Runner Won't Start
 
@@ -276,14 +276,14 @@ ls -la ~/.claude/
 2. **Run from repository root:**
    ```bash
    # Make sure you're in the loki-mode directory
-   cd ~/.claude/skills/loki-mode
+   cd ~/.Antigravity/skills/loki-mode
    ./autonomy/run.sh
    ```
 
 3. **Check prerequisites:**
    ```bash
-   # Ensure Claude Code is installed
-   claude --version
+   # Ensure Antigravity is installed
+   Antigravity --version
 
    # Ensure Python 3 is available
    python3 --version
@@ -296,7 +296,7 @@ ls -la ~/.claude/
 **Solution:**
 ```bash
 # Ensure all reference files are present
-ls -la ~/.claude/skills/loki-mode/references/
+ls -la ~/.Antigravity/skills/loki-mode/references/
 
 # Should show:
 # agents.md
@@ -304,7 +304,7 @@ ls -la ~/.claude/skills/loki-mode/references/
 # business-ops.md
 
 # If missing, download them:
-curl -o ~/.claude/skills/loki-mode/references/agents.md \
+curl -o ~/.Antigravity/skills/loki-mode/references/agents.md \
   https://raw.githubusercontent.com/asklokesh/loki-mode/main/references/agents.md
 ```
 
@@ -315,7 +315,7 @@ curl -o ~/.claude/skills/loki-mode/references/agents.md \
 ### For Git Installations
 
 ```bash
-cd ~/.claude/skills/loki-mode
+cd ~/.Antigravity/skills/loki-mode
 git pull origin main
 ```
 
@@ -328,21 +328,21 @@ git pull origin main
 ### Check Current Version
 
 ```bash
-cat ~/.claude/skills/loki-mode/VERSION
+cat ~/.Antigravity/skills/loki-mode/VERSION
 ```
 
 ---
 
 ## Uninstalling
 
-### Claude Code (CLI)
+### Antigravity (CLI)
 
 ```bash
 # Remove the skill directory
-rm -rf ~/.claude/skills/loki-mode
+rm -rf ~/.Antigravity/skills/loki-mode
 ```
 
-### Claude.ai (Web)
+### Antigravity.ai (Web)
 
 1. Go to **Settings → Features → Skills**
 2. Find "loki-mode" in the list

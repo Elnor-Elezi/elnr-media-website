@@ -11,7 +11,7 @@ tags:
 - validation
 - installation
 tools:
-- claude-code
+- Antigravity-code
 - antigravity
 - cursor
 - gemini-cli
@@ -125,7 +125,7 @@ candidatos com timestamps e tamanho. Com --auto instala todos automaticamente.
 python C:\Users\renat\skills\skill-installer\scripts\install_skill.py --uninstall "nome-da-skill"
 ```
 
-Remove de `skills/`, `.claude/skills/`, atualiza o registry e remove ZIP do Desktop.
+Remove de `skills/`, `.Antigravity/skills/`, atualiza o registry e remove ZIP do Desktop.
 Backup automatico e feito antes da remocao.
 
 ## Cenario 6: Health Check + Auto-Repair
@@ -156,7 +156,7 @@ Re-registra e atualiza o registry automaticamente.
 python C:\Users\renat\skills\skill-installer\scripts\install_skill.py --reinstall-all
 ```
 
-Re-registra TODAS as skills em `.claude/skills/`, re-empacota todos os ZIPs,
+Re-registra TODAS as skills em `.Antigravity/skills/`, re-empacota todos os ZIPs,
 e atualiza o registry. Util apos mudancas em massa ou migracao.
 
 ## Cenario 9: Dashboard De Status
@@ -199,7 +199,7 @@ python C:\Users\renat\skills\skill-installer\scripts\detect_skills.py --all
 Retorna JSON com candidatos incluindo: `name`, `source_path`, `already_installed`,
 `valid_frontmatter`, `last_modified`, `size_kb`, `file_count`.
 
-## Empacotar Zip Para Claude.Ai
+## Empacotar Zip Para Antigravity.Ai
 
 ```bash
 python C:\Users\renat\skills\skill-installer\scripts\package_skill.py --source "C:\caminho"
@@ -245,13 +245,13 @@ python C:\Users\renat\skills\skill-installer\scripts\package_skill.py --verify -
 4. **Verificar conflitos** - checa se ja existe no destino
 5. **Backup** - se sobrescrevendo, faz backup timestamped (exclui backups/ e staging/)
 6. **Copiar via staging** - copia para area temp, valida hash, depois move
-7. **Registrar no Claude Code CLI** - copia SKILL.md para .claude/skills/<nome>/
+7. **Registrar no Antigravity CLI** - copia SKILL.md para .Antigravity/skills/<nome>/
 8. **Atualizar registry** - roda scan_registry.py --force (com deduplicacao por nome)
 9. **Verificar instalacao** - confirma arquivos, registry, registro (5 checks)
-10. **Empacotar ZIP** - cria ZIP para upload no Claude.ai web/desktop (validado)
+10. **Empacotar ZIP** - cria ZIP para upload no Antigravity.ai web/desktop (validado)
 11. **Logar operacao** - append em install_log.json (com rotacao automatica)
 
-**IMPORTANTE**: Skills no Claude Code (CLI) e Claude.ai (web/desktop) sao SEPARADAS.
+**IMPORTANTE**: Skills no Antigravity (CLI) e Antigravity.ai (web/desktop) sao SEPARADAS.
 O instalador cobre ambas superficies automaticamente.
 
 ---
@@ -279,7 +279,7 @@ O instalador cobre ambas superficies automaticamente.
 Esta skill e auto-detectada pelo `scan_registry.py` e matchada pelo `match_skills.py`
 quando o usuario menciona keywords de instalacao. Nenhuma configuracao manual necessaria.
 
-Alem disso, o CLAUDE.md global contem instrucao para rodar o instalador automaticamente
+Alem disso, o AGENTS.md global contem instrucao para rodar o instalador automaticamente
 apos o skill-creator finalizar uma skill.
 
 ## Best Practices

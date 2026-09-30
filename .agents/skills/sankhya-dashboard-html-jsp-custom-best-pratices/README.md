@@ -19,10 +19,10 @@ This skill can be installed locally per-repository or globally for use across al
 ### Global Installation (Recommended)
 This approach sets up a symlink that makes the skill available no matter which repository you are working in. Run these commands from the root of the cloned `cli-ai-skills` directory:
 
-#### For Claude Code
+#### For Antigravity
 ```bash
-mkdir -p ~/.claude/skills
-ln -sf $(pwd)/skills/sankhya-dashboard-html-jsp-custom-best-pratices ~/.claude/skills/sankhya-dashboard-html-jsp-custom-best-pratices
+mkdir -p ~/.Antigravity/skills
+ln -sf $(pwd)/skills/sankhya-dashboard-html-jsp-custom-best-pratices ~/.Antigravity/skills/sankhya-dashboard-html-jsp-custom-best-pratices
 ```
 
 #### For GitHub Copilot CLI
@@ -32,7 +32,7 @@ ln -sf $(pwd)/skills/sankhya-dashboard-html-jsp-custom-best-pratices ~/.copilot/
 ```
 
 ### Local Repository Installation
-If you prefer to restrict the skill to a specific project workspace, simply move or copy the directory into your project's local AI registry folder (e.g., `.claude/skills/` or `.github/skills/`).
+If you prefer to restrict the skill to a specific project workspace, simply move or copy the directory into your project's local AI registry folder (e.g., `.Antigravity/skills/` or `.github/skills/`).
 
 ## Usage Examples
 

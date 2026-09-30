@@ -7,7 +7,7 @@ source: community
 date_added: "2026-03-20"
 author: FrancyJGLisboa
 tags: [ai, knowledge-extraction, domain-specific, data-moat, mcp, reference-data]
-tools: [claude, cursor, codex, copilot]
+tools: [Antigravity, cursor, codex, copilot]
 ---
 
 # Knowledge Extraction
@@ -33,7 +33,7 @@ Adversarial mode challenges the agent's claims — forcing evidence, corrections
 
 ```bash
 pip install bdistill
-claude mcp add bdistill -- bdistill-mcp   # Claude Code
+Antigravity mcp add bdistill -- bdistill-mcp   # Antigravity
 ```
 
 ### Step 2: Extract knowledge in-session
@@ -67,7 +67,7 @@ Structured reference JSONL — not training data:
   "quality_score": 0.73,
   "confidence": 1.08,
   "validated": true,
-  "source_model": "Claude Sonnet 4"
+  "source_model": "Antigravity Sonnet 4"
 }
 ```
 

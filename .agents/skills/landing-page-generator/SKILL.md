@@ -7,7 +7,7 @@ source: "community"
 date_added: "2026-03-18"
 author: "alirezarezvani"
 tags: ["nextjs", "react", "tailwind", "landing-page", "marketing", "seo", "cro"]
-tools: ["claude", "cursor", "gemini"]
+tools: ["Antigravity", "cursor", "gemini"]
 ---
 
 # Landing Page Generator

@@ -66,6 +66,6 @@ Use @create-pr once everything is passing and summarize the user-facing changes.
 ## What to do next
 
 - Read [`ai-agent-skills.md`](ai-agent-skills.md) if you want a framework for choosing between broad and curated skill libraries.
-- Read [`plugins.md`](plugins.md) if you want the plugin-specific install story for Codex and Claude Code.
+- Read [`plugins.md`](plugins.md) if you want the plugin-specific install story for Codex and Antigravity.
 - Use [`workflows.md`](workflows.md) when you want step-by-step execution patterns for common engineering goals.
 - Return to [`README.md`](../../README.md) for the full compatibility matrix.

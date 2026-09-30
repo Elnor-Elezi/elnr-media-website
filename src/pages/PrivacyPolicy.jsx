@@ -11,8 +11,12 @@ export default function PrivacyPolicy() {
   return (
     <PageTransition>
       <SEO 
-        title="Privacy Policy"
-        description="Privacy Policy for ELNR Media. Learn how we collect, use, and protect your data."
+        title="Privacy Policy — Data Collection & Protection | ELNR Media"
+        description="Privacy Policy for ELNR Media. Learn how we collect, use, and protect your business data."
+        breadcrumbs={[
+          { name: 'Home', path: '/' },
+          { name: 'Privacy Policy', path: '/privacy' }
+        ]}
       />
       <div className="pt-32 pb-16 lg:pt-40 lg:pb-24">
         <div className="max-container section-padding max-w-4xl">
@@ -31,12 +35,12 @@ export default function PrivacyPolicy() {
               At ELNR Media, we take your privacy seriously. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
             </p>
 
-            <h3>1. Information We Collect</h3>
+            <h2>1. Information We Collect</h2>
             <p>
               We may collect personal identification information from Users in a variety of ways, including, but not limited to, when Users visit our site, fill out a form, and in connection with other activities, services, features or resources we make available on our Site. Users may be asked for, as appropriate, name, email address, and phone number.
             </p>
 
-            <h3>2. How We Use Collected Information</h3>
+            <h2>2. How We Use Collected Information</h2>
             <p>
               ELNR Media may collect and use Users' personal information for the following purposes:
             </p>

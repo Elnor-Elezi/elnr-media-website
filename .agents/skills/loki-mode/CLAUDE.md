@@ -1,12 +1,12 @@
-# Loki Mode - Claude Code Skill
+# Loki Mode - Antigravity Skill
 
-Multi-agent autonomous startup system for Claude Code. Takes PRD to fully deployed, revenue-generating product with zero human intervention.
+Multi-agent autonomous startup system for Antigravity. Takes PRD to fully deployed, revenue-generating product with zero human intervention.
 
 ## Quick Start
 
 ```bash
-# Launch Claude Code with autonomous permissions
-claude --dangerously-skip-permissions
+# Launch Antigravity with autonomous permissions
+Antigravity --dangerously-skip-permissions
 
 # Then invoke:
 # "Loki Mode" or "Loki Mode with PRD at path/to/prd"
@@ -30,7 +30,7 @@ references/                 # Detailed documentation (loaded progressively)
   spec-driven-dev.md        # OpenAPI-first development
   architecture.md           # Directory structure, state schemas
   core-workflow.md          # RARV cycle, autonomy rules
-  claude-best-practices.md  # Boris Cherny patterns
+  Antigravity-best-practices.md  # Boris Cherny patterns
   deployment.md             # Cloud deployment instructions
   business-ops.md           # Business operation workflows
   mcp-integration.md        # MCP server capabilities
@@ -108,7 +108,7 @@ Built on 2025 research from three major AI labs:
 **Anthropic:**
 - Constitutional AI (principles-based self-critique)
 - Alignment Faking Detection (sleeper agent probes)
-- Claude Code Best Practices (Explore-Plan-Code)
+- Antigravity Best Practices (Explore-Plan-Code)
 
 **Academic:**
 - CONSENSAGENT (anti-sycophancy)

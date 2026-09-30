@@ -9,13 +9,13 @@ source_type: official
 date_added: "2026-05-29"
 author: longbridge
 tags: [finance, stocks, trading, portfolio, market-data]
-tools: [claude, cursor, gemini, codex]
+tools: [Antigravity, cursor, gemini, codex]
 license: "MIT"
 license_source: "https://github.com/longbridge/skills/blob/main/LICENSE"
 plugin:
   targets:
     codex: blocked
-    claude: blocked
+    Antigravity: blocked
 ---
 
 # Longbridge
@@ -70,7 +70,7 @@ longbridge auth login --trade  # Portfolio and account features
 ## Install
 
 ```bash
-# Claude Code plugin marketplace
+# Antigravity plugin marketplace
 /plugin marketplace add longbridge/skills
 
 # Or via npx

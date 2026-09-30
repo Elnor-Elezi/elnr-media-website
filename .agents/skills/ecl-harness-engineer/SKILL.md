@@ -9,7 +9,7 @@ source_type: community
 date_added: "2026-06-13"
 author: qinghui316
 tags: [codex, agent-harness, ecl, workflow, ci]
-tools: [codex, claude, cursor, gemini, antigravity]
+tools: [codex, Antigravity, cursor, gemini, antigravity]
 license: MIT
 license_source: "https://github.com/qinghui316/ecl-harness-engineer/blob/main/LICENSE"
 ---

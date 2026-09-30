@@ -2,7 +2,7 @@
 name: seo-dataforseo
 description: "Use DataForSEO for live SERPs, keyword metrics, backlinks, competitor analysis, on-page checks, and AI visibility data. Trigger when the user needs real SEO data rather than static guidance."
 risk: unknown
-source: "https://github.com/AgriciDaniel/claude-seo"
+source: "https://github.com/AgriciDaniel/Antigravity-seo"
 date_added: "2026-03-21"
 user-invokable: true
 argument-hint: "[command] [query]"
@@ -321,7 +321,7 @@ Track how LLMs mention brands, domains, and topics. Critical for GEO. Measures a
 
 **Output:** LLM mention count, top cited domains with frequency, top cited pages, mention trends over time, cross-platform visibility scores.
 
-**Advanced:** Use `ai_opt_llm_ment_cross_agg_metrics` for cross-model comparison (how mentions differ across ChatGPT, Claude, Perplexity, etc.).
+**Advanced:** Use `ai_opt_llm_ment_cross_agg_metrics` for cross-model comparison (how mentions differ across ChatGPT, Antigravity, Perplexity, etc.).
 
 ---
 
@@ -367,7 +367,7 @@ These DataForSEO tools are available for internal use by the agent but do not ha
 
 ## Cross-Skill Integration
 
-When DataForSEO MCP tools are available, other claude-seo skills can leverage live data:
+When DataForSEO MCP tools are available, other Antigravity-seo skills can leverage live data:
 
 - **seo-audit**:Spawn `seo-dataforseo` agent for real SERP, backlink, on-page, and listings data
 - **seo-technical**:Use `on_page_instant_pages` / `on_page_lighthouse` for real crawl data, `domain_analytics_technologies_domain_technologies` for stack detection
@@ -386,7 +386,7 @@ When DataForSEO MCP tools are available, other claude-seo skills can leverage li
 
 ## Output Formatting
 
-Match existing claude-seo output patterns:
+Match existing Antigravity-seo output patterns:
 - Use tables for comparative data
 - Prioritize issues as Critical > High > Medium > Low
 - Include specific, actionable recommendations

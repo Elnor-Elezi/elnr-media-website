@@ -1,9 +1,38 @@
 ---
 name: planning-with-files
-description: "Work like Manus: Use persistent markdown files as your \"working memory on disk.\""
+version: "2.1.2"
+description: "Implements Manus-style file-based planning for complex tasks. Creates task_plan.md, findings.md, and progress.md. Use when starting complex multi-step tasks, research projects, or any task requirin..."
+user-invocable: true
+allowed-tools:
+  - Read
+  - Write
+  - Edit
+  - Bash
+  - Glob
+  - Grep
+  - WebFetch
+  - WebSearch
+hooks:
+  SessionStart:
+    - hooks:
+        - type: command
+          command: "echo '[planning-with-files] Ready. Auto-activates for complex tasks, or invoke manually with /planning-with-files'"
+  PreToolUse:
+    - matcher: "Write|Edit|Bash"
+      hooks:
+        - type: command
+          command: "cat task_plan.md 2>/dev/null | head -30 || true"
+  PostToolUse:
+    - matcher: "Write|Edit"
+      hooks:
+        - type: command
+          command: "echo '[planning-with-files] File updated. If this completes a phase, update task_plan.md status.'"
+  Stop:
+    - hooks:
+        - type: command
+          command: "${Antigravity_PLUGIN_ROOT}/scripts/check-complete.sh"
 risk: unknown
 source: community
-date_added: "2026-02-27"
 ---
 
 # Planning with Files
@@ -14,12 +43,12 @@ Work like Manus: Use persistent markdown files as your "working memory on disk."
 
 When using this skill:
 
-- **Templates** are stored in the skill directory at `${CLAUDE_PLUGIN_ROOT}/templates/`
+- **Templates** are stored in the skill directory at `${Antigravity_PLUGIN_ROOT}/templates/`
 - **Your planning files** (`task_plan.md`, `findings.md`, `progress.md`) should be created in **your project directory** — the folder where you're working
 
 | Location | What Goes There |
 |----------|-----------------|
-| Skill directory (`${CLAUDE_PLUGIN_ROOT}/`) | Templates, scripts, reference docs |
+| Skill directory (`${Antigravity_PLUGIN_ROOT}/`) | Templates, scripts, reference docs |
 | Your project directory | `task_plan.md`, `findings.md`, `progress.md` |
 
 This ensures your planning files live alongside your code, not buried in the skill installation folder.
@@ -182,8 +211,3 @@ Helper scripts for automation:
 | Start executing immediately | Create plan file FIRST |
 | Repeat failed actions | Track attempts, mutate approach |
 | Create files in skill directory | Create files in your project |
-
-## Limitations
-- Use this skill only when the task clearly matches the scope described above.
-- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
-- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.

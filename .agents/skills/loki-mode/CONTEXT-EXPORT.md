@@ -8,7 +8,7 @@
 
 ## Project Overview
 
-**Loki Mode** is a Claude Code skill that provides a multi-agent autonomous startup system. It dynamically orchestrates specialized agents across 6 swarms to take a PRD from idea to fully deployed product. It spawns only the agents needed - from a few for simple projects to 100+ for complex startups.
+**Loki Mode** is a Antigravity skill that provides a multi-agent autonomous startup system. It dynamically orchestrates specialized agents across 6 swarms to take a PRD from idea to fully deployed product. It spawns only the agents needed - from a few for simple projects to 100+ for complex startups.
 
 ### Key Features
 - 37 specialized agent types across 6 swarms (Engineering, Operations, Business, Data, Product, Growth)
@@ -69,11 +69,11 @@ loki-mode/
 ```
 
 ### What run.sh Does
-1. Checks prerequisites (Claude CLI, Python, Git, curl)
+1. Checks prerequisites (Antigravity CLI, Python, Git, curl)
 2. Verifies skill installation
 3. Initializes `.loki/` directory
 4. Starts status monitor (updates `.loki/STATUS.txt` every 5s)
-5. Runs Claude Code with live output
+5. Runs Antigravity with live output
 6. Auto-resumes on rate limits with exponential backoff
 7. Continues until completion or max retries
 
@@ -87,10 +87,10 @@ watch -n 2 cat .loki/STATUS.txt
 
 ## Key Technical Details
 
-### Claude Code Invocation
+### Antigravity Invocation
 The autonomy runner pipes the prompt through stdin for live output:
 ```bash
-echo "$prompt" | claude --dangerously-skip-permissions
+echo "$prompt" | Antigravity --dangerously-skip-permissions
 ```
 
 **Important:** Using `-p` flag doesn't stream output properly. Piping through stdin shows interactive output.
@@ -130,7 +130,7 @@ echo "$prompt" | claude --dangerously-skip-permissions
 
 ### 1. "Blank output when running autonomously"
 **Cause:** Using `-p` flag doesn't stream output
-**Solution:** Use stdin pipe: `echo "$prompt" | claude --dangerously-skip-permissions`
+**Solution:** Use stdin pipe: `echo "$prompt" | Antigravity --dangerously-skip-permissions`
 
 ### 2. "Vibe Kanban not showing tasks"
 **Cause:** Vibe Kanban is UI-driven, doesn't read JSON files automatically
@@ -141,14 +141,14 @@ echo "$prompt" | claude --dangerously-skip-permissions
 **Solution:** Perl-based fallback in test scripts
 
 ### 4. "TTY raw mode error"
-**Cause:** Running Claude in non-interactive mode
+**Cause:** Running Antigravity in non-interactive mode
 **Solution:** Latest commit (008ed86) adds `--no-input` flag
 
 ---
 
 ## Git Configuration
 
-**Committer:** asklokesh (never use Claude as co-author)
+**Committer:** asklokesh (never use Antigravity as co-author)
 
 **Commit format:**
 ```
@@ -191,7 +191,7 @@ When starting a new session, read these files:
 ## User Preferences
 
 - Always use `asklokesh` as committer
-- Never use Claude as co-author
+- Never use Antigravity as co-author
 - Keep skill files clean, autonomy separate
 - Test before pushing
 - Live output is important - user wants to see what's happening

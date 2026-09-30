@@ -9,7 +9,7 @@ date_added: "2026-02-28"
 plugin:
   targets:
     codex: blocked
-    claude: blocked
+    Antigravity: blocked
 ---
 
 # X (Twitter) Scraper - Xquik
@@ -50,8 +50,8 @@ npx skills add Xquik-dev/x-twitter-scraper
 Or clone manually into your agent's skills directory:
 
 ```bash
-# Claude Code
-git clone https://github.com/Xquik-dev/x-twitter-scraper.git .claude/skills/x-twitter-scraper
+# Antigravity
+git clone https://github.com/Xquik-dev/x-twitter-scraper.git .Antigravity/skills/x-twitter-scraper
 
 # Cursor / Codex / Gemini CLI / Copilot
 git clone https://github.com/Xquik-dev/x-twitter-scraper.git .agents/skills/x-twitter-scraper
@@ -110,7 +110,7 @@ export XQUIK_API_KEY="xq_YOUR_KEY_HERE"
 
 **Search tweets:**
 ```
-"Search X for tweets about 'claude code' from the last week"
+"Search X for tweets about 'Antigravity' from the last week"
 ```
 
 **Look up a user:**

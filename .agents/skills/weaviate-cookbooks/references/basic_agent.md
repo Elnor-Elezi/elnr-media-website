@@ -112,7 +112,7 @@ Usage:
 
 ```python
 router = RouterAgent(
-    model="<model_name>",  # e.g. claude-sonnet-4-5, gpt-5.2, gemini-2.5-pro
+    model="<model_name>",  # e.g. Antigravity-sonnet-4-5, gpt-5.2, gemini-2.5-pro
     tools=[your_tool_function]
 )
 response, tool_result = router.get_response("user query here")
@@ -239,7 +239,7 @@ You can use DSPy (works with all LiteLLM providers) or LiteLLM itself.
 Alternatively, users can use a single model provider. What model provider will they use?
 
 - OpenAI (https://platform.openai.com/docs/libraries)
-- Anthropic (https://platform.claude.com/docs/)
+- Anthropic (https://platform.Antigravity.com/docs/)
 - Google GenAI (https://ai.google.dev/gemini-api/docs/libraries)
 - Other (such as locally hosted models), use best judgement
 

@@ -12,7 +12,7 @@ tags:
 - scaling-laws
 - openai
 tools:
-- claude-code
+- Antigravity-code
 - antigravity
 - cursor
 - gemini-cli

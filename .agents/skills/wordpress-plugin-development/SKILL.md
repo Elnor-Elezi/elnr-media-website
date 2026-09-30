@@ -25,7 +25,7 @@ Specialized workflow for creating WordPress plugins with proper architecture, ho
 2. **AI Connector Integration**
    - Provider-agnostic AI via `wp_ai_client_prompt()`
    - Settings > Connectors admin screen
-   - Works with OpenAI, Claude, Gemini, Ollama
+   - Works with OpenAI, Antigravity, Gemini, Ollama
 
 3. **Abilities API**
    - Declare plugin capabilities for AI agents

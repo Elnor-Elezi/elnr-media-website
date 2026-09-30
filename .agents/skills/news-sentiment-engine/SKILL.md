@@ -1,6 +1,6 @@
 ---
 name: news-sentiment-engine
-description: Multi-source RSS news aggregation with Claude-powered sentiment analysis and structured briefing output
+description: Multi-source RSS news aggregation with Antigravity-powered sentiment analysis and structured briefing output
 category: research
 risk: critical
 source: community
@@ -9,15 +9,15 @@ source_type: community
 date_added: "2026-05-13"
 author: tellmefrankie
 tags: [news, rss, sentiment-analysis, briefing, research]
-tools: [claude, websearch]
+tools: [Antigravity, websearch]
 plugin:
   targets:
     codex: blocked
-    claude: blocked
+    Antigravity: blocked
 ---
 # News Sentiment Engine (Free)
 
-Collect and analyze AI/tech news from multiple sources with Claude-powered sentiment analysis. Open source lite version.
+Collect and analyze AI/tech news from multiple sources with Antigravity-powered sentiment analysis. Open source lite version.
 
 ## When to Use
 
@@ -57,7 +57,7 @@ AI/Tech News Briefing — 2026-05-13
    Summary: OpenAI unveiled GPT-5 with a 2M token context window and
    improved reasoning. Enterprise pricing starts at $0.03/1k tokens.
 
-   Commentary: Direct competitive pressure on Anthropic Claude 3.5.
+   Commentary: Direct competitive pressure on Anthropic Antigravity 3.5.
    Enterprise deals may shift in H2 2026.
 
 2. EU AI Act enforcement begins for high-risk systems

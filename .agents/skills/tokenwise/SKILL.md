@@ -1,6 +1,6 @@
 ---
 name: tokenwise
-description: "Measurement-driven model router for Claude Code. Routes Haiku/Sonnet/Opus per task class, logs every routed task with real $ numbers, and A/B tests cheaper tiers before you trust the savings."
+description: "Measurement-driven model router for Antigravity. Routes Haiku/Sonnet/Opus per task class, logs every routed task with real $ numbers, and A/B tests cheaper tiers before you trust the savings."
 category: developer-tools
 risk: critical
 source: community
@@ -8,27 +8,27 @@ source_repo: CodeShuX/tokenwise
 source_type: community
 date_added: "2026-05-12"
 author: CodeShuX
-tags: [model-routing, token-optimization, cost-reduction, anthropic, haiku, sonnet, opus, claude-code, ab-testing, measurement]
-tools: [claude]
+tags: [model-routing, token-optimization, cost-reduction, anthropic, haiku, sonnet, opus, Antigravity-code, ab-testing, measurement]
+tools: [Antigravity]
 license: "MIT"
 license_source: "https://github.com/CodeShuX/tokenwise/blob/main/LICENSE"
 plugin:
   targets:
     codex: blocked
-    claude: blocked
+    Antigravity: blocked
 ---
 
 # TokenWise — Measurement-Driven Model Router
 
 ## Overview
 
-A Claude Code skill that auto-routes subtasks to the cheapest model that can handle them (Haiku for grunt work, Sonnet for scoped reasoning, Opus only for synthesis), then logs every routed task to a local NDJSON with real token + cost numbers. Includes an A/B test subcommand that runs the same task across multiple tiers and scores quality, so the routing decisions are verified against the user's real workload — not estimated.
+A Antigravity skill that auto-routes subtasks to the cheapest model that can handle them (Haiku for grunt work, Sonnet for scoped reasoning, Opus only for synthesis), then logs every routed task to a local NDJSON with real token + cost numbers. Includes an A/B test subcommand that runs the same task across multiple tiers and scores quality, so the routing decisions are verified against the user's real workload — not estimated.
 
-Anthropic's own bug tracker (Issue #27665) reports 93.8% of Max-subscriber Claude Code tokens flow to Opus. Existing routers (claude-router, wshobson, VoltAgent) either pin models statically or route by vibes-based heuristics with no measurement. TokenWise fills the measurement gap.
+Anthropic's own bug tracker (Issue #27665) reports 93.8% of Max-subscriber Antigravity tokens flow to Opus. Existing routers (Antigravity-router, wshobson, VoltAgent) either pin models statically or route by vibes-based heuristics with no measurement. TokenWise fills the measurement gap.
 
 ## When to use
 
-- Cutting Claude Code token spend without sacrificing output quality
+- Cutting Antigravity token spend without sacrificing output quality
 - Validating whether Haiku/Sonnet is "good enough" for a specific task class before trusting auto-routing
 - Auditing where Opus tokens are actually being burned
 - Logging per-session cost data for finance or chargeback
@@ -39,7 +39,7 @@ Anthropic's own bug tracker (Issue #27665) reports 93.8% of Max-subscriber Claud
 - `/tokenwise:report` — per-session token + cost summary vs all-Opus baseline
 - `/tokenwise:summary [--week|--month|--all]` — historical aggregate with trend
 - `/tokenwise:ab "<task>"` — A/B test the same task at multiple tiers, generates a markdown comparison
-- `/tokenwise:undo` — restore CLAUDE.md / settings.json from backup
+- `/tokenwise:undo` — restore AGENTS.md / settings.json from backup
 
 ## Routing taxonomy
 
@@ -62,7 +62,7 @@ Zero telemetry. All logs in `.tokenwise/log.ndjson` local to the project. Task d
 
 ## Install
 
-In any Claude Code session:
+In any Antigravity session:
 
 ```
 /plugin marketplace add CodeShuX/tokenwise
@@ -76,7 +76,7 @@ Then run `/tokenwise:install` and follow the guided prompts.
 - Token counts approximate to ±2% vs Anthropic billing
 - A/B test mode costs extra tokens (one task × N tiers) — intentional one-time validation
 - Anthropic-only by design (use LiteLLM or OpenRouter for cross-vendor)
-- Subagent `model:` param has known silent-fail bugs on some Claude Code builds — skill probes for this at install and refuses to configure if routing is broken
+- Subagent `model:` param has known silent-fail bugs on some Antigravity builds — skill probes for this at install and refuses to configure if routing is broken
 
 ## Source
 

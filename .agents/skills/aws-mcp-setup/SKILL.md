@@ -43,9 +43,9 @@ Agent tools use hierarchical configuration (precedence: local → project → us
 
 | Scope | File Location | Use Case |
 |-------|---------------|----------|
-| Local | `.claude.json` (in project) | Personal/experimental |
+| Local | `.Antigravity.json` (in project) | Personal/experimental |
 | Project | `.mcp.json` (project root) | Team-shared |
-| User | `~/.claude.json` | Cross-project personal |
+| User | `~/.Antigravity.json` | Cross-project personal |
 | Enterprise | System managed directories | Organization-wide |
 
 Check these files for `mcpServers` containing `aws-mcp`, `aws`, or `awsdocs` keys:
@@ -55,10 +55,10 @@ Check these files for `mcpServers` containing `aws-mcp`, `aws`, or `awsdocs` key
 cat .mcp.json 2>/dev/null | grep -E '"(aws-mcp|aws|awsdocs)"'
 
 # Check user config
-cat ~/.claude.json 2>/dev/null | grep -E '"(aws-mcp|aws|awsdocs)"'
+cat ~/.Antigravity.json 2>/dev/null | grep -E '"(aws-mcp|aws|awsdocs)"'
 
-# Or use Claude CLI
-claude mcp list
+# Or use Antigravity CLI
+Antigravity mcp list
 ```
 
 If AWS MCP is already configured, no further setup needed.

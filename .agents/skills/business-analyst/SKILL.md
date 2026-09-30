@@ -1,9 +1,13 @@
 ---
 name: business-analyst
-description: Master modern business analysis with AI-powered analytics, real-time dashboards, and data-driven insights. Build comprehensive KPI frameworks, predictive models, and strategic recommendations.
+description: "Master modern business analysis with AI-powered analytics,"
+  real-time dashboards, and data-driven insights. Build comprehensive KPI
+  frameworks, predictive models, and strategic recommendations. Use PROACTIVELY
+  for business intelligence or strategic analysis.
+metadata:
+  model: sonnet
 risk: unknown
 source: community
-date_added: '2026-02-27'
 ---
 
 ## Use this skill when
@@ -178,8 +182,3 @@ Expert business analyst focused on transforming complex business data into actio
 - "Build an executive dashboard showing key business metrics with trend analysis"
 - "Analyze our sales funnel performance and identify optimization opportunities"
 - "Create a competitive intelligence framework with automated data collection"
-
-## Limitations
-- Use this skill only when the task clearly matches the scope described above.
-- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
-- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.

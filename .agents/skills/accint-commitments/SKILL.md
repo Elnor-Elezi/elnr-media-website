@@ -2,7 +2,7 @@
 name: accint-commitments
 description: Triage acc's open promises and close them with honest real-world verdicts via acc_act(runtime="outcome").
 risk: unknown
-source: https://github.com/maxbaluev/accreted-intelligence/tree/main/plugins/claude/skills/commitments
+source: https://github.com/maxbaluev/accreted-intelligence/tree/main/plugins/Antigravity/skills/commitments
 source_repo: maxbaluev/accreted-intelligence
 source_type: community
 date_added: 2026-07-01

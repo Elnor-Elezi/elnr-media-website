@@ -8,7 +8,7 @@ source_type: self
 date_added: "2026-06-25"
 author: Rsmiyani
 tags: [threejs, webgl, shaders, post-processing, creative-coding, premium-design]
-tools: [claude, cursor, gemini]
+tools: [Antigravity, cursor, gemini]
 ---
 
 # Premium 3D Website

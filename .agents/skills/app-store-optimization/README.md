@@ -2,7 +2,7 @@
 
 **Version**: 1.0.0
 **Last Updated**: November 7, 2025
-**Author**: Claude Skills Factory
+**Author**: Antigravity Skills Factory
 
 ## Overview
 
@@ -173,35 +173,35 @@ This skill includes 8 powerful Python modules:
 
 ## Installation
 
-### For Claude Code (Desktop/CLI)
+### For Antigravity (Desktop/CLI)
 
 #### Project-Level Installation
 ```bash
 # Copy skill folder to project
-cp -r app-store-optimization /path/to/your/project/.claude/skills/
+cp -r app-store-optimization /path/to/your/project/.Antigravity/skills/
 
-# Claude will auto-load the skill when working in this project
+# Antigravity will auto-load the skill when working in this project
 ```
 
 #### User-Level Installation (Available in All Projects)
 ```bash
 # Copy skill folder to user-level skills
-cp -r app-store-optimization ~/.claude/skills/
+cp -r app-store-optimization ~/.Antigravity/skills/
 
-# Claude will load this skill in all your projects
+# Antigravity will load this skill in all your projects
 ```
 
-### For Claude Apps (Browser)
+### For Antigravity Apps (Browser)
 
 1. Use the `skill-creator` skill to import the skill
-2. Or manually import via Claude Apps interface
+2. Or manually import via Antigravity Apps interface
 
 ### Verification
 
 To verify installation:
 ```bash
 # Check if skill folder exists
-ls ~/.claude/skills/app-store-optimization/
+ls ~/.Antigravity/skills/app-store-optimization/
 
 # You should see:
 # SKILL.md
@@ -224,10 +224,10 @@ ls ~/.claude/skills/app-store-optimization/
 ### Example 1: Complete Keyword Research
 
 ```
-Hey Claude—I just added the "app-store-optimization" skill. Can you research keywords for my fitness app? I'm targeting people who want home workouts, yoga, and meal planning. Analyze top competitors like Nike Training Club and Peloton.
+Hey Antigravity—I just added the "app-store-optimization" skill. Can you research keywords for my fitness app? I'm targeting people who want home workouts, yoga, and meal planning. Analyze top competitors like Nike Training Club and Peloton.
 ```
 
-**What Claude will do**:
+**What Antigravity will do**:
 - Use `keyword_analyzer.py` to research keywords
 - Use `competitor_analyzer.py` to analyze Nike Training Club and Peloton
 - Provide prioritized keyword list with search volumes, competition levels
@@ -237,14 +237,14 @@ Hey Claude—I just added the "app-store-optimization" skill. Can you research k
 ### Example 2: Optimize App Store Metadata
 
 ```
-Hey Claude—I just added the "app-store-optimization" skill. Optimize my app's metadata for both Apple App Store and Google Play Store:
+Hey Antigravity—I just added the "app-store-optimization" skill. Optimize my app's metadata for both Apple App Store and Google Play Store:
 - App: FitFlow
 - Category: Health & Fitness
 - Features: AI workout plans, nutrition tracking, progress photos
 - Keywords: fitness app, workout planner, home fitness
 ```
 
-**What Claude will do**:
+**What Antigravity will do**:
 - Use `metadata_optimizer.py` to create optimized titles (multiple options)
 - Generate platform-specific descriptions (short and full)
 - Optimize Apple's 100-character keyword field
@@ -255,7 +255,7 @@ Hey Claude—I just added the "app-store-optimization" skill. Optimize my app's 
 ### Example 3: Calculate ASO Health Score
 
 ```
-Hey Claude—I just added the "app-store-optimization" skill. Calculate my app's ASO score:
+Hey Antigravity—I just added the "app-store-optimization" skill. Calculate my app's ASO score:
 - Average rating: 4.3 stars (8,200 ratings)
 - Keywords in top 10: 4
 - Keywords in top 50: 15
@@ -264,7 +264,7 @@ Hey Claude—I just added the "app-store-optimization" skill. Calculate my app's
 - Description: 1,500 characters with 3 keyword mentions
 ```
 
-**What Claude will do**:
+**What Antigravity will do**:
 - Use `aso_scorer.py` to calculate overall score (0-100)
 - Break down by category (Metadata: X/25, Ratings: X/25, Keywords: X/25, Conversion: X/25)
 - Identify strengths and weaknesses
@@ -274,10 +274,10 @@ Hey Claude—I just added the "app-store-optimization" skill. Calculate my app's
 ### Example 4: A/B Test Planning
 
 ```
-Hey Claude—I just added the "app-store-optimization" skill. I want to A/B test my app icon. My current conversion rate is 4.2%. How many visitors do I need and how long should I run the test?
+Hey Antigravity—I just added the "app-store-optimization" skill. I want to A/B test my app icon. My current conversion rate is 4.2%. How many visitors do I need and how long should I run the test?
 ```
 
-**What Claude will do**:
+**What Antigravity will do**:
 - Use `ab_test_planner.py` to design test
 - Calculate required sample size (based on minimum detectable effect)
 - Estimate test duration for low/medium/high traffic scenarios
@@ -287,14 +287,14 @@ Hey Claude—I just added the "app-store-optimization" skill. I want to A/B test
 ### Example 5: Review Sentiment Analysis
 
 ```
-Hey Claude—I just added the "app-store-optimization" skill. Analyze my last 500 reviews and tell me:
+Hey Antigravity—I just added the "app-store-optimization" skill. Analyze my last 500 reviews and tell me:
 - Overall sentiment
 - Most common complaints
 - Top feature requests
 - Bugs needing immediate fixes
 ```
 
-**What Claude will do**:
+**What Antigravity will do**:
 - Use `review_analyzer.py` to process reviews
 - Calculate sentiment distribution
 - Extract common themes
@@ -305,10 +305,10 @@ Hey Claude—I just added the "app-store-optimization" skill. Analyze my last 50
 ### Example 6: Pre-Launch Checklist
 
 ```
-Hey Claude—I just added the "app-store-optimization" skill. Generate a complete pre-launch checklist for both app stores. My launch date is March 15, 2026.
+Hey Antigravity—I just added the "app-store-optimization" skill. Generate a complete pre-launch checklist for both app stores. My launch date is March 15, 2026.
 ```
 
-**What Claude will do**:
+**What Antigravity will do**:
 - Use `launch_checklist.py` to generate checklists
 - Create Apple App Store checklist (metadata, assets, technical, legal)
 - Create Google Play Store checklist (metadata, assets, technical, legal)
@@ -415,13 +415,13 @@ This skill is designed to help app developers and marketers succeed in competiti
 
 ## Credits
 
-Developed by Claude Skills Factory
+Developed by Antigravity Skills Factory
 Based on industry-standard ASO best practices
 Platform requirements current as of November 2025
 
 ## License
 
-This skill is provided as-is for use with Claude Code and Claude Apps. Customize and extend as needed for your specific use cases.
+This skill is provided as-is for use with Antigravity and Antigravity Apps. Customize and extend as needed for your specific use cases.
 
 ---
 

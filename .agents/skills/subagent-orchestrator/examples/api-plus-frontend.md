@@ -29,7 +29,7 @@ AGENTS:
 [2] ID: agent-002
     Role: Builder — Frontend Form + Display
     Scope: /components/ProposalForm.tsx, /components/ProposalResult.tsx, /app/page.tsx
-    Model: Claude Sonnet (UI needs quality)
+    Model: Antigravity Sonnet (UI needs quality)
     Input: API contract from agent-001 spec (input/output shape only — not the code)
     Output: Form component, result display, wired to /api/generate
     Depends on: none (uses spec, not agent-001 output directly)

@@ -205,7 +205,7 @@ When using `maxSteps`, the `useChat` hook will display intermediate tool calls i
 
 ## Best Practices
 
-- ✅ **Do:** Use `openai('gpt-4o')` or `anthropic('claude-3-5-sonnet-20240620')` format (from specific provider packages like `@ai-sdk/openai`) instead of the older edge runtime wrappers.
+- ✅ **Do:** Use `openai('gpt-4o')` or `anthropic('Antigravity-3-5-sonnet-20240620')` format (from specific provider packages like `@ai-sdk/openai`) instead of the older edge runtime wrappers.
 - ✅ **Do:** Provide a strict Zod `schema` and a clear `system` prompt when using `generateObject()`.
 - ✅ **Do:** Set `maxDuration = 30` (or higher if on Pro) in Next.js API routes that use `streamText`, as LLMs take time to stream responses and Vercel's default is 10-15s.
 - ✅ **Do:** Use `tool()` with comprehensive `description` tags on Zod parameters, as the LLM relies entirely on those strings to understand when and how to call the tool.

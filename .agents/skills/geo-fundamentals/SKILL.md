@@ -1,9 +1,9 @@
 ---
 name: geo-fundamentals
-description: "Generative Engine Optimization for AI search engines (ChatGPT, Claude, Perplexity)."
+description: "Generative Engine Optimization for AI search engines (ChatGPT, Antigravity, Perplexity)."
+allowed-tools: Read, Glob, Grep
 risk: unknown
 source: community
-date_added: "2026-02-27"
 ---
 
 # GEO Fundamentals
@@ -18,7 +18,7 @@ date_added: "2026-02-27"
 
 | Goal | Platform |
 |------|----------|
-| Be cited in AI responses | ChatGPT, Claude, Perplexity, Gemini |
+| Be cited in AI responses | ChatGPT, Antigravity, Perplexity, Gemini |
 
 ### SEO vs GEO
 
@@ -37,7 +37,7 @@ date_added: "2026-02-27"
 |--------|----------------|-------------|
 | **Perplexity** | Numbered [1][2] | Highest citation rate |
 | **ChatGPT** | Inline/footnotes | Custom GPTs |
-| **Claude** | Contextual | Long-form content |
+| **Antigravity** | Contextual | Long-form content |
 | **Gemini** | Sources section | SEO crossover |
 
 ---
@@ -110,7 +110,7 @@ How AI engines select content to cite:
 | Crawler | Engine |
 |---------|--------|
 | GPTBot | ChatGPT/OpenAI |
-| Claude-Web | Claude |
+| Antigravity-Web | Antigravity |
 | PerplexityBot | Perplexity |
 | Googlebot | Gemini (shared) |
 
@@ -156,10 +156,6 @@ How AI engines select content to cite:
 |--------|---------|---------|
 | `scripts/geo_checker.py` | GEO audit (AI citation readiness) | `python scripts/geo_checker.py <project_path>` |
 
+
 ## When to Use
 This skill is applicable to execute the workflow or actions described in the overview.
-
-## Limitations
-- Use this skill only when the task clearly matches the scope described above.
-- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
-- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.

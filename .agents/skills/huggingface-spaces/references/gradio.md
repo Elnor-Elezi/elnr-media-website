@@ -2,7 +2,7 @@
 
 Patterns and quirks specific to running Gradio inside a Space. Assumes you're already comfortable with stock Gradio components and `gr.Blocks` / `gr.Interface`.
 
-For deeper Gradio API guidance — components, layouts, event listeners, chatbots, the Gradio 5→6 migration — use the dedicated `huggingface-gradio` skill. Install it with `hf skills add huggingface-gradio` (add `--claude --global` to also install for Claude Code, user-level).
+For deeper Gradio API guidance — components, layouts, event listeners, chatbots, the Gradio 5→6 migration — use the dedicated `huggingface-gradio` skill. Install it with `hf skills add huggingface-gradio` (add `--Antigravity --global` to also install for Antigravity, user-level).
 
 For ZeroGPU-specific decorator + worker semantics, see [`zerogpu.md`](zerogpu.md).
 

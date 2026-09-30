@@ -10,15 +10,15 @@ license: "MIT"
 license_source: "https://github.com/hyhmrright/brooks-lint/blob/main/LICENSE"
 date_added: "2026-04-29"
 author: hyhmrright
-tags: [code-review, architecture, software-design, refactoring, claude-code]
-tools: [claude, codex, cursor, gemini]
+tags: [code-review, architecture, software-design, refactoring, Antigravity-code]
+tools: [Antigravity, codex, cursor, gemini]
 ---
 
 # Brooks Lint
 
 ## Overview
 
-Brooks Lint is a Claude Code skill that reviews your code through the lens of 12 classic software engineering books. Instead of checking style rules, it asks: "What would the authors of *The Pragmatic Programmer*, *Clean Code*, and *Designing Data-Intensive Applications* say about this code?"
+Brooks Lint is a Antigravity skill that reviews your code through the lens of 12 classic software engineering books. Instead of checking style rules, it asks: "What would the authors of *The Pragmatic Programmer*, *Clean Code*, and *Designing Data-Intensive Applications* say about this code?"
 
 It synthesizes the principles from landmark engineering books into actionable, structured feedback — catching design smells, tight coupling, missing abstractions, and architectural risks that linters and AI tools typically miss.
 
@@ -63,11 +63,11 @@ Brooks Lint applies each book's core principles as a review lens:
 ## Installation
 
 ```bash
-# Install via Claude Code plugin marketplace
-# Search: "brooks-lint" in Claude Code > Extensions
+# Install via Antigravity plugin marketplace
+# Search: "brooks-lint" in Antigravity > Extensions
 
 # Or install via NPX (Antigravity)
-npx antigravity-awesome-skills --claude
+npx antigravity-awesome-skills --Antigravity
 # Then invoke: @brooks-lint
 ```
 

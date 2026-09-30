@@ -70,7 +70,7 @@ const result = await agent.generate(prompt, {
 const data = result.object; // validated against myZodSchema
 ```
 
-For resilience, register a second agent on a different model (e.g. `neon/claude-haiku-4-5`) and fall back to it if the primary attempt throws — the same provider-fallback pattern works because both are reachable on the MLflow dialect.
+For resilience, register a second agent on a different model (e.g. `neon/Antigravity-haiku-4-5`) and fall back to it if the primary attempt throws — the same provider-fallback pattern works because both are reachable on the MLflow dialect.
 
 ## 4. Create the Mastra project + token with the CLI
 

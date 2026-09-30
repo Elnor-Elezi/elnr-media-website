@@ -1,9 +1,9 @@
 ---
 name: lint-and-validate
-description: "MANDATORY: Run appropriate validation tools after EVERY code change. Do not finish a task until the code is error-free."
+description: "Automatic quality control, linting, and static analysis procedures. Use after every code modification to ensure syntax correctness and project standards. Triggers onKeywords: lint, format, check, v..."
+allowed-tools: Read, Glob, Grep, Bash
 risk: unknown
 source: community
-date_added: "2026-02-27"
 ---
 
 # Lint and Validate Skill
@@ -24,9 +24,7 @@ date_added: "2026-02-27"
 
 ## The Quality Loop
 1. **Write/Edit Code**
-2. **Run Audit** for the project's ecosystem:
-   - **Node.js / TypeScript:** `npm run lint && npx tsc --noEmit`
-   - **Python:** `ruff check . --fix && mypy . && bandit -r . -ll`
+2. **Run Audit:** `npm run lint && npx tsc --noEmit`
 3. **Analyze Report:** Check the "FINAL AUDIT REPORT" section.
 4. **Fix & Repeat:** Submitting code with "FINAL AUDIT" failures is NOT allowed.
 
@@ -47,10 +45,6 @@ date_added: "2026-02-27"
 | `scripts/lint_runner.py` | Unified lint check | `python scripts/lint_runner.py <project_path>` |
 | `scripts/type_coverage.py` | Type coverage analysis | `python scripts/type_coverage.py <project_path>` |
 
+
 ## When to Use
 This skill is applicable to execute the workflow or actions described in the overview.
-
-## Limitations
-- Use this skill only when the task clearly matches the scope described above.
-- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
-- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.

@@ -11,7 +11,7 @@ tags:
 - continuity
 - memory
 tools:
-- claude-code
+- Antigravity-code
 - antigravity
 - cursor
 - gemini-cli
@@ -41,7 +41,7 @@ Agente de contexto para continuidade entre sessoes. Salva resumos, decisoes, tar
 
 ## How It Works
 
-Continuidade perfeita entre sessões do Claude Code. Captura, comprime e
+Continuidade perfeita entre sessões do Antigravity. Captura, comprime e
 restaura contexto automaticamente — tópicos, decisões, tarefas, erros,
 arquivos modificados e descobertas técnicas.
 
@@ -53,7 +53,7 @@ C:\Users\renat\skills\context-agent\
 ├── scripts/
 │   ├── config.py               # Paths e constantes
 │   ├── models.py               # Dataclasses
-│   ├── session_parser.py       # Parser JSONL do Claude Code
+│   ├── session_parser.py       # Parser JSONL do Antigravity
 │   ├── session_summary.py      # Gerador de resumos
 │   ├── active_context.py       # Gerencia ACTIVE_CONTEXT.md
 │   ├── project_registry.py     # Registro de projetos
@@ -160,9 +160,9 @@ reconstrói índice de busca.
 ## Integração Com Memory.Md
 
 O ACTIVE_CONTEXT.md é automaticamente copiado para:
-`C:\Users\renat\.claude\projects\C--Users-renat-skills\memory\MEMORY.md`
+`C:\Users\renat\.Antigravity\projects\C--Users-renat-skills\memory\MEMORY.md`
 
-Como o MEMORY.md é incluído no system prompt de toda sessão, o Claude
+Como o MEMORY.md é incluído no system prompt de toda sessão, o Antigravity
 sempre começa sabendo o estado atual dos projetos, tarefas pendentes
 e decisões tomadas — sem precisar de nenhuma ação manual.
 

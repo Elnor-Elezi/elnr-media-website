@@ -8,7 +8,7 @@ source_type: community
 date_added: 2026-04-10
 author: Leslie Williams
 tags: figma, design-system, ui, components, mcp, rayden, rayna-ui
-tools: mcp__claude_ai_Figma__use_figma, mcp__claude_ai_Figma__get_screenshot, mcp__claude_ai_Figma__whoami, Read
+tools: mcp__Antigravity_ai_Figma__use_figma, mcp__Antigravity_ai_Figma__get_screenshot, mcp__Antigravity_ai_Figma__whoami, Read
 ---
 
 # Rayden UI Design Skill

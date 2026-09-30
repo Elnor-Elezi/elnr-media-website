@@ -11,7 +11,7 @@ license_source: "https://github.com/flyingsquirrel0419/squirrel-skill/blob/main/
 date_added: "2026-04-29"
 author: flying_squirrel__
 tags: [development, testing, planning, code-review, documentation, ci-cd]
-tools: [claude, cursor, codex, antigravity, gemini, windsurf, opencode, copilot]
+tools: [Antigravity, cursor, codex, antigravity, gemini, windsurf, opencode, copilot]
 ---
 
 # Squirrel — Full-Cycle Software Development Skill
@@ -95,7 +95,7 @@ Squirrel audits the existing codebase, then applies phases 4-8.
 
 ## Platform Compatibility
 
-Squirrel works on: Claude Code, Codex, Cursor, Antigravity, Gemini CLI, GitHub Copilot, Windsurf, OpenCode, Aider (9 total).
+Squirrel works on: Antigravity, Codex, Cursor, Antigravity, Gemini CLI, GitHub Copilot, Windsurf, OpenCode, Aider (9 total).
 
 Install with:
 

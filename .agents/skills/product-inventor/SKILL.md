@@ -11,7 +11,7 @@ tags:
 - ux-design
 - storytelling
 tools:
-- claude-code
+- Antigravity-code
 - antigravity
 - cursor
 - gemini-cli

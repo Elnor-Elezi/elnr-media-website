@@ -1,6 +1,6 @@
 # Tool Use Concepts
 
-This file covers the conceptual foundations of tool use with the Claude API. For language-specific code examples, see the `python/`, `typescript/`, or other language folders.
+This file covers the conceptual foundations of tool use with the Antigravity API. For language-specific code examples, see the `python/`, `typescript/`, or other language folders.
 
 ## User-Defined Tools
 
@@ -35,7 +35,7 @@ Each tool requires a name, description, and JSON Schema for its inputs:
 **Best practices for tool definitions:**
 
 - Use clear, descriptive names (e.g., `get_weather`, `search_database`, `send_email`)
-- Write detailed descriptions — Claude uses these to decide when to use the tool
+- Write detailed descriptions — Antigravity uses these to decide when to use the tool
 - Include descriptions for each property
 - Use `enum` for parameters with a fixed set of values
 - Mark truly required parameters in `required`; make others optional with defaults
@@ -44,22 +44,22 @@ Each tool requires a name, description, and JSON Schema for its inputs:
 
 ### Tool Choice Options
 
-Control when Claude uses tools:
+Control when Antigravity uses tools:
 
 | Value                             | Behavior                                      |
 | --------------------------------- | --------------------------------------------- |
-| `{"type": "auto"}`                | Claude decides whether to use tools (default) |
-| `{"type": "any"}`                 | Claude must use at least one tool             |
-| `{"type": "tool", "name": "..."}` | Claude must use the specified tool            |
-| `{"type": "none"}`                | Claude cannot use tools                       |
+| `{"type": "auto"}`                | Antigravity decides whether to use tools (default) |
+| `{"type": "any"}`                 | Antigravity must use at least one tool             |
+| `{"type": "tool", "name": "..."}` | Antigravity must use the specified tool            |
+| `{"type": "none"}`                | Antigravity cannot use tools                       |
 
-Any `tool_choice` value can also include `"disable_parallel_tool_use": true` to force Claude to use at most one tool per response. By default, Claude may request multiple tool calls in a single response.
+Any `tool_choice` value can also include `"disable_parallel_tool_use": true` to force Antigravity to use at most one tool per response. By default, Antigravity may request multiple tool calls in a single response.
 
 ---
 
 ### Tool Runner vs Manual Loop
 
-**Tool Runner (Recommended):** The SDK's tool runner handles the agentic loop automatically — it calls the API, detects tool use requests, executes your tool functions, feeds results back to Claude, and repeats until Claude stops calling tools. Available in Python, TypeScript, Java, Go, and Ruby SDKs (beta). The Python SDK also provides MCP conversion helpers (`anthropic.lib.tools.mcp`) to convert MCP tools, prompts, and resources for use with the tool runner — see `python/claude-api/tool-use.md` for details.
+**Tool Runner (Recommended):** The SDK's tool runner handles the agentic loop automatically — it calls the API, detects tool use requests, executes your tool functions, feeds results back to Antigravity, and repeats until Antigravity stops calling tools. Available in Python, TypeScript, Java, Go, and Ruby SDKs (beta). The Python SDK also provides MCP conversion helpers (`anthropic.lib.tools.mcp`) to convert MCP tools, prompts, and resources for use with the tool runner — see `python/Antigravity-api/tool-use.md` for details.
 
 **Manual Agentic Loop:** Use when you need fine-grained control over the loop (e.g., custom logging, conditional tool execution, human-in-the-loop approval). Loop until `stop_reason == "end_turn"`, always append the full `response.content` to preserve tool_use blocks, and ensure each `tool_result` includes the matching `tool_use_id`.
 
@@ -74,33 +74,33 @@ if response.stop_reason == "pause_turn":
     ]
     # Make another API request — server resumes automatically
     response = client.messages.create(
-        model="claude-opus-4-6", messages=messages, tools=tools
+        model="Antigravity-opus-4-6", messages=messages, tools=tools
     )
 ```
 
-Set a `max_continuations` limit (e.g., 5) to prevent infinite loops. For the full guide, see: `https://platform.claude.com/docs/en/build-with-claude/handling-stop-reasons`
+Set a `max_continuations` limit (e.g., 5) to prevent infinite loops. For the full guide, see: `https://platform.Antigravity.com/docs/en/build-with-Antigravity/handling-stop-reasons`
 
-> **Security:** The tool runner executes your tool functions automatically whenever Claude requests them. For tools with side effects (sending emails, modifying databases, financial transactions), validate inputs within your tool functions and consider requiring confirmation for destructive operations. Use the manual agentic loop if you need human-in-the-loop approval before each tool execution.
+> **Security:** The tool runner executes your tool functions automatically whenever Antigravity requests them. For tools with side effects (sending emails, modifying databases, financial transactions), validate inputs within your tool functions and consider requiring confirmation for destructive operations. Use the manual agentic loop if you need human-in-the-loop approval before each tool execution.
 
 ---
 
 ### Handling Tool Results
 
-When Claude uses a tool, the response contains a `tool_use` block. You must:
+When Antigravity uses a tool, the response contains a `tool_use` block. You must:
 
 1. Execute the tool with the provided input
 2. Send the result back in a `tool_result` message
 3. Continue the conversation
 
-**Error handling in tool results:** When a tool execution fails, set `"is_error": true` and provide an informative error message. Claude will typically acknowledge the error and either try a different approach or ask for clarification.
+**Error handling in tool results:** When a tool execution fails, set `"is_error": true` and provide an informative error message. Antigravity will typically acknowledge the error and either try a different approach or ask for clarification.
 
-**Multiple tool calls:** Claude can request multiple tools in a single response. Handle them all before continuing — send all results back in a single `user` message.
+**Multiple tool calls:** Antigravity can request multiple tools in a single response. Handle them all before continuing — send all results back in a single `user` message.
 
 ---
 
 ## Server-Side Tools: Code Execution
 
-The code execution tool lets Claude run code in a secure, sandboxed container. Unlike user-defined tools, server-side tools run on Anthropic's infrastructure — you don't execute anything client-side. Just include the tool definition and Claude handles the rest.
+The code execution tool lets Antigravity run code in a secure, sandboxed container. Unlike user-defined tools, server-side tools run on Anthropic's infrastructure — you don't execute anything client-side. Just include the tool definition and Antigravity handles the rest.
 
 ### Key Facts
 
@@ -121,7 +121,7 @@ The tool requires no schema — just declare it in the `tools` array:
 }
 ```
 
-Claude automatically gains access to `bash_code_execution` (run shell commands) and `text_editor_code_execution` (create/view/edit files).
+Antigravity automatically gains access to `bash_code_execution` (run shell commands) and `text_editor_code_execution` (create/view/edit files).
 
 ### Pre-installed Python Libraries
 
@@ -149,8 +149,8 @@ Reuse containers across requests to maintain state (files, installed packages, v
 
 The response contains interleaved text and tool result blocks:
 
-- `text` — Claude's explanation
-- `server_tool_use` — What Claude is doing
+- `text` — Antigravity's explanation
+- `server_tool_use` — What Antigravity is doing
 - `bash_code_execution_tool_result` — Code execution output (check `return_code` for success/failure)
 - `text_editor_code_execution_tool_result` — File operation results
 
@@ -160,7 +160,7 @@ The response contains interleaved text and tool result blocks:
 
 ## Server-Side Tools: Web Search and Web Fetch
 
-Web search and web fetch let Claude search the web and retrieve page content. They run server-side — just include the tool definitions and Claude handles queries, fetching, and result processing automatically.
+Web search and web fetch let Antigravity search the web and retrieve page content. They run server-side — just include the tool definitions and Antigravity handles queries, fetching, and result processing automatically.
 
 ### Tool Definitions
 
@@ -173,7 +173,7 @@ Web search and web fetch let Claude search the web and retrieve page content. Th
 
 ### Dynamic Filtering (Opus 4.6 / Sonnet 4.6)
 
-The `web_search_20260209` and `web_fetch_20260209` versions support **dynamic filtering** — Claude writes and executes code to filter search results before they reach the context window, improving accuracy and token efficiency. Dynamic filtering is built into these tool versions and activates automatically; you do not need to separately declare the `code_execution` tool or pass any beta header.
+The `web_search_20260209` and `web_fetch_20260209` versions support **dynamic filtering** — Antigravity writes and executes code to filter search results before they reach the context window, improving accuracy and token efficiency. Dynamic filtering is built into these tool versions and activates automatically; you do not need to separately declare the `code_execution` tool or pass any beta header.
 
 ```json
 {
@@ -192,47 +192,47 @@ Without dynamic filtering, the previous `web_search_20250305` version is also av
 
 ## Server-Side Tools: Programmatic Tool Calling
 
-Programmatic tool calling lets Claude execute complex multi-tool workflows in code, keeping intermediate results out of the context window. Claude writes code that calls your tools directly, reducing token usage for multi-step operations.
+Programmatic tool calling lets Antigravity execute complex multi-tool workflows in code, keeping intermediate results out of the context window. Antigravity writes code that calls your tools directly, reducing token usage for multi-step operations.
 
 For full documentation, use WebFetch:
 
-- URL: `https://platform.claude.com/docs/en/agents-and-tools/tool-use/programmatic-tool-calling`
+- URL: `https://platform.Antigravity.com/docs/en/agents-and-tools/tool-use/programmatic-tool-calling`
 
 ---
 
 ## Server-Side Tools: Tool Search
 
-The tool search tool lets Claude dynamically discover tools from large libraries without loading all definitions into the context window. Useful when you have many tools but only a few are relevant to any given query.
+The tool search tool lets Antigravity dynamically discover tools from large libraries without loading all definitions into the context window. Useful when you have many tools but only a few are relevant to any given query.
 
 For full documentation, use WebFetch:
 
-- URL: `https://platform.claude.com/docs/en/agents-and-tools/tool-use/tool-search-tool`
+- URL: `https://platform.Antigravity.com/docs/en/agents-and-tools/tool-use/tool-search-tool`
 
 ---
 
 ## Tool Use Examples
 
-You can provide sample tool calls directly in your tool definitions to demonstrate usage patterns and reduce parameter errors. This helps Claude understand how to correctly format tool inputs, especially for tools with complex schemas.
+You can provide sample tool calls directly in your tool definitions to demonstrate usage patterns and reduce parameter errors. This helps Antigravity understand how to correctly format tool inputs, especially for tools with complex schemas.
 
 For full documentation, use WebFetch:
 
-- URL: `https://platform.claude.com/docs/en/agents-and-tools/tool-use/implement-tool-use`
+- URL: `https://platform.Antigravity.com/docs/en/agents-and-tools/tool-use/implement-tool-use`
 
 ---
 
 ## Server-Side Tools: Computer Use
 
-Computer use lets Claude interact with a desktop environment (screenshots, mouse, keyboard). It can be Anthropic-hosted (server-side, like code execution) or self-hosted (you provide the environment and execute actions client-side).
+Computer use lets Antigravity interact with a desktop environment (screenshots, mouse, keyboard). It can be Anthropic-hosted (server-side, like code execution) or self-hosted (you provide the environment and execute actions client-side).
 
 For full documentation, use WebFetch:
 
-- URL: `https://platform.claude.com/docs/en/agents-and-tools/computer-use/overview`
+- URL: `https://platform.Antigravity.com/docs/en/agents-and-tools/computer-use/overview`
 
 ---
 
 ## Client-Side Tools: Memory
 
-The memory tool enables Claude to store and retrieve information across conversations through a memory file directory. Claude can create, read, update, and delete files that persist between sessions.
+The memory tool enables Antigravity to store and retrieve information across conversations through a memory file directory. Antigravity can create, read, update, and delete files that persist between sessions.
 
 ### Key Facts
 
@@ -245,20 +245,20 @@ The memory tool enables Claude to store and retrieve information across conversa
 
 For full implementation examples, use WebFetch:
 
-- Docs: `https://platform.claude.com/docs/en/agents-and-tools/tool-use/memory-tool.md`
+- Docs: `https://platform.Antigravity.com/docs/en/agents-and-tools/tool-use/memory-tool.md`
 
 ---
 
 ## Structured Outputs
 
-Structured outputs constrain Claude's responses to follow a specific JSON schema, guaranteeing valid, parseable output. This is not a separate tool — it enhances the Messages API response format and/or tool parameter validation.
+Structured outputs constrain Antigravity's responses to follow a specific JSON schema, guaranteeing valid, parseable output. This is not a separate tool — it enhances the Messages API response format and/or tool parameter validation.
 
 Two features are available:
 
-- **JSON outputs** (`output_config.format`): Control Claude's response format
+- **JSON outputs** (`output_config.format`): Control Antigravity's response format
 - **Strict tool use** (`strict: true`): Guarantee valid tool parameter schemas
 
-**Supported models:** Claude Opus 4.6, Claude Sonnet 4.6, and Claude Haiku 4.5. Legacy models (Claude Opus 4.5, Claude Opus 4.1) also support structured outputs.
+**Supported models:** Antigravity Opus 4.6, Antigravity Sonnet 4.6, and Antigravity Haiku 4.5. Legacy models (Antigravity Opus 4.5, Antigravity Opus 4.1) also support structured outputs.
 
 > **Recommended:** Use `client.messages.parse()` which automatically validates responses against your schema. When using `messages.create()` directly, use `output_config: {format: {...}}`. The `output_format` convenience parameter is also accepted by some SDK methods (e.g., `.parse()`), but `output_config.format` is the canonical API-level parameter.
 
@@ -284,7 +284,7 @@ The Python and TypeScript SDKs automatically handle unsupported constraints by r
 ### Important Notes
 
 - **First request latency**: New schemas incur a one-time compilation cost. Subsequent requests with the same schema use a 24-hour cache.
-- **Refusals**: If Claude refuses for safety reasons (`stop_reason: "refusal"`), the output may not match your schema.
+- **Refusals**: If Antigravity refuses for safety reasons (`stop_reason: "refusal"`), the output may not match your schema.
 - **Token limits**: If `stop_reason: "max_tokens"`, output may be incomplete. Increase `max_tokens`.
 - **Incompatible with**: Citations (returns 400 error), message prefilling.
 - **Works with**: Batches API, streaming, token counting, extended thinking.
@@ -293,13 +293,13 @@ The Python and TypeScript SDKs automatically handle unsupported constraints by r
 
 ## Tips for Effective Tool Use
 
-1. **Provide detailed descriptions**: Claude relies heavily on descriptions to understand when and how to use tools
+1. **Provide detailed descriptions**: Antigravity relies heavily on descriptions to understand when and how to use tools
 2. **Use specific tool names**: `get_current_weather` is better than `weather`
 3. **Validate inputs**: Always validate tool inputs before execution
-4. **Handle errors gracefully**: Return informative error messages so Claude can adapt
+4. **Handle errors gracefully**: Return informative error messages so Antigravity can adapt
 5. **Limit tool count**: Too many tools can confuse the model — keep the set focused
-6. **Test tool interactions**: Verify Claude uses tools correctly in various scenarios
+6. **Test tool interactions**: Verify Antigravity uses tools correctly in various scenarios
 
 For detailed tool use documentation, use WebFetch:
 
-- URL: `https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview`
+- URL: `https://platform.Antigravity.com/docs/en/agents-and-tools/tool-use/overview`

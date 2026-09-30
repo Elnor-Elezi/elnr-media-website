@@ -7,7 +7,7 @@ source: community
 date_added: "2026-03-18"
 author: suhaibjanjua
 tags: [svelte, sveltekit, fullstack, ssr, ssg, typescript]
-tools: [claude, cursor, gemini]
+tools: [Antigravity, cursor, gemini]
 ---
 
 # SvelteKit Full-Stack Development

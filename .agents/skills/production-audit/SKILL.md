@@ -9,7 +9,7 @@ source_type: community
 date_added: "2026-05-04"
 author: commitshow
 tags: [security, audit, production, vibe-coding, rls, webhook, stripe, supabase, mobile]
-tools: [claude, cursor, gemini, codex, antigravity]
+tools: [Antigravity, cursor, gemini, codex, antigravity]
 license: "MIT"
 license_source: "https://github.com/commitshow/production-audit/blob/main/LICENSE"
 ---

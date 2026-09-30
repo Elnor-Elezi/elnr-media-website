@@ -55,7 +55,7 @@ jobs:
 
 ### Step 3. Add commit rules to your AI agent
 
-Add this block to your project's `CLAUDE.md`, `.cursorrules`, or `AGENTS.md`:
+Add this block to your project's `AGENTS.md`, `.cursorrules`, or `AGENTS.md`:
 
 ```markdown
 ## Commit messages

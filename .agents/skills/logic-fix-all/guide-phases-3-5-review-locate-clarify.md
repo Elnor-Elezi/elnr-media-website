@@ -9,7 +9,7 @@
 3b. Adapt method to file role:
 - **Source code:** standard Premises→Trace→Divergence.
 - **Runtime config:** premises = claimed shape and value constraints; trace how code reads each key; divergence = missing/wrong-typed key or constraint violation.
-- **Constraint files** (CLAUDE.md, .logic-lens.yaml, AGENTS.md): premises = stated invariants; trace the code paths they govern; divergence = code violating the invariant.
+- **Constraint files** (AGENTS.md, .logic-lens.yaml, AGENTS.md): premises = stated invariants; trace the code paths they govern; divergence = code violating the invariant.
 - **Behavioral docs:** premises = documented behavior; trace the implementation; divergence = contradiction.
 
 3c. Tag each finding with: file path + line range, file role, risk code (L1–L9 or Cx), severity, full Premises→Trace→Divergence triple, and one origin tag:

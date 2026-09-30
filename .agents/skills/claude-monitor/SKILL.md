@@ -1,6 +1,6 @@
 ---
-name: claude-monitor
-description: Monitor de performance do Claude Code e sistema local. Diagnostica lentidao, mede CPU/RAM/disco, verifica API latency e gera relatorios de saude do sistema.
+name: Antigravity-monitor
+description: Monitor de performance do Antigravity e sistema local. Diagnostica lentidao, mede CPU/RAM/disco, verifica API latency e gera relatorios de saude do sistema.
 risk: safe
 source: community
 date_added: '2026-03-06'
@@ -11,18 +11,18 @@ tags:
 - diagnostics
 - system-health
 tools:
-- claude-code
+- Antigravity-code
 - antigravity
 - cursor
 - gemini-cli
 - codex-cli
 ---
 
-# Claude Monitor — Diagnóstico de Performance
+# Antigravity Monitor — Diagnóstico de Performance
 
 ## Overview
 
-Monitor de performance do Claude Code e sistema local. Diagnostica lentidao, mede CPU/RAM/disco, verifica API latency e gera relatorios de saude do sistema.
+Monitor de performance do Antigravity e sistema local. Diagnostica lentidao, mede CPU/RAM/disco, verifica API latency e gera relatorios de saude do sistema.
 
 ## When to Use This Skill
 
@@ -31,25 +31,25 @@ Monitor de performance do Claude Code e sistema local. Diagnostica lentidao, med
 - When the user mentions "lag" or related topics
 - When the user mentions "lagado" or related topics
 - When the user mentions "travando" or related topics
-- When the user mentions "claude lento" or related topics
+- When the user mentions "Antigravity lento" or related topics
 
 ## Do Not Use This Skill When
 
-- The task is unrelated to claude monitor
+- The task is unrelated to Antigravity monitor
 - A simpler, more specific tool can handle the request
 - The user needs general-purpose assistance without domain expertise
 
 ## How It Works
 
-Skill para diagnosticar e resolver problemas de lentidão no Claude Code e no sistema.
-Determina se o gargalo é local (PC) ou remoto (API Claude) e sugere ações corretivas.
+Skill para diagnosticar e resolver problemas de lentidão no Antigravity e no sistema.
+Determina se o gargalo é local (PC) ou remoto (API Antigravity) e sugere ações corretivas.
 
 ## Quando Usar
 
-- Usuário reclama que o Claude Code está lento ou travando
+- Usuário reclama que o Antigravity está lento ou travando
 - Troca de sessões de conversa demora para carregar
-- Respostas do Claude demoram muito
-- PC parece lento enquanto usa o Claude Code
+- Respostas do Antigravity demoram muito
+- PC parece lento enquanto usa o Antigravity
 - Qualquer menção a performance, lag, lentidão
 
 ## 1. Diagnóstico Rápido (Health_Check.Py)
@@ -57,23 +57,23 @@ Determina se o gargalo é local (PC) ou remoto (API Claude) e sugere ações cor
 Rode SEMPRE como primeiro passo:
 
 ```bash
-python C:\Users\renat\skills\claude-monitor\scripts\health_check.py
+python C:\Users\renat\skills\Antigravity-monitor\scripts\health_check.py
 ```
 
 O script analisa em ~3 segundos:
 - **CPU**: Uso atual e por core. >80% = gargalo provável
 - **RAM**: Total, usada, disponível. >85% = pressão de memória
 - **Browsers**: Processos e RAM por browser. >5GB total = excesso de abas
-- **Claude Code**: Processos e RAM consumida
+- **Antigravity**: Processos e RAM consumida
 - **Disco**: Espaço livre. <10% = impacto em swap/performance
-- **Rede**: Latência ao endpoint da API Claude
+- **Rede**: Latência ao endpoint da API Antigravity
 - **Diagnóstico**: Classificação automática do problema com sugestões
 
 ## 2. Interpretar O Resultado
 
 O script retorna um JSON com `diagnosis` contendo:
 
-- `bottleneck`: "cpu" | "ram" | "browsers" | "disk" | "network" | "claude_api" | "ok"
+- `bottleneck`: "cpu" | "ram" | "browsers" | "disk" | "network" | "Antigravity_api" | "ok"
 - `severity`: "critical" | "warning" | "ok"
 - `suggestions`: Lista de ações recomendadas
 - `summary`: Resumo em português para mostrar ao usuário
@@ -91,7 +91,7 @@ Baseado no diagnóstico, ofereça ao usuário:
 
 #### Se browsers pesados (>5GB RAM ou >40 processos):
 ```bash
-python C:\Users\renat\skills\claude-monitor\scripts\health_check.py --browsers-detail
+python C:\Users\renat\skills\Antigravity-monitor\scripts\health_check.py --browsers-detail
 ```
 Mostra RAM por browser e sugere quais fechar. **Nunca fechar processos sem permissão explícita do usuário.**
 
@@ -108,7 +108,7 @@ Mostra RAM por browser e sugere quais fechar. **Nunca fechar processos sem permi
 Se o usuário quiser monitoramento em background:
 
 ```bash
-python C:\Users\renat\skills\claude-monitor\scripts\monitor.py --interval 30 --duration 300
+python C:\Users\renat\skills\Antigravity-monitor\scripts\monitor.py --interval 30 --duration 300
 ```
 
 Parâmetros:
@@ -124,15 +124,15 @@ O monitor salva snapshots periódicos e gera um relatório ao final com:
 - Eventos de alerta detectados
 - Recomendação final
 
-## 5. Benchmark Da Api Claude (Opcional)
+## 5. Benchmark Da Api Antigravity (Opcional)
 
 Para testar se a lentidão é da API:
 
 ```bash
-python C:\Users\renat\skills\claude-monitor\scripts\api_bench.py
+python C:\Users\renat\skills\Antigravity-monitor\scripts\api_bench.py
 ```
 
-Mede o tempo de resposta do processo Claude Code local (não faz chamadas à API).
+Mede o tempo de resposta do processo Antigravity local (não faz chamadas à API).
 Compara com tempos típicos e indica se está dentro do esperado.
 
 ## Thresholds De Referência
@@ -152,7 +152,7 @@ Quando apresentar o diagnóstico, inclua estas dicas contextuais:
 
 - **Muitas abas = muito CPU/RAM**: Cada aba de browser é um processo separado.
   50 abas = 50 processos competindo por recursos.
-- **Claude Code é pesado**: Ele roda vários processos Electron. É normal consumir 3-5 GB.
+- **Antigravity é pesado**: Ele roda vários processos Electron. É normal consumir 3-5 GB.
   Mas se estiver usando >6 GB com várias sessões, considere fechar sessões antigas.
 - **Troca de sessão lenta**: Geralmente causada por CPU alta ou muitos processos competindo.
   A sessão precisa carregar o histórico da conversa, e se o CPU está ocupado, demora.

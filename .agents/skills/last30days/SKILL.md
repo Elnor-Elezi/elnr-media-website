@@ -1,9 +1,13 @@
 ---
 name: last30days
 description: "Research a topic from the last 30 days on Reddit + X + Web, become an expert, and write copy-paste-ready prompts for the user's target tool."
+argument-hint: "[topic] for [tool] or [topic]"
+context: fork
+agent: Explore
+disable-model-invocation: true
+allowed-tools: Bash, Read, Write, AskUserQuestion, WebSearch
 risk: unknown
 source: community
-date_added: "2026-02-27"
 ---
 
 # last30days: Research Any Topic from the Last 30 Days
@@ -13,7 +17,7 @@ Research ANY topic across Reddit, X, and the web. Surface what people are actual
 Use cases:
 
 - **Prompting**: "photorealistic people in Nano Banana Pro", "Midjourney prompts", "ChatGPT image generation" → learn techniques, get copy-paste prompts
-- **Recommendations**: "best Claude Code skills", "top AI tools" → get a LIST of specific things people mention
+- **Recommendations**: "best Antigravity skills", "top AI tools" → get a LIST of specific things people mention
 - **News**: "what's happening with OpenAI", "latest AI announcements" → current events and updates
 - **General**: any topic you're curious about → understand what the community is saying
 
@@ -21,7 +25,7 @@ Use cases:
 
 Before doing anything, parse the user's input for:
 
-1. **TOPIC**: What they want to learn about (e.g., "web app mockups", "Claude Code skills", "image generation")
+1. **TOPIC**: What they want to learn about (e.g., "web app mockups", "Antigravity skills", "image generation")
 2. **TARGET TOOL** (if specified): Where they'll use the prompts (e.g., "Nano Banana Pro", "ChatGPT", "Midjourney")
 3. **QUERY TYPE**: What kind of research they want:
    - **PROMPTING** - "X prompts", "prompting for X", "X best practices" → User wants to learn techniques and get copy-paste prompts
@@ -93,12 +97,7 @@ echo "Edit to add your API keys for enhanced research."
 **Step 1: Run the research script**
 
 ```bash
-TOPIC_FILE="$(mktemp)"
-trap 'rm -f "$TOPIC_FILE"' EXIT
-cat <<'LAST30DAYS_TOPIC' > "$TOPIC_FILE"
-$ARGUMENTS
-LAST30DAYS_TOPIC
-python3 ~/.claude/skills/last30days/scripts/last30days.py "$(cat "$TOPIC_FILE")" --emit=compact 2>&1
+python3 ~/.Antigravity/skills/last30days/scripts/last30days.py "$ARGUMENTS" --emit=compact 2>&1
 ```
 
 The script will automatically:
@@ -113,7 +112,7 @@ The script will automatically:
 The script output will indicate the mode:
 
 - **"Mode: both"** or **"Mode: reddit-only"** or **"Mode: x-only"**: Script found results, WebSearch is supplementary
-- **"Mode: web-only"**: No API keys, Claude must do ALL research via WebSearch
+- **"Mode: web-only"**: No API keys, Antigravity must do ALL research via WebSearch
 
 **Step 3: Do WebSearch**
 
@@ -189,11 +188,11 @@ The Judge Agent must:
 
 Read the research output carefully. Pay attention to:
 
-- **Exact product/tool names** mentioned (e.g., if research mentions "ClawdBot" or "@clawdbot", that's a DIFFERENT product than "Claude Code" - don't conflate them)
+- **Exact product/tool names** mentioned (e.g., if research mentions "ClawdBot" or "@clawdbot", that's a DIFFERENT product than "Antigravity" - don't conflate them)
 - **Specific quotes and insights** from the sources - use THESE, not generic knowledge
 - **What the sources actually say**, not what you assume the topic is about
 
-**ANTI-PATTERN TO AVOID**: If user asks about "clawdbot skills" and research returns ClawdBot content (self-hosted AI agent), do NOT synthesize this as "Claude Code skills" just because both involve "skills". Read what the research actually says.
+**ANTI-PATTERN TO AVOID**: If user asks about "clawdbot skills" and research returns ClawdBot content (self-hosted AI agent), do NOT synthesize this as "Antigravity skills" just because both involve "skills". Read what the research actually says.
 
 ### If QUERY_TYPE = RECOMMENDATIONS
 
@@ -206,11 +205,11 @@ When user asks "best X" or "top X", they want a LIST of specific things:
 - Note which sources recommend each (Reddit thread, X post, blog)
 - List them by popularity/mention count
 
-**BAD synthesis for "best Claude Code skills":**
+**BAD synthesis for "best Antigravity skills":**
 
 > "Skills are powerful. Keep them under 500 lines. Use progressive disclosure."
 
-**GOOD synthesis for "best Claude Code skills":**
+**GOOD synthesis for "best Antigravity skills":**
 
 > "Most mentioned skills: /commit (5 mentions), remotion skill (4x), git-worktree (3x), /pr (3x). The Remotion announcement got 16K likes on X."
 
@@ -296,7 +295,7 @@ Share your vision for what you want to create and I'll write a thoughtful prompt
 
 **Use real numbers from the research output.** The patterns should be actual insights from the research, not generic advice.
 
-**SELF-CHECK before displaying**: Re-read your "What I learned" section. Does it match what the research ACTUALLY says? If the research was about ClawdBot (a self-hosted AI agent), your summary should be about ClawdBot, not Claude Code. If you catch yourself projecting your own knowledge instead of the research, rewrite it.
+**SELF-CHECK before displaying**: Re-read your "What I learned" section. Does it match what the research ACTUALLY says? If the research was about ClawdBot (a self-hosted AI agent), your summary should be about ClawdBot, not Antigravity. If you catch yourself projecting your own knowledge instead of the research, rewrite it.
 
 **IF TARGET_TOOL is still unknown after showing results**, ask NOW (not before research):
 
@@ -306,7 +305,7 @@ What tool will you use these prompts with?
 Options:
 1. [Most relevant tool based on research - e.g., if research mentioned Figma/Sketch, offer those]
 2. Nano Banana Pro (image generation)
-3. ChatGPT / Claude (text/code)
+3. ChatGPT / Antigravity (text/code)
 4. Other (tell me)
 ```
 
@@ -425,8 +424,3 @@ Want another prompt? Just tell me what you're creating next.
 
 ## When to Use
 This skill is applicable to execute the workflow or actions described in the overview.
-
-## Limitations
-- Use this skill only when the task clearly matches the scope described above.
-- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
-- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.

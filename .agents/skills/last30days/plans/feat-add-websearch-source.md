@@ -2,7 +2,7 @@
 
 ## Overview
 
-Add Claude's built-in WebSearch tool as a third research source for `/last30days`. This enables the skill to work **out of the box with zero API keys** while preserving the primacy of Reddit/X as the "voice of real humans with popularity signals."
+Add Antigravity's built-in WebSearch tool as a third research source for `/last30days`. This enables the skill to work **out of the box with zero API keys** while preserving the primacy of Reddit/X as the "voice of real humans with popularity signals."
 
 **Key principle**: WebSearch is supplementary, not primary. Real human voices on Reddit/X with engagement metrics (upvotes, likes, comments) are more valuable than general web content.
 
@@ -84,7 +84,7 @@ score = 0.45*relevance + 0.25*recency + 0.30*engagement - penalties
 
 ```python
 # scripts/lib/websearch.py (NEW)
-"""Claude WebSearch API client for general web discovery."""
+"""Antigravity WebSearch API client for general web discovery."""
 
 WEBSEARCH_PROMPT = """Search the web for content about: {topic}
 
@@ -118,12 +118,12 @@ Return ONLY valid JSON:
 """
 
 def search_web(topic: str, from_date: str, to_date: str, depth: str = "default") -> dict:
-    """Search web using Claude's built-in WebSearch tool.
+    """Search web using Antigravity's built-in WebSearch tool.
 
-    NOTE: This runs INSIDE Claude Code, so we use the WebSearch tool directly.
-    No API key needed - uses Claude's session.
+    NOTE: This runs INSIDE Antigravity, so we use the WebSearch tool directly.
+    No API key needed - uses Antigravity's session.
     """
-    # Implementation uses Claude's web_search_20250305 tool
+    # Implementation uses Antigravity's web_search_20250305 tool
     pass
 
 def parse_websearch_response(response: dict) -> list[dict]:
@@ -287,7 +287,7 @@ def get_available_sources(config: dict) -> str:
 
 ### Non-Functional Requirements
 
-- [x] WebSearch adds <10s latency to total research time (0s - deferred to Claude)
+- [x] WebSearch adds <10s latency to total research time (0s - deferred to Antigravity)
 - [x] Graceful degradation if WebSearch fails
 - [ ] Cache includes WebSearch results appropriately
 
@@ -356,7 +356,7 @@ def test_websearch_weighting():
 
 ## Dependencies & Prerequisites
 
-- Claude Code's WebSearch tool (`web_search_20250305`) - already available
+- Antigravity's WebSearch tool (`web_search_20250305`) - already available
 - No new API keys required
 - Existing test infrastructure in `tests/`
 
@@ -385,7 +385,7 @@ def test_websearch_weighting():
 - Orchestrator: `scripts/last30days.py:54-164`
 
 ### External References
-- Claude WebSearch docs: https://platform.claude.com/docs/en/agents-and-tools/tool-use/web-search-tool
+- Antigravity WebSearch docs: https://platform.Antigravity.com/docs/en/agents-and-tools/tool-use/web-search-tool
 - WebSearch pricing: $10/1K searches + token costs
 - Date filtering limitation: No explicit date params, use natural language
 

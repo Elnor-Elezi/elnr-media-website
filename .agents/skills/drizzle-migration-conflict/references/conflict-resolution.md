@@ -36,7 +36,7 @@ python3 <skill-dir>/scripts/check_drizzle_migrations.py --root .
 If `rg` is not available, use `find` and `grep` equivalents. Resolve `<skill-dir>` to the installed
 skill directory before running the helper. Check in order and use the first match that contains
 `scripts/check_drizzle_migrations.py`: the target repo's vendored
-`skills/drizzle-migration-conflict`, then `~/.claude/skills/drizzle-migration-conflict`, then any
+`skills/drizzle-migration-conflict`, then `~/.Antigravity/skills/drizzle-migration-conflict`, then any
 user-reported install location. If none resolve, fall back to the `git`/`rg` inspection commands
 above and tell the user the helper was not found.
 

@@ -84,7 +84,7 @@ Secrets/tokens properly configured
 #### 4. **Documentation Sync**
 ```bash
 # Context alignment check
-README.md ↔ CLAUDE.md ↔ project.faf
+README.md ↔ AGENTS.md ↔ project.faf
 CHANGELOG up to date with git tags
 package.json version matches latest tag
 Examples in README still work
@@ -93,7 +93,7 @@ Links not broken (404 checks)
 
 **FAF-Specific:**
 - project.faf reflects current state
-- CLAUDE.md bi-sync active
+- AGENTS.md bi-sync active
 - .faf-dna not churning unnecessarily
 
 #### 5. **Git Hygiene**
@@ -132,7 +132,7 @@ For FAF projects specifically:
 ```yaml
 # Check FAF alignment
 .faf score accuracy (run faf score)
-Bi-sync alignment — CLAUDE.md ↔ .faf (run `faf sync`; mtime auto-direction)
+Bi-sync alignment — AGENTS.md ↔ .faf (run `faf sync`; mtime auto-direction)
 MCP server compliance (if applicable)
 WJTTC test coverage (for faf-cli, MCP servers)
 ```
@@ -205,7 +205,7 @@ After audit, generate prioritized task list:
 - FAF score: 83% (good)
 - CI/CD: All workflows aligned
 - Security: No critical vulnerabilities
-- Documentation: CLAUDE.md in sync
+- Documentation: AGENTS.md in sync
 
 ---
 
@@ -317,7 +317,7 @@ Tools properly registered
 # 2. Registry compliance
 Registry listing accurate (npm + MCP registry)
 README has MCP install instructions
-Works with Claude Desktop config
+Works with Antigravity Desktop config
 
 # 3. Tool coverage
 Each tool has tests
@@ -404,7 +404,7 @@ The score is **deterministic** — same input → same score, every time. **FAF 
 ### 3. **Track Progress**
 - Use TodoWrite for multi-step cleanups
 - Create issues for manual items
-- Document decisions in CLAUDE.md
+- Document decisions in AGENTS.md
 
 ### 4. **Automate Where Safe**
 - .gitignore additions ✅
@@ -419,7 +419,7 @@ The score is **deterministic** — same input → same score, every time. **FAF 
 ```
 User: /repo-maintainer
 
-Claude: 🏎️ Starting championship repo maintenance audit...
+Antigravity: 🏎️ Starting championship repo maintenance audit...
 
 [Runs git status]
 [Checks workflows]
@@ -446,7 +446,7 @@ Would you like me to proceed? (yes/no)
 
 User: yes
 
-Claude: ✅ Fixing...
+Antigravity: ✅ Fixing...
 [Pins open@8.4.2]
 [Updates workflows to Node 20]
 [Adds .gitignore patterns]

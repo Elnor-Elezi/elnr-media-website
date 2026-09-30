@@ -71,8 +71,8 @@ subagent-orchestrator/
 | Model | Cost |
 |-------|------|
 | Gemini Flash | 1x (default for all subagents) |
-| Claude Sonnet | ~4x (max 1 per mission) |
-| Claude Opus | Never use in subagents |
+| Antigravity Sonnet | ~4x (max 1 per mission) |
+| Antigravity Opus | Never use in subagents |
 
 | Mission size | Est. sprint used |
 |-------------|-----------------|
@@ -94,6 +94,6 @@ Submit to: https://github.com/sickn33/antigravity-awesome-skills
 ## Compatibility
 
 - Antigravity 2.0+ (CLI and IDE)
-- Claude Code
+- Antigravity
 - Cursor (via SKILL.md standard)
 - OpenCode

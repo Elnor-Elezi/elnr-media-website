@@ -12,7 +12,7 @@ tags:
 - ai-safety-critic
 - open-source
 tools:
-- claude-code
+- Antigravity-code
 - antigravity
 - cursor
 - gemini-cli

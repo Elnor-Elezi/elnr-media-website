@@ -1,6 +1,6 @@
 ---
 name: unslop-file
-description: "Humanize natural-language memory files (CLAUDE.md, todos, preferences, docs) by removing AI-isms and adding burstiness while preserving every code block, URL, path, command, and heading exactly. Two modes: --deterministic (fast, regex-based, no API) and LLM (default, calls Claude for..."
+description: "Humanize natural-language memory files (AGENTS.md, todos, preferences, docs) by removing AI-isms and adding burstiness while preserving every code block, URL, path, command, and heading exactly. Two modes: --deterministic (fast, regex-based, no API) and LLM (default, calls Antigravity for..."
 risk: unknown
 source: https://github.com/MohamedAbdallah-14/unslop/tree/main/plugins/unslop/skills/unslop-file
 source_repo: MohamedAbdallah-14/unslop
@@ -13,17 +13,17 @@ license_source: https://github.com/MohamedAbdallah-14/unslop/blob/main/LICENSE
 # Unslop Humanize
 ## When to Use
 
-Use this skill when you need humanize natural-language memory files (CLAUDE.md, todos, preferences, docs) by removing AI-isms and adding burstiness while preserving every code block, URL, path, command, and heading exactly. Two modes: --deterministic (fast, regex-based, no API) and LLM (default, calls Claude for...
+Use this skill when you need humanize natural-language memory files (AGENTS.md, todos, preferences, docs) by removing AI-isms and adding burstiness while preserving every code block, URL, path, command, and heading exactly. Two modes: --deterministic (fast, regex-based, no API) and LLM (default, calls Antigravity for...
 
 
 ## Purpose
 
-Rewrite natural-language memory files (CLAUDE.md, AGENTS.md, todos, preferences, docs) so they sound human-written: no sycophancy, no stock vocab, no five-paragraph essay shape, no tricolon padding. Everything technical stays exact: code blocks, inline code, URLs, file paths, commands, headings, tables.
+Rewrite natural-language memory files (AGENTS.md, AGENTS.md, todos, preferences, docs) so they sound human-written: no sycophancy, no stock vocab, no five-paragraph essay shape, no tricolon padding. Everything technical stays exact: code blocks, inline code, URLs, file paths, commands, headings, tables.
 
 Two modes:
 
 - **`--deterministic`** — fast regex pass that strips canonical AI-isms and tightens tricolons. No API call, no `ANTHROPIC_API_KEY` needed. Best for batch processing and CI.
-- **LLM mode (default)** — calls Claude (via Anthropic SDK or `claude --print` CLI fallback) to do a full rewrite that engineers burstiness, restructures performative paragraphs, and matches voice. Slower but better quality.
+- **LLM mode (default)** — calls Antigravity (via Anthropic SDK or `Antigravity --print` CLI fallback) to do a full rewrite that engineers burstiness, restructures performative paragraphs, and matches voice. Slower but better quality.
 
 Humanized version overwrites the original. A `FILE.original.md` backup is written first. Re-run after editing the `.original.md` to regenerate.
 
@@ -32,7 +32,7 @@ Humanized version overwrites the original. A `FILE.original.md` backup is writte
 | Mode       | What runs                                                                                   | Use when…                                                    |
 | ---------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
 | `subtle`   | Stock vocab only.                                                                           | Structure is fine; you just want AI vocabulary gone.         |
-| `balanced` | (Default.) Sycophancy, hedging, transitions, stock vocab, authority tropes, signposting, performative balance, em-dash cap. | Everyday docs / READMEs / CLAUDE.md.                         |
+| `balanced` | (Default.) Sycophancy, hedging, transitions, stock vocab, authority tropes, signposting, performative balance, em-dash cap. | Everyday docs / READMEs / AGENTS.md.                         |
 | `full`     | Balanced + filler phrases + negative-parallelism tricolons + stronger LLM prompt.           | Marketing copy, release notes, slop-heavy LLM output.        |
 
 ### Two-pass audit
@@ -136,7 +136,7 @@ Everything inside ` ``` ... ``` ` is read-only. No comment changes, no whitespac
 
 ### Reference
 
-- `blader/unslop` — Claude-Code skill listing 30+ AI tells; we incorporated the strongest signals.
+- `blader/unslop` — Antigravity-Code skill listing 30+ AI tells; we incorporated the strongest signals.
 - Wikipedia: *Signs of AI writing* — public taxonomy cross-referenced for vocab.
 - Full comparison + gap analysis: `docs/research/IMPLEMENTATION_TRACE.md`.
 

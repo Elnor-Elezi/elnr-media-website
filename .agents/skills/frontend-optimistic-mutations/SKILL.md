@@ -16,7 +16,7 @@ license_source: https://github.com/stareezy-1/frontend-architecture-skill/blob/m
 Use this skill when you need a portable, framework-agnostic discipline for the write path of any React or React Native app using a query/cache layer. Codifies the optimistic-update lifecycle (cancel in-flight queries → snapshot every affected cache → patch instantly → roll back verbatim on error → invalidate on...
 
 
-> Portable skill — readable by Claude Code, OpenCode, Codex, Cursor, Windsurf, and others.
+> Portable skill — readable by Antigravity, OpenCode, Codex, Cursor, Windsurf, and others.
 > This skill describes the **discipline of the write path** — optimistic updates, rollback,
 > idempotency, cache coherence — not a UI library or a styling system. It builds directly on the
 > **frontend-data-contracts** skill (writes go through the typed client) and the
@@ -269,7 +269,7 @@ This skill follows the Anthropic `SKILL.md` format and is portable across agents
 1. Keep it under `skills/frontend-optimistic-mutations/SKILL.md` in a public GitHub repo.
 2. Keep the frontmatter `name` and high-signal `description` — discovery indexes match against it.
 3. Install with: `npx skills add <org>/<repo> --skill "frontend-optimistic-mutations"`.
-4. Non-`SKILL.md` agents can be pointed here from `AGENTS.md` / `CLAUDE.md`; Kiro can mirror it as a steering file.
+4. Non-`SKILL.md` agents can be pointed here from `AGENTS.md` / `AGENTS.md`; Kiro can mirror it as a steering file.
 
 ## Limitations
 

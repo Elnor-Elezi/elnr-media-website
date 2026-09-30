@@ -1,6 +1,6 @@
 ---
 name: manage-skills
-description: Discover, list, create, edit, toggle, copy, move, and delete AI agent skills across 11 tools (Cursor, Claude, Agents, Windsurf, Copilot, Codex, Cline, Aider, Continue, Roo Code, Augment)
+description: Discover, list, create, edit, toggle, copy, move, and delete AI agent skills across 11 tools (Cursor, Antigravity, Agents, Windsurf, Copilot, Codex, Cline, Aider, Continue, Roo Code, Augment)
 risk: critical
 source: community
 source_repo: umutbozdag/agent-skills-manager
@@ -25,7 +25,7 @@ Each skill lives in its own subdirectory with a `SKILL.md` file containing YAML 
 |------|------------|--------------|
 | Agents | `~/.agents/skills/<name>/SKILL.md` | `.agents/skills/<name>/SKILL.md` |
 | Cursor | `~/.cursor/skills/<name>/SKILL.md` | `.cursor/skills/<name>/SKILL.md` |
-| Claude | `~/.claude/skills/<name>/SKILL.md` | `.claude/skills/<name>/SKILL.md` |
+| Antigravity | `~/.Antigravity/skills/<name>/SKILL.md` | `.Antigravity/skills/<name>/SKILL.md` |
 | Windsurf | `~/.windsurf/rules/<name>/<name>.md` | `.windsurf/rules/<name>/<name>.md` |
 | Cline | `~/.cline/rules/<name>/<name>.md` | `.cline/rules/<name>/<name>.md` |
 | Continue | `~/.continue/rules/<name>/<name>.md` | `.continue/rules/<name>/<name>.md` |
@@ -46,7 +46,7 @@ Plugin skills are cached at `~/.cursor/plugins/cache/<org>/<plugin>/<version>/sk
 
 ## Skill File Format
 
-For directory-based tools (Agents, Cursor, Claude), skills use YAML frontmatter:
+For directory-based tools (Agents, Cursor, Antigravity), skills use YAML frontmatter:
 
 ```markdown
 ---
@@ -70,7 +70,7 @@ For Windsurf, Cline, Continue, and Roo Code, skills are plain `.md` files (front
 # List skills for a specific tool
 ls ~/.agents/skills/
 ls ~/.cursor/skills/
-ls ~/.claude/skills/
+ls ~/.Antigravity/skills/
 ls ~/.windsurf/rules/
 ls ~/.cline/rules/
 ls ~/.continue/rules/
@@ -79,7 +79,7 @@ ls ~/.roo/rules/
 # Count total skills across all tools
 echo "Agents: $(ls ~/.agents/skills/ 2>/dev/null | wc -l | tr -d ' ')"
 echo "Cursor: $(ls ~/.cursor/skills/ 2>/dev/null | wc -l | tr -d ' ')"
-echo "Claude: $(ls ~/.claude/skills/ 2>/dev/null | wc -l | tr -d ' ')"
+echo "Antigravity: $(ls ~/.Antigravity/skills/ 2>/dev/null | wc -l | tr -d ' ')"
 echo "Windsurf: $(ls ~/.windsurf/rules/ 2>/dev/null | wc -l | tr -d ' ')"
 echo "Cline: $(ls ~/.cline/rules/ 2>/dev/null | wc -l | tr -d ' ')"
 echo "Continue: $(ls ~/.continue/rules/ 2>/dev/null | wc -l | tr -d ' ')"
@@ -101,7 +101,7 @@ cat ~/.cursor/skills/my-skill/SKILL.md
 ### Create a new skill
 
 ```bash
-# For Agents/Cursor/Claude (SKILL.md format)
+# For Agents/Cursor/Antigravity (SKILL.md format)
 mkdir -p ~/.agents/skills/my-new-skill
 cat > ~/.agents/skills/my-new-skill/SKILL.md << 'EOF'
 ---
@@ -143,8 +143,8 @@ mv ~/.cursor/skills/my-skill/SKILL.md.disabled ~/.cursor/skills/my-skill/SKILL.m
 ### Copy a skill between tools
 
 ```bash
-# Copy from Cursor to Claude
-cp -r ~/.cursor/skills/my-skill ~/.claude/skills/my-skill
+# Copy from Cursor to Antigravity
+cp -r ~/.cursor/skills/my-skill ~/.Antigravity/skills/my-skill
 
 # Copy from Agents to Windsurf (adapt format)
 mkdir -p ~/.windsurf/rules/my-skill
@@ -173,16 +173,16 @@ cp -r ~/.cursor/skills/my-skill .cursor/skills/my-skill
 
 ```bash
 # Search by name
-find ~/.agents/skills ~/.cursor/skills ~/.claude/skills ~/.windsurf/rules ~/.cline/rules ~/.continue/rules ~/.roo/rules -maxdepth 1 -type d 2>/dev/null | sort
+find ~/.agents/skills ~/.cursor/skills ~/.Antigravity/skills ~/.windsurf/rules ~/.cline/rules ~/.continue/rules ~/.roo/rules -maxdepth 1 -type d 2>/dev/null | sort
 
 # Search by content
-grep -rl "search term" ~/.agents/skills/ ~/.cursor/skills/ ~/.claude/skills/ 2>/dev/null
+grep -rl "search term" ~/.agents/skills/ ~/.cursor/skills/ ~/.Antigravity/skills/ 2>/dev/null
 ```
 
 ### Find disabled skills
 
 ```bash
-find ~/.agents/skills ~/.cursor/skills ~/.claude/skills -name "*.disabled" 2>/dev/null
+find ~/.agents/skills ~/.cursor/skills ~/.Antigravity/skills -name "*.disabled" 2>/dev/null
 ```
 
 ## Guidelines

@@ -10,9 +10,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Validated - External Research Audit
 
 **External resources analyzed (11 sources):**
-- [extremeclarity/claude-plugins/worldview](https://github.com/extremeclarity/claude-plugins/tree/master/plugins/worldview) - Context persistence plugin
+- [extremeclarity/Antigravity-plugins/worldview](https://github.com/extremeclarity/Antigravity-plugins/tree/master/plugins/worldview) - Context persistence plugin
 - [trails.pieterma.es](https://trails.pieterma.es/) - Context management
-- [Yeachan-Heo/oh-my-claude-sisyphus](https://github.com/Yeachan-Heo/oh-my-claude-sisyphus) - Multi-agent orchestration
+- [Yeachan-Heo/oh-my-Antigravity-sisyphus](https://github.com/Yeachan-Heo/oh-my-Antigravity-sisyphus) - Multi-agent orchestration
 - [mihaileric.com - The Emperor Has No Clothes](https://www.mihaileric.com/The-Emperor-Has-No-Clothes/) - AI agent architecture insights
 - [sawirstudio/effectphp](https://github.com/sawirstudio/effectphp) - Functional effects library
 - [camel-ai.org/SETA](https://www.camel-ai.org/blogs/seta-scaling-environments-for-terminal-agents) - Terminal agent research
@@ -50,11 +50,11 @@ Loki Mode already implements more comprehensive versions of:
 
 ## [2.35.0] - 2026-01-08
 
-### Added - Anthropic Agent Harness Patterns & Claude Agent SDK
+### Added - Anthropic Agent Harness Patterns & Antigravity Agent SDK
 
 **Sources:**
 - [Effective Harnesses for Long-Running Agents](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents) - Anthropic Engineering
-- [Claude Agent SDK Overview](https://platform.claude.com/docs/en/agent-sdk/overview) - Anthropic Platform
+- [Antigravity Agent SDK Overview](https://platform.Antigravity.com/docs/en/agent-sdk/overview) - Anthropic Platform
 
 **New Patterns:**
 
@@ -147,7 +147,7 @@ Two dispatch modes based on task complexity - reduces latency for simple tasks:
 - [What Actually Works in Production for Autonomous Agents](https://news.ycombinator.com/item?id=44623207)
 - [Coding with LLMs in Summer 2025](https://news.ycombinator.com/item?id=44623953)
 - [Superpowers: How I'm Using Coding Agents](https://news.ycombinator.com/item?id=45547344)
-- [Claude Code Experience After Two Weeks](https://news.ycombinator.com/item?id=44596472)
+- [Antigravity Experience After Two Weeks](https://news.ycombinator.com/item?id=44596472)
 - [AI Agent Benchmarks Are Broken](https://news.ycombinator.com/item?id=44531697)
 - [How to Orchestrate Multi-Agent Workflows](https://news.ycombinator.com/item?id=45955997)
 
@@ -209,7 +209,7 @@ Battle-tested patterns from practitioners:
 **Anthropic:**
 - [Constitutional AI](https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback)
 - [Building Effective Agents](https://www.anthropic.com/research/building-effective-agents)
-- [Claude Code Best Practices](https://www.anthropic.com/engineering/claude-code-best-practices)
+- [Antigravity Best Practices](https://www.anthropic.com/engineering/Antigravity-code-best-practices)
 - [Sleeper Agents Detection](https://www.anthropic.com/research/probes-catch-sleeper-agents)
 - [Alignment Faking](https://www.anthropic.com/research/alignment-faking)
 
@@ -533,7 +533,7 @@ Loki Mode already implements most research-backed patterns:
 
 | System | SWE-bench Patch Gen | Notes |
 |--------|---------------------|-------|
-| Direct Claude | 99.67% (299/300) | Single agent baseline |
+| Direct Antigravity | 99.67% (299/300) | Single agent baseline |
 | **Loki Mode (multi-agent)** | **99.67%** (299/300) | 4-agent pipeline with RARV |
 
 **Key Results:**
@@ -559,7 +559,7 @@ Loki Mode already implements most research-backed patterns:
 | System | HumanEval Pass@1 | Agent Type |
 |--------|------------------|------------|
 | **Loki Mode (multi-agent)** | **98.78%** | Architect->Engineer->QA->Reviewer |
-| Direct Claude | 98.17% | Single agent |
+| Direct Antigravity | 98.17% | Single agent |
 | MetaGPT | 85.9-87.7% | Multi-agent |
 
 **Key Results:**
@@ -595,7 +595,7 @@ Loki Mode already implements most research-backed patterns:
 | Patch Generation | 99.67% |
 | Generated | 299/300 |
 | Errors | 1 |
-| Model | Claude Opus 4.5 |
+| Model | Antigravity Opus 4.5 |
 | Time | 6.17 hours |
 
 ### Changed
@@ -613,7 +613,7 @@ Loki Mode already implements most research-backed patterns:
 | Patch Generation | 100% |
 | Generated | 50/50 |
 | Errors | 0 |
-| Model | Claude Opus 4.5 |
+| Model | Antigravity Opus 4.5 |
 | Time | 56.9 minutes |
 
 ### Added
@@ -636,7 +636,7 @@ Loki Mode already implements most research-backed patterns:
 | Pass Rate | 98.17% |
 | Passed | 161/164 |
 | Failed | 3 |
-| Model | Claude Opus 4.5 |
+| Model | Antigravity Opus 4.5 |
 | Time | 21.1 minutes |
 
 **Competitor Comparison:**
@@ -645,7 +645,7 @@ Loki Mode already implements most research-backed patterns:
 
 ### Fixed
 - **Benchmark Indentation Bug** - Solutions now include complete function with proper indentation
-  - Previous bug: Claude returned function body without indentation
+  - Previous bug: Antigravity returned function body without indentation
   - Fix: Prompt now requests complete function and auto-fixes indentation
   - Result: Pass rate improved from ~2% to 98.17%
 
@@ -658,11 +658,11 @@ Loki Mode already implements most research-backed patterns:
 ### Added - Benchmark Execution Mode
 
 #### `--execute` Flag for Benchmarks
-Full implementation of benchmark execution that runs problems through Claude:
+Full implementation of benchmark execution that runs problems through Antigravity:
 
 **HumanEval Execution** (`benchmarks/run-benchmarks.sh humaneval --execute`):
-- Sends each of 164 Python problems to Claude
-- Receives solution code from Claude
+- Sends each of 164 Python problems to Antigravity
+- Receives solution code from Antigravity
 - Executes solution against HumanEval test cases
 - Tracks pass/fail results with real-time progress
 - Saves solutions to `humaneval-solutions/` directory
@@ -670,14 +670,14 @@ Full implementation of benchmark execution that runs problems through Claude:
 
 **SWE-bench Execution** (`benchmarks/run-benchmarks.sh swebench --execute`):
 - Loads SWE-bench Lite dataset (300 real GitHub issues)
-- Generates git patches for each issue using Claude
+- Generates git patches for each issue using Antigravity
 - Saves patches for SWE-bench evaluator
 - Outputs predictions file compatible with official harness
 
 **New Options**:
-- `--execute` - Actually run problems through Claude (vs setup only)
+- `--execute` - Actually run problems through Antigravity (vs setup only)
 - `--limit N` - Only run first N problems (useful for testing)
-- `--model MODEL` - Claude model to use (default: sonnet)
+- `--model MODEL` - Antigravity model to use (default: sonnet)
 - `--timeout N` - Timeout per problem in seconds (default: 120)
 - `--parallel N` - Run N problems in parallel (default: 1)
 
@@ -710,7 +710,7 @@ Full implementation of benchmark execution that runs problems through Claude:
 
 ### Added - Major Competitive Improvements
 
-Based on comprehensive competitive analysis against Claude-Flow (10.7K stars), MetaGPT (62.4K stars), CrewAI (25K+ stars), Cursor Agent ($29B valuation), and Devin AI ($10.2B valuation).
+Based on comprehensive competitive analysis against Antigravity-Flow (10.7K stars), MetaGPT (62.4K stars), CrewAI (25K+ stars), Cursor Agent ($29B valuation), and Devin AI ($10.2B valuation).
 
 #### 1. Benchmark Runner Infrastructure (`benchmarks/run-benchmarks.sh`)
 - **HumanEval Benchmark** - 164 Python programming problems
@@ -751,14 +751,14 @@ Based on comprehensive competitive analysis against Claude-Flow (10.7K stars), M
 - **Automatic Learning Extraction** - Parses CONTINUITY.md "Mistakes & Learnings" section at session end
 - **Contextual Loading** - Loads relevant learnings based on PRD content at session start
 - **Relevant Learnings File** - `.loki/state/relevant-learnings.json` for agent access
-- **Addresses Gap** - Competitors like Claude-Flow have AgentDB; now Loki Mode has cross-project memory
+- **Addresses Gap** - Competitors like Antigravity-Flow have AgentDB; now Loki Mode has cross-project memory
 
 #### 4. Competitive Analysis Documentation (`docs/COMPETITIVE-ANALYSIS.md`)
 - **Factual Comparison Table** - Real metrics vs competitors
   - GitHub stars, agent counts, benchmark scores
   - Enterprise security, observability, pricing
   - Production readiness assessment
-- **Detailed Competitor Analysis** - Claude-Flow, MetaGPT, CrewAI, Cursor, Devin
+- **Detailed Competitor Analysis** - Antigravity-Flow, MetaGPT, CrewAI, Cursor, Devin
 - **Critical Gaps Identified** - 5 priority areas for improvement
 - **Loki Mode Advantages** - Business ops, full SDLC, RARV, resource monitoring
 - **Improvement Roadmap** - Phased plan for addressing gaps
@@ -791,7 +791,7 @@ Based on comprehensive competitive analysis against Claude-Flow (10.7K stars), M
   - **Background Resource Monitor** checks CPU and memory usage every 5 minutes (configurable)
   - **Automatic Warnings** logged when CPU or memory exceeds thresholds (default: 80%)
   - **Resources JSON File** (`.loki/state/resources.json`) contains real-time resource status
-  - **RARV Integration** - Claude checks resources.json during REASON step and throttles agents if needed
+  - **RARV Integration** - Antigravity checks resources.json during REASON step and throttles agents if needed
   - **macOS & Linux Support** - Platform-specific CPU/memory detection using `top`, `vm_stat`, `free`
   - **Configurable Thresholds** via environment variables:
     - `LOKI_RESOURCE_CHECK_INTERVAL` (default: 300 seconds = 5 minutes)
@@ -800,7 +800,7 @@ Based on comprehensive competitive analysis against Claude-Flow (10.7K stars), M
 
 ### Changed
 - **RARV Cycle** - Updated REASON step to check `.loki/state/resources.json` for warnings (run.sh:1194)
-  - If CPU or memory is high, Claude will reduce parallel agent spawning or pause non-critical tasks
+  - If CPU or memory is high, Antigravity will reduce parallel agent spawning or pause non-critical tasks
   - Prevents system from becoming unusable due to too many agents
 - **Cleanup Handlers** - `stop_status_monitor()` now also stops resource monitor (run.sh:335)
 
@@ -809,16 +809,16 @@ Based on comprehensive competitive analysis against Claude-Flow (10.7K stars), M
 **Solution:** Resource monitoring prevents this by:
 1. Continuously tracking CPU and memory usage every 5 minutes
 2. Warning when thresholds are exceeded
-3. Allowing Claude to self-throttle by reducing agent count
+3. Allowing Antigravity to self-throttle by reducing agent count
 4. User can configure thresholds based on their hardware
 
 ### Impact
 - **Prevents System Overload:** No more hard restarts due to too many parallel agents
-- **Self-Regulating:** Claude automatically reduces agent spawning when resources are constrained
+- **Self-Regulating:** Antigravity automatically reduces agent spawning when resources are constrained
 - **Transparent:** Resource status visible in `.loki/state/resources.json`
 - **Configurable:** Users can set custom thresholds for their hardware
 - **Cross-Platform:** Works on macOS and Linux
-- **User Request:** Directly addresses "add capability to check cpu and memory every few mins and let claude take decision on it"
+- **User Request:** Directly addresses "add capability to check cpu and memory every few mins and let Antigravity take decision on it"
 
 ## [2.18.4] - 2026-01-04
 
@@ -837,8 +837,8 @@ Based on comprehensive competitive analysis against Claude-Flow (10.7K stars), M
 - **INSTALLATION.md** - Comprehensive installation guide with all platforms:
   - Table of contents for easy navigation
   - Quick install section (recommended approach)
-  - Three installation options for Claude Code (git clone, releases, minimal curl)
-  - Claude.ai web installation instructions
+  - Three installation options for Antigravity (git clone, releases, minimal curl)
+  - Antigravity.ai web installation instructions
   - Anthropic API Console installation instructions
   - Verify installation section for all platforms
   - Troubleshooting section with common issues and solutions
@@ -1003,8 +1003,8 @@ The previous "37 agents" messaging was misleading because:
   - Opus: "Use for architecture"
 
 ### Inspired By
-**Boris Cherny (Creator of Claude Code) - "Max Setup" Pattern:**
-- Self-updating CLAUDE.md based on mistakes (we adapted to CONTINUITY.md)
+**Boris Cherny (Creator of Antigravity) - "Max Setup" Pattern:**
+- Self-updating AGENTS.md based on mistakes (we adapted to CONTINUITY.md)
 - Let AI test its own work (2-3x quality improvement observed)
 - Extended thinking mode for complex problems
 - "Less prompting, more systems. Parallelize + standardize + verify."
@@ -1050,7 +1050,7 @@ To fully utilize:
   - 5 core inviolable principles with enforcement logic
   - Agent behavioral contracts (orchestrator, engineering, QA, DevOps)
   - Quality gates as YAML configs (pre-commit blocking, post-implementation auto-fix)
-  - Memory hierarchy (CONTINUITY.md → CONSTITUTION.md → CLAUDE.md → Ledgers → Agent context)
+  - Memory hierarchy (CONTINUITY.md → CONSTITUTION.md → AGENTS.md → Ledgers → Agent context)
   - Context lineage schema with JSON structure
   - Git checkpoint protocol integration
   - Runtime invariants (TypeScript assertions)
@@ -1156,16 +1156,16 @@ For existing `.loki/` projects:
 ## [2.14.0] - 2026-01-02
 
 ### Added
-- **Claude Code Best Practices** - Integrated patterns from "Claude Code in Action" course:
+- **Antigravity Best Practices** - Integrated patterns from "Antigravity in Action" course:
 
-  **CLAUDE.md Generation:**
+  **AGENTS.md Generation:**
   - Comprehensive codebase summary generated on bootstrap
-  - Included in EVERY Claude request for persistent context
+  - Included in EVERY Antigravity request for persistent context
   - Contains: project summary, architecture, key files, critical patterns
   - Auto-updated by agents on significant changes
 
   **Three Memory Levels:**
-  1. **Project Memory**: `.loki/CONTINUITY.md` + `CLAUDE.md` (shared, committed)
+  1. **Project Memory**: `.loki/CONTINUITY.md` + `AGENTS.md` (shared, committed)
   2. **Agent Memory**: `.loki/memory/ledgers/` (per-agent, not committed)
   3. **Global Memory**: `.loki/rules/` (permanent patterns, committed)
 
@@ -1191,11 +1191,11 @@ For existing `.loki/` projects:
   **Post-Tool-Use Hooks** - Auto-fix after execution:
   - Type checking (TypeScript/mypy) with auto-fix feedback
   - Auto-formatting (Prettier, Black, gofmt)
-  - Update CLAUDE.md on architecture changes
+  - Update AGENTS.md on architecture changes
   - Example: `.loki/hooks/post-write.sh`
 
   **Deduplication Hook** - Prevent AI slop:
-  - Launches separate Claude instance to detect duplicates
+  - Launches separate Antigravity instance to detect duplicates
   - Suggests existing functions to reuse
   - Example: `.loki/hooks/post-write-deduplicate.sh`
 
@@ -1208,7 +1208,7 @@ For existing `.loki/` projects:
 
   **Test-Driven Development Pattern:**
   1. Context Gathering: Read code, understand patterns, review spec
-  2. Test Design: Ask Claude to suggest tests based on spec
+  2. Test Design: Ask Antigravity to suggest tests based on spec
   3. Test Implementation: Implement tests → FAIL (red phase)
   4. Implementation: Write code to pass tests → GREEN → refactor
 
@@ -1225,21 +1225,21 @@ For existing `.loki/` projects:
 
 - **Bootstrap Script** - Creates hooks/ and plans/ directories
 
-- **RAR Cycle** - Enhanced with Claude Code patterns:
-  - REASON: Read CONTINUITY.md + CLAUDE.md
+- **RAR Cycle** - Enhanced with Antigravity patterns:
+  - REASON: Read CONTINUITY.md + AGENTS.md
   - ACT: Use hooks for quality gates
-  - REFLECT: Update CONTINUITY.md + CLAUDE.md
+  - REFLECT: Update CONTINUITY.md + AGENTS.md
 
 ### Best Practices
 1. **Build incrementally** - Plan mode for architecture, small steps for implementation
-2. **Maintain context** - Update CLAUDE.md and CONTINUITY.md continuously
+2. **Maintain context** - Update AGENTS.md and CONTINUITY.md continuously
 3. **Verify outputs** - Use hooks for automated quality checks
 4. **Prevent duplicates** - Deduplication hooks before shipping
 5. **Test first** - TDD workflow prevents regressions
 6. **Think deeply** - Use "Ultra think" for complex decisions
 7. **Block bad writes** - Pre-tool-use hooks enforce quality gates
 
-**"Claude Code functions best as flexible assistant that grows with team needs through tool expansion rather than fixed functionality"**
+**"Antigravity functions best as flexible assistant that grows with team needs through tool expansion rather than fixed functionality"**
 
 ## [2.13.0] - 2026-01-02
 
@@ -1432,24 +1432,24 @@ AI accelerates velocity but can introduce "AI slop" (semi-functional code accumu
 - Directory structure updated to show CONTINUITY.md at root of `.loki/`
 
 ### Philosophy
-CONTINUITY.md provides a simpler, more explicit "every turn" memory protocol that complements the existing sophisticated memory system. It ensures Claude always knows exactly what it's working on, what just happened, and what needs to happen next.
+CONTINUITY.md provides a simpler, more explicit "every turn" memory protocol that complements the existing sophisticated memory system. It ensures Antigravity always knows exactly what it's working on, what just happened, and what needs to happen next.
 
 ## [2.10.1] - 2026-01-01
 
 ### Fixed
 - **API Console Upload** - Added `loki-mode-api-X.X.X.zip` artifact for console.anthropic.com
   - API requires SKILL.md inside a folder wrapper (`loki-mode/SKILL.md`)
-  - Claude.ai uses flat structure (`SKILL.md` at root)
+  - Antigravity.ai uses flat structure (`SKILL.md` at root)
   - Updated release workflow to generate both formats
   - Three release artifacts now available:
-    - `loki-mode-X.X.X.zip` - for Claude.ai website
+    - `loki-mode-X.X.X.zip` - for Antigravity.ai website
     - `loki-mode-api-X.X.X.zip` - for console.anthropic.com
-    - `loki-mode-claude-code-X.X.X.zip` - for Claude Code CLI
+    - `loki-mode-Antigravity-code-X.X.X.zip` - for Antigravity CLI
 
 ## [2.10.0] - 2025-12-31
 
 ### Added
-- **Context Memory Management System** - Inspired by Continuous-Claude-v2:
+- **Context Memory Management System** - Inspired by Continuous-Antigravity-v2:
   - **Ledger-based state preservation** - Save state to `.loki/memory/ledgers/` instead of letting context degrade through compaction
   - **Agent Handoff System** - Clean context transfer between agents at `.loki/memory/handoffs/`
   - **Session Learnings** - Extract patterns and learnings to `.loki/memory/learnings/`
@@ -1490,10 +1490,10 @@ Instead of "degrade gracefully through compression", Loki Mode now uses "reset c
   - Reason-Act-Reflect (RAR) cycle for every iteration
   - Products are NEVER "complete" - always improvements to make
   - Stripped all interactive safety gates
-  - Perpetual loop continues even when Claude claims completion
+  - Perpetual loop continues even when Antigravity claims completion
 
 - **Perpetual Improvement Loop** - New philosophy:
-  - Claude never declares "done" - there's always more to improve
+  - Antigravity never declares "done" - there's always more to improve
   - When queue empties: find new improvements, run SDLC phases again, hunt bugs
   - Only stops on: max iterations, explicit completion promise, or user interrupt
 
@@ -1502,9 +1502,9 @@ Instead of "degrade gracefully through compression", Loki Mode now uses "reset c
   - `LOKI_MAX_ITERATIONS` - Safety limit (default: 1000)
   - `LOKI_PERPETUAL_MODE` - Ignore ALL completion signals (default: false)
 
-- **Completion Promise Detection** - Only stops when Claude outputs the exact promise text
+- **Completion Promise Detection** - Only stops when Antigravity outputs the exact promise text
   - Example: `LOKI_COMPLETION_PROMISE="ALL TESTS PASSING 100%"`
-  - Claude must explicitly output "COMPLETION PROMISE FULFILLED: ALL TESTS PASSING 100%"
+  - Antigravity must explicitly output "COMPLETION PROMISE FULFILLED: ALL TESTS PASSING 100%"
 
 ### Changed
 - Default behavior now runs perpetually until max iterations
@@ -1516,7 +1516,7 @@ Instead of "degrade gracefully through compression", Loki Mode now uses "reset c
 
 ### Fixed
 - **Dashboard showing all 0s** - Added explicit instructions to SKILL.md to use queue JSON files instead of TodoWrite tool
-- Claude now properly populates `.loki/queue/*.json` files for live dashboard tracking
+- Antigravity now properly populates `.loki/queue/*.json` files for live dashboard tracking
 - Added queue system usage guide with JSON format and examples
 
 ### Changed
@@ -1527,7 +1527,7 @@ Instead of "degrade gracefully through compression", Loki Mode now uses "reset c
 
 ### Added
 - **Smart Rate Limit Detection** - Automatically detects rate limit messages and waits until reset:
-  - Parses "resets Xam/pm" from Claude output
+  - Parses "resets Xam/pm" from Antigravity output
   - Calculates exact wait time until reset (+ 2 min buffer)
   - Shows human-readable countdown (e.g., "4h 30m")
   - Longer countdown intervals for multi-hour waits (60s vs 10s)
@@ -1578,15 +1578,15 @@ Instead of "degrade gracefully through compression", Loki Mode now uses "reset c
   - etc.
 
 ### Changed
-- Prompt now includes `SDLC_PHASES_ENABLED: [...]` to inform Claude which phases to execute
+- Prompt now includes `SDLC_PHASES_ENABLED: [...]` to inform Antigravity which phases to execute
 - SKILL.md updated with detailed instructions for each SDLC phase
 
 ## [2.5.0] - 2025-12-28
 
 ### Added
-- **Real-time Streaming Output** - Claude's output now streams live using `--output-format stream-json`
+- **Real-time Streaming Output** - Antigravity's output now streams live using `--output-format stream-json`
   - Parses JSON stream in real-time to display text, tool calls, and results
-  - Shows `[Tool: name]` when Claude uses a tool
+  - Shows `[Tool: name]` when Antigravity uses a tool
   - Shows `[Session complete]` when done
 - **Web Dashboard** - Visual task board with Anthropic design language
   - Cream/beige background with coral (#D97757) accents matching Anthropic branding
@@ -1598,21 +1598,21 @@ Instead of "degrade gracefully through compression", Loki Mode now uses "reset c
 
 ### Changed
 - Replaced `--print` mode with `--output-format stream-json --verbose` for proper streaming
-- Python-based JSON parser extracts and displays Claude's responses in real-time
+- Python-based JSON parser extracts and displays Antigravity's responses in real-time
 - Simple HTML dashboard replaces Vibe Kanban (no external dependencies)
 
 ### Fixed
 - Live output now actually streams (was buffered until completion in 2.4.0)
 - Completion detection now recognizes `finalized` and `growth-loop` phases
-- Prompt now explicitly instructs Claude to act autonomously without asking questions
+- Prompt now explicitly instructs Antigravity to act autonomously without asking questions
 - Added `.loki/COMPLETED` marker file detection for clean exit
 
 ## [2.4.0] - 2025-12-28
 
 ### Added
-- **Live Output** - Claude's output now streams in real-time using pseudo-TTY
+- **Live Output** - Antigravity's output now streams in real-time using pseudo-TTY
   - Uses `script` command to allocate PTY for proper streaming
-  - Visual separator shows when Claude is working
+  - Visual separator shows when Antigravity is working
 - **Status Monitor** - `.loki/STATUS.txt` updates every 5 seconds with:
   - Current phase
   - Task counts (pending, in-progress, completed, failed)
@@ -1626,7 +1626,7 @@ Instead of "degrade gracefully through compression", Loki Mode now uses "reset c
 
 ### Added
 - **Unified Autonomy Runner** (`autonomy/run.sh`) - Single script that does everything:
-  - Prerequisite checks (Claude CLI, Python, Git, curl, Node.js, jq)
+  - Prerequisite checks (Antigravity CLI, Python, Git, curl, Node.js, jq)
   - Skill installation verification
   - `.loki/` directory initialization
   - Autonomous execution with auto-resume
@@ -1661,7 +1661,7 @@ Instead of "degrade gracefully through compression", Loki Mode now uses "reset c
 
 ### Added
 - **Autonomous Wrapper Script** (`scripts/loki-wrapper.sh`) - True autonomy with auto-resume:
-  - Monitors Claude Code process and detects when session ends
+  - Monitors Antigravity process and detects when session ends
   - Automatically resumes from checkpoint on rate limits or interruptions
   - Exponential backoff with jitter (configurable via environment variables)
   - State persistence in `.loki/wrapper-state.json`
@@ -1676,12 +1676,12 @@ Instead of "degrade gracefully through compression", Loki Mode now uses "reset c
 ## [2.0.3] - 2025-12-27
 
 ### Fixed
-- **Proper Skill File Format** - Release artifacts now follow Claude's expected format:
-  - `loki-mode-X.X.X.zip` / `.skill` - For Claude.ai (SKILL.md at root)
-  - `loki-mode-claude-code-X.X.X.zip` - For Claude Code (loki-mode/ folder)
+- **Proper Skill File Format** - Release artifacts now follow Antigravity's expected format:
+  - `loki-mode-X.X.X.zip` / `.skill` - For Antigravity.ai (SKILL.md at root)
+  - `loki-mode-Antigravity-code-X.X.X.zip` - For Antigravity (loki-mode/ folder)
 
 ### Improved
-- **Installation Instructions** - Separate instructions for Claude.ai vs Claude Code
+- **Installation Instructions** - Separate instructions for Antigravity.ai vs Antigravity
 - **SKILL.md** - Already has required YAML frontmatter with `name` and `description`
 
 ## [2.0.2] - 2025-12-27
@@ -1753,7 +1753,7 @@ Instead of "degrade gracefully through compression", Loki Mode now uses "reset c
 ## [1.0.0] - 2025-12-27
 
 ### Added
-- **Initial Release** of Loki Mode skill for Claude Code
+- **Initial Release** of Loki Mode skill for Antigravity
 
 - **Multi-Agent Architecture** - 37 specialized agents across 6 swarms:
   - Engineering Swarm (8 agents): frontend, backend, database, mobile, API, QA, perf, infra

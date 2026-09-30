@@ -8,7 +8,7 @@ source_type: self
 date_added: "2026-04-16"
 author: community
 tags: [mise, devops, ci-cd, toolchain, runtimes, automation]
-tools: [claude, cursor, gemini]
+tools: [Antigravity, cursor, gemini]
 ---
 # Mise Configurator
 

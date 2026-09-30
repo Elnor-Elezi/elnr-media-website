@@ -8,7 +8,7 @@ source_type: self
 date_added: "2026-06-18"
 author: Owais
 tags: [android, journey-testing, ui-verification, testing, adb, automation]
-tools: [claude, cursor, gemini, antigravity]
+tools: [Antigravity, cursor, gemini, antigravity]
 ---
 
 # Android UI Journey Testing

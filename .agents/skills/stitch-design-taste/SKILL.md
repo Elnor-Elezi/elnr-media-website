@@ -9,7 +9,7 @@ source_type: community
 date_added: "2026-04-17"
 author: Leonxlnx
 tags: [stitch, design-system, frontend, ui]
-tools: [claude, cursor, codex, antigravity]
+tools: [Antigravity, cursor, codex, antigravity]
 ---
 # Stitch Design Taste — Semantic Design System Skill
 

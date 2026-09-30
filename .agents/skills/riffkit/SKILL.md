@@ -9,7 +9,7 @@ source_type: community
 date_added: "2026-07-01"
 author: riffkit
 tags: [video, short-form, tiktok, ai-video, marketing, ads, ecommerce, api-integration]
-tools: [claude, cursor, gemini, codex, antigravity]
+tools: [Antigravity, cursor, gemini, codex, antigravity]
 plugin:
   setup:
     type: manual

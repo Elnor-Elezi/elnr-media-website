@@ -8,8 +8,8 @@ source_repo: runapi-ai/cli-skill
 source_type: official
 date_added: "2026-06-07"
 author: runapi-ai
-tags: [runapi, cli, models, automation, codex, claude, gemini]
-tools: [claude, codex, gemini, cursor, antigravity]
+tags: [runapi, cli, models, automation, codex, Antigravity, gemini]
+tools: [Antigravity, codex, gemini, cursor, antigravity]
 license: "Apache-2.0"
 license_source: "https://github.com/runapi-ai/cli-skill/blob/main/LICENSE"
 ---
@@ -111,7 +111,7 @@ runapi account balance
 ## Install the Skill Into Another Agent Runtime
 
 ```shell
-runapi agent install-skill --target claude
+runapi agent install-skill --target Antigravity
 runapi agent install-skill --target codex
 runapi agent install-skill --target gemini
 runapi agent install-skill --target openclaw

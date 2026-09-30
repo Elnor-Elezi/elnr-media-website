@@ -21,7 +21,7 @@ tags:
   - market-research
   - browser-automation
 tools:
-  - claude-code
+  - Antigravity-code
   - codex-cli
   - cursor
 ---
@@ -39,7 +39,7 @@ Analyze a user's competitors. Uses Browserbase Search API for discovery and a 4-
 
 **Required**: `BROWSERBASE_API_KEY` env var and the `browse` CLI installed (`npm install -g browse`).
 
-**First-run setup**: On the first run you'll be prompted to approve `browse cloud fetch`, `browse cloud search`, `cat`, `mkdir`, `sed`, etc. Select **"Yes, and don't ask again for: browse cloud fetch:\*"** (or equivalent) for each. To permanently approve, add these to your `~/.claude/settings.json` under `permissions.allow`:
+**First-run setup**: On the first run you'll be prompted to approve `browse cloud fetch`, `browse cloud search`, `cat`, `mkdir`, `sed`, etc. Select **"Yes, and don't ask again for: browse cloud fetch:\*"** (or equivalent) for each. To permanently approve, add these to your `~/.Antigravity/settings.json` under `permissions.allow`:
 ```json
 "Bash(browse:*)", "Bash(bunx:*)", "Bash(bun:*)", "Bash(node:*)",
 "Bash(cat:*)", "Bash(mkdir:*)", "Bash(sed:*)", "Bash(head:*)", "Bash(tr:*)", "Bash(rm:*)"

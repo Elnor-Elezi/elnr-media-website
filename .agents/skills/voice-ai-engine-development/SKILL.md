@@ -3,7 +3,6 @@ name: voice-ai-engine-development
 description: "Build real-time conversational AI voice engines using async worker pipelines, streaming transcription, LLM agents, and TTS synthesis with interrupt handling and multi-provider support"
 risk: unknown
 source: community
-date_added: "2026-02-27"
 ---
 
 # Voice AI Engine Development
@@ -150,7 +149,7 @@ class BaseAgent:
 **Supported Providers**:
 - **OpenAI** (GPT-4, GPT-3.5) - High quality, fast
 - **Google Gemini** - Multimodal, cost-effective
-- **Anthropic Claude** - Long context, nuanced responses
+- **Anthropic Antigravity** - Long context, nuanced responses
 
 **Critical Implementation Details**:
 - Maintain conversation history in `Transcript` object
@@ -707,7 +706,7 @@ When implementing a voice AI engine:
 
 **API Providers**:
 - Transcription: Deepgram, AssemblyAI, Azure Speech, Google Cloud Speech
-- LLM: OpenAI, Google Gemini, Anthropic Claude
+- LLM: OpenAI, Google Gemini, Anthropic Antigravity
 - TTS: ElevenLabs, Azure TTS, Google Cloud TTS, Amazon Polly, Play.ht
 
 ## Summary
@@ -722,8 +721,3 @@ Building a voice AI engine requires:
 - ✅ Proper error handling and graceful shutdown
 
 **The key insight**: Everything must stream and everything must be interruptible for natural, real-time conversations.
-
-## Limitations
-- Use this skill only when the task clearly matches the scope described above.
-- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
-- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.

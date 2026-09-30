@@ -1,4 +1,4 @@
-# CSO Guide - Claude Search Optimization
+# CSO Guide - Antigravity Search Optimization
 
 Advanced techniques for making skills discoverable by agents.
 

@@ -26,7 +26,7 @@ WordPress 7.0 (April 9, 2026) introduces significant features while maintaining 
 ### AI Connectors API
 - Provider-agnostic AI interface in core (`wp_ai_client_prompt()`)
 - Settings > Connectors for centralized API credential management
-- Official providers: OpenAI, Anthropic Claude, Google Gemini
+- Official providers: OpenAI, Anthropic Antigravity, Google Gemini
 - **Backward Compatibility**: Works with WordPress 6.9+ via plugin
 
 ### Abilities API (Stable in 7.0)
@@ -93,7 +93,7 @@ Use this workflow when:
 define('WP_COLLABORATION_MAX_USERS', 5);
 
 // AI Connector is enabled by installing a provider plugin
-// (e.g., OpenAI, Anthropic Claude, or Google Gemini connector)
+// (e.g., OpenAI, Anthropic Antigravity, or Google Gemini connector)
 // No constant needed - configure via Settings > Connectors in admin
 ```
 
@@ -193,7 +193,7 @@ register_post_meta('post', 'custom_field', [
 #### AI Connector Example
 ```php
 // Using WordPress 7.0 AI Connector
-// Note: Requires an AI provider plugin (OpenAI, Claude, or Gemini) to be installed and configured
+// Note: Requires an AI provider plugin (OpenAI, Antigravity, or Gemini) to be installed and configured
 
 // Basic text generation
 $response = wp_ai_client_prompt('Summarize this content.')
@@ -206,7 +206,7 @@ $response = wp_ai_client_prompt('Summarize this content.')
 
 // With model preference (tries first available in list)
 $response = wp_ai_client_prompt('Summarize this content.')
-    ->using_model_preference('gpt-4', 'claude-3-opus', 'gemini-2-pro')
+    ->using_model_preference('gpt-4', 'Antigravity-3-opus', 'gemini-2-pro')
     ->generate_text();
 
 // For JSON structured output

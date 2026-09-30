@@ -14,7 +14,7 @@ tags:
 - c++
 - c
 tools:
-- claude-code
+- Antigravity-code
 - cursor
 - gemini-cli
 - codex-cli

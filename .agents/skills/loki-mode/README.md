@@ -2,7 +2,7 @@
 
 **The First Truly Autonomous Multi-Agent Startup System**
 
-[![Claude Code](https://img.shields.io/badge/Claude-Code-orange)](https://claude.ai)
+[![Antigravity](https://img.shields.io/badge/Antigravity-Code-orange)](https://Antigravity.ai)
 [![Agent Types](https://img.shields.io/badge/Agent%20Types-37-blue)]()
 [![Loki Mode](https://img.shields.io/badge/Loki%20Mode-98.78%25%20Pass%401-blueviolet)](benchmarks/results/)
 [![HumanEval](https://img.shields.io/badge/HumanEval-98.17%25%20Pass%401-brightgreen)](benchmarks/results/)
@@ -30,7 +30,7 @@
 | System | Pass@1 | Details |
 |--------|--------|---------|
 | **Loki Mode (Multi-Agent)** | **98.78%** | 162/164 problems, RARV cycle recovered 2 |
-| Direct Claude | 98.17% | 161/164 problems (baseline) |
+| Direct Antigravity | 98.17% | 161/164 problems (baseline) |
 | MetaGPT | 85.9-87.7% | Published benchmark |
 
 **Loki Mode beats MetaGPT by +11-13%** thanks to the RARV (Reason-Act-Reflect-Verify) cycle.
@@ -40,12 +40,12 @@
 | Benchmark | Score | Details |
 |-----------|-------|---------|
 | **Loki Mode HumanEval** | **98.78% Pass@1** | 162/164 (multi-agent with RARV) |
-| **Direct Claude HumanEval** | **98.17% Pass@1** | 161/164 (single agent baseline) |
-| **Direct Claude SWE-bench** | **99.67% patch gen** | 299/300 problems |
+| **Direct Antigravity HumanEval** | **98.17% Pass@1** | 161/164 (single agent baseline) |
+| **Direct Antigravity SWE-bench** | **99.67% patch gen** | 299/300 problems |
 | **Loki Mode SWE-bench** | **99.67% patch gen** | 299/300 problems |
-| Model | Claude Opus 4.5 | |
+| Model | Antigravity Opus 4.5 | |
 
-**Key Finding:** Multi-agent RARV matches single-agent performance on both benchmarks after timeout optimization. The 4-agent pipeline (Architect->Engineer->QA->Reviewer) achieves the same 99.67% patch generation as direct Claude.
+**Key Finding:** Multi-agent RARV matches single-agent performance on both benchmarks after timeout optimization. The 4-agent pipeline (Architect->Engineer->QA->Reviewer) achieves the same 99.67% patch generation as direct Antigravity.
 
 See [benchmarks/results/](benchmarks/results/) for full methodology and solutions.
 
@@ -53,7 +53,7 @@ See [benchmarks/results/](benchmarks/results/) for full methodology and solution
 
 ## What is Loki Mode?
 
-Loki Mode is a Claude Code skill that orchestrates **37 specialized AI agent types** across **6 swarms** to autonomously build, test, deploy, and scale complete startups. It dynamically spawns only the agents you need—**5-10 for simple projects, 100+ for complex startups**—working in parallel with continuous self-verification.
+Loki Mode is a Antigravity skill that orchestrates **37 specialized AI agent types** across **6 swarms** to autonomously build, test, deploy, and scale complete startups. It dynamically spawns only the agents you need—**5-10 for simple projects, 100+ for complex startups**—working in parallel with continuous self-verification.
 
 ```
 PRD → Research → Architecture → Development → Testing → Deployment → Marketing → Revenue
@@ -228,8 +228,8 @@ There is **NEVER** a "finished" state. After completing the PRD, Loki Mode:
 ### **1. Install**
 
 ```bash
-# Clone to your Claude Code skills directory
-git clone https://github.com/asklokesh/loki-mode.git ~/.claude/skills/loki-mode
+# Clone to your Antigravity skills directory
+git clone https://github.com/asklokesh/loki-mode.git ~/.Antigravity/skills/loki-mode
 ```
 
 See [INSTALLATION.md](INSTALLATION.md) for other installation methods (Web, API Console, minimal curl install).
@@ -265,7 +265,7 @@ Save as `my-prd.md`.
 ./autonomy/run.sh ./my-prd.md
 
 # Or manual mode
-claude --dangerously-skip-permissions
+Antigravity --dangerously-skip-permissions
 > Loki Mode with PRD at ./my-prd.md
 ```
 
@@ -432,7 +432,7 @@ channels:
 
 ## Requirements
 
-- **Claude Code** with `--dangerously-skip-permissions` flag
+- **Antigravity** with `--dangerously-skip-permissions` flag
 - **Internet access** for competitive research and deployment
 - **Cloud provider credentials** (for deployment phase)
 - **Python 3** (for test suite)
@@ -521,7 +521,7 @@ Loki Mode incorporates research and patterns from leading AI labs and practition
 
 ### Practitioner Insights
 
-- **Boris Cherny** (Claude Code creator) - Self-verification loop, extended thinking
+- **Boris Cherny** (Antigravity creator) - Self-verification loop, extended thinking
 - **Simon Willison** - Sub-agents for context isolation, skills system
 - **Hacker News Community** - [Production patterns](https://news.ycombinator.com/item?id=44623207) from real deployments
 
@@ -532,17 +532,17 @@ Loki Mode incorporates research and patterns from leading AI labs and practition
 
 **[Full Acknowledgements](ACKNOWLEDGEMENTS.md)** - Complete list of 50+ research papers, articles, and resources
 
-Built for the [Claude Code](https://claude.ai) ecosystem, powered by Anthropic's Claude models (Sonnet, Haiku, Opus).
+Built for the [Antigravity](https://Antigravity.ai) ecosystem, powered by Anthropic's Antigravity models (Sonnet, Haiku, Opus).
 
 ---
 
 **Ready to build a startup while you sleep?**
 
 ```bash
-git clone https://github.com/asklokesh/loki-mode.git ~/.claude/skills/loki-mode
+git clone https://github.com/asklokesh/loki-mode.git ~/.Antigravity/skills/loki-mode
 ./autonomy/run.sh your-prd.md
 ```
 
 ---
 
-**Keywords:** claude-code, claude-skills, ai-agents, autonomous-development, multi-agent-system, sdlc-automation, startup-automation, devops, mlops, deployment-automation, self-healing, perpetual-improvement
+**Keywords:** Antigravity-code, Antigravity-skills, ai-agents, autonomous-development, multi-agent-system, sdlc-automation, startup-automation, devops, mlops, deployment-automation, self-healing, perpetual-improvement

@@ -9,7 +9,7 @@ source_type: community
 date_added: "2026-04-08"
 author: monte-carlo-data
 tags: [data-observability, monitoring, monte-carlo, monitors-as-code]
-tools: [claude, cursor, codex]
+tools: [Antigravity, cursor, codex]
 ---
 
 # Monte Carlo Monitor Creation Skill

@@ -2,7 +2,7 @@
 name: ui-page
 description: Scaffold a new mobile page/screen using the StyleSeed layout patterns
 risk: unknown
-source: https://github.com/bitjaru/styleseed/tree/main/engine/.claude/skills/ss-page
+source: https://github.com/bitjaru/styleseed/tree/main/engine/.Antigravity/skills/ss-page
 source_repo: bitjaru/styleseed
 source_type: community
 date_added: 2026-07-01
@@ -29,7 +29,7 @@ Description: $ARGUMENTS
 ## Instructions
 
 1. Read the design system reference:
-   - `CLAUDE.md` for file structure and conventions
+   - `AGENTS.md` for file structure and conventions
    - `components/patterns/page-shell.tsx` for page layout
    - `components/patterns/top-bar.tsx` for header pattern
    - `components/patterns/bottom-nav.tsx` for navigation

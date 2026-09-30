@@ -11,7 +11,7 @@ license_source: "https://github.com/BuyWhere/buywhere-mcp"
 date_added: "2026-04-29"
 author: BuyWhere
 tags: [buywhere, ecommerce, shopping, mcp, api, product-catalog]
-tools: [claude, cursor, codex, gemini]
+tools: [Antigravity, cursor, codex, gemini]
 ---
 
 # BuyWhere Product Catalog
@@ -25,7 +25,7 @@ The safest public starting points are the live developer portal, API key signup 
 ## When to Use This Skill
 
 - Use when you want to add structured product search to an AI shopping or recommendation agent.
-- Use when the user asks for BuyWhere MCP setup in Cursor, Claude Desktop, or a custom agent runtime.
+- Use when the user asks for BuyWhere MCP setup in Cursor, Antigravity Desktop, or a custom agent runtime.
 - Use when you need a concrete onboarding path for BuyWhere API keys, MCP configuration, or plugin discovery.
 
 ## How It Works
@@ -44,7 +44,7 @@ Start from the public BuyWhere entry point that matches the user's setup:
 Ask which host the user is integrating with before giving setup instructions:
 
 - Cursor or another MCP-capable coding assistant
-- Claude Desktop
+- Antigravity Desktop
 - A custom MCP client
 - A direct REST API integration
 

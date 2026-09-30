@@ -1,9 +1,8 @@
 ---
 name: similarity-search-patterns
 description: "Implement efficient similarity search with vector databases. Use when building semantic search, implementing nearest neighbor queries, or optimizing retrieval performance."
-risk: safe
+risk: unknown
 source: community
-date_added: "2026-02-27"
 ---
 
 # Similarity Search Patterns
@@ -34,8 +33,3 @@ Patterns for implementing efficient similarity search in production systems.
 ## Resources
 
 - `resources/implementation-playbook.md` for detailed patterns and examples.
-
-## Limitations
-- Use this skill only when the task clearly matches the scope described above.
-- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
-- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.

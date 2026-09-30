@@ -11,7 +11,7 @@ tags:
 - open-source
 - education
 tools:
-- claude-code
+- Antigravity-code
 - antigravity
 - cursor
 - gemini-cli
