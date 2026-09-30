@@ -1,13 +1,13 @@
 "use client";
 import { motion } from 'framer-motion'
 import { Target, Shield, Rocket, Users, CheckCircle, ArrowRight } from 'lucide-react'
-import { IMAGES, useSectionInView, fadeInUp, stagger } from '../hooks'
-import FinalCta from '../components/FinalCta'
-import SEO from '../components/SEO'
-import PageTransition from '../components/PageTransition'
-import AnimatedAuroraBackground from '../components/backgrounds/AnimatedAuroraBackground'
-import FloatingGlassShapes from '../components/backgrounds/FloatingGlassShapes'
-import ParallaxBackgroundAccents from '../components/backgrounds/ParallaxBackgroundAccents'
+import { IMAGES, useSectionInView, fadeInUp, stagger } from '../../hooks'
+import FinalCta from '../../components/FinalCta'
+import SEO from '../../components/SEO'
+import PageTransition from '../../components/PageTransition'
+import AnimatedAuroraBackground from '../../components/backgrounds/AnimatedAuroraBackground'
+import FloatingGlassShapes from '../../components/backgrounds/FloatingGlassShapes'
+import ParallaxBackgroundAccents from '../../components/backgrounds/ParallaxBackgroundAccents'
 const values = [
   {
     icon: Target,

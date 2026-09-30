@@ -1,8 +1,8 @@
 "use client";
 import { useEffect } from 'react'
-import SEO from '../components/SEO'
-import FinalCta from '../components/FinalCta'
-import PageTransition from '../components/PageTransition'
+import SEO from '../../components/SEO'
+import FinalCta from '../../components/FinalCta'
+import PageTransition from '../../components/PageTransition'
 
 export default function TermsOfService() {
   useEffect(() => {

@@ -1,13 +1,13 @@
 "use client";
 import { motion } from 'framer-motion'
-import Services from '../components/Services'
-import Process from '../components/Process'
-import CaseStudyShowcase from '../components/CaseStudyShowcase'
-import RoiCalculator from '../components/RoiCalculator'
-import ImageBreak from '../components/ImageBreak'
-import FinalCta from '../components/FinalCta'
-import SEO from '../components/SEO'
-import PageTransition from '../components/PageTransition'
+import Services from '../../components/Services'
+import Process from '../../components/Process'
+import CaseStudyShowcase from '../../components/CaseStudyShowcase'
+import RoiCalculator from '../../components/RoiCalculator'
+import ImageBreak from '../../components/ImageBreak'
+import FinalCta from '../../components/FinalCta'
+import SEO from '../../components/SEO'
+import PageTransition from '../../components/PageTransition'
 
 export default function ServicesPage() {
   return (

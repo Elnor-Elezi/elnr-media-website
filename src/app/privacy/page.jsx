@@ -1,8 +1,8 @@
 "use client";
 import { useEffect } from 'react'
-import FinalCta from '../components/FinalCta'
-import SEO from '../components/SEO'
-import PageTransition from '../components/PageTransition'
+import FinalCta from '../../components/FinalCta'
+import SEO from '../../components/SEO'
+import PageTransition from '../../components/PageTransition'
 
 export default function PrivacyPolicy() {
   useEffect(() => {

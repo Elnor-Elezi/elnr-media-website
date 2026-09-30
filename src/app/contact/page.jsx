@@ -2,10 +2,10 @@
 import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { Mail, MapPin, Phone } from 'lucide-react'
-import { IMAGES } from '../hooks'
-import SEO from '../components/SEO'
-import PageTransition from '../components/PageTransition'
-import InteractiveDiscoveryForm from '../components/InteractiveDiscoveryForm'
+import { IMAGES } from '../../hooks'
+import SEO from '../../components/SEO'
+import PageTransition from '../../components/PageTransition'
+import InteractiveDiscoveryForm from '../../components/InteractiveDiscoveryForm'
 
 export default function ContactPage() {
   const ref = useRef(null)

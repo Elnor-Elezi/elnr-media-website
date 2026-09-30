@@ -3,13 +3,13 @@ import { useEffect, useMemo } from 'react'
 import Link from 'next/link';
 import { useParams, useRouter } from 'next/navigation';
 import { motion } from 'framer-motion'
-import SEO from '../components/SEO'
-import PageTransition from '../components/PageTransition'
+import SEO from '../../../components/SEO'
+import PageTransition from '../../../components/PageTransition'
 import { 
   Smartphone, Code, Mail, GitBranch, Database, Film, 
   CheckCircle2, ArrowRight, Zap, Target, TrendingUp, Users
 } from 'lucide-react'
-import { fadeInUp, stagger } from '../hooks'
+import { fadeInUp, stagger } from '../../../hooks'
 
 // Rich, non-generic data for each service
 const servicesData = {
