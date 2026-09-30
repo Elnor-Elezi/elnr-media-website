@@ -8,6 +8,7 @@ import Magnetic from './Magnetic'
 import AnimatedAuroraBackground from './backgrounds/AnimatedAuroraBackground'
 import dynamic from 'next/dynamic'
 import ParallaxBackgroundAccents from './backgrounds/ParallaxBackgroundAccents'
+import LiquidGlass from './ui/LiquidGlass'
 
 const Reactive3DShapes = dynamic(() => import('./backgrounds/Reactive3DShapes'), {
   ssr: false,
@@ -29,10 +30,12 @@ function AnimatedStat({ end, suffix, label }) {
   const { count, ref } = useCounter(end, 2200)
   return (
     <div ref={ref} className="text-center p-4">
-      <div className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-navy-900 dark:text-white mb-2 pb-2">
-        {count}<span className="text-brand-500">{suffix}</span>
-      </div>
-      <div className="text-xs sm:text-sm text-charcoal-500 dark:text-charcoal-300 font-medium uppercase tracking-wider">{label}</div>
+      <LiquidGlass background="#home" className="relative block w-full h-full bg-white/5 rounded-xl border border-white/10" scale={10} width={200} height={120}>
+        <div className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-navy-900 dark:text-white mb-2 pb-2">
+          {count}<span className="text-brand-500">{suffix}</span>
+        </div>
+        <div className="text-xs sm:text-sm text-charcoal-500 dark:text-charcoal-300 font-medium uppercase tracking-wider">{label}</div>
+      </LiquidGlass>
     </div>
   )
 }

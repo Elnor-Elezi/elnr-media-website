@@ -3,6 +3,7 @@ import { useRef, useMemo } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { Sphere, MeshDistortMaterial, Float } from '@react-three/drei'
 import * as THREE from 'three'
+import { ShaderGradient } from 'shadergradient'
 
 function LiquidSphere() {
   const meshRef = useRef()
@@ -106,6 +107,24 @@ export default function Reactive3DShapes() {
         <directionalLight position={[-10, -10, -5]} intensity={1.5} color="#14b8a6" />
         <pointLight position={[0, -5, 5]} intensity={2} color="#050505" />
         
+        <ShaderGradient 
+          control="query" 
+          color1="#0a0a0a" 
+          color2="#14b8a6" 
+          color3="#050505" 
+          type="waterPlane" 
+          cAzimuthAngle={180} 
+          cPolarAngle={90} 
+          cameraZoom={1}
+          envPreset="city"
+          rotationX={0} 
+          rotationY={0} 
+          rotationZ={50}
+          wireframe={false}
+          position={[0, 0, -2]} // Put behind everything
+          scale={[10, 10, 1]}
+        />
+
         <LiquidSphere />
         <FloatingParticles count={30} />
       </Canvas>
