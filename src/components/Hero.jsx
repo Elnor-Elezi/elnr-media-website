@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import { useCounter } from '../hooks'
 import Magnetic from './Magnetic'
 import AnimatedAuroraBackground from './backgrounds/AnimatedAuroraBackground'
-import FloatingGlassShapes from './backgrounds/FloatingGlassShapes'
+import Reactive3DShapes from './backgrounds/Reactive3DShapes'
 import ParallaxBackgroundAccents from './backgrounds/ParallaxBackgroundAccents'
 
 const stats = [
@@ -137,8 +137,8 @@ export default function Hero() {
         </div>
 
         {/* Right column: Movement Object */}
-        <div className="absolute lg:relative right-[-20%] lg:right-[-20%] xl:right-[-30%] top-[20%] lg:top-0 w-[400px] h-[400px] sm:w-[600px] sm:h-[600px] lg:w-[800px] lg:h-[800px] xl:w-[1000px] xl:h-[1000px] flex justify-end opacity-30 lg:opacity-100 pointer-events-none lg:pointer-events-auto order-1 lg:order-2 lg:scale-125 xl:scale-150 origin-right lg:translate-x-12 xl:translate-x-24">
-          <FloatingGlassShapes variant="hero" />
+        <div className="absolute lg:relative right-[-20%] lg:right-0 top-[10%] lg:top-0 w-[400px] h-[400px] sm:w-[600px] sm:h-[600px] lg:w-[800px] lg:h-[800px] xl:w-[1000px] xl:h-[1000px] flex justify-end opacity-60 lg:opacity-100 pointer-events-auto order-1 lg:order-2">
+          <Reactive3DShapes />
         </div>
 
       </motion.div>

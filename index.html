@@ -2,39 +2,55 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
 
     <!-- Primary SEO -->
     <meta name="google-site-verification" content="d8m4u6LO0amz06mwqVPq4z8_WrRSyUUdKn-ML-sbKts" />
-    <title>Proven Media Systems for Brand Growth | ELNR Media</title>
-    <meta name="description" content="We build proven media systems to help B2B brands scale. We get you more attention, run ads that capture it, and build funnels that turn it into revenue." />
-    <meta name="keywords" content="B2B lead generation, Meta ads management, LinkedIn advertising, automated sales funnels, CRM implementation, B2B content creation, web development" />
-    <meta name="author" content="ELNR Media" />
-    <meta name="robots" content="index, follow" />
+    <title>ELNR Media | Proven B2B Media Systems for Brand Growth</title>
+    <meta name="description" content="ELNR Media builds B2B media systems — content, paid ads, funnels & CRM — that turn attention into predictable revenue. Book a free growth audit." />
+    <meta name="keywords" content="B2B lead generation, Meta ads management, LinkedIn advertising, automated sales funnels, CRM implementation, B2B content creation, web development, Albania marketing agency" />
+    <meta name="author" content="ELNR Media — Elnor Elezi" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+    <!-- Canonical + Hreflang -->
+    <link rel="canonical" href="https://elnrmedia.com/" />
+    <link rel="alternate" hreflang="en" href="https://elnrmedia.com/" />
+    <link rel="alternate" hreflang="x-default" href="https://elnrmedia.com/" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://elnrmedia.com" />
-    <meta property="og:title" content="ELNR Media | Proven Media Systems for Brand Growth" />
-    <meta property="og:description" content="Complete content, advertising, and funnel systems for businesses ready to scale with clarity, consistency, and authority." />
+    <meta property="og:url" content="https://elnrmedia.com/" />
+    <meta property="og:title" content="ELNR Media | Proven B2B Media Systems for Brand Growth" />
+    <meta property="og:description" content="Complete content, advertising, funnel and CRM systems for B2B brands ready to scale with clarity, consistency, and authority." />
     <meta property="og:image" content="https://elnrmedia.com/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:site_name" content="ELNR Media" />
     <meta property="og:locale" content="en_US" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="ELNR Media | Proven Media Systems for Brand Growth" />
-    <meta name="twitter:description" content="Complete content, advertising, and funnel systems for businesses ready to scale with clarity, consistency, and authority." />
+    <meta name="twitter:site" content="@elnrmedia" />
+    <meta name="twitter:creator" content="@elnrmedia" />
+    <meta name="twitter:title" content="ELNR Media | Proven B2B Media Systems for Brand Growth" />
+    <meta name="twitter:description" content="Complete content, advertising, funnel and CRM systems for B2B brands ready to scale." />
     <meta name="twitter:image" content="https://elnrmedia.com/og-image.jpg" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/webp" href="/logo.webp" />
     <link rel="apple-touch-icon" href="/logo.webp" />
 
-    <!-- Fonts: Syne & Inter -->
+    <!-- Mobile / PWA -->
+    <meta name="theme-color" content="#14b8a6" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- Fonts: Syne & Inter — preloaded for LCP -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -43,26 +59,50 @@
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "ELNR Media",
-        "url": "https://elnrmedia.com/"
+        "url": "https://elnrmedia.com/",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://elnrmedia.com/?s={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
       },
       {
         "@context": "https://schema.org",
-        "@type": "Organization",
+        "@type": ["Organization", "LocalBusiness"],
+        "@id": "https://elnrmedia.com/#organization",
         "name": "ELNR Media",
         "url": "https://elnrmedia.com",
-        "logo": "https://elnrmedia.com/logo.webp",
-        "description": "Proven media systems built to grow your brand with strategic content, advertising, funnels, and lead generation.",
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "email": "Elnorelezi@icloud.com",
-          "contactType": "sales"
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://elnrmedia.com/logo.webp",
+          "width": "512",
+          "height": "512"
         },
-        "sameAs": [],
-        "serviceType": ["Content Marketing", "Paid Advertising", "Funnel Strategy", "Lead Generation", "SEO Content"]
+        "description": "ELNR Media builds proven B2B media systems — strategic content, paid advertising, automated funnels, and CRM — that turn brand attention into predictable revenue.",
+        "email": "Elnorelezi@icloud.com",
+        "telephone": "+355-67-671-8858",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Tirana",
+          "addressCountry": "AL"
+        },
+        "founder": {
+          "@type": "Person",
+          "name": "Elnor Elezi",
+          "jobTitle": "Founder & Managing Director"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/elnr-media",
+          "https://instagram.com/elnrmedia",
+          "https://twitter.com/elnrmedia",
+          "https://facebook.com/elnrmedia",
+          "https://youtube.com/@elnrmedia"
+        ],
+        "serviceType": ["Content Marketing", "Paid Advertising", "Funnel Strategy", "Lead Generation", "CRM Setup", "Social Media Management"]
       }
     ]
     </script>
-    
+
     <!-- Prevent FOUC for Dark Mode -->
     <script>
       try {
@@ -75,7 +115,33 @@
     </script>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- SEO fallback for crawlers that can't execute JavaScript -->
+      <main style="padding:2rem;font-family:sans-serif;max-width:900px;margin:0 auto">
+        <h1 style="font-size:2rem;font-weight:800;color:#0f172a">ELNR Media — Proven Media Systems for B2B Brand Growth</h1>
+        <p style="font-size:1.1rem;color:#475569;margin-top:1rem">
+          ELNR Media builds complete B2B media systems — combining strategic content creation, 
+          Meta and LinkedIn paid advertising, automated sales funnels, CRM setup, and lead generation 
+          — to help B2B brands turn attention into predictable revenue.
+        </p>
+        <h2 style="font-size:1.4rem;font-weight:700;margin-top:2rem;color:#0f172a">Our Services</h2>
+        <ul style="color:#475569;margin-top:0.5rem;padding-left:1.5rem">
+          <li>Social Media Management &amp; Content Systems</li>
+          <li>Meta &amp; LinkedIn Paid Ad Campaign Management</li>
+          <li>Sales Funnel Architecture &amp; Automation</li>
+          <li>CRM Setup &amp; Lead Qualification Workflows</li>
+          <li>Email Marketing &amp; Lead Nurture Sequences</li>
+          <li>Web Development &amp; Landing Page Design</li>
+        </ul>
+        <h2 style="font-size:1.4rem;font-weight:700;margin-top:2rem;color:#0f172a">About ELNR Media</h2>
+        <p style="color:#475569;margin-top:0.5rem">
+          Founded by Elnor Elezi in Tirana, Albania, ELNR Media works with B2B brands across Europe 
+          and internationally to build integrated marketing systems that generate qualified sales calls 
+          consistently. We operate on transparent monthly terms with zero long-term contracts.
+        </p>
+        <p style="margin-top:1rem"><a href="/contact" style="color:#14b8a6;font-weight:600">Book a Free Strategy Call →</a></p>
+      </main>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

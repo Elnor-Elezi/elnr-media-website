@@ -1,3 +1,4 @@
+import { useRef } from 'react'
 import Hero from '../components/Hero'
 import Marquee from '../components/Marquee'
 import TrustBar from '../components/TrustBar'
@@ -10,6 +11,7 @@ import FinalCta from '../components/FinalCta'
 import SEO from '../components/SEO'
 import SeoCopy from '../components/SeoCopy'
 import PageTransition from '../components/PageTransition'
+import JourneyThread from '../components/JourneyThread'
 
 const homeFaqs = [
   {
@@ -39,27 +41,32 @@ const homeFaqs = [
 ];
 
 export default function Home() {
+  const containerRef = useRef(null)
+
   return (
     <PageTransition>
-      <SEO 
-        title="Proven Media Systems for B2B Brand Growth"
-        description="ELNR Media builds end-to-end B2B media systems that capture attention, deploy high-ROI ad architectures, and build automated funnels that generate qualified sales calls."
-        faqs={homeFaqs}
-      />
-      <Hero />
-      <Marquee />
-      <TrustBar />
-      <div className="section-connector" />
-      <WhyElnr />
-      <Marquee text="AUDIT • STRATEGY • BUILD • SCALE • " direction="right" />
-      <Process />
-      <div className="section-connector" />
-      <Results />
-      <CaseStudyShowcase />
-      <RoiCalculator />
-      <SeoCopy />
-      <div className="section-connector" />
-      <FinalCta />
+      <div ref={containerRef} className="relative w-full">
+        <JourneyThread containerRef={containerRef} />
+        <SEO 
+          title="Proven Media Systems for B2B Brand Growth"
+          description="ELNR Media builds B2B media systems — content, paid ads, funnels & CRM — that turn attention into predictable revenue. Book a free growth audit."
+          faqs={homeFaqs}
+        />
+        <Hero />
+        <Marquee />
+        <TrustBar />
+        <div className="section-connector" />
+        <WhyElnr />
+        <Marquee text="AUDIT • STRATEGY • BUILD • SCALE • " direction="right" />
+        <Process />
+        <div className="section-connector" />
+        <Results />
+        <CaseStudyShowcase />
+        <RoiCalculator />
+        <SeoCopy />
+        <div className="section-connector" />
+        <FinalCta />
+      </div>
     </PageTransition>
   )
 }
