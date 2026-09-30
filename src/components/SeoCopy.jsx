@@ -22,7 +22,7 @@ export default function SeoCopy() {
           className="max-w-4xl mx-auto"
         >
           {/* ── Primary heading (H2 here because H1 lives in Hero) ── */}
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-900 dark:text-white tracking-tight mb-6">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-900 dark:text-white tracking-tight leading-normal pb-2 mb-6">
             The B2B Media Agency That Builds Systems, Not Campaigns
           </h2>
           <p className="text-charcoal-600 dark:text-charcoal-300 text-lg leading-relaxed mb-10">
@@ -35,7 +35,7 @@ export default function SeoCopy() {
           </p>
 
           {/* ── H3: Content ── */}
-          <h3 className="font-display text-2xl font-bold text-navy-900 dark:text-white mb-4 mt-12">
+          <h3 className="font-display text-2xl font-bold text-navy-900 dark:text-white leading-normal pb-2 mb-4 mt-12">
             B2B Content Marketing That Builds Real Authority
           </h3>
           <p className="text-charcoal-600 dark:text-charcoal-300 leading-relaxed mb-4">
@@ -55,7 +55,7 @@ export default function SeoCopy() {
           </p>
 
           {/* ── H4: Sub-topic ── */}
-          <h4 className="font-display text-xl font-semibold text-navy-900 dark:text-white mb-3">
+          <h4 className="font-display text-xl font-semibold text-navy-900 dark:text-white leading-normal pb-2 mb-3">
             What a Content System Looks Like
           </h4>
           <ul className="list-disc list-inside text-charcoal-600 dark:text-charcoal-300 leading-relaxed space-y-2 mb-10 pl-2">
@@ -66,7 +66,7 @@ export default function SeoCopy() {
           </ul>
 
           {/* ── H3: Paid Ads ── */}
-          <h3 className="font-display text-2xl font-bold text-navy-900 dark:text-white mb-4">
+          <h3 className="font-display text-2xl font-bold text-navy-900 dark:text-white leading-normal pb-2 mb-4">
             Meta &amp; LinkedIn Paid Ads That Drive Qualified Revenue
           </h3>
           <p className="text-charcoal-600 dark:text-charcoal-300 leading-relaxed mb-4">
@@ -91,7 +91,7 @@ export default function SeoCopy() {
           </p>
 
           {/* ── H3: Funnels ── */}
-          <h3 className="font-display text-2xl font-bold text-navy-900 dark:text-white mb-4">
+          <h3 className="font-display text-2xl font-bold text-navy-900 dark:text-white leading-normal pb-2 mb-4">
             Sales Funnel Architecture That Converts Browsers Into Buyers
           </h3>
           <p className="text-charcoal-600 dark:text-charcoal-300 leading-relaxed mb-4">
@@ -105,7 +105,7 @@ export default function SeoCopy() {
           </p>
 
           {/* ── H4: Sub-topic ── */}
-          <h4 className="font-display text-xl font-semibold text-navy-900 dark:text-white mb-3 mt-6">
+          <h4 className="font-display text-xl font-semibold text-navy-900 dark:text-white leading-normal pb-2 mb-3 mt-6">
             CRM &amp; Lead Qualification Automation
           </h4>
           <p className="text-charcoal-600 dark:text-charcoal-300 leading-relaxed mb-10">
@@ -117,7 +117,7 @@ export default function SeoCopy() {
           </p>
 
           {/* ── H3: Why ELNR ── */}
-          <h3 className="font-display text-2xl font-bold text-navy-900 dark:text-white mb-4">
+          <h3 className="font-display text-2xl font-bold text-navy-900 dark:text-white leading-normal pb-2 mb-4">
             Why B2B Brands Choose ELNR Media
           </h3>
           <p className="text-charcoal-600 dark:text-charcoal-300 leading-relaxed mb-4">

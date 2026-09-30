@@ -88,7 +88,7 @@ export default function WhyElnr() {
                   <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-8 group-hover:scale-110 group-hover:border-brand-500/30 transition-all duration-500 shadow-soft">
                     <reason.icon size={28} className="text-white group-hover:text-brand-400 transition-colors duration-500" />
                   </div>
-                  <h3 className="font-display text-2xl font-bold text-white mb-4 tracking-tight">
+                  <h3 className="font-display text-2xl font-bold text-white mb-4 tracking-tight leading-normal pb-2">
                     {reason.title}
                   </h3>
                   <p className="text-charcoal-300 text-lg leading-relaxed">

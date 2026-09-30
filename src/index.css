@@ -47,8 +47,8 @@ body::before {
 /* === Utilities === */
 @layer utilities {
   .font-display {
-    /* Prevent Syne descenders (g, y, p) from being clipped by overflow or line-height */
-    padding-bottom: 0.1em;
+    /* Prevent Syne's extreme descenders (g, y, p) from being clipped */
+    padding-bottom: 0.25em;
   }
 
   .text-gradient {
