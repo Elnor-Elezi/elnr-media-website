@@ -30,7 +30,7 @@ function AnimatedStat({ end, suffix, label }) {
   const { count, ref } = useCounter(end, 2200)
   return (
     <div ref={ref} className="text-center p-4">
-      <LiquidGlass background="#home" className="relative block w-full h-full bg-white/5 rounded-xl border border-white/10" scale={10} width={200} height={120}>
+      <LiquidGlass background="#hero-backgrounds" className="relative block w-full h-full bg-white/5 rounded-xl border border-white/10" scale={10} width={200} height={120}>
         <div className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-navy-900 dark:text-white mb-2 pb-2">
           {count}<span className="text-brand-500">{suffix}</span>
         </div>
@@ -58,8 +58,10 @@ export default function Hero() {
       aria-label="Welcome to ELNR Media"
     >
       {/* Background System */}
-      <AnimatedAuroraBackground variant="hero" />
-      <ParallaxBackgroundAccents />
+      <div id="hero-backgrounds" className="absolute inset-0 pointer-events-none">
+        <AnimatedAuroraBackground variant="hero" />
+        <ParallaxBackgroundAccents />
+      </div>
 
       {/* Main content grid (Writing on left, Object on right) */}
       <motion.div
