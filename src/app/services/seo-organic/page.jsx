@@ -4,10 +4,10 @@ import Link from 'next/link';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { 
   Search, Globe, FileText, ArrowRight, Zap,
-  BarChart, Code, Layers
+  BarChart, Code, Layers, CheckCircle2
 } from 'lucide-react';
-import SEO from '../../components/SEO';
-import PageTransition from '../../components/PageTransition';
+import SEO from '../../../components/SEO';
+import PageTransition from '../../../components/PageTransition';
 
 const stagger = {
   hidden: { opacity: 0 },

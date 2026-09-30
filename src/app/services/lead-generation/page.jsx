@@ -6,8 +6,8 @@ import {
   Target, TrendingUp, Zap, CheckCircle2, ArrowRight,
   Database, LineChart, Shield, Mail, Users
 } from 'lucide-react';
-import SEO from '../../components/SEO';
-import PageTransition from '../../components/PageTransition';
+import SEO from '../../../components/SEO';
+import PageTransition from '../../../components/PageTransition';
 
 const stagger = {
   hidden: { opacity: 0 },

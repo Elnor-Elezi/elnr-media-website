@@ -3,7 +3,7 @@ import { useEffect, useMemo } from 'react'
 import Link from 'next/link';
 import { useParams, useRouter } from 'next/navigation';
 import { ArrowLeft, Calendar, Clock, User } from 'lucide-react'
-import { blogPosts } from '../data/blog'
+import { blogPosts } from '../../../data/blog'
 import SEO from '../../../components/SEO'
 import PageTransition from '../../../components/PageTransition'
 

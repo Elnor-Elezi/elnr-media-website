@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { ArrowRight, Calendar, Clock } from 'lucide-react'
 import { fadeInUp, stagger } from '../../hooks'
-import { blogPosts } from '../data/blog'
+import { blogPosts } from '../../data/blog'
 import SEO from '../../components/SEO'
 import PageTransition from '../../components/PageTransition'
 

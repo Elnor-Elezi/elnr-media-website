@@ -6,8 +6,8 @@ import {
   Megaphone, Edit3, Film, ArrowRight, CheckCircle2,
   Share2, MessageSquare, Briefcase, TrendingUp
 } from 'lucide-react';
-import SEO from '../../components/SEO';
-import PageTransition from '../../components/PageTransition';
+import SEO from '../../../components/SEO';
+import PageTransition from '../../../components/PageTransition';
 
 const stagger = {
   hidden: { opacity: 0 },

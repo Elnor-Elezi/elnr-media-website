@@ -5,9 +5,9 @@ import { useParams, useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Clock, Calendar, User } from 'lucide-react';
 import { marked } from 'marked';
-import { insights } from '../../data/insights';
-import SEO from '../../components/SEO';
-import PageTransition from '../../components/PageTransition';
+import { insights } from '../../../data/insights';
+import SEO from '../../../components/SEO';
+import PageTransition from '../../../components/PageTransition';
 
 export default function InsightDetail() {
   const router = useRouter();
