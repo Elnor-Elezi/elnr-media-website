@@ -1,3 +1,4 @@
+"use client";
 import { motion, useScroll, useTransform, useReducedMotion } from 'framer-motion'
 import { Plus } from 'lucide-react'
 

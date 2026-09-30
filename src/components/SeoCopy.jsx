@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom'
+"use client";
+import Link from 'next/link'
 import { motion } from 'framer-motion'
 
 /**
@@ -35,12 +36,12 @@ export default function SeoCopy() {
           </p>
 
           {/* ── H3: Content ── */}
-          <h3 className="font-display text-2xl font-bold text-navy-900 dark:text-white leading-normal pb-2 mb-4 mt-12">
+          <h3 className="font-sans text-2xl font-bold text-navy-900 dark:text-white leading-normal pb-2 mb-4 mt-12">
             B2B Content Marketing That Builds Real Authority
           </h3>
           <p className="text-charcoal-600 dark:text-charcoal-300 leading-relaxed mb-4">
             Attention is the new currency of business. We design{' '}
-            <Link to="/services/content-creation" className="text-brand-600 dark:text-brand-400 hover:underline font-medium">
+            <Link href="/services/content-creation" className="text-brand-600 dark:text-brand-400 hover:underline font-medium">
               content systems for B2B brands
             </Link>{' '}
             that compound over time. Every post, video, and newsletter is engineered to build
@@ -55,7 +56,7 @@ export default function SeoCopy() {
           </p>
 
           {/* ── H4: Sub-topic ── */}
-          <h4 className="font-display text-xl font-semibold text-navy-900 dark:text-white leading-normal pb-2 mb-3">
+          <h4 className="font-sans text-xl font-semibold text-navy-900 dark:text-white leading-normal pb-2 mb-3">
             What a Content System Looks Like
           </h4>
           <ul className="list-disc list-inside text-charcoal-600 dark:text-charcoal-300 leading-relaxed space-y-2 mb-10 pl-2">
@@ -66,7 +67,7 @@ export default function SeoCopy() {
           </ul>
 
           {/* ── H3: Paid Ads ── */}
-          <h3 className="font-display text-2xl font-bold text-navy-900 dark:text-white leading-normal pb-2 mb-4">
+          <h3 className="font-sans text-2xl font-bold text-navy-900 dark:text-white leading-normal pb-2 mb-4">
             Meta &amp; LinkedIn Paid Ads That Drive Qualified Revenue
           </h3>
           <p className="text-charcoal-600 dark:text-charcoal-300 leading-relaxed mb-4">
@@ -91,12 +92,12 @@ export default function SeoCopy() {
           </p>
 
           {/* ── H3: Funnels ── */}
-          <h3 className="font-display text-2xl font-bold text-navy-900 dark:text-white leading-normal pb-2 mb-4">
+          <h3 className="font-sans text-2xl font-bold text-navy-900 dark:text-white leading-normal pb-2 mb-4">
             Sales Funnel Architecture That Converts Browsers Into Buyers
           </h3>
           <p className="text-charcoal-600 dark:text-charcoal-300 leading-relaxed mb-4">
             Traffic without a conversion system is money set on fire. We design and build{' '}
-            <Link to="/services/funnel-building" className="text-brand-600 dark:text-brand-400 hover:underline font-medium">
+            <Link href="/services/funnel-building" className="text-brand-600 dark:text-brand-400 hover:underline font-medium">
               high-converting sales funnels
             </Link>{' '}
             that guide prospects from first touch to qualified sales call, automatically. Every
@@ -105,7 +106,7 @@ export default function SeoCopy() {
           </p>
 
           {/* ── H4: Sub-topic ── */}
-          <h4 className="font-display text-xl font-semibold text-navy-900 dark:text-white leading-normal pb-2 mb-3 mt-6">
+          <h4 className="font-sans text-xl font-semibold text-navy-900 dark:text-white leading-normal pb-2 mb-3 mt-6">
             CRM &amp; Lead Qualification Automation
           </h4>
           <p className="text-charcoal-600 dark:text-charcoal-300 leading-relaxed mb-10">
@@ -117,7 +118,7 @@ export default function SeoCopy() {
           </p>
 
           {/* ── H3: Why ELNR ── */}
-          <h3 className="font-display text-2xl font-bold text-navy-900 dark:text-white leading-normal pb-2 mb-4">
+          <h3 className="font-sans text-2xl font-bold text-navy-900 dark:text-white leading-normal pb-2 mb-4">
             Why B2B Brands Choose ELNR Media
           </h3>
           <p className="text-charcoal-600 dark:text-charcoal-300 leading-relaxed mb-4">
@@ -135,13 +136,13 @@ export default function SeoCopy() {
           {/* CTA inline */}
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
-              to="/contact"
+              href="/contact"
               className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-navy-900 dark:bg-white text-white dark:text-navy-900 text-sm font-bold hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300"
             >
               Book a Free Growth Audit →
             </Link>
             <Link
-              to="/services"
+              href="/services"
               className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border border-charcoal-200 dark:border-white/20 text-navy-900 dark:text-white text-sm font-medium hover:border-brand-400 transition-all duration-300"
             >
               Explore All Services

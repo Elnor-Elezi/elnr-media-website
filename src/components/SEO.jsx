@@ -1,5 +1,5 @@
-import { Helmet } from 'react-helmet-async';
-import { useLocation } from 'react-router-dom';
+import Head from 'next/head';
+import { usePathname } from 'next/navigation';
 
 const SITE_URL = 'https://elnrmedia.com';
 const SITE_NAME = 'ELNR Media';
@@ -20,8 +20,8 @@ export default function SEO({
   serviceName = null,
   breadcrumbs = []
 }) {
-  const location = useLocation();
-  const canonicalUrl = `${SITE_URL}${location.pathname.replace(/\/$/, '') || '/'}`;
+  const pathname = usePathname() || '';
+  const canonicalUrl = `${SITE_URL}${pathname.replace(/\/$/, '') || '/'}`;
 
   const siteTitle = title
     ? `${title} | ${SITE_NAME}`
@@ -112,7 +112,7 @@ export default function SEO({
   } : null;
 
   return (
-    <Helmet>
+    <Head>
       {/* Core */}
       <title>{siteTitle}</title>
       <meta name="description" content={siteDescription} />
@@ -149,6 +149,6 @@ export default function SEO({
       {serviceSchema && <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>}
       {faqSchema && <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>}
       {breadcrumbSchema && <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>}
-    </Helmet>
+    </Head>
   );
 }

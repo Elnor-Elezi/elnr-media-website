@@ -1,7 +1,8 @@
+"use client";
 import { useRef, useState } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { ArrowRight, Send, CheckCircle } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import { IMAGES } from '../hooks'
 
 export default function FinalCta({ showForm = false }) {
@@ -185,7 +186,7 @@ export default function FinalCta({ showForm = false }) {
             ) : (
               <div className="mb-8 flex justify-center">
                 <Link
-                  to="/contact"
+                  href="/contact"
                   className="group inline-flex items-center justify-center btn-pill btn-primary px-10 py-4"
                 >
                   <span className="flex items-center gap-3">

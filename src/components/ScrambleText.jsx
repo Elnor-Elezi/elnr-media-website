@@ -1,3 +1,4 @@
+"use client";
 import { useState, useEffect } from 'react'
 
 export default function ScrambleText({ text, speed = 30, delay = 0, className = "" }) {

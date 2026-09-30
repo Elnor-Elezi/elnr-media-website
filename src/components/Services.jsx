@@ -1,6 +1,7 @@
+"use client";
 import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import {
   Film, Megaphone, GitBranch, UserCheck, FileText, BookOpen, Phone, Compass,
   LineChart, MousePointerClick, Filter, Camera,
@@ -73,7 +74,7 @@ function FeaturedService({ service, index }) {
         <div className="w-16 h-16 rounded-full bg-white dark:bg-navy-900 border border-charcoal-100 dark:border-white/10 shadow-soft flex items-center justify-center mb-6">
           <service.icon size={26} aria-hidden="true" className="text-brand-500" />
         </div>
-        <h3 className="font-display text-4xl sm:text-5xl font-bold text-navy-900 dark:text-white mb-4 tracking-tight pb-2">
+        <h3 className="font-sans text-4xl sm:text-5xl font-bold text-navy-900 dark:text-white mb-4 tracking-tight pb-2">
           {service.title}
         </h3>
         <p className="text-charcoal-500 dark:text-charcoal-300 text-lg lg:text-xl leading-relaxed mb-8">
@@ -88,7 +89,7 @@ function FeaturedService({ service, index }) {
           ))}
         </div>
         <Link
-          to={`/services/${service.slug}`}
+          href={`/services/${service.slug}`}
           className="group inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-brand-500 hover:text-brand-600 transition-colors duration-300"
         >
           Explore Service Details
@@ -177,13 +178,13 @@ export default function Services() {
               variants={fadeInUp}
             >
               <Link
-                to={`/services/${svc.slug}`}
+                href={`/services/${svc.slug}`}
                 className="block glass dark:glass-dark p-8 lg:p-10 rounded-[32px] hover:-translate-y-2 transition-transform duration-500 shadow-soft hover:shadow-xl relative overflow-hidden group h-full"
               >
                 <div className="w-12 h-12 rounded-full bg-brand-50 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
                   <svc.icon size={20} aria-hidden="true" className="text-brand-500" />
                 </div>
-                <h3 className="font-display font-bold text-navy-900 dark:text-white text-lg mb-2 tracking-tight flex items-center gap-1 pb-1">
+                <h3 className="font-sans font-bold text-navy-900 dark:text-white text-lg mb-2 tracking-tight flex items-center gap-1 pb-1">
                   {svc.title}
                   <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity text-brand-500" />
                 </h3>

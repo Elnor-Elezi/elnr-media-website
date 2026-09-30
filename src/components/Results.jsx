@@ -1,3 +1,4 @@
+"use client";
 import { motion } from 'framer-motion'
 import {
   Shield, Repeat, TrendingUp, Compass,
@@ -40,7 +41,7 @@ function ResultCard({ result, index }) {
           </div>
         </div>
 
-        <h3 className="font-display font-semibold text-navy-700 dark:text-white mb-1.5 pb-1">{result.title}</h3>
+        <h3 className="font-sans font-semibold text-navy-700 dark:text-white mb-1.5 pb-1">{result.title}</h3>
         <p className="text-sm text-charcoal-500 dark:text-charcoal-400 leading-relaxed">{result.desc}</p>
 
         {/* Progress bar */}

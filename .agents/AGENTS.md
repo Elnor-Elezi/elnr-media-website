@@ -74,3 +74,16 @@ Estimates are calculated at **Antigravity AI agent velocity**:
    - Save key architectural decision logs in `docs/decision_logs/` when required.
    - Capture post-mortem lessons from non-trivial bugs in `docs/learning-from-mistakes/`.
 
+---
+
+## Conditional Skill Usage
+
+Agents must autonomously recognize when a task falls under the domain of specific installed skills and consult their respective documentation *before* implementing solutions:
+
+1. **ui-ux-pro-max** (`.agents/skills/ui-ux-pro-max-skill`)
+   - **Trigger:** Any task involving frontend redesigns, new UI components, styling, accessibility updates, or user experience mapping.
+   - **Action:** Read the skill's guidelines on color palettes, typography pairings, component structures, and UX constraints to ensure premium design standards are met.
+
+2. **antigravity-manager** (`.agents/skills/antigravity-manager`)
+   - **Trigger:** Any task dealing with multi-account management, API proxy architectures, quota tracking, or OAuth integrations within the Antigravity ecosystem.
+   - **Action:** Review the repository's source code and architecture docs for best practices on credentials management and fallback strategies.

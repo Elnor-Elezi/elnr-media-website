@@ -1,5 +1,6 @@
+"use client";
 import { ArrowUpRight, Mail, Phone, MapPin } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import { motion } from 'framer-motion'
 
 // SVG Brand Icons
@@ -94,7 +95,7 @@ export default function Footer() {
         >
           {/* Brand column */}
           <motion.div variants={fadeUp} className="lg:col-span-4">
-            <Link to="/" className="inline-block mb-6 group" aria-label="ELNR Media home">
+            <Link href="/" className="inline-block mb-6 group" aria-label="ELNR Media home">
               <img
                 src="/logo.webp?v=3"
                 alt="ELNR Media Logo"
@@ -127,12 +128,12 @@ export default function Footer() {
 
           {/* Services column */}
           <motion.nav variants={fadeUp} className="lg:col-span-3" aria-label="Services navigation">
-            <h4 className="font-display font-semibold text-white text-xs mb-6 uppercase tracking-[0.2em] pb-1">Services</h4>
+            <h4 className="font-sans font-semibold text-white text-xs mb-6 uppercase tracking-[0.2em] pb-1">Services</h4>
             <ul className="space-y-3">
               {footerLinks.services.map((link) => (
                 <li key={link.href + link.label}>
                   <Link
-                    to={link.href}
+                    href={link.href}
                     className="text-sm text-white/45 hover:text-brand-400 transition-colors duration-300 flex items-center gap-1.5 group"
                   >
                     <span className="w-0 h-px bg-brand-400 group-hover:w-3 transition-all duration-300 rounded-full" />
@@ -145,12 +146,12 @@ export default function Footer() {
 
           {/* Company column */}
           <motion.nav variants={fadeUp} className="lg:col-span-2" aria-label="Company navigation">
-            <h4 className="font-display font-semibold text-white text-xs mb-6 uppercase tracking-[0.2em] pb-1">Company</h4>
+            <h4 className="font-sans font-semibold text-white text-xs mb-6 uppercase tracking-[0.2em] pb-1">Company</h4>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.href}>
                   <Link
-                    to={link.href}
+                    href={link.href}
                     className="text-sm text-white/45 hover:text-brand-400 transition-colors duration-300 flex items-center gap-1.5 group"
                   >
                     <span className="w-0 h-px bg-brand-400 group-hover:w-3 transition-all duration-300 rounded-full" />
@@ -163,7 +164,7 @@ export default function Footer() {
 
           {/* Contact + CTA column */}
           <motion.div variants={fadeUp} className="lg:col-span-3">
-            <h4 className="font-display font-semibold text-white text-xs mb-6 uppercase tracking-[0.2em] pb-1">Get in Touch</h4>
+            <h4 className="font-sans font-semibold text-white text-xs mb-6 uppercase tracking-[0.2em] pb-1">Get in Touch</h4>
             <ul className="space-y-3 mb-8">
               {contact.map((c) => (
                 <li key={c.label}>
@@ -185,7 +186,7 @@ export default function Footer() {
               ))}
             </ul>
             <Link
-              to="/contact"
+              href="/contact"
               className="group inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white rounded-full bg-gradient-to-r from-brand-500 to-brand-700 shadow-[0_0_20px_rgba(20,184,166,0.3)] hover:shadow-[0_0_30px_rgba(20,184,166,0.5)] transition-all duration-500 hover:-translate-y-0.5"
             >
               Book a Strategy Call
@@ -200,8 +201,8 @@ export default function Footer() {
             © {new Date().getFullYear()} ELNR Media — Elnor Elezi. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            <Link to="/privacy" className="text-xs text-white/25 hover:text-white/50 transition-colors">Privacy Policy</Link>
-            <Link to="/terms" className="text-xs text-white/25 hover:text-white/50 transition-colors">Terms of Service</Link>
+            <Link href="/privacy" className="text-xs text-white/25 hover:text-white/50 transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="text-xs text-white/25 hover:text-white/50 transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>

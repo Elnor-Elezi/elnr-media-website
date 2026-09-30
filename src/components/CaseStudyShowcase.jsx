@@ -1,7 +1,8 @@
+"use client";
 import { useState, useRef } from 'react'
 import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from 'framer-motion'
 import { Award, ArrowUpRight, CheckCircle2 } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import Magnetic from './Magnetic'
 
 const caseStudies = [
@@ -19,6 +20,7 @@ const caseStudies = [
     deliverables: ['Omni-Channel Meta & LinkedIn Ads', 'High-Retention Video System', 'CRM Pipeline Routing'],
     quote: 'ELNR Media turned our chaotic marketing into a predictable revenue system within the first month.',
     author: 'Marcus Vance, VP of Growth',
+    image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=200&h=200&q=80'
   },
   {
     id: 'prof-services',
@@ -34,6 +36,7 @@ const caseStudies = [
     deliverables: ['Thought Leadership Content', 'Retargeting Funnels', 'Automated Email Nurture'],
     quote: 'The ROI was undeniable. We stopped relying on cold emails completely.',
     author: 'Elena Rostova, Managing Partner',
+    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&h=200&q=80'
   },
   {
     id: 'fintech-b2b',
@@ -49,6 +52,7 @@ const caseStudies = [
     deliverables: ['High-Converting Landing Pages', 'Automated Qualification Engine', 'Lead Scoring Rules'],
     quote: 'ELNR Media delivered qualified leads that our sales team actually enjoys calling.',
     author: 'David Chen, Head of Sales',
+    image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=200&h=200&q=80'
   },
 ]
 
@@ -177,7 +181,7 @@ export default function CaseStudyShowcase() {
                   </span>
                 </div>
 
-                <h3 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-900 dark:text-white leading-[1.1] tracking-tight pb-2">
+                <h3 className="font-sans text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-900 dark:text-white leading-[1.1] tracking-tight pb-2">
                   {activeStudy.title}
                 </h3>
 
@@ -198,9 +202,16 @@ export default function CaseStudyShowcase() {
                 {/* Testimonial Quote */}
                 <div className="p-6 rounded-2xl bg-white/50 dark:bg-white/5 border border-charcoal-100 dark:border-white/10 italic text-charcoal-600 dark:text-charcoal-300 text-base shadow-soft">
                   "{activeStudy.quote}"
-                  <div className="not-italic font-bold text-sm text-navy-900 dark:text-white mt-4 flex items-center gap-2">
-                    <div className="w-6 h-px bg-brand-500" />
-                    {activeStudy.author}
+                  <div className="not-italic font-bold text-sm text-navy-900 dark:text-white mt-4 flex items-center gap-3">
+                    <img 
+                      src={activeStudy.image} 
+                      alt={activeStudy.author} 
+                      className="w-10 h-10 rounded-full object-cover border border-brand-200 dark:border-white/20"
+                    />
+                    <div>
+                      <div>{activeStudy.author.split(',')[0]}</div>
+                      <div className="text-xs text-charcoal-500 font-medium">{activeStudy.author.split(',')[1]}</div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -226,7 +237,7 @@ export default function CaseStudyShowcase() {
 
                 <Magnetic>
                   <Link
-                    to="/contact"
+                    href="/contact"
                     className="group btn-pill btn-primary dark:bg-white dark:text-navy-900 w-full py-5 text-center flex items-center justify-center gap-3 font-bold shadow-glow mt-6"
                   >
                     Build Your Engine Like This

@@ -1,7 +1,9 @@
+"use client";
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, ArrowRight, Moon, Sun, ChevronDown } from 'lucide-react'
-import { Link, useLocation } from 'react-router-dom'
+import Link from 'next/link';
+import { usePathname } from 'next/navigation'
 import { useTheme } from './ThemeContext'
 import Magnetic from './Magnetic'
 
@@ -29,7 +31,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const [hoveredLink, setHoveredLink] = useState(null)
-  const { pathname, hash } = useLocation()
+  const { pathname, hash } = usePathname()
   const { isDark, toggleDark } = useTheme()
   
   const activeSection = hash ? pathname + hash : pathname
@@ -67,7 +69,7 @@ export default function Navbar() {
         }`}
         aria-label="Main navigation"
       >
-        <Link to="/" className="flex items-center pl-4 group" aria-label="ELNR Media home">
+        <Link href="/" className="flex items-center pl-4 group" aria-label="ELNR Media home">
           <img 
             src="/logo.webp?v=3" 
             alt="ELNR Logo" 
@@ -92,9 +94,9 @@ export default function Navbar() {
                 />
               )}
               <Link
-                to={link.href}
+                href={link.href}
                 className={`relative z-10 px-5 py-2.5 rounded-full text-sm font-semibold transition-colors duration-300 flex items-center gap-1 ${
-                  (activeSection.startsWith(link.href) && link.href !== '/') || (link.href === '/' && activeSection === '/')
+                  (activeSection?.startsWith(link.href) && link.href !== '/') || (link.href === '/' && activeSection === '/')
                     ? 'text-navy-900 dark:text-white bg-black/[0.02] dark:bg-white/[0.04]' 
                     : 'text-charcoal-500 dark:text-charcoal-300 hover:text-navy-900 dark:hover:text-white'
                 }`}
@@ -109,7 +111,7 @@ export default function Navbar() {
                     {link.dropdown.map((dropItem) => (
                       <Link
                         key={dropItem.href}
-                        to={dropItem.href}
+                        href={dropItem.href}
                         className="px-4 py-2.5 rounded-xl text-sm font-medium text-charcoal-600 dark:text-charcoal-300 hover:bg-black/[0.03] dark:hover:bg-white/[0.05] hover:text-navy-900 dark:hover:text-white transition-colors whitespace-nowrap"
                       >
                         {dropItem.label}
@@ -129,7 +131,7 @@ export default function Navbar() {
           </button>
           <Magnetic>
             <Link
-              to="/contact"
+              href="/contact"
               className="group btn-pill bg-navy-900 dark:bg-white text-white dark:text-navy-900 hover:bg-navy-800 dark:hover:bg-charcoal-100 shadow-sm py-2.5 px-6 ml-2 flex items-center gap-2"
             >
               Book Call
@@ -143,7 +145,7 @@ export default function Navbar() {
       <div className={`lg:hidden flex items-center justify-between w-full p-4 rounded-[24px] pointer-events-auto transition-all duration-500 ${
         scrolled || mobileOpen ? 'bg-white/90 dark:bg-navy-950/90 backdrop-blur-xl border border-charcoal-200/50 dark:border-white/10 shadow-soft' : 'bg-transparent'
       }`}>
-        <Link to="/" className="flex items-center group" aria-label="ELNR Media home">
+        <Link href="/" className="flex items-center group" aria-label="ELNR Media home">
           <img 
             src="/logo.webp?v=3" 
             alt="ELNR Logo" 
@@ -182,10 +184,10 @@ export default function Navbar() {
               {navLinks.map((link) => (
                 <div key={link.href} className="flex flex-col">
                   <Link
-                    to={link.href}
+                    href={link.href}
                     onClick={() => !link.dropdown && setMobileOpen(false)}
                     className={`px-4 py-3.5 text-sm font-semibold rounded-2xl transition-all duration-200 flex items-center justify-between ${
-                      (activeSection.startsWith(link.href) && link.href !== '/') || (link.href === '/' && activeSection === '/')
+                      (activeSection?.startsWith(link.href) && link.href !== '/') || (link.href === '/' && activeSection === '/')
                         ? 'bg-black/[0.04] dark:bg-white/[0.05] text-navy-900 dark:text-white' 
                         : 'text-charcoal-600 dark:text-charcoal-300 hover:bg-black/[0.02] dark:hover:bg-white/[0.02] hover:text-navy-900 dark:hover:text-white'
                     }`}
@@ -198,7 +200,7 @@ export default function Navbar() {
                       {link.dropdown.map((dropItem) => (
                         <Link
                           key={dropItem.href}
-                          to={dropItem.href}
+                          href={dropItem.href}
                           onClick={() => setMobileOpen(false)}
                           className="px-4 py-2.5 text-sm font-medium rounded-xl text-charcoal-500 dark:text-charcoal-400 hover:bg-black/[0.02] dark:hover:bg-white/[0.02] hover:text-navy-900 dark:hover:text-white transition-colors"
                         >
@@ -211,7 +213,7 @@ export default function Navbar() {
               ))}
               <div className="pt-2 mt-2 border-t border-charcoal-100 dark:border-white/10">
                 <Link
-                  to="/contact"
+                  href="/contact"
                   onClick={() => setMobileOpen(false)}
                   className="flex items-center justify-center w-full btn-pill bg-navy-900 dark:bg-white text-white dark:text-navy-900 hover:bg-navy-800 dark:hover:bg-charcoal-100 py-3.5"
                 >

@@ -1,12 +1,22 @@
+"use client";
 import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { ArrowRight, ChevronDown } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import { useCounter } from '../hooks'
 import Magnetic from './Magnetic'
 import AnimatedAuroraBackground from './backgrounds/AnimatedAuroraBackground'
-import Reactive3DShapes from './backgrounds/Reactive3DShapes'
+import dynamic from 'next/dynamic'
 import ParallaxBackgroundAccents from './backgrounds/ParallaxBackgroundAccents'
+
+const Reactive3DShapes = dynamic(() => import('./backgrounds/Reactive3DShapes'), {
+  ssr: false,
+  loading: () => (
+    <div className="absolute inset-0 flex items-center justify-center animate-pulse">
+      <div className="w-[60%] h-[60%] bg-brand-500/20 rounded-full blur-[80px]" />
+    </div>
+  )
+})
 
 const stats = [
   { end: 150, suffix: '+', label: 'Campaigns Launched' },
@@ -100,7 +110,7 @@ export default function Hero() {
           >
             <Magnetic>
               <Link
-                to="/contact"
+                href="/contact"
                 className="group btn-pill btn-primary dark:bg-white dark:text-navy-900 text-base px-9 py-4 flex items-center gap-3 shadow-glow w-full sm:w-auto justify-center font-bold"
               >
                 Claim Your Free Growth Audit
@@ -109,7 +119,7 @@ export default function Hero() {
             </Magnetic>
             <Magnetic>
               <Link
-                to="/pricing"
+                href="/pricing"
                 className="group btn-pill btn-outline text-base px-9 py-4 flex items-center justify-center whitespace-nowrap bg-white/50 dark:bg-navy-800/50 dark:text-white backdrop-blur-md shadow-soft w-full sm:w-auto font-medium"
               >
                 View Transparent Packages

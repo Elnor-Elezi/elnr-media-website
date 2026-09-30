@@ -1,3 +1,4 @@
+"use client";
 import { motion, useReducedMotion } from 'framer-motion'
 
 export default function FloatingGlassShapes({ variant = 'hero' }) {

@@ -1,7 +1,9 @@
-import { useEffect, useRef } from 'react'
+"use client";
+import { useEffect, useRef, useState } from 'react'
 
 export default function CanvasTrail() {
   const canvasRef = useRef(null)
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -50,7 +52,7 @@ export default function CanvasTrail() {
         p.life -= 0.02
         
         ctx.beginPath()
-        ctx.arc(p.x, p.y, p.life * 4, 0, Math.PI * 2)
+        ctx.arc(p.x, p.y, Math.max(0, p.life * 4), 0, Math.PI * 2)
         ctx.fillStyle = p.color
         ctx.fill()
 
@@ -63,13 +65,14 @@ export default function CanvasTrail() {
     }
     animate()
 
+    setMounted(true)
     return () => {
       window.removeEventListener('mousemove', handleMouseMove)
       window.removeEventListener('resize', handleResize)
     }
   }, [])
 
-  if (typeof window === 'undefined' || window.innerWidth < 1024) return null
+  if (!mounted || window.innerWidth < 1024) return null
 
   return (
     <canvas 

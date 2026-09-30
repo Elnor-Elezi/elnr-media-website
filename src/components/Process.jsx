@@ -1,3 +1,4 @@
+"use client";
 import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { Search, Target, Rocket, TrendingUp } from 'lucide-react'
@@ -58,7 +59,7 @@ function HorizontalCard({ step }) {
         </div>
 
         <div>
-          <h3 className="font-display text-3xl md:text-4xl font-bold text-navy-900 dark:text-white tracking-tight mb-4 group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors pb-2">
+          <h3 className="font-sans text-3xl md:text-4xl font-bold text-navy-900 dark:text-white tracking-tight mb-4 group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors pb-2">
             {step.title}
           </h3>
           <p className="text-charcoal-600 dark:text-charcoal-300 text-base md:text-lg leading-relaxed font-medium">

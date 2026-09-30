@@ -1,3 +1,4 @@
+"use client";
 import { useRef } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { Environment, Float, MeshTransmissionMaterial, Sphere, PresentationControls } from '@react-three/drei'

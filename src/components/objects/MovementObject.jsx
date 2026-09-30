@@ -1,3 +1,4 @@
+"use client";
 import { motion } from 'framer-motion'
 
 // A custom animated abstract object resembling a stack of 3D coins and floating circles

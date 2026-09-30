@@ -1,13 +1,23 @@
+"use client";
 import { useState, useId } from 'react'
 import { motion } from 'framer-motion'
 import { Calculator, ArrowRight, TrendingUp, DollarSign, Target, Sparkles } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import Magnetic from './Magnetic'
 
 export default function RoiCalculator() {
   const [adSpend, setAdSpend] = useState(5000)
   const [dealValue, setDealValue] = useState(10000)
   const [currentLeads, setCurrentLeads] = useState(25)
+  const [isUnlocked, setIsUnlocked] = useState(false)
+  const [email, setEmail] = useState('')
+
+  const handleUnlock = (e) => {
+    e.preventDefault()
+    if (email && email.includes('@')) {
+      setIsUnlocked(true)
+    }
+  }
 
   const adSpendId = useId()
   const dealValueId = useId()
@@ -154,12 +164,13 @@ export default function RoiCalculator() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="lg:col-span-5 bg-gradient-to-b from-navy-800 to-navy-950 border border-brand-500/30 p-8 sm:p-10 rounded-[36px] shadow-2xl relative flex flex-col justify-between"
+            className="lg:col-span-5 bg-gradient-to-b from-navy-800 to-navy-950 border border-brand-500/30 p-8 sm:p-10 rounded-[36px] shadow-2xl relative flex flex-col justify-between overflow-hidden"
           >
             {/* Top Glow Accent */}
             <div className="absolute top-0 right-0 w-32 h-32 bg-brand-400/20 rounded-full blur-2xl pointer-events-none" />
 
-            <div>
+            {/* Blurred wrapper when locked */}
+            <div className={`transition-all duration-500 ${!isUnlocked ? 'blur-[8px] opacity-40 select-none' : ''}`}>
               <div className="flex items-center justify-between mb-6">
                 <span className="text-xs font-bold uppercase tracking-[0.2em] text-brand-400">Projected Outcomes</span>
                 <span className="flex items-center gap-1 text-xs font-semibold px-3 py-1 rounded-full bg-brand-500/20 text-brand-300 border border-brand-400/20">
@@ -197,16 +208,41 @@ export default function RoiCalculator() {
               </p>
             </div>
 
-            {/* CTA */}
-            <Magnetic>
-              <Link
-                to="/contact"
-                className="group btn-pill btn-primary w-full py-4 text-center flex items-center justify-center gap-2 shadow-glow text-base font-bold"
-              >
-                Claim Growth Plan
-                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </Magnetic>
+            {/* Overlay Lock Screen */}
+            {!isUnlocked && (
+              <div className="absolute inset-0 z-10 flex flex-col items-center justify-center p-8 bg-navy-950/60 rounded-[36px] text-center">
+                <h3 className="font-display text-2xl font-bold text-white mb-2 pb-1">Unlock Your ROI Breakdown</h3>
+                <p className="text-white/70 text-sm mb-6 max-w-[260px]">Enter your email to see your custom revenue projections and execution plan.</p>
+                <form onSubmit={handleUnlock} className="w-full flex flex-col gap-3">
+                  <input
+                    type="email"
+                    required
+                    placeholder="Enter your work email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="w-full px-5 py-3.5 bg-white/5 border border-white/20 rounded-xl text-white placeholder:text-white/40 focus:outline-none focus:border-brand-400 focus:ring-1 focus:ring-brand-400 transition-colors backdrop-blur-md"
+                  />
+                  <button type="submit" className="w-full btn-pill btn-primary py-3.5 font-bold flex items-center justify-center gap-2">
+                    Reveal My ROI
+                    <ArrowRight size={16} />
+                  </button>
+                </form>
+                <p className="text-[9px] text-white/40 mt-4 uppercase tracking-[0.15em] font-medium">We never share your email</p>
+              </div>
+            )}
+
+            {/* CTA (Hidden when locked) */}
+            <div className={`transition-opacity duration-500 ${!isUnlocked ? 'opacity-0 pointer-events-none hidden' : 'opacity-100'}`}>
+              <Magnetic>
+                <Link
+                  href="/contact"
+                  className="group btn-pill btn-primary w-full py-4 text-center flex items-center justify-center gap-2 shadow-glow text-base font-bold"
+                >
+                  Claim Growth Plan
+                  <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </Magnetic>
+            </div>
           </motion.div>
 
         </div>

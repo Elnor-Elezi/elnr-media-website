@@ -1,3 +1,4 @@
+"use client";
 import { motion } from 'framer-motion'
 import { Check, Star, ArrowRight, Sparkles } from 'lucide-react'
 import { useSectionInView, useTilt, fadeInUp, stagger } from '../hooks'
@@ -113,7 +114,7 @@ function PricingCard({ plan }) {
         </div>
 
         {/* Name */}
-        <h3 className={`font-display text-3xl font-bold mb-6 tracking-tight pb-2 ${plan.featured ? 'text-white' : 'text-navy-900 dark:text-white'}`}>{plan.name}</h3>
+        <h3 className={`font-sans text-3xl font-bold mb-6 tracking-tight pb-2 ${plan.featured ? 'text-white' : 'text-navy-900 dark:text-white'}`}>{plan.name}</h3>
 
         {/* Price */}
         <div className="mb-2 flex items-baseline gap-1">
@@ -250,7 +251,7 @@ export default function Pricing() {
           transition={{ delay: 0.4, duration: 0.6 }}
           className="mt-16 lg:mt-24 max-w-4xl mx-auto prose prose-navy dark:prose-invert prose-lg"
         >
-          <h3 className="font-display text-2xl font-bold text-navy-900 dark:text-white mb-4 leading-normal pb-1">
+          <h3 className="font-sans text-2xl font-bold text-navy-900 dark:text-white mb-4 leading-normal pb-1">
             How to Choose the Right B2B Media System for Your Growth Stage
           </h3>
           <p className="text-charcoal-500 dark:text-charcoal-300 mb-4">
