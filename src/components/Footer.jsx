@@ -21,9 +21,11 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <Link to="/" className="inline-block mb-6 group" aria-label="ELNR Media home">
               <img 
-                src="/logo.png?v=3" 
-                alt="ELNR Logo" 
-                className="h-16 sm:h-20 w-auto object-contain mix-blend-screen grayscale invert contrast-200 opacity-90 group-hover:opacity-100 transition-opacity" 
+                src="/logo.webp?v=3" 
+                alt="ELNR Media Logo" 
+                width="160"
+                height="60"
+                className="h-12 sm:h-14 w-auto object-contain transition-opacity duration-300 opacity-90 group-hover:opacity-100" 
               />
             </Link>
             <p className="text-sm text-white/50 leading-relaxed max-w-sm mb-6">
