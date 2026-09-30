@@ -116,7 +116,26 @@
   </head>
   <body>
     <div id="root">
-      <!-- SEO fallback for crawlers that can't execute JavaScript -->
+      <style>
+        .initial-loader {
+          position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+          display: flex; align-items: center; justify-content: center;
+          background-color: #050505; z-index: 99999;
+        }
+        .loader-spinner {
+          width: 40px; height: 40px;
+          border: 3px solid rgba(255,255,255,0.1);
+          border-top-color: #14b8a6;
+          border-radius: 50%;
+          animation: spin 1s linear infinite;
+        }
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+      </style>
+      <div class="initial-loader">
+        <div class="loader-spinner"></div>
+      </div>
+    </div>
+    <noscript>
       <main style="padding:2rem;font-family:sans-serif;max-width:900px;margin:0 auto">
         <h1 style="font-size:2rem;font-weight:800;color:#0f172a">ELNR Media — Proven Media Systems for B2B Brand Growth</h1>
         <p style="font-size:1.1rem;color:#475569;margin-top:1rem">
@@ -141,7 +160,7 @@
         </p>
         <p style="margin-top:1rem"><a href="/contact" style="color:#14b8a6;font-weight:600">Book a Free Strategy Call →</a></p>
       </main>
-    </div>
+    </noscript>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
