@@ -55,7 +55,7 @@ export default function Hero() {
       >
         
         {/* Left column: Typography (Writing on the left) */}
-        <div className="w-full lg:w-[50%] xl:w-[45%] flex flex-col items-start text-left pt-10 lg:pt-32 order-2 lg:order-1 relative z-20">
+        <div className="w-full lg:w-[60%] xl:w-[55%] flex flex-col items-start text-left pt-10 lg:pt-32 order-2 lg:order-1 relative z-20">
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -137,7 +137,7 @@ export default function Hero() {
         </div>
 
         {/* Right column: Movement Object */}
-        <div className="absolute lg:relative right-[-20%] lg:right-0 top-[10%] lg:top-0 w-[400px] h-[400px] sm:w-[600px] sm:h-[600px] lg:w-[800px] lg:h-[800px] xl:w-[1000px] xl:h-[1000px] flex justify-end opacity-60 lg:opacity-100 pointer-events-auto order-1 lg:order-2">
+        <div className="absolute right-[-30%] lg:right-[-15%] xl:right-[-10%] top-[10%] lg:top-[5%] w-[400px] h-[400px] sm:w-[600px] sm:h-[600px] lg:w-[800px] lg:h-[800px] xl:w-[1000px] xl:h-[1000px] flex justify-end opacity-60 lg:opacity-100 pointer-events-auto z-10">
           <Reactive3DShapes />
         </div>
 
