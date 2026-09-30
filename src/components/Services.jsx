@@ -73,7 +73,7 @@ function FeaturedService({ service, index }) {
         <div className="w-16 h-16 rounded-full bg-white dark:bg-navy-900 border border-charcoal-100 dark:border-white/10 shadow-soft flex items-center justify-center mb-6">
           <service.icon size={26} aria-hidden="true" className="text-brand-500" />
         </div>
-        <h3 className="font-display text-4xl sm:text-5xl font-bold text-navy-900 dark:text-white mb-4 tracking-tight">
+        <h3 className="font-display text-4xl sm:text-5xl font-bold text-navy-900 dark:text-white mb-4 tracking-tight pb-2">
           {service.title}
         </h3>
         <p className="text-charcoal-500 dark:text-charcoal-300 text-lg lg:text-xl leading-relaxed mb-8">
@@ -146,7 +146,7 @@ export default function Services() {
           <span className="inline-flex items-center px-4 py-1.5 rounded-full text-[10px] font-semibold tracking-[0.25em] uppercase bg-brand-50 dark:bg-brand-500/10 text-brand-600 dark:text-brand-400 border border-brand-200/60 dark:border-brand-500/20 mb-5">
             What We Do
           </span>
-          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-navy-900 dark:text-white tracking-tight mb-6">
+          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-navy-900 dark:text-white tracking-tight mb-6 pb-2">
             Premium B2B Media Systems &{' '}
             <span className="text-gradient">Growth Services</span>
           </h2>
@@ -183,7 +183,7 @@ export default function Services() {
                 <div className="w-12 h-12 rounded-full bg-brand-50 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
                   <svc.icon size={20} aria-hidden="true" className="text-brand-500" />
                 </div>
-                <h3 className="font-display font-bold text-navy-900 dark:text-white text-lg mb-2 tracking-tight flex items-center gap-1">
+                <h3 className="font-display font-bold text-navy-900 dark:text-white text-lg mb-2 tracking-tight flex items-center gap-1 pb-1">
                   {svc.title}
                   <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity text-brand-500" />
                 </h3>

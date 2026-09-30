@@ -113,11 +113,11 @@ function PricingCard({ plan }) {
         </div>
 
         {/* Name */}
-        <h3 className={`font-display text-3xl font-bold mb-6 tracking-tight ${plan.featured ? 'text-white' : 'text-navy-900 dark:text-white'}`}>{plan.name}</h3>
+        <h3 className={`font-display text-3xl font-bold mb-6 tracking-tight pb-2 ${plan.featured ? 'text-white' : 'text-navy-900 dark:text-white'}`}>{plan.name}</h3>
 
         {/* Price */}
         <div className="mb-2 flex items-baseline gap-1">
-          <span className={`font-display text-5xl lg:text-6xl font-bold tracking-tighter ${plan.featured ? 'text-white' : 'text-navy-900 dark:text-white'}`}>
+          <span className={`font-display text-5xl lg:text-6xl font-bold tracking-tighter pb-2 ${plan.featured ? 'text-white' : 'text-navy-900 dark:text-white'}`}>
             {plan.name === 'Authority' ? plan.priceFirst : plan.priceAfter}
           </span>
           <span className={`text-base font-medium ${plan.featured ? 'text-white/60' : 'text-charcoal-400 dark:text-charcoal-300'}`}>{plan.pricePeriod}</span>
@@ -199,7 +199,7 @@ export default function Pricing() {
             <span className="w-2 h-2 bg-brand-500 rounded-full animate-pulse" />
             Pricing
           </span>
-          <h2 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-navy-900 dark:text-white tracking-tight mb-6">
+          <h2 className="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-navy-900 dark:text-white tracking-tight mb-6 pb-2">
             Choose Your{' '}
             <span className="text-gradient">Growth Engine</span>
           </h2>

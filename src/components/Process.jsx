@@ -52,13 +52,13 @@ function HorizontalCard({ step }) {
           <div className="w-16 h-16 rounded-2xl bg-white/50 dark:bg-navy-900/50 backdrop-blur-md border border-white dark:border-white/10 flex items-center justify-center shadow-soft">
             <step.icon size={28} className="text-brand-600 dark:text-brand-400" />
           </div>
-          <span className="text-6xl md:text-8xl font-display font-bold text-charcoal-200/50 dark:text-white/5 tracking-tighter">
+          <span className="text-6xl md:text-8xl font-display font-bold text-charcoal-200/50 dark:text-white/5 tracking-tighter pb-2">
             {step.num}
           </span>
         </div>
 
         <div>
-          <h3 className="font-display text-3xl md:text-4xl font-bold text-navy-900 dark:text-white tracking-tight mb-4 group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">
+          <h3 className="font-display text-3xl md:text-4xl font-bold text-navy-900 dark:text-white tracking-tight mb-4 group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors pb-2">
             {step.title}
           </h3>
           <p className="text-charcoal-600 dark:text-charcoal-300 text-base md:text-lg leading-relaxed font-medium">
@@ -106,7 +106,7 @@ export default function Process() {
             <span className="inline-flex items-center px-4 py-1.5 rounded-full text-[10px] font-bold tracking-[0.3em] uppercase bg-brand-50 dark:bg-brand-500/10 text-brand-600 dark:text-brand-400 border border-brand-200/60 dark:border-brand-500/20 mb-6">
               How It Works
             </span>
-            <h2 className="font-display text-4xl sm:text-5xl lg:text-7xl font-bold text-navy-900 dark:text-white tracking-tighter leading-[1.1] mb-6">
+            <h2 className="font-display text-4xl sm:text-5xl lg:text-7xl font-bold text-navy-900 dark:text-white tracking-tighter leading-[1.1] mb-6 pb-2">
               The Architecture <br/>
               of <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-brand-600">Scale.</span>
             </h2>

@@ -33,14 +33,14 @@ function ResultCard({ result, index }) {
             <result.icon size={20} className="text-charcoal-400 dark:text-charcoal-500 group-hover:text-brand-500 transition-colors duration-500" />
           </div>
           <div className="text-right">
-            <div className="text-2xl font-display font-bold text-navy-700 dark:text-white">
+            <div className="text-2xl font-display font-bold text-navy-700 dark:text-white pb-1">
               {count}<span className="text-brand-500">{result.suffix}</span>
             </div>
             <div className="text-[9px] text-charcoal-400 uppercase tracking-wider">{result.metricLabel}</div>
           </div>
         </div>
 
-        <h3 className="font-display font-semibold text-navy-700 dark:text-white mb-1.5">{result.title}</h3>
+        <h3 className="font-display font-semibold text-navy-700 dark:text-white mb-1.5 pb-1">{result.title}</h3>
         <p className="text-sm text-charcoal-500 dark:text-charcoal-400 leading-relaxed">{result.desc}</p>
 
         {/* Progress bar */}
@@ -78,7 +78,7 @@ export default function Results() {
           <span className="inline-flex items-center px-4 py-1.5 rounded-full text-[10px] font-semibold tracking-[0.25em] uppercase bg-brand-50 dark:bg-brand-500/10 text-brand-600 dark:text-brand-400 border border-brand-200/60 dark:border-brand-500/20 mb-5">
             Results
           </span>
-          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-navy-700 dark:text-white tracking-tight mb-6">
+          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-navy-700 dark:text-white tracking-tight mb-6 pb-2">
             Outcomes That{' '}
             <span className="text-gradient">Compound</span>
           </h2>

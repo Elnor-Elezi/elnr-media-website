@@ -44,7 +44,7 @@ export default function RoiCalculator() {
             <Calculator size={14} className="text-brand-400" />
             Interactive ROI Estimator
           </span>
-          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6">
+          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6 pb-2">
             Calculate Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-300 via-brand-400 to-brand-500">Revenue Potential</span>
           </h2>
           <p className="text-white/70 text-base sm:text-lg leading-relaxed">
@@ -70,7 +70,7 @@ export default function RoiCalculator() {
                   <DollarSign size={16} className="text-brand-400" />
                   Monthly Ad Spend
                 </label>
-                <span className="font-display text-2xl font-bold text-brand-300">
+                <span className="font-display text-2xl font-bold text-brand-300 pb-1">
                   ${adSpend.toLocaleString()}
                 </span>
               </div>
@@ -98,7 +98,7 @@ export default function RoiCalculator() {
                   <Target size={16} className="text-brand-400" />
                   Average Deal Value (LTV)
                 </label>
-                <span className="font-display text-2xl font-bold text-brand-300">
+                <span className="font-display text-2xl font-bold text-brand-300 pb-1">
                   ${dealValue.toLocaleString()}
                 </span>
               </div>
@@ -126,7 +126,7 @@ export default function RoiCalculator() {
                   <TrendingUp size={16} className="text-brand-400" />
                   Current Monthly Leads
                 </label>
-                <span className="font-display text-2xl font-bold text-brand-300">
+                <span className="font-display text-2xl font-bold text-brand-300 pb-1">
                   {currentLeads} leads
                 </span>
               </div>
@@ -170,7 +170,7 @@ export default function RoiCalculator() {
               {/* Monthly Revenue Lift */}
               <div className="mb-6">
                 <div className="text-xs text-white/60 uppercase tracking-wider mb-1 font-medium">Est. Monthly Revenue Lift</div>
-                <div className="font-display text-4xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-brand-200 to-brand-400 tracking-tight">
+                <div className="font-display text-4xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-brand-200 to-brand-400 tracking-tight pb-2">
                   +${monthlyRevenueLift.toLocaleString()}
                 </div>
               </div>
@@ -179,14 +179,14 @@ export default function RoiCalculator() {
               <div className="grid grid-cols-2 gap-4 py-6 my-6 border-y border-white/10">
                 <div>
                   <div className="text-xs text-white/50 mb-1">Projected Leads/Mo</div>
-                  <div className="font-display text-2xl font-bold text-white flex items-center gap-2">
+                  <div className="font-display text-2xl font-bold text-white flex items-center gap-2 pb-1">
                     {projectedLeads} 
                     <span className="text-xs text-brand-400 font-semibold">(+{leadIncrease})</span>
                   </div>
                 </div>
                 <div>
                   <div className="text-xs text-white/50 mb-1">Annual Pipeline Lift</div>
-                  <div className="font-display text-2xl font-bold text-white">
+                  <div className="font-display text-2xl font-bold text-white pb-1">
                     +${(annualRevenueLift / 1000).toFixed(0)}k
                   </div>
                 </div>

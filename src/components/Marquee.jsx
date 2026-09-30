@@ -18,7 +18,7 @@ function MarqueeRow({ text, direction = 'left', scrollYProgress, baseSpeed = -10
     >
       {[...Array(10)].map((_, i) => (
         <div key={i} className="flex items-center">
-          <span className="text-3xl md:text-4xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-white/80 to-white/20 uppercase tracking-widest px-5">
+          <span className="text-3xl md:text-4xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-white/80 to-white/20 uppercase tracking-widest px-5 pb-1">
             {text}
           </span>
           <span className="w-3 h-3 bg-brand-500 rounded-full mx-3 shadow-[0_0_12px_rgba(20,184,166,0.8)] flex-shrink-0" />

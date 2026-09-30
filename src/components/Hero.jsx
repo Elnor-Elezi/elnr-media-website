@@ -19,7 +19,7 @@ function AnimatedStat({ end, suffix, label }) {
   const { count, ref } = useCounter(end, 2200)
   return (
     <div ref={ref} className="text-center p-4">
-      <div className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-navy-900 dark:text-white mb-2">
+      <div className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-navy-900 dark:text-white mb-2 pb-2">
         {count}<span className="text-brand-500">{suffix}</span>
       </div>
       <div className="text-xs sm:text-sm text-charcoal-500 dark:text-charcoal-300 font-medium uppercase tracking-wider">{label}</div>
@@ -75,7 +75,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-              className="font-display font-bold text-4xl sm:text-5xl lg:text-6xl xl:text-[64px] text-navy-900 dark:text-white tracking-tight leading-[1.15] mb-6"
+              className="font-display font-bold text-4xl sm:text-5xl lg:text-6xl xl:text-[64px] text-navy-900 dark:text-white tracking-tight leading-[1.15] mb-6 pb-2"
             >
               Turn B2B Attention Into <br className="hidden xl:block" /> Predictable <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 via-brand-500 to-brand-600">Revenue.</span>
             </motion.h1>

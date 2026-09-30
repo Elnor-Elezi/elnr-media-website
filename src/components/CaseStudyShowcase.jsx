@@ -138,7 +138,7 @@ export default function CaseStudyShowcase() {
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-[11px] font-bold tracking-[0.2em] uppercase bg-brand-50 dark:bg-brand-500/10 text-brand-600 dark:text-brand-400 border border-brand-200/60 dark:border-brand-500/20 mb-6">
             <Award size={14} /> Verified Client Case Studies
           </span>
-          <h2 className="font-display text-5xl lg:text-7xl font-bold text-navy-900 dark:text-white tracking-tighter leading-[1.1] mb-6">
+          <h2 className="font-display text-5xl lg:text-7xl font-bold text-navy-900 dark:text-white tracking-tighter leading-[1.1] mb-6 pb-2">
             Real Proof. <br/>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-brand-600">Measurable Scale.</span>
           </h2>
@@ -177,7 +177,7 @@ export default function CaseStudyShowcase() {
                   </span>
                 </div>
 
-                <h3 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-900 dark:text-white leading-[1.1] tracking-tight">
+                <h3 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-900 dark:text-white leading-[1.1] tracking-tight pb-2">
                   {activeStudy.title}
                 </h3>
 
@@ -215,7 +215,7 @@ export default function CaseStudyShowcase() {
                     transition={{ delay: 0.2 + (idx * 0.1) }}
                     className="p-6 rounded-3xl bg-navy-900 dark:bg-[#0A101C] text-white border border-charcoal-800 dark:border-white/5 shadow-2xl hover:border-brand-500/30 transition-colors"
                   >
-                    <div className="font-display text-4xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-brand-300 via-brand-400 to-white tracking-tighter">
+                    <div className="font-display text-4xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-brand-300 via-brand-400 to-white tracking-tighter pb-2">
                       {m.value}
                     </div>
                     <div className="text-[11px] uppercase tracking-[0.2em] text-brand-100/50 font-bold mt-2">

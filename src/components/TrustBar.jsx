@@ -52,7 +52,7 @@ function TiltCard({ item, index }) {
         <div className={`${isBig ? 'w-12 h-12' : 'w-10 h-10'} rounded-xl bg-white/10 backdrop-blur-md border border-white/15 flex items-center justify-center mb-4 group-hover:bg-brand-500/20 group-hover:border-brand-400/30 transition-all duration-500`}>
           <item.icon size={isBig ? 22 : 18} className="text-brand-300" />
         </div>
-        <h3 className={`font-display font-bold text-white mb-1.5 ${isBig ? 'text-xl' : 'text-base'}`}>{item.label}</h3>
+        <h3 className={`font-display font-bold text-white mb-1.5 pb-1 ${isBig ? 'text-xl' : 'text-base'}`}>{item.label}</h3>
         <p className={`text-white/70 leading-relaxed ${isBig ? 'text-sm max-w-md' : 'text-xs'}`}>{item.desc}</p>
 
         {/* Bottom accent line */}

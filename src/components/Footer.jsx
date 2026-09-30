@@ -127,7 +127,7 @@ export default function Footer() {
 
           {/* Services column */}
           <motion.nav variants={fadeUp} className="lg:col-span-3" aria-label="Services navigation">
-            <h4 className="font-display font-semibold text-white text-xs mb-6 uppercase tracking-[0.2em]">Services</h4>
+            <h4 className="font-display font-semibold text-white text-xs mb-6 uppercase tracking-[0.2em] pb-1">Services</h4>
             <ul className="space-y-3">
               {footerLinks.services.map((link) => (
                 <li key={link.href + link.label}>
@@ -145,7 +145,7 @@ export default function Footer() {
 
           {/* Company column */}
           <motion.nav variants={fadeUp} className="lg:col-span-2" aria-label="Company navigation">
-            <h4 className="font-display font-semibold text-white text-xs mb-6 uppercase tracking-[0.2em]">Company</h4>
+            <h4 className="font-display font-semibold text-white text-xs mb-6 uppercase tracking-[0.2em] pb-1">Company</h4>
             <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.href}>
@@ -163,7 +163,7 @@ export default function Footer() {
 
           {/* Contact + CTA column */}
           <motion.div variants={fadeUp} className="lg:col-span-3">
-            <h4 className="font-display font-semibold text-white text-xs mb-6 uppercase tracking-[0.2em]">Get in Touch</h4>
+            <h4 className="font-display font-semibold text-white text-xs mb-6 uppercase tracking-[0.2em] pb-1">Get in Touch</h4>
             <ul className="space-y-3 mb-8">
               {contact.map((c) => (
                 <li key={c.label}>

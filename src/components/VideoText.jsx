@@ -18,7 +18,7 @@ export default function VideoText({ text = "ELNR MEDIA", videoSrc = "https://cdn
       <motion.div style={{ scale }} className="relative z-10 w-full h-full flex items-center justify-center">
         {/* CSS Magic to clip video to text */}
         <div className="relative inline-block" style={{ mixBlendMode: 'screen' }}>
-          <h2 className="font-display font-black text-[12vw] leading-none tracking-tighter text-black bg-white dark:bg-navy-950 px-8 py-4 mix-blend-multiply">
+          <h2 className="font-display font-black text-[12vw] leading-none tracking-tighter text-black bg-white dark:bg-navy-950 px-8 py-4 mix-blend-multiply pb-2">
             {text}
           </h2>
           <video 
